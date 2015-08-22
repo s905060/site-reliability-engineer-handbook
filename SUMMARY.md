@@ -62,6 +62,7 @@
    * [GREP](grep.md)
    * [Crontab](crontab.md)
    * [Kill](kill.md)
+   * SED
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
