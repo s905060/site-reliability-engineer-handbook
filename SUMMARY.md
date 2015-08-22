@@ -28,6 +28,7 @@
        * [Requests](requests.md)
        * [Pyinstaller](pyinstaller.md)
        * [Readlines](readlines.md)
+       * Raw Input
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
