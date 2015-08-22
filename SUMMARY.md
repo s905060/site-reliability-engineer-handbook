@@ -22,7 +22,7 @@
        * [Subprocess](subprocess.md)
        * [Multiprocess](multiprocess.md)
        * [Rename](rename.md)
-       * SMTP
+       * [SMTP](smtp.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
