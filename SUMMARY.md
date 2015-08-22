@@ -4,7 +4,7 @@
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [Understanding Sticky-Bit, SUID and SGID in Linux](understanding_sticky-bit,_suid_and_sgid_in_linux.md)
-   * What's in an inode?
+   * [What's in an inode?](whats_in_an_inode.md)
    * [What is the difference between soft and hard links](what_is_the_difference_between_soft_and_hard_links.md)
    * [What happens when a process forks?](what_happens_when_a_process_forks.md)
 * [Networking](networking.md)
