@@ -27,6 +27,7 @@
        * [Argparse](argparse.md)
        * [Requests](requests.md)
        * [Pyinstaller](pyinstaller.md)
+       * Readlines
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
