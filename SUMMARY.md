@@ -16,7 +16,7 @@
    * [How does DNS server work](how_does_dns_server_work.md)
 * [Programming](programming.md)
    * [Python](python.md)
-       * Time Format
+       * [Time Format](time_format.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
 * [Command Line Tool](command_line_tool.md)
