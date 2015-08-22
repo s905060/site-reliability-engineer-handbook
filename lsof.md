@@ -38,7 +38,6 @@ TYPE – Specifies the type of the file. Some of the values of TYPEs are,
 * DIR – Directory
 * FIFO – First In First Out
 * CHR – Character special file
-* 
 
 For a complete list of FD & TYPE, refer man lsof.
 
