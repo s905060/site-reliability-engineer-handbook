@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Operating System](operating_system.md)
+   * Understanding Sticky-Bit, SUID and SGID in Linux
 * [Networking](networking.md)
 * [Programming](programming.md)
 * [Command Line Tool](command_line_tool.md)
