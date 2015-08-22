@@ -21,7 +21,7 @@
        * [Time Format](time_format.md)
        * [Subprocess](subprocess.md)
        * [Multiprocess](multiprocess.md)
-       * [RENAME](rename.md)
+       * [Rename](rename.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
