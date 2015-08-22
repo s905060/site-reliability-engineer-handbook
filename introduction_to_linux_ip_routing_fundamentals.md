@@ -49,11 +49,13 @@ Sometimes one would ask as to why there are two types of entries in the routing 
 ### Command to list routing tables
 
 You can use netstat command to list the routing tables as shown below.
-
+```
 $ netstat -rn
 Kernel IP routing table
 Destination  Gateway         Genmask         Flags   MSS Window  irtt Iface
 192.168.2.0  0.0.0.0         255.255.255.0   U         0 0        0    eth0
 169.254.0.0  0.0.0.0         255.255.0.0     U         0 0        0    eth0
 0.0.0.0      192.168.2.1     0.0.0.0         UG        0 0        0    eth0
+```
+
 The output provides a detailed information in the destination IP addresses and their gateways. The flag ‘U’ suggests that the route is up and the flag ‘G’ suggests that the router is to a gateway (router). If this flag is not set then it can be assumed that the destination is directly connected.
