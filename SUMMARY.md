@@ -4,7 +4,7 @@
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
-   * System Calls
+   * [System Calls](system_calls.md)
    * [What are the common run levels in linux](what_are_the_common_run_levels_in_linux.md)
    * [Understanding Sticky-Bit, SUID and SGID in Linux](understanding_sticky-bit,_suid_and_sgid_in_linux.md)
    * [What's in an inode?](whats_in_an_inode.md)
