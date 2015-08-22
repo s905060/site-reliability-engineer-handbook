@@ -50,6 +50,7 @@
    * [Flock](flock.md)
    * [Traceroute](traceroute.md)
    * [FIND](find.md)
+   * GREP
 * [Security](security.md)
    * [Common](common.md)
 
