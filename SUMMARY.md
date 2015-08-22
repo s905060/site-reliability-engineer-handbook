@@ -41,7 +41,7 @@
        * [Endswith](endswith.md)
        * [Virtualenv](virtualenv.md)
        * [Regular Expressions](regular_expressions.md)
-       * Supervisor
+       * [Supervisor](supervisor.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
