@@ -17,7 +17,7 @@
 * [Programming](programming.md)
    * [Python](python.md)
    * [Golang](golang.md)
-   * Bash
+   * [Bash](bash.md)
 * [Command Line Tool](command_line_tool.md)
    * [AWK](awk.md)
    * [NMAP](nmap.md)
