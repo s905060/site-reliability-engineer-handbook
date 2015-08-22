@@ -31,12 +31,12 @@ As layer 2 protocols headers have no information about network of data packet so
 
 ### Routers
 
-Routers are the network devices that operate at Layer-3 of OSI model of communication.
-As layer-3 protocols have access to logical address (IP addresses) so routers have the capability to forward data across networks.
-Sometimes routers are also known as layer-3 switches.
-Routers are far more feature rich as compared to switches.
-Routers maintain routing table for data forwarding.
-Earlier, routing was slower as compared to switching. This was because of the fact that routing table lookup time was considerably high. The reason for this was that the complete packet was fetched into software buffers and then further operations were carried on it.
-Today, operations are done in hardware which has reduced the latency a lot and hence routers are not considered slower than switches today.
-Routers have lesser port densities as compared to switches.
-Routers are usually used as a forwarding network elements in Wide Area Networks.
+* Routers are the network devices that operate at Layer-3 of OSI model of communication.
+* As layer-3 protocols have access to logical address (IP addresses) so routers have the capability to forward data across networks.
+* Sometimes routers are also known as layer-3 switches.
+* Routers are far more feature rich as compared to switches.
+* Routers maintain routing table for data forwarding.
+* Earlier, routing was slower as compared to switching. This was because of the fact that routing table lookup time was considerably high. The reason for this was that the complete packet was fetched into software buffers and then further operations were carried on it.
+* Today, operations are done in hardware which has reduced the latency a lot and hence routers are not considered slower than switches today.
+* Routers have lesser port densities as compared to switches.
+* Routers are usually used as a forwarding network elements in Wide Area Networks.
