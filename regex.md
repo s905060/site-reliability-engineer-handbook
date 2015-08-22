@@ -1,8 +1,8 @@
 # Regular expression metacharacters
 
-| Operator	| Effect |
-| --        | --     |
-|.	| Matches any single character.|
+| Operator	| Effect
+| --        | --     
+|.	| Matches any single character.
 |?	| The preceding item is optional and will be matched, at most, once.|
 |*	| The preceding item will be matched zero or more times.
 |+	| The preceding item will be matched one or more times.
@@ -16,4 +16,8 @@
 |\B	| Matches the empty string provided it's not at the edge of a word.
 |\<	| Match the empty string at the beginning of word.
 |\>	| Match the empty string at the end of word.
-
+|?(list) | Matches zero or one occurrence of the given patterns.
+|*(list) | Matches zero or more occurrences of the given patterns.
+|+(list) | Matches one or more occurrences of the given patterns.
+|@(list) | Matches one of the given patterns.
+|!(list) | Matches anything except one of the given patterns.
