@@ -1,5 +1,7 @@
 ### COMMON SIGNAL NAMES AND NUMBERS
 
+POSIX (/ˈpɒzɪks/ poz-iks), an acronym for Portable Operating System Interface, is a family of standards specified by the IEEE Computer Society for maintaining compatibility between operating systems. POSIX defines the application programming interface (API), along with command line shells and utility interfaces, for software compatibility with variants of Unix and other operating systems.
+
 | Number | Name | Description | Used for
 | --| -- | -- | --
 | 0 |SIGNULL |Null | Check access to pid
