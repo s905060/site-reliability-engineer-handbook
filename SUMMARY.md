@@ -34,7 +34,7 @@
        * [Gzip](gzip.md)
        * [Listdir](listdir.md)
        * [Basename](basename.md)
-       * Dirname
+       * [Dirname](dirname.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
