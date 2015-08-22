@@ -2,7 +2,11 @@
 
 ```
 pip install pyinstaller
+```
 
+###USAGE:
+
+```
 pyinstaller --windowed your_main_file.py
 
 or
