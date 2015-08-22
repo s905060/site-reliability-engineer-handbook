@@ -1,31 +1,61 @@
 # SMTP
 
+
+###Sending an Email Message:
 ```
 import smtplib
+import email.utils
+from email.mime.text import MIMEText
 
-def prompt(prompt):
-    return raw_input(prompt).strip()
+# Create the message
+msg = MIMEText('This is the body of the message.')
+msg['To'] = email.utils.formataddr(('Recipient', 'recipient@example.com'))
+msg['From'] = email.utils.formataddr(('Author', 'author@example.com'))
+msg['Subject'] = 'Simple test message'
 
-fromaddr = prompt("From: ")
-toaddrs  = prompt("To: ").split()
-print "Enter message, end with ^D (Unix) or ^Z (Windows):"
+server = smtplib.SMTP('mail')
+server.set_debuglevel(True) # show communication with the server
+try:
+    server.sendmail('author@example.com', ['recipient@example.com'], msg.as_string())
+finally:
+    server.quit()
+```
 
-# Add the From: and To: headers at the start!
-msg = ("From: %s\r\nTo: %s\r\n\r\n"
-       % (fromaddr, ", ".join(toaddrs)))
-while 1:
-    try:
-        line = raw_input()
-    except EOFError:
-        break
-    if not line:
-        break
-    msg = msg + line
+###Authentication and Encryption:
 
-print "Message length is " + repr(len(msg))
+```
+import smtplib
+import email.utils
+from email.mime.text import MIMEText
+import getpass
 
-server = smtplib.SMTP('localhost')
-server.set_debuglevel(1)
-server.sendmail(fromaddr, toaddrs, msg)
-server.quit()
+# Prompt the user for connection info
+to_email = raw_input('Recipient: ')
+servername = raw_input('Mail server name: ')
+username = raw_input('Mail user name: ')
+password = getpass.getpass("%s's password: " % username)
+
+# Create the message
+msg = MIMEText('Test message from PyMOTW.')
+msg.set_unixfrom('author')
+msg['To'] = email.utils.formataddr(('Recipient', to_email))
+msg['From'] = email.utils.formataddr(('Author', 'author@example.com'))
+msg['Subject'] = 'Test from PyMOTW'
+
+server = smtplib.SMTP(servername)
+try:
+    server.set_debuglevel(True)
+
+    # identify ourselves, prompting server for supported features
+    server.ehlo()
+
+    # If we can encrypt this session, do it
+    if server.has_extn('STARTTLS'):
+        server.starttls()
+        server.ehlo() # re-identify ourselves over TLS connection
+
+    server.login(username, password)
+    server.sendmail('author@example.com', [to_email], msg.as_string())
+finally:
+    server.quit()
 ```
