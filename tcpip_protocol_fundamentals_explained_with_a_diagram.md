@@ -95,9 +95,9 @@ $ cat /etc/services
 systat		11/tcp		users
 daytime		13/udp
 netstat		15/tcp
-qotd		17/tcp		quote
+qotd		17/tcp	    quote
 msp		    18/udp
-chargen		19/udp		ttytst source
+chargen		19/udp	    ttytst source
 ftp-data	20/tcp
 ftp		    21/tcp
 ssh		    22/tcp
