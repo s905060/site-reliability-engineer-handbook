@@ -33,6 +33,7 @@
        * [Configparser](configparser.md)
        * [Gzip](gzip.md)
        * [Listdir](listdir.md)
+       * Basename
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
