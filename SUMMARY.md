@@ -1,8 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Virtualization](virtualization.md)
-   * Docker
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
@@ -58,6 +56,8 @@
    * [FIND](find.md)
    * [GREP](grep.md)
    * [Crontab](crontab.md)
+* [Virtualization](virtualization.md)
+   * Docker
 * [Security](security.md)
    * [Common](common.md)
 
