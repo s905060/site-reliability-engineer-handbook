@@ -56,7 +56,7 @@
    * [FIND](find.md)
    * [GREP](grep.md)
    * [Crontab](crontab.md)
-   * Kill
+   * [Kill](kill.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
