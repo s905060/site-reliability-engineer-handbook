@@ -16,6 +16,7 @@
    * [How does DNS server work](how_does_dns_server_work.md)
 * [Programming](programming.md)
    * Python
+   * Golang
 * [Command Line Tool](command_line_tool.md)
    * [AWK](awk.md)
    * [NMAP](nmap.md)
