@@ -63,7 +63,7 @@
    * [Crontab](crontab.md)
    * [Kill](kill.md)
    * [SED](sed.md)
-   * CUT
+   * [CUT](cut.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
