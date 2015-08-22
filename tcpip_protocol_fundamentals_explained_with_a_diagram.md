@@ -106,6 +106,7 @@ telnet		23/tcp
 ...
 ...
 ```
+
 As you see from the /etc/services file, FTP has port number 21, telent has port number 23 etc. You can use ‘grep’ command on this file to find any server and its associated port.
 
 As far as the standards are concerned, the following four organizations/groups manage the TCP/IP protocol suite. Both the IRTF and the IETF fall under the IAB.
