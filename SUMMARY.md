@@ -39,7 +39,7 @@
        * [Startswith](startswith.md)
        * [Endswith](endswith.md)
        * [Virtualenv](virtualenv.md)
-       * Regular Expressions
+       * [Regular Expressions](regular_expressions.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
