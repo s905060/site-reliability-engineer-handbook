@@ -89,6 +89,7 @@ Also, since clients need to know the port numbers of the servers to connect to t
 The ports reserved for clients generally range from 1024 to 5000. Port number higher than 5000 are reserved for those servers which are not standard or well known.
 
 If we look at the file ‘/etc/services’, you will find most of the standard servers and the port on which they run.
+
 ```
 $ cat /etc/services
 systat		11/tcp		users
