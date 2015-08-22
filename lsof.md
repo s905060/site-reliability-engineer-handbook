@@ -6,7 +6,7 @@ It is easy to remember lsof command if you think of it as “ls + of”, where l
 
 It is a command line utility which is used to list the information about the files that are opened by various processes. In unix, everything is a file, ( pipes, sockets, directories, devices, etc.). So by using lsof, you can get the information about any opened files.
 
-1. Introduction to lsof
+### Introduction to lsof
 
 Simply typing lsof will provide a list of all open files belonging to all active processes.
 
@@ -42,7 +42,7 @@ TYPE – Specifies the type of the file. Some of the values of TYPEs are,
 
 For a complete list of FD & TYPE, refer man lsof.
 
-2. List processes which opened a specific file
+### List processes which opened a specific file
 
 You can list only the processes which opened a specific file, by providing the filename as arguments.
 
@@ -53,7 +53,7 @@ COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME
 rsyslogd 488 syslog    1w   REG    8,1     1151 268940 /var/log/syslog
 ```
 
-3. List opened files under a directory
+###  List opened files under a directory
 
 You can list the processes which opened files under a specified directory using ‘+D’ option. +D will recurse the sub directories also. If you don’t want lsof to recurse, then use ‘+d’ option.
 
@@ -66,7 +66,7 @@ rsyslogd  488 syslog   2w   REG    8,1     2405 269616 /var/log/auth.log
 console-k 144   root   9w   REG    8,1    10871 269369 /var/log/ConsoleKit/history
 ```
 
-4. List opened files based on process names starting with
+###  List opened files based on process names starting with
 
 You can list the files opened by process names starting with a string, using ‘-c’ option. -c followed by the process name will list the files opened by the process starting with that processes name. You can give multiple -c switch on a single command line.
 
@@ -83,7 +83,7 @@ ssh-agent 1528 lakshmanan    2u   CHR        1,3      0t0    4369 /dev/null
 ssh-agent 1528 lakshmanan    3u  unix 0xdf70e240      0t0   10464 /tmp/ssh-sUymKXxw1495/agent.1495
 ```
 
-5. List processes using a mount point
+###  List processes using a mount point
 
 Sometime when we try to umount a directory, the system will say “Device or Resource Busy” error. So we need to find out what are all the processes using the mount point and kill those processes to umount the directory. By using lsof we can find those processes.
 
@@ -96,7 +96,7 @@ The following will also work.
 # lsof +D /home/
 ```
 
-6. List files opened by a specific user
+###  List files opened by a specific user
 
 In order to find the list of files opened by a specific users, use ‘-u’ option.
 
@@ -119,7 +119,7 @@ udisks-da 1584       root  cwd       DIR        8,1      4096          2 /
 
 The above command listed all the files opened by all users, expect user ‘lakshmanan’.
 
-7. List all open files by a specific process
+###  List all open files by a specific process
 
 You can list all the files opened by a specific process using ‘-p’ option. It will be helpful sometimes to get more information about a specific process.
 
@@ -133,7 +133,7 @@ bash    1753 lakshmanan  255u   CHR  136,0      0t0       3 /dev/pts/0
 ...
 ```
 
-8. Kill all process that belongs to a particular user
+###  Kill all process that belongs to a particular user
 
 When you want to kill all the processes which has files opened by a specific user, you can use ‘-t’ option to list output only the process id of the process, and pass it to kill as follows
 
@@ -151,7 +151,7 @@ Similarly you can also use ‘-t’ in many ways. For example, to list process i
 ```
 Talking about kill, did you know that there are 4 Ways to Kill a Process?
 
-9. Combine more list options using OR/AND
+###  Combine more list options using OR/AND
 
 By default when you use more than one list option in lsof, they will be ORed. For example,
 
@@ -176,7 +176,7 @@ But when you want to list a process belongs to user ‘lakshmanan’ and the pro
 
 The above command will not output anything, because there is no such process named ‘init’ belonging to user ‘lakshmanan’.
 
-10. Execute lsof in repeat mode
+###  Execute lsof in repeat mode
 
 lsof also support Repeat mode. It will first list files based on the given parameters, and delay for specified seconds and again list files based on the given parameters. It can be interrupted by a signal.
 
@@ -208,7 +208,7 @@ Finding Network Connection
 
 Network connections are also files. So we can find information about them by using lsof.
 
-11. List all network connections
+###  List all network connections
 
 You can list all the network connections opened by using ‘-i’ option.
 
@@ -224,7 +224,7 @@ cupsd     1075  root    5u  IPv6  22512      0t0  TCP ip6-localhost:ipp (LISTEN)
 You can also use ‘-i4′ or ‘-i6′ to list only ‘IPV4′ or ‘IPV6‘ respectively.
 
 
-12. List all network files in use by a specific process
+###  List all network files in use by a specific process
 
 You can list all the network files which is being used by a process as follows
 
@@ -240,7 +240,7 @@ You can also use the following
 
 The above command will list the network files opened by the processes starting with ssh.
 
-13. List processes which are listening on a particular port
+###  List processes which are listening on a particular port
 
 You can list the processes which are listening on a particular port by using ‘-i’ with ‘:’ as follows
 
@@ -251,7 +251,7 @@ COMMAND  PID        USER   FD   TYPE DEVICE SIZE NODE NAME
 exim4   2541 Debian-exim    3u  IPv4   8677       TCP localhost:smtp (LISTEN)
 ```
 
-14. List all TCP or UDP connections
+###  List all TCP or UDP connections
 
 You can list all the TCP or UDP connections by specifying the protocol using ‘-i’.
 
@@ -259,7 +259,7 @@ You can list all the TCP or UDP connections by specifying the protocol using ‘
 # lsof -i tcp; lsof -i udp;
 ```
 
-15. List all Network File System ( NFS ) files
+###  List all Network File System ( NFS ) files
 
 You can list all the NFS files by using ‘-N’ option. The following lsof command will list all NFS files used by user ‘lakshmanan’.
 
