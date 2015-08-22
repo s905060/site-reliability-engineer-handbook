@@ -68,6 +68,6 @@
    * [Common](common.md)
 * [Virtualization](virtualization.md)
    * [Docker](docker.md)
-   * Xen
+   * [Xen](xen.md)
    * KVM
 
