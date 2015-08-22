@@ -4,6 +4,7 @@
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
+   * Signals
    * [What are the common run levels in linux](what_are_the_common_run_levels_in_linux.md)
    * [System Calls](system_calls.md)
    * [Understanding Sticky-Bit, SUID and SGID in Linux](understanding_sticky-bit,_suid_and_sgid_in_linux.md)
@@ -11,7 +12,6 @@
    * [What is the difference between soft and hard links](what_is_the_difference_between_soft_and_hard_links.md)
    * [What happens when a process forks?](what_happens_when_a_process_forks.md)
    * [How-To Compile Linux Kernel from Source](how-to_compile_linux_kernel_from_source.md)
-   * Signals
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
