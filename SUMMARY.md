@@ -16,7 +16,7 @@
    * [AWK](awk.md)
    * [NMAP](nmap.md)
    * [NETSTAT](netstat.md)
-   * Flock
+   * [Flock](flock.md)
 * [Security](security.md)
    * [Common](common.md)
 
