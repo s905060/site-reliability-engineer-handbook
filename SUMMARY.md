@@ -12,6 +12,7 @@
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
+   * How does DNS server work
 * [Programming](programming.md)
 * [Command Line Tool](command_line_tool.md)
    * [AWK](awk.md)
