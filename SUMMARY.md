@@ -35,6 +35,7 @@
        * [Listdir](listdir.md)
        * [Basename](basename.md)
        * [Dirname](dirname.md)
+       * Traversing a Directory Tree
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
