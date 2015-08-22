@@ -9,6 +9,3 @@ In most cases, under normal system operation zombies are immediately waited on b
 The term zombie process derives from the common definition of zombie — an undead person. In the term's metaphor, the child process has "died" but has not yet been "reaped". Also, unlike normal processes, the kill command has no effect on a zombie process.
 
 Zombie processes should not be confused with orphan processes: an orphan process is a process that is still executing, but whose parent has died. These do not remain as zombie processes; instead, (like all orphaned processes) they are adopted by init (process ID 1), which waits on its children. The result is that a process that is both a zombie and an orphan will be reaped automatically.
-
-A child process that terminates but is never waited on by its parent becomes a **zombie process**. Such a process continues to exist as an entry in the system process table even though it is no longer an actively executing program.(Such situations are typically handled with a special "reaper" process that locates zombies and retrieves their exit status, allowing the operating system
-to then de-allocate their resources.)
