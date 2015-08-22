@@ -1,18 +1,18 @@
 # How does DNS server work
 
-* Step1: the client types www.example.com in his browser
+* **Step1**: the client types www.example.com in his browser
 
-* Step2: the operating system looks at /etc/host file,first for the ip address of www.example.com(this can be changed from /etc/nsswitch), then looks /etc/resolv.conf for the DNS server IP for that machine
+* **Step2**: the operating system looks at /etc/host file,first for the ip address of www.example.com(this can be changed from /etc/nsswitch), then looks /etc/resolv.conf for the DNS server IP for that machine
 
-* Step3: the dns server will search its database for the name www.example.com, if it finds it will give that back, if not it will query the root server(.) for the information.
+* **Step3**: the dns server will search its database for the name www.example.com, if it finds it will give that back, if not it will query the root server(.) for the information.
 
-* Step4: root server will return a referral to the .com TLD name server(these TLD name servers knows the address of name servers of all SLD's).In our case we searched for www.example.com so root server will give us referral to .com TLD servers.
+* **Step4**: root server will return a referral to the .com TLD name server(these TLD name servers knows the address of name servers of all SLD's).In our case we searched for www.example.com so root server will give us referral to .com TLD servers.
 
 If it was www.example.net then root server will give, .net TLD servers refferal.
 
-* Step5: Now One of the TLD servers of .com will give us the referral to the DNS server resposible for example.com domain.
+* **Step5**: Now One of the TLD servers of .com will give us the referral to the DNS server resposible for example.com domain.
 
-* Step6: the dns server for example.com domain will now give the client the ip address of www host(www is the host name.)
+* **Step6**: the dns server for example.com domain will now give the client the ip address of www host(www is the host name.)
 
 Now lets practically have a look at how this process works.
 
