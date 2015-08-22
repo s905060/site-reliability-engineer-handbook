@@ -26,6 +26,7 @@
        * [Single instance of program](single_instance_of_program.md)
        * [Argparse](argparse.md)
        * [Requests](requests.md)
+       * Pyinstaller
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
