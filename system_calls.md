@@ -1,5 +1,58 @@
 # System Calls
 
+In computing, a system call is how a program requests a service from an operating system's kernel. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.
+In most systems, system calls are possible to be made only from userspace processes, while in some systems, OS/360 and successors for example, privileged system code also issues system calls.[1]
+
+The architecture of most modern processors, with the exception of some embedded systems, involves a security model. For example, the rings model specifies multiple privilege levels under which software may be executed: a program is usually limited to its own address space so that it cannot access or modify other running programs or the operating system itself, and is usually prevented from directly manipulating hardware devices (e.g. the frame buffer or network devices).
+
+However, many normal applications obviously need access to these components, so system calls are made available by the operating system to provide well defined, safe implementations for such operations. The operating system executes at the highest level of privilege, and allows applications to request services via system calls, which are often initiated via interrupts. An interrupt automatically puts the CPU into some elevated privilege level, and then passes control to the kernel, which determines whether the calling program should be granted the requested service. If the service is granted, the kernel executes a specific set of instructions over which the calling program has no direct control, returns the privilege level to that of the calling program, and then returns control to the calling program.
+
+**On Unix, Unix-like and other POSIX-compliant operating systems, popular system calls are open, read, write, close, wait, exec, fork, exit, and kill. Many modern operating systems have hundreds of system calls. For example, Linux and OpenBSD each have over 300 different calls,[2][3] NetBSD has close to 500,[4] FreeBSD has over 500,[5] while Plan 9 has 51.[6]
+Tools such as strace and truss allow a process to execute from start and report all system calls the process invokes, or can attach to an already running process and intercept any system call made by said process if the operation does not violate the permissions of the user. This special ability of the program is usually also implemented with a system call, e.g. strace is implemented with ptrace or system calls on files in procfs.**
+
+###System calls can be roughly grouped into five major categories:
+
+1. Process Control
+```
+load
+execute
+end, abort
+create process (for example, fork on Unix-like systems, or NtCreateProcess in the Windows NT Native API)
+terminate process
+get/set process attributes
+wait for time, wait event, signal event
+allocate, free memory
+```
+2. File management
+```
+create file, delete file
+open, close
+read, write, reposition
+get/set file attributes
+```
+3. Device Management
+```
+request device, release device
+read, write, reposition
+get/set device attributes
+logically attach or detach devices
+```
+4. Information Maintenance
+```
+get/set time or date
+get/set system data
+get/set process, file, or device attributes
+```
+5. Communication
+```
+create, delete communication connection
+send, receive messages
+transfer status information
+attach or detach remote devices
+```
+
+---
+
 ![](sys_call.png)
 
 The system call provides an interface to the operating system services.
