@@ -29,6 +29,7 @@
        * [Pyinstaller](pyinstaller.md)
        * [Readlines](readlines.md)
        * [Raw Input](raw_input.md)
+       * With Open
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
