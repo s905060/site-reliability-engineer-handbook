@@ -62,7 +62,7 @@
    * [GREP](grep.md)
    * [Crontab](crontab.md)
    * [Kill](kill.md)
-   * SED
+   * [SED](sed.md)
    * CUT
 * [Security](security.md)
    * [Common](common.md)
