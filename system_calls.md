@@ -1,5 +1,13 @@
 # System Calls
 
+#### What is System Call
+
+As we know that for performing any Operation as user must have to specify the Operation which he wants to Operate on the Computer. We can say that For Performing any Operation a user must have to Request for a Service from the System. For Making any Request a user will prepare a Special call which is also known as the System Call.
+
+---
+
+The System Call is the Request for Running any Program and for Performing any Operation on the System. When a user First Time Starts the System then the System is in the user Mode and When he request For a Service then the User Mode will be Converted into the Kernel Mode Which just Listen the Request of the user and Process the Request and Display the Results those are Produced after the Processing. When a user Request for Opening any Folder or When a Moves his Mouse his Mouse on the Screen, then this is called as the System call which he is using for performing any Operation.
+
 In computing, a system call is how a program requests a service from an operating system's kernel. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.
 In most systems, system calls are possible to be made only from userspace processes, while in some systems, OS/360 and successors for example, privileged system code also issues system calls.[1]
 
