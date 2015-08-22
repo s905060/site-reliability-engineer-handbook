@@ -1,6 +1,7 @@
 # Docker
 
 ### Containers:
+
 ###### Lifecycle
 ````
 docker create creates a container but does not start it.
@@ -42,6 +43,7 @@ docker exec -it foo /bin/bash.
 ```
 
 ### Images:
+
 ###### Lifecycle
 ```
 docker images shows all images.
