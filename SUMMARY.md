@@ -64,7 +64,7 @@
    * [Kill](kill.md)
    * [SED](sed.md)
    * [CUT](cut.md)
-   * IFCONFIG
+   * [IFCONFIG](ifconfig.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
