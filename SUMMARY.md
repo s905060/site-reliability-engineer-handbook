@@ -24,7 +24,7 @@
        * [Rename](rename.md)
        * [SMTP](smtp.md)
        * [Single instance of program](single_instance_of_program.md)
-       * Argparse
+       * [Argparse](argparse.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
