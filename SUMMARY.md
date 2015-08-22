@@ -23,7 +23,7 @@
        * [Multiprocess](multiprocess.md)
        * [Rename](rename.md)
        * [SMTP](smtp.md)
-       * Tendo
+       * Single instance of program
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
