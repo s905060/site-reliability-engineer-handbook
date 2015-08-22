@@ -27,6 +27,7 @@
    * [NETSTAT](netstat.md)
    * [Flock](flock.md)
    * [Traceroute](traceroute.md)
+   * Find
 * [Security](security.md)
    * [Common](common.md)
 
