@@ -36,16 +36,17 @@ Any entry whose first field matches the destination IP address completely(a host
 
 In the paragraph above we build a basic understanding but if we try to get a level deeper then the following points give the detailed information about the routing table algorithm:
 
-First the routing table is searched for an entry whose ‘Destination IP address’ field matches the datagram destination IP address completely.  By completely, it is meant that the host ID and network ID of the IP addresses match. If found, then the datagram is sent to that interface or to the intermediate router.
+* First the routing table is searched for an entry whose ‘Destination IP address’ field matches the datagram destination IP address completely.  By completely, it is meant that the host ID and network ID of the IP addresses match. If found, then the datagram is sent to that interface or to the intermediate router.
 
-If a complete match is not found then a search for matching network ID is done. If found then the datagram is forwarded to the indicated router. So we see that all the hosts on this network are managed by this single entry in the routing table.
+* If a complete match is not found then a search for matching network ID is done. If found then the datagram is forwarded to the indicated router. So we see that all the hosts on this network are managed by this single entry in the routing table.
 
-If none of the above two is true then the datagram is forwarded to a ‘default router’.
-If the above step also fails ie there is not default router then the datagram ends up being undeliverable. Any undeliverable datagram would produce an ICMP host unreachable or ICMP network unreachable error and this error is returned to the application that generated this datagram.
+* If none of the above two is true then the datagram is forwarded to a ‘default router’.
+
+* If the above step also fails ie there is not default router then the datagram ends up being undeliverable. Any undeliverable datagram would produce an ICMP host unreachable or ICMP network unreachable error and this error is returned to the application that generated this datagram.
 
 Sometimes one would ask as to why there are two types of entries in the routing table or to be more precise why network related entries are needed in a router? Well, having entries in routing table corresponding to networks has a big advantage. The advantage is that by having an entry related a complete network avoids the need to have a huge number of separate entries of each host on that network. This brings down the size of the routing table to a significant level which is always good.
 
-Command to list routing tables
+### Command to list routing tables
 
 You can use netstat command to list the routing tables as shown below.
 
