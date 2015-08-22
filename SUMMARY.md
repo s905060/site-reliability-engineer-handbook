@@ -36,6 +36,7 @@
        * [Basename](basename.md)
        * [Dirname](dirname.md)
        * [Traversing a Directory Tree](traversing_a_directory_tree.md)
+       * Startswith
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
