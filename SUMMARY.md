@@ -69,7 +69,7 @@
    * [IFCONFIG](ifconfig.md)
    * [TCPDUMP](tcpdump.md)
    * [TAR](tar.md)
-   * LSOF
+   * [LSOF](lsof.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
