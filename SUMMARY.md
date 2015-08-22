@@ -31,7 +31,7 @@
        * [Raw Input](raw_input.md)
        * [With Open](with_open.md)
        * [Configparser](configparser.md)
-       * Gzip
+       * [Gzip](gzip.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
