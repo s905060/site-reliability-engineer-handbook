@@ -67,7 +67,7 @@
    * [CUT](cut.md)
    * [IFCONFIG](ifconfig.md)
    * [TCPDUMP](tcpdump.md)
-   * TAR
+   * [TAR](tar.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
