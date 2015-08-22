@@ -21,7 +21,7 @@
        * [Multiprocess](multiprocess.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
-   * Regex
+   * [Regex](regex.md)
 * [Command Line Tool](command_line_tool.md)
    * [AWK](awk.md)
    * [NMAP](nmap.md)
