@@ -18,7 +18,7 @@
    * [NMAP](nmap.md)
    * [NETSTAT](netstat.md)
    * [Flock](flock.md)
-   * Traceroute
+   * [Traceroute](traceroute.md)
 * [Security](security.md)
    * [Common](common.md)
 
