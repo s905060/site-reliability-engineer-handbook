@@ -32,7 +32,7 @@
        * [With Open](with_open.md)
        * [Configparser](configparser.md)
        * [Gzip](gzip.md)
-       * Listdir
+       * [Listdir](listdir.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
