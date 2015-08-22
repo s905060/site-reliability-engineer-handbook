@@ -8,18 +8,20 @@ The sticky bit is used to indicate special permissions for files and directories
 Implementation of Sticky bit on file:
 ###Method 1:
 
-```# chmod +t tecadmin.txt```
-```# ls -l tecadmin.txt```
-```-rw-r--r-T 1 root root 0 Mar  8 02:06 tecadmin.txt```
+```
+# chmod +t tecadmin.txt
+# ls -l tecadmin.txt
+-rw-r--r-T 1 root root 0 Mar  8 02:06 tecadmin.txt
+```
 
 
 ### Mothod 2:
 
-```# chmod 1777 tecadmin.txt```
-
-```# ls -l tecadmin.txt```
-
-```-rwxrwxrwt 1 root root 0 Mar  8 02:06 tecadmin.txt```
+```
+# chmod 1777 tecadmin.txt
+# ls -l tecadmin.txt
+-rwxrwxrwt 1 root root 0 Mar  8 02:06 tecadmin.txt
+```
 
 In above output it showing sticky bit is set with character t or T in permissions filed. Small t represent that execute permission also enable and capital T represent that execute permission are not enabled.
 
@@ -32,42 +34,40 @@ For example: passwd command have SUID bit enabled. When a normal user change his
 Implementation of SUID on file:
 ###Mehtod 1:
 
-```# chmod u+s tecadmin.txt```
-
-```# ls -l tecadmin.txt```
-
-```-rwsr-xr-x 1 root root 0 Mar  8 02:06 tecadmin.txt```
+```
+# chmod u+s tecadmin.txt
+# ls -l tecadmin.txt
+-rwsr-xr-x 1 root root 0 Mar  8 02:06 tecadmin.txt
+```
 
 ###Method 2:
 
-```# chmod 4655 tecadmin.txt```
-
-```# ls -l tecadmin.txt```
-
-```-rwSr-xr-x 1 root root 0 Mar  8 02:06 tecadmin.txt```
+```
+# chmod 4655 tecadmin.txt
+# ls -l tecadmin.txt
+-rwSr-xr-x 1 root root 0 Mar  8 02:06 tecadmin.txt
+```
 
 ##SGID ( setgid) :
 
 Same as SUID, The process will have the same group rights of the file being executed. If SGID bit is set on any directory, all sub directories and files created inside will get same group ownership as main directory, it doesn’t matter who is creating.
 
 Implementation of SGID on directory:
-```# chmod g+s /test/```
-
-```# ls -ld /test```
-
-```drwxrwsrwx 2 root root 4096 Mar  8 03:12 /test```
+```
+# chmod g+s /test/
+# ls -ld /test
+drwxrwsrwx 2 root root 4096 Mar  8 03:12 /test
+```
 
 Now swich to other user and create a file in /test directory.
 
-```# su - tecadmin```
-
-```$ cd /test/```
-
-```$ touch tecadmin.net.txt```
-
-```$ ls -l tecadmin.net.txt```
-
-```-rw-rw-r-- 1 tecadmin root 0 Mar  8 03:13 tecadmin.net.txt```
+```
+# su - tecadmin
+$ cd /test/
+$ touch tecadmin.net.txt
+$ ls -l tecadmin.net.txt
+-rw-rw-r-- 1 tecadmin root 0 Mar  8 03:13 tecadmin.net.txt
+```
 
 In above example tecadmin.net.txt is created with root group ownership.
 
