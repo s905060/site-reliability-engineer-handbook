@@ -20,7 +20,7 @@
    * [Hubs vs Switches vs Routers – Networking Device Fundamentals](hubs_vs_switches_vs_routers__networking_device_fundamentals.md)
    * [TCP/IP Protocol Fundamentals Explained with a Diagram](tcpip_protocol_fundamentals_explained_with_a_diagram.md)
    * [OSI MODEL](osi_model.md)
-   * Journey of a Data Packet in the Internet
+   * [Journey of a Data Packet in the Internet](journey_of_a_data_packet_in_the_internet.md)
 * [Programming](programming.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
