@@ -1,5 +1,7 @@
 #Linux Boot Process
 
+![](linux-boot-process.png)
+---
 * BIOS
 
 BIOS stands for Basic Input/Output System
