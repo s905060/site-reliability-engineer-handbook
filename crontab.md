@@ -12,18 +12,18 @@ This document covers following aspects of Unix cron jobs
 6. Disable Email
 7. Generate log file for crontab activity
 
-* Crontab Restrictions
+### Crontab Restrictions
 You can execute crontab if your name appears in the file /usr/lib/cron/cron.allow. If that file does not exist, you can use crontab if your name does not appear in the file /usr/lib/cron/cron.deny.
 If only cron.deny exists and is empty, all users can use crontab. If neither file exists, only the root user can use crontab. The allow/deny files consist of one user name per line.
 
-* Crontab Commands
+### Crontab Commands
 export EDITOR=vi ;to specify a editor to open crontab file.
 crontab -e    Edit your crontab file, or create one if it doesn’t already exist.
 crontab -l      Display your crontab file.
 crontab -r      Remove your crontab file.
 crontab -v      Display the last time you edited your crontab file. (This option is only available on a few systems.)
 
-* Crontab file
+### Crontab file
 Crontab syntax :
 A crontab file has five fields for specifying day , date and time followed by the command to be run at that interval.
 
@@ -41,30 +41,48 @@ A crontab file has five fields for specifying day , date and time followed by th
 * in the value field above means all legal values as in braces for that column.
 The value column can have a * or a list of elements separated by commas. An element is either a number in the ranges shown above or two numbers in the range separated by a hyphen (meaning an inclusive range).
 Notes
+
 A. ) Repeat pattern like /2 for every 2 minutes or /10 for every 10 minutes is not supported by all operating systems. If you try to use it and crontab complains it is probably not supported.
 B.) The specification of days can be made in two fields: month day and weekday. If both are specified in an entry, they are cumulative meaning both of the entries will get executed .
-4. Crontab Example
+
+### Crontab Example
 A line in crontab file like below removes the tmp files from /home/someuser/tmp each day at 6:30 PM.
+```
 30     18     *     *     *         rm /home/someuser/tmp/*
+```
+
 Changing the parameter values as below will cause this command to run at different time schedule below :
+```
 min	hour	day/month	month	day/week	Execution time
 30	0	1	1,6,12	*	– 00:30 Hrs  on 1st of Jan, June & Dec.
 0	20	*	10	1-5	–8.00 PM every weekday (Mon-Fri) only in Oct.
 0	0	1,10,15	*	*	– midnight on 1st ,10th & 15th of month
 5,10	0	10	*	1	– At 12.05,12.10 every Monday & on 10th of every month
-:
+
+```
+
 Note : If you inadvertently enter the crontab command with no argument(s), do not attempt to get out with Control-d. This removes all entries in your crontab file. Instead, exit with Control-c.
-5. Crontab Environment
+
+### Crontab Environment
 cron invokes the command from the user’s HOME directory with the shell, (/usr/bin/sh).
 cron supplies a default environment for every shell, defining:
+```
 HOME=user’s-home-directory
 LOGNAME=user’s-login-id
 PATH=/usr/bin:/usr/sbin:.
 SHELL=/usr/bin/sh
+```
+
 Users who desire to have their .profile executed must explicitly do so in the crontab entry or in a script called by the entry.
-6. Disable Email
+
+### Disable Email
 By default cron jobs sends a email to the user account executing the cronjob. If this is not needed put the following command At the end of the cron job line .
+```
 >/dev/null 2>&1
-7. Generate log file
+```
+
+### Generate log file
 To collect the cron execution execution log in a file :
+```
 30 18 * * * rm /home/someuser/tmp/* > /home/someuser/cronlogs/clean_tmp_dir.log
+```
