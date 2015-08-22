@@ -44,6 +44,7 @@
    * [Bash](bash.md)
    * [Regex](regex.md)
        * [Validate an ip address](validate_an_ip_address.md)
+       * Regular expression metacharacters
 * [Command Line Tool](command_line_tool.md)
    * [AWK](awk.md)
    * [NMAP](nmap.md)
