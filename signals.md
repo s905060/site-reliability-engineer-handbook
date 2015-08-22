@@ -459,18 +459,21 @@ main(int argc, char **argv, char **envp){
 ```
 A tracee gets sent a SIGTRAP signal (and stops) when it successfully does an execve system call. This means that we see execve three times (on exit, on return, on SIGTRAP). This signal can be used to synchronize on, instead of the above complicated SIGUSR1 construction.
 
-### The Linux "parent death" signal
+###8. The Linux "parent death" signal
 
 For each process there is a variable pdeath_signal, that is initialized to 0 after fork() or clone(). It gives the signal that the process should get when its parent dies.
 
 This variable can be set using
-
+```
         prctl(PR_SET_PDEATHSIG, sig);
+```
 and read out using
+```
         prctl(PR_GET_PDEATHSIG, &sig);
+```
 This construct can be used in thread libraries: when the manager thread dies, all threads managed by it should clean up and exit. E.g.:
-
+```
         prctl(PR_SET_PDEATHSIG, SIGHUP);        /* set pdeath sig */
         if (getppid() == 1)                     /* parent died already? */
                 kill(getpid(), SIGHUP);
-Next Previous Contents
+```
