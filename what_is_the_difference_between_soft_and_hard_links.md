@@ -1,5 +1,26 @@
 #What is the difference between soft and hard links
 
+
+The different semantics between hard and soft links make them suitable for different things.
+
+### Hard links:
+
+indistinguishable from other directory entries, because every directory entry is hard link
+"original" can be moved or deleted without breaking other hard links to the same inode
+only possible within the same filesystem
+permissions must be the same as those on the "original" (permissions are stored in the inode, not the directory entry)
+can only be made to files, not directories
+
+### Symbolic links (soft links)
+
+simply records that point to another file path. (ls -l will show what path a symlink points to)
+will break if original is moved or deleted. (In some cases it is actually desirable for a link to point to whatever file currently occupies a particular location)
+can point to a file in a different filesystem
+can point to a directory
+on some file system formats, it is possible for the symlink to have different permissions than the file it points to (this is uncommon)
+
+---
+
 ###Hard Link vs Soft Link
 
 Once again, one of the very basic question asked in the interviews, What is the difference between Hard links and Soft links. You can explain few basic things, but emphasizing on internals about the linux filesystem, is something which can impress the interviewer.
