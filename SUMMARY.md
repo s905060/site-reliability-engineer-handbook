@@ -25,7 +25,7 @@
        * [SMTP](smtp.md)
        * [Single instance of program](single_instance_of_program.md)
        * [Argparse](argparse.md)
-       * Requests
+       * [Requests](requests.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
