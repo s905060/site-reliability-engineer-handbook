@@ -30,7 +30,7 @@
        * [Readlines](readlines.md)
        * [Raw Input](raw_input.md)
        * [With Open](with_open.md)
-       * Configparser
+       * [Configparser](configparser.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
    * [Regex](regex.md)
