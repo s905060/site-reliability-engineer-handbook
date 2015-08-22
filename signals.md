@@ -9,7 +9,6 @@ A signal is an asynchronous event which is delivered to a process.
 normal CPU
 3. Process can send a signal to another - Kernel can send signal to a process (like an
 interrupt)
-
 4. A process can
  * ignore/discard the signal (not possible with SIGKILL or SIGSTOP) 
  * execute a signal handler function, and then possibly resume execution or terminate
