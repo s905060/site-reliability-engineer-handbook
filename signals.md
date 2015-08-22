@@ -1,7 +1,19 @@
 # Signals
 
-Next Previous Contents
-5. Signals
+A signal is an asynchronous event which is delivered to a process.
+
+1. Asynchronous means that the event can occur at any time
+    * may be unrelated to the execution of the process
+    * e.g. user types ctrl-C, or the modem hangs
+2. Unix supports a signal facility, looks like a software version of the interrupt subsystem of a
+normal CPU
+3. Process can send a signal to another - Kernel can send signal to a process (like an
+interrupt)
+
+4. A process can
+ * ignore/discard the signal (not possible with SIGKILL or SIGSTOP) 
+ * execute a signal handler function, and then possibly resume execution or terminate
+ * carry out the default action for that signal
 
 The common communication channel between user space program and kernel is given by the system calls. But there is a different channel, that of the signals, used both between user processes and from kernel to user process.
 
