@@ -10,7 +10,9 @@ However, many normal applications obviously need access to these components, so 
 **On Unix, Unix-like and other POSIX-compliant operating systems, popular system calls are open, read, write, close, wait, exec, fork, exit, and kill. Many modern operating systems have hundreds of system calls. For example, Linux and OpenBSD each have over 300 different calls,[2][3] NetBSD has close to 500,[4] FreeBSD has over 500,[5] while Plan 9 has 51.[6]
 Tools such as strace and truss allow a process to execute from start and report all system calls the process invokes, or can attach to an already running process and intercept any system call made by said process if the operation does not violate the permissions of the user. This special ability of the program is usually also implemented with a system call, e.g. strace is implemented with ptrace or system calls on files in procfs.**
 
-###System calls can be roughly grouped into five major categories:
+---
+
+####System calls can be roughly grouped into five major categories:
 
 1. Process Control
 ```
