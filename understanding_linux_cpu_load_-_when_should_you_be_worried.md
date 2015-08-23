@@ -51,7 +51,7 @@ If we go back to the bridge analogy, the "1.00" really means "one lane's worth o
 
 Same with CPUs: a load of 1.00 is 100% CPU utilization on single-core box. On a dual-core box, a load of 2.00 is 100% CPU utilization.
 
-Multicore vs. multiprocessor
+### Multicore vs. multiprocessor
 While we're on the topic, let's talk about multicore vs. multiprocessor. For performance purposes, is a machine with a single dual-core processor basically equivalent to a machine with two processors with one core each? Yes. Roughly. There are lots of subtleties here concerning amount of cache, frequency of process hand-offs between processors, etc. Despite those finer points, for the purposes of sizing up the CPU load value, the total number of cores is what matters, regardless of how many physical processors those cores are spread across.
 
 Which leads us to a two new Rules of Thumb:
