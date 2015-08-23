@@ -13,7 +13,7 @@ This is the Unix philosophy:
 * Write programs to work together. 
 * Write programs to handle text streams, because that is a universal interface.
 
-** #Doug McIlroy**
+**@Doug McIlroy**
 
 ---
 
@@ -29,13 +29,13 @@ This is the Unix philosophy:
 
 **Rule 6.** There is no Rule 6.
 
-**#Rob Pike**
+**@Rob Pike**
 
 ---
 
 When in doubt, use brute force.
 
-**#Ken Thompson**
+**@Ken Thompson**
 
 ---
 
