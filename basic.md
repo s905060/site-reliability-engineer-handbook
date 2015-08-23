@@ -155,9 +155,12 @@ $ mv -v file1 file2
 
 You can view multiple files at the same time. Following example prints the content of file1 followed by file2 to stdout.
 
+```
 $ cat file1 file2
+```
 While displaying the file, following cat -n command will prepend the line number to each line of the output.
 
+```
 $ cat -n /etc/logrotate.conf
     1	/var/log/btmp {
     2	    missingok
@@ -165,108 +168,134 @@ $ cat -n /etc/logrotate.conf
     4	    create 0660 root utmp
     5	    rotate 1
     6	}
-31. mount command examples
+```
+
+### mount command examples
 
 To mount a file system, you should first create a directory and mount it as shown below.
-
+```
 # mkdir /u01
-
+```
+```
 # mount /dev/sdb1 /u01
+```
 You can also add this to the fstab for automatic mounting. i.e Anytime system is restarted, the filesystem will be mounted.
-
+```
 /dev/sdb1 /u01 ext2 defaults 0 2
-32. chmod command examples
+```
+
+### chmod command examples
 
 chmod command is used to change the permissions for a file or directory.
 
 Give full access to user and group (i.e read, write and execute ) on a specific file.
-
+```
 $ chmod ug+rwx file.txt
+```
 Revoke all access for the group (i.e read, write and execute ) on a specific file.
 
+```
 $ chmod g-rwx file.txt
+```
 Apply the file permissions recursively to all the files in the sub-directories.
 
+```
 $ chmod -R ug+rwx file.txt
+```
 More chmod examples: 7 Chmod Command Examples for Beginners
 
-33. chown command examples
+### chown command examples
 
 chown command is used to change the owner and group of a file. \
 
 To change owner to oracle and group to db on a file. i.e Change both owner and group at the same time.
 
+```
 $ chown oracle:dba dbora.sh
+```
 Use -R to change the ownership recursively.
 
+```
 $ chown -R oracle:dba /home/oracle
-34. passwd command examples
+```
+
+### passwd command examples
 
 Change your password from command line using passwd. This will prompt for the old password followed by the new password.
 
+```
 $ passwd
+```
 Super user can use passwd command to reset others password. This will not prompt for current password of the user.
 
+```
 # passwd USERNAME
+```
+
 Remove password for a specific user. Root user can disable password for a specific user. Once the password is disabled, the user can login without entering the password.
 
+```
 # passwd -d USERNAME
-35. mkdir command examples
+```
+
+### mkdir command examples
 
 Following example creates a directory called temp under your home directory.
 
+```
 $ mkdir ~/temp
+```
+
 Create nested directories using one mkdir command. If any of these directories exist already, it will not display any error. If any of these directories doesn’t exist, it will create them.
-
+```
 $ mkdir -p dir1/dir2/dir3/dir4/
-36. ifconfig command examples
+```
 
-Use ifconfig command to view or configure a network interface on the Linux system.
-
-View all the interfaces along with status.
-
-$ ifconfig -a
-Start or stop a specific interface using up and down command as shown below.
-
-$ ifconfig eth0 up
-
-$ ifconfig eth0 down
-More ifconfig examples: Ifconfig: 7 Examples To Configure Network Interface
-
-37. uname command examples
+### uname command examples
 
 Uname command displays important information about the system such as — Kernel name, Host name, Kernel release number,
 Processor type, etc.,
 
 Sample uname output from a Ubuntu laptop is shown below.
-
+```
 $ uname -a
 Linux john-laptop 2.6.32-24-generic #41-Ubuntu SMP Thu Aug 19 01:12:52 UTC 2010 i686 GNU/Linux
-38. whereis command examples
+```
+
+### whereis command examples
 
 When you want to find out where a specific Unix command exists (for example, where does ls command exists?), you can execute the following command.
 
+```
 $ whereis ls
 ls: /bin/ls /usr/share/man/man1/ls.1.gz /usr/share/man/man1p/ls.1p.gz
+```
+
 When you want to search an executable from a path other than the whereis default path, you can use -B option and give path as argument to it. This searches for the executable lsmk in the /tmp directory, and displays it, if it is available.
 
+```
 $ whereis -u -B /tmp -f lsmk
 lsmk: /tmp/lsmk
-39. whatis command examples
+```
+
+### whatis command examples
 
 Whatis command displays a single line description about a command.
-
+```
 $ whatis ls
 ls		(1)  - list directory contents
-
+```
+```
 $ whatis ifconfig
 ifconfig (8)         - configure a network interface
-40. locate command examples
+```
+
+### locate command examples
 
 Using locate command you can quickly search for the location of a specific file (or group of files). Locate command uses the database created by updatedb.
 
 The example below shows all files in the system that contains the word crontab in it.
-
+```
 $ locate crontab
 /etc/anacrontab
 /etc/crontab
@@ -276,14 +305,18 @@ $ locate crontab
 /usr/share/man/man5/anacrontab.5.gz
 /usr/share/man/man5/crontab.5.gz
 /usr/share/vim/vim72/syntax/crontab.vim
-41. man command examples
+```
+
+### man command examples
 
 Display the man page of a specific command.
-
+```
 $ man crontab
+```
 When a man page for a command is located under more than one section, you can view the man page for that command from a specific section as shown below.
-
+```
 $ man SECTION-NUMBER commandname
+```
 Following 8 sections are available in the man page.
 
 General commands
@@ -295,73 +328,90 @@ Games and screensavers
 Miscellaneous
 System administration commands and daemons
 For example, when you do whatis crontab, you’ll notice that crontab has two man pages (section 1 and section 5). To view section 5 of crontab man page, do the following.
-
+```
 $ whatis crontab
+```
 crontab (1)          - maintain crontab files for individual users (V3)
-crontab (5)          - tables for driving cron
 
+crontab (5)          - tables for driving cron
+```
 $ man 5 crontab
-42. tail command examples
+```
+
+### tail command examples
 
 Print the last 10 lines of a file by default.
-
+```
 $ tail filename.txt
+```
 Print N number of lines from the file named filename.txt
-
+```
 $ tail -n N filename.txt
+```
 View the content of the file in real time using tail -f. This is useful to view the log files, that keeps growing. The command can be terminated using CTRL-C.
-
+```
 $ tail -f log-file
+```
 More tail examples: 3 Methods To View tail -f output of Multiple Log Files in One Terminal
 
-43. less command examples
+### less command examples
 
 less is very efficient while viewing huge log files, as it doesn’t need to load the full file while opening.
-
+```
 $ less huge-log-file.log
+```
 One you open a file using less command, following two keys are very helpful.
-
+```
 CTRL+F – forward one window
 CTRL+B – backward one window
-More less examples: Unix Less Command: 10 Tips for Effective Navigation
+```
 
-44. su command examples
+### su command examples
 
 Switch to a different user account using su command. Super user can switch to any other user without entering their password.
-
+```
 $ su - USERNAME
+```
 Execute a single command from a different account name. In the following example, john can execute the ls command as raj username. Once the command is executed, it will come back to john’s account.
-
+```
 [john@dev-server]$ su - raj -c 'ls'
 
 [john@dev-server]$
 Login to a specified user account, and execute the specified shell instead of the default shell.
 
 $ su -s 'SHELLNAME' USERNAME
-45. mysql command examples
+```
+
+### mysql command examples
 
 mysql is probably the most widely used open source database on Linux. Even if you don’t run a mysql database on your server, you might end-up using the mysql command ( client ) to connect to a mysql database running on the remote server.
 
 To connect to a remote mysql database. This will prompt for a password.
-
+```
 $ mysql -u root -p -h 192.168.1.2
+```
 To connect to a local mysql database.
-
+```
 $ mysql -u root -p
+```
 If you want to specify the mysql root password in the command line itself, enter it immediately after -p (without any space).
 
-46. yum command examples
+### yum command examples
 
 To install apache using yum.
-
+```
 $ yum install httpd
+```
 To upgrade apache using yum.
-
+```
 $ yum update httpd
+```
 To uninstall/remove apache using yum.
-
+```
 $ yum remove httpd
-47. rpm command examples
+```
+
+### rpm command examples
 
 To install apache using rpm.
 
