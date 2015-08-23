@@ -1,5 +1,7 @@
 #AWK
 
+![](Screen Shot 2015-08-23 at 4.52.52 PM.png)
+
 To print the previous, the pattern matching line and next line: 
 ```
 $ grep -C1 Solaris file
