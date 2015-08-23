@@ -1,5 +1,21 @@
 # Signals
 
+The simplest and crudest way for two processes on the same machine to communicate with each other is for one to send the other a signal. Unix signals are a form of soft interrupt; each one has a default effect on the receiving process (usually to kill it). A process can declare a signal handler that overrides the default action for the signal; the handler is a function that is executed asynchronously when the signal is received.
+
+Signals were originally designed into Unix as a way for the operating system to notify programs of certain errors and critical events, not as an IPC facility. The SIGHUP signal, for example, is sent to every program started from a given terminal session when that session is terminated. The SIGINT signal is sent to whatever process is currently attached to the keyboard when the user enters the currently-defined interrupt character (often control-C). Nevertheless, signals can be useful for some IPC situations (and the POSIX-standard signal set includes two signals, SIGUSR1 and SIGUSR2, intended for this use). They are often employed as a control channel for daemons (programs that run constantly, invisibly, in background), a way for an operator or another program to tell a daemon that it needs to either reinitialize itself, wake up to do work, or write internal-state/debugging information to a known location.
+
+A technique often used with signal IPC is the so-called pidfile. Programs that will need to be signaled will write a small file to a known location (often in /var/run or the invoking user’s home directory) containing their process ID or PID. Other programs can read that file to discover that PID. The pidfile may also function as an implicit lock file in cases where no more than one instance of the daemon should be running simultaneously.
+
+There are actually two different flavors of signals. In the older implementations (notably V7, System III, and early System V), the handler for a given signal is reset to the default for that signal whenever the handler fires. The result of sending two of the same signal in quick succession is therefore usually to kill the process, no matter what handler was set.
+
+The BSD 4.x versions of Unix changed to “reliable” signals, which do not reset unless the user explicitly requests it. They also introduced primitives to block or temporarily suspend processing of a given set of signals. Modern Unixes support both styles. You should use the BSD-style nonresetting entry points for new code, but program defensively in case your code is ever ported to an implementation that does not support them.
+
+ReceivingNsignalsdoesnotnecessarilyinvokethesignalhandlerNtimes. UndertheolderSystem V signal model, two or more signals spaced very closely together (that is, within a single timeslice of the target process) can result in various race conditions75 or anomalies. Depending on what variant of signals semantics the system supports, the second and later instances may be ignored, may cause an unexpected process kill, or may have their delivery delayed until earlier instances have been processed (on modern Unixes the last is most likely).
+
+The modern signals API is portable across all recent Unix versions, but not to Windows or classic (pre-OS X) MacOS.
+
+---
+
 A signal is an asynchronous event which is delivered to a process.
 
 1. Asynchronous means that the event can occur at any time
