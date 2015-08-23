@@ -75,7 +75,7 @@
    * [LSOF](lsof.md)
    * [DIFF](diff.md)
    * [SORT](sort.md)
-   * Xargs
+   * [Xargs](xargs.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
