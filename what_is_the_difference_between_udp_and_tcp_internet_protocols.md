@@ -18,7 +18,9 @@ Transmission Control Protocol (TCP) and User Datagram Protocol (UDP)is a transpo
 
 **UDP** (User Datagram Protocol) is anther commonly used protocol on the Internet. However, UDP is never used to send important data such as webpages, database information, etc; UDP is commonly used for streaming audio and video. Streaming media such as Windows Media audio files (.WMA) , Real Player (.RM), and others use UDP because it offers speed! The reason UDP is faster than TCP is because there is no form of flow control or error correction. The data sent over the Internet is affected by collisions, and errors will be present. Remember that UDP is only concerned with speed. This is the main reason why streaming media is not high quality.
 
+![](udp.jpg)
 
+![](tcp.jpg)
 
 On the contrary, UDP has been implemented among some trojan horse viruses. Hackers develop scripts and trojans to run over UDP in order to mask their activities. UDP packets are also used in DoS (Denial of Service) attacks. It is important to know the difference between TCP port 80 and UDP port 80. If you don't know what ports are go here. 
 
