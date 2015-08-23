@@ -93,5 +93,5 @@
 * [Algorithm](algorithm.md)
 * [Monitoring](monitoring.md)
 * [Database](database.md)
-* Trouble Shooting
+* [Trouble Shooting](trouble_shooting.md)
 
