@@ -73,6 +73,7 @@
    * [TAR](tar.md)
    * [LSOF](lsof.md)
    * [DIFF](diff.md)
+   * SORT
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
