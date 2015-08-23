@@ -3,6 +3,7 @@
 To complete our triptych of Internet application protocol examples, we'll look at IMAP, another post office protocol designed in a slightly different style. See Example 5.9; as before, C: lines are sent by the client, and S: lines by the mail-server. Text emphasized like this is comments, not part of the actual transaction.
 
 Example 5.9. An IMAP session example
+
 ```
 C: <client connects to service port 143>
 S: * OK example.com IMAP4rev1 v12.264 server ready
@@ -31,6 +32,9 @@ C: A0006 LOGOUT
 S: * BYE example.com IMAP4rev1 server terminating connection S: A0006 OK LOGOUT completed
 C: <client hangs up>
 ```
+
 IMAP delimits payloads in a slightly different way. Instead of ending the payload with a dot, the payload length is sent just before it. This increases the burden on the server a little bit (messages have to be composed ahead of time, they can't just be streamed up after the send initiation) but makes life easier for the client, which can tell in advance how much storage it will need to allocate to buffer the message for processing as a whole.
+
 Also, notice that each response is tagged with a sequence label supplied by the request; in this example they have the form A000n, but the client could have generated any token into that slot. This feature makes it possible for IMAP commands to be streamed to the server without waiting for the responses; a state machine in the client can then simply interpret the responses and payloads as they come back. This technique cuts down on latency.
-IMAP (which was designed to replace POP3) is an excellent example of a mature and powerful Internet
+
+IMAP (which was designed to replace POP3) is an excellent example of a mature and powerful Internet application protocol design, one well worth study and emulation.
