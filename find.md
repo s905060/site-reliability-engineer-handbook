@@ -1,5 +1,7 @@
 # FIND
 
+（the "+" means "greater than", "-" means "less than"）
+
 ```
 find . -type f -print -delete
 ```
