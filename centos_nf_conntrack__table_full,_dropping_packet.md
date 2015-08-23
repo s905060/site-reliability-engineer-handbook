@@ -1,4 +1,4 @@
-#  CentOS nf_conntrack: table full, dropping packet.
+#  CentOS: nf_conntrack: table full, dropping packet.
 
 ```
 # cat /etc/centos-release ; uname -ri
