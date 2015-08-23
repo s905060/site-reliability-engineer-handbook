@@ -24,3 +24,23 @@ user    0m0.594s
 sys     0m0.527s
 ```
 That’s one (1) second vs seven (7) seconds. Seriously; xargs is the way to go.
+
+---
+```
+find . -name H* -exec ls -l {} \; executes the command ls -l on each individual file.
+
+find . -name H* | xargs ls -l constructs an argument list from the output of the find commend and passes it to ls.
+
+consider if the ouput of the find command produced:
+H1
+H2
+H3
+
+the first command would execute
+ls -l H1
+ls -l H2
+ls -l H3
+
+but the second would execute
+ls -l H1 H2 H3
+```
