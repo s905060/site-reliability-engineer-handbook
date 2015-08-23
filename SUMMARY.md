@@ -84,5 +84,5 @@
    * [Docker](docker.md)
    * [Xen](xen.md)
    * [KVM](kvm.md)
-* Algorithm
+* [Algorithm](algorithm.md)
 
