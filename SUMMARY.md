@@ -16,6 +16,7 @@
    * [PID Definition](pid_definition.md)
    * [Understanding User and Kernel Mode](understanding_user_and_kernel_mode.md)
    * [RAID](raid.md)
+   * Understanding Linux CPU Load - when should you be worried?
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
