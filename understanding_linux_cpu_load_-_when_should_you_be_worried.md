@@ -61,7 +61,8 @@ Which leads us to a two new Rules of Thumb:
 
 * The "cores is cores" Rule of Thumb: How the cores are spread out over CPUs doesn't matter. Two quad-cores == four dual-cores == eight single-cores. It's all eight cores for these purposes.
 
-Bringing It Home
+### Bringing It Home
+
 Let's take a look at the load averages output from uptime:
 
 ~ $ uptime
