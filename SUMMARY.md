@@ -52,10 +52,10 @@
        * [Supervisor](supervisor.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
+       * [Regex](regex.md)
+           * [Validate an ip address](validate_an_ip_address.md)
+           * [Regular expression metacharacters](regular_expression_metacharacters.md)
        * .bash_profile vs .bashrc
-   * [Regex](regex.md)
-       * [Validate an ip address](validate_an_ip_address.md)
-       * [Regular expression metacharacters](regular_expression_metacharacters.md)
 * [Linux Command Line Tool](linuxcommand_line_tool_md.md)
    * [AWK](awk.md)
    * [NMAP](nmap.md)
