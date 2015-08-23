@@ -1,7 +1,4 @@
-My SRE Handbook
-=======
-
-Awesome examples copied from internet.
+# OPEN KNOWLEDGE - My SRE Handbook
 
 #### (i) Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
 
@@ -16,4 +13,7 @@ This is the Unix philosophy:
 * Write programs to work together. 
 * Write programs to handle text streams, because that is a universal interface.
 
-2015 August
+August, 2015
+
+---
+###### ** All contents/examples are copied from internet. **
