@@ -21,3 +21,5 @@ Find all empty files in home directory
 ```
 # find ~ -empty
 ```
+
+![](Screen Shot 2015-08-23 at 2.55.49 PM.png)
