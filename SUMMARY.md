@@ -25,6 +25,7 @@
    * [OSI MODEL](osi_model.md)
    * [Journey of a Data Packet in the Internet](journey_of_a_data_packet_in_the_internet.md)
    * [Introduction to Linux IP Routing Fundamentals](introduction_to_linux_ip_routing_fundamentals.md)
+   * Journey of a Data Packet in the Internet
 * [Programming](programming.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
