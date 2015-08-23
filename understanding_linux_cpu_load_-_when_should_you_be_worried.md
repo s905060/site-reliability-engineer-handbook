@@ -15,9 +15,12 @@ A single-core CPU is like a single lane of traffic. Imagine you are a bridge ope
 
 So, Bridge Operator, what numbering system are you going to use? How about:
 
-0.00 means there's no traffic on the bridge at all. In fact, between 0.00 and 1.00 means there's no backup, and an arriving car will just go right on.
-1.00 means the bridge is exactly at capacity. All is still good, but if traffic gets a little heavier, things are going to slow down.
-over 1.00 means there's backup. How much? Well, 2.00 means that there are two lanes worth of cars total -- one lane's worth on the bridge, and one lane's worth waiting. 3.00 means there are three lane's worth total -- one lane's worth on the bridge, and two lanes' worth waiting. Etc.
+**0.00 means there's no traffic on the bridge at all.** In fact, between 0.00 and 1.00 means there's no backup, and an arriving car will just go right on.
+
+**1.00 means the bridge is exactly at capacity.** All is still good, but if traffic gets a little heavier, things are going to slow down.
+
+**over 1.00 means there's backup.** How much? Well, 2.00 means that there are two lanes worth of cars total -- one lane's worth on the bridge, and one lane's worth waiting. 3.00 means there are three lane's worth total -- one lane's worth on the bridge, and two lanes' worth waiting. Etc.
+
 ![](20090728-jek9ssauydsi19nbcja26tw8ju.png) = load of 1.00
 
 ![](20090728-c3278n4dj5t766u5mcjhwb2h57.png) = load of 0.50
