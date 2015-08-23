@@ -8,6 +8,13 @@
 
 ---
 
+
+###### Everything should be made as simple as possible, but no simpler.
+
+**@Albert Einstein**
+
+---
+
 **(i)** Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
 
 **(ii)** Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
@@ -41,7 +48,7 @@ This is the Unix philosophy:
 
 ---
 
-When in doubt, use brute force.
+###### When in doubt, use brute force.
 
 **@Ken Thompson**
 
