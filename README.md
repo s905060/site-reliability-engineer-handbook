@@ -1,5 +1,10 @@
 # OPEN KNOWLEDGE - My SRE Handbook
 
+
+###### Rule of Optimization: Prototype before polishing. Get it working before you optimize it.
+
+---
+
 **(i)** Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
 
 **(ii)** Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
