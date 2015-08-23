@@ -22,5 +22,5 @@ Hmm, that’s not bad — seven seconds for over around 1,600 files, right? Let�
 real    0m1.120s
 user    0m0.594s
 sys     0m0.527s
-That’s one (1) second vs seven (7) seconds. Seriously; xargs is the way to go.
 ```
+That’s one (1) second vs seven (7) seconds. Seriously; xargs is the way to go.
