@@ -4,7 +4,7 @@ Copy all images to external hard-drive
 
 ```
 # ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory
-``
+```
 
 Search all jpg images in the system and archive it.
 
