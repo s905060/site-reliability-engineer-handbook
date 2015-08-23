@@ -3,6 +3,9 @@
 
 ###### Rule of Optimization: Prototype before polishing. Get it working before you optimize it.
 
+
+###### Keeping It Clean, Keeping It Simple
+
 ---
 
 **(i)** Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
