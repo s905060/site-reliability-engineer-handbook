@@ -76,6 +76,7 @@
    * [DIFF](diff.md)
    * [SORT](sort.md)
    * [Xargs](xargs.md)
+   * xargs vs. exec {}
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
