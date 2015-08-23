@@ -140,13 +140,18 @@ $ cp -i file1 file2
 
 Rename file1 to file2. if file2 exists prompt for confirmation before overwritting it.
 
+```
 $ mv -i file1 file2
+```
+
 Note: mv -f is just the opposite, which will overwrite file2 without prompting.
 
 mv -v will print what is happening during file rename, which is useful while specifying shell metacharacters in the file name argument.
-
+```
 $ mv -v file1 file2
-30. cat command examples
+```
+
+### cat command examples
 
 You can view multiple files at the same time. Following example prints the content of file1 followed by file2 to stdout.
 
