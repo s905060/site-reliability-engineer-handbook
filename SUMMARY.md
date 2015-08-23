@@ -82,6 +82,7 @@
    * [Iptables](iptables.md)
    * [xargs vs. exec {}](xargs_vs_exec_{}.md)
    * [Hdparm](hdparm.md)
+   * CURL
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
