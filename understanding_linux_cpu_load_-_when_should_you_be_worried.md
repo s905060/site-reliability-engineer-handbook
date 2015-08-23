@@ -73,11 +73,11 @@ This is on a dual-core CPU, so we've got lots of headroom. I won't even think ab
 
 Now, what about those three numbers? 0.65 is the average over the last minute, 0.42 is the average over the last five minutes, and 0.36 is the average over the last 15 minutes. Which brings us to the question:
 
-Which average should I be observing? One, five, or 15 minute?
+### Which average should I be observing? One, five, or 15 minute?
 
 For the numbers we've talked about (1.00 = fix it now, etc), you should be looking at the five or 15-minute averages. Frankly, if your box spikes above 1.0 on the one-minute average, you're still fine. It's when the 15-minute average goes north of 1.0 and stays there that you need to snap to. (obviously, as we've learned, adjust these numbers to the number of processor cores your system has).
 
-So # of cores is important to interpreting load averages ... how do I know how many cores my system has?
+### So # of cores is important to interpreting load averages ... how do I know how many cores my system has?
 
-cat /proc/cpuinfo to get info on each processor in your system. Note: not available on OSX, Google for alternatives. To get just a count, run it through grep and word count: grep 'model name' /proc/cpuinfo | wc -l
+```cat /proc/cpuinfo ```to get info on each processor in your system. Note: not available on OSX, Google for alternatives. To get just a count, run it through grep and word count: ```grep 'model name' /proc/cpuinfo | wc -l```
 
