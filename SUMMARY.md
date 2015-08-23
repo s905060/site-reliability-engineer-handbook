@@ -52,6 +52,7 @@
        * [Supervisor](supervisor.md)
    * [Golang](golang.md)
    * [Bash](bash.md)
+       * .bash_profile vs .bashrc
    * [Regex](regex.md)
        * [Validate an ip address](validate_an_ip_address.md)
        * [Regular expression metacharacters](regular_expression_metacharacters.md)
