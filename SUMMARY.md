@@ -81,7 +81,7 @@
    * [Xargs](xargs.md)
    * [Iptables](iptables.md)
    * [xargs vs. exec {}](xargs_vs_exec_{}.md)
-   * Hdparm
+   * [Hdparm](hdparm.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
