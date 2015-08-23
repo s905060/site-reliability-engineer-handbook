@@ -33,7 +33,11 @@ This is the Unix philosophy:
 
 ---
 
+When in doubt, use brute force.
 
+**#Ken Thompson**
+
+---
 
 August, 2015
 
