@@ -93,4 +93,5 @@
 * [Algorithm](algorithm.md)
 * [Monitoring](monitoring.md)
 * [Database](database.md)
+* Trouble Shooting
 
