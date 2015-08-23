@@ -25,8 +25,6 @@ over 1.00 means there's backup. How much? Well, 2.00 means that there are two la
 ![](20090728-89jd6aydgwd9j26in49h7y1n7g.png) = load of 1.70
 
 
-
-
 This is basically what CPU load is. "Cars" are processes using a slice of CPU time ("crossing the bridge") or queued up to use the CPU. Unix refers to this as the run-queue length: the sum of the number of processes that are currently running plus the number that are waiting (queued) to run.
 
 Like the bridge operator, you'd like your cars/processes to never be waiting. So, your CPU load should ideally stay below 1.00. Also like the bridge operator, you are still ok if you get some temporary spikes above 1.00 ... but when you're consistently above 1.00, you need to worry.
