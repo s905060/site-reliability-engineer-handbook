@@ -64,6 +64,7 @@
        * [.bash_profile vs .bashrc](bashprofile_vs__bashrc.md)
        * [EXPORT](export.md)
        * [Scripts](scripts.md)
+       * Change default shell
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [AWK](awk.md)
