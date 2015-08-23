@@ -63,7 +63,7 @@
            * [Regular expression metacharacters](regular_expression_metacharacters.md)
        * [.bash_profile vs .bashrc](bashprofile_vs__bashrc.md)
        * [EXPORT](export.md)
-       * Common
+       * Scripts
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [AWK](awk.md)
