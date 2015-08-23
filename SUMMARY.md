@@ -78,7 +78,7 @@
    * [SORT](sort.md)
    * [Xargs](xargs.md)
    * [xargs vs. exec {}](xargs_vs_exec_{}.md)
-   * Iptables
+   * [Iptables](iptables.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
