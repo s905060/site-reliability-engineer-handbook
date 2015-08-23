@@ -72,7 +72,7 @@
    * [TCPDUMP](tcpdump.md)
    * [TAR](tar.md)
    * [LSOF](lsof.md)
-   * DIFF
+   * [DIFF](diff.md)
 * [Security](security.md)
    * [Common](common.md)
 * [Virtualization](virtualization.md)
