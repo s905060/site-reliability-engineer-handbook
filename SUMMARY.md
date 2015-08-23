@@ -30,7 +30,7 @@
    * [What is the difference between UDP and TCP internet protocols?](what_is_the_difference_between_udp_and_tcp_internet_protocols.md)
    * [SMTP, a simple socket protocol](smtp,_a_simple_socket_protocol.md)
    * [POP3, the Post Office Protocol](pop3,_the_post_office_protocol.md)
-   * IMAP, the Internet Message Access Protocol
+   * [IMAP, the Internet Message Access Protocol](imap,_the_internet_message_access_protocol.md)
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
