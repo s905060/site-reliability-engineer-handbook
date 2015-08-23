@@ -414,38 +414,47 @@ $ yum remove httpd
 ### rpm command examples
 
 To install apache using rpm.
-
+```
 # rpm -ivh httpd-2.2.3-22.0.1.el5.i386.rpm
+```
 To upgrade apache using rpm.
-
+```
 # rpm -uvh httpd-2.2.3-22.0.1.el5.i386.rpm
+```
 To uninstall/remove apache using rpm.
-
+```
 # rpm -ev httpd
+```
 More rpm examples: RPM Command: 15 Examples to Install, Uninstall, Upgrade, Query RPM Packages
 
-48. ping command examples
+### ping command examples
 
 Ping a remote host by sending only 5 packets.
-
+```
 $ ping -c 5 gmail.com
+```
 More ping examples: Ping Tutorial: 15 Effective Ping Command Examples
 
-49. date command examples
+### date command examples
 
 Set the system date:
-
+```
 # date -s "01/31/2010 23:59:53"
+```
 Once you’ve changed the system date, you should syncronize the hardware clock with the system date as shown below.
-
+```
 # hwclock –systohc
-
+```
+```
 # hwclock --systohc –utc
-50. wget command examples
+```
+### wget command examples
 
 The quick and effective method to download software, music, video from internet is using wget command.
-
+```
 $ wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.1.tar.gz
+```
 Download and store it with a different name.
-
+```
 $ wget -O taglist.zip http://www.vim.org/scripts/download_script.php?src_id=7701
+```
