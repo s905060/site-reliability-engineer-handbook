@@ -52,13 +52,14 @@ If we go back to the bridge analogy, the "1.00" really means "one lane's worth o
 Same with CPUs: a load of 1.00 is 100% CPU utilization on single-core box. On a dual-core box, a load of 2.00 is 100% CPU utilization.
 
 ### Multicore vs. multiprocessor
+
 While we're on the topic, let's talk about multicore vs. multiprocessor. For performance purposes, is a machine with a single dual-core processor basically equivalent to a machine with two processors with one core each? Yes. Roughly. There are lots of subtleties here concerning amount of cache, frequency of process hand-offs between processors, etc. Despite those finer points, for the purposes of sizing up the CPU load value, the total number of cores is what matters, regardless of how many physical processors those cores are spread across.
 
 Which leads us to a two new Rules of Thumb:
 
-The "number of cores = max load" Rule of Thumb: on a multicore system, your load should not exceed the number of cores available.
+* The "number of cores = max load" Rule of Thumb: on a multicore system, your load should not exceed the number of cores available.
 
-The "cores is cores" Rule of Thumb: How the cores are spread out over CPUs doesn't matter. Two quad-cores == four dual-cores == eight single-cores. It's all eight cores for these purposes.
+* The "cores is cores" Rule of Thumb: How the cores are spread out over CPUs doesn't matter. Two quad-cores == four dual-cores == eight single-cores. It's all eight cores for these purposes.
 
 Bringing It Home
 Let's take a look at the load averages output from uptime:
