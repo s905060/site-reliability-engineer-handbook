@@ -64,9 +64,11 @@ Which leads us to a two new Rules of Thumb:
 ### Bringing It Home
 
 Let's take a look at the load averages output from uptime:
-
+```
 ~ $ uptime
 23:05 up 14 days, 6:08, 7 users, load averages: 0.65 0.42 0.36
+```
+
 This is on a dual-core CPU, so we've got lots of headroom. I won't even think about it until load gets and stays above 1.7 or so.
 
 Now, what about those three numbers? 0.65 is the average over the last minute, 0.42 is the average over the last five minutes, and 0.36 is the average over the last 15 minutes. Which brings us to the question:
