@@ -28,3 +28,10 @@ On the contrary, UDP has been implemented among some trojan horse viruses. Hacke
 
 As data moves along a network, various attributes are added to the file to create a frame. This process is called encapsulation. There are different methods of encapsulation depending on which protocol and topology are being used. As a result, the frame structure of these packets differ as well. The images below show both the TCP and UDP frame structures. 
 
+####TCP FRAME STRUCTURE
+![](tcppacket.gif)
+
+####UDP FRAME STRUCTURE
+![](udppacket.gif)
+
+The payload field contains the actually data. Notice that TCP has a more complex frame structure. This is largely due to the fact the TCP is a connection-oriented protocol. The extra fields are need to ensure the "guaranteed delivery" offered by TCP.
