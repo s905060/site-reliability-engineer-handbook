@@ -5,7 +5,7 @@
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
    * [Signals](signals.md)
-   * Sockets
+   * [Sockets](sockets.md)
    * [Tempfiles](tempfiles.md)
    * [System Calls](system_calls.md)
    * [PID Definition](pid_definition.md)
