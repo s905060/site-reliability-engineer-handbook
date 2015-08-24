@@ -14,6 +14,7 @@ FLAGS can be any of the following :
 * p If substitution was made, then prints the new pattern space.
 * i match REGEXP in a case-insensitive manner.
 * w file If substitution was made, write out the result to the given file.
+* We can use different delimiters ( one of @ % ; : ) instead of /
 
 
 ```
