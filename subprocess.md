@@ -6,6 +6,14 @@ subprocess.check_output('ps -ef | grep something | wc -l', shell=True)
 ```
 
 ```
+output=`dmesg | grep hda`
+==>
+p1 = Popen(["dmesg"], stdout=PIPE)
+p2 = Popen(["grep", "hda"], stdin=p1.stdout, stdout=PIPE)
+output = p2.communicate()[0]
+```
+
+```
 import shlex, subprocess
 
 command_line = raw_input()
