@@ -44,5 +44,5 @@ This is also helpful when you are interested in viewing only the standard output
 
 Note: One of the most effective ways to use this is in the crontab, where you can suppress the output and error message of a cron task as shown below.
 ```
-  30 1 * * * command > /dev/null 2>&1
+30 1 * * * command > /dev/null 2>&1
 ```
