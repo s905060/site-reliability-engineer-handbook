@@ -32,3 +32,17 @@ This will be very helpful when you are debugging shell scripts, where you don’
 # cat file.txt > /dev/null
 # ./shell-script.sh > /dev/null
 ```
+
+#### Suppress standard error using 2> /dev/null
+
+This is also helpful when you are interested in viewing only the standard output and don’t want to view the error messages.
+
+```
+# cat invalid-file-name.txt 2> /dev/null
+# ./shell-script.sh 2> /dev/null
+```
+
+Note: One of the most effective ways to use this is in the crontab, where you can suppress the output and error message of a cron task as shown below.
+```
+  30 1 * * * command > /dev/null 2>&1
+```
