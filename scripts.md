@@ -23,3 +23,12 @@ The following command finds all the files not modified in the last 60 days under
 # find /home/jsmith -type f -mtime +60 | xargs tar -cvf
 /tmp/`date '+%d%m%Y'_archive.tar`
 ```
+
+#### Suppress standard output using > /dev/null
+
+This will be very helpful when you are debugging shell scripts, where you don’t want to display the echo statement and interested in only looking at the error messages.
+
+```
+# cat file.txt > /dev/null
+# ./shell-script.sh > /dev/null
+```
