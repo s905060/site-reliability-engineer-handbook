@@ -30,3 +30,18 @@ Saving to: `strx25-0.9.2.1.tar.bz2'
 2009-09-25 11:15:30 (68.7 KB/s) - `strx25-0.9.2.1.tar.bz2'
 saved [3852374/3852374]
 ```
+
+Download and Store With a Different File name Using wget -O
+By default wget will pick the filename from the last word after last forward slash, which may not be appropriate always.
+Wrong: Following example will download and store the file with name: download_script.php?src_id=7701
+
+```
+$ wget http://www.vim.org/scripts/download_script.php?
+src_id=7701
+```
+
+Even though the downloaded file is in zip format, it will get stored in the file as shown below.
+```
+$ ls
+download_script.php?src_id=7701
+```
