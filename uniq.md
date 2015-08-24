@@ -23,3 +23,14 @@ When you have an employee file with duplicate entries, you can do the following 
 $ sort namesd.txt | uniq
 $ sort –u namesd.txt
 ```
+
+If you want to know how many lines are duplicates, do the following. The first field in the following examples indicates how many duplicates where found for that particular line. So, in this example the lines beginning with Alex and Emma were found twice in the namesd.txt file.
+
+```
+$ sort namesd.txt | uniq –c
+      2 Alex Jason:200:Sales
+      2 Emma Thomas:100:Marketing
+      1 Madison Randy:300:Product Development
+      1 Nisha Singh:500:Sales
+      1 Sanjay Gupta:400:Support
+```
