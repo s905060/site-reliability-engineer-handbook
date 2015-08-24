@@ -1,0 +1,17 @@
+# Shared Memory
+
+
+Whereas two processes using sockets to communicate may live on different machines (and, in fact, be separated by an Internet connection spanning half the globe), shared memory requires producers and consumers to be co-resident on the same hardware. But, if your communicating processes can get access to the same physical memory, shared memory will be the fastest way to pass information between them.
+
+Shared memory may be disguised under different APIs, but on modern Unixes the implementation normally depends on the use of mmap(2) to map files into memory that can be shared between processes. POSIX defines a shm_open(3) facility with an API that supports using files as shared memory; this is mostly a hint to the operating system that it need not flush the pseudofile data to disk.
+
+Because access to shared memory is not automatically serialized by a discipline resembling read and write calls, programs doing the sharing must handle contention and deadlock issues themselves, typically by using semaphore variables located in the shared segment. The issues here resemble those in multithreading (see the end of this chapter for discussion) but are more manageable because default is not to share memory. Thus, problems are better contained.
+
+On systems where it is available and reliable, the Apache web server’s scoreboard facility uses shared memory for communication between an Apache master process and the load-sharing pool of Apache images that it manages. Modern X implementations also use shared memory, to pass large images between client and server when they are resident on the same machine, to avoid the overhead of socket communication. Both uses are performance hacks justified by experience and testing, rather than being architectural choices.
+
+The mmap(2) call is supported under all modern Unixes, including Linux and the open-source BSD versions;thisisdescribedintheSingleUnixSpecification. It will notnormally be available under
+Windows, MacOS classic, and other operating systems.
+
+Before purpose-built mmap(2) was available, a common way for two processes to communicate was for them to open the same file, and then delete that file. The file wouldn’t go away until all open filehandles were closed, but some old Unixes took the link count falling to zero as a hint that they could stop updating the on-disk copy of the file. The downside was that your backing store was the file system rather than a swap device, the file system the deleted file lived on couldn’t be unmounted until the programs using it closed, and attaching new processes to an existing shared memory segment faked up in this way was tricky at best.
+
+After Version 7 and the split between the BSD and System V lineages, the evolution of Unix interprocess communication took two different directions. The BSD direction led to sockets. The AT&T lineage, on the other hand, developed named pipes (as previously discussed) and an IPC facility, specifically designed for passing binary data and based on shared-memory bidirectional message queues. This is called ‘System V IPC’—or, among old timers, ‘Indian Hill’ IPC after the AT&T facility where it was first written.
