@@ -53,5 +53,4 @@ Note: If a download is stopped in middle, when you restart the download again wi
 Download Multiple Files / URLs Using Wget -i
 ```
 $ wget -i download-file-list.txt
-
 ```
