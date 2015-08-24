@@ -14,7 +14,7 @@ Nisha Singh
 ```
 
 Display 1st and 3rd field from a colon delimited file
-￼```
+```
 $ cut -d: -f 1,3 names.txt
 Emma Thomas:Marketing
 Alex Jason:Sales
