@@ -48,3 +48,17 @@ much time available)
 #  Additional FAQS
 6. Windows- Sysadmin, reboot etc.
 ```
+
+Eliminate Comments Using sed
+Delete all the comment lines from a file as shown below using sed command.
+```
+$  sed -e 's/#.*//' thegeekstuff.txt
+1. Linux Sysadmin, Linux Scripting etc.
+2. Databases - Oracle, mySQL etc.
+3. Security (Firewall, Network, Online Security etc)
+4. Storage in Linux
+5. Productivity (Too many technologies to explore, not
+much time available)
+6. Windows- Sysadmin, reboot etc.
+8. Eliminate Comments and Empty Lines Using sed
+```
