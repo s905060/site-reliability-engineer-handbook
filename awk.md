@@ -36,7 +36,16 @@ Nisha $9,500
 Randy $6,000
 ```
 
-To print the previous, the pattern matching line and next line: 
+Find the employees who has employee id greater than 200
+In the above example, first field ($1) is employee id. So if $1 is greater than 200, then just do the default print action to print the whole line.
+```
+$ awk '$1 >200' employee.txt
+300  Sanjay  Sysadmin   Technology  $7,000
+400  Nisha   Manager    Marketing   $9,500
+500  Randy   DBA        Technology  $6,000
+```
+To print the previous, the pattern matching line and next line:
+
 ```
 $ grep -C1 Solaris file
 Linux
