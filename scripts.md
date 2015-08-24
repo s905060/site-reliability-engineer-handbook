@@ -57,3 +57,26 @@ $ tr a-z A-Z < employee.txt
 300 SANJAY GUPTA
 400 ASHOK SHARMA
 ```
+
+1. When you are trying to delete too many files using rm, you may get error message: /bin/rm Argument list too long – Linux. Use xargs to avoid this problem.
+```
+find ~ -name ‘*.log’ -print0 | xargs -0 rm -f
+```
+2. Get a list of all the *.conf file under /etc/. There are different ways to get the same result. Following example is only to demonstrate the use of xargs. The output of the find command in this example is passed to the ls –l one by one using xargs.
+```
+# find /etc -name "*.conf" | xargs ls –l
+```
+3. If you have a file with list of URLs that you would like to download, you can use xargs as shown below.
+```  
+# cat url-list.txt | xargs wget –c
+```
+4. Find out all the jpg images and archive it.
+```
+# find / -name *.jpg -type f -print | xargs tar -cvzf
+images.tar.gz
+```
+5. Copy all the images to an external hard-drive.
+```
+# ls *.jpg | xargs -n1 -i cp {} /external-hard-
+drive/directory
+```
