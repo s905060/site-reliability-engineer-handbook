@@ -17,3 +17,9 @@ $ ps -ef | awk '{ print $1 }' | sort | uniq -c | sort -nr
 The "1 UID" line is a result of the initial header line from ps. If we wanted to get rid of
 that we could do something like "ps -ef | tail +2 | awk …", but the above is
 good enough for most purposes.
+
+When you have an employee file with duplicate entries, you can do the following to remove duplicates.
+```
+$ sort namesd.txt | uniq
+$ sort –u namesd.txt
+```
