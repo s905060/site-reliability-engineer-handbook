@@ -4,6 +4,7 @@
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
+   * IPC
    * [RPC](rpc.md)
    * [Signals](signals.md)
    * [Sockets](sockets.md)
@@ -23,7 +24,6 @@
    * [Understanding User and Kernel Mode](understanding_user_and_kernel_mode.md)
    * [Understanding Linux CPU Load - when should you be worried?](understanding_linux_cpu_load_-_when_should_you_be_worried.md)
    * [RAID](raid.md)
-   * IPC
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
