@@ -62,3 +62,11 @@ much time available)
 6. Windows- Sysadmin, reboot etc.
 8. Eliminate Comments and Empty Lines Using sed
 ```
+
+Eliminate HTML Tags from file Using sed
+In this example, the regular expression given in the sed command matches the html tags and replaces with the empty.
+```
+$ sed -e 's/<[^>]*>//g'
+This <b> is </b> an <i>example</i>.
+This  is  an example.
+```
