@@ -62,7 +62,7 @@ $ wget ftp-url
 ```
 
 FTP download using wget with username and password authentication.
-￼```
+```
 $ wget --ftp-user=USERNAME --ftp-password=PASSWORD
 DOWNLOAD-URL
 ```
