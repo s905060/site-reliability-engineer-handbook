@@ -9,7 +9,7 @@
    * [Tempfiles](tempfiles.md)
    * [System Calls](system_calls.md)
    * [PID Definition](pid_definition.md)
-   * Shared Memory
+   * [Shared Memory](shared_memory.md)
    * [Zombie process](zombie_process.md)
    * [What's in an inode?](whats_in_an_inode.md)
    * [What are the common run levels in linux](what_are_the_common_run_levels_in_linux.md)
