@@ -7,7 +7,7 @@
    * [RPC](rpc.md)
    * [Signals](signals.md)
    * [Sockets](sockets.md)
-   * Threads
+   * [Threads](threads.md)
    * [Streams](streams.md)
    * [Tempfiles](tempfiles.md)
    * [System Calls](system_calls.md)
