@@ -54,3 +54,15 @@ Download Multiple Files / URLs Using Wget -i
 ```
 $ wget -i download-file-list.txt
 ```
+
+TP Download With wget
+You can use wget to perform FTP download as shown below. Anonymous FTP download using Wget
+```  
+$ wget ftp-url
+```
+
+FTP download using wget with username and password authentication.
+￼```
+$ wget --ftp-user=USERNAME --ftp-password=PASSWORD
+DOWNLOAD-URL
+```
