@@ -51,3 +51,25 @@ RinRao 2122 38 37 => Fail
 Edwin 2537 87 97 95 => Pass
 Dayan 2415 30 47 => Fail
 ```
+
+**Awk If Else If Example**: Find the average and grade for every student
+
+```
+$ cat grade.awk
+{
+total=$3+$4+$5;
+avg=total/3;
+if ( avg >= 90 ) grade="A";
+else if ( avg >= 80) grade ="B";
+else if (avg >= 70) grade ="C";
+else grade="D";
+
+print $0,"=>",grade;
+}
+$ awk -f grade.awk student-marks
+Jones 2143 78 84 77 => C
+Gondrol 2321 56 58 45 => D
+RinRao 2122 38 37 => D
+Edwin 2537 87 97 95 => A
+Dayan 2415 30 47 => D
+```
