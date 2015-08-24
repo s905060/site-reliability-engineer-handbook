@@ -32,3 +32,19 @@ Add line number for all non-empty-lines in a file
 ```
 $ sed '/./=' thegeekstuff.txt | sed 'N; s/\n/ /'
 ```
+
+Substitute all Appearances of a Word Using sed s//g
+The below sed command replaces all occurrences of Linux to Linux-Unix using global substitution flag “g”.
+```
+$ sed 's/Linux/Linux-Unix/g' thegeekstuff.txt
+
+# Instruction Guides
+1. Linux-Unix Sysadmin, Linux-Unix Scripting etc.
+2. Databases - Oracle, mySQL etc.
+3. Security (Firewall, Network, Online Security etc)
+4. Storage in Linux-Unix
+5. Productivity (Too many technologies to explore, not
+much time available)
+#  Additional FAQS
+6. Windows- Sysadmin, reboot etc.
+```
