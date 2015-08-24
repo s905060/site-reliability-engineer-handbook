@@ -22,6 +22,7 @@ Madison Randy:Product Development
 Sanjay Gupta:Support
 Nisha Singh:Sales
 ```
+
 Display only the first 8 characters of every line in a file
 ```
 $ cut -c 1-8 names.txt
@@ -31,6 +32,7 @@ Madison
 Sanjay G
 Nisha Si
 ```
+
 Misc Cut command examples
 ```
 • cut -d: -f1 /etc/passwd Displays the unix login names for all the users in the system.
