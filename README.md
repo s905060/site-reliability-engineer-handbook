@@ -3,11 +3,9 @@
 
 ###### Rule of Optimization: Prototype before polishing. Get it working before you optimize it.
 
-
 ###### Keeping It Clean, Keeping It Simple
 
 ---
-
 
 ###### Everything should be made as simple as possible, but no simpler.
 
