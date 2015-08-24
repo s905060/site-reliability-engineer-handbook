@@ -46,3 +46,14 @@ Note: One of the most effective ways to use this is in the crontab, where you ca
 ```
 30 1 * * * command > /dev/null 2>&1
 ```
+
+#### Change the Case
+Convert a file to all upper-case
+
+```
+$ tr a-z A-Z < employee.txt
+100 JASON SMITH
+200 JOHN DOE
+300 SANJAY GUPTA
+400 ASHOK SHARMA
+```
