@@ -4,7 +4,7 @@
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
-   * IPC
+   * [IPC](ipc.md)
    * [RPC](rpc.md)
    * [Signals](signals.md)
    * [Sockets](sockets.md)
