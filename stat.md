@@ -10,6 +10,7 @@ Access: (0644/-rw-r--r--)  Uid: (0/root)   Gid: (0/root)
 Access: 2009-01-01 02:58:30.000000000 -0800
 Modify: 2006-06-01 20:42:27.000000000 -0700
 Change: 2007-02-02 14:17:27.000000000 -0800
+
 $ stat /home/ramesh
  File: `/home/ramesh'
   Size: 4096            Blocks: 8          IO Block: 4096
