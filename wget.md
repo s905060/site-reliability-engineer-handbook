@@ -37,3 +37,15 @@ By default wget will pick the filename from the last word after last forward sla
 $ wget -O taglist.zip
 http://www.vim.org/scripts/download_script.php?src_id=7701
 ```
+
+Continue the Incomplete Download Using wget -c
+Restart a download which got stopped in the middle using wget -c option as shown below.
+
+```
+$ wget -c http://www.openss7.org/repos/tarballs/strx25-
+0.9.2.1.tar.bz2
+```
+
+This is very helpful when you have initiated a very big file download which got interrupted in the middle. Instead of starting the whole download again, you can start the download from where it got interrupted using option -c
+
+Note: If a download is stopped in middle, when you restart the download again without the option -c, wget will append .1 to the filename automatically as a file with the previous name already exist. If a file with .1 already exist, it will download the file with .2 at the end.
