@@ -13,4 +13,20 @@ While downloading it will show a progress bar with the following information:
 bytes as shown below)
 * Current download speed (for e.g. 68.2K/s as shown below)
 * Remaining time to download (for e.g. eta 34 seconds as shown below)
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼
+
+Download in progress:
+```
+$ wget http://www.openss7.org/repos/tarballs/strx25-
+0.9.2.1.tar.bz2
+Saving to: `strx25-0.9.2.1.tar.bz2.1'
+31% [=================> 1,213,592   68.2K/s  eta 34s
+```
+Download completed:
+```
+$ wget http://www.openss7.org/repos/tarballs/strx25-
+0.9.2.1.tar.bz2
+Saving to: `strx25-0.9.2.1.tar.bz2'
+100%[======================>] 3,852,374   76.8K/s   in 55s
+2009-09-25 11:15:30 (68.7 KB/s) - `strx25-0.9.2.1.tar.bz2'
+saved [3852374/3852374]
+```
