@@ -101,7 +101,7 @@
    * [STAT](stat.md)
    * [AC](ac.md)
    * [Execute Commands in the Background](execute_commands_in_the_background.md)
-   * CHMOD
+   * [CHMOD](chmod.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
