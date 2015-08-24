@@ -7,7 +7,7 @@
    * [Signals](signals.md)
    * [Sockets](sockets.md)
    * [Tempfiles](tempfiles.md)
-   * Streams
+   * [Streams](streams.md)
    * [System Calls](system_calls.md)
    * [PID Definition](pid_definition.md)
    * [Shared Memory](shared_memory.md)
