@@ -102,6 +102,7 @@
    * [UNIQ](uniq.md)
    * [STAT](stat.md)
    * [Execute Commands in the Background](execute_commands_in_the_background.md)
+   * TAIL
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
