@@ -109,5 +109,5 @@
 * [Monitoring](monitoring.md)
 * [Database](database.md)
 * [Algorithm](algorithm.md)
-* Data Structure
+* [Data Structure](data_structure.md)
 
