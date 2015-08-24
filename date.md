@@ -11,7 +11,7 @@ $ date --date="now"
 Thu Jan  1 08:20:05 PST 2009
 $ date --date="today"
 Thu Jan  1 08:20:12 PST 2009
-$ date --date='1970-01-01 00:00:01 UTC +5 hours' +%s
+$ date --date='1970-01-01 00:00:01 UTC +5 hours' +%s 
 18001
 $ date '+Current Date: %m/%d/%y%nCurrent Time:%H:%M:%S'
 Current Date: 01/01/09
