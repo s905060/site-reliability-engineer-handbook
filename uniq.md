@@ -34,3 +34,15 @@ $ sort namesd.txt | uniq –c
       1 Nisha Singh:500:Sales
       1 Sanjay Gupta:400:Support
 ```
+
+The following displays only the entries that are duplicates.
+Hack 16. Cut Command
+Cut command can be used to display only specific columns from a text file or other command outputs.
+The following are some of the examples.
+Display the 1st field (employee name) from a colon delimited file
+
+```
+$ sort namesd.txt | uniq –cd
+      2 Alex Jason:200:Sales
+      2 Emma Thomas:100:Marketing
+```
