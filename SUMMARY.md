@@ -63,6 +63,7 @@
        * [Virtualenv](virtualenv.md)
        * [Regular Expressions](regular_expressions.md)
        * [Supervisor](supervisor.md)
+       * Socket
    * [Golang](golang.md)
    * [Bash](bash.md)
        * [Regex](regex.md)
