@@ -15,6 +15,27 @@ In the above awk syntax:
 
 ![](Screen Shot 2015-08-23 at 4.52.52 PM.png)
 
+Print only specific field
+Awk has number of built in variables. For each record i.e line, it splits the record delimited by whitespace character by default and stores it in the $n variables. If the line has 4 words, it will be stored in $1, $2, $3 and $4. $0 represents whole line. NF is a built in variable which represents total number of fields in a record.
+```
+$ awk '/Thomas/
+> /Nisha/' employee.txt
+100  Thomas  Manager    Sales       $5,000
+400  Nisha   Manager    Marketing   $9,500
+$ awk '{print $2,$5;}' employee.txt
+Thomas $5,000
+Jason $5,500
+Sanjay $7,000
+Nisha $9,500
+Randy $6,000
+$ awk '{print $2,$NF;}' employee.txt
+Thomas $5,000
+Jason $5,500
+Sanjay $7,000
+Nisha $9,500
+Randy $6,000
+```
+
 To print the previous, the pattern matching line and next line: 
 ```
 $ grep -C1 Solaris file
