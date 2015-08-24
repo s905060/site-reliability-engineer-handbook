@@ -1,6 +1,11 @@
 # Subprogress
 
 ```
+import subprocess
+subprocess.check_output('ps -ef | grep something | wc -l', shell=True)
+```
+
+```
 import shlex, subprocess
 
 command_line = raw_input()
