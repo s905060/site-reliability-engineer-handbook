@@ -98,6 +98,7 @@
    * [xargs vs. exec {}](xargs_vs_exec_{}.md)
    * [Hdparm](hdparm.md)
    * [UNIQ](uniq.md)
+   * STAT
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
