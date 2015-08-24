@@ -35,3 +35,19 @@ Print only specific field from a file.
 ```
 $ awk '{print $2,$5;}' employee.txt
 ```
+
+**Awk If Else Example**: Generate Pass/Fail Report based on Student marks in each subject
+
+```
+$ awk '{
+if ($3 >=35 && $4 >= 35 && $5 >= 35)
+	print $0,"=>","Pass";
+else
+	print $0,"=>","Fail";
+}' student-marks
+Jones 2143 78 84 77 => Pass
+Gondrol 2321 56 58 45 => Pass
+RinRao 2122 38 37 => Fail
+Edwin 2537 87 97 95 => Pass
+Dayan 2415 30 47 => Fail
+```
