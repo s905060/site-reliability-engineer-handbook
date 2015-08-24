@@ -1,5 +1,18 @@
 #AWK
 
+Syntax:
+```
+awk '/search pattern1/ {Actions}
+     /search pattern2/ {Actions}' file
+```
+
+In the above awk syntax:
+* search pattern is a regular expression.
+* Actions – statement(s) to be performed.
+* several patterns and actions are possible in Awk.
+* file – Input file.
+* Single quotes around program is to avoid shell not to interpret any of its special characters.
+
 ![](Screen Shot 2015-08-23 at 4.52.52 PM.png)
 
 To print the previous, the pattern matching line and next line: 
