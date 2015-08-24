@@ -11,3 +11,9 @@ Threads are a fertile source of bugs because they can too easily know too much a
 Thread developers have been waking up to this problem. Recent thread implementations and standards show an increasing concern with providing thread-local storage, which is intended to limit problems arising from the shared global address space. As threading APIs move in this direction, thread programming starts to look more and more like a controlled use of shared memory.
 
 To add insult to injury, threading has performance costs that erode its advantages over conventional process partitioning. While threading can get rid of some of the overhead of rapidly switching process contexts, locking shared data structures so threads won’t step on each other can be just as expensive.
+
+This problem is fundamental, and has also been a continuing issue in the design of Unix kernels for symmetric multiprocessing. As your resource-locking gets finer-grained, latency due to locking overhead can increase fast enough to swamp the gains from locking less core memory.
+
+One final difficulty with threads is that threading standards still tend to be weak and underspecified as of mid-2003. Theoretically conforming libraries for Unix standards such as POSIX threads (1003.1c) can nevertheless exhibit alarming differences in behavior across platforms, especially withrespecttosignals,interactionswithotherIPCmethods,andresourcecleanuptimes. Windows and classic MacOS have native threading models and interrupt facilities quite different from those of Unixandwilloftenrequireconsiderableportingeffortevenforsimplethreadingcases. Theupshot is that you cannot count on threaded programs to be portable.
+
+For more discussion and a lucid contrast with event-driven programming, see Why Threads Are a Bad Idea [Osterhout96].
