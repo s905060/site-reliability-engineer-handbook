@@ -36,6 +36,15 @@ Add option z to the tar command when dealing with tar.gz compressed file.
 ```
 Note: Using gzip is faster when compared to bzip2.
 
+How to use bzip2 with tar?
+Add option j to the tar command when dealing with tar.bz2 compressed file.
+```
+# tar cvfj /tmp/my_home_directory.tar.bz2 /home/jsmith
+# tar xvfj /tmp/my_home_directory.tar.bz2
+# tar tvfj /tmp/my_home_directory.tar.bz2
+```
+Note: Using bizp2 gives higher level of compression when compared to gzip.
+
 
 ### tar command examples
 
