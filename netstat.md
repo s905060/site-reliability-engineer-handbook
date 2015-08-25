@@ -40,3 +40,61 @@ Use the following netstat command to find out which process is using a particula
 ```
 # netstat -an | grep ':80'
 ```
+
+How to list all port using netstat ?
+```
+# netstat -a
+```
+List all listening ports?
+```
+# netstat -l
+```
+List all tcp ports ?
+```
+# netstat -at
+
+Example:
+# netstat -at
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State
+tcp        0      0 *:mysql                     *:*                         LISTEN
+tcp        0      0 *:submission                *:*                         LISTEN
+```
+
+List all udp port ?
+```
+# netstat -au
+Example:
+
+# netstat -au
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State
+udp        0      0 host.org:domain  *:*
+udp        0      0 localhost.localdomain:domain *:*
+```
+List all Unix ports ?
+```
+# netstat -ax
+```
+List all listening tcp ports?
+```
+# netstat -lt
+```
+List all listening udp ports?
+```
+# netstat -lu
+```
+List all listening Unix ports ?
+```
+# netstat -lx
+```
+List all tcp ports with Process ID and numerically ?
+You can use the -n and -p to do the same.
+```
+# netstat -atp
+```
+List all tcp ports which are in listening status with Process ID and numerically ?
+You can use the -n and -p to do the same.
+```
+# netstat -ltp
+```
