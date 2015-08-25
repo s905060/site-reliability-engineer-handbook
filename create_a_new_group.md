@@ -12,3 +12,8 @@ developers:x:511:
 ```
 Add an user to an existing group
 You cannot use useradd to modify an existing user, as you’ll get the following error message.
+```
+# useradd -G developers jsmith
+useradd: user jsmith exists
+# usermod -g developers jsmith
+```
