@@ -21,3 +21,7 @@ Do a ./configure --help which will display all application specific configuratio
 ```  
 ./configure --help
 ```
+In most cases, you can just do ./configure which will use all default values to perform the configuration. This will perform necessary pre-req checks. This will also generate the Makefile required for the installation.
+```
+./configure
+```
