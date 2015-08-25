@@ -109,7 +109,7 @@
    * [Date](date.md)
    * [FDISK](fdisk.md)
    * [Mount](mount.md)
-   * Make SWAP File
+   * [Make SWAP File](make_swap_file.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
