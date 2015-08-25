@@ -17,3 +17,6 @@ svB.xml
 sent 26385 bytes  received 1098 bytes  54966.00 bytes/sec
 total size is 44867  speedup is 1.63
 ```
+* -z is to enable compression
+* -v verbose
+* -r indicates recursive
