@@ -13,4 +13,6 @@ Mount the file system.
 ```
 
 To automatically mount the filesystem after the reboot, add the following entry to the /etc/fstab
-  /dev/sda1 /home/database ext3 defaults 0 2
+```
+/dev/sda1 /home/database ext3 defaults 0 2
+```
