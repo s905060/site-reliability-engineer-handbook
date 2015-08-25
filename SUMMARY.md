@@ -40,6 +40,7 @@
    * [IMAP, the Internet Message Access Protocol](imap,_the_internet_message_access_protocol.md)
    * [How to subnet: Subnetting calculations and shortcuts](how_to_subnet_subnetting_calculations_and_shortcuts.md)
    * [HTTP Status Code](http_status_code.md)
+   * How does HTTPS actually work?
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
