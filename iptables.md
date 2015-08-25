@@ -28,3 +28,12 @@ Before we proceed further will other examples, if you want to block a specific i
 BLOCK_THIS_IP="x.x.x.x"
 iptables -A INPUT -s "$BLOCK_THIS_IP" -j DROP
 ```
+This is helpful when you find some strange activities from a specific ip- address in your log files, and you want to temporarily block that ip- address while you do further research.
+
+You can also use one of the following variations, which blocks only TCP traffic on eth0 connection for this ip-address.
+
+```
+iptables -A INPUT -i eth0 -s "$BLOCK_THIS_IP" -j DROP
+iptables -A INPUT -i eth0 -p tcp -s "$BLOCK_THIS_IP" -j
+DROP
+```
