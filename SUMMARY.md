@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Storage
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [POSIX signals](posix_signals.md)
