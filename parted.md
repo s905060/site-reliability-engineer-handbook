@@ -72,3 +72,7 @@ Number  Start   End     Size    Type      Filesystem Flags
  7      324GB   344GB   20.0GB  logical   ext4
  8      344GB   364GB   20.0GB  logical   ext2
 ```
+Use mkpart to create a new logical partition with 127GB size as shown below.
+```
+(parted) mkpart logical 372737 500000
+```
