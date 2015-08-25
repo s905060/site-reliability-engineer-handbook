@@ -47,3 +47,14 @@ iptables -A INPUT -i eth0 -p tcp --dport 22 -m state
 iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state
 --state ESTABLISHED -j ACCEPT
 ```
+
+Allow Incoming SSH only from a Specific Network
+The following rules allow incoming ssh connections only from 192.168.100.X network.
+```
+iptables -A INPUT -i eth0 -p tcp -s 192.168.100.0/24
+--dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state
+--state ESTABLISHED -j ACCEPT
+```
+In the above example, instead of /24, you can also use the full subnet mask. i.e “192.168.100.0/255.255.255.0′′.
