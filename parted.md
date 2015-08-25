@@ -52,3 +52,14 @@ You can also enable boot option on a partition as shown below. Linux reserves 1-
 ```
 (parted) set 1 boot on
 ```
+
+Create Logical Partition in Selected HDD Using mkpart
+Use mkpart command to create a new partition of a specific size. This will create the partition of a specific type such as primary, logical or extended without creating the file system.
+Before creating the partition, execute a print command to view the current layout.
+```
+(parted) print
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+```
