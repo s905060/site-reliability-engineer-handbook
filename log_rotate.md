@@ -18,3 +18,11 @@ Add the following file to /etc/logrotate.d directory.
 ramesh@thegeekstuff.com
 endscript }
 ```
+
+Note: Refer to our logrotate tutorial (with 15 examples) that explains more details about how to use logrotate options.
+In the above /etc/logrotate.d/apache example:
+* size 100M – Once the access_log, and error_log reaches 100M, it will be rotated. You can also use 100k (for Kb), 100G (for GB). Instead of size, you can also rotate apache logs using frequency (daily, weekly, monthly).
+* compress – Indicates that the rotated log file will be compressed. By default this uses gzip. So, the rotated file will have .gz extension.
+* dateext - Appends the date in YYYYMMDD format to the rotated log files. i.e Instead of access_log.1.gz, it creates access_log- 20110616.gz
+* maxage - Indicates how long the rotated log files should be kept. In this example, it will be kept for 30 days.
+* postrotate and endscript – Any commands enclosed between these two parameter will be executed after the log is rotated.
