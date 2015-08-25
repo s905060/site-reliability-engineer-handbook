@@ -1,0 +1,22 @@
+# Create a New User
+
+Add a new user – Basic method
+Specify only the user name.
+```
+# useradd jsmith
+```
+
+Add a new user with additional Parameter
+You can also specify the following parameter to the useradd
+* -c : Description about the user.
+* -e : expiry date of the user in mm/dd/yy format
+```
+# adduser -c "John Smith - Oracle Developer" -e 12/31/09
+jsmith
+```
+Verify that the user got added successfully.
+```
+# grep jsmith /etc/passwd
+jsmith:x:510:510:John Smith - Oracle
+Developer:/home/jsmith:/bin/bash
+```
