@@ -28,3 +28,11 @@ The following NEW packages will be installed:
 0 upgraded, 7 newly installed, 0 to remove and 26 not
 upgraded.
 ```
+
+apt-get remove: Delete a Package
+Use “apt-get purge” or “apt-get remove” to delete a package as shown below.
+```
+$ sudo apt-get purge apache2
+(or)
+$ sudo apt-get remove apache2
+```
