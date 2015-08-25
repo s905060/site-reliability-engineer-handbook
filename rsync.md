@@ -70,3 +70,19 @@ Pubkeys
 sent 42 bytes  received 12380 bytes  3549.14 bytes/sec
 total size is 12288  speedup is 0.99
 ```
+
+Synchronize Files From Local to Remote
+
+rsync allows you to synchronize files/directories between the local and remote system.
+```
+$ rsync -avz /root/temp/
+thegeekstuff@192.168.200.10:/home/thegeekstuff/temp/
+Password:
+building file list ... done
+./
+rpm/
+rpm/Basenames
+rpm/Conflictname
+sent 15810261 bytes  received 412 bytes  2432411.23
+bytes/sec
+```
