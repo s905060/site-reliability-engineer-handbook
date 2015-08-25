@@ -45,4 +45,10 @@ $ date --date="1 days ago"
 Wed Dec 31 08:27:18 PST 2008
 $ date --date="1 month ago"
 Mon Dec  1 08:27:23 PST 2008
+$ date --date="1 year ago"
+Tue Jan  1 08:27:28 PST 2008
+$ date --date="yesterday"
+Wed Dec 31 08:27:34 PST 2008
+$ date --date="10 months 2 day ago"
+Thu Feb 28 08:27:41 PST 2008
 ```
