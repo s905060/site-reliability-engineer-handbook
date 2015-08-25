@@ -42,3 +42,4 @@ mozilla-firetray-firefox.x86_64
 mozilla-adblockplus.noarch : Mozilla Firefox extension
 mozilla-noscript.noarch : Mozilla Firefox extension
 ```
+Name and summary matches only, use "search all" for everything.
