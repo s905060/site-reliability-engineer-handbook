@@ -16,3 +16,8 @@ iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT DROP
 ```
+When you make both INPUT, and OUTPUT chain’s default policy as DROP, for every firewall rule requirement you have, you should define two rules. i.e one for incoming and one for outgoing.
+
+In all our examples below, we have two rules for each scenario, as we’veset DROP as default policy for both INPUT and OUTPUT chain.
+
+If you trust your internal users, you can omit the last line above. i.e Do not DROP all outgoing packets by default. In that case, for every firewall rule requirement you have, you just have to define only one rule. i.e define rule only for incoming, as the outgoing is ACCEPT for all packets.
