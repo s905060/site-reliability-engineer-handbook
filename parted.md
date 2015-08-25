@@ -210,3 +210,4 @@ End?  [500GB]? 450GB
 As shown above, parted command will always warn whenever you are attempting to do something dangerous (i.e : rm, resize, mkfs).
 
 The size of partition 9 is actually reduced from 127GB to 77GB. Verify that the partition is resized properly using the print command as shown below.
+
