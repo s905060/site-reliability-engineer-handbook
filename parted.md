@@ -42,3 +42,13 @@ Number  Start   End     Size    Type      Filesystem Flags
  6      366GB   370GB   3999MB  logical   linux-swap(v1)
  9      370GB   500GB   130GB   logical   ext4
 ```
+
+Create Primary Partition in Selected HDD Using mkpart
+mkpart command is used to create either primary or logical partition with the START and END disk locations. The below example creates partition with size around 15GB. The START and END points passed to the mkpart command are in the units of MBs.
+```
+(parted) mkpart primary 106 16179
+```
+You can also enable boot option on a partition as shown below. Linux reserves 1-4 or 1-3 partition number for primary partition and the extended partition starts from number 5.
+```
+(parted) set 1 boot on
+```
