@@ -26,3 +26,7 @@ When you are going to take a Cisco CCNA exam, before the exam starts, write the 
 |1	|1	|1	|1	|1	|1	|0	|0	|252
 |1	|1	|1	|1	|1	|1	|1	|0	|254
 |1	|1	|1	|1	|1	|1	|1	|1	|255
+
+What the chart represents are the 8-bit values of one octet of an IPv4 IP address. (See sidebar for IPv6 subnetting resources.) If you add up all of the bits, it comes to 255 which is an all 1's mask.
+
+If you are wondering how we get 256 in one octet, there is an implied zero at the end. If you are looking at a network you can have a network address of 192.168.17.0. The modulus of 128  0 would be 256. To arrive at the subnet mask we can do one of two things: add the positive bits together or take the least significant positive bit and subtract it from 256.
