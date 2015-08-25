@@ -36,3 +36,11 @@ ls -ltr /usr/local/apache2/logs | mail -s "$HOSTNAME:
 Apache restarted and log files rotated"
 ramesh@thegeekstuff.com
 ```
+
+The /etc/cron.daily/logrotate script runs everyday that will perform log rotate of all the files as specified in the /etc/logrotate.conf and all the file under /etc/logrotate.d directory.
+
+After adding the above /etc/logrotate.d/apache file, for testing purpose, you can manually call the logrotate script as shown below.
+
+```
+# /etc/cron.daily/logrotate
+```
