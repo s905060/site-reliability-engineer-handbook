@@ -292,3 +292,12 @@ total 52
  0 2011-09-26 22:52 part8
 20 2011-09-26 22:52 test.txt
 ```
+Note: When you copy across partitions of different filesystem(for example src : ext2 and dst : ext4), the destination partition’s file system is actually converted to the file system of source partition (i.e : ext2) .
+
+Remove Partition from a Selected Hard Disk Using rm
+To delete an unwanted or unused partition, use the parted rm command and specify the partition number as shown below.
+```
+(parted) rm
+Partition number? 9
+(parted)
+```
