@@ -258,3 +258,19 @@ It is recommended to unmount both source and destination partition before doing 
 
 The following shows the content of the corresponding partitions before copy.
 
+```
+# mount /dev/sda8 /mnt
+# cd /mnt
+# ls -l
+total 52
+-rw-r--r-- 1 root root
+-rw-r--r-- 1 root root
+# umount /mnt
+# mount /dev/sda10 /mnt
+# cd /mnt
+# ls -l
+total 48
+ 0 2011-09-26 22:52 part8
+20 2011-09-26 22:52 test.txt
+```
+
