@@ -41,3 +41,7 @@ Device Boot  Start         End      Blocks   Id  System
 /dev/sda1        1       34893   280277991   83  Linux
 Command (m for help): q
 ```
+
+```
+mkfs.ext4 /dev/sda1
+```
