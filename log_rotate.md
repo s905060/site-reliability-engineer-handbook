@@ -28,3 +28,11 @@ In the above /etc/logrotate.d/apache example:
 * postrotate and endscript – Any commands enclosed between these two parameter will be executed after the log is rotated.
 
 **Important: Once you rotate the log files, you want apache to write the new log messages to the newly created access_log and error_log. So, you need to send the HUP signal to the apache as shown here. Make sure to do /usr/bin/killall -HUP httpd, which will restart the apache after rotating the log files (Read more about kill).**
+
+Also, you might want to send an email to yourself indicating that the log file is rotated, along with the output of ls -ltr command as the body of the email. i.e Add the following between “postrotate” and “endscript” option (after the killall command).
+
+```
+ls -ltr /usr/local/apache2/logs | mail -s "$HOSTNAME:
+Apache restarted and log files rotated"
+ramesh@thegeekstuff.com
+```
