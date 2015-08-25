@@ -10,3 +10,6 @@ In the following example, option -s stands for summary only. i.e it displays onl
 # du -sh ~
 320M    /home/jsmith
 ```
+
+To get the subdirectories under /home/jsmith listed, execute the above
+command without the s option.
