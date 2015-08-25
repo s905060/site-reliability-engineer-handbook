@@ -12,3 +12,13 @@ Running Transaction
 Installing : postgresql-libs-9.0.4-5.fc15.x86_64  1/2
 Installing : postgresql-9.0.4-5.fc15.x86_64       2/2
 ```
+
+Uninstall a package using yum remove
+To remove a package (along with all its dependencies), use ‘yum remove package’ as shown below.
+```
+# yum remove  postgresql.x86_64
+Package postgresql.x86_64 0:9.0.4-5.fc15 will be erased
+Is this ok [y/N]: y
+Running Transaction
+  Erasing    : postgresql-9.0.4-5.fc15.x86_64       1/1
+```
