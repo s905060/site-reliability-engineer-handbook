@@ -9,6 +9,23 @@ information while executing the command.
 # tar cvf /tmp/my_home_directory.tar /home/jsmith
 ```
 
+How do I view all the files inside the tar archive?
+Option t will display all the files from the tar archive.
+```
+# tar tvf /tmp/my_home_directory.tar
+```
+
+How do I extract all the files from a tar archive?
+Option x will extract the files from the tar archive as shown below. This will extract the content to the current directory location from where the command is executed.
+```
+# tar xvf /tmp/my_home_directory.tar
+```
+
+How do I extract tar.gz files to a specific directory?
+```
+# tar xvfz /tmp/my_home_directory.tar.gz –C /home/ramesh
+```
+
 ### tar command examples
 
 Create a new tar archive.
