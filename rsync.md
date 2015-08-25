@@ -29,3 +29,12 @@ $ ls -l /var/opt/installation/inventory/sva.xml
 /var/opt/installation/inventory/sva.xml
 -r--r--r-- 1 root bin  949 Sep  2  2009 /root/temp/sva.xml
 ```
+
+Preserve timestamps during Sync using rsync -a
+rsync option -a indicates archive mode. -a option does the following,
+* Recursive mode
+* Preserves symbolic links
+* Preserves permissions
+* Preserves timestamp
+* Preserves owner and group
+Now, executing the same command provided in example 1 (But with the rsync option -a) as shown below:
