@@ -85,3 +85,19 @@ finally block.
 
 The code in the finally block will be executed regardless of whether an exception
 occurs.
+
+### EXAMPLE:
+```
+import sys
+
+print "Lets fix the previous code with exception handling"
+
+try:
+    number = int(raw_input("Enter a number between 1 - 10 \n"))
+
+except ValueError:
+    print "Err.. numbers only"
+    sys.exit()
+
+print "you entered number \n", number
+```
