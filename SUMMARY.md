@@ -77,7 +77,7 @@
        * [EXPORT](export.md)
        * [Scripts](scripts.md)
        * [Change default shell](change_default_shell.md)
-       * Useful Bash Shell Built-in Commands
+       * [Useful Bash Shell Built-in Commands](useful_bash_shell_built-in_commands.md)
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
