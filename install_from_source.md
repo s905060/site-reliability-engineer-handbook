@@ -25,3 +25,12 @@ In most cases, you can just do ./configure which will use all default values to 
 ```
 ./configure
 ```
+Make and Install
+Make command will use the Makefile created from the above step and create the application binary executable.
+```
+make
+```
+Finally, do 'make install' which will install the application in the appropriate location.
+```
+make install
+```
