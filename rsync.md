@@ -39,3 +39,14 @@ rsync option -a indicates archive mode. -a option does the following,
 * Preserves owner and group
 
 Now, executing the same command provided in example 1 (But with the rsync option -a) as shown below:
+
+```
+$ rsync -azv /var/opt/installation/inventory/ /root/temp/
+building file list ... done
+./
+sva.xml
+svB.xml
+.
+sent 26499 bytes  received 1104 bytes  55206.00 bytes/sec
+total size is 44867  speedup is 1.63
+```
