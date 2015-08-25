@@ -16,3 +16,11 @@ Use mkswap to setup a Linux swap area in the /home/swap-fs file that was created
 ```
 Setting up swapspace version 1, size = 536866 kB
 Once the file is created and has been setup for Linux swap area, it is time to enable the swap using swapon as shown below.
+```
+# swapon /home/swap-fs
+```
+
+Add the following line to /etc/fstab and reboot the system for the swap to take into effect.
+```
+/home/swap-fs swap swap defaults 0 0
+```
