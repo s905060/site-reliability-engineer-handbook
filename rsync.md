@@ -86,4 +86,5 @@ rpm/Basenames
 rpm/Conflictname
 sent 15810261 bytes  received 412 bytes  2432411.23
 bytes/sec
+total size is 45305958 speedup is 2.87
 ```
