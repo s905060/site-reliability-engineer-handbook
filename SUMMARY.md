@@ -132,7 +132,7 @@
    * [CentOS:  nf_conntrack: table full, dropping packet](centos_nf_conntrack__table_full,_dropping_packet.md)
 * [Monitoring](monitoring.md)
 * [Database](database.md)
-   * MySQL
+   * [MySQL](mysql.md)
 * [Algorithm](algorithm.md)
 * [Data Structure](data_structure.md)
 
