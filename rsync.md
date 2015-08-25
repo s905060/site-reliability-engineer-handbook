@@ -37,4 +37,5 @@ rsync option -a indicates archive mode. -a option does the following,
 * Preserves permissions
 * Preserves timestamp
 * Preserves owner and group
+
 Now, executing the same command provided in example 1 (But with the rsync option -a) as shown below:
