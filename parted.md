@@ -96,3 +96,11 @@ Number  Start   End     Size    Type      Filesystem Flags
  9      373GB   500GB   127GB   logical
  (parted)
  ```
+
+Create a File System on Partition Using mkfs
+
+If you use fdisk command to partition your hard disk, you need to exit the fdisk utility, and use the mkfs external program to create a file system on the partition.
+
+However using parted utility, you can also create filesystem. Use the parted’s mkfs command to create a file system on a partition. You should be careful while doing this, as all the existing data in the partition will be lost during the file system creation. The supported filesystems in parted are ext2, mips, fat16, fat32, linux-swap, reiserfs (if libreiserfs is installed).
+
+Let us change the file system of partition number 8 (that is shown in the print output below) from ext4 to ext2 file system.
