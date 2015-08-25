@@ -117,6 +117,7 @@
    * [RSYNC](rsync.md)
    * [YUM](yum.md)
    * [RPM](rpm.md)
+   * APT
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
