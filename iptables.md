@@ -37,3 +37,13 @@ iptables -A INPUT -i eth0 -s "$BLOCK_THIS_IP" -j DROP
 iptables -A INPUT -i eth0 -p tcp -s "$BLOCK_THIS_IP" -j
 DROP
 ```
+
+Allow ALL Incoming SSH
+The following rules allow ALL incoming ssh connections on eth0 interface.
+```
+iptables -A INPUT -i eth0 -p tcp --dport 22 -m state
+--state NEW,ESTABLISHED -j ACCEPT
+
+iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state
+--state ESTABLISHED -j ACCEPT
+```
