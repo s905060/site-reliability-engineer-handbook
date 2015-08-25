@@ -19,3 +19,8 @@ setarch-2.0-1.1
 ```
 * -q query operation
 * -a queries all installed packages
+
+To identify whether a particular rpm package is installed on your system, combine rpm and grep command as shown below. Following command checks whether cdrecord package is installed on your system.
+```
+# rpm -qa | grep 'cdrecord'
+```
