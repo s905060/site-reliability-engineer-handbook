@@ -60,3 +60,13 @@ $ ls -l /var/opt/installation/inventory/sva.xml
 -r--r--r-- 1 root  bin  949 Jun 18  2009
 /root/temp/sva.xml
 ```
+
+Synchronize Only One File
+
+To copy only one file, specify the file name to rsync command, as shown below.
+```
+$ rsync -v /var/lib/rpm/Pubkeys /root/temp/
+Pubkeys
+sent 42 bytes  received 12380 bytes  3549.14 bytes/sec
+total size is 12288  speedup is 0.99
+```
