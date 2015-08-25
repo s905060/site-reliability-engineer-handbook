@@ -127,7 +127,7 @@
    * [FREE](free.md)
    * [DF](df.md)
    * [DU](du.md)
-   * Sysctl
+   * [Sysctl](sysctl.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
