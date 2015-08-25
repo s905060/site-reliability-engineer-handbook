@@ -119,4 +119,5 @@ Number  Start   End     Size    Type      Filesystem Flags
  6      316GB   324GB   7999MB  logical   linux-swap(v1)
  7      324GB   344GB   20.0GB  logical   ext4
  8      344GB   364GB   20.0GB  logical   ext4
+ 9      364GB   500GB   136GB   logical   ext4
 ```
