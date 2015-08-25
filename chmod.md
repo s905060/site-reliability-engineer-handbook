@@ -11,6 +11,18 @@
 |644|(rw-r--r--) The owner may read and write a file, while all others may only read the file. A common setting for data files that everybody may read, but only the owner may change.
 |600|(rw-------) The owner may read and write a file. All others have no rights. A common setting for data files that the owner wants to keep private.
 
+
+### Directory permissions
+
+The chmod command can also be used to control the access permissions for directories. In most ways, the permissions scheme for directories works the same way as they do with files. However, the execution permission is used in a different way. It provides control for access to file listing and other things. Here are some useful settings for directories:
+
+|Value|	Meaning
+|--|--
+|777|(rwxrwxrwx) No restrictions on permissions. Anybody may list files, create new files in the directory and delete files in the directory. Generally not a good setting.
+|755|(rwxr-xr-x) The directory owner has full access. All others may list the directory, but cannot create files nor delete them. This setting is common for directories that you wish to share with other users.
+|700|(rwx------) The directory owner has full access. Nobody else has any rights. This setting is useful for directories that only the owner may use and must be kept private from others.
+
+
 Following are the symbolic representation of three different roles:
 * u is for user,
 * g is for group,
