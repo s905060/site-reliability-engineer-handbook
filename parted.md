@@ -234,3 +234,10 @@ Copy Data from One Partition to Another Using cp
 The entire data from one partition can be copied to another partition using the cp command. You should also remember that the content of the destination will be deleted before copy starts. Make sure that the destination partition has enough size to hold the data from the source partition.
 
 Using the “p” command (print) to display the current partition layout.
+
+```
+(parted) p
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+```
