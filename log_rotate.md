@@ -26,3 +26,5 @@ In the above /etc/logrotate.d/apache example:
 * dateext - Appends the date in YYYYMMDD format to the rotated log files. i.e Instead of access_log.1.gz, it creates access_log- 20110616.gz
 * maxage - Indicates how long the rotated log files should be kept. In this example, it will be kept for 30 days.
 * postrotate and endscript – Any commands enclosed between these two parameter will be executed after the log is rotated.
+
+**Important: Once you rotate the log files, you want apache to write the new log messages to the newly created access_log and error_log. So, you need to send the HUP signal to the apache as shown here. Make sure to do /usr/bin/killall -HUP httpd, which will restart the apache after rotating the log files (Read more about kill).**
