@@ -118,7 +118,7 @@
    * [YUM](yum.md)
    * [RPM](rpm.md)
    * [APT](apt.md)
-   * Install from Source
+   * [Install from Source](install_from_source.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
