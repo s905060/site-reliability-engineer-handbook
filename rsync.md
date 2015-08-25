@@ -50,3 +50,13 @@ svB.xml
 sent 26499 bytes  received 1104 bytes  55206.00 bytes/sec
 total size is 44867  speedup is 1.63
 ```
+
+As you see below, rsync preserved timestamps during sync.
+￼```
+$ ls -l /var/opt/installation/inventory/sva.xml
+/root/temp/sva.xml
+-r--r--r-- 1 root  bin  949 Jun 18  2009
+/var/opt/installation/inventory/sva.xml
+-r--r--r-- 1 root  bin  949 Jun 18  2009
+/root/temp/sva.xml
+```
