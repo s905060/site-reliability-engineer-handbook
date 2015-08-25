@@ -7,3 +7,12 @@ iptables -F
 (or)
 iptables --flush
 ```
+
+Set Default Chain Policies
+The default chain policy is ACCEPT. Change this to DROP for all INPUT, FORWARD, and OUTPUT chains as shown below.
+
+```
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT DROP
+```
