@@ -254,3 +254,7 @@ Number  Start   End     Size    Type      Filesystem Flags
 10      461GB   500GB   39.2GB  logical   ext2
 ```
 
+It is recommended to unmount both source and destination partition before doing copy. In this example we are going to copy the content from partition 8 to partition 10.
+
+The following shows the content of the corresponding partitions before copy.
+
