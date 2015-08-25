@@ -68,3 +68,13 @@ Going back to our question of valid hosts in the 192.168.30.7/28 range they woul
 If you counted them up, you would see that there are 14 of them. Remember the 2 ⁿ -2 formula -- the bit value minus 2 (one for network and one for broadcast address or subnet mask) equals the number you can use for hosts.
 
 If you want to know how many of these 16-bit networks we can get out of that third octet, divide 256 by 16. It is 16. Don't slip and think that the number of networks you can get is the bit value -- it just works out that way with /28. For a /26 you can get four networks (0  63; 64  127; 128  191 and 192  255 (I didn't use the number 256 because I started at zero -- the modulus (value of 256) comes from zero to 255).
+
+There is another way to figure out how many 16-bit networks you can get out of an octet. If you take a look at our bit values of 128, 64, 32, 16, 8, 4, 2 and 1, double the number of networks per bit value starting with 2 for 128. You would then have 4 for 64, 8 for 32, 16 for 16, 32 for 8, 64 for 4 and 128 for 2. This is easier than dividing 256 by 16 to see that you can have 16 networks.
+
+If you are given a problem asking the subnet mask of 172.16.64.0/18, go back to the chart, and when you start counting at the first bit (128) think of it as being in the third octet rather than the forth octet so /18 would be the second bit (64) and the subnet mask would be .192.
+
+By the way, if they asked you how many hosts you would have, the calculation is easy. You've noticed that the bit values are cut in half for descending order, so you just double them for ascending. Start with your most significant bit of the last octet (128) and multiply it by two to come up with the bit value of the least significant bit of the third octet and keep doubling.
+
+/17	/18	/19	/20	/21	/22	/23	/24	/25	/26	etc.
+32768	16384	8192	4096	2048	1024	512	256	128	64	 
+On a /18 network you would have 16382 hosts (16384  2).
