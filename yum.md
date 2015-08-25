@@ -28,3 +28,17 @@ If you have a older version of a package, use ‘yum update package’ to upgrad
 ```
 # yum update postgresql.x86_64
 ```
+
+Search for a package to be installed using yum search
+If you don’t know the exact package name to be installed, use ‘yum search keyword’, which will search all the packages that matches the ‘keyword’ and display it.
+The following examples searches the yum repository for all the packages that matches the keyword ‘firefox’ and lists the available packages.
+```
+# yum search firefox
+Loaded plugins: langpacks, presto, refresh-packagekit
+============== N/S Matched: firefox ======================
+firefox.x86_64 : Mozilla Firefox Web browser
+gnome-do-plugins-firefox.x86_64
+mozilla-firetray-firefox.x86_64
+mozilla-adblockplus.noarch : Mozilla Firefox extension
+mozilla-noscript.noarch : Mozilla Firefox extension
+```
