@@ -43,3 +43,26 @@ mozilla-adblockplus.noarch : Mozilla Firefox extension
 mozilla-noscript.noarch : Mozilla Firefox extension
 ```
 Name and summary matches only, use "search all" for everything.
+
+Display additional information about a package using yum info
+
+Once you search for a package using yum search, you can use ‘yum info package’ to view additional information about the package.
+
+The following examples displays additional information about the samba-common package.
+```
+# yum info samba-common.i686
+Loaded plugins: langpacks, presto, refresh-packagekit
+Available Packages
+Name        : samba-common
+Arch        : i686
+Epoch       : 1
+Version     : 3.5.11
+Release     : 71.fc15.1
+Size        : 9.9 M
+Repo        : updates
+Summary     : Files used by both Samba servers and clients
+URL         : http://www.samba.org/
+License     : GPLv3+ and LGPLv3+
+Description : Samba-common provides files necessary for
+both the server and client
+```
