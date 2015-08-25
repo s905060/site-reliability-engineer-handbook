@@ -147,6 +147,7 @@
 * [Trouble Shooting](trouble_shooting.md)
    * [CentOS:  nf_conntrack: table full, dropping packet](centos_nf_conntrack__table_full,_dropping_packet.md)
 * [Storage](storage.md)
+   * Object Storage
 * [Monitoring](monitoring.md)
 * [Database](database.md)
    * [MySQL](mysql.md)
