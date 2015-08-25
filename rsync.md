@@ -20,3 +20,12 @@ total size is 44867  speedup is 1.63
 * -z is to enable compression
 * -v verbose
 * -r indicates recursive
+
+Now let us see the timestamp on one of the files that was copied from source to destination. As you see below, rsync didn’t preserve timestamps during sync.
+```
+$ ls -l /var/opt/installation/inventory/sva.xml
+/root/temp/sva.xml
+-r--r--r-- 1 bin  bin  949 Jun 18  2009
+/var/opt/installation/inventory/sva.xml
+-r--r--r-- 1 root bin  949 Sep  2  2009 /root/temp/sva.xml
+```
