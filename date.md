@@ -34,3 +34,15 @@ Thursday,January 01 2009
 * %H hour (00..23)
 * %I hour (01..12)
 * %Y year (1970...)
+
+The following are various ways to display a past date and time:
+```
+$ date --date='3 seconds ago'
+Thu Jan  1 08:27:00 PST 2009
+$ date --date="1 day ago"
+Wed Dec 31 08:27:13 PST 2008
+$ date --date="1 days ago"
+Wed Dec 31 08:27:18 PST 2008
+$ date --date="1 month ago"
+Mon Dec  1 08:27:23 PST 2008
+```
