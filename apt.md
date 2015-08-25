@@ -14,3 +14,17 @@ Before installing a package, you may want to make sure it is not already install
 ```
 $ dpkg -l | grep -i apache
 ```
+
+apt-get install: Install a Package
+Finally, install the package using “apt-get install” as shown below.
+```
+$ apt-cache search ^apache2$
+apache2 - Apache HTTP Server metapackage
+$ sudo apt-get install apache2
+[sudo] password for ramesh:
+The following NEW packages will be installed:
+  apache2 apache2-mpm-worker apache2-utils
+  apache2.2-common libapr1 libaprutil1 libpq5
+0 upgraded, 7 newly installed, 0 to remove and 26 not
+upgraded.
+```
