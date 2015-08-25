@@ -11,3 +11,13 @@ application.tar.bz2, use the following command to uncompress it.
 ```
 tar xvfj application.tar.bz2
 ```
+
+Configure
+Once you uncompress the source tar file, it will create a subdirectory in the name of the application. CD to this directory.
+```
+cd application
+```
+Do a ./configure --help which will display all application specific configuration options that are available to you.
+```  
+./configure --help
+```
