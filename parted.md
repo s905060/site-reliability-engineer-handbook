@@ -301,3 +301,21 @@ To delete an unwanted or unused partition, use the parted rm command and specify
 Partition number? 9
 (parted)
 ```
+As you see below, the partition number 9 is now deleted.
+
+```
+(parted) print
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Number  Start   End     Size    Type      Filesystem Flags
+ 1      1049kB  106MB   105MB   primary   fat16      diag
+ 2      106MB   15.8GB  15.7GB  primary   ntfs       boot
+ 3      15.8GB  266GB   251GB   primary   ntfs
+ 4      266GB   500GB   23GB   extended
+ 5      266GB   316GB   50.0GB  logical   ext4
+ 6      316GB   324GB   7999MB  logical   linux-swap(v1)
+ 7      324GB   344GB   20.0GB  logical   ext4
+ 8      344GB   364GB   20.0GB  logical   ext2
+```
