@@ -38,6 +38,7 @@
    * [SMTP, a simple socket protocol](smtp,_a_simple_socket_protocol.md)
    * [POP3, the Post Office Protocol](pop3,_the_post_office_protocol.md)
    * [IMAP, the Internet Message Access Protocol](imap,_the_internet_message_access_protocol.md)
+   * How to subnet: Subnetting calculations and shortcuts
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
