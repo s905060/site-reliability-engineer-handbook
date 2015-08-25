@@ -101,3 +101,21 @@ except ValueError:
 
 print "you entered number \n", number
 ```
+
+Try ... except ... else clause
+
+The else clause in a try , except statement must follow all except clauses, and is useful for code that must be executed if the try clause does not raise an exception.
+```
+try:
+    data = something_that_can_go_wrong
+
+except IOError:
+    handle_the_exception_error
+
+else:
+    doing_different_exception_handling
+```
+
+Exceptions in the else clause are not handled by the preceding except clauses. 
+
+Make sure that the else clause is run before the finally block.
