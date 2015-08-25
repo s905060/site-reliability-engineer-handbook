@@ -8,3 +8,11 @@ Enter password:
 mysql>
 ```
 Follows the steps below to stop and start MySQL
+```
+[local-host]# service mysql status
+MySQL running (12588)               [ OK ]
+[local-host]# service mysql stop
+Shutting down MySQL.                [ OK ]
+[local-host]# service mysql start
+Starting MySQL.                     [ OK ]
+```
