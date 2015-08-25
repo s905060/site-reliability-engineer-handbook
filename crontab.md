@@ -86,3 +86,29 @@ To collect the cron execution execution log in a file :
 ```
 30 18 * * * rm /home/someuser/tmp/* > /home/someuser/cronlogs/clean_tmp_dir.log
 ```
+
+Crontab examples
+1. Run at 12:01 a.m. 1 minute after midnight everyday. This is a good time to run backup when the system is not under load.
+```
+1 0 * * * /root/bin/backup.sh
+```
+2. Run backup every weekday (Mon – Fri) at 11:59 p.m.
+```
+59 11 * * 1,2,3,4,5 /root/bin/backup.sh
+```
+Following will also do the same.
+```
+59 11 * * 1-5 /root/bin/backup.sh
+```
+3. Execute the command every 5 minutes.
+```
+*/5 * * * * /root/bin/check-status.sh
+```
+4. Execute at 1:10 p.m on 1st of every month
+```
+10 13 1 * * /root/bin/full-backup.sh
+```
+5. Execute 11 p.m on weekdays.
+```
+0 23 * * 1-5 /root/bin/incremental-backup.sh
+```
