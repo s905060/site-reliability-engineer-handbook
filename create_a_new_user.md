@@ -20,3 +20,13 @@ Verify that the user got added successfully.
 jsmith:x:510:510:John Smith - Oracle
 Developer:/home/jsmith:/bin/bash
 ```
+
+Change the user password
+```
+# passwd jsmith
+Changing password for user jsmith.
+New UNIX password:
+BAD PASSWORD: it is based on a dictionary word
+Retype new UNIX password:
+passwd: all authentication tokens updated successfully.
+```
