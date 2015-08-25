@@ -30,3 +30,15 @@ BAD PASSWORD: it is based on a dictionary word
 Retype new UNIX password:
 passwd: all authentication tokens updated successfully.
 ```
+
+How to identify the default values used by useradd?
+Following are the default values that will be used when an user is created.
+```
+# useradd –D
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+```
