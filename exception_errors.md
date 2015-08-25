@@ -64,7 +64,9 @@ try:
 except:
     exception handling
 ```
+
 Let's see a short example on how to do this:
+
 ```
 try:
     print 1/0
@@ -72,3 +74,14 @@ try:
 except ZeroDivisionError:
     print "You can't divide by zero, you're silly."
 ```
+
+How does it work?
+The error handling is done through the use of exceptions that are caught in try
+blocks and handled in except blocks. If an error is encountered, a try block
+code execution is stopped and transferred down to the except block. 
+
+In addition to using an except block after the try block, you can also use the
+finally block. 
+
+The code in the finally block will be executed regardless of whether an exception
+occurs.
