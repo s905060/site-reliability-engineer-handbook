@@ -30,3 +30,14 @@ The partition table has been altered!
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
+
+Verify that the partition got created successfully
+```
+# fdisk /dev/sda Command (m for help): p
+Disk /dev/sda: 287.0 GB, 287005343744 bytes
+255 heads, 63 sectors/track, 34893 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Device Boot  Start         End      Blocks   Id  System
+/dev/sda1        1       34893   280277991   83  Linux
+Command (m for help): q
+```
