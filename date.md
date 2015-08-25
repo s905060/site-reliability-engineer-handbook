@@ -23,21 +23,14 @@ $ date +"%d/%m/%Y"
 $ date +"%A,%B %d %Y"
 Thursday,January 01 2009
 ```
-* %D
-* %d
-* %m
-* %y
-* %a
+* %D date (mm/dd/yy)
+* %d day of month (01..31)
+* %m month (01..12)
+* %y last two digits of year (00..99)
+* %a locale’s abbreviated weekday name (Sun..Sat)
 * %b locale’s abbreviated month name (Jan..Dec)
 * %B locale’s full month name, variable length (January..December)
-date (mm/dd/yy)
-day of month (01..31)
-month (01..12)
-last two digits of year (00..99)
-locale’s abbreviated weekday name (Sun..Sat) locale’s full weekday name, variable length
-* %A (Sunday..Saturday)
-* %H
-* %I
-* %Y
-hour (00..23) hour (01..12)
-year (1970...)
+* %A locale’s full weekday name, variable length (Sunday..Saturday)
+* %H hour (00..23)
+* %I hour (01..12)
+* %Y year (1970...)
