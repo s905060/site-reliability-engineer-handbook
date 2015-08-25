@@ -272,5 +272,6 @@ total 52
 total 48
  0 2011-09-26 22:52 part8
 20 2011-09-26 22:52 test.txt
+-rw-r--r-- 1 root root 0 2011-09-26 22:52 part10
 ```
 
