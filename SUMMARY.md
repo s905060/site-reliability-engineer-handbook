@@ -110,7 +110,7 @@
    * [FDISK](fdisk.md)
    * [Mount](mount.md)
    * [Make SWAP File](make_swap_file.md)
-   * Create a New User
+   * [Create a New User](create_a_new_user.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
