@@ -119,3 +119,20 @@ else:
 Exceptions in the else clause are not handled by the preceding except clauses. 
 
 Make sure that the else clause is run before the finally block.
+
+Try ... finally clause
+
+The finally clause is optional. It is intended to define clean-up actions that must be executed under all circumstances
+```
+try:
+    raise KeyboardInterrupt
+finally:
+    print 'Goodbye, world!'
+...
+Goodbye, world!
+KeyboardInterrupt
+```
+
+A finally clause is always executed before leaving the try statement, whether an exception has occurred or not.
+
+Remember that if you don't specify an exception type on the except line, it will catch all exceptions, which is a bad idea, since it means your program will ignore unexpected errors as well as ones which the except block is actually prepared to handle.
