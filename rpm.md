@@ -14,6 +14,8 @@ You can use rpm command to query all the packages installed in your system.
 cdrecord-2.01-10.7.el5
 bluez-libs-3.7-1.1
 setarch-2.0-1.1
+.
+.
 ```
 * -q query operation
 * -a queries all installed packages
