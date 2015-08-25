@@ -275,3 +275,12 @@ total 48
 -rw-r--r-- 1 root root 0 2011-09-26 22:52 part10
 ```
 
+Use the parted cp command to copy partition 8 to partition 10 as shown below.
+```
+(parted) cp 8 10
+growing file system... 95%      (time left 00:38)
+```
+
+The following shows the content of the partition 10 after the copy. As you see below, the content of partition 8 is copied over (overwritten) to the partition 10.
+
+
