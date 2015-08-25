@@ -210,4 +210,27 @@ End?  [500GB]? 450GB
 As shown above, parted command will always warn whenever you are attempting to do something dangerous (i.e : rm, resize, mkfs).
 
 The size of partition 9 is actually reduced from 127GB to 77GB. Verify that the partition is resized properly using the print command as shown below.
+```
+(parted) print
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Number  Start   End     Size    Type      Filesystem Flags
+ 1      1049kB  106MB   105MB   primary   fat16      diag
+ 2      106MB   15.8GB  15.7GB  primary   ntfs       boot
+ 3      15.8GB  266GB   251GB   primary   ntfs
+ 4      266GB   500GB   234GB   extended
+ 5      266GB   316GB   50.0GB  logical   ext4
+ 6      316GB   324GB   7999MB  logical   linux-swap(v1)
+ 7      324GB   344GB   20.0GB  logical   ext4
+ 8      344GB   364GB   20.0GB  logical
+ 9      373GB   450GB   77.3GB  logical   fat32      lba
+ ```
+Parted allows you to type unambiguous abbreviation for commands like “p” for print, “sel” for select,etc.
 
+Copy Data from One Partition to Another Using cp
+
+The entire data from one partition can be copied to another partition using the cp command. You should also remember that the content of the destination will be deleted before copy starts. Make sure that the destination partition has enough size to hold the data from the source partition.
+
+Using the “p” command (print) to display the current partition layout.
