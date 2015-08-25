@@ -16,3 +16,17 @@ net.ipv6.route.mtu_expires = 600
 sunrpc.udp_slot_table_entries = 16
 vm.block_dump = 0
 ```
+
+Modify Kernel parameter in /etc/sysctl.conf for permanent change
+
+After modifying the kernel parameter in the /etc/sysctl.conf, execute sysctl –p to commit the changes.
+
+The changes will still be there after the reboot. Modify kernel parameter temporarily
+```
+# vi /etc/sysctl.conf
+# sysctl –p
+```
+To temporarily modify a kernel parameter, execute the following command. Please note that after reboot these changes will be lost.
+```
+# sysctl –w {variable-name=value}
+```
