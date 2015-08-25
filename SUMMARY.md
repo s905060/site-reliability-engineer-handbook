@@ -129,7 +129,7 @@
    * [DU](du.md)
    * [Sysctl](sysctl.md)
    * [NICE](nice.md)
-   * Renice
+   * [Renice](renice.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
