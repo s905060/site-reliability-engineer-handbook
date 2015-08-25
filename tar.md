@@ -28,7 +28,8 @@ How do I extract tar.gz files to a specific directory?
 
 How to use gzip with tar?
 Add option z to the tar command when dealing with tar.gz compressed file.
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼```
+
+```
 # tar cvfz /tmp/my_home_directory.tar.gz /home/jsmith
 # tar xvfz /tmp/my_home_directory.tar.gz
 # tar tvfz /tmp/my_home_directory.tar.gz
