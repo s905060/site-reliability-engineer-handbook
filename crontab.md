@@ -112,3 +112,10 @@ Following will also do the same.
 ```
 0 23 * * 1-5 /root/bin/incremental-backup.sh
 ```
+
+Crontab Options
+The following are the available options with crontab:
+* crontab –e : Edit the crontab file. This will create a crontab, if it doesn’t exist
+* crontab –l : Display the crontab file.
+* crontab -r : Remove the crontab file.
+* crontab -ir : This will prompt user before deleting a crontab.
