@@ -17,4 +17,16 @@ Units = cylinders of 16065 * 512 = 8225280 bytes
 Device Boot  Start   End      Blocks   Id  System
 Command (m for help): n Command action
 e extended
+p   primary partition (1-4)
+p
+Partition number (1-4): 1
+First cylinder (1-34893, default 1):
+Using default value 1
+Last cylinder or +size or +sizeM or +sizeK (1-34893,
+default 34893):
+Using default value 34893
+Command (m for help): w
+The partition table has been altered!
+Calling ioctl() to re-read partition table.
+Syncing disks.
 ```
