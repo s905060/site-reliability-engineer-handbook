@@ -39,7 +39,7 @@
    * [POP3, the Post Office Protocol](pop3,_the_post_office_protocol.md)
    * [IMAP, the Internet Message Access Protocol](imap,_the_internet_message_access_protocol.md)
    * [How to subnet: Subnetting calculations and shortcuts](how_to_subnet_subnetting_calculations_and_shortcuts.md)
-   * HTTP Status Code
+   * [HTTP Status Code](http_status_code.md)
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
