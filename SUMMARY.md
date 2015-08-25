@@ -107,7 +107,7 @@
    * [TAIL](tail.md)
    * [WGET](wget.md)
    * [Date](date.md)
-   * FDISK
+   * [FDISK](fdisk.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
