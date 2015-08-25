@@ -22,3 +22,9 @@ Is this ok [y/N]: y
 Running Transaction
   Erasing    : postgresql-9.0.4-5.fc15.x86_64       1/1
 ```
+
+Upgrade an existing package using yum update
+If you have a older version of a package, use ‘yum update package’ to upgrade it to the latest current version. This will also identify and install all required dependencies.
+```
+# yum update postgresql.x86_64
+```
