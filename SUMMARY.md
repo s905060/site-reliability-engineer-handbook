@@ -113,7 +113,7 @@
    * [Create a New User](create_a_new_user.md)
    * [Create a New Group](create_a_new_group.md)
    * [Setup SSH Passwordless Login in OpenSSH](setup_ssh_passwordless_login_in_openssh.md)
-   * Parted
+   * [Parted](parted.md)
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
