@@ -121,3 +121,54 @@ Number  Start   End     Size    Type      Filesystem Flags
  8      344GB   364GB   20.0GB  logical   ext4
  9      364GB   500GB   136GB   logical   ext4
 ```
+As shown below, use the mkfs command to change the file system type of partition number 8. mkfs command will prompt you for partition number and file system type.
+```
+(parted) mkfs
+Warning: The existing file system will be destroyed and
+all data on the partition will be lost. Do you want to
+continue?
+Yes/No? y
+Partition number? 8
+File system type?  [ext2]? ext2
+```
+
+Execute the print command again, to verify that the file system type for partition number 8 was changed to ex2.
+```
+(parted) print
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Number  Start   End     Size    Type      Filesystem Flags
+ 1      1049kB  106MB   105MB   primary   fat16      diag
+ 2      106MB   15.8GB  15.7GB  primary   ntfs       boot
+ 3      15.8GB  266GB   251GB   primary   ntfs
+ 4      266GB   500GB   234GB   extended
+ 5      266GB   316GB   50.0GB  logical   ext4
+ 6      316GB   324GB   7999MB  logical   linux-swap(v1)
+ 7      324GB   344GB   20.0GB  logical   ext4
+ 8      344GB   364GB   20.0GB  logical   ext2
+ 9      364GB   500GB   136GB   logical   ext4
+ (parted)
+ ```
+Create Partition and Filesystem together Using mkpartfs
+
+Using mkpartfs parted command, you can also create a partitions with a specific filesystem. This is similar to mkpart, but with the additional feature of creating file system on a partition.
+
+Before mkpartfs following is the layout of the partitions.
+```
+(parted) print
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Number  Start   End     Size    Type      Filesystem Flags
+ 1      1049kB  106MB   105MB   primary   fat16      diag
+ 2      106MB   15.8GB  15.7GB  primary   ntfs       boot
+ 3      15.8GB  266GB   251GB   primary   ntfs
+ 4      266GB   500GB   234GB   extended
+ 5      266GB   316GB   50.0GB  logical   ext4
+ 6      316GB   324GB   7999MB  logical   linux-swap(v1)
+ 7      324GB   344GB   20.0GB  logical   ext4
+ 8      344GB   364GB   20.0GB  logical
+ ```
