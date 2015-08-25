@@ -52,7 +52,7 @@ total size is 44867  speedup is 1.63
 ```
 
 As you see below, rsync preserved timestamps during sync.
-￼```
+```
 $ ls -l /var/opt/installation/inventory/sva.xml
 /root/temp/sva.xml
 -r--r--r-- 1 root  bin  949 Jun 18  2009
@@ -74,6 +74,7 @@ total size is 12288  speedup is 0.99
 Synchronize Files From Local to Remote
 
 rsync allows you to synchronize files/directories between the local and remote system.
+
 ```
 $ rsync -avz /root/temp/
 thegeekstuff@192.168.200.10:/home/thegeekstuff/temp/
