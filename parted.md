@@ -104,3 +104,19 @@ If you use fdisk command to partition your hard disk, you need to exit the fdisk
 However using parted utility, you can also create filesystem. Use the parted’s mkfs command to create a file system on a partition. You should be careful while doing this, as all the existing data in the partition will be lost during the file system creation. The supported filesystems in parted are ext2, mips, fat16, fat32, linux-swap, reiserfs (if libreiserfs is installed).
 
 Let us change the file system of partition number 8 (that is shown in the print output below) from ext4 to ext2 file system.
+```
+(parted) print
+Model: ATA WDC WD5000BPVT-7 (scsi)
+Disk /dev/sda: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Number  Start   End     Size    Type      Filesystem Flags
+ 1      1049kB  106MB   105MB   primary   fat16      diag
+ 2      106MB   15.8GB  15.7GB  primary   ntfs       boot
+ 3      15.8GB  266GB   251GB   primary   ntfs
+ 4      266GB   500GB   234GB   extended
+ 5      266GB   316GB   50.0GB  logical   ext4
+ 6      316GB   324GB   7999MB  logical   linux-swap(v1)
+ 7      324GB   344GB   20.0GB  logical   ext4
+ 8      344GB   364GB   20.0GB  logical   ext4
+```
