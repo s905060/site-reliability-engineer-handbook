@@ -149,6 +149,7 @@
 * [Storage](storage.md)
    * Object Storage
 * [Monitoring](monitoring.md)
+   * Object Storage
 * [Database](database.md)
    * [MySQL](mysql.md)
 * [Algorithm](algorithm.md)
