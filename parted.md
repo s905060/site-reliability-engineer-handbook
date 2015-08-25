@@ -172,3 +172,8 @@ Number  Start   End     Size    Type      Filesystem Flags
  7      324GB   344GB   20.0GB  logical   ext4
  8      344GB   364GB   20.0GB  logical
  ```
+ 
+In the following example, mkpartfs will create a new fat32 partition of size 127GB.
+```
+(parted) mkpartfs logical fat32 372737 500000
+```
