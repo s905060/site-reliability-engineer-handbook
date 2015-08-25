@@ -88,3 +88,18 @@ sent 15810261 bytes  received 412 bytes  2432411.23
 bytes/sec
 total size is 45305958 speedup is 2.87
 ```
+
+Synchronize Files From Remote to Local
+When you want to synchronize files from remote to local, specify remote path in source and local path in target as shown below.
+```
+$ rsync -avz thegeekstuff@192.168.200.10:/var/lib/rpm
+/root/temp
+Password:
+receiving file list ... done
+rpm/
+rpm/Basenames
+.
+sent 406 bytes  received 15810230 bytes  2432405.54
+bytes/sec
+total size is 45305958  speedup is 2.87
+```
