@@ -52,3 +52,35 @@ Wed Dec 31 08:27:34 PST 2008
 $ date --date="10 months 2 day ago"
 Thu Feb 28 08:27:41 PST 2008
 ```
+
+The following examples shows how to display a future date and time.
+```
+$ date
+Thu Jan  1 08:30:07 PST 2009
+$ date --date='3 seconds'
+Thu Jan  1 08:30:12 PST 2009
+$ date --date='4 hours'
+Thu Jan  1 12:30:17 PST 2009
+$ date --date='tomorrow'
+Fri Jan  2 08:30:25 PST 2009
+$ date --date="1 day"
+Fri Jan  2 08:30:31 PST 2009
+$ date --date="1 days"
+Fri Jan  2 08:30:38 PST 2009
+$ date --date="2 days"
+Sat Jan  3 08:30:43 PST 2009
+$ date --date='1 month'
+Sun Feb  1 08:30:48 PST 2009
+$ date --date='1 week'
+Thu Jan  8 08:30:53 PST 2009
+$ date --date="2 months"
+Sun Mar  1 08:30:58 PST 2009
+$ date --date="2 years"
+Sat Jan  1 08:31:03 PST 2011
+$ date --date="next day"
+Fri Jan  2 08:31:10 PST 2009
+$ date --date="-1 days ago"
+Fri Jan  2 08:31:15 PST 2009
+$ date --date="this Wednesday"
+Wed Jan  7 00:00:00 PST 2009
+```
