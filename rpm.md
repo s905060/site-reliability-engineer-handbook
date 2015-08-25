@@ -24,3 +24,12 @@ To identify whether a particular rpm package is installed on your system, combin
 ```
 # rpm -qa | grep 'cdrecord'
 ```
+
+Query a Particular RPM Package using rpm -q
+The above example lists all currently installed package. After installation of a package to check the installation, you can query a particular package and verify as shown below.
+```
+# rpm -q MySQL-client
+MySQL-client-3.23.57-1
+# rpm -q MySQL
+package MySQL is not installed
+```
