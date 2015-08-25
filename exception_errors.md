@@ -43,3 +43,32 @@ examples:
 
 ### except:
     print('An error occurred.')
+    
+---
+
+Set up exception handling blocks
+To use exception handling in Python, you first need to have a catch-all except
+clause. 
+
+The words "try" and "except" are Python keywords and are used to catch exceptions.
+
+try-except [exception-name] (see above for examples) blocks
+
+The code within the try clause will be executed statement by statement.
+
+If an exception occurs, the rest of the try block will be skipped and the
+except clause will be executed.
+```
+try:
+    some statements here
+except:
+    exception handling
+```
+Let's see a short example on how to do this:
+```
+try:
+    print 1/0
+
+except ZeroDivisionError:
+    print "You can't divide by zero, you're silly."
+```
