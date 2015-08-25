@@ -68,6 +68,7 @@
        * [Regular Expressions](regular_expressions.md)
        * [Supervisor](supervisor.md)
        * [Socket](socket.md)
+       * Exception Errors
    * [Golang](golang.md)
    * [Bash](bash.md)
        * [Regex](regex.md)
