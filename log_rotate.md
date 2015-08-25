@@ -44,3 +44,15 @@ After adding the above /etc/logrotate.d/apache file, for testing purpose, you ca
 ```
 # /etc/cron.daily/logrotate
 ```
+
+Once the log files are rotated, do a ls to verify them. As we explained above, the rotated log files will be kept for 30 days.
+```
+ls -ltr /usr/local/apache2/logs | mail -s "$HOSTNAME:
+Apache restarted and log files rotated"
+ramesh@thegeekstuff.com
+# ls /usr/local/apache2/logs
+access_log
+error_log
+access_log-20110716.gz
+error_log-20110716.gz
+```
