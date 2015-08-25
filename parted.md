@@ -240,4 +240,17 @@ Using the “p” command (print) to display the current partition layout.
 Model: ATA WDC WD5000BPVT-7 (scsi)
 Disk /dev/sda: 500GB
 Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Number  Start   End     Size    Type      Filesystem Flags
+ 1      1049kB  106MB   105MB   primary   fat16      diag
+ 2      106MB   15.8GB  15.7GB  primary   ntfs       boot
+ 3      15.8GB  266GB   251GB   primary   ntfs
+ 4      266GB   500GB   234GB   extended
+ 5      266GB   316GB   50.0GB  logical   ext4
+ 6      316GB   324GB   7999MB  logical   linux-swap(v1)
+ 7      324GB   344GB   20.0GB  logical   ext4
+ 8      344GB   364GB   20.0GB  logical   ext2
+ 9      373GB   450GB   77.3GB  logical   fat32      lba
+10      461GB   500GB   39.2GB  logical   ext2
 ```
+
