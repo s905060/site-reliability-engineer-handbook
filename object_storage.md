@@ -139,3 +139,14 @@ While Object Storage systems do not use file system metadata, they do employ obj
 metadata for a photo could be the day it was taken, the last time it was modified, the type of camera that was used,
 whether a flash was used, where it was taken, etc. Object metadata will play an increasingly important role as we
 store more and more information, but it does not add complexity to the system like file system metadata does.
+
+* At the highest level, storage servers are, like NAS and SAN, simply boxes with a lot of disks in there. Typically,
+object storage vendors will use SATA disks in their systems, and may include SSDs for caching. Some platforms opt for separate controllers, but in essence that does not make a diff erence, as the storage is presented as one pool (namespace). When choosing an object storage platform, it’s important to understand the limitations of the namespace and how the system combines diff erent pools or namespaces. Manyvendors claim infi nite  scalability, but there is no such thing. The important thing is to understand how namespaces are combined, presented and managed. How many such namespaces can be combined? Are they managed as one system? The system software manages most of that.
+
+* The actual software layer is where vendors can diff erentiate. The list of possible features is endless. A single
+management interface is always great. Self-healing capabilities are a must for environments that will scale
+into the hundreds of petabytes. The software layer also provides data protection mechanisms, which we will cover in the next section.An Object ID is stored, to locate the data
+
+* The standard interface to access data in an object storage platform is a RESTful interface or REST API. This is a
+set of simple commands that application developers use in their code to let the application access the data.
+The basic REST commands are LIST, GET, PUT and DELETE, which are used to list (a selection of) objects, read an object, store an object or delete it. There is no standard for REST yet, but the so called Amazon API is by far the most popular amongst developers. Hence, most object storage providers will provide an “Amazon compatible API”, which is typically a subset of the commands that are supported by Amazon S3. As most legacy applications were designed to interface with a file system, most object storage platforms will also provide one or more file interfaces (a fi le system layer on top of the object storage pool – also called a file system gateway) and often a selection of programming language-specific API’s will be provided as well. DDN’s WOS has the widest selection of interfaces on the market.
