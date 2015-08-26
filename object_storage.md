@@ -87,3 +87,25 @@ cheap “cold” tape tier.
 from different institutions working on the same project. Think of a movie being shot in New Zealand and
 produced in Los Angeles - or software being developed in California and then tested in India. Geographically
 distributed storage pools enable teams to work in real-time on the same datasets.
+
+###How Does Object Storage Work?
+####Issues with File Storage
+As we explained earlier in this document, file based storage is a great concept: users can access the same resources
+through a corporate network. The file system takes care of permissions, access rights and avoids users overwriting
+each other’s data. File systems can even present data in a hierarchical “Directory” structure, which until now has been
+a very useful tool to keep data organized. The underlying software for such file systems contains a lot of “ingenuity”,
+which rapidly becomes “complexity” when scaling-out the infrastructure.
+
+The concept of a “file” on a computer system is so well ingrained that it is often difficult to think of computer storage in different terms. It is clearly a very powerful and natural way to think of data. Object Storage is distinct from “file storage”, but in some ways is even a more natural and powerful way to organize data.
+
+The “file” concept is an abstraction. In actuality, data in a computer system is stored in fixed size “blocks” which are
+“addressed” with a number – which ultimately is a physical location in a storage device. This is the case for data
+stored in a NAS, a SAN or when using Object Storage. The system presents those blocks to the user or application in
+a form that is useful. For non-transactional data, that form is usually a file.
+
+File storage systems will also store a small amount of information that tells which of those data blocks make up
+the file, in which order, and finally what “name” has been applied to the collection of blocks. This additional “data
+about data” is called “file system metadata”. Keeping track of the file system metadata is the responsibility of the “file system”. To keep even more than a few files organized, a file system imposes a hierarchy on the metadata in the form
+of “directory structure”. A key concept of the file system is the notion that the files themselves have relationships to
+one another – as one could think of files being “co-located” in a directory.
+
