@@ -1,6 +1,6 @@
 # Object Storage
 
-Object Storage Summary
+###Object Storage Summary
 * Data is stored as objects in one large, scalable pool of storage
 * Objects are stored with metadata – information about the object
 * An Object ID is stored, to locate the data
