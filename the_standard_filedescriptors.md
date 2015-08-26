@@ -10,5 +10,5 @@ Usually, they're all connected to your terminal, stdin as input file (keyboard),
 
 When you write a script:
 
-always read user-input from stdin
-always write diagnostic/error/warning messages to stderr
+* always read user-input from stdin
+* always write diagnostic/error/warning messages to stderr
