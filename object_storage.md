@@ -1,5 +1,8 @@
 # Object Storage
 
+
+![](440px-High_level_object_storage_architecture.png)
+
 ###Object Storage Summary
 * Data is stored as objects in one large, scalable pool of storage
 * Objects are stored with metadata – information about the object
