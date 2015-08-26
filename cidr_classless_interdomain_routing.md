@@ -25,3 +25,12 @@ With CIDR, address classes (Class A,  B, and C) became meaningless. The network 
 
 Propagating CIDR supernets or VLSM subnets require a classless Routing Protocols – . A classless routing protocol includes the subnet mask along with the network address in the routing update.
 
+
+**Summary routes determination**
+Determining the summary route and subnet mask for a group of networks can be done in three easy steps:
+
+1. To list the networks in binary format.
+2. To count the number of left-most matching bits. This will give you the prefix length or subnet mask for the      summarized route.
+3. To copy the matching bits and then add zero bits to the rest of the address to determine the          summarized network address.
+ 
+The summarized network address and subnet mask can now be used as the summary route for this group of networks. Summary routes can be used by both static routes and classless routing protocols. Classful routing protocols can only summarize routes to the default classful mask.
