@@ -75,3 +75,15 @@ They collaborate with people across the office or around the world.
 * Cloud Backup is increasingly popular. There are dozens and dozens of online services for backup. For
 enterprises, the idea of backing up to low cost, highly scalable disk infrastructures - rather than tape, which can
 be cumbersome for recovery - is also very compelling
+
+* Cloud Archives: Data archiving decisions used to be very simple: data that was infrequently accessed was
+moved off disk to tape. Very few arguments could beat the low TCO of tape. Disk archives were hard to justify
+and reserved for those exceptional use cases where latency outweighed the huge cost of disk archives. With
+object storage, it is now possible to deploy disk archives at an acquisition cost and TCO close to that of tape.
+Many organizations are opting for hybrid environments - with a really, really superfast “hot” disk tier and a very
+cheap “cold” tape tier.
+
+* Worldwide Collaboration: Globally distributed teams have become standard practice. Think of researchers
+from different institutions working on the same project. Think of a movie being shot in New Zealand and
+produced in Los Angeles - or software being developed in California and then tested in India. Geographically
+distributed storage pools enable teams to work in real-time on the same datasets.
