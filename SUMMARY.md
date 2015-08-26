@@ -74,6 +74,7 @@
        * [Raw_input](rawinput.md)
        * [Threading](threading.md)
        * [Unittest](unittest.md)
+       * Why is it better to use “#!/usr/bin/env NAME” instead of “#!/path/to/NAME” as my shebang?
    * [Golang](golang.md)
    * [Bash](bash.md)
        * [Regex](regex.md)
