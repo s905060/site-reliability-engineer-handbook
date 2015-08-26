@@ -109,3 +109,32 @@ about data” is called “file system metadata”. Keeping track of the file sy
 of “directory structure”. A key concept of the file system is the notion that the files themselves have relationships to
 one another – as one could think of files being “co-located” in a directory.
 
+When the system is instructed to “read a file”, the repository of file system metadata is consulted and the required data blocks are retrieved from the storage device. Writing data into a file system has the additional complexity
+of requiring that the file system metadata must be written or updated - potentially by several users or processes simultaneously. Numerous techniques and designs exist that attempt to minimize the impact of dealing with file
+system metadata, and the “locking” problem associated with simultaneous access. Unfortunately, as the number
+of files in the system grows large, keeping the file system metadata correctly organized (so that the names and the
+data blocks that make up files can be found) becomes increasingly complex. As this requirement increases, keeping
+track of billions of “files” (which may be distributed across a number of network connected computer systems),
+the abstraction of the “file system” begins to breakdown. Moreover, the hierarchical structure of the “file system” is
+insufficient to adequately categorize the data in the system.
+File systems require at least three layers of software constructs to execute any file operation. As they allow files to be amended by multiple users, they must maintain complex lock structures with OPEN and CLOSE semantics. These
+lock structures must be distributed coherently to all of the servers used for access.
+
+Also, as data is placed (based on random block availability), traditional file systems are always fragmented. This
+is especially true in environments where the data is unstructured and it is not uncommon to write widely varied
+file sizes. Using a traditional file system designed for amendable data, storing immutable data constitutes an
+inappropriate and wasteful use of bandwidth and compute resources. This highly inefficient approach requires
+a great deal of additional hardware and network resources to achieve data distribution goals. These systems now
+become exponentially more complex as they are scaled-out.
+Object storage systems dispense with the overburdened concept of file system metadata. This approach allows the
+system to separate the storage of data from the relationship that the individual data items have to each other. In an
+object storage system, the physical storage blocks are organized into “objects” which are collections of data blocks
+represented by an identifier. There is no “hierarchy” imposed on the data and no repository of the objects’ metadata
+to be consulted when reads or writes are requested. This approach allows an object storage system to scale with
+both the requirements and size of the system, well beyond the technical & practical boundaries of traditional file
+systems.
+While Object Storage systems do not use file system metadata, they do employ object metadata (customizable
+information about the objects). This information can later be used to query or analyze the information stored. Object
+metadata for a photo could be the day it was taken, the last time it was modified, the type of camera that was used,
+whether a flash was used, where it was taken, etc. Object metadata will play an increasingly important role as we
+store more and more information, but it does not add complexity to the system like file system metadata does.
