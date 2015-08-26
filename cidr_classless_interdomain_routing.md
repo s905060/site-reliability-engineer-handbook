@@ -15,6 +15,4 @@ CIDR allows routers to group routes together to reduce the bulk of routing infor
 
 **192.168.1.32/27** etc.
 
- 
-
 CIDR / VLSM Network addressing topology example
