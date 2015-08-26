@@ -85,6 +85,7 @@
        * [Change default shell](change_default_shell.md)
        * [Useful Bash Shell Built-in Commands](useful_bash_shell_built-in_commands.md)
        * [Debug](debug.md)
+       * The standard filedescriptors
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
