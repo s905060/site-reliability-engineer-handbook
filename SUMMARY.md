@@ -87,7 +87,7 @@
        * [Debug](debug.md)
        * [The standard filedescriptors](the_standard_filedescriptors.md)
        * [Exit codes](exit_codes.md)
-       * Special Variables
+       * [Special Variables](special_variables.md)
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
