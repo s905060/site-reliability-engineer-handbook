@@ -27,6 +27,7 @@
    * [RAID](raid.md)
    * [Caching](caching.md)
    * [Kernel namespaces](kernel_namespaces.md)
+   * Control groups
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
