@@ -27,6 +27,7 @@ Propagating CIDR supernets or VLSM subnets require a classless Routing Protocols
 
 
 **Summary routes determination**
+
 Determining the summary route and subnet mask for a group of networks can be done in three easy steps:
 
 1. To list the networks in binary format.
@@ -34,3 +35,12 @@ Determining the summary route and subnet mask for a group of networks can be don
 3. To copy the matching bits and then add zero bits to the rest of the address to determine the          summarized network address.
  
 The summarized network address and subnet mask can now be used as the summary route for this group of networks. Summary routes can be used by both static routes and classless routing protocols. Classful routing protocols can only summarize routes to the default classful mask.
+
+ISPs could now more efficiently allocate address space using any prefix length, ISPs were no longer limited to a- 255.0.0.0 or /8,  255.255.0.0 or /16, or 255.255.255.0 or /24 subnet mask which before the advent of CIDR is known as classful network addresses.  Blocks of IP addresses could be assigned to a network based on the requirements of the customer, ranging from a few hosts to hundreds or thousands of hosts.
+
+### CIDR Advantages
+
+With the introduction of CIDR and VLSM, ISPs could now assign one part of a classful network to one customer and different part to another customer. With the introduction of VLSM and CIDR, network administrators had to use additional subnetting skills. 
+
+The table below  shows allowed subnet and Hosts IP address for all The Classes
+
