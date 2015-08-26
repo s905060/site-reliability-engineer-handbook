@@ -13,18 +13,24 @@ There are a few other variables that the system sets for you to use as well.
 * $SECONDS - The number of seconds since the script was started.
 * $RANDOM - Returns a different random number each time is it referred to.
 * $LINENO - Returns the current line number in the Bash script.
-
-    **$1, $2, ...**
+```
+**$1, $2, ...**
+```
 The first, second, etc command line arguments to the script.
 
-    **variable=value**
+```
+**variable=value**
+```
 To set a value for a variable. Remember, no spaces on either side of =
-
-    **Quotes " '**
+```
+**Quotes " '**
+```
 Double will do variable substitution, single will not.
-
-    **variable=$( command )**
+```
+**variable=$( command )**
+```
 Save the output of a command into a variable
-
-    **export var1**
+```
+**export var1**
+```
 Make the variable var1 available to child processes.
