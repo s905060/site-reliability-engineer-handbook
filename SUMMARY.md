@@ -148,7 +148,7 @@
    * [CentOS:  nf_conntrack: table full, dropping packet](centos_nf_conntrack__table_full,_dropping_packet.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
-   * How an object store differs from file and block storage
+   * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
 * [Monitoring](monitoring.md)
    * Object Storage
 * [Database](database.md)
