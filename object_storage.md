@@ -117,6 +117,7 @@ data blocks that make up files can be found) becomes increasingly complex. As th
 track of billions of “files” (which may be distributed across a number of network connected computer systems),
 the abstraction of the “file system” begins to breakdown. Moreover, the hierarchical structure of the “file system” is
 insufficient to adequately categorize the data in the system.
+
 File systems require at least three layers of software constructs to execute any file operation. As they allow files to be amended by multiple users, they must maintain complex lock structures with OPEN and CLOSE semantics. These
 lock structures must be distributed coherently to all of the servers used for access.
 
@@ -133,8 +134,8 @@ represented by an identifier. There is no “hierarchy” imposed on the data an
 to be consulted when reads or writes are requested. This approach allows an object storage system to scale with
 both the requirements and size of the system, well beyond the technical & practical boundaries of traditional file
 systems.
-While Object Storage systems do not use file system metadata, they do employ object metadata (customizable
-information about the objects). This information can later be used to query or analyze the information stored. Object
+
+While Object Storage systems do not use file system metadata, they do employ object metadata (customizable information about the objects). This information can later be used to query or analyze the information stored. Object
 metadata for a photo could be the day it was taken, the last time it was modified, the type of camera that was used,
 whether a flash was used, where it was taken, etc. Object metadata will play an increasingly important role as we
 store more and more information, but it does not add complexity to the system like file system metadata does.
