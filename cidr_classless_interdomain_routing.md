@@ -44,6 +44,17 @@ With the introduction of CIDR and VLSM, ISPs could now assign one part of a clas
 
 The table below  shows allowed subnet and Hosts IP address for all The Classes
 
+|Subnet mask bits|Number of /24 subnets|Number of addresses|Bits stolen
+|--|--|--|--
+|/24|1|256|0
+|/25|2|128|1
+|/26|4|64|2
+|/27|8|32|3
+|/28|16|16|4
+|/29|32|8|5
+|/30|64|4|6
+|/31|128|2|7
+
 ![](CIDR_desktop.jpg)
 
 ![](800px-IP_Address_Match.svg.png)
