@@ -63,7 +63,6 @@ The table below  shows allowed subnet and Hosts IP address for all The Classes
 |32|2.2.2.249|2.2.2.250|2.2.2.254|2.2.2.255
 
 
-
 ![](CIDR_desktop.jpg)
 
 ![](800px-IP_Address_Match.svg.png)
