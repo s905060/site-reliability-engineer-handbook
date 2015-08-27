@@ -130,9 +130,6 @@ Description:
 Now, I'm not going to lie, I didn't write this regex; I got it from here. Now, that doesn't mean that I can't rip it apart character for character.
 
 The first capture group really isn't a captured group because
-
-```
-```
  
 was placed inside which tells the parser to not capture this group (more on this in the last regex). We also want this non-captured group to be repeated three times — the {3} at the end of the group. This group contains another group, a subgroup, and a literal dot. The parser looks for a match in the subgroup then a dot to move on.
 
@@ -149,3 +146,30 @@ String that matches:
 String that doesn't match:
 
 256.60.124.136 (the first group must be "25" and a number between zero and five)
+
+
+### Matching an HTML Tag
+
+Pattern:
+
+```
+/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
+```
+
+Description:
+
+One of the more useful regexes on the list. It matches any HTML tag with the content inside. As usually, we begin with the start of the line.
+
+First comes the tag's name. It must be one or more letters long. This is the first capture group, it comes in handy when we have to grab the closing tag. The next thing are the tag's attributes. This is any character but a greater than sign (>). Since this is optional, but I want to match more than one character, the star is used. The plus sign makes up the attribute and value, and the star says as many attributes as you want.
+
+Next comes the third non-capture group. Inside, it will contain either a greater than sign, some content, and a closing tag; or some spaces, a forward slash, and a greater than sign. The first option looks for a greater than sign followed by any number of characters, and the closing tag. \1 is used which represents the content that was captured in the first capturing group. In this case it was the tag's name. Now, if that couldn't be matched we want to look for a self closing tag (like an img, br, or hr tag). This needs to have one or more spaces followed by "/>".
+
+The regex is ended with the end of the line.
+
+String that matches:
+
+<a href="http://net.tutsplus.com/">Nettuts+</a>
+
+String that doesn't match:
+
+<img src="img.jpg" alt="My image>" /> (attributes can't contain greater than signs)
