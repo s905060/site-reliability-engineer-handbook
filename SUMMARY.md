@@ -82,7 +82,7 @@
        * [Regex](regex.md)
            * [Validate an ip address](validate_an_ip_address.md)
            * [Regular expression metacharacters](regular_expression_metacharacters.md)
-           * Matching a Username
+           * [Matching a Username](matching_a_username.md)
        * [.bash_profile vs .bashrc](bashprofile_vs__bashrc.md)
        * [EXPORT](export.md)
        * [Scripts](scripts.md)
