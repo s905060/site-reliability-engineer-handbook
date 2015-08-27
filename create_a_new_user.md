@@ -1,5 +1,7 @@
 # Create a New User
 
+**usually the first user added gets uid/gid of 1000**
+
 Add a new user – Basic method
 Specify only the user name.
 ```
