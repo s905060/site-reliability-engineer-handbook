@@ -56,3 +56,21 @@ String that matches:
 String that doesn't match:
 
 **#4d82h4 (contains the letter h)**
+
+### Matching a Slug
+Pattern:
+```
+/^[a-z0-9-]+$/
+```
+
+Description:
+
+You will be using this regex if you ever have to work with mod_rewrite and pretty URL's. We begin by telling the parser to find the beginning of the string (^), followed by one or more (the plus sign) letters, numbers, or hyphens. Finally, we want the end of the string ($).
+
+String that matches:
+
+my-title-here
+
+String that doesn't match:
+
+my_title_here (contains underscores)
