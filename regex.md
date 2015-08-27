@@ -118,3 +118,34 @@ String that doesn't match:
 
 http://google.com/some/file!.html (contains an exclamation point)
 
+### Matching an IP Address
+
+Pattern:
+
+```
+/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+```
+Description:
+
+Now, I'm not going to lie, I didn't write this regex; I got it from here. Now, that doesn't mean that I can't rip it apart character for character.
+
+The first capture group really isn't a captured group because
+
+```
+```
+ 
+was placed inside which tells the parser to not capture this group (more on this in the last regex). We also want this non-captured group to be repeated three times — the {3} at the end of the group. This group contains another group, a subgroup, and a literal dot. The parser looks for a match in the subgroup then a dot to move on.
+
+The subgroup is also another non-capture group. It's just a bunch of character sets (things inside brackets): the string "25" followed by a number between 0 and 5; or the string "2" and a number between 0 and 4 and any number; or an optional zero or one followed by two numbers, with the second being optional.
+
+After we match three of those, it's onto the next non-capturing group. This one wants: the string "25" followed by a number between 0 and 5; or the string "2" with a number between 0 and 4 and another number at the end; or an optional zero or one followed by two numbers, with the second being optional.
+
+We end this confusing regex with the end of the string.
+
+String that matches:
+
+73.60.124.136 (no, that is not my IP address :P)
+
+String that doesn't match:
+
+256.60.124.136 (the first group must be "25" and a number between zero and five)
