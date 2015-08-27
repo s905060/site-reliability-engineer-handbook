@@ -74,3 +74,21 @@ my-title-here
 String that doesn't match:
 
 my_title_here (contains underscores)
+
+### Matching an Email
+
+Pattern:
+```
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+```
+Description:
+
+We begin by telling the parser to find the beginning of the string (^). Inside the first group, we match one or more lowercase letters, numbers, underscores, dots, or hyphens. I have escaped the dot because a non-escaped dot means any character. Directly after that, there must be an at sign. Next is the domain name which must be: one or more lowercase letters, numbers, underscores, dots, or hyphens. Then another (escaped) dot, with the extension being two to six letters or dots. I have 2 to 6 because of the country specific TLD's (.ny.us or .co.uk). Finally, we want the end of the string ($).
+
+String that matches:
+
+john@doe.com
+
+String that doesn't match:
+
+john@doe.something (TLD is too long)
