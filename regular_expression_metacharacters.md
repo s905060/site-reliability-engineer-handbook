@@ -36,6 +36,6 @@
 * [xyz] – Matches any character enclosed in the Brackets. 
 Note: This matches X, or Y, or Z; it doesn’t match the string “xyz”.
 * [^xyz] – Matches any character Except for those listed in the Brackets.
-* \ – “Escape” special characters. Thus \? literally matches * ? not the Syntax Rule of “previous is option”.
+* \ – “Escape” special characters. Thus \? literally matches ? not the Syntax Rule of “previous is option”.
 * \d \w \s – Matches and Digit (number), Alphabetic Character (letter) or White Space (space bar) respectively.
 * \D \W \S – Matches everything But a Digit, Character, or White Space respectively.
