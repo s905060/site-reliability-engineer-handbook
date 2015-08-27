@@ -55,6 +55,15 @@ The table below  shows allowed subnet and Hosts IP address for all The Classes
 |/30|64|4|6
 |/31|128|2|7
 
+|Subnet Number|Network Address|First IP|Last IP|Broadcast Address
+|--|--|--|--|--
+|1|2.2.2.0|2.2.2.1|2.2.2.6|2.2.2.7
+|2|2.2.2.8|2.2.2.9|2.2.2.14|2.2.2.15
+|3|2.2.2.16|2.2.2.17|2.2.2.22|2.2.2.23
+|32|2.2.2.249|2.2.2.250|2.2.2.254|2.2.2.255
+
+
+
 ![](CIDR_desktop.jpg)
 
 ![](800px-IP_Address_Match.svg.png)
