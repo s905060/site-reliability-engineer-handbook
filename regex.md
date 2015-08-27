@@ -92,3 +92,29 @@ john@doe.com
 String that doesn't match:
 
 john@doe.something (TLD is too long)
+
+### Matching a URL
+Pattern:
+
+```
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+```
+
+Description:
+
+This regex is almost like taking the ending part of the above regex, slapping it between "http://" and some file structure at the end. It sounds a lot simpler than it really is. To start off, we search for the beginning of the line with the caret.
+
+The first capturing group is all option. It allows the URL to begin with "http://", "https://", or neither of them. I have a question mark after the s to allow URL's that have http or https. In order to make this entire group optional, I just added a question mark to the end of it.
+
+Next is the domain name: one or more numbers, letters, dots, or hypens followed by another dot then two to six letters or dots. The following section is the optional files and directories. Inside the group, we want to match any number of forward slashes, letters, numbers, underscores, spaces, dots, or hyphens. Then we say that this group can be matched as many times as we want. Pretty much this allows multiple directories to be matched along with a file at the end. I have used the star instead of the question mark because the star says zero or more, not zero or one. If a question mark was to be used there, only one file/directory would be able to be matched.
+
+Then a trailing slash is matched, but it can be optional. Finally we end with the end of the line.
+
+String that matches:
+
+http://net.tutsplus.com/about
+
+String that doesn't match:
+
+http://google.com/some/file!.html (contains an exclamation point)
+
