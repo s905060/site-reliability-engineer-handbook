@@ -97,6 +97,7 @@
        * [The standard filedescriptors](the_standard_filedescriptors.md)
        * [Exit codes](exit_codes.md)
        * [Special Variables](special_variables.md)
+   * Java
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
