@@ -158,7 +158,7 @@
    * [KVM](kvm.md)
 * [Trouble Shooting](trouble_shooting.md)
    * [CentOS:  nf_conntrack: table full, dropping packet](centos_nf_conntrack__table_full,_dropping_packet.md)
-   * How To Fix “Error: database disk image is malformed” On CentOS / Fedora
+   * [How To Fix “Error: database disk image is malformed” On CentOS / Fedora](how_to_fix_error_database_disk_image_is_malformed_on_centos__fedora.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
