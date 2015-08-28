@@ -27,24 +27,25 @@ Unlike the stack, the heap does not have size restrictions on variable size (apa
 
 Unlike the stack, variables created on the heap are accessible by any function, anywhere in your program. Heap variables are essentially global in scope.
 
-Stack vs Heap Pros and Cons
+### Stack vs Heap Pros and Cons
 
-Stack
+**Stack**
 
-very fast access
-don't have to explicitly de-allocate variables
-space is managed efficiently by CPU, memory will not become fragmented
-local variables only
-limit on stack size (OS-dependent)
-variables cannot be resized
-Heap
+* very fast access
+* don't have to explicitly de-allocate variables
+* space is managed efficiently by CPU, memory will not become fragmented
+* local variables only
+* limit on stack size (OS-dependent)
+* variables cannot be resized
 
-variables can be accessed globally
-no limit on memory size
-(relatively) slower access
-no guaranteed efficient use of space, memory may become fragmented over time as blocks of memory are allocated, then freed
-you must manage memory (you're in charge of allocating and freeing variables)
-variables can be resized using realloc()
+**Heap**
+
+* variables can be accessed globally
+* no limit on memory size
+* (relatively) slower access
+* no guaranteed efficient use of space, memory may become fragmented over time as blocks of memory are allocated, then freed
+* you must manage memory (you're in charge of allocating and freeing variables)
+* variables can be resized using realloc()
 Examples
 
 Here is a short program that creates its variables on the stack. It looks like the other programs we have seen so far.
