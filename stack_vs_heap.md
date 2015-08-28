@@ -46,10 +46,11 @@ Unlike the stack, variables created on the heap are accessible by any function, 
 * no guaranteed efficient use of space, memory may become fragmented over time as blocks of memory are allocated, then freed
 * you must manage memory (you're in charge of allocating and freeing variables)
 * variables can be resized using realloc()
-Examples
+
+#### Examples
 
 Here is a short program that creates its variables on the stack. It looks like the other programs we have seen so far.
-
+```
 #include <stdio.h>
 
 double multiplyByTwo (double input) {
@@ -67,13 +68,17 @@ int main (int argc, char *argv[])
 
   return 0;
 }
+```
+```
 double your salary is 24691.340
+```
+
 On lines 10, 11 and 12 we declare variables: an int, a double, and an array of three doubles. These three variables are pushed onto the stack as soon as the main() function allocates them. When the main() function exits (and the program stops) these variables are popped off of the stack. Similarly, in the function multiplyByTwo(), the twice variable, which is a double, is pushed onto the stack as soon as the multiplyByTwo() function allocates it. As soon as the multiplyByTwo() function exits, the twice variable is popped off of the stack, and is gone forever.
 
 As a side note, there is a way to tell C to keep a stack variable around, even after its creator function exits, and that is to use the static keyword when declaring the variable. A variable declared with the static keyword thus becomes something like a global variable, but one that is only visible inside the function that created it. It's a strange construction, one that you probably won't need except under very specific circumstances.
 
 Here is another version of this program that allocates all of its variables on the heap instead of the stack:
-
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -105,9 +110,11 @@ int main (int argc, char *argv[])
 
   return 0;
 }
+```
+
 As you can see, using malloc() to allocate memory on the heap and then using free() to deallocate it, is no big deal, but is a bit cumbersome. The other thing to notice is that there are a bunch of star symbols * all over the place now. What are those? The answer is, they are pointers. The malloc() (and calloc() and free()) functions deal with pointers not actual values. We will talk more about pointers shortly. The bottom line though: pointers are a special data type in C that store addresses in memory instead of storing actual values. Thus on line 5 above, the twice variable is not a double, but is a pointer to a double. It's an address in memory where the double is stored.
 
-When to use the Heap?
+### When to use the Heap?
 
 When should you use the heap, and when should you use the stack? If you need to allocate a large block of memory (e.g. a large array, or a big struct), and you need to keep that variable around a long time (like a global), then you should allocate it on the heap. If you are dealing with realtively small variables that only need to persist as long as the function using them is alive, then you should use the stack, it's easier and faster. If you need variables like arrays and structs that can change size dynamically (e.g. arrays that can grow or shrink as needed) then you will likely need to allocate them on the heap, and use dynamic memory allocation functions like malloc(), calloc(), realloc() and free() to manage that memory "by hand". We will talk about dynamically allocated data structures after we talk about pointers.
 
