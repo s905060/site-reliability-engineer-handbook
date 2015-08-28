@@ -27,6 +27,7 @@
    * [Understanding Linux CPU Load - when should you be worried?](understanding_linux_cpu_load_-_when_should_you_be_worried.md)
    * [Kernel namespaces](kernel_namespaces.md)
    * [Control groups](control_groups.md)
+   * Stack vs Heap
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
