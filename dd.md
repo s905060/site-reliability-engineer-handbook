@@ -17,4 +17,4 @@ Create an img file of the /dev/sda hard drive. To restore that image type: **dd 
 dd if=/dev/sda of=/dev/sdb
 ```
 
-Copy the contents from the if= drive /dev/sda to the of= drive /dev/sdb.
+Copy the contents from the **if= drive /dev/sda to the of= drive /dev/sdb.**
