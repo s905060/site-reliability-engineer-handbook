@@ -49,6 +49,7 @@
    * [Address Resolution Protocol (ARP) definition](address_resolution_protocol_arp_definition.md)
    * [Egress traffic](egress_traffic.md)
    * [Ingress traffic](ingress_traffic.md)
+   * NAT - Network Address Translation
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
