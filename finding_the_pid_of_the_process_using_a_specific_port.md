@@ -12,7 +12,6 @@ You can the following programs to find out about port numbers and its associated
 You must run above command(s) as the root user.
 
 
-
 ```
 $ sudo netstat -nlp | grep 80
 tcp  0  0  0.0.0.0:80  0.0.0.0:*  LISTEN  125004/nginx
