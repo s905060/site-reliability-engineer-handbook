@@ -1,5 +1,7 @@
 # Special Variables
 
+![](Screen Shot 2015-08-29 at 12.35.45 AM.png)
+
 There are a few other variables that the system sets for you to use as well.
 
 * $0 - The name of the Bash script.
