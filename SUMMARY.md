@@ -151,6 +151,7 @@
    * [Renice](renice.md)
    * [PS](ps.md)
    * [DD](dd.md)
+   * BC
 * [Security](security.md)
    * [Common](common.md)
    * [Linux Security 101](linux_security_101.md)
