@@ -24,3 +24,11 @@ COMMAND  PID        USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 exim4   2799 Debian-exim    3u  IPv4   6645      0t0  TCP localhost:smtp (LISTEN)
 exim4   2799 Debian-exim    4u  IPv6   6646      0t0  TCP localhost:smtp (LISTEN)
 ```
+
+```
+lsof -i :portNumber
+lsof -i tcp:portNumber
+lsof -i udp:portNumber
+lsof -i :80
+lsof -i :80 | grep LISTEN
+```
