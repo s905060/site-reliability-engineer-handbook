@@ -32,3 +32,35 @@ lsof -i udp:portNumber
 lsof -i :80
 lsof -i :80 | grep LISTEN
 ```
+
+### fuser command
+
+Find out the processes PID that opened tcp port 7000, enter:
+```
+# fuser 7000/tcp
+```
+
+Sample outputs:
+```
+7000/tcp:             3813
+```
+Finally, find out process name associated with PID # 3813, enter:
+```
+# ls -l /proc/3813/exe
+```
+Sample outputs:
+```
+lrwxrwxrwx 1 vivek vivek 0 2010-10-29 11:00 /proc/3813/exe -> /usr/bin/transmission
+```
+/usr/bin/transmission is a bittorrent client, enter:
+```
+# man transmission
+```
+OR
+```
+# whatis transmission
+```
+Sample outputs:
+```
+transmission (1)     - a bittorrent client
+```
