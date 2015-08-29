@@ -4,10 +4,10 @@ How do I find out running processes were associated with each open port? How do 
 
 You can the following programs to find out about port numbers and its associated process:
 
-1. netstat - a command-line tool that displays network connections, routing tables, and a number of network interface statistics.
-2. fuser - a command line tool to identify processes using files or sockets.
-3. lsof - a command line tool to list open files under Linux / UNIX to report a list of all open files and the processes that opened them.
-4. /proc/$pid/ file system - Under Linux /proc includes a directory for each running process (including kernel processes) at /proc/PID, containing information about that process, notably including the processes name that opened port.
+1. **netstat** - a command-line tool that displays network connections, routing tables, and a number of network interface statistics.
+2. **fuser** - a command line tool to identify processes using files or sockets.
+3. **lsof** - a command line tool to list open files under Linux / UNIX to report a list of all open files and the processes that opened them.
+4. **/proc/$pid/** file system - Under Linux /proc includes a directory for each running process (including kernel processes) at /proc/PID, containing information about that process, notably including the processes name that opened port.
 
 You must run above command(s) as the root user.
 
