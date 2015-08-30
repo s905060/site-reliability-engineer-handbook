@@ -71,7 +71,7 @@ The most advanced Microsoft journaled filesystem providing faster file access an
 
 The choice of filesystem to use depends on the situation. If compatibility or other reasons make one of the non-native filesystems necessary, then that one must be used. If one can choose freely, then it is probably wisest to use ext3, since it has all the features of ext2, and is a journaled filesystem. For more information on filesystems, see Section 5.10.6. You can also read the Filesystems HOWTO located at http://www.tldp.org/HOWTO/Filesystems-HOWTO.html
 
-There is also the proc filesystem, usually accessible as the /proc directory, which is not really a filesystem at all, even though it looks like one. The proc filesystem makes it easy to access certain kernel data structures, such as the process list (hence the name). It makes these data structures look like a filesystem, and that filesystem can be manipulated with all the usual file tools. For example, to get a listing of all processes one might use the command
+There is also the proc filesystem, usually accessible as the /proc directory, which is not really a filesystem at all, even though it looks like one. The proc filesystem makes it easy to access certain kernel data structures, such as the process list (hence the name). It makes these data structures look like a filesystem, and that filesystem can be manipulated with all the usual file tools. For example, to get a listing of all processes one might use the command:
 
 
 ```
@@ -112,3 +112,46 @@ A filesystem that uses journaling is also called a journaled filesystem. A journ
 
 See Section 5.10.6 for more details about the features of the different filesystem types.
 
+
+### Creating a filesystem
+
+Filesystems are created, i.e., initialized, with the mkfs command. There is actually a separate program for each filesystem type. mkfs is just a front end that runs the appropriate program depending on the desired filesystem type. The type is selected with the -t fstype option.
+
+The programs called by mkfs have slightly different command line interfaces. The common and most important options are summarized below; see the manual pages for more.
+
+**-t fstype**
+Select the type of the filesystem.
+
+**-c**
+Search for bad blocks and initialize the bad block list accordingly.
+
+**-l filename**
+Read the initial bad block list from the name file.
+
+There are also many programs written to add specific options when creating a specific filesystem. For example mkfs.ext3 adds a -b option to allow the administrator to specify what block size should be used. Be sure to find out if there is a specific program available for the filesystem type you want to use. For more information on determining what block size to use please see Section 5.10.5.
+
+To create an ext2 filesystem on a floppy, one would give the following commands:
+```
+$ fdformat -n /dev/fd0H1440
+Double-sided, 80 tracks, 18 sec/track. Total capacity 
+1440 KB.
+Formatting ... done
+$ badblocks /dev/fd0H1440 1440 $>$ 
+bad-blocks
+$ mkfs.ext2 -l bad-blocks 
+/dev/fd0H1440
+mke2fs 0.5a, 5-Apr-94 for EXT2 FS 0.5, 94/03/10
+360 inodes, 1440 blocks
+72 blocks (5.00%) reserved for the super user
+First data block=1
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+1 block group
+8192 blocks per group, 8192 fragments per group
+360 inodes per group
+
+Writing inode tables: done
+Writing superblocks and filesystem accounting information: 
+done
+$
+```
