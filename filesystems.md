@@ -206,7 +206,7 @@ Table 5-1. Comparing Filesystem Features
 |HFS+	|1998	|Mac OS	|8EB	|?	|N
 |UFS2	|2002	|FreeBSD	|512GB to 32PB	|1YB|	N
 |ext2	|1993	|Linux	|16GB to 2TB4	|2TB to 32TB|	N
-|ext3	|1999	|Linux	|16GB to 2TB4	|2TB to 32TB	|ReiserFS3	|2001	|Linux	|8TB8	|16TB|	Y
+|ext3	|1999	|Linux	|16GB to 2TB4	|2TB to 32TB|Y	|ReiserFS3	|2001	|Linux	|8TB8	|16TB|	Y
 |ReiserFS4	|2005	|Linux	|?	|?	|Y
 |XFS	|1994	|IRIX	|9EB	|9EB	|Y
 |JFS	|?	    |AIX	|8EB	|512TB to 4PB|	Y
