@@ -226,3 +226,9 @@ Petabyte - PB	1024 TBs
 Exabyte - EB	1024 PBs
 Zettabyte - ZB	1024 EBs
 Yottabyte - YB	1024 ZBs
+
+It should be noted that Exabytes, Zettabytes, and Yottabytes are rarely encountered, if ever. There is a current estimate that the worlds printed material is equal to 5 Exabytes. Therefore, some of these filesystem limitations are considered by many as theoretical. However, the filesystem software has been written with these capabilities.
+
+For more detailed information you can visit http://en.wikipedia.org/wiki/Comparison_of_file_systems.
+
+
