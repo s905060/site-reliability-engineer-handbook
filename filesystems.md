@@ -192,3 +192,37 @@ On the downside, if you are going to have a lot of smaller files on that filesys
 For example, if you set your block size to 4096, or 4K, and you create a file that is 256 bytes in size, it will still consume 4K of space on your harddrive. For one file that may seem trivial, but when your filesystem contains hundreds or thousands of files, this can add up.
 
 Block size can also effect the maximum supported file size on some filesystems. This is because many modern filesystem are limited not by block size or file size, but by the number of blocks. Therefore you would be using a "block size * max # of blocks = max block size" formula.
+
+### Filesystem comparison
+
+Table 5-1. Comparing Filesystem Features
+
+FS Name	Year Introduced	Original OS	Max File Size	Max FS Size	Journaling
+FAT16	1983	MSDOS V2	4GB	16MB to 8GB	N
+FAT32	1997	Windows 95	4GB	8GB to 2TB	N
+HPFS	1988	OS/2	4GB	2TB	N
+NTFS	1993	Windows NT	16EB	16EB	Y
+HFS+	1998	Mac OS	8EB	?	N
+UFS2	2002	FreeBSD	512GB to 32PB	1YB	N
+ext2	1993	Linux	16GB to 2TB4	2TB to 32TB	N
+ext3	1999	Linux	16GB to 2TB4	2TB to 32TB	Y
+ReiserFS3	2001	Linux	8TB8	16TB	Y
+ReiserFS4	2005	Linux	?	?	Y
+XFS	1994	IRIX	9EB	9EB	Y
+JFS	?	AIX	8EB	512TB to 4PB	Y
+VxFS	1991	SVR4.0	16EB	?	Y
+ZFS	2004	Solaris 10	1YB	16EB	N
+
+
+### Legend
+
+Table 5-2. Sizes
+
+Kilobyte - KB	1024 Bytes
+Megabyte - MB	1024 KBs
+Gigabyte - GB	1024 MBs
+Terabyte - TB	1024 GBs
+Petabyte - PB	1024 TBs
+Exabyte - EB	1024 PBs
+Zettabyte - ZB	1024 EBs
+Yottabyte - YB	1024 ZBs
