@@ -72,3 +72,32 @@ The most advanced Microsoft journaled filesystem providing faster file access an
 The choice of filesystem to use depends on the situation. If compatibility or other reasons make one of the non-native filesystems necessary, then that one must be used. If one can choose freely, then it is probably wisest to use ext3, since it has all the features of ext2, and is a journaled filesystem. For more information on filesystems, see Section 5.10.6. You can also read the Filesystems HOWTO located at http://www.tldp.org/HOWTO/Filesystems-HOWTO.html
 
 There is also the proc filesystem, usually accessible as the /proc directory, which is not really a filesystem at all, even though it looks like one. The proc filesystem makes it easy to access certain kernel data structures, such as the process list (hence the name). It makes these data structures look like a filesystem, and that filesystem can be manipulated with all the usual file tools. For example, to get a listing of all processes one might use the command
+
+
+```
+$ ls -l /proc
+total 0
+dr-xr-xr-x   4 root     root            0 Jan 31 20:37 1
+dr-xr-xr-x   4 liw      users           0 Jan 31 20:37 63
+dr-xr-xr-x   4 liw      users           0 Jan 31 20:37 94
+dr-xr-xr-x   4 liw      users           0 Jan 31 20:37 95
+dr-xr-xr-x   4 root     users           0 Jan 31 20:37 98
+dr-xr-xr-x   4 liw      users           0 Jan 31 20:37 99
+-r--r--r--   1 root     root            0 Jan 31 20:37 devices
+-r--r--r--   1 root     root            0 Jan 31 20:37 dma
+-r--r--r--   1 root     root            0 Jan 31 20:37 filesystems
+-r--r--r--   1 root     root            0 Jan 31 20:37 interrupts
+-r--------   1 root     root      8654848 Jan 31 20:37 kcore
+-r--r--r--   1 root     root            0 Jan 31 11:50 kmsg
+-r--r--r--   1 root     root            0 Jan 31 20:37 ksyms
+-r--r--r--   1 root     root            0 Jan 31 11:51 loadavg
+-r--r--r--   1 root     root            0 Jan 31 20:37 meminfo
+-r--r--r--   1 root     root            0 Jan 31 20:37 modules
+dr-xr-xr-x   2 root     root            0 Jan 31 20:37 net
+dr-xr-xr-x   4 root     root            0 Jan 31 20:37 self
+-r--r--r--   1 root     root            0 Jan 31 20:37 stat
+-r--r--r--   1 root     root            0 Jan 31 20:37 uptime
+-r--r--r--   1 root     root            0 Jan 31 20:37 
+version
+$
+```
