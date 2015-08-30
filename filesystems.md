@@ -178,3 +178,8 @@ Writing superblocks and filesystem accounting information:
 done
 $
 ```
+
+The -c option is more convenient than a separate use of badblocks, but badblocks is necessary for checking after the filesystem has been created.
+
+The process to prepare filesystems on hard disks or partitions is the same as for floppies, except that the formatting isn't needed.
+
