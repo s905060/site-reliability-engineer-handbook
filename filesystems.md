@@ -155,3 +155,26 @@ Writing superblocks and filesystem accounting information:
 done
 $
 ```
+First, the floppy was formatted (the -n option prevents validation, i.e., bad block checking). Then bad blocks were searched with badblocks, with the output redirected to a file, bad-blocks.	Finally, the filesystem was created, with the bad block list initialized by whatever badblocks found.
+
+The -c option could have been used with mkfs instead of badblocks and a separate file. The example below does that.
+
+```
+$ mkfs.ext2 -c 
+/dev/fd0H1440
+mke2fs 0.5a, 5-Apr-94 for EXT2 FS 0.5, 94/03/10
+360 inodes, 1440 blocks
+72 blocks (5.00%) reserved for the super user
+First data block=1
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+1 block group
+8192 blocks per group, 8192 fragments per group
+360 inodes per group
+
+Checking for bad blocks (read-only test): done
+Writing inode tables: done
+Writing superblocks and filesystem accounting information: 
+done
+$
+```
