@@ -101,3 +101,6 @@ dr-xr-xr-x   4 root     root            0 Jan 31 20:37 self
 version
 $
 ```
+(There will be a few extra files that don't correspond to processes, though. The above example has been shortened.)
+
+Note that even though it is called a filesystem, no part of the proc filesystem touches any disk. It exists only in the kernel's imagination. Whenever anyone tries to look at any part of the proc filesystem, the kernel makes it look as if the part existed somewhere, even though it doesn't. So, even though there is a multi-megabyte /proc/kcore file, it doesn't take any disk space.
