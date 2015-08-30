@@ -197,7 +197,8 @@ Block size can also effect the maximum supported file size on some filesystems. 
 
 Table 5-1. Comparing Filesystem Features
 
-FS Name	Year Introduced	Original OS	Max File Size	Max FS Size	Journaling
+|FS Name	|Year Introduced	|Original OS	|Max File Size	|Max FS Size	|Journaling
+|--|--|--|--|--|
 FAT16	1983	MSDOS V2	4GB	16MB to 8GB	N
 FAT32	1997	Windows 95	4GB	8GB to 2TB	N
 HPFS	1988	OS/2	4GB	2TB	N
