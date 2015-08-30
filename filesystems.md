@@ -216,16 +216,16 @@ ZFS	2004	Solaris 10	1YB	16EB	N
 
 ### Legend
 
-Table 5-2. Sizes
-
-Kilobyte - KB	1024 Bytes
-Megabyte - MB	1024 KBs
-Gigabyte - GB	1024 MBs
-Terabyte - TB	1024 GBs
-Petabyte - PB	1024 TBs
-Exabyte - EB	1024 PBs
-Zettabyte - ZB	1024 EBs
-Yottabyte - YB	1024 ZBs
+|Table 5-2.|Sizes
+|--|--
+|Kilobyte - KB	|1024 Bytes
+|Megabyte - MB	|1024 KBs
+|Gigabyte - GB	|1024 MBs
+|Terabyte - TB	|1024 GBs
+|Petabyte - PB	|1024 TBs
+|Exabyte - EB	|1024 PBs
+|Zettabyte - ZB	|1024 EBs
+|Yottabyte - YB	|1024 ZBs
 
 It should be noted that Exabytes, Zettabytes, and Yottabytes are rarely encountered, if ever. There is a current estimate that the worlds printed material is equal to 5 Exabytes. Therefore, some of these filesystem limitations are considered by many as theoretical. However, the filesystem software has been written with these capabilities.
 
