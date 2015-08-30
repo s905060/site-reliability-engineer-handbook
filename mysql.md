@@ -66,3 +66,22 @@ After you’ve granted permissions to a MySQL user you’ll probably want to dou
 ```
 SHOW GRANTS FOR 'testuser'@'localhost';
 ```
+
+EXAMPLE
+
+Let's look at some MySQL PASSWORD function examples and explore how to use the PASSWORD function in MySQL.
+
+For example:
+```
+mysql> SELECT PASSWORD('abc');
+Result: '*0D3CED9BEC10A777AEC23CCC353A8C08A633045E'
+
+mysql> SELECT PASSWORD('password');
+Result: '*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19'
+
+mysql> SELECT PASSWORD('techonthenet');
+Result: '*0886644237EED5C45BE221093802B5AB0C06D2D0'
+
+mysql> SELECT PASSWORD(NULL);
+Result: NULL
+```
