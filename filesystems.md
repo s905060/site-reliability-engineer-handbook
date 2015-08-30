@@ -199,20 +199,19 @@ Table 5-1. Comparing Filesystem Features
 
 |FS Name	|Year Introduced	|Original OS	|Max File Size	|Max FS Size	|Journaling
 |--|--|--|--|--|
-FAT16	1983	MSDOS V2	4GB	16MB to 8GB	N
-FAT32	1997	Windows 95	4GB	8GB to 2TB	N
-HPFS	1988	OS/2	4GB	2TB	N
-NTFS	1993	Windows NT	16EB	16EB	Y
-HFS+	1998	Mac OS	8EB	?	N
-UFS2	2002	FreeBSD	512GB to 32PB	1YB	N
-ext2	1993	Linux	16GB to 2TB4	2TB to 32TB	N
-ext3	1999	Linux	16GB to 2TB4	2TB to 32TB	Y
-ReiserFS3	2001	Linux	8TB8	16TB	Y
-ReiserFS4	2005	Linux	?	?	Y
-XFS	1994	IRIX	9EB	9EB	Y
-JFS	?	AIX	8EB	512TB to 4PB	Y
-VxFS	1991	SVR4.0	16EB	?	Y
-ZFS	2004	Solaris 10	1YB	16EB	N
+|FAT16	|1983	|MSDOS V2	|4GB	|16MB to 8GB|	N
+|FAT32	|1997	|Windows 95	|4GB	|8GB to 2TB	|N
+|HPFS	|1988	|OS/2	|4GB	|2TB|	N
+|NTFS	|1993	|Windows NT	|16EB	|16EB	|Y
+|HFS+	|1998	|Mac OS	|8EB	|?	|N
+|UFS2	|2002	|FreeBSD	|512GB to 32PB	|1YB|	N
+|ext2	|1993	|Linux	|16GB to 2TB4	|2TB to 32TB|	N
+|ext3	|1999	|Linux	|16GB to 2TB4	|2TB to 32TB	|ReiserFS3	|2001	|Linux	|8TB8	|16TB|	Y
+|ReiserFS4	|2005	|Linux	|?	|?	|Y
+|XFS	|1994	|IRIX	|9EB	|9EB	|Y
+|JFS	|?	    |AIX	|8EB	|512TB to 4PB|	Y
+|VxFS	|1991	|SVR4.0	|16EB	|?	|Y
+|ZFS	|2004	|Solaris |10	|1YB	16EB|	N
 
 
 ### Legend
