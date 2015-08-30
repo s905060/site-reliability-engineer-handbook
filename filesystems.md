@@ -231,4 +231,11 @@ It should be noted that Exabytes, Zettabytes, and Yottabytes are rarely encounte
 
 For more detailed information you can visit http://en.wikipedia.org/wiki/Comparison_of_file_systems.
 
-
+The mounts/umount could be done as in the following example:
+```
+$ mount /dev/hda2 /home
+$ mount /dev/hda3 /usr
+$ mount -t msdos /dev/fd0 /floppy
+$ umount /dev/hda2
+$ umount /usr
+```
