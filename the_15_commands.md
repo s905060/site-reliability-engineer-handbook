@@ -52,22 +52,28 @@ docker restart $sample_job
 To remove a container fully, it needs to be stopped first and then removed. Use this:
 ```
 docker stop $sample_job
+```
+```
 docker rm $sample_job
 ```
 To save the container state as an image, use the command:
-
+```
 docker commit $sample_job job1
+```
 Please note that the image name takes characters [a-z] and numbers [0-9].
 
 Now, you are ready to find the list of all images using the command:
-
+```
 docker images
+```
 In the our previous #Docker Tutorial post, we discovered that images are stored in the #Docker registry. Images in the registry can be searched by running the following command:
-
+```
 docker search <image-name>
+```
 The history of the images can be found by executing this command:
-
+```
 docker history <image_name>
+```
 Finally, to push an image to the registry, use the command:
 
 docker push NAME
