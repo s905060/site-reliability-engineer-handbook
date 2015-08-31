@@ -68,7 +68,7 @@ The following image illustrates import from a local file.
 
 Similar to import, the export command is used to transfer the contents of the filesystem as a tar file. The following image depicts a simple execution of the same.
 
-cp:
+### cp:
 
 This command copies files from the containers filesystems to the specified path. The syntax for the cp command is
 ```
@@ -98,13 +98,13 @@ The syntax for inspect is
 ```
 docker inspect container/image
 ```
-kill:
+### kill:
 
 The container’s main process is killed by sending the SIGKILL signal. The syntax is
 ```
 docker kill [options] container
 ```
-rmi:
+### rmi:
 
 Removing one or more images can be achieved using the rmi command. The syntax is as follows:
 ```
@@ -112,17 +112,17 @@ docker rmi image
 ```
 An image can have multiple tags linked to it. On deletion of an image, you should make sure all tags are removed to avoid errors. The following image shows an example usage of the rmi command.
 
-wait:
+### wait:
 
 Docker provides a simple wait command to print the exit code only after the container exits.
 
-load:
+### load:
 
 Load an image or a repository in tar form to STDIN, which can be achieved using the command docker load.
 
 This screenshot shows loading the app_box.tar file to the STDIN.
 
-save:
+### save:
 
 Similar to load, an image can be saved as tar and sent to the STDOUT. This can be done using the save command
 ```
