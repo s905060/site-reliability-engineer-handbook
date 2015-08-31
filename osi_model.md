@@ -1,5 +1,7 @@
 # OSI MODEL
 
+![](Screen Shot 2015-08-30 at 10.26.56 PM.png)
+
 ![](osi-model.jpg)
 
 ###The Layers
