@@ -104,3 +104,10 @@ The container’s main process is killed by sending the SIGKILL signal. The synt
 ```
 docker kill [options] container
 ```
+rmi:
+
+Removing one or more images can be achieved using the rmi command. The syntax is as follows:
+```
+docker rmi image
+```
+An image can have multiple tags linked to it. On deletion of an image, you should make sure all tags are removed to avoid errors. The following image shows an example usage of the rmi command.
