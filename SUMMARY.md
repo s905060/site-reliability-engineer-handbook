@@ -56,7 +56,7 @@
    * [HTTP with Non-Persistent Connections](http_with_non-persistent_connections.md)
    * [HTTP with Persistent Connections](http_with_persistent_connections.md)
    * [How SMTP work](how_smtp_work.md)
-   * How DNS work
+   * [How DNS work](how_dns_work.md)
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
