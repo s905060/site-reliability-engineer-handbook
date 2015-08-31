@@ -63,3 +63,16 @@ The syntax for import from a remote location is
 docker import http://example.com/example.tar
 ```
 The following image illustrates import from a local file.
+
+### export:
+
+Similar to import, the export command is used to transfer the contents of the filesystem as a tar file. The following image depicts a simple execution of the same.
+
+cp:
+
+This command copies files from the containers filesystems to the specified path. The syntax for the cp command is
+```
+docker cp container:path hostpath.
+```
+This image depicts the working of the cp command.
+
