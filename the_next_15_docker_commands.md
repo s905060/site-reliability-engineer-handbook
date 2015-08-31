@@ -26,3 +26,17 @@ There are also some interesting options that Docker provides, such as:
 
 The following screenshot depicts the use of the Docker build command.
 
+### attach:
+
+Docker allows interaction with running containers using the attach command. The command also allows viewing of daemonized processes. Detaching from the container can be done in two ways:
+
+Ctrl+c - for a quiet exit
+
+Ctrl-\ - to detach with a stack trace
+
+The syntax for attach is
+```
+docker attach container
+```
+This screenshot shows a simple execution of the attach command.
+
