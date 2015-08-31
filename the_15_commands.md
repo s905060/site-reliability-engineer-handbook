@@ -24,3 +24,8 @@ The next step is to run the traditional, mundane, yet significant, “hello worl
 ```
 docker run busybox /bin/echo Hello Docker
 ```
+
+Now, let’s run hello docker as a long running process:
+```
+sample_job=$(docker run -d busybox /bin/sh -c “while true; do echo Docker; sleep 1; done”)
+```
