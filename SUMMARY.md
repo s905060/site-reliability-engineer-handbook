@@ -55,7 +55,7 @@
    * [UDP Services](udp_services.md)
    * [HTTP with Non-Persistent Connections](http_with_non-persistent_connections.md)
    * [HTTP with Persistent Connections](http_with_persistent_connections.md)
-   * How SMTP work
+   * [How SMTP work](how_smtp_work.md)
    * How DNS work
 * [Programming Language](programming_language.md)
    * [Python](python.md)
