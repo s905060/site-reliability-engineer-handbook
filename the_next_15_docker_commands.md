@@ -59,6 +59,7 @@ Real-time details of events can be collected from the server by specifying the d
 Docker allows imports from remote locations and a local file or directory. Import from remote locations is done using http, and imports from local files or directories is accomplished using the “-” parameter.
 
 The syntax for import from a remote location is
-
+```
 docker import http://example.com/example.tar
+```
 The following image illustrates import from a local file.
