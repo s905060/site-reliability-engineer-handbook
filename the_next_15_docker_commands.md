@@ -40,3 +40,14 @@ docker attach container
 ```
 This screenshot shows a simple execution of the attach command.
 
+### diff:
+
+Docker provides a very powerful command diff which lists the changes in the files and directories. The changes include addition, deletion and those represented by the A, D and C flags, respectively. This command improves debugging processes and allows faster sharing of environments.
+
+The syntax is
+```
+docker diff container
+```
+Here’s a screenshot of the diff command executed.
+
+
