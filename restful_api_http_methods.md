@@ -1,7 +1,7 @@
 # RESTful API HTTP methods
 
 
-Applied to web services[edit]
+### Applied to web services[edit]
 Web service APIs that adhere to the REST architectural constraints are called RESTful APIs. HTTP-based RESTful APIs are defined with these aspects:
 base URI, such as http://example.com/resources/
 an Internet media type for the data. This is often JSON but can be any other valid Internet media type (e.g., XML, Atom, microformats, images, etc.)
