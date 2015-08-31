@@ -158,7 +158,7 @@
    * [Linux Security 101](linux_security_101.md)
    * [The bad guys can attack servers and network infrastructure](the_bad_guys_can_attack_servers_and_network_infrastructure.md)
    * [The bad guys can sniff packets](the_bad_guys_can_sniff_packets.md)
-   * The bad guys can masquerade as someone you trust
+   * [The bad guys can masquerade as someone you trust](the_bad_guys_can_masquerade_as_someone_you_trust.md)
 * [Virtualization](virtualization.md)
    * [Docker](docker.md)
        * [Expose Docker Remote API on CentOS](expose_docker_remote_api_on_centos.md)
