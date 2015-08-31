@@ -186,4 +186,5 @@
    * [Kubernetes](kubernetes.md)
        * [K8S-Network](k8s-network.md)
    * [ETCD](etcd.md)
+   * RESTful API HTTP methods
 
