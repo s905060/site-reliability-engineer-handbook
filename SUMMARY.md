@@ -158,6 +158,7 @@
    * [Linux Security 101](linux_security_101.md)
 * [Virtualization](virtualization.md)
    * [Docker](docker.md)
+       * Expose Docker Remote API on CentOS
    * [Xen](xen.md)
    * [KVM](kvm.md)
 * [Trouble Shooting](trouble_shooting.md)
