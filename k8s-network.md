@@ -15,3 +15,16 @@ Kubernetes imposes some fundamental requirements on any networking implementatio
 * All nodes can communicate with all containers without NAT.
 
 * The IP that a container sees itself as is the same IP that others see it as.
+
+How to achieve this
+1. Google Compute Engine (GCE)
+2. L2 networks and linux bridging
+Four ways to connect a docker container to a local network
+3. Flannel
+Flannel is a very simple overlay network that satisfies the Kubernetes requirements.
+4. OpenVSwitch
+OpenVSwitch is a somewhat more mature but also complicated way to build an overlay network. Kubernetes OpenVSwitch GRE/VxLAN networking
+5. Weave
+Weave is yet another way to build an overlay network, primarily aiming at Docker integration.
+6. Calico
+Calico uses BGP to enable real container IPs.
