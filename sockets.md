@@ -1,5 +1,6 @@
 # Sockets
 
+A process sends messages into, and receives messages from, the network through a software interface called a socket. Let’s consider an analogy to help us understand processes and sockets. A process is analogous to a house and its socket is analogous to its door. When a process wants to send a message to another process on another host, it shoves the message out its door (socket). This sending process assumes that there is a transportation infrastructure on the other side of its door that will transport the message to the door of the destination process. Once the message arrives at the des- tination host, the message passes through the receiving process’s door (socket), and the receiving process then acts on the message
 
 Sockets were developed in the BSD lineage of Unix as a way to encapsulate access to data networks. Two programs communicating over a socket typically see a bidirectional byte stream (there are other socket modes and transmission methods, but they are of only minor importance). The byte stream is both sequenced (that is, even single bytes will be received in the same order sent) and reliable **(socket users are guaranteed that the underlying network will do error detection and retry to ensure delivery).** Socket descriptors, once obtained, behave essentially like file descriptors.
 
