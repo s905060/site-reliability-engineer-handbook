@@ -8,3 +8,7 @@ docker info
 ```
 If this command is not found, then it indicates #Docker has not been properly installed. A proper install would look similar to the following image:
 
+At this point, there are no images or containers. So, let’s create one by pulling a pre-built image using the command:
+```
+sudo docker pull busybox
+```
