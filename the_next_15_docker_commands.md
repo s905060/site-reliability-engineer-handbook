@@ -111,3 +111,21 @@ Removing one or more images can be achieved using the rmi command. The syntax is
 docker rmi image
 ```
 An image can have multiple tags linked to it. On deletion of an image, you should make sure all tags are removed to avoid errors. The following image shows an example usage of the rmi command.
+
+wait:
+
+Docker provides a simple wait command to print the exit code only after the container exits.
+
+load:
+
+Load an image or a repository in tar form to STDIN, which can be achieved using the command docker load.
+
+This screenshot shows loading the app_box.tar file to the STDIN.
+
+save:
+
+Similar to load, an image can be saved as tar and sent to the STDOUT. This can be done using the save command
+```
+docker save image
+```
+A simple illustration for this is:
