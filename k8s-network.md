@@ -28,3 +28,6 @@ OpenVSwitch is a somewhat more mature but also complicated way to build an overl
 Weave is yet another way to build an overlay network, primarily aiming at Docker integration.
 6. Calico
 Calico uses BGP to enable real container IPs.
+
+### Kubernetes OpenVSwitch GRE/VxLAN networking
+This document describes how OpenVSwitch is used to setup networking between pods across nodes. The tunnel type could be GRE or VxLAN. VxLAN is preferable when large scale isolation needs to be performed within the network.
