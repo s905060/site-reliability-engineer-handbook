@@ -76,3 +76,13 @@ docker cp container:path hostpath.
 ```
 This image depicts the working of the cp command.
 
+### login:
+
+A simple command to login the Docker registry server is Docker login with the following syntax:
+```
+docker login [options] [server]
+```
+To login a self-hosted registry use the command
+```
+docker login localhost:8080
+```
