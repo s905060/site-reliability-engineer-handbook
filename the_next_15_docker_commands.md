@@ -98,3 +98,9 @@ The syntax for inspect is
 ```
 docker inspect container/image
 ```
+kill:
+
+The container’s main process is killed by sending the SIGKILL signal. The syntax is
+```
+docker kill [options] container
+```
