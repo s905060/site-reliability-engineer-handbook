@@ -86,3 +86,15 @@ To login a self-hosted registry use the command
 ```
 docker login localhost:8080
 ```
+### inspect:
+
+Low-level information about containers and images can be collected using the Docker inspect command. Information, including the following, can be gathered using the inspect command:
+
+IP address of an instance
+List of port bindings
+Search for specific port mapping
+Collect configuration details
+The syntax for inspect is
+```
+docker inspect container/image
+```
