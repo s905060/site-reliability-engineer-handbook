@@ -12,3 +12,8 @@ At this point, there are no images or containers. So, let’s create one by pull
 ```
 sudo docker pull busybox
 ```
+
+At this point, there are no images or containers. So, let’s create one by pulling a pre-built image using the command:
+```
+sudo docker pull busybox
+```
