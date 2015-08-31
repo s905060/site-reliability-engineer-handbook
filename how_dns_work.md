@@ -12,3 +12,5 @@ and passes the hostname to the client side of the DNS application.
 the hostname.
 5. Once the browser receives the IP address from DNS, it can initiate a TCP con-
 nection to the HTTP server process located at port 80 at that IP address.
+
+![](Screen Shot 2015-08-31 at 3.57.55 PM.png)
