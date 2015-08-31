@@ -16,7 +16,7 @@ Kubernetes imposes some fundamental requirements on any networking implementatio
 
 * The IP that a container sees itself as is the same IP that others see it as.
 
-How to achieve this
+How to achieve this:
 1. Google Compute Engine (GCE)
 2. L2 networks and linux bridging
 Four ways to connect a docker container to a local network
