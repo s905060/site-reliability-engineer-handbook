@@ -1,5 +1,9 @@
 # K8S-Network
 
+![](890.jpg)
+
+![](3066635775.png)
+
 ![](Screen Shot 2015-08-30 at 9.57.44 PM.png)
 
 1. Highly-coupled container-to-container communications.
