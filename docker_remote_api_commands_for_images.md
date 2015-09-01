@@ -60,3 +60,10 @@ To search for an image, use:
 ```
 GET /images/search
 ```
+
+### History
+
+To view an image’s history, use:
+```
+GET /images/(name)/history
+```
