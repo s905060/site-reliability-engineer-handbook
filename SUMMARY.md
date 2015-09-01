@@ -58,6 +58,7 @@
    * [How SMTP work](how_smtp_work.md)
    * [How DNS work](how_dns_work.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
+   * When do DNS queries use TCP instead of UDP?
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
