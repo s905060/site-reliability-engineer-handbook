@@ -80,4 +80,5 @@ GET /v1/repositories/(repo_name)/images
 ```
 PUT /v1/repositories/(repo_name)/auth
 ```
+
 Now, let’s list the commands specific to user repositories. The major difference between library-specific and user-specific commands is the use of namespace.
