@@ -105,3 +105,11 @@ Verify a user login using the command:
 ```
 GET /v1/users
 ```
+Create a new user executing the command:
+```
+POST /v1/users
+```
+Update user details:
+```
+PUT /v1/users/(username)/
+```
