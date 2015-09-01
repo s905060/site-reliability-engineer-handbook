@@ -21,3 +21,18 @@ stock_insert_index_markerRole #1 -- Index: The index is responsible for and main
 * Authentication service
 
 * Tokenization
+
+It also resolves longer URLs for easier use and authenticates owners to repositories.
+
+**Role #2 -- Registry:** The registry houses the images and graphs for the repositories. However, it does not have a local database and provides no user authentication. Database support is provided by S3, cloud files and local FS. Furthermore, the authentication is taken care of by the Index Auth service using tokens. Registries can be of different types. Let’s analyze a few of them:
+
+1. **Sponsor Registry:** A third-party registry for use by its customers and the #Docker community.
+
+2. **Mirror Registry:** A third-party registry for use by only its customers.
+
+3. **Vendor Registry:** A registry provided by a vendor who distributes #Docker images.
+
+4. **Private Registry:** A registry operated by a private entity with a firewall and additional layers of security.
+
+**clientRole #3** -- Registry Client: #Docker acts as the registry client that maintains push and pull, as well as client authorizations.
+
