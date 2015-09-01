@@ -67,3 +67,19 @@ ENTRYPOINT [‘executable’, ‘param1’,’param2’]
 ```
 ENTRYPOINT command param1 param2
 ```
+7. WORKDIR: Working directory for the RUN, CMD and ENTRYPOINT instructions can be set using the WORKDIR.
+```
+Syntax: WORKDIR /path/to/workdir
+```
+8. ENV: Set environment variables using the ENV instruction. They come as key value pairs and increases the flexibility of running programs.
+```
+Syntax: ENV <key> <value>
+```
+9. USER: Set a UID to be be used when the image is running.
+```
+Syntax: USER <uid>
+```
+10. VOLUME: Enable access from a container to a directory on the host machine.
+```
+Syntax:VOLUME [‘/data’]
+```
