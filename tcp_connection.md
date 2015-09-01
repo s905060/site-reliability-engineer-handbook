@@ -21,3 +21,5 @@ Now finally machine 1 Acknowledges Machine 2's initial sequence Number and its A
 * Reliable data transfer service. The communicating processes can rely on TCP to deliver all data sent without error and in the proper order. When one side of the application passes a stream of bytes into a socket, it can count on TCP to deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.
 
 TCP also includes a congestion-control mechanism, a service for the general welfare of the Internet rather than for the direct benefit of the communicating processes. The TCP congestion-control mechanism throttles a sending process (client or server) when the network is congested between sender and receiver. As we will see in Chapter 3, TCP congestion control also attempts to limit each TCP connection to its fair share of network bandwidth.
+
+TCP congestion control prevents any one TCP con- nection from swamping the links and routers between communicating hosts with an excessive amount of traffic. 
