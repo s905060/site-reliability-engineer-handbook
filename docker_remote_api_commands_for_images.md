@@ -53,3 +53,10 @@ To tag an image, use:
 ```
 POST /images/(name)/tag
 ```
+
+### Search an Image
+
+To search for an image, use:
+```
+GET /images/search
+```
