@@ -12,3 +12,12 @@ Images can be created in one of the following ways:
 POST /images/create
 ```
 A sample request is shown in this screenshot.
+
+### Create an Image from a Container
+
+To create an image from the container’s commits, use:
+```
+POST /commit
+```
+
+A sample request is in this screenshot.
