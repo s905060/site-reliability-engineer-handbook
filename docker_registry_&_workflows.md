@@ -36,3 +36,24 @@ It also resolves longer URLs for easier use and authenticates owners to reposito
 
 **clientRole #3** -- Registry Client: #Docker acts as the registry client that maintains push and pull, as well as client authorizations.
 
+Docker Registry in Action
+
+Now, let’s discuss five scenarios to better comprehend the working of #Docker Registry. Scenario A: A user wants to pull or download an image. The steps that are involved are as follows:
+
+Step 1: The user places a request to the index to download the image.
+
+Step 2: The index, in response, returns three pertinent pieces of information:
+
+1. The registry in which the image is located
+
+2. Checksums for the image, including all layers
+
+3. Token for authorization purposes
+
+Note: Tokens are only sent when the request has the X-Docker-Token in the header. While private repositories need basic authentication, it’s not mandatory for public repositories.
+
+Step 3: The user now contacts the registry with the token that was returned in the response. The registry is wholly responsible for the images. It stores the base image and the inherited layers.
+
+Step 4: The registry now confirms with the Index that the token is authorized.
+
+Step 5: The index now sends a “true” or “false” to the registry, thereby allowing the user to download the needed image
