@@ -57,3 +57,38 @@ Step 3: The user now contacts the registry with the token that was returned in t
 Step 4: The registry now confirms with the Index that the token is authorized.
 
 Step 5: The index now sends a “true” or “false” to the registry, thereby allowing the user to download the needed image
+
+![](pull.png)
+
+Scenario B: The user wants to push an image to the registry. The steps involved are as follows:
+
+Step 1: The user contacts the index with credentials requesting allocation of the repository name.
+
+Step 2: On successful authentication and namespace availability, the repository name is allocated. A temporary token is returned in response.
+
+Step 3: The image, along with the token, is pushed to the registry.
+
+Step 4: The registry confirms the token with the index, then starts reading the pushed stream after validation by the index.
+
+Step 5: The index is then updated with the image checksums by #Docker.
+
+![](push.png)
+
+Scenario C: The user wants to delete an image from the index or registry.
+
+Step 1: The index receives a signal from #Docker to delete the repository.
+
+Step 2: If the index validates the repository, it deletes the repository and returns a temporary token.
+
+Step 3: The registry now receives the delete signal, along with the token.
+
+Step 4: The token is verified with the index, and the registry deletes the repository and all related information.
+
+Step 5: #Docker now intimates the index about the deletion, and the index removes all records of the repository.
+
+![](delete.png)
+
+Scenario D: The user wishes to use the registry in standalone mode without the index. Use of the registry, without the index, which is under the full control of #Docker, is best suited for storing images on private networks. The registry spins up in a special mode which restricts communication with the #Docker index. All security and authentication needs to be taken care of by the user.
+
+Scenario E: The user wishes to use the registry in standalone mode with the index. In this scenario, a custom index is created to store and access images in a private network. However, the overhead is to inform #Docker about the custom index. #Docker provides an interesting concept of chaining registries, which in turn, enables load balancing and allocation of a specific registry for specific requests. In the next Docker Tutorial Series post, we will discuss how to use the #Docker Registry API for each of the above-mentioned scenarios, as well as delve into Docker Security.
+
