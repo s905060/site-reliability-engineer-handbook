@@ -36,7 +36,7 @@ It also resolves longer URLs for easier use and authenticates owners to reposito
 
 **clientRole #3** -- Registry Client: #Docker acts as the registry client that maintains push and pull, as well as client authorizations.
 
-Docker Registry in Action
+### Docker Registry in Action
 
 Now, let’s discuss five scenarios to better comprehend the working of #Docker Registry. Scenario A: A user wants to pull or download an image. The steps that are involved are as follows:
 
@@ -60,7 +60,7 @@ Step 5: The index now sends a “true” or “false” to the registry, thereby
 
 ![](pull.png)
 
-Scenario B: The user wants to push an image to the registry. The steps involved are as follows:
+**Scenario B:** The user wants to push an image to the registry. The steps involved are as follows:
 
 Step 1: The user contacts the index with credentials requesting allocation of the repository name.
 
@@ -74,7 +74,7 @@ Step 5: The index is then updated with the image checksums by #Docker.
 
 ![](push.png)
 
-Scenario C: The user wants to delete an image from the index or registry.
+**Scenario C:** The user wants to delete an image from the index or registry.
 
 Step 1: The index receives a signal from #Docker to delete the repository.
 
@@ -88,7 +88,7 @@ Step 5: #Docker now intimates the index about the deletion, and the index remove
 
 ![](delete.png)
 
-Scenario D: The user wishes to use the registry in standalone mode without the index. Use of the registry, without the index, which is under the full control of #Docker, is best suited for storing images on private networks. The registry spins up in a special mode which restricts communication with the #Docker index. All security and authentication needs to be taken care of by the user.
+**Scenario D:** The user wishes to use the registry in standalone mode without the index. Use of the registry, without the index, which is under the full control of #Docker, is best suited for storing images on private networks. The registry spins up in a special mode which restricts communication with the #Docker index. All security and authentication needs to be taken care of by the user.
 
-Scenario E: The user wishes to use the registry in standalone mode with the index. In this scenario, a custom index is created to store and access images in a private network. However, the overhead is to inform #Docker about the custom index. #Docker provides an interesting concept of chaining registries, which in turn, enables load balancing and allocation of a specific registry for specific requests. In the next Docker Tutorial Series post, we will discuss how to use the #Docker Registry API for each of the above-mentioned scenarios, as well as delve into Docker Security.
+**Scenario E:** The user wishes to use the registry in standalone mode with the index. In this scenario, a custom index is created to store and access images in a private network. However, the overhead is to inform #Docker about the custom index. #Docker provides an interesting concept of chaining registries, which in turn, enables load balancing and allocation of a specific registry for specific requests. In the next Docker Tutorial Series post, we will discuss how to use the #Docker Registry API for each of the above-mentioned scenarios, as well as delve into Docker Security.
 
