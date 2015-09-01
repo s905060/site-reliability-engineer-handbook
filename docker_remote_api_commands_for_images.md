@@ -22,5 +22,6 @@ POST /commit
 ### List of Images
 
 To obtain the list of images, use:
-
+```
 GET /images/json
+```
