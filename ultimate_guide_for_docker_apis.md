@@ -45,3 +45,7 @@ GET /v1/repositories/(namespace)/(repository)/tags/(tag*)
 ```
 DELETE /v1/repositories/(namespace)/(repository)/tags/(tag*)
 ```
+**Status check of registry:**
+```
+GET /v1/_ping
+```
