@@ -25,3 +25,10 @@ To obtain the list of images, use:
 ```
 GET /images/json
 ```
+
+### Insert a File
+
+To insert a file at a specific path, use:
+```
+POST /images/(name)/insert
+```
