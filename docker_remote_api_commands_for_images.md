@@ -39,3 +39,10 @@ To delete an image by name, use:
 ```
 DELETE /images/(name)
 ```
+
+### Registry Push
+
+To push an image to the registry, use:
+```
+POST /images/(name)/push
+```
