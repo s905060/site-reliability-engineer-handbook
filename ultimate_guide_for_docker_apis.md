@@ -24,3 +24,16 @@ GET /v1/images/(image_id)/layer
 ```
 PUT /v1/images/(image_id)/layer
 ```
+
+**Retrieve an image:**
+```
+GET /v1/images/(image_id)/json
+```
+**Retrieve roots of an image:**
+```
+GET /v1/images/(image_id)/ancestry
+```
+**Obtain all tags or specific tag of a repository:**
+```
+GET /v1/repositories/(namespace)/(repository)/tags
+```
