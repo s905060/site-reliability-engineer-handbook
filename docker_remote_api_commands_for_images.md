@@ -32,3 +32,10 @@ To insert a file at a specific path, use:
 ```
 POST /images/(name)/insert
 ```
+
+### Delete Image
+
+To delete an image by name, use:
+```
+DELETE /images/(name)
+```
