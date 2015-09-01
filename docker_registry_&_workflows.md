@@ -10,7 +10,7 @@ In the previous #Docker Tutorial Series post, we discussed the importance of Doc
 
 4. Configure webhooks after a successful push has been made.
 
-#Docker Registry has three roles to play: the index, registry and registry client.
+### Docker Registry has three roles to play: the index, registry and registry client.
 
 stock_insert_index_markerRole #1 -- Index: The index is responsible for and maintains information about user accounts, checksums of the images, and public namespaces. It maintains such information using the following components:
 
