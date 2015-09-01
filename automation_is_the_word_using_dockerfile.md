@@ -83,3 +83,18 @@ Syntax: USER <uid>
 ```
 Syntax:VOLUME [‘/data’]
 ```
+DockerFile Best Practices
+
+As with any use of an application, there is always a best practices to follow. You can read more about DockerFile best practices here.
+
+Following is a list of basic best practices for DockerFile we have already compiled for you:
+
+A. Keep common instructions like MAINTAINER and update commands right on top of the DockerFile;
+
+B. Use human readable tags while building the images to better manage images;
+
+C. Avoid mapping the public port in a DockerFile;
+
+D. As a best practice, use array syntax for CMD and ENTRYPOINT.
+
+In the next post, let's discuss Docker Registry and Workflows. 
