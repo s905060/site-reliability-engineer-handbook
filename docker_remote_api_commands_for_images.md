@@ -46,3 +46,10 @@ To push an image to the registry, use:
 ```
 POST /images/(name)/push
 ```
+
+### Tag Image
+
+To tag an image, use:
+```
+POST /images/(name)/tag
+```
