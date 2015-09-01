@@ -82,3 +82,26 @@ PUT /v1/repositories/(repo_name)/auth
 ```
 
 Now, let’s list the commands specific to user repositories. The major difference between library-specific and user-specific commands is the use of namespace.
+
+1. Create a new user repository - A new user repository can be created using the command
+```
+PUT /v1/repositories/(namespace)/(repo_name)/
+```
+2. Delete existing repository - Delete the user repository using the command
+```
+DELETE /v1/repositories/(namespace)/(repo_name)/
+```
+3. Update images - Update user repository images with
+```
+PUT /v1/repositories/(namespace)/(repo_name)/images
+```
+4. Get images from a repository - To fetch images from an existing repository, execute the following command:
+```
+GET /v1/repositories/(namespace)/(repo_name)/images
+```
+There are a few other simple commands you can use. They are:
+
+Verify a user login using the command:
+```
+GET /v1/users
+```
