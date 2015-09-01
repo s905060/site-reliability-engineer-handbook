@@ -89,12 +89,14 @@ As with any use of an application, there is always a best practices to follow. Y
 
 Following is a list of basic best practices for DockerFile we have already compiled for you:
 
-A. Keep common instructions like MAINTAINER and update commands right on top of the DockerFile;
 
-B. Use human readable tags while building the images to better manage images;
+* Keep common instructions like MAINTAINER and update commands right on top of the DockerFile;
 
-C. Avoid mapping the public port in a DockerFile;
+* Use human readable tags while building the images to better manage images;
 
-D. As a best practice, use array syntax for CMD and ENTRYPOINT.
+* Avoid mapping the public port in a DockerFile;
+
+* As a best practice, use array syntax for CMD and ENTRYPOINT.
+
 
 In the next post, let's discuss Docker Registry and Workflows. 
