@@ -24,3 +24,30 @@ FROM <image name>
 FROM ubuntu
 ```
 tells us that the new image will be created from the base Ubuntu image.
+
+Following the “FROM” command, DockerFile offers several other commands that ease automation. The order of the commands in the simple text file, or DockerFile, is the order in which it is executed.
+
+Let’s walk through some interesting DockerFile commands.
+
+1. MAINTAINER: Set an author field for the image using this instruction. The simple and obvious syntax is:
+```
+MAINTAINER <author name>
+```
+2. RUN: Execute a command in a shell or exec form. The RUN instruction adds a new layer on top of the newly created image. The committed results are then used for the next instruction in the DockerFile.
+```
+Syntax: RUN <command>
+```
+3. ADD: Copy files from one location to another using the ADD instruction. It takes two arguments <source> and <destination>. The destination is a path in the container. The source can be either a URL or a file in the context of the launch config.
+```
+<em><strong>Syntax:</strong></em> ADD &lt;src&gt; &lt;destination&gt;
+```
+4. CMD: Defaults for an executing container are provided using the CMD command. DockerFile allows usage of the CMD instruction only once. Multiple usage of CMD nullifies all previous CMD instructions. CMD comes in three flavours:
+```
+Syntax:CMD ["executable","param1","param2"]
+```
+```
+CMD ["param1","param2"]
+```
+```
+CMD command param1 param2
+```
