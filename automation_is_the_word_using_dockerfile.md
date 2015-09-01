@@ -51,3 +51,19 @@ CMD ["param1","param2"]
 ```
 CMD command param1 param2
 ```
+5. EXPOSE: Specify the port on which the container will be listening at runtime by running the EXPOSE instruction.
+```
+Syntax: EXPOSE <port>;
+```
+6. ENTRYPOINT: Configure a container to run as an executable, which means a specific application can be set as default and run every time a container is created using the image. This also means that the image will be used only to run and target the specific application each time it is called.
+
+Similar to CMD, #Docker allows only one ENTRYPOINT and multiple ENTRYPOINT instructions nullifies all of them, executing the last ENTRYPOINT instruction.
+```
+Syntax: Comes in two flavours
+```
+```
+ENTRYPOINT [‘executable’, ‘param1’,’param2’]
+```
+```
+ENTRYPOINT command param1 param2
+```
