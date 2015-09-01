@@ -83,7 +83,8 @@ Syntax: USER <uid>
 ```
 Syntax:VOLUME [‘/data’]
 ```
-DockerFile Best Practices
+
+### DockerFile Best Practices
 
 As with any use of an application, there is always a best practices to follow. You can read more about DockerFile best practices here.
 
