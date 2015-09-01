@@ -11,3 +11,16 @@ The first item worth noting is that Docker provides the following APIs, making i
 
 Specifically to this post, let’s discuss Docker Registry API and Docker Hub API.
 
+### Docker Registry API
+
+Docker Registry API is a REST API for the Docker Registry, which eases the storage of images and repositories. The API does not have access to user accounts or its authorization. Read part four of the Docker Tutorial Series to learn more about registry types.
+
+**Extract image layer:**
+```
+GET /v1/images/(image_id)/layer
+```
+
+**Insert image layer:**
+```
+PUT /v1/images/(image_id)/layer
+```
