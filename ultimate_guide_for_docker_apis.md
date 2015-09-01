@@ -37,3 +37,7 @@ GET /v1/images/(image_id)/ancestry
 ```
 GET /v1/repositories/(namespace)/(repository)/tags
 ```
+or
+```
+GET /v1/repositories/(namespace)/(repository)/tags/(tag*)
+```
