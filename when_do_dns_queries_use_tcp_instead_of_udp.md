@@ -7,4 +7,3 @@ The maximum size was originally 512 bytes but there is an extension to the DNS p
 DNSSEC responses are usually larger than the maximum UDP size.
 
 Transfer requests are usually larger than the maximum UDP size and hence will also be done over TCP.
-
