@@ -113,3 +113,4 @@ Update user details:
 ```
 PUT /v1/users/(username)/
 ```
+Now that we’ve taken you on the first leg of this ultimate journey about Docker APIs, look for the second leg about Docker OAuth and Remote APIs in an upcoming post as part of this on-going Docker Tutorial Series.
