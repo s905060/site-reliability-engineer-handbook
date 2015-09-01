@@ -67,3 +67,10 @@ To view an image’s history, use:
 ```
 GET /images/(name)/history
 ```
+
+### Build an Image
+
+An image can be built with DockerFile using:
+```
+POST /build
+```
