@@ -41,3 +41,7 @@ or
 ```
 GET /v1/repositories/(namespace)/(repository)/tags/(tag*)
 ```
+**Delete a tag:**
+```
+DELETE /v1/repositories/(namespace)/(repository)/tags/(tag*)
+```
