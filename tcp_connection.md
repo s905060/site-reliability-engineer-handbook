@@ -1,5 +1,7 @@
 # TCP connection
 
+![](300px-Tcp-handshake.png)
+
 * Step1:
 Machine 1 wants to initiate a connection with machine 2, So machine 1 sends a segment with SYN(Synchronize Sequence Number). This segment will inform the machine 2 that Machine 1 would like to start a communication with Machine 2 and informs machine 2 what sequence number it will start its segments with.
 
