@@ -90,3 +90,4 @@ USER
 WORKDIR
 ONBUILD
 ```
+docker run --name twilio --restart=always -p 8080:80 -v /var/www:/var/www -d s905060/centos-nginx-php-fpm:latest
