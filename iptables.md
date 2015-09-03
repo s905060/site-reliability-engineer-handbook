@@ -58,3 +58,10 @@ iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state
 --state ESTABLISHED -j ACCEPT
 ```
 In the above example, instead of /24, you can also use the full subnet mask. i.e “192.168.100.0/255.255.255.0′′.
+
+### Iptables backup and restore
+```
+service iptables save
+iptables-save > /etc/iptables.save
+iptables-restore <  /etc/sysconfig/iptables
+```
