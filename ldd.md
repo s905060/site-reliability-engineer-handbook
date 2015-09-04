@@ -68,3 +68,8 @@ Lets take an example:
 $ ldd -r assert.o
 	not a dynamic executable
 ```
+As can be seen in the output, a clear message is displayed stating that the supplied file is not a dynamic executable.
+
+* ldd requires full path to the dynamic executable
+
+Till now I have given examples of my custom executables and shared libraries. Lets try ldd on a standard command line executable like ‘ls':
