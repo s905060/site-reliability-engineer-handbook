@@ -5,6 +5,7 @@
 Every HTTP transaction has a status code sent back by the server to define how the server handled the transaction. Here is a list of the most common ones.
 
 List of Common HTTP Status Codes
+
 1. 200 OK
 2. 300 Multiple Choices
 3. 301 Moved Permanently
