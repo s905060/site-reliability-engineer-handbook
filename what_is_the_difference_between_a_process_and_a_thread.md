@@ -2,19 +2,19 @@
 
 The major difference between threads and processes is:
 
-Threads share the address space of the process that created it; processes have their own address space.
+1. Threads share the address space of the process that created it; processes have their own address space.
 
-Threads have direct access to the data segment of its process; processes have their own copy of the data segment of the parent process.
+2. Threads have direct access to the data segment of its process; processes have their own copy of the data segment of the parent process.
 
-Threads can directly communicate with other threads of its process; processes must use interprocess communication to communicate with sibling processes.
+3. Threads can directly communicate with other threads of its process; processes must use interprocess communication to communicate with sibling processes.
 
-Threads have almost no overhead; processes have considerable overhead.
+4. Threads have almost no overhead; processes have considerable overhead.
 
-New threads are easily created; new processes require duplication of the parent process.
+5. New threads are easily created; new processes require duplication of the parent process.
 
-Threads can exercise considerable control over threads of the same process; processes can only exercise control over child processes.
+6. Threads can exercise considerable control over threads of the same process; processes can only exercise control over child processes.
 
-Changes to the main thread (cancellation, priority change, etc.) may affect the behavior of the other threads of the process; changes to the parent process does not affect child processes.
+7. Changes to the main thread (cancellation, priority change, etc.) may affect the behavior of the other threads of the process; changes to the parent process does not affect child processes.
 
 ### Process
 Each process provides the resources needed to execute a program. A process has a virtual address space, executable code, open handles to system objects, a security context, a unique process identifier, environment variables, a priority class, minimum and maximum working set sizes, and at least one thread of execution. Each process is started with a single thread, often called the primary thread, but can create additional threads from any of its threads.
