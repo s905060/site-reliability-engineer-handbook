@@ -163,6 +163,7 @@
    * [DD](dd.md)
    * [BC](bc.md)
    * [LDD](ldd.md)
+   * getcap, setcap and file capabilities
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
