@@ -7,6 +7,7 @@ $nmap
 The Nmap tool offers various methods to scan a system. In this example, I am performing a scan using hostname as server2.tecmint.com to find out all open ports, services and MAC address on the system.
 
 Scan using Hostname
+
 ```
 [root@server1 ~]# nmap server2.tecmint.com
 
@@ -25,7 +26,9 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 1 IP address (1 host up) scanned in 0.415 seconds
 You have new mail in /var/spool/mail/root
 ```
+
 Scan using IP Address
+
 ```
 [root@server1 ~]# nmap 192.168.0.101
 
@@ -44,8 +47,10 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 1 IP address (1 host up) scanned in 0.465 seconds
 You have new mail in /var/spool/mail/root
 ```
+
 2. Scan using “-v” option
 You can see that the below command with “-v” option is giving more detailed information about the remote machine.
+
 ```
 [root@server1 ~]# nmap -v server2.tecmint.com
 
@@ -75,9 +80,11 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 1 IP address (1 host up) scanned in 0.485 seconds
                Raw packets sent: 1681 (73.962KB) | Rcvd: 1681 (77.322KB)
 ```
+
 Scan Multiple Hosts
 
 You can scan multiple hosts by simply writing their IP addresses or hostnames with Nmap.
+
 ```
 [root@server1 ~]# nmap 192.168.0.101 192.168.0.102 192.168.0.103
 
@@ -97,6 +104,7 @@ Nmap finished: 3 IP addresses (1 host up) scanned in 0.580 seconds
 
 4. Scan a whole Subnet
 You can scan a whole subnet or IP range with Nmap by providing * wildcard with it.
+
 ```
 [root@server1 ~]# nmap 192.168.0.*
 
@@ -122,10 +130,12 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 256 IP addresses (2 hosts up) scanned in 5.550 seconds
 You have new mail in /var/spool/mail/root
 ```
+
 On above output you can see that nmap scanned a whole subnet and gave the information about those hosts which are Up in the Network.
 
 5. Scan Multiple Servers using last octet of IP address
 You can perform scans on multiple IP address by simple specifying last octet of IP address. For example, here I performing a scan on IP addresses 192.168.0.101, 192.168.0.102 and 192.168.0.103.
+
 ```
 [root@server1 ~]# nmap 192.168.0.101,102,103
 
@@ -157,7 +167,9 @@ localhost
 server2.tecmint.com
 192.168.0.101
 ```
+
 Next, run the following command with “iL” option with nmap command to scan all listed IP address in the file.
+
 ```
 [root@server1 ~]# nmap -iL nmaptest.txt
 
@@ -195,8 +207,10 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 
 Nmap finished: 3 IP addresses (3 hosts up) scanned in 2.047 seconds
 ```
+
 7. Scan an IP Address Range
 You can specify an IP range while performing scan with Nmap.
+
 ```
 [root@server1 ~]# nmap 192.168.0.101-110
 
@@ -217,6 +231,7 @@ Nmap finished: 10 IP addresses (1 host up) scanned in 0.542 seconds
 
 8. Scan Network Excluding Remote Hosts
 You can exclude some hosts while performing a full network scan or when you are scanning with wildcards with “–exclude” option.
+
 ```
 [root@server1 ~]# nmap 192.168.0.* --exclude 192.168.0.100
 
@@ -271,10 +286,12 @@ Uptime 0.169 days (since Mon Nov 11 12:22:15 2013)
 Nmap finished: 1 IP address (1 host up) scanned in 22.271 seconds
 You have new mail in /var/spool/mail/root
 ```
+
 In above Output, you can see that nmap is came up with TCP/IP fingerprint of the OS running on remote hosts and being more specific about the port and services running on the remote hosts.
 
 10. Enable OS Detection with Nmap
 Use the option “-O” and “-osscan-guess” also helps to discover OS information.
+
 ```
 [root@server1 ~]# nmap -O server2.tecmint.com
 
@@ -311,6 +328,7 @@ You have new mail in /var/spool/mail/root
 
 11. Scan a Host to Detect Firewall
 The below command will perform a scan on a remote host to detect if any packet filters or Firewall is used by host.
+
 ```
 [root@server1 ~]# nmap -sA 192.168.0.101
 
@@ -324,6 +342,7 @@ You have new mail in /var/spool/mail/root
 
 12. Scan a Host to check its protected by Firewall
 To scan a host if it is protected by any packet filtering software or Firewalls.
+
 ```
 [root@server1 ~]# nmap -PN 192.168.0.101
 
@@ -341,8 +360,10 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 
 Nmap finished: 1 IP address (1 host up) scanned in 0.399 seconds
 ```
+
 13. Find out Live hosts in a Network
 With the help of “-sP” option we can simply check which hosts are live and up in Network, with this option nmap skips port detection and other things.
+
 ```
 [root@server1 ~]# nmap -sP 192.168.0.*
 
@@ -384,6 +405,7 @@ You have new mail in /var/spool/mail/root
 
 16. Scan Ports Consecutively
 Use the “-r” flag to don’t randomize.
+
 ```
 [root@server1 ~]# nmap -r 192.168.0.101
 
