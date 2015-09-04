@@ -20,3 +20,24 @@ $ ldd libshared.so
 	libc.so.6 => /lib/libc.so.6 (0x00007ff1df55a000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007ff1dfafe000)
 ```
+
+In the above examples we tried to run the ldd command on an executable ‘execv’ and a shared library ‘libshared.so’ and as you can see that the ldd command output provided the shared library dependencies.
+
+2. Produce more information in output
+
+Use -v option for this.
+
+Lets take an example :
+```
+$ ldd -v libshared.so
+	linux-vdso.so.1 =>  (0x00007fff627a8000)
+	libc.so.6 => /lib/libc.so.6 (0x00007f1778f70000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f1779514000)
+
+	Version information:
+	./libshared.so:
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+	/lib/libc.so.6:
+		ld-linux-x86-64.so.2 (GLIBC_PRIVATE) => /lib64/ld-linux-x86-64.so.2
+		ld-linux-x86-64.so.2 (GLIBC_2.3) => /lib64/ld-linux-x86-64.so.2
+```
