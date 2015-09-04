@@ -157,3 +157,41 @@ localhost
 server2.tecmint.com
 192.168.0.101
 ```
+Next, run the following command with “iL” option with nmap command to scan all listed IP address in the file.
+```
+[root@server1 ~]# nmap -iL nmaptest.txt
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-18 10:58 EST
+Interesting ports on localhost.localdomain (127.0.0.1):
+Not shown: 1675 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+25/tcp  open  smtp
+111/tcp open  rpcbind
+631/tcp open  ipp
+857/tcp open  unknown
+
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+958/tcp  open  unknown
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+958/tcp  open  unknown
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Nmap finished: 3 IP addresses (3 hosts up) scanned in 2.047 seconds
+```
