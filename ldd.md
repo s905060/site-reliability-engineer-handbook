@@ -94,3 +94,19 @@ $ ldd /bin/ls
 	libdl.so.2 => /lib/libdl.so.2 (0x00007fa1bcba9000)
 	libattr.so.1 => /lib/libattr.so.1 (0x00007fa1bc9a4000)
 ```
+
+So with absolute path, ldd worked fine.
+
+
+Syntax and Options
+```
+ldd [OPTION]... FILE...
+```
+```
+Short Option	Long Option	Option Description
+-v	–verbose	Print all information, including e.g. symbol versioning information.
+-d	–data-relocs	Perform relocations and report any missing objects (ELF only).
+-r	–function-relocs	Perform relocations for both data objects and functions, and report any missing objects or functions (ELF only).
+-u	–unused	Print unused direct dependencies.
+–help	Usage information.
+```
