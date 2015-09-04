@@ -25,7 +25,7 @@ Subnet:  128.6.34.160 / 255.255.255.224
 Subnet:  128.6.34.192 / 255.255.255.224
 
 Subnet:  128.6.34.224 / 255.255.255.224
+```
 
 * Max number of hosts on each subnet: 30 = 32 - 2
 * The gateway address should be set within each subnet. 
-```
