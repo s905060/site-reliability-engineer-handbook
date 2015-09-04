@@ -144,3 +144,16 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 3 IP addresses (1 host up) scanned in 0.552 seconds
 You have new mail in /var/spool/mail/root
 ```
+
+6. Scan list of Hosts from a File
+If you have more hosts to scan and all host details are written in a file , you can directly ask nmap to read that file and perform scans. Let’s see how to do that.
+
+Create a text file called “nmaptest.txt” and define all the IP addresses or hostname of the server that you want to do a scan.
+
+```
+[root@server1 ~]# cat > nmaptest.txt
+
+localhost
+server2.tecmint.com
+192.168.0.101
+```
