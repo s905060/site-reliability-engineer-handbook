@@ -41,3 +41,11 @@ $ ldd -v libshared.so
 		ld-linux-x86-64.so.2 (GLIBC_PRIVATE) => /lib64/ld-linux-x86-64.so.2
 		ld-linux-x86-64.so.2 (GLIBC_2.3) => /lib64/ld-linux-x86-64.so.2
 ```
+
+So we see that along with the dependency information, a whole lot of information related to symbol versions etc is produced in output.
+
+3. To display unused direct dependencies
+
+Use -u option for this.
+
+Lets take an example :
