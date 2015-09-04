@@ -341,3 +341,43 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 
 Nmap finished: 1 IP address (1 host up) scanned in 0.399 seconds
 ```
+13. Find out Live hosts in a Network
+With the help of “-sP” option we can simply check which hosts are live and up in Network, with this option nmap skips port detection and other things.
+```
+[root@server1 ~]# nmap -sP 192.168.0.*
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-18 11:01 EST
+Host server1.tecmint.com (192.168.0.100) appears to be up.
+Host server2.tecmint.com (192.168.0.101) appears to be up.
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+Nmap finished: 256 IP addresses (2 hosts up) scanned in 5.109 seconds
+```
+
+14. Perform a Fast Scan
+You can perform a fast scan with “-F” option to scans for the ports listed in the nmap-services files and leaves all other ports.
+```
+[root@server1 ~]# nmap -F 192.168.0.101
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:47 EST
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1234 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Nmap finished: 1 IP address (1 host up) scanned in 0.322 seconds
+```
+
+15. Find Nmap version
+You can find out Nmap version you are running on your machine with “-V” option.
+
+```
+[root@server1 ~]# nmap -V
+
+Nmap version 4.11 ( http://www.insecure.org/nmap/ )
+You have new mail in /var/spool/mail/root
+```
