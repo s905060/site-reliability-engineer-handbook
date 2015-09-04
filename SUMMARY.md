@@ -30,6 +30,7 @@
    * [Control groups](control_groups.md)
    * [Stack vs Heap](stack_vs_heap.md)
    * [What is the difference between a process and a thread](what_is_the_difference_between_a_process_and_a_thread.md)
+   * The Differences Between MBR and GPT
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
