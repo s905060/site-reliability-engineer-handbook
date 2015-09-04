@@ -53,3 +53,17 @@ More info:
 ```
 man cap_from_text
 ```
+
+### Usage
+While capabilities are relatively well known by Linux C programmers (generally used either in kernel for limiting access to resources, either in user space to drop capabilities while still running as root user) - they’re obscure to most non-programmers.
+
+It’s important to know about their existence for forensic purposes, for example - since those programs have a subset of what’s available to a setuid(0) (i.e. root) program.
+
+Here’s some more usage examples:
+
+* Make a chroot wrapper that run as regular user.
+* Have a program that can check for all files on the system without being root (such as a scanner for vulnerable software or root kits).
+* Enable/Disable use of chattr.
+* Program that can handle netfiler and network config without running a root.
+* Create a socket < 1024 without running as root.
+* Use ptrace on all processes as regular user (for example, by setting this to gdb).
