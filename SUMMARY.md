@@ -59,6 +59,7 @@
    * [How DNS work](how_dns_work.md)
    * [When do DNS queries use TCP instead of UDP?](when_do_dns_queries_use_tcp_instead_of_udp.md)
    * [A Day in the Life of a Web Page Request](a_day_in_the_life_of_a_web_page_request.md)
+   * CDN Operation
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
