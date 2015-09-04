@@ -11,5 +11,5 @@ POSIX (/ˈpɒzɪks/ poz-iks), an acronym for Portable Operating System Interface
 | 9 |SIGKILL |Kill | Forced termination; cannot be trapped
 | 15 |SIGTERM |Terminate | Terminate; can be trapped
 | 24 |SIGSTOP |Stop | Pause the process; cannot be trapped
-| 25 |SIGTSTP |Terminal | stop Pause the process; can be
+| 25 |SIGTSTP |Terminal | stop Pause the process; can be trapped
 | 26 |SIGCONT |Continue | Run a stopped process
