@@ -57,7 +57,16 @@ PID TTY      STAT   TIME COMMAND
     * so in this example I would try killing
         * 5030 pts/1 Sl+ 1:29 /usr/lib/mozilla-firefox/
         * 4978 tty1 S 0:00 xterm -e /home/zymos/.icewm/startup M
-            Or
+            
+        Or
+
         * 4986 pts/1 Ss+ 0:00 /bin/sh /home/zymos/.icewm/startu
-Hopefully this will work
-If you need a  single line command that does the work you can try
+* Hopefully this will work
+* If you need a  single line command that does the work you can try
+```
+ps axu | awk '"[Zz] ~ $8 { system(sprintf("kill -HUP %d", $2)); }'
+```
+* This will work in most cases
+    * Check if the zombie process still exists; if so, run the same command but change -HUP to -TERM.
+    * If the zombie is still there, use -9 instead of -HUP or -TERM.
+        * -9 will terminate it for sure but it's considered very bad practice
