@@ -49,3 +49,11 @@ So we see that along with the dependency information, a whole lot of information
 Use -u option for this.
 
 Lets take an example :
+```
+$ ldd -u func
+Unused direct dependencies:
+
+	/usr/lib/libstdc++.so.6
+	/lib/libm.so.6
+	/lib/libgcc_s.so.1
+```
