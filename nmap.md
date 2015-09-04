@@ -381,3 +381,24 @@ You can find out Nmap version you are running on your machine with “-V” opti
 Nmap version 4.11 ( http://www.insecure.org/nmap/ )
 You have new mail in /var/spool/mail/root
 ```
+
+16. Scan Ports Consecutively
+Use the “-r” flag to don’t randomize.
+```
+[root@server1 ~]# nmap -r 192.168.0.101
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:52 EST
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+957/tcp  open  unknown
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Nmap finished: 1 IP address (1 host up) scanned in 0.363 seconds
+
+```
