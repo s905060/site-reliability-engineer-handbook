@@ -14,7 +14,7 @@ And so on.
 
 These are useful when you want to restrict your own processes after performing privileged operations. For example, after setting up chroot and binding to a socket. (However, it’s still more limited than seccomp or SELinux, which are based on system calls instead).
 
-Setting/Getting capabilities from userland
+### Setting/Getting capabilities from userland
 You can force capabilities upon programs using setcap, and query these using getcap.
 
 For example, on many Linux distributions you’ll find ping with cap_net_raw (which allows ping to create raw sockets). This means ping doesn’t need to run as root (via setuid, in general) anymore:
@@ -36,3 +36,20 @@ The “+ep” means you’re adding the capability (“-” would remove it) as 
 
 There are 3 modes:
 
+The “+ep” means you’re adding the capability (“-” would remove it) as Effective and Permitted.
+
+There are 3 modes:
+
+* e: Effective
+This means the capability is “activated”.
+
+* p: Permitted
+This means the capability can be used/is allowed.
+
+* i: Inherited
+The capability is kept by child/subprocesses upon execve() for example.
+
+More info:
+```
+man cap_from_text
+```
