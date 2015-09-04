@@ -5,22 +5,23 @@
 Every HTTP transaction has a status code sent back by the server to define how the server handled the transaction. Here is a list of the most common ones.
 
 List of Common HTTP Status Codes
-200 OK
-300 Multiple Choices
-301 Moved Permanently
-302 Found
-304 Not Modified
-307 Temporary Redirect
-400 Bad Request
-401 Unauthorized
-403 Forbidden
-404 Not Found
-410 Gone
-500 Internal Server Error
-501 Not Implemented
-503 Service Unavailable
-550 Permission denied
-HTTP Status Code - 200 OK
+1. 200 OK
+2. 300 Multiple Choices
+3. 301 Moved Permanently
+4. 302 Found
+5. 304 Not Modified
+6. 307 Temporary Redirect
+7. 400 Bad Request
+8. 401 Unauthorized
+9. 403 Forbidden
+10. 404 Not Found
+11. 410 Gone
+12. 500 Internal Server Error
+13. 501 Not Implemented
+14. 503 Service Unavailable
+15. 550 Permission denied
+
+### HTTP Status Code - 200 OK
 
 The request has succeeded. The information returned with the response is dependent on the method used in the request.
 
