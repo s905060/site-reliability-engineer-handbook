@@ -1,5 +1,7 @@
 # How to subnet: Subnetting calculations and shortcuts
 
+![](Screen Shot 2015-09-04 at 7.20.42 PM.png)
+
 a subnet mask, break down IP address classes and understand binary. If you're wondering how to figure out what subnet mask to use when you need "x" hosts and "x" networks, this tutorial is the perfect read for you. Take the interactive quiz at the bottom of this page to find out how much you've learned.
 
 When you are going to take a Cisco CCNA exam, before the exam starts, write the following information down (public and private class address ranges and then the chart) because it will save you a lot of time and headaches.
