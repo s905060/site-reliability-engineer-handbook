@@ -73,3 +73,24 @@ As can be seen in the output, a clear message is displayed stating that the supp
 * ldd requires full path to the dynamic executable
 
 Till now I have given examples of my custom executables and shared libraries. Lets try ldd on a standard command line executable like ‘ls':
+
+```
+$ ldd ls
+ldd: ./ls: No such file or directory
+```
+
+So we see that ldd complains that it cannot find ‘ls’.
+
+Now lets try with complete path :
+```
+$ ldd /bin/ls
+	linux-vdso.so.1 =>  (0x00007fff16b71000)
+	librt.so.1 => /lib/librt.so.1 (0x00007fa1bd775000)
+	libselinux.so.1 => /lib/libselinux.so.1 (0x00007fa1bd557000)
+	libacl.so.1 => /lib/libacl.so.1 (0x00007fa1bd34e000)
+	libc.so.6 => /lib/libc.so.6 (0x00007fa1bcfcb000)
+	libpthread.so.0 => /lib/libpthread.so.0 (0x00007fa1bcdae000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fa1bd99c000)
+	libdl.so.2 => /lib/libdl.so.2 (0x00007fa1bcba9000)
+	libattr.so.1 => /lib/libattr.so.1 (0x00007fa1bc9a4000)
+```
