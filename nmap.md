@@ -122,3 +122,25 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 256 IP addresses (2 hosts up) scanned in 5.550 seconds
 You have new mail in /var/spool/mail/root
 ```
+On above output you can see that nmap scanned a whole subnet and gave the information about those hosts which are Up in the Network.
+
+5. Scan Multiple Servers using last octet of IP address
+You can perform scans on multiple IP address by simple specifying last octet of IP address. For example, here I performing a scan on IP addresses 192.168.0.101, 192.168.0.102 and 192.168.0.103.
+```
+[root@server1 ~]# nmap 192.168.0.101,102,103
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:09 EST
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+957/tcp  open  unknown
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Nmap finished: 3 IP addresses (1 host up) scanned in 0.552 seconds
+You have new mail in /var/spool/mail/root
+```
