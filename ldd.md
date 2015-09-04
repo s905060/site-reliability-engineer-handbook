@@ -97,7 +97,6 @@ $ ldd /bin/ls
 
 So with absolute path, ldd worked fine.
 
-
 Syntax and Options
 ```
 ldd [OPTION]... FILE...
