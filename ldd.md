@@ -7,7 +7,7 @@ ldd is a Linux utility that is used in case a user wants to know the shared libr
 
 ### 5 ldd Examples
 
-1. Basic example to find the dependency of an executable or shared library.
+* Basic example to find the dependency of an executable or shared library.
 ```
 $ ldd execv
 	linux-vdso.so.1 =>  (0x00007fff3e1f3000)
@@ -23,7 +23,7 @@ $ ldd libshared.so
 
 In the above examples we tried to run the ldd command on an executable ‘execv’ and a shared library ‘libshared.so’ and as you can see that the ldd command output provided the shared library dependencies.
 
-2. Produce more information in output
+* Produce more information in output
 
 Use -v option for this.
 
@@ -44,7 +44,7 @@ $ ldd -v libshared.so
 
 So we see that along with the dependency information, a whole lot of information related to symbol versions etc is produced in output.
 
-3. To display unused direct dependencies
+* To display unused direct dependencies
 
 Use -u option for this.
 
@@ -59,7 +59,7 @@ Unused direct dependencies:
 ```
 So we see that the above output suggests unused dependencies.
 
-4. ldd works only on dynamic executables
+* ldd works only on dynamic executables
 
 Use -r option for this.
 
