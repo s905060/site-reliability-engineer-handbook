@@ -195,3 +195,22 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 
 Nmap finished: 3 IP addresses (3 hosts up) scanned in 2.047 seconds
 ```
+7. Scan an IP Address Range
+You can specify an IP range while performing scan with Nmap.
+```
+[root@server1 ~]# nmap 192.168.0.101-110
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:09 EST
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+957/tcp  open  unknown
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Nmap finished: 10 IP addresses (1 host up) scanned in 0.542 seconds
+```
