@@ -75,3 +75,22 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 1 IP address (1 host up) scanned in 0.485 seconds
                Raw packets sent: 1681 (73.962KB) | Rcvd: 1681 (77.322KB)
 ```
+Scan Multiple Hosts
+
+You can scan multiple hosts by simply writing their IP addresses or hostnames with Nmap.
+```
+[root@server1 ~]# nmap 192.168.0.101 192.168.0.102 192.168.0.103
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:06 EST
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+957/tcp  open  unknown
+3306/tcp open  mysql
+8888/tcp open  sun-answerbook
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+Nmap finished: 3 IP addresses (1 host up) scanned in 0.580 seconds
+```
