@@ -57,3 +57,14 @@ Unused direct dependencies:
 	/lib/libm.so.6
 	/lib/libgcc_s.so.1
 ```
+So we see that the above output suggests unused dependencies.
+
+4. ldd works only on dynamic executables
+
+Use -r option for this.
+
+Lets take an example:
+```
+$ ldd -r assert.o
+	not a dynamic executable
+```
