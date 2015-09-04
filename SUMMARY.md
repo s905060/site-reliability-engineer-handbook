@@ -29,6 +29,7 @@
    * [Kernel namespaces](kernel_namespaces.md)
    * [Control groups](control_groups.md)
    * [Stack vs Heap](stack_vs_heap.md)
+   * What is the difference between a process and a thread
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
