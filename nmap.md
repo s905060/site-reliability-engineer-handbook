@@ -376,6 +376,7 @@ Nmap finished: 256 IP addresses (2 hosts up) scanned in 5.109 seconds
 
 14. Perform a Fast Scan
 You can perform a fast scan with “-F” option to scans for the ports listed in the nmap-services files and leaves all other ports.
+
 ```
 [root@server1 ~]# nmap -F 192.168.0.101
 
@@ -391,7 +392,7 @@ PORT     STATE SERVICE
 MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 
 Nmap finished: 1 IP address (1 host up) scanned in 0.322 seconds
-
+```
 
 15. Find Nmap version
 You can find out Nmap version you are running on your machine with "-V" option.
