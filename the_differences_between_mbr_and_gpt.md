@@ -33,3 +33,5 @@ Most Linux kernels come with support for GPT. Unless you are compiling your own 
 
 For Windows, only the 64-bit version of Windows from XP onward support booting from GPT disk. If you are getting a laptop pre-installed with 64-bit Windows 8, most probably it is using GPT. For Windows 7 and earlier version, the default configuration will be MBR instead of GPT.
 
+### Conclusion
+In most cases, you will be fine with either MBR or GPT. It is only in situation where you need to install Windows on a Mac, or when you need to have a partition bigger than 2TB, that you need to use GPT, or convert MBR to GPT. Also, for the newer model of computer that uses UEFI, it will only support GPT.
