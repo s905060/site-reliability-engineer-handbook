@@ -235,3 +235,39 @@ MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 Nmap finished: 255 IP addresses (1 host up) scanned in 5.313 seconds
 You have new mail in /var/spool/mail/root
 ```
+
+9. Scan OS information and Traceroute
+With Nmap, you can detect which OS and version is running on the remote host. To enable OS & version detection, script scanning and traceroute, we can use “-A” option with NMAP.
+
+```
+[root@server1 ~]# nmap -A 192.168.0.101
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:25 EST
+Interesting ports on server2.tecmint.com (192.168.0.101):
+Not shown: 1674 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 4.3 (protocol 2.0)
+80/tcp   open  http    Apache httpd 2.2.3 ((CentOS))
+111/tcp  open  rpcbind  2 (rpc #100000)
+957/tcp  open  status   1 (rpc #100024)
+3306/tcp open  mysql   MySQL (unauthorized)
+8888/tcp open  http    lighttpd 1.4.32
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+No exact OS matches for host (If you know what OS is running on it, see http://www.insecure.org/cgi-bin/nmap-submit.cgi).
+TCP/IP fingerprint:
+SInfo(V=4.11%P=i686-redhat-linux-gnu%D=11/11%Tm=52814B66%O=22%C=1%M=080027)
+TSeq(Class=TR%IPID=Z%TS=1000HZ)
+T1(Resp=Y%DF=Y%W=16A0%ACK=S++%Flags=AS%Ops=MNNTNW)
+T2(Resp=N)
+T3(Resp=Y%DF=Y%W=16A0%ACK=S++%Flags=AS%Ops=MNNTNW)
+T4(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T5(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+T6(Resp=Y%DF=Y%W=0%ACK=O%Flags=R%Ops=)
+T7(Resp=Y%DF=Y%W=0%ACK=S++%Flags=AR%Ops=)
+PU(Resp=Y%DF=N%TOS=C0%IPLEN=164%RIPTL=148%RID=E%RIPCK=E%UCK=E%ULEN=134%DAT=E)
+
+Uptime 0.169 days (since Mon Nov 11 12:22:15 2013)
+
+Nmap finished: 1 IP address (1 host up) scanned in 22.271 seconds
+You have new mail in /var/spool/mail/root
+```
