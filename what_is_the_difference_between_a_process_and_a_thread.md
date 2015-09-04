@@ -9,14 +9,14 @@ A thread is the entity within a process that can be scheduled for execution. All
 
 ### Process:
 
-An executing instance of a program is called a process.
-Some operating systems use the term ‘task‘ to refer to a program that is being executed.
-A process is always stored in the main memory also termed as the primary memory or random access memory.
-Therefore, a process is termed as an active entity. It disappears if the machine is rebooted.
-Several process may be associated with a same program.
-On a multiprocessor system, multiple processes can be executed in parallel.
-On a uni-processor system, though true parallelism is not achieved, a process scheduling algorithm is applied and the processor is scheduled to execute each process one at a time yielding an illusion of concurrency.
-Example: Executing multiple instances of the ‘Calculator’ program. Each of the instances are termed as a process.
+* An executing instance of a program is called a process.
+* Some operating systems use the term ‘task‘ to refer to a program that is being executed.
+* A process is always stored in the main memory also termed as the primary memory or random access memory.
+* Therefore, a process is termed as an active entity. It disappears if the machine is rebooted.
+* Several process may be associated with a same program.
+* On a multiprocessor system, multiple processes can be executed in parallel.
+* On a uni-processor system, though true parallelism is not achieved, a process scheduling algorithm is applied and the processor is scheduled to execute each process one at a time yielding an illusion of concurrency.
+* Example: Executing multiple instances of the ‘Calculator’ program. Each of the instances are termed as a process.
 
 ### Thread:
 
