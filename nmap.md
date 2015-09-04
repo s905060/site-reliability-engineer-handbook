@@ -391,10 +391,10 @@ PORT     STATE SERVICE
 MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
 
 Nmap finished: 1 IP address (1 host up) scanned in 0.322 seconds
-```
+
 
 15. Find Nmap version
-You can find out Nmap version you are running on your machine with “-V” option.
+You can find out Nmap version you are running on your machine with "-V" option.
 
 ```
 [root@server1 ~]# nmap -V
