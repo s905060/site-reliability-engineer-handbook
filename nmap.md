@@ -308,3 +308,16 @@ Uptime 0.221 days (since Mon Nov 11 12:22:16 2013)
 Nmap finished: 1 IP address (1 host up) scanned in 11.064 seconds
 You have new mail in /var/spool/mail/root
 ```
+
+11. Scan a Host to Detect Firewall
+The below command will perform a scan on a remote host to detect if any packet filters or Firewall is used by host.
+```
+[root@server1 ~]# nmap -sA 192.168.0.101
+
+Starting Nmap 4.11 ( http://www.insecure.org/nmap/ ) at 2013-11-11 16:27 EST
+All 1680 scanned ports on server2.tecmint.com (192.168.0.101) are UNfiltered
+MAC Address: 08:00:27:D9:8E:D7 (Cadmus Computer Systems)
+
+Nmap finished: 1 IP address (1 host up) scanned in 0.382 seconds
+You have new mail in /var/spool/mail/root
+```
