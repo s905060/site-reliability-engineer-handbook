@@ -53,3 +53,11 @@ PID TTY      STAT   TIME COMMAND
 4981 tty1     S      0:00              \_ icewmtray MANPATH=/usr/local/share/ma
 5060 pts/1    S+     0:00 /usr/libexec/gconfd-2 13 MANPATH=/usr/local/share/man
 ```
+* netstat matches the PID above, 5067
+    * so in this example I would try killing
+        * 5030 pts/1 Sl+ 1:29 /usr/lib/mozilla-firefox/
+        * 4978 tty1 S 0:00 xterm -e /home/zymos/.icewm/startup M
+            Or
+        * 4986 pts/1 Ss+ 0:00 /bin/sh /home/zymos/.icewm/startu
+Hopefully this will work
+If you need a  single line command that does the work you can try
