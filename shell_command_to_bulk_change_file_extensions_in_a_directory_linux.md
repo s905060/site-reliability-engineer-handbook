@@ -22,3 +22,19 @@ The command below remove the extension .txt from all files in the directory
 ```
 for f in *.txt; do mv $f `basename $f .txt`; done;
 ```
+
+OR
+
+This will do the job for you.
+```
+rename 's/.m4b$/.m4a/' *.m4b
+```
+
+For a test run you can use this command:
+```
+rename 's/.m4b$/.m4a/' *.m4b -vn
+```
+
+-v means "verbose" and it will output the names of the files when it renames them.
+
+-n will do a test run where it won't rename any files, But will show you a list of files that would be renamed.
