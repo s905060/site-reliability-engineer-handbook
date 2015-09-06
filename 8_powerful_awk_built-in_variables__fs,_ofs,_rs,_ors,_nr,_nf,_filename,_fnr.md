@@ -12,6 +12,7 @@ Awk reads and parses each line from input based on whitespace character by defau
 
 * Using -F command line option.
 * Awk FS can be set like normal variable.
+
 ```
 Syntax:
 
