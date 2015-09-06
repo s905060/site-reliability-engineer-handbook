@@ -193,3 +193,7 @@ $ awk '{print NR,"->",NF}' student-marks
 4 -> 5
 5 -> 4
 ```
+
+### 7. Awk FILENAME Example: Name of the current input file
+
+FILENAME variable gives the name of the file being read. Awk can accept number of input files to process.
