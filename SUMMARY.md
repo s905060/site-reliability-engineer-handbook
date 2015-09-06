@@ -193,6 +193,7 @@
    * [Finding the PID of the process using a specific port?](finding_the_pid_of_the_process_using_a_specific_port.md)
    * [How-To create hashed SSH password](how-to_create_hashed_ssh_password.md)
    * [How to display and kill zombie processes](how_to_display_and_kill_zombie_processes.md)
+   * Shell command to bulk change file extensions in a directory (Linux)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
