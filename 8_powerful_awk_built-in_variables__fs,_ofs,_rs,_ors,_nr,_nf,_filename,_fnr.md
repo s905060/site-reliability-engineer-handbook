@@ -183,3 +183,13 @@ RinRao 2122 38 37
 Edwin 2537 78 67 45
 Dayan 2415 30 47
 ```
+
+The following Awk script, prints Record(line) number, and number of fields in that record. So It will be very simple to find out that Test3 score is missing.
+```
+$ awk '{print NR,"->",NF}' student-marks
+1 -> 5
+2 -> 5
+3 -> 4
+4 -> 5
+5 -> 4
+```
