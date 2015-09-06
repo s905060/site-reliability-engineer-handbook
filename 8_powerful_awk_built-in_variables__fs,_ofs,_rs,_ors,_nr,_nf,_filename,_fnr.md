@@ -211,3 +211,16 @@ In the above example, it prints the FILENAME i.e student-marks for each record o
 ### 8. Awk FNR Example: Number of Records relative to the current input file
 
 When awk reads from the multiple input file, awk NR variable will give the total number of records relative to all the input file. Awk FNR will give you number of records for each input file.
+```
+$ awk '{print FILENAME, FNR;}' student-marks bookdetails
+student-marks 1
+student-marks 2
+student-marks 3
+student-marks 4
+student-marks 5
+bookdetails 1
+bookdetails 2
+bookdetails 3
+bookdetails 4
+bookdetails 5
+```
