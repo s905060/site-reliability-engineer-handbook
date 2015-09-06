@@ -71,3 +71,17 @@ $ awk -F':' '{print $3,$4;}' /etc/passwd
 111 117
 112 119
 ```
+
+Concatenator in the print statement “,” concatenates two parameters with a space which is the value of awk OFS by default. So, Awk OFS value will be inserted between fields in the output as shown below.
+
+```
+$ awk -F':' 'BEGIN{OFS="=";} {print $3,$4;}' /etc/passwd
+41=41
+100=101
+101=102
+103=7
+105=111
+110=116
+111=117
+112=119
+```
