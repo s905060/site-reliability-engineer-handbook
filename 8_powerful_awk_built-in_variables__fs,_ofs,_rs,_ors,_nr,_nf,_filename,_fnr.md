@@ -42,3 +42,16 @@ END {
 	print NR,"Records Processed";
 }
 ```
+```
+$awk -f etc_passwd.awk /etc/passwd
+Name    UserID  GroupID        HomeDirectory
+gnats	41	41	/var/lib/gnats
+libuuid	100	101	/var/lib/libuuid
+syslog	101	102	/home/syslog
+hplip	103	7	/var/run/hplip
+avahi	105	111	/var/run/avahi-daemon
+saned	110	116	/home/saned
+pulse	111	117	/var/run/pulse
+gdm	112	119	/var/lib/gdm
+8 Records Processed
+```
