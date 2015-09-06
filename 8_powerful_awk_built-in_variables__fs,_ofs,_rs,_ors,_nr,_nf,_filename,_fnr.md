@@ -124,3 +124,5 @@ Dayan
 47
 20
 ```
+
+Now the below Awk script prints the Student name and Rollno from the above input file.
