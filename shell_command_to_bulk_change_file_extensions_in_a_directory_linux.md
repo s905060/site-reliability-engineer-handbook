@@ -39,3 +39,21 @@ rename 's/.m4b$/.m4a/' *.m4b -vn
 -v means "verbose" and it will output the names of the files when it renames them.
 
 -n will do a test run where it won't rename any files, But will show you a list of files that would be renamed.
+
+
+Straight from Greg's Wiki:
+
+# Rename all *.txt to *.text
+```
+for f in *.txt; do 
+mv -- "$f" "${f%.txt}.text"
+done
+```
+Also see the entry on why you shouldn't parse ls.
+
+Edit: if you have to use basename your syntax would be:
+```
+for f in *.txt; do
+mv "$f" "$(basename "$f" .txt).text"
+done
+```
