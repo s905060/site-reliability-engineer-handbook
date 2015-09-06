@@ -224,3 +224,5 @@ bookdetails 3
 bookdetails 4
 bookdetails 5
 ```
+
+In the above example, instead of awk FNR, if you use awk NR, for the file bookdetails the you will get from 6 to 10 for each record.
