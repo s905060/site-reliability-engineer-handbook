@@ -160,3 +160,12 @@ In the above script,each records in the file student-marks file is delimited by 
 ### 5. Awk NR Example: Number of Records Variable
 
 Awk NR gives you the total number of records being processed or line number. In the following awk NR example, NR variable has line number, in the END section awk NR tells you the total number of records in a file.
+```
+$ awk '{print "Processing Record - ",NR;}END {print NR, "Students Records are processed";}' student-marks
+Processing Record -  1
+Processing Record -  2
+Processing Record -  3
+Processing Record -  4
+Processing Record -  5
+5 Students Records are processed
+```
