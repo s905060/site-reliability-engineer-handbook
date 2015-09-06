@@ -169,3 +169,17 @@ Processing Record -  4
 Processing Record -  5
 5 Students Records are processed
 ```
+
+### 6. Awk NF Example: Number of Fields in a record
+
+Awk NF gives you the total number of fields in a record. Awk NF will be very useful for validating whether all the fields are exist in a record.
+
+Let us take in the student-marks file, Test3 score is missing for to students as shown below.
+```
+$cat student-marks
+Jones 2143 78 84 77
+Gondrol 2321 56 58 45
+RinRao 2122 38 37
+Edwin 2537 78 67 45
+Dayan 2415 30 47
+```
