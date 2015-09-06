@@ -166,6 +166,7 @@
    * [BC](bc.md)
    * [LDD](ldd.md)
    * [getcap, setcap and file capabilities](getcap,_setcap_and_file_capabilities.md)
+   * Linux_Basename
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
