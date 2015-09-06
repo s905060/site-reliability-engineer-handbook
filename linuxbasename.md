@@ -18,7 +18,7 @@ A script to rename file extensions:
 ```
 #BatchRenameExt
 for file in *.$1; do
-mv $file `basename $file $1`.$2
+    mv $file `basename $file $1`.$2
 done
 
 $ BatchRenameExt htm html
