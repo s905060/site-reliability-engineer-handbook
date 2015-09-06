@@ -144,3 +144,9 @@ RinRao 2122
 Edwin 2537
 Dayan 2415
 ```
+
+In the script student.awk, it reads each student detail as a single record,because awk RS has been assigned to double new line character and each line in a record is a field, since FS is newline character.
+
+### 4. Awk ORS Example: Output Record Separator Variable
+
+Awk ORS is an Output equivalent of RS. Each record in the output will be printed with this delimiter. Following is an awk ORS example:
