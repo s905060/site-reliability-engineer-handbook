@@ -6,7 +6,8 @@ This article is part of the on-going Awk Tutorial Examples series. Awk has sever
 
 2. Variable which can be used for processing and reports such as Number of records, number of fields.
 
-1. Awk FS Example: Input field separator variable.
+
+### 1. Awk FS Example: Input field separator variable.
 
 Awk reads and parses each line from input based on whitespace character by default and set the variables $1,$2 and etc. Awk FS variable is used to set the field separator for each record. Awk FS can be set to any single character or regular expression. You can use input field separator using one of the following two options:
 
@@ -54,4 +55,19 @@ saned	110	116	/home/saned
 pulse	111	117	/var/run/pulse
 gdm	112	119	/var/lib/gdm
 8 Records Processed
+```
+
+### 2. Awk OFS Example: Output Field Separator Variable
+
+Awk OFS is an output equivalent of awk FS variable. By default awk OFS is a single space character. Following is an awk OFS example.
+```
+$ awk -F':' '{print $3,$4;}' /etc/passwd
+41 41
+100 101
+101 102
+103 7
+105 111
+110 116
+111 117
+112 119
 ```
