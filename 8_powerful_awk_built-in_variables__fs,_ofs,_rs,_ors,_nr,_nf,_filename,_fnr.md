@@ -126,3 +126,21 @@ Dayan
 ```
 
 Now the below Awk script prints the Student name and Rollno from the above input file.
+```
+$cat student.awk
+BEGIN {
+	RS="\n\n";
+	FS="\n";
+
+}
+{
+	print $1,$2;
+}
+
+$ awk -f student.awk  student.txt
+Jones 2143
+Gondrol 2321
+RinRao 2122
+Edwin 2537
+Dayan 2415
+```
