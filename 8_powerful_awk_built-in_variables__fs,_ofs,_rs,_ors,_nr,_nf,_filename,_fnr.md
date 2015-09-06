@@ -150,3 +150,7 @@ In the script student.awk, it reads each student detail as a single record,becau
 ### 4. Awk ORS Example: Output Record Separator Variable
 
 Awk ORS is an Output equivalent of RS. Each record in the output will be printed with this delimiter. Following is an awk ORS example:
+```
+$  awk 'BEGIN{ORS="=";} {print;}' student-marks
+Jones 2143 78 84 77=Gondrol 2321 56 58 45=RinRao 2122 38 37 65=Edwin 2537 78 67 45=Dayan 2415 30 47 20=
+```
