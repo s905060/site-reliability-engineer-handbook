@@ -154,3 +154,9 @@ Awk ORS is an Output equivalent of RS. Each record in the output will be printed
 $  awk 'BEGIN{ORS="=";} {print;}' student-marks
 Jones 2143 78 84 77=Gondrol 2321 56 58 45=RinRao 2122 38 37 65=Edwin 2537 78 67 45=Dayan 2415 30 47 20=
 ```
+
+In the above script,each records in the file student-marks file is delimited by the character "=".
+
+### 5. Awk NR Example: Number of Records Variable
+
+Awk NR gives you the total number of records being processed or line number. In the following awk NR example, NR variable has line number, in the END section awk NR tells you the total number of records in a file.
