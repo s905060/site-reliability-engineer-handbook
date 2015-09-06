@@ -26,3 +26,19 @@ $ awk 'BEGIN{FS="FS";}'
 * Awk FS is any single character or regular expression which you want to use as a input field separator.
 
 * Awk FS can be changed any number of times, it retains its values until it is explicitly changed. If you want to change the field separator, its better to change before you read the line. So that change affects the line what you read.
+
+Here is an awk FS example to read the /etc/passwd file which has “:” as field delimiter.
+
+```
+$ cat etc_passwd.awk
+BEGIN{
+FS=":";
+print "Name\tUserID\tGroupID\tHomeDirectory";
+}
+{
+	print $1"\t"$3"\t"$4"\t"$6;
+}
+END {
+	print NR,"Records Processed";
+}
+```
