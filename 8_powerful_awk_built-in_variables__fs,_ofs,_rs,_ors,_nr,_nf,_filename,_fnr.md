@@ -21,3 +21,7 @@ $ awk -F 'FS' 'commands' inputfilename
 
 $ awk 'BEGIN{FS="FS";}'
 ```
+
+* Awk FS is any single character or regular expression which you want to use as a input field separator.
+
+* Awk FS can be changed any number of times, it retains its values until it is explicitly changed. If you want to change the field separator, its better to change before you read the line. So that change affects the line what you read.
