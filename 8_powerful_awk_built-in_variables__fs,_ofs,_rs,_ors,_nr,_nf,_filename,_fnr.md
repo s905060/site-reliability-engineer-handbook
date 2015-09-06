@@ -85,3 +85,42 @@ $ awk -F':' 'BEGIN{OFS="=";} {print $3,$4;}' /etc/passwd
 111=117
 112=119
 ```
+
+### 3. Awk RS Example: Record Separator variable
+
+Awk RS defines a line. Awk reads line by line by default.
+
+Let us take students marks are stored in a file, each records are separated by double new line, and each fields are separated by a new line character.
+
+```
+$cat student.txt
+Jones
+2143
+78
+84
+77
+
+Gondrol
+2321
+56
+58
+45
+
+RinRao
+2122
+38
+37
+65
+
+Edwin
+2537
+78
+67
+45
+
+Dayan
+2415
+30
+47
+20
+```
