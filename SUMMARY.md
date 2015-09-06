@@ -195,7 +195,7 @@
    * [How-To create hashed SSH password](how-to_create_hashed_ssh_password.md)
    * [How to display and kill zombie processes](how_to_display_and_kill_zombie_processes.md)
    * [Shell command to bulk change file extensions in a directory (Linux)](shell_command_to_bulk_change_file_extensions_in_a_directory_linux.md)
-   * 8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR
+   * [8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR](8_powerful_awk_built-in_variables__fs,_ofs,_rs,_ors,_nr,_nf,_filename,_fnr.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
