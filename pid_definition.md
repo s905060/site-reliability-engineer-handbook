@@ -8,7 +8,20 @@ The process init is the only process that will always have the same PID on any s
 
 A very large PID does not necessarily mean that there are anywhere near that many processes on a system. This is because such numbers are often a result of the fact that PIDs are not immediately reused, in order to prevent possible errors.
 
-The default maximum value of PIDs is 32,767. This maximum is important because it is essentially the maximum number of processes that can exist simultaneously on a system. Although this will almost always be sufficient for a small system, large servers may require many more processes. The lower the maximum value, the sooner the values will wrap around, meaning that lower values do not necessarily indicate processes that started to run earlier.
+The default maximum value of PIDs is 32,767. This maximum is important because it is essentially the maximum number of processes that can exist simultaneously on a system.Although this will almost always be sufficient for a small system, large servers may require many more processes. The lower the maximum value, the sooner the values will wrap around, meaning that lower values do not necessarily indicate processes that started to run earlier.
+
+In Unix-like operating systems, new processes are created by the fork() system call. The PID is returned to the parent enabling it to refer to the child in further function calls. The parent may, for example, wait for the child to terminate with the waitpid() function, or terminate the process with kill().
+
+**There are two tasks with specially distinguished process IDs: swapper or sched has process ID 0 and is responsible for paging, and is actually part of the kernel rather than a normal user-mode process. Process ID 1 is usually the init process primarily responsible for starting and shutting down the system.** 
+
+Originally, process ID 1 was not specifically reserved for init by any technical measures: it simply had this ID as a natural consequence of being the first process invoked by the kernel. More recent Unix systems typically have additional kernel components visible as 'processes', in which case PID 1 is actively reserved for the init process to maintain consistency with older systems.
+
+Process IDs are usually allocated on a sequential basis, beginning at 0 and rising to a maximum value which varies from system to system. Once this limit is reached, allocation restarts at 300 and again increases. In Mac OS X and HP-UX, allocation restarts at 100. However, for this and subsequent passes any PIDs still assigned to processes are skipped. 
+
+Some consider this to be a potential security vulnerability in that it allows information about the system to be extracted, or messages to be covertly passed between processes. As such, implementations that are particularly concerned about security may choose a different method of PID assignment.[1] On some systems, like MPE/iX, the lowest available PID is used, sometimes in an effort to minimize the number of process information kernel pages in memory.
+
+The current process ID is provided by a getpid() system call, or as a variable $$ in shell. The process ID of a parent process is obtainable by a getppid() system call.
+Under Linux, the maximum process ID is given by the pseudo-file /proc/sys/kernel/pid_max.
 
 The file pid_max, which was introduced with the Linux 2.5 kernel, specifies the value at which PIDs wrap around (i.e., the value in this file is one greater than the maximum PID). It has a default of 32768, but it can be set to any number up to approximately four million. The maximum number of processes on a system is only limited by the amount of physical memory (i.e., RAM) available.
 
