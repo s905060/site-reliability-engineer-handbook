@@ -420,3 +420,20 @@ func main() {
     log.Printf("Wrote %d bytes.\n", bytesWritten)
 }
 ```
+
+### Quick Write to File
+```
+package main
+
+import (
+    "io/ioutil"
+    "log"
+)
+
+func main() {
+    err := ioutil.WriteFile("test.txt", []byte("Hi\n"), 0666)
+    if err != nil {
+        log.Fatal(err)
+    }
+}
+```
