@@ -1,5 +1,18 @@
 # Basic
 
+```
+>
+Save output to a file.
+>>
+Append output to a file.
+<
+Read input from a file.
+2>
+Redirect error messages.
+|
+Send the output from one program as input to another program.
+```
+
 ### ps command examples
 
 ps command is used to display information about the processes that are running in the system.
