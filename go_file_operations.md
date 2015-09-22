@@ -1079,3 +1079,7 @@ func main() {
      log.Printf("Downloaded %d byte file.\n", numBytesWritten)
 }
 ```
+
+### Hashing and Checksums
+```
+``
