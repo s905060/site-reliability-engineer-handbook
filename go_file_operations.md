@@ -557,4 +557,63 @@ func main() {
     log.Printf("Data read: %s\n", byteSlice)
 }
 ```
+### Read Exactly n Bytes
+```
+package main
 
+import (
+    "os"
+    "log"
+    "io"
+)
+
+func main() {
+    // Open file for reading
+    file, err := os.Open("test.txt")
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    // The file.Read() function will happily read a tiny file in to a large
+    // byte slice, but io.ReadFull() will return an
+    // error if the file is smaller than the byte slice.
+    byteSlice := make([]byte, 2)
+    numBytesRead, err := io.ReadFull(file, byteSlice)
+    if err != nil {
+        log.Fatal(err)
+    }
+    log.Printf("Number of bytes read: %d\n", numBytesRead)
+    log.Printf("Data read: %s\n", byteSlice)
+}
+```
+
+### Read At Least n Bytes
+```
+package main
+
+import (
+    "os"
+    "log"
+    "io"
+)
+
+func main() {
+    // Open file for reading
+    file, err := os.Open("test.txt")
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    byteSlice := make([]byte, 512)
+    minBytes := 8
+    // io.ReadAtLeast() will return an error if it cannot
+    // find at least minBytes to read. It will read as
+    // many bytes as byteSlice can hold. 
+    numBytesRead, err := io.ReadAtLeast(file, byteSlice, minBytes)
+    if err != nil {
+        log.Fatal(err)
+    }
+    log.Printf("Number of bytes read: %d\n", numBytesRead)
+    log.Printf("Data read: %s\n", byteSlice)
+}
+```
