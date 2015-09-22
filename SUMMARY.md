@@ -98,7 +98,7 @@
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
-       * Go Time Formatting / Parsing
+       * [Go Time Formatting / Parsing](go_time_formatting__parsing.md)
    * [Bash](bash.md)
        * [Regex](regex.md)
            * [Validate an ip address](validate_an_ip_address.md)
