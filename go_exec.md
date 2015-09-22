@@ -77,3 +77,43 @@ func main() {
 	log.Printf("Command finished with error: %v", err)
 }
 ```
+
+### func (*Cmd) StdoutPipe
+
+> func (c *Cmd) StdoutPipe() (io.ReadCloser, error)
+
+StdoutPipe returns a pipe that will be connected to the command's standard output when the command starts.
+
+Wait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves; however, an implication is that it is incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to call Run when using StdoutPipe. See the example for idiomatic usage.
+```
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"os/exec"
+)
+
+func main() {
+	cmd := exec.Command("echo", "-n", `{"Name": "Bob", "Age": 32}`)
+	stdout, err := cmd.StdoutPipe()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := cmd.Start(); err != nil {
+		log.Fatal(err)
+	}
+	var person struct {
+		Name string
+		Age  int
+	}
+	if err := json.NewDecoder(stdout).Decode(&person); err != nil {
+		log.Fatal(err)
+	}
+	if err := cmd.Wait(); err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%s is %d years old\n", person.Name, person.Age)
+}
+```
