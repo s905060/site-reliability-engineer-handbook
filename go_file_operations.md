@@ -838,3 +838,9 @@ func main() {
     }
 }
 ```
+
+### Extract Archived Files
+```
+package main
+
+```
