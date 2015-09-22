@@ -97,6 +97,7 @@
        * [OS](os.md)
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
+       * GO EXEC
    * [Bash](bash.md)
        * [Regex](regex.md)
            * [Validate an ip address](validate_an_ip_address.md)
