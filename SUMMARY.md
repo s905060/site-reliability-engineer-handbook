@@ -96,6 +96,7 @@
        * [Why is it better to use “#!/usr/bin/env NAME” instead of “#!/path/to/NAME” as my shebang?](why_is_it_better_to_use_usrbinenv_name_instead_of_pathtoname_as_my_shebang.md)
        * [OS](os.md)
    * [Golang](golang.md)
+       * Go file operations
    * [Bash](bash.md)
        * [Regex](regex.md)
            * [Validate an ip address](validate_an_ip_address.md)
