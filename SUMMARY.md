@@ -201,7 +201,7 @@
    * [Shell command to bulk change file extensions in a directory (Linux)](shell_command_to_bulk_change_file_extensions_in_a_directory_linux.md)
    * [8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR](8_powerful_awk_built-in_variables__fs,_ofs,_rs,_ors,_nr,_nf,_filename,_fnr.md)
    * [Changing the Time Zone](changing_the_time_zone.md)
-   * HOW DO I DISABLE SSH LOGIN FOR THE ROOT USER?
+   * [HOW DO I DISABLE SSH LOGIN FOR THE ROOT USER?](how_do_i_disable_ssh_login_for_the_root_user.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
