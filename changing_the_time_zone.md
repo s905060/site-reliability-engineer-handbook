@@ -30,5 +30,5 @@ ARC — The ARC console's 42-year time offset is in effect (for Alpha-based syst
 Create a symbolic link between /etc/localtime and your time zone file so that the instance finds the time zone file when it references local time information.
 
 ```
-[ec2-user ~]$ sudo ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+[ec2-user ~]$ sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 ```
