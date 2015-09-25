@@ -211,6 +211,7 @@
 * [Database](database.md)
    * [MySQL](mysql.md)
 * [Algorithm](algorithm.md)
+   * Insertion Sort
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
