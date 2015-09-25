@@ -218,6 +218,7 @@
    * [Directly Select Sort](directly_select_sort.md)
    * [Heap Sort](heap_sort.md)
    * [Merge Sort](merge_sort.md)
+   * Radix Sort
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
