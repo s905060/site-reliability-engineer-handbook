@@ -212,7 +212,7 @@
    * [MySQL](mysql.md)
 * [Algorithm](algorithm.md)
    * [Insertion Sort](insertion_sort.md)
-   * Hill Sort
+   * [Hill Sort](hill_sort.md)
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
