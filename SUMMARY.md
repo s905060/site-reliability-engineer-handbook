@@ -214,7 +214,7 @@
    * [Insertion Sort](insertion_sort.md)
    * [Hill Sort](hill_sort.md)
    * [Bubble Sort](bubble_sort.md)
-   *  Quick Sort
+   * [Quick Sort](quick_sort.md)
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
