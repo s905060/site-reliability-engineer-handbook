@@ -172,6 +172,7 @@
    * [Linux_Basename](linuxbasename.md)
    * [PMAP](pmap.md)
    * [Strace](strace.md)
+   * Alternative 
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
