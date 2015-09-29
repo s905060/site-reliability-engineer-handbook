@@ -172,7 +172,7 @@
    * [Linux_Basename](linuxbasename.md)
    * [PMAP](pmap.md)
    * [Strace](strace.md)
-   * Alternative
+   * [Alternative](alternative.md)
    * Readlink
 * [Security](security.md)
    * [Common](common.md)
