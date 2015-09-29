@@ -173,6 +173,7 @@
    * [PMAP](pmap.md)
    * [Strace](strace.md)
    * Alternative
+   * Readlink
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
