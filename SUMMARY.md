@@ -174,7 +174,7 @@
    * [Strace](strace.md)
    * [Alternative](alternative.md)
    * [Readlink](readlink.md)
-   * logrotate
+   * [logrotate](logrotate.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
