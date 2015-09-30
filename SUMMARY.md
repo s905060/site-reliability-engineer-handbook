@@ -175,7 +175,7 @@
    * [Alternative](alternative.md)
    * [Readlink](readlink.md)
    * [logrotate](logrotate.md)
-   * PIDOF
+   * [PIDOF](pidof.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
