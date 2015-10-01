@@ -177,6 +177,7 @@
    * [logrotate](logrotate.md)
    * [PIDOF](pidof.md)
    * [Dmidecode](dmidecode.md)
+   * lshw
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
