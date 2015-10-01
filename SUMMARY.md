@@ -178,7 +178,7 @@
    * [PIDOF](pidof.md)
    * [Dmidecode](dmidecode.md)
    * [lshw](lshw.md)
-   * printenv
+   * [printenv](printenv.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
