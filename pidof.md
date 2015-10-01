@@ -20,8 +20,9 @@ pgrep, (p) = process, grep = grep prints the matching lines
 
 Want to know more about pgrep & pidof ? Just run in terminal as
 
-# man pidof
-# man pgrep
+\# man pidof
+
+\# man pgrep
 
 How-To: Kill a Process Using the 'pidof' Command
 If a process hangs and you want to easily kill it, type in a console:
