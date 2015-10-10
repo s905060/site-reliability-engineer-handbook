@@ -181,7 +181,7 @@
    * [printenv](printenv.md)
    * [SS](ss.md)
    * [w](w.md)
-   * pstree
+   * [pstree](pstree.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
