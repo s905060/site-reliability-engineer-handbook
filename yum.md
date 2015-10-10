@@ -201,7 +201,7 @@ Complete!
 ```
 ### Display your current yum repositories
 
-All yum commands goes against one or more yum repositories. To view all the yum repositories that are configured in your system, do ‘yum repolist’ as shown below.
+All yum commands goes against one or more yum repositories. To view all the yum repositories that are configured in your system, do "yum repolist" as shown below.
 
 The following will display only the enabled repositories.
 ```
