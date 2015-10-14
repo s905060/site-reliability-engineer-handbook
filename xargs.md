@@ -17,3 +17,7 @@ Download all the URLs mentioned in the url-list.txt file
 ```
 # cat url-list.txt | xargs wget –c
 ```
+
+```
+ps aux | grep /usr/local/xxx.py | grep -v grep | awk {' print $2'} | xargs -I {} kill {}
+```
