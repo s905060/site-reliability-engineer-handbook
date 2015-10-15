@@ -9,3 +9,11 @@ Thus, termination isn't a three-way handshake like establishment: it is a pair o
 > Key Concept: A TCP connection is normally terminating using a special procedure where each side independently closes its end of the link. It normally begins with one of the application processes signalling to its TCP layer that the session is no longer needed. That device sends a FIN message to tell the other device that it wants to end the connection, which is acknowledged. When the responding device is ready, it too sends a FIN that is acknowledged; after waiting a period of time for the ACK to be received, the session is closed.
 
 Table 154 describes in detail how the connection termination process works; the progression of states and messages exchanged can also be seen in Figure 214. The table is adapted from Table 151, describing the TCP finite state machine, but shows what happens for both the server and the client over time during connection shutdown. Either device can initiate connection termination; in this example I am assuming the client does it. Each row shows the state each device begins in, what action it takes in that state and what state to which it transitions. I have also shown the send and receive stages of both of the steps for each of the client and server’s close operations.
+
+![](Screen Shot 2015-10-14 at 11.21.33 PM.png)
+
+
+![](tcpclose.png)
+Figure 214: TCP Connection Termination Procedure
+
+This diagram shows the conventional termination procedure for a TCP session, with one device initiating termination and the other responding. In this case the client initiates; it sends a FIN which is acknowledged by the server. The server waits for the server process to be ready to close and then sends its FIN, which is acknowledged by the client. The client waits for a period of time to ensure that its ACK is received, before proceeding to the CLOSED state.
