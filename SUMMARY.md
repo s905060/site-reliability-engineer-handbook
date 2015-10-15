@@ -183,7 +183,7 @@
    * [w](w.md)
    * [Strace](strace.md)
    * [pstree](pstree.md)
-   * USERMOD
+   * [USERMOD](usermod.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
