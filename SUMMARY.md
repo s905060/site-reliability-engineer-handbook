@@ -244,6 +244,7 @@
    * [Mesos](mesos.md)
    * [ELK](elk.md)
    * [Hadoop](hadoop.md)
+   * HBase
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
 
