@@ -243,7 +243,7 @@
    * [Web cache](web_cache.md)
    * [Mesos](mesos.md)
    * [ELK](elk.md)
-   * Hadoop
+   * [Hadoop](hadoop.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
 
