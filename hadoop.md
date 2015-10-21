@@ -233,55 +233,78 @@ hdfs dfs -touchz /user/hadoop/file12
 # Hadoop Administration Commands
 Any Hadoop administrator worth his salt must master a comprehensive set of commands for cluster administration. The following list summarizes the most important commands, indicating what the command does as well as syntax and examples. Know them, and you will advance a long way along the path to Hadoop wisdom.
 
-balancer: Runs the cluster-balancing utility. The specified threshold value, which represents a percentage of disk capacity, is used to overwrite the default threshold value (10 percent). To stop the rebalancing process, press Ctrl+C.
+#### balancer: Runs the cluster-balancing utility. The specified threshold value, which represents a percentage of disk capacity, is used to overwrite the default threshold value (10 percent). To stop the rebalancing process, press Ctrl+C.
 
 Syntax: hadoop balancer [-threshold <threshold>]
 
-Example: hadoop balancer -threshold 20
+Example: 
+```
+hadoop balancer -threshold 20
+```
 
-daemonlog: Gets or sets the log level for each daemon (also known as a service). Connects to http://host:port/logLevel?log=name and prints or sets the log level of the daemon that's running at host:port. Hadoop daemons generate log files that help you determine what's happening on the system, and you can use the daemonlog command to temporarily change the log level of a Hadoop component when you're debugging the system. The change becomes effective when the daemon restarts.
+#### daemonlog: Gets or sets the log level for each daemon (also known as a service). Connects to http://host:port/logLevel?log=name and prints or sets the log level of the daemon that's running at host:port. Hadoop daemons generate log files that help you determine what's happening on the system, and you can use the daemonlog command to temporarily change the log level of a Hadoop component when you're debugging the system. The change becomes effective when the daemon restarts.
 
 Syntax: hadoop daemonlog -getlevel <host:port> <name>; hadoop daemonlog -setlevel <host:port> <name> <level>
 
-Example: hadoop daemonlog -getlevel 10.250.1.15:50030 org.apache.hadoop.mapred.JobTracker; hadoop daemonlog -setlevel 10.250.1.15:50030 org.apache.hadoop.mapred.JobTracker DEBUG
+Example: 
+```
+hadoop daemonlog -getlevel 10.250.1.15:50030 org.apache.hadoop.mapred.JobTracker; hadoop daemonlog -setlevel 10.250.1.15:50030 org.apache.hadoop.mapred.JobTracker DEBUG
+```
 
-datanode: Runs the HDFS DataNode service, which coordinates storage on each slave node. If you specify -rollback, the DataNode is rolled back to the previous version. Stop the DataNode and distribute the previous Hadoop version before using this option.
+#### datanode: Runs the HDFS DataNode service, which coordinates storage on each slave node. If you specify -rollback, the DataNode is rolled back to the previous version. Stop the DataNode and distribute the previous Hadoop version before using this option.
 
 Syntax: hadoop datanode [-rollback]
 
-Example: hadoop datanode –rollback
+Example: 
+```
+hadoop datanode –rollback
+```
 
-dfsadmin: Runs a number of Hadoop Distributed File System (HDFS) administrative operations. Use the -help option to see a list of all supported options. The generic options are a common set of options supported by several commands.
+#### dfsadmin: Runs a number of Hadoop Distributed File System (HDFS) administrative operations. Use the -help option to see a list of all supported options. The generic options are a common set of options supported by several commands.
 
 Syntax: hadoop dfsadmin [GENERIC_OPTIONS] [-report] [-safemode enter | leave | get | wait] [-refreshNodes] [-finalizeUpgrade] [-upgradeProgress status | details | force] [-metasave filename] [-setQuota <quota> <dirname>...<dirname>] [-clrQuota <dirname>...<dirname>] [-restoreFailedStorage true|false|check] [-help [cmd]]
 
-mradmin: Runs a number of MapReduce administrative operations. Use the -help option to see a list of all supported options. Again, the generic options are a common set of options that are supported by several commands. If you specify -refreshServiceAcl, reloads the service-level authorization policy file (JobTracker reloads the authorization policy file); -refreshQueues reloads the queue access control lists (ACLs) and state (JobTracker reloads the mapred-queues.xml file); -refreshNodes refreshes the hosts information at the JobTracker; -refreshUserToGroupsMappings refreshes user-to-groups mappings; -refreshSuperUserGroupsConfiguration refreshes superuser proxy groups mappings; and -help [cmd] displays help for the given command or for all commands if none is specified.
+#### mradmin: Runs a number of MapReduce administrative operations. Use the -help option to see a list of all supported options. Again, the generic options are a common set of options that are supported by several commands. If you specify -refreshServiceAcl, reloads the service-level authorization policy file (JobTracker reloads the authorization policy file); -refreshQueues reloads the queue access control lists (ACLs) and state (JobTracker reloads the mapred-queues.xml file); -refreshNodes refreshes the hosts information at the JobTracker; -refreshUserToGroupsMappings refreshes user-to-groups mappings; -refreshSuperUserGroupsConfiguration refreshes superuser proxy groups mappings; and -help [cmd] displays help for the given command or for all commands if none is specified.
 
 Syntax: hadoop mradmin [ GENERIC_OPTIONS ] [-refreshServiceAcl] [-refreshQueues] [-refreshNodes] [-refreshUserToGroupsMappings] [-refreshSuperUserGroupsConfiguration] [-help [cmd]]
 
-Example: hadoop mradmin -help –refreshNodes
+Example: 
+```
+hadoop mradmin -help –refreshNodes
+```
 
-jobtracker: Runs the MapReduce JobTracker node, which coordinates the data processing system for Hadoop. If you specify -dumpConfiguration, the configuration that's used by the JobTracker and the queue configuration in JSON format are written to standard output.
+#### jobtracker: Runs the MapReduce JobTracker node, which coordinates the data processing system for Hadoop. If you specify -dumpConfiguration, the configuration that's used by the JobTracker and the queue configuration in JSON format are written to standard output.
 
 Syntax: hadoop jobtracker [-dumpConfiguration]
 
-Example: hadoop jobtracker –dumpConfiguration
+Example: 
+```
+hadoop jobtracker –dumpConfiguration
+```
 
-namenode: Runs the NameNode, which coordinates the storage for the whole Hadoop cluster. If you specify -format, the NameNode is started, formatted, and then stopped; with -upgrade, the NameNode starts with the upgrade option after a new Hadoop version is distributed; with -rollback, the NameNode is rolled back to the previous version (remember to stop the cluster and distribute the previous Hadoop version before using this option); with -finalize, the previous state of the file system is removed, the most recent upgrade becomes permanent, rollback is no longer available, and the NameNode is stopped; finally, with -importCheckpoint, an image is loaded from the checkpoint directory (as specified by the fs.checkpoint.dir property) and saved into the current directory.
+#### namenode: Runs the NameNode, which coordinates the storage for the whole Hadoop cluster. If you specify -format, the NameNode is started, formatted, and then stopped; with -upgrade, the NameNode starts with the upgrade option after a new Hadoop version is distributed; with -rollback, the NameNode is rolled back to the previous version (remember to stop the cluster and distribute the previous Hadoop version before using this option); with -finalize, the previous state of the file system is removed, the most recent upgrade becomes permanent, rollback is no longer available, and the NameNode is stopped; finally, with -importCheckpoint, an image is loaded from the checkpoint directory (as specified by the fs.checkpoint.dir property) and saved into the current directory.
 
 Syntax: hadoop namenode [-format] | [-upgrade] | [-rollback] | [-finalize] | [-importCheckpoint]
 
-Example: hadoop namenode –finalize
+Example: 
+```
+hadoop namenode –finalize
+```
 
-Secondary namenode: Runs the secondary NameNode. If you specify -checkpoint, a checkpoint on the secondary NameNode is performed if the size of the EditLog (a transaction log that records every change that occurs to the file system metadata) is greater than or equal to fs.checkpoint.size; specify -force and a checkpoint is performed regardless of the EditLog size; specify –geteditsize and the EditLog size is printed.
+#### Secondary namenode: Runs the secondary NameNode. If you specify -checkpoint, a checkpoint on the secondary NameNode is performed if the size of the EditLog (a transaction log that records every change that occurs to the file system metadata) is greater than or equal to fs.checkpoint.size; specify -force and a checkpoint is performed regardless of the EditLog size; specify –geteditsize and the EditLog size is printed.
 
 Syntax: hadoop secondarynamenode [-checkpoint [force]] | [-geteditsize]
 
-Example: hadoop secondarynamenode –geteditsize
+Example: 
+```
+hadoop secondarynamenode –geteditsize
+```
 
-tasktracker: Runs a MapReduce TaskTracker node.
+#### tasktracker: Runs a MapReduce TaskTracker node.
 
 Syntax: hadoop tasktracker
 
-Example: hadoop tasktracker
-
+Example: 
+```
+hadoop tasktracker
+```
