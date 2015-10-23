@@ -20,3 +20,6 @@ for i in $(ls *.done); do
     mv "$i" "$(basename "$i" .done)"; 
 done
 ```
+```
+$ for file in * ; do cp $file $file.bak; done
+```
