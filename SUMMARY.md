@@ -184,6 +184,7 @@
    * [Strace](strace.md)
    * [pstree](pstree.md)
    * [USERMOD](usermod.md)
+   * ltrace
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
