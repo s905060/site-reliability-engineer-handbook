@@ -114,7 +114,7 @@
        * [Exit codes](exit_codes.md)
        * [Special Variables](special_variables.md)
    * [Java](java.md)
-       * Life cycle of a Thread (Thread States)
+       * [Life cycle of a Thread (Thread States)](life_cycle_of_a_thread_thread_states.md)
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
