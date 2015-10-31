@@ -36,15 +36,15 @@ show interfaces detail, show interfaces detail interface-name, show interfaces e
 ###Routing
 show route: Lists the entries in all the device’s routing tables. Variants include the following:
 
-show route inet.0: Lists all IPv4 routes.
+* show route inet.0: Lists all IPv4 routes.
 
-show route inet.6l: Lists all IPv6 routes.
+* show route inet.6l: Lists all IPv6 routes.
 
-show route detail: Adds route preference, next hop, and other information.
+* show route detail: Adds route preference, next hop, and other information.
 
-show route protocol: Lists all routes learned by the specified routing protocol.
+* show route protocol: Lists all routes learned by the specified routing protocol.
 
-show route forwarding-table: Lists the entries in all the device’s forwarding tables. Use: Lets you check which active routes are actually being used to forward traffic from the device toward network destinations.
+* show route forwarding-table: Lists the entries in all the device’s forwarding tables. Use: Lets you check which active routes are actually being used to forward traffic from the device toward network destinations.
 
 show rip neighbor: Lists the RIP routers (neighbors) in the network.
 
