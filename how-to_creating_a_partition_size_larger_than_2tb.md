@@ -56,3 +56,16 @@ Next, set the default unit to TB, enter:
 ```
 (parted) unit TB
 ```
+
+To create a 3TB partition size, enter:
+```
+(parted) mkpart primary 0 0
+```
+OR
+```
+(parted) mkpart primary 0.00TB 3.00TB
+```
+To print the current partitions, enter:
+```
+(parted) print
+```
