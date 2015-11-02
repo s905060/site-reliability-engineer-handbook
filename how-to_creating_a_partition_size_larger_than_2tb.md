@@ -41,3 +41,18 @@ Using /dev/sdb
 Welcome to GNU Parted! Type 'help' to view a list of commands.
 (parted)
 ```
+
+Creates a new GPT disklabel i.e. partition table:
+```
+(parted) mklabel gpt
+```
+Sample outputs:
+```
+Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
+Yes/No? yes
+(parted)
+```
+Next, set the default unit to TB, enter:
+```
+(parted) unit TB
+```
