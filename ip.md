@@ -60,9 +60,10 @@ Type the following command
 How do I verify routing configurations?
 
 Use the ping/host commands to make sure you can reach to your gateway:
+```
 ping Your-Gateway-Ip-Here
 ping Your-DNS-Server-IP-Here
 ping 192.168.1.254
 ping www.cyberciti.biz
 host www.cyberciti.biz
-
+```
