@@ -69,3 +69,16 @@ To print the current partitions, enter:
 ```
 (parted) print
 ```
+Sample outputs:
+```
+Model: ATA ST33000651AS (scsi)
+Disk /dev/sdb: 3.00TB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Number  Start   End     Size    File system  Name     Flags
+ 1      0.00TB  3.00TB  3.00TB  ext4         primary
+```
+Quit and save the changes, enter:
+```
+(parted) quit
+```
