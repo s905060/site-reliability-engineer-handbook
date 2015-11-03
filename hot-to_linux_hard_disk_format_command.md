@@ -56,3 +56,12 @@ Append as follows:
 /dev/sdb1               /disk1           ext3    defaults        1 2
 ```
 Save and close the file.
+
+Task: Label the partition
+
+You can label the partition using e2label. For example, if you want to label the new partition /backup, enter
+```
+# e2label /dev/sdb1 /backup
+```
+You can use label name insted of partition name to mount disk using /etc/fstab:
+LABEL=/backup /disk1 ext3 defaults 1 2
