@@ -43,3 +43,16 @@ First create a mount point /disk1 and use mount command to mount /dev/sdb1, ente
 # mount /dev/sdb1 /disk1
 # df -H
 ```
+
+### Step#4 : Update /etc/fstab file
+
+Open /etc/fstab file, enter:
+```
+# vi /etc/fstab
+```
+
+Append as follows:
+```
+/dev/sdb1               /disk1           ext3    defaults        1 2
+```
+Save and close the file.
