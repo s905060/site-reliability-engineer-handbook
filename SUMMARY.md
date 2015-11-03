@@ -188,7 +188,6 @@
    * [ltrace](ltrace.md)
    * [ethtool](ethtool.md)
    * [IP](ip.md)
-   * Parted
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
