@@ -4,7 +4,7 @@ Q. I've installed a new 250GB SATA hard disk on our office CentOS Linux server. 
 
 A.. There are total 4 steps involved for hard disk upgrade and installation procedure:
 
-Step #1 : Partition the new disk using fdisk command
+### Step #1 : Partition the new disk using fdisk command
 
 Following command will list all detected hard disks:
 ```
@@ -21,3 +21,25 @@ To partition the disk - /dev/sdb, enter:
 # fdisk /dev/sdb
 ```
 The basic fdisk commands you need are:
+* m - print help
+* p - print the partition table
+* n - create a new partition
+* d - delete a partition
+* q - quit without saving changes
+* w - write the new partition table and exit
+
+### Step#2 : Format the new disk using mkfs.ext3 command
+
+To format Linux partitions using ext2fs on the new disk:
+```
+# mkfs.ext3 /dev/sdb1
+```
+
+### Step#3 : Mount the new disk using mount command
+
+First create a mount point /disk1 and use mount command to mount /dev/sdb1, enter:
+```
+# mkdir /disk1
+# mount /dev/sdb1 /disk1
+# df -H
+```
