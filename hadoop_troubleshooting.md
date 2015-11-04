@@ -156,5 +156,6 @@ No. The number of mappers is determined by the no of input splits.
 FSCK command is used to do a file system check in HDFS. It is a very useful command to check the health of the file, block names and block locations.
 
 Illustration
-
+```
 hdfs fsck /dir/hadoop-test -files -blocks -locations
+```
