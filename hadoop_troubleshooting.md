@@ -131,3 +131,9 @@ rank() over (PARTITION BY rep_country ORDER BY sales_volume DESC) as rank
 FROM
 salesrep;
 ```
+
+### What is Speculative execution?
+
+A job running on a Hadoop cluster could be divided in to many tasks. In a big cluster some of these tasks could be running slow for various reasons, hardware degradation or software miconfiguration etc. Hadoop initiates a replica of a task when it sees a tasks which is running for sometime and failed to make any progress, on average, as the other tasks from the job. This replica or duplicate exeuction of task is referred to as Speculative Execution.
+
+When a task completes successfully all the duplicate tasks that are running will be killed. So if the original task completes before the speculative task, then the speculative task is killed; on the other hand, if the speculative task finishes first, then the original is killed.
