@@ -150,3 +150,11 @@ Block is a physical division of data and does not take in to account the logical
 ### Can you change the number of mappers to be created for a job in Hadoop?
 
 No. The number of mappers is determined by the no of input splits.
+
+### How do you do a file system check in HDFS?
+
+FSCK command is used to do a file system check in HDFS. It is a very useful command to check the health of the file, block names and block locations.
+
+Illustration
+
+hdfs fsck /dir/hadoop-test -files -blocks -locations
