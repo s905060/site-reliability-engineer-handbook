@@ -146,3 +146,7 @@ Counters are a useful for gathering statistics about the job. Assume you have a 
 ### What is the difference between an InputSplit and a Block?
 
 Block is a physical division of data and does not take in to account the logical boundary of records. Meaning you could have a record that started in one block and ends in another block. Where as InputSplit considers the logical boundaries of records as well.
+
+### Can you change the number of mappers to be created for a job in Hadoop?
+
+No. The number of mappers is determined by the no of input splits.
