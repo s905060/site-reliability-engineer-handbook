@@ -236,3 +236,7 @@ Map Reduce is the ‘heart‘ of Hadoop that consists of two parts – ‘map’
 ### Can you explain how do ‘map’ and ‘reduce’ work?
 
 Namenode takes the input and divide it into parts and assign them to data nodes. These datanodes process the tasks assigned to them and make a key-value pair and returns the intermediate output to the Reducer. The reducer collects this key value pairs of all the datanodes and combines them and generates the final output.
+
+### Why are the number of splits equal to the number of maps?
+
+The number of maps is equal to the number of input splits because we want the key and value pairs of all the input splits.
