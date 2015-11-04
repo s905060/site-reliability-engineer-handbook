@@ -16,7 +16,7 @@ Hadoop has its own way of indexing. Depending upon the block size, once the data
 
 When data is stored in datanode, then the metadata of that data will be stored in the Namenode. So Namenode will identify if the data node is full.
 
-If datanodes increase, then do we need to upgrade Namenode?
+### If datanodes increase, then do we need to upgrade Namenode?
 
 While installing the Hadoop system, Namenode is determined based on the size of the clusters. Most of the time, we do not need to upgrade the Namenode because it does not store the actual data, but just the metadata, so such a requirement rarely arise.
 
