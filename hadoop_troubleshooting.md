@@ -61,3 +61,38 @@ Below properties will be defined in capacity-scheduler.xml
 <value>10</value>
 </property>
 ```
+
+### How do you benchmark your Hadoop cluster with tools that come with Hadoop?
+
+** TestDFSIO**
+
+TestDFSIO gives you an understanding of the I/O performance of your cluster. It is a read and write test for HDFS and helpful in identifying performance bottlenecks in your network, hardware and set up of your NameNode and DataNodes.
+
+** NNBench**
+
+NNBench simulate requests for creating, reading, renaming and deleting files on HDFS and is useful for load testing NameNode hardware configuration
+
+** MRBench**
+
+MRBench is a test for the MapReduce layer. It loops a small MapReduce job for a specific number of times and checks the responsiveness and efficiency of the cluster.
+
+Illustration
+
+TestDFSIO write test with 100 files and file size of 100 MB each.
+```
+$ hadoop jar /dirlocation/hadoop-test.jar TestDFSIO -write -nrFiles 100 -fileSize 100
+```
+TestDFSIO read test with 100 files and file size of 100 MB each.
+```
+$ hadoop jar /dirlocation/hadoop-test.jar TestDFSIO -read -nrFiles 100 -fileSize 100
+```
+MRBench test to run a lob of 50 small test jobs
+```
+$ hadoop jar /dirlocation/hadoop-test.jar mrbench -numRuns 50
+```
+NNBench test that creates 1000 files using 12 maps and 6 reducers.
+```
+$ hadoop jar /dirlocation/hadoop-test.jar nnbench -operation create_write \
+-maps 12 -reduces 6 -blockSize 1 -bytesToWrite 0 -numberOfFiles 1000 \
+-replicationFactorPerFile 3
+```
