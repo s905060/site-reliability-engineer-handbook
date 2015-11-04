@@ -1,6 +1,12 @@
 # HowTo Set up hostbased authentication for passphraseless SSH communication.
 
 ### Necessary settings on the source machine
+
+Three files on the server or target host must be modified to get host-based authentication working:
+/etc/shosts.equiv - same syntax as old rhosts.equiv, can point to netgroups
+/etc/ssh/ssh_known_hosts - hold the identities of the clients
+/etc/ssh/sshd_config - turn on host-based authentication
+
 Adjustments to ssh and sshd have to be done at two locations. First the source machine setup will be described:
 The file /etc/ssh/ssh_config must contain the following two lines:
 ```
