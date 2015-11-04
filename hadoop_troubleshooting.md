@@ -185,3 +185,10 @@ Illustration
 hadoop fs -setrep -w 5 -R hadoop-test
 
 hadoop fs -Ddfs.replication=5 -cp hadoop-test/test.csv hadoop-test/test_with_rep5.csv
+
+
+### What are the functions of InputFormat?
+
+Validate input data is present and check input configuration
+Create InputSplits from blocks
+Create RecordReader implementation to create key/value pairs from the raw InputSplit. These pairs will be sent one by one to their mapper.
