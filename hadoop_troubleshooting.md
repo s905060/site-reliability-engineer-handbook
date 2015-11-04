@@ -8,6 +8,20 @@ Structured data is the data that is easily identifiable as it is organized in a 
 
 In HDFS, blocks cannot be broken down. Before copying the blocks from one machine to another, the Master node will figure out what is the actual amount of space required, how many block are being used, how much space is available, and it will allocate the blocks accordingly.
 
+### How indexing is done in HDFS?
+
+Hadoop has its own way of indexing. Depending upon the block size, once the data is stored, HDFS will keep on storing the last part of the data which will say where the next part of the data will be. In fact, this is the base of HDFS.
+
+### If a data Node is full how it’s identified?
+
+When data is stored in datanode, then the metadata of that data will be stored in the Namenode. So Namenode will identify if the data node is full.
+
+If datanodes increase, then do we need to upgrade Namenode?
+
+While installing the Hadoop system, Namenode is determined based on the size of the clusters. Most of the time, we do not need to upgrade the Namenode because it does not store the actual data, but just the metadata, so such a requirement rarely arise.
+
+
+
 ### How do you debug a performance issue or a long running job?
 
 This is an open ended question and the interviewer is trying to see the level of hands-on experience you have in solving production issues. Use your day to day work experience to answer this question. Here are some of the scenarios and responses to help you construct your answer. On a very high level you will follow the below steps.
