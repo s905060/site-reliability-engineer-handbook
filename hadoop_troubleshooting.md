@@ -233,3 +233,6 @@ In Gen 1 Hadoop, Namenode is the single point of failure. In Gen 2 Hadoop, we ha
 
 Map Reduce is the ‘heart‘ of Hadoop that consists of two parts – ‘map’ and ‘reduce’. Maps and reduces are programs for processing data. ‘Map’ processes the data first to give some intermediate output which is further processed by ‘Reduce’ to generate the final output. Thus, MapReduce allows for distributed processing of the map and reduction operations.
 
+### Can you explain how do ‘map’ and ‘reduce’ work?
+
+Namenode takes the input and divide it into parts and assign them to data nodes. These datanodes process the tasks assigned to them and make a key-value pair and returns the intermediate output to the Reducer. The reducer collects this key value pairs of all the datanodes and combines them and generates the final output.
