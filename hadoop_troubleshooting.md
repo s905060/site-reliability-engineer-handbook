@@ -30,3 +30,34 @@ hive.optimize.bucketmapjoin.sortedmerge depending on the characteristics of the 
 
 1. If you see lots of records are being spilled to the disk (check for Spilled Records in the counters in your MapReduce output) you can increase the memory available for Map to perform the Shuffle by increasing the value in io.sort.mb. This will reduce the amount of Map Outputs written to the disk so the sorting of the keys can be performed in memory.
 2. On the reduce side the merge operation (merging the output from several mappers) can be done in disk by setting the mapred.inmem.merge.threshold to 0
+
+### Assume you have Research, Marketing and Finance teams funding 60%, 30% and 10% respectively of your Hadoop Cluster. How will you assign only 60% of cluster resources to Research, 30% to Marketing and 10% to Finance during peak load?
+
+Capacity scheduler in Hadoop is designed to support this use case. Capacity scheduler supports hierarchical queues and capacity can be defined for each queue.
+
+For this use case, you would have to define 3 queues under the root queue and give appropriate capacity in % for each queue.
+
+Illustration
+
+Below properties will be defined in capacity-scheduler.xml
+```
+<property>
+<name>yarn.scheduler.capacity.root.queues</name>
+<value>research,marketing,finance</value>
+</property>
+
+<property>
+<name>yarn.scheduler.capacity.research.capacity</name>
+<value>60</value>
+</property>
+
+<property>
+<name>yarn.scheduler.capacity.research.capacity</name>
+<value>30</value>
+</property>
+
+<property>
+<name>yarn.scheduler.capacity.research.capacity</name>
+<value>10</value>
+</property>
+```
