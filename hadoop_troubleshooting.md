@@ -110,3 +110,24 @@ Pig collects all of the records for a given key together on a single reducer. In
 Illustration
 
 jnd = join cinfo by city, users by city using ‘skewed’;
+
+### What is the difference between SORT BY and ORDER BY in Hive?
+
+ORDER BY performs a total ordering of the query result set. This means that all the data is passed through a single reducer, which may take an unacceptably long time to execute for larger data sets.
+
+SORT BY orders the data only within each reducer, thereby performing a local ordering, where each reducer’s output will be sorted. You will not achieve a total ordering on the dataset. Better performance is traded for total ordering.
+
+Assume you have a sales table in a company and it has sales entries from salesman around the globe. How do you rank each salesperson by country based on their sales volume in Hive?
+
+Hive support several analytic functions and one of the functions is RANK() and it is designed to do this operation.
+
+Lookup details on other window and analytic functions – https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics
+
+Illustration
+```
+Hive>SELECT
+rep_name, rep_country, sales_volume,
+rank() over (PARTITION BY rep_country ORDER BY sales_volume DESC) as rank
+FROM
+salesrep;
+```
