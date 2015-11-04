@@ -36,6 +36,10 @@ Reading is done in parallel because by doing so we can access the data fast. But
 
 The process by which the system performs the sort and transfers the map outputs to the reducer as inputs is known as the shuffle
 
+### Explain what is shuffling in MapReduce ?
+
+The process by which the system performs the sort and transfers the map outputs to the reducer as inputs is known as the shuffle
+
 ### How do you debug a performance issue or a long running job?
 
 This is an open ended question and the interviewer is trying to see the level of hands-on experience you have in solving production issues. Use your day to day work experience to answer this question. Here are some of the scenarios and responses to help you construct your answer. On a very high level you will follow the below steps.
