@@ -192,3 +192,7 @@ hadoop fs -Ddfs.replication=5 -cp hadoop-test/test.csv hadoop-test/test_with_rep
 Validate input data is present and check input configuration
 Create InputSplits from blocks
 Create RecordReader implementation to create key/value pairs from the raw InputSplit. These pairs will be sent one by one to their mapper.
+
+### What is a Record Reader?
+
+A RecordReader uses the data within the boundaries created by the input split to generate key/value pairs. Each of the generated Key/value pair will be sent one by one to their mapper.
