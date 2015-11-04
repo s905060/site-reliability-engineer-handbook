@@ -224,3 +224,12 @@ A RecordReader uses the data within the boundaries created by the input split to
 ### What is a sequence file in Hadoop?
 
 Sequence file is used to store binary key/value pairs. Sequence files support splitting even when the data inside the file is compressed which is not possible with a regular compressed file. You can either choose to perform a record level compression in which the value in the key/value pair will be compressed. Or you can also choose to choose at the block level where multiple records will be compressed together.
+
+### What is the difference between Gen1 and Gen2 Hadoop with regards to the Namenode?
+
+In Gen 1 Hadoop, Namenode is the single point of failure. In Gen 2 Hadoop, we have what is known as Active and Passive Namenodes kind of a structure. If the active Namenode fails, passive Namenode takes over the charge.
+
+### What is MapReduce?
+
+Map Reduce is the ‘heart‘ of Hadoop that consists of two parts – ‘map’ and ‘reduce’. Maps and reduces are programs for processing data. ‘Map’ processes the data first to give some intermediate output which is further processed by ‘Reduce’ to generate the final output. Thus, MapReduce allows for distributed processing of the map and reduction operations.
+
