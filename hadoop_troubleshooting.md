@@ -96,3 +96,17 @@ $ hadoop jar /dirlocation/hadoop-test.jar nnbench -operation create_write \
 -maps 12 -reduces 6 -blockSize 1 -bytesToWrite 0 -numberOfFiles 1000 \
 -replicationFactorPerFile 3
 ```
+
+### Assume you are doing a join and you notice that all but one reducer is running for a long time how do you address the problem in Pig?
+
+Pig collects all of the records for a given key together on a single reducer. In many data sets, there are a few keys that have three or more orders of magnitude more records than other keys. This results in one or two reducers that will take much longer than the rest. To deal with this, Pig provides skew join.
+
+ In the first MapReduce job pig scans the second input and identifies keys that have so many records.
+ In the second MapReduce job, it does the actual join.
+ For all except the records with the key(s) identified from the first job, pig would do a standard join.
+ For the records with keys identified by the second job, bases on how many records were seen for a given key, those records will be split across appropriate number of reducers.
+ The other input to the join that is not split, only the keys in question are then then split and then replicated to each reducer that contains that key
+
+Illustration
+
+jnd = join cinfo by city, users by city using ‘skewed’;
