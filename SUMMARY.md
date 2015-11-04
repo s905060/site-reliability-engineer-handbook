@@ -255,6 +255,7 @@
    * [ELK](elk.md)
    * [Hadoop](hadoop.md)
    * [HBase](hbase.md)
+   * Elasticsearch
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
 * [Networking Devices](networking_devices.md)
