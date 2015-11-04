@@ -196,3 +196,7 @@ Create RecordReader implementation to create key/value pairs from the raw InputS
 ### What is a Record Reader?
 
 A RecordReader uses the data within the boundaries created by the input split to generate key/value pairs. Each of the generated Key/value pair will be sent one by one to their mapper.
+
+### What is a sequence file in Hadoop?
+
+Sequence file is used to store binary key/value pairs. Sequence files support splitting even when the data inside the file is compressed which is not possible with a regular compressed file. You can either choose to perform a record level compression in which the value in the key/value pair will be compressed. Or you can also choose to choose at the block level where multiple records will be compressed together.
