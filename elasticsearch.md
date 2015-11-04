@@ -14,6 +14,6 @@ The index name is arbitrary. If there isn't an index with that name on the serve
 
 As for the type name it too is arbitrary. It serves several purposes, including:
 
-Each type has its own ID space.
-Different types can have different mappings ("schema" that defines how properties/fields should be indexed).
-Although it's possible, and common, to search over multiple types, it's easy to search only for one or more specific type(s).
+* Each type has its own ID space.
+* Different types can have different mappings ("schema" that defines how properties/fields should be indexed).
+* Although it's possible, and common, to search over multiple types, it's easy to search only for one or more specific type(s).
