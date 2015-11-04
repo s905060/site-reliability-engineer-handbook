@@ -175,3 +175,13 @@ Text (Intermediate Key Output)
 IntWritable (Intermediate Value Output)
 Text (Final Key Output)
 IntWritable (Final Value Output)
+
+### How do you overwrite replication factor?
+
+There are few ways to do this. Look at the below illustration.
+
+Illustration
+
+hadoop fs -setrep -w 5 -R hadoop-test
+
+hadoop fs -Ddfs.replication=5 -cp hadoop-test/test.csv hadoop-test/test_with_rep5.csv
