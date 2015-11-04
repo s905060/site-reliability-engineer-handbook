@@ -159,3 +159,19 @@ Illustration
 ```
 hdfs fsck /dir/hadoop-test -files -blocks -locations
 ```
+
+### What are the parameters of mappers and reducers function?
+
+Map and Reduce method signature tells you a lot about the type of input and ouput your Job will deal with. Assuming you are using TextInputFormat, Map function’s parameters could look like –
+
+LongWritable (Input Key)
+Text (Input Value)
+Text (Intermediate Key Output)
+IntWritable (Intermediate Output)
+
+The four parameters for reduce function could be –
+
+Text (Intermediate Key Output)
+IntWritable (Intermediate Value Output)
+Text (Final Key Output)
+IntWritable (Final Value Output)
