@@ -32,6 +32,10 @@ There are two types of writes in HDFS: posted and non-posted write. Posted Write
 
 Reading is done in parallel because by doing so we can access the data fast. But we do not perform the write operation in parallel. The reason is that if we perform the write operation in parallel, then it might result in data inconsistency. For example, you have a file and two nodes are trying to write data into the file in parallel, then the first node does not know what the second node has written and vice-versa. So, this makes it confusing which data to be stored and accessed.
 
+### Explain what is shuffling in MapReduce ?
+
+The process by which the system performs the sort and transfers the map outputs to the reducer as inputs is known as the shuffle
+
 ### How do you debug a performance issue or a long running job?
 
 This is an open ended question and the interviewer is trying to see the level of hands-on experience you have in solving production issues. Use your day to day work experience to answer this question. Here are some of the scenarios and responses to help you construct your answer. On a very high level you will follow the below steps.
