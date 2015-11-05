@@ -137,9 +137,10 @@ Average:       242.81    111.04    131.77    925.75   1369.90
 ```
 Following are few variations:
 
-sar -b
-sar -b 1 3
-sar -b -f /var/log/sa/sa10
+* sar -b
+* sar -b 1 3
+* sar -b -f /var/log/sa/sa10
+
 Note: Use “sar -v” to display number of inode handlers, file handlers, and pseudo-terminals used by the system.
 
 6. Individual Block Device I/O Activities (sar -d)
