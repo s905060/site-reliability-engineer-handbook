@@ -23,6 +23,11 @@ When data is stored in datanode, then the metadata of that data will be stored i
 
 While installing the Hadoop system, Namenode is determined based on the size of the clusters. Most of the time, we do not need to upgrade the Namenode because it does not store the actual data, but just the metadata, so such a requirement rarely arise.
 
+### Is there a hdfs command to see available free space in hdfs
+```
+hadoop dfsadmin -report
+```
+
 ### On what basis data will be stored on a rack?
 
 When the client is ready to load a file into the cluster, the content of the file will be divided into blocks. Now the client consults the Namenode and gets 3 datanodes for every block of the file which indicates where the block should be stored. While placing the datanodes, the key rule followed is “for every block of data, two copies will exist in one rack, third copy in a different rack“. This rule is known as “Replica Placement Policy“.
