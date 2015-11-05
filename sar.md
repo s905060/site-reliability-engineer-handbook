@@ -72,7 +72,7 @@ Following are few variations:
 ### 3. Memory Free and Used (sar -r)
 
 This reports the memory statistics. “1 3″ reports for every 1 seconds a total of 3 times. Most likely you’ll focus on “kbmemfree” and “kbmemused” for free and used memory.
-
+```
 $ sar -r 1 3
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -81,12 +81,15 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 07:28:08 AM   6209248   2097432     25.25    189024   1796544    141372      0.85   1921060     88204
 07:28:09 AM   6209248   2097432     25.25    189024   1796544    141372      0.85   1921060     88204
 Average:      6209248   2097432     25.25    189024   1796544    141372      0.85   1921060     88204
+```
+
 Following are few variations:
 
-sar -r
-sar -r 1 3
-sar -r -f /var/log/sa/sa10
-4. Swap Space Used (sar -S)
+* sar -r
+* sar -r 1 3
+* sar -r -f /var/log/sa/sa10
+
+### 4. Swap Space Used (sar -S)
 
 This reports the swap statistics. “1 3″ reports for every 1 seconds a total of 3 times. If the “kbswpused” and “%swpused” are at 0, then your system is not swapping.
 
