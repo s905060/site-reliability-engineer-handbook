@@ -191,7 +191,7 @@ Following are few variations:
 ### 7. Display context switch per second (sar -w)
 
 This reports the total number of processes created per second, and total number of context switches per second. “1 3″ reports for every 1 seconds a total of 3 times.
-
+```
 $ sar -w 1 3
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -199,15 +199,18 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 08:32:25 AM      3.00     53.00
 08:32:26 AM      4.00     61.39
 08:32:27 AM      2.00     57.00
+```
+
 Following are few variations:
 
-sar -w
-sar -w 1 3
-sar -w -f /var/log/sa/sa10
-8. Reports run queue and load average (sar -q)
+* sar -w
+* sar -w 1 3
+* sar -w -f /var/log/sa/sa10
+
+### 8. Reports run queue and load average (sar -q)
 
 This reports the run queue size and load average of last 1 minute, 5 minutes, and 15 minutes. “1 3″ reports for every 1 seconds a total of 3 times.
-
+```
 $ sar -q 1 3
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -216,6 +219,8 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 06:28:55 AM         2       210      2.01      3.15      5.15         0
 06:28:56 AM         2       230      2.12      3.12      5.12         0
 Average:            3       230      3.12      3.12      5.12         0
+```
+
 Note: The “blocked” column displays the number of tasks that are currently blocked and waiting for I/O operation to complete.
 
 Following are few variations:
