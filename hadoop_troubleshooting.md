@@ -28,6 +28,10 @@ When the client is ready to load a file into the cluster, the content of the fil
 
 To support editing and updating files WebDAV is a set of extensions to HTTP.  On most operating system WebDAV shares can be mounted as filesystems , so it is possible to access HDFS as a standard filesystem by exposing HDFS over WebDAV.
 
+### Explain what is sqoop in Hadoop ?
+
+To transfer the data between Relational database management (RDBMS) and Hadoop HDFS a tool is used known as Sqoop. Using Sqoop data can be transferred from RDMS like MySQL or Oracle into HDFS as well as exporting data from HDFS file to RDBMS
+
 ### Which are the two types of ‘writes’ in HDFS?
 
 There are two types of writes in HDFS: posted and non-posted write. Posted Write is when we write it and forget about it, without worrying about the acknowledgement. It is similar to our traditional Indian post. In a Non-posted Write, we wait for the acknowledgement. It is similar to the today’s courier services. Naturally, non-posted write is more expensive than the posted write. It is much more expensive, though both writes are asynchronous.
