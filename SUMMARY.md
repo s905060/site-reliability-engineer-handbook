@@ -231,6 +231,7 @@
    * [Hadoop Troubleshooting](hadoop_troubleshooting.md)
    * [Hive Troubleshooting](hive_troubleshooting.md)
    * [HowTo Set up hostbased authentication for passphraseless SSH communication.](howto_set_up_hostbased_authentication_for_passphraseless_ssh_communication.md)
+   * Difference between a cold and warm reboot
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
