@@ -32,6 +32,12 @@ hadoop dfsadmin -report
 Hadoop job –kill jobid
 ```
 
+### How to make a large cluster smaller by taking out some of the nodes?
+
+Hadoop offers the decommission feature to retire a set of existing data-nodes. The nodes to be retired should be included into the exclude file, and the exclude file name should be specified as a configuration parameter dfs.hosts.exclude.
+
+The decommission process can be terminated at any time by editing the configuration or the exclude files and repeating the -refreshNodes command
+
 ### On what basis data will be stored on a rack?
 
 When the client is ready to load a file into the cluster, the content of the file will be divided into blocks. Now the client consults the Namenode and gets 3 datanodes for every block of the file which indicates where the block should be stored. While placing the datanodes, the key rule followed is “for every block of data, two copies will exist in one rack, third copy in a different rack“. This rule is known as “Replica Placement Policy“.
