@@ -229,6 +229,7 @@
    * [How-To Creating a Partition Size Larger Than 2TB](how-to_creating_a_partition_size_larger_than_2tb.md)
    * [Hot-To Linux Hard Disk Format Command](hot-to_linux_hard_disk_format_command.md)
    * [Hadoop Troubleshooting](hadoop_troubleshooting.md)
+       * Hive Troubleshooting
    * [HowTo Set up hostbased authentication for passphraseless SSH communication.](howto_set_up_hostbased_authentication_for_passphraseless_ssh_communication.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
