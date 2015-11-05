@@ -38,6 +38,10 @@ Hadoop offers the decommission feature to retire a set of existing data-nodes. T
 
 The decommission process can be terminated at any time by editing the configuration or the exclude files and repeating the -refreshNodes command
 
+### What are Problems with small files and HDFS?
+
+HDFS is not good at handling large number of small files. Because every file, directory and block in HDFS is represented as an object in the namenode’s memory, each of which occupies approx 150 bytes So 10 million files, each using a block, would use about 3 gigabytes of memory. when we go for a billion files the memory requirement in namenode cannot be met.
+
 ### On what basis data will be stored on a rack?
 
 When the client is ready to load a file into the cluster, the content of the file will be divided into blocks. Now the client consults the Namenode and gets 3 datanodes for every block of the file which indicates where the block should be stored. While placing the datanodes, the key rule followed is “for every block of data, two copies will exist in one rack, third copy in a different rack“. This rule is known as “Replica Placement Policy“.
