@@ -28,12 +28,13 @@ Average:          all      0.33      0.00      0.17      0.00      0.00     99.5
 
 Following are few variations:
 
-sar -u Displays CPU usage for the current day that was collected until that point.
-sar -u 1 3 Displays real time CPU usage every 1 second for 3 times.
-sar -u ALL Same as “sar -u” but displays additional fields.
-sar -u ALL 1 3 Same as “sar -u 1 3″ but displays additional fields.
-sar -u -f /var/log/sa/sa10 Displays CPU usage for the 10day of the month from the sa10 file.
-2. CPU Usage of Individual CPU or Core (sar -P)
+* sar -u Displays CPU usage for the current day that was collected until that point.
+* sar -u 1 3 Displays real time CPU usage every 1 second for 3 times.
+* sar -u ALL Same as “sar -u” but displays additional fields.
+* sar -u ALL 1 3 Same as “sar -u 1 3″ but displays additional fields.
+* sar -u -f /var/log/sa/sa10 Displays CPU usage for the 10day of the month from the sa10 file.
+
+### 2. CPU Usage of Individual CPU or Core (sar -P)
 
 If you have 4 Cores on the machine and would like to see what the individual cores are doing, do the following.
 
