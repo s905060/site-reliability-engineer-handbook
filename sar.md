@@ -41,7 +41,7 @@ If you have 4 Cores on the machine and would like to see what the individual cor
 “-P ALL” indicates that it should displays statistics for ALL the individual Cores.
 
 In the following example under “CPU” column 0, 1, 2, and 3 indicates the corresponding CPU core numbers.
-
+```
 $ sar -P ALL 1 1
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -51,21 +51,25 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 01:34:13 PM         1     22.00      0.00      5.00      0.00      0.00     73.00
 01:34:13 PM         2      3.00      0.00      1.00      0.00      0.00     96.00
 01:34:13 PM         3      0.00      0.00      0.00      0.00      0.00    100.00
-“-P 1″ indicates that it should displays statistics only for the 2nd Core. (Note that Core number starts from 0).
+```
 
+“-P 1″ indicates that it should displays statistics only for the 2nd Core. (Note that Core number starts from 0).
+```
 $ sar -P 1 1 1
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
 01:36:25 PM       CPU     %user     %nice   %system   %iowait    %steal     %idle
 01:36:26 PM         1      8.08      0.00      2.02      1.01      0.00     88.89
+```
 Following are few variations:
 
-sar -P ALL Displays CPU usage broken down by all cores for the current day.
-sar -P ALL 1 3 Displays real time CPU usage for ALL cores every 1 second for 3 times (broken down by all cores).
-sar -P 1 Displays CPU usage for core number 1 for the current day.
-sar -P 1 1 3 Displays real time CPU usage for core number 1, every 1 second for 3 times.
-sar -P ALL -f /var/log/sa/sa10 Displays CPU usage broken down by all cores for the 10day day of the month from sa10 file.
-3. Memory Free and Used (sar -r)
+* sar -P ALL Displays CPU usage broken down by all cores for the current day.
+* sar -P ALL 1 3 Displays real time CPU usage for ALL cores every 1 second for 3 times (broken down by all cores).
+* sar -P 1 Displays CPU usage for core number 1 for the current day.
+* sar -P 1 1 3 Displays real time CPU usage for core number 1, every 1 second for 3 times.
+* sar -P ALL -f /var/log/sa/sa10 Displays CPU usage broken down by all cores for the 10day day of the month from sa10 file.
+
+### 3. Memory Free and Used (sar -r)
 
 This reports the memory statistics. “1 3″ reports for every 1 seconds a total of 3 times. Most likely you’ll focus on “kbmemfree” and “kbmemused” for free and used memory.
 
