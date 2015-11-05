@@ -102,6 +102,7 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 07:31:09 AM   8385920         0      0.00         0      0.00
 Average:      8385920         0      0.00         0      0.00
 ```
+
 Following are few variations:
 
 * sar -S
@@ -125,6 +126,7 @@ Following fields are displays in the example below.
 * wtps – Write transactions per second
 * bread/s – Bytes read per second
 * bwrtn/s – Bytes written per second
+
 ```
 $ sar -b 1 3
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
@@ -135,6 +137,7 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 01:56:31 PM    282.83     32.32    250.51    258.59   2537.37
 Average:       242.81    111.04    131.77    925.75   1369.90
 ```
+
 Following are few variations:
 
 * sar -b
@@ -239,20 +242,22 @@ sar -n KEYWORD
 
 KEYWORD can be one of the following:
 
-DEV – Displays network devices vital statistics for eth0, eth1, etc.,
-EDEV – Display network device failure statistics
-NFS – Displays NFS client activities
-NFSD – Displays NFS server activities
-SOCK – Displays sockets in use for IPv4
-IP – Displays IPv4 network traffic
-EIP – Displays IPv4 network errors
-ICMP – Displays ICMPv4 network traffic
-EICMP – Displays ICMPv4 network errors
-TCP – Displays TCPv4 network traffic
-ETCP – Displays TCPv4 network errors
-UDP – Displays UDPv4 network traffic
-SOCK6, IP6, EIP6, ICMP6, UDP6 are for IPv6
-ALL – This displays all of the above information. The output will be very long.
+* DEV – Displays network devices vital statistics for eth0, eth1, etc.,
+* EDEV – Display network device failure statistics
+* NFS – Displays NFS client activities
+* NFSD – Displays NFS server activities
+* SOCK – Displays sockets in use for IPv4
+* IP – Displays IPv4 network traffic
+* EIP – Displays IPv4 network errors
+* ICMP – Displays ICMPv4 network traffic
+* EICMP – Displays ICMPv4 network errors
+* TCP – Displays TCPv4 network traffic
+* ETCP – Displays TCPv4 network errors
+* UDP – Displays UDPv4 network traffic
+* SOCK6, IP6, EIP6, ICMP6, UDP6 are for IPv6
+* ALL – This displays all of the above information. The output will be very long.
+
+```
 $ sar -n DEV 1 1
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -260,7 +265,9 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 01:11:14 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
 01:11:14 PM      eth0    342.57    342.57  93923.76 141773.27      0.00      0.00      0.00
 01:11:14 PM      eth1      0.00      0.00      0.00      0.00      0.00      0.00      0.00
-10. Report Sar Data Using Start Time (sar -s)
+```
+
+### 10. Report Sar Data Using Start Time (sar -s)
 
 When you view historic sar data from the /var/log/sa/saXX file using “sar -f” option, it displays all the sar data for that specific day starting from 12:00 a.m for that day.
 
@@ -270,6 +277,7 @@ You can combine -s option with other sar option.
 
 For example, to report the load average on 26th of this month starting from 10 a.m in the morning, combine the -q and -s option as shown below.
 
+```
 $ sar -q -f /var/log/sa/sa23 -s 10:00:01
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -279,10 +287,13 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 ...
 11:20:01 AM         0       127      5.00      3.00      3.00         0
 12:00:01 PM         0       127      4.00      2.00      1.00         0
+```
+
 There is no option to limit the end-time. You just have to get creative and use head command as shown below.
 
 For example, starting from 10 a.m, if you want to see 7 entries, you have to pipe the above output to “head -n 10″.
 
+```
 $ sar -q -f /var/log/sa/sa23 -s 10:00:01 | head -n 10
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -294,3 +305,4 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 10:50:01 AM         0       127      3.00      5.00      5.00         0
 11:00:01 AM         0       127      2.00      1.00      6.00         0
 11:10:01 AM         0       127      1.00      3.00      7.00         2
+```
