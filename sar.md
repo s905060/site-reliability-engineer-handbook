@@ -225,9 +225,10 @@ Note: The “blocked” column displays the number of tasks that are currently b
 
 Following are few variations:
 
-sar -q
-sar -q 1 3
-sar -q -f /var/log/sa/sa10
+* sar -q
+* sar -q 1 3
+* sar -q -f /var/log/sa/sa10
+
 9. Report network statistics (sar -n)
 
 This reports various network statistics. For example: number of packets received (transmitted) through the network card, statistics of packet failure etc.,. “1 3″ reports for every 1 seconds a total of 3 times.
