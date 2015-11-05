@@ -187,7 +187,8 @@ Following are few variations:
 * sar -d 1 3
 * sar -d -f /var/log/sa/sa10
 * sar -p -d
-7. Display context switch per second (sar -w)
+
+### 7. Display context switch per second (sar -w)
 
 This reports the total number of processes created per second, and total number of context switches per second. “1 3″ reports for every 1 seconds a total of 3 times.
 
