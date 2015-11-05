@@ -27,6 +27,10 @@ While installing the Hadoop system, Namenode is determined based on the size of 
 ```
 hadoop dfsadmin -report
 ```
+### How do you gracefully stop a running job?
+```
+Hadoop job –kill jobid
+```
 
 ### On what basis data will be stored on a rack?
 
