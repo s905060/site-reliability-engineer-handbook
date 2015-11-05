@@ -92,7 +92,7 @@ Following are few variations:
 ### 4. Swap Space Used (sar -S)
 
 This reports the swap statistics. “1 3″ reports for every 1 seconds a total of 3 times. If the “kbswpused” and “%swpused” are at 0, then your system is not swapping.
-
+```
 $ sar -S 1 3
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -101,11 +101,12 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 07:31:08 AM   8385920         0      0.00         0      0.00
 07:31:09 AM   8385920         0      0.00         0      0.00
 Average:      8385920         0      0.00         0      0.00
+```
 Following are few variations:
 
-sar -S
-sar -S 1 3
-sar -S -f /var/log/sa/sa10
+* sar -S
+* sar -S 1 3
+* sar -S -f /var/log/sa/sa10
 Notes:
 
 Use “sar -R” to identify number of memory pages freed, used, and cached per second by the system.
