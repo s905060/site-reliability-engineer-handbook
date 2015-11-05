@@ -120,11 +120,12 @@ This reports I/O statistics. “1 3″ reports for every 1 seconds a total of 3 
 
 Following fields are displays in the example below.
 
-tps – Transactions per second (this includes both read and write)
-rtps – Read transactions per second
-wtps – Write transactions per second
-bread/s – Bytes read per second
-bwrtn/s – Bytes written per second
+* tps – Transactions per second (this includes both read and write)
+* rtps – Read transactions per second
+* wtps – Write transactions per second
+* bread/s – Bytes read per second
+* bwrtn/s – Bytes written per second
+```
 $ sar -b 1 3
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -133,6 +134,7 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 01:56:30 PM    100.00     36.00     64.00    304.00    816.00
 01:56:31 PM    282.83     32.32    250.51    258.59   2537.37
 Average:       242.81    111.04    131.77    925.75   1369.90
+```
 Following are few variations:
 
 sar -b
