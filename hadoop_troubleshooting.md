@@ -1,5 +1,8 @@
 # Hadoop Troubleshooting
 
+### What does ‘jps’ command do?
+It gives the status of the deamons which run Hadoop cluster. It gives the output mentioning the status of namenode, datanode , secondary namenode, Jobtracker and Task tracker.
+
 ### What is structured and unstructured data?
 
 Structured data is the data that is easily identifiable as it is organized in a structure. The most common form of structured data is a database where specific information is stored in tables, that is, rows and columns. Unstructured data refers to any data that cannot be identified easily. It could be in the form of images, videos, documents, email, logs and random text. It is not in the form of rows and columns.
