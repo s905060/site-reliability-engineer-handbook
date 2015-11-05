@@ -143,10 +143,10 @@ Following are few variations:
 
 Note: Use “sar -v” to display number of inode handlers, file handlers, and pseudo-terminals used by the system.
 
-6. Individual Block Device I/O Activities (sar -d)
+### 6. Individual Block Device I/O Activities (sar -d)
 
 To identify the activities by the individual block devices (i.e a specific mount point, or LUN, or partition), use “sar -d”
-
+```
 $ sar -d 1 1
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -159,12 +159,14 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 01:59:46 PM  dev120-1      8.08      0.00    105.05     13.00      0.00      0.38      0.38      0.30
 01:59:46 PM dev120-96      1.01      8.08      0.00      8.00      0.01      9.00      9.00      0.91
 01:59:46 PM dev120-97      1.01      8.08      0.00      8.00      0.01      9.00      9.00      0.91
+```
+
 In the above example “DEV” indicates the specific block device.
 
 For example: “dev53-1″ means a block device with 53 as major number, and 1 as minor number.
 
 The device name (DEV column) can display the actual device name (for example: sda, sda1, sdb1 etc.,), if you use the -p option (pretty print) as shown below.
-
+```
 $ sar -p -d 1 1
 Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 
@@ -177,12 +179,14 @@ Linux 2.6.18-194.el5PAE (dev-db)        03/26/2011      _i686_  (8 CPU)
 01:59:46 PM      sdf1      8.08      0.00    105.05     13.00      0.00      0.38      0.38      0.30
 01:59:46 PM      sda2      1.01      8.08      0.00      8.00      0.01      9.00      9.00      0.91
 01:59:46 PM      sdb2      1.01      8.08      0.00      8.00      0.01      9.00      9.00      0.91
+```
+
 Following are few variations:
 
-sar -d
-sar -d 1 3
-sar -d -f /var/log/sa/sa10
-sar -p -d
+* sar -d
+* sar -d 1 3
+* sar -d -f /var/log/sa/sa10
+* sar -p -d
 7. Display context switch per second (sar -w)
 
 This reports the total number of processes created per second, and total number of context switches per second. “1 3″ reports for every 1 seconds a total of 3 times.
