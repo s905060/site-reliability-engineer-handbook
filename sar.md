@@ -109,11 +109,12 @@ Following are few variations:
 * sar -S -f /var/log/sa/sa10
 Notes:
 
-Use “sar -R” to identify number of memory pages freed, used, and cached per second by the system.
-Use “sar -H” to identify the hugepages (in KB) that are used and available.
-Use “sar -B” to generate paging statistics. i.e Number of KB paged in (and out) from disk per second.
-Use “sar -W” to generate page swap statistics. i.e Page swap in (and out) per second.
-5. Overall I/O Activities (sar -b)
+* Use “sar -R” to identify number of memory pages freed, used, and cached per second by the system.
+* Use “sar -H” to identify the hugepages (in KB) that are used and available.
+* Use “sar -B” to generate paging statistics. i.e Number of KB paged in (and out) from disk per second.
+* Use “sar -W” to generate page swap statistics. i.e Page swap in (and out) per second.
+
+### 5. Overall I/O Activities (sar -b)
 
 This reports I/O statistics. “1 3″ reports for every 1 seconds a total of 3 times.
 
