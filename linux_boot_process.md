@@ -55,8 +55,10 @@ Execute ‘grep initdefault /etc/inittab’ on your system to identify the defau
 If you want to get into trouble, you can set the default run level to 0 or 6. Since you know what 0 and 6 means, probably you might not do that.
 Typically you would set the default run level to either 3 or 5.
 
+```
 init 0 = shutdown -h 
 init 6 = reboot
+```
 
 * Runlevel programs
 
