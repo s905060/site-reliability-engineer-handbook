@@ -46,10 +46,10 @@ Let’s take this one to analyse
 
 We will split the output for better understanding.
 
-Field 1	Field 2	Field 3	Field 4	Field 5	Field 6	Field 7	Field 8	Field 9	Field 10
-```
--	rw-	r--	r--	1	root	root	209	Mar 30 17:41	printcap
-```
+
+| Field 1 |	Field 2|	Field 3 |	Field 4|	Field 5	|Field 6|	Field 7	|Field 8|	Field 9	|Field 10|
+|-- |--|--|--|--|--|--|--|--|--|
+|-	|rw-|	r--	|r--|	1	|root|	root	|209|	Mar 30 17:41|	printcap
 
 **The first field could be**
 
