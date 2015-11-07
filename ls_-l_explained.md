@@ -62,7 +62,8 @@ Those are permissions that means read, write and execute, and comes in three dif
 * second: The owner has over the file
 * third: The group has over the file
 * fourth: Everybody else has over the file
-* The fifth field
+
+**The fifth field**
 
 This field specifies the number of links or directories inside this directory.
 
