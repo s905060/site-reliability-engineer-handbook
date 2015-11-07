@@ -189,6 +189,7 @@
    * [ethtool](ethtool.md)
    * [IP](ip.md)
    * [Sar](sar.md)
+   * nethogs
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
