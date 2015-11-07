@@ -25,3 +25,7 @@ mickey ~ # lsof | grep deleted
 ...
 mysqld     5840  mysql    5w      REG       8,17 60305288765     212995 /data/log/mysql/mysql.log (deleted)
 ```
+
+Check for files on located under mount points. Frequently if you mount a directory (say a sambafs) onto a filesystem that already had a file or directories under it, you lose the ability to see those files, but they're still consuming space on the underlying disk. I've had file copies while in single user mode dump files into directories that I couldn't see except in single usermode (due to other directory systems being mounted on top of them).
+
+See what 'df -i' says. It could be that you are out of inodes, which might happen if there are a large number of small files in that filesystem, which uses up all the available inodes without consuming all the available space.
