@@ -55,6 +55,9 @@ Execute ‘grep initdefault /etc/inittab’ on your system to identify the defau
 If you want to get into trouble, you can set the default run level to 0 or 6. Since you know what 0 and 6 means, probably you might not do that.
 Typically you would set the default run level to either 3 or 5.
 
+init 0 = shutdown -h 
+init 6 = reboot
+
 * Runlevel programs
 
 When the Linux system is booting up, you might see various services getting started. For example, it might say “starting sendmail …. OK”. Those are the runlevel programs, executed from the run level directory as defined by your run level.
