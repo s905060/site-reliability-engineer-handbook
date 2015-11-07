@@ -1,5 +1,7 @@
 #Linux Boot Process
 
+![](Screen Shot 2015-11-07 at 10.15.07 AM.png)
+
 ![](linux-boot-process.png)
 ---
 * BIOS
