@@ -236,6 +236,7 @@
    * [Difference between a cold and warm reboot](difference_between_a_cold_and_warm_reboot.md)
    * [ls -l explained](ls_-l_explained.md)
    * [df falsely showing 100 per cent disk usage](df_falsely_showing_100_per_cent_disk_usage.md)
+   * FSCK explained
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
