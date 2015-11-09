@@ -69,3 +69,8 @@ There are various troubleshooting commands to test and verify the behavior of yo
 
 You should be able to see all aggregated links along with a “Load” value, similar to the following:
 
+**Show EtherChannel port-channel**
+
+![](33.jpg)
+
+**Show etherchannel load-balance**
