@@ -42,3 +42,7 @@ Various methods exist for efficiently distributing traffic load across bundled l
 * **Src-dst-port**: In case that we have most of the traffic traversing constant end-devices distributing traffic based on source and destination ports might be the better solution to achieve better load balancing between aggregated links.
 
 In any case, you need to monitor your links and observe how traffic is distributed among them. Based on your observations and considering the pattern of your traffic you should be able to decide upon the optimal loading balance method applicable for you.
+
+### How to Configure a LACP EtherChannel
+
+Configuring a LACP EtherChannel between two interconnected switches is straightforward. You need to perform the following:
