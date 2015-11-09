@@ -9,3 +9,12 @@ Do not get disappointed, for there is a solution to this problem. The solution i
 * Increased perceived redundancy level; a single or double link failure between two switches can be immediately overcome.
  
 * Expansion of bandwidth between switches; added bandwidth requirements can be satisfied by bundling interconnection links.
+
+Prerequisites of Enabling EtherChannel
+Nothing comes without a price. Fortunately the prerequisites for enabling EtherChannel between two switches are simple and easy to accomplish. These are:
+
+* EtherChannel bundle links must be of the same type and speed. For example if we intend to combine FastEthernet links (100Mbps) then all bundle links MUST be FastEthernet links of 100Mbps speed.
+
+* All links intended to be bundled MUST NOT exceed the number of eight physical links. Up to eight physical links can be combined into one logical link.
+
+* All links MUST belong to the same VLAN if used as access links. They MUST carry the same VLANS if used as trunk links and MUST be configured with identical STP settings.
