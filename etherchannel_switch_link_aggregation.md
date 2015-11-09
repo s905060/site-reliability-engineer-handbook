@@ -56,3 +56,9 @@ channel-group 1 mode active
 You should repeat the above commands to all aggregated interfaces on both switches.
 
 * Configure the EtherChannel Load Balancing Method on Global config mode
+
+**port-channel load-balance src-dst-ip**
+
+### Troubleshoot EtherChannel Status
+
+There are various troubleshooting commands to test and verify the behavior of your EtherChannel. The most important commands are presented below:
