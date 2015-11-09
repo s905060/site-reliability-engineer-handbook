@@ -18,3 +18,11 @@ Nothing comes without a price. Fortunately the prerequisites for enabling EtherC
 * All links intended to be bundled MUST NOT exceed the number of eight physical links. Up to eight physical links can be combined into one logical link.
 
 * All links MUST belong to the same VLAN if used as access links. They MUST carry the same VLANS if used as trunk links and MUST be configured with identical STP settings.
+
+### EtherChannel Negotiation Protocols
+
+Link aggregation wouldn’t exist if it wasn’t for Control protocols to negotiate and establish EtherChannel connectivity. On Catalyst switches, two EtherChannel negotiation protocols are supported:
+
+* Port Aggregation Protocol (PAgP): Cisco Proprietary protocol; EtherChannel negotiation is carried out on EtherChannel capable ports in order to achieve bundling of physical links.
+
+* Link Aggregation Control Protocol (LACP): Standardized protocol defined in IEEE 802.3ad; Similar to PAgP. Nevertheless, LACP, has the following major differences compared to PAgP:
