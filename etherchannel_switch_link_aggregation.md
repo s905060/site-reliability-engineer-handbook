@@ -30,3 +30,8 @@ Link aggregation wouldn’t exist if it wasn’t for Control protocols to negoti
 – LACP assigns roles to interconnected switches, so that the master switch is allowed to make decisions on which ports are participating in the EtherChannel at any given time.
 
 – Up to sixteen switch links can be part of the bundle group, though, eight of them can be active at the same time. Activation of a standby links is performed only when an active link goes down.
+
+### EtherChannel Load Balancing Methods
+
+Various methods exist for efficiently distributing traffic load across bundled links. There is no “best method.” The effectiveness of each method relies upon the individual network architecture and the specific traffic architecture. The most important EtherChannel load distribution methods are:
+
