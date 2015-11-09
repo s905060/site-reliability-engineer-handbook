@@ -74,3 +74,11 @@ You should be able to see all aggregated links along with a “Load” value, si
 ![](33.jpg)
 
 **Show etherchannel load-balance**
+
+The above command can be used to verify the load balancing method. The output will be similar to this:
+
+EtherChannel Load-Balancing Operational State (src-dst-ip):
+
+### Good practice
+
+You should incorporate into your monthly routines, monitoring of the EtherChannel links. You need to make sure that you have adequate interconnection bandwidth to accommodate your traffic. Moreover, useful information regarding link utilization could be obtained, thus helping you decide upon appropriate measures to balance this utilization among your links.
