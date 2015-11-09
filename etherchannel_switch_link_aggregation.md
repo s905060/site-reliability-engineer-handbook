@@ -46,3 +46,13 @@ In any case, you need to monitor your links and observe how traffic is distribut
 ### How to Configure a LACP EtherChannel
 
 Configuring a LACP EtherChannel between two interconnected switches is straightforward. You need to perform the following:
+
+* Specify the Switch interfaces to be aggregated by assigning each one of these interfaces to the same channel group number (a number from 1 to 64). Also, you need to specify the EtherChannel protocol which in this example is LACP and the channel negotiation type which can basically take one of two values: **passive** (wait to be asked) or **active** (normal behavior).
+```
+interface GigabitEthernet1/0/1
+channel-protocol lacp
+channel-group 1 mode active
+```
+You should repeat the above commands to all aggregated interfaces on both switches.
+
+* Configure the EtherChannel Load Balancing Method on Global config mode
