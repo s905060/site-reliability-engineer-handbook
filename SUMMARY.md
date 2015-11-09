@@ -64,6 +64,7 @@
    * [CDN Operation](cdn_operation.md)
    * [Network/Subnet splitting](networksubnet_splitting.md)
    * [TCP Connection Termination](tcp_connection_termination.md)
+   * Ethernet Bonding modes
 * [Programming Language](programming_language.md)
    * [Python](python.md)
        * [Time Format](time_format.md)
