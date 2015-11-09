@@ -62,3 +62,10 @@ You should repeat the above commands to all aggregated interfaces on both switch
 ### Troubleshoot EtherChannel Status
 
 There are various troubleshooting commands to test and verify the behavior of your EtherChannel. The most important commands are presented below:
+
+**Show etherchannel port**
+
+![](24.jpg)
+
+You should be able to see all aggregated links along with a “Load” value, similar to the following:
+
