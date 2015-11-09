@@ -35,3 +35,10 @@ Link aggregation wouldn’t exist if it wasn’t for Control protocols to negoti
 
 Various methods exist for efficiently distributing traffic load across bundled links. There is no “best method.” The effectiveness of each method relies upon the individual network architecture and the specific traffic architecture. The most important EtherChannel load distribution methods are:
 
+**Src-dst-ip**:	Traffic is distributed to bundled links according to source and destination IP address combination. Therefore, in networks where traffic originates from many different sources destined for the same or different destinations, is distributed in a balance way across aggregated links.
+
+**Src-dst-mac**: Traffic distribution is based upon source and destination mac-address combination. This method accomplishes fair load distribution only in cases that only Layer 2 switching takes place, and traffic route patterns do not cross router interfaces.
+
+**Src-dst-port**: In case that we have most of the traffic traversing constant end-devices distributing traffic based on source and destination ports might be the better solution to achieve better load balancing between aggregated links.
+
+In any case, you need to monitor your links and observe how traffic is distributed among them. Based on your observations and considering the pattern of your traffic you should be able to decide upon the optimal loading balance method applicable for you.
