@@ -192,7 +192,7 @@
    * [IP](ip.md)
    * [Sar](sar.md)
    * [nethogs](nethogs.md)
-   * zip
+   * [zip](zip.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
