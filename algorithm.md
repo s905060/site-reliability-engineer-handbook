@@ -14,6 +14,14 @@
 *  Quizzes on Algorithms
 *  Misc
 
+![](Screen Shot 2015-11-16 at 10.38.14 PM.png)
+
+![](Screen Shot 2015-11-16 at 10.38.23 PM.png)
+
+![](Screen Shot 2015-11-16 at 10.38.30 PM.png)
+
+![](Screen Shot 2015-11-16 at 10.38.41 PM.png)
+
 ## Data Structure Basics
 
 ###**Array**
