@@ -35,3 +35,14 @@ Sets the email you want atached to your commit transactions
 ```$ git config --global color.ui auto```
 
 Enables helpful colorization of command line output
+
+**CREATE REPOSITORIES**
+Start a new repository or obtain one from an existing URL
+
+```$ git init [project-name]```
+
+Creates a new local repository with the specified name
+
+```$ git clone [url]```
+
+Downloads a project and its entire version history
