@@ -41,13 +41,14 @@ If a dynamic array is full, it copies it's contents to a larger array.
 * Optimized Search: Linear array: O(log n), * Dynamic array: O(log n)
 * Insertion: Linear array: n/a Dynamic array: O(n)
 
-Linked List
+### Linked List
 
-Definition:
+### Definition:
 
-Stores data with nodes that point to other nodes.
-Nodes, at its most basic it has one datum and one reference (another node).
-A linked list chains nodes together by pointing one node's reference towards another node.
+* Stores data with nodes that point to other nodes.
+ * Nodes, at its most basic it has one datum and one reference (another node).
+ * A linked list chains nodes together by pointing one node's reference towards another node.
+
 What you need to know:
 
 Designed to optimize insertion and deletion, slow at indexing and searching.
