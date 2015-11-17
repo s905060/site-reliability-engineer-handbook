@@ -127,6 +127,7 @@ temp-*
 A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns
 
 **SAVE FRAGMENTS**
+
 Shelve and restore incomplete changes
 
 ```$ git stash```
