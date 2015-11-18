@@ -16,3 +16,10 @@ def aFunction():
  
 aFunction()
 ```
+
+When you run the code above you will see the following:
+```
+>>Entering aFunction
+>>aFunction running
+>>Exited aFunction
+```
