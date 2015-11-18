@@ -52,7 +52,7 @@ unsafe(0):  Error: integer division or modulo by zero
 
 Using decorators you can make sweeping changes to existing code with minimal effort, like the error reporting function above, you could go back and just sprinkle these in older code.
 
-Example #1: Calculate how much time a function takes to execute.
+**Example #1**: Calculate how much time a function takes to execute.
 
 ```
 import time
@@ -80,7 +80,7 @@ print my_function()
 
 This returns the time before you run my_function() as well as the time after. Then we simply subtract the two to see how long it took to run the function.
 
-Example #2: Rate limiting the call to a function.
+**Example #2**: Rate limiting the call to a function.
 ```
 from time import sleep
 
@@ -107,7 +107,7 @@ This decorator is used for rate limiting.
 
 These examples have beem taken from the great article Primer on Python Decorators, check it out!
 
-Example 3: If you need to debug by printing out the arguments a function was called with, you could write this:
+**Example 3**: If you need to debug by printing out the arguments a function was called with, you could write this:
 
 ```
 def argument_printer(func):
