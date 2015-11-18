@@ -51,3 +51,73 @@ unsafe(0):  Error: integer division or modulo by zero
 ```
 
 Using decorators you can make sweeping changes to existing code with minimal effort, like the error reporting function above, you could go back and just sprinkle these in older code.
+
+Example #1: Calculate how much time a function takes to execute.
+
+```
+import time
+
+def timing_function(some_function):
+    """
+    Outputs the time a function takes to execute.
+    """
+    def wrapper():
+        t1 = time.time()
+        some_function()
+        t2 = time.time()
+        return "Time it took to run the function: " + str((t2-t1)) + "\n"
+    return wrapper
+
+@timing_function
+def my_function():
+    num_list = []
+    for x in (range(0,10000)):
+        num_list.append(x)
+    print "\nSum of all the numbers: " +str((sum(num_list)))
+
+print my_function()
+```
+
+This returns the time before you run my_function() as well as the time after. Then we simply subtract the two to see how long it took to run the function.
+
+Example #2: Rate limiting the call to a function.
+```
+from time import sleep
+
+def sleep_decorator(function):
+"""
+Limits how fast the function is called.
+"""
+    def wrapper(*args, **kwargs):
+        sleep(2)
+        return function(*args, **kwargs)
+    return wrapper
+
+@sleep_decorator
+def print_number(num):
+    return num
+
+print print_number(222)
+
+for x in range(1,6):
+    print print_number(x)
+```
+
+This decorator is used for rate limiting.
+
+These examples have beem taken from the great article Primer on Python Decorators, check it out!
+
+Example 3: If you need to debug by printing out the arguments a function was called with, you could write this:
+
+```
+def argument_printer(func):
+    def _wrapper(*args, **kwargs):
+        print "Called with positional arguments: %s" % list(args)
+        print "And with keyword arguments: %s" % kwargs
+        return func(*args, **kwargs)
+    return _wrapper
+
+@argument_printer
+def add(x, y):
+    return x + y
+```
