@@ -99,6 +99,7 @@
        * [Unittest](unittest.md)
        * [Why is it better to use “#!/usr/bin/env NAME” instead of “#!/path/to/NAME” as my shebang?](why_is_it_better_to_use_usrbinenv_name_instead_of_pathtoname_as_my_shebang.md)
        * [OS](os.md)
+       * Decorator
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
