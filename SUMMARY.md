@@ -104,7 +104,7 @@
        * [OS](os.md)
        * [Decorator](decorator.md)
        * [String Formatting](string_formatting.md)
-       * SimplePrograms
+       * [SimplePrograms](simpleprograms.md)
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
