@@ -42,3 +42,16 @@ However, when a process writes to it's memory, it needs to be a private copy tha
 
 Copy on write also has a big advantage for exec. Since exec will simply be overwriting all the memory with the new program, actually copying the memory would waste a lot of time. Copy on write saves us actually doing the copy.
 
+### The init process
+
+We discussed the overall goal of the init process previously, and we are now in a position to understand how it works.
+
+On boot the kernel starts the init process, which then forks and execs the systems boot scripts. These fork and exec more programs, eventually ending up forking a login process.
+
+The other job of the init process is "reaping". When a process calls exit with a return code, the parent usually wants to check this code to see if the child exited correctly or not.
+
+However, this exit code is part of the process which has just called exit. So the process is "dead" (e.g. not running) but still needs to stay around until the return code is collected. A process in this state is called a zombie (the traits of which you can contrast with a mystical zombie!)
+
+A process stays as a zombie until the parent collects the return code with the wait call. However, if the parent exits before collecting this return code, the zombie process is still around, waiting aimlessly to give it's status to someone.
+
+In this case, the zombie child will be reparented to the init process which has a special handler that reaps the return value. Thus the process is finally free and can the descriptor can be removed from the kernels process table.
