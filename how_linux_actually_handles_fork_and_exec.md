@@ -55,3 +55,38 @@ However, this exit code is part of the process which has just called exit. So th
 A process stays as a zombie until the parent collects the return code with the wait call. However, if the parent exits before collecting this return code, the zombie process is still around, waiting aimlessly to give it's status to someone.
 
 In this case, the zombie child will be reparented to the init process which has a special handler that reaps the return value. Thus the process is finally free and can the descriptor can be removed from the kernels process table.
+
+### Zombie example
+
+```
+1 
+                  $ cat zombie.c
+    #include <stdio.h>
+    #include <stdlib.h>
+  5 
+    int main(void)
+    {
+            pid_t pid;
+    
+ 10         printf("parent : %d\n", getpid());
+    
+            pid = fork();
+    
+            if (pid == 0) {
+ 15                 printf("child : %d\n", getpid());
+                    sleep(2);
+                    printf("child exit\n");
+                    exit(1);
+            }
+ 20 
+            /* in parent */
+            while (1)
+            {
+                    sleep(1);
+ 25         }
+    }
+    
+    ianw@lime:~$ ps ax | grep [z]ombie
+    16168 pts/9    S      0:00 ./zombie
+ 30 16169 pts/9    Z      0:00 [zombie] <defunct>
+```
