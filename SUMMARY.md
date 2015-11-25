@@ -32,7 +32,7 @@
    * [What is the difference between a process and a thread](what_is_the_difference_between_a_process_and_a_thread.md)
    * [The Differences Between MBR and GPT](the_differences_between_mbr_and_gpt.md)
    * [Fork](fork.md)
-   * Exec
+   * [Exec](exec.md)
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
