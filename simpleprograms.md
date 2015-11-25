@@ -308,7 +308,7 @@ for ingredient in tree.getiterator('tr'):
 
 28 lines: 8-Queens Problem (define your own exceptions)
 
-
+```
 BOARD_SIZE = 8
 
 class BailOut(Exception):
@@ -337,9 +337,11 @@ def add_queen(queens):
 queens = add_queen([])
 print queens
 print "\n".join(". "*q + "Q " + ". "*(BOARD_SIZE-q-1) for q in queens)
+```
 
 33 lines: "Guess the Number" Game (edited) from http://inventwithpython.com
 
+```
 
 import random
 
@@ -369,3 +371,4 @@ if guess == number:
     print 'Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made)
 else:
     print 'Nope. The number I was thinking of was {0}'.format(number)
+```
