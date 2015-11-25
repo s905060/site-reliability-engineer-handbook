@@ -33,7 +33,7 @@
    * [The Differences Between MBR and GPT](the_differences_between_mbr_and_gpt.md)
    * [Fork](fork.md)
    * [Exec](exec.md)
-   * How Linux actually handles fork and exec
+   * [How Linux actually handles fork and exec](how_linux_actually_handles_fork_and_exec.md)
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
