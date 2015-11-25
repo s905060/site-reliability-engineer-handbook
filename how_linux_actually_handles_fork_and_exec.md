@@ -90,3 +90,7 @@ In this case, the zombie child will be reparented to the init process which has 
     16168 pts/9    S      0:00 ./zombie
  30 16169 pts/9    Z      0:00 [zombie] <defunct>
 ```
+
+Above we create a zombie process. The parent process will sleep forever, whilst the child will exit after a few seconds.
+
+Below the code you can see the results of running the program. The parent process (16168) is in state S for sleep (as we expect) and the child is in state Z for zombie. The ps output also tells us that the process is defunct in the process description.
