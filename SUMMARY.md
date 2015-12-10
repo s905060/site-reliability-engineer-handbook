@@ -283,7 +283,7 @@
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
    * [Puppet](puppet.md)
-       * Puppet CLI
+       * [Puppet CLI](puppet_cli.md)
 * [Networking Devices](networking_devices.md)
    * [Cisco](cisco.md)
    * [Juniper](juniper.md)
