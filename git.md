@@ -1,5 +1,7 @@
 # Git
 
+![](bg2015120901.png)
+
 **INSTALL GIT**
 
 GitHub provides desktop clients that include a graphical user
