@@ -252,7 +252,7 @@
    * [FSCK explained](fsck_explained.md)
    * [Manually generate password for /etc/shadow](manually_generate_password_for_etcshadow.md)
    * [How To Change Timezone on a CentOS 6 and 7](how_to_change_timezone_on_a_centos_6_and_7.md)
-   * Setting ssh private key forwarding
+   * [Setting ssh private key forwarding](setting_ssh_private_key_forwarding.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
