@@ -64,3 +64,27 @@ puppet module uninstall <name>
 puppet module upgrade <name>
 puppet module search <name>
 ```
+
+* Inspecting Resources/Types
+puppet describe -l
+puppet resource <type name>
+
+# Querying Examples
+puppet resource user john.smith
+puppet resource service apache
+puppet resource mount /data
+puppet resource file /etc/motd
+puppet resource package wget
+
+# Trigger puppet run from master
+puppet kick <name>
+puppet kick -p 5 <names>      # 5 parallel
+
+* Debugging deployment and rules on a local machine. This only makes sense in "one time" mode running in one of the following variants:
+```
+puppetd --test # enable standard debugging options
+puppetd --debug # enable full debugging
+puppetd --one-time --detailed-exitcodes # Enable exit codes:
+           # 2=changes applied
+           # 4=failure
+```
