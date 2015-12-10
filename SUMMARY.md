@@ -282,7 +282,7 @@
    * [Elasticsearch](elasticsearch.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
-   * Puppet
+   * [Puppet](puppet.md)
 * [Networking Devices](networking_devices.md)
    * [Cisco](cisco.md)
    * [Juniper](juniper.md)
