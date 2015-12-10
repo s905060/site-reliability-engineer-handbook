@@ -284,7 +284,7 @@
    * [Ansible](ansible.md)
    * [Puppet](puppet.md)
        * [Puppet CLI](puppet_cli.md)
-       * Puppet DSL
+       * [Puppet DSL](puppet_dsl.md)
 * [Networking Devices](networking_devices.md)
    * [Cisco](cisco.md)
    * [Juniper](juniper.md)
