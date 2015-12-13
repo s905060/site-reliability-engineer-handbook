@@ -297,7 +297,7 @@ Host remote_alias
 
 This will allow you to log in without specifying the specific port number on the command line.
 
-Adding your SSH Keys to an SSH Agent to Avoid Typing the Passphrase
+###Adding your SSH Keys to an SSH Agent to Avoid Typing the Passphrase
 
 If you have an passphrase on your private SSH key, you will be prompted to enter the passphrase every time you use it to connect to a remote host.
 
@@ -306,46 +306,60 @@ To avoid having to repeatedly do this, you can run an SSH agent. This small util
 This is also important if you need to forward your SSH credentials (shown below).
 
 To start the SSH Agent, type the following into your local terminal session:
-
+```
 eval $(ssh-agent)
 Agent pid 10891
-This will start the agent program and place it into the background. Now, you need to add your private key to the agent, so that it can manage your key:
+```
 
+This will start the agent program and place it into the background. Now, you need to add your private key to the agent, so that it can manage your key:
+```
 ssh-add
 Enter passphrase for /home/demo/.ssh/id_rsa:
 Identity added: /home/demo/.ssh/id_rsa (/home/demo/.ssh/id_rsa)
+```
+
 You will have to enter your passphrase (if one is set). Afterwards, your identity file is added to the agent, allowing you to use your key to sign in without having re-enter the passphrase again.
 
-Forwarding your SSH Credentials to Use on a Server
+###Forwarding your SSH Credentials to Use on a Server
 
 If you wish to be able to connect without a password to one server from within another server, you will need to forward your SSH key information. This will allow you to authenticate to another server through the server you are connected to, using the credentials on your local computer.
 
 To start, you must have your SSH agent started and your SSH key added to the agent (see above). After this is done, you need to connect to your first server using the -A option. This forwards your credentials to the server for this session:
-
+```
 ssh -A username@remote_host
+```
+
 From here, you can SSH into any other host that your SSH key is authorized to access. You will connect as if your private SSH key were located on this server.
 
-Server-Side Configuration Options
+###Server-Side Configuration Options
 This section contains some common server-side configuration options that can shape the way that your server responds and what types of connections are allowed.
 
-Disabling Password Authentication
+###Disabling Password Authentication
 
 If you have SSH keys configured, tested, and working properly, it is probably a good idea to disable password authentication. This will prevent any user from signing in with SSH using a password.
 
 To do this, connect to your remote server and open the /etc/ssh/sshd_config file with root or sudo privileges:
-
+```
 sudo nano /etc/ssh/sshd_config
-Inside of the file, search for the PasswordAuthentication directive. If it is commented out, uncomment it. Set it to "no" to disable password logins:
+```
 
+Inside of the file, search for the PasswordAuthentication directive. If it is commented out, uncomment it. Set it to "no" to disable password logins:
+```
 PasswordAuthentication no
+```
+
 After you have made the change, save and close the file. To implement the changes, you should restart the SSH service.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
-On CentOS/Fedora:
+```
 
+On CentOS/Fedora:
+```
 sudo service sshd restart
+```
+
 Now, all accounts on the system will be unable to login with SSH using passwords.
 
 Changing the Port that the SSH Daemon Runs On
