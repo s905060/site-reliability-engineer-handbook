@@ -259,6 +259,7 @@
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
 * [Monitoring](monitoring.md)
    * [Nagios](nagios.md)
+   * Zabbix
 * [Database](database.md)
    * [MySQL](mysql.md)
 * [Algorithm](algorithm.md)
