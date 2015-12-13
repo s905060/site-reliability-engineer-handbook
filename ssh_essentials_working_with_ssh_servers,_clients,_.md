@@ -684,10 +684,10 @@ If for some reason you need to bypass the multiplexing configuration temporarily
 ssh -S none username@remote_host
 ```
 
-Setting Up SSH Tunnels
+###Setting Up SSH Tunnels
 Tunneling other traffic through a secure SSH tunnel is an excellent way to work around restrictive firewall settings. It is also a great way to encrypt otherwise unencrypted network traffic.
 
-Configuring Local Tunneling to a Server
+###Configuring Local Tunneling to a Server
 
 SSH connections can be used to tunnel traffic from ports on the local host to ports on a remote host.
 
