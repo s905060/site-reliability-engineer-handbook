@@ -280,7 +280,7 @@
    * [Mesos](mesos.md)
    * [ELK](elk.md)
    * [Hadoop](hadoop.md)
-       * Hadoop Safe Mode
+       * [Hadoop Safe Mode](hadoop_safe_mode.md)
    * [HBase](hbase.md)
    * [Elasticsearch](elasticsearch.md)
 * [Automation Tool](automation_tool.md)
