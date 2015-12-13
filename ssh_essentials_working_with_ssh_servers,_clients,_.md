@@ -703,13 +703,17 @@ The port that you want your remote host to connect on.
 These are given, in the order above (separated by colons), as arguments to the -L flag. We will also use the -f flag, which causes SSH to go into the background before executing and the -N flag, which does not open a shell or execute a program on the remote side.
 
 For instance, to connect to example.com on port 80 on your remote host, making the connection available on your local machine on port 8888, you could type:
-
+```
 ssh -f -N -L 8888:example.com:80 username@remote_host
+```
+
 Now, if you point your local web browser to 127.0.0.1:8888, you should see whatever content is at example.com on port 80.
 
 A more general guide to the syntax is:
-
+```
 ssh -L your_port:site_or_IP_to_access:site_port username@host
+```
+
 Since the connection is in the background, you will have to find its PID to kill it. You can do so by searching for the port you forwarded:
 
 ps aux | grep 8888
