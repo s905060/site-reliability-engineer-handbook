@@ -721,7 +721,10 @@ ps aux | grep 8888
 1001      6113  0.0  0.0  13648   952 pts/2    S+   12:37   0:00 grep --colour=auto 8888
 You can then kill the process by targeting the PID, which is the number in the second column of the line that matches your SSH command:
 
+```
 kill 5965
+```
+
 Another option is to start the connection without the -f flag. This will keep the connection in the foreground, preventing you from using the terminal window for the duration of the forwarding. The benefit of this is that you can easily kill the tunnel by typing "CTRL-C".
 
 Configuring Remote Tunneling to a Server
