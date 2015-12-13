@@ -715,10 +715,12 @@ ssh -L your_port:site_or_IP_to_access:site_port username@host
 ```
 
 Since the connection is in the background, you will have to find its PID to kill it. You can do so by searching for the port you forwarded:
-
+```
 ps aux | grep 8888
 1001      5965  0.0  0.0  48168  1136 ?        Ss   12:28   0:00 ssh -f -N -L 8888:example.com:80 username@remote_host
 1001      6113  0.0  0.0  13648   952 pts/2    S+   12:37   0:00 grep --colour=auto 8888
+```
+
 You can then kill the process by targeting the PID, which is the number in the second column of the line that matches your SSH command:
 
 ```
