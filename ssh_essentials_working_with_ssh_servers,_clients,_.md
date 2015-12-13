@@ -727,7 +727,7 @@ kill 5965
 
 Another option is to start the connection without the -f flag. This will keep the connection in the foreground, preventing you from using the terminal window for the duration of the forwarding. The benefit of this is that you can easily kill the tunnel by typing "CTRL-C".
 
-Configuring Remote Tunneling to a Server
+###Configuring Remote Tunneling to a Server
 
 SSH connections can be used to tunnel traffic from ports on the local host to ports on a remote host.
 
@@ -737,9 +737,10 @@ This can be useful if you need to allow access to an internal network that is lo
 
 To establish a remote tunnel to your remote server, you need to use the -R parameter when connecting and you must supply three pieces of additional information:
 
-The port where the remote host can access the tunneled connection.
-The host that you want your local computer to connect to.
-The port that you want your local computer to connect to.
+* The port where the remote host can access the tunneled connection.
+* The host that you want your local computer to connect to.
+* The port that you want your local computer to connect to.
+
 These are given, in the order above (separated by colons), as arguments to the -R flag. We will also use the -f flag, which causes SSH to go into the background before executing and the -N flag, which does not open a shell or execute a program on the remote side.
 
 For instance, to connect to example.com on port 80 on our local computer, making the connection available on our remote host on port 8888, you could type:
