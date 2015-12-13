@@ -189,80 +189,112 @@ If you do not have the ssh-copy-id utility available, but still have password-ba
 
 You can output the contents of the key and pipe it into the ssh command. On the remote side, you can ensure that the ~/.ssh directory exists, and then append the piped contents into the ~/.ssh/authorized_keys file:
 
+```
 cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+```
+
 You will be asked to supply the password for the remote account:
 
+```
 The authenticity of host '111.111.11.111 (111.111.11.111)' can't be established.
 ECDSA key fingerprint is fd:fd:d4:f9:77:fe:73:84:e1:55:00:ad:d6:6d:22:fe.
 Are you sure you want to continue connecting (yes/no)? yes
 demo@111.111.11.111's password:
+```
+
 After entering the password, your key will be copied, allowing you to log in without a password:
 
+```
 ssh username@remote_IP_host
 Copying your Public SSH Key to a Server Manually
+```
 
 If you do not have password-based SSH access available, you will have to add your public key to the remote server manually.
 
 On your local machine, you can find the contents of your public key file by typing:
 
+```
 cat ~/.ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqql6MzstZYh1TmWWv11q5O3pISj2ZFl9HgH1JLknLLx44+tXfJ7mIrKNxOOwxIxvcBF8PXSYvobFYEZjGIVCEAjrUzLiIxbyCoxVyle7Q+bqgZ8SeeM8wzytsY+dVGcBxF6N4JS+zVk5eMcV385gG3Y6ON3EG112n6d+SMXY0OEBIcO6x+PnUSGHrSgpBgX7Ks1r7xqFa7heJLLt2wWwkARptX7udSq05paBhcpB0pHtA1Rfz3K2B+ZVIpSDfki9UVKzT8JUmwW6NNzSgxUfQHGwnW7kj4jp4AT0VZk3ADw497M2G/12N0PPB5CnhHf7ovgy6nL1ikrygTKRFmNZISvAcywB9GVqNAVE+ZHDSCuURNsAInVzgYo9xgJDW8wUw2o8U77+xiFxgI5QSZX3Iq7YLMgeksaO4rBJEa54k8m5wEiEE1nUhLuJ0X/vh2xPff6SQ1BL/zkOhvJCACK6Vb15mDOeCSq54Cr7kvS46itMosi/uS66+PujOO+xt/2FWYepz6ZlN70bRly57Q06J+ZJoc9FfBCbCyYH7U/ASsmY095ywPsBo1XQ9PqhnN1/YOorJ068foQDNVpm146mUpILVxmq41Cj55YKHEazXGsdBIbXWhcrRf4G2fJLRcGUr9q8/lERo9oxRm5JFX6TCmj6kmiFqv+Ow9gI0x8GvaQ== demo@test
+```
+
 You can copy this value, and manually paste it into the appropriate location on the remote server. You will have to log into the remote server through other means (like the DigitalOcean web console).
 
 On the remote server, create the ~/.ssh directory if it does not already exist:
 
+```
 mkdir -p ~/.ssh
+```
+
 Afterwards, you can create or append the ~/.ssh/authorized_keys file by typing:
 
+```
 echo public_key_string >> ~/.ssh/authorized_keys
+```
+
 You should now be able to log into the remote server without a password.
 
 Basic Connection Instructions
 The following section will cover some of the basics about how to connect to a server with SSH.
 
-Connecting to a Remote Server
+###Connecting to a Remote Server
 
 To connect to a remote server and open a shell session there, you can use the ssh command.
 
 The simplest form assumes that your username on your local machine is the same as that on the remote server. If this is true, you can connect using:
-
+```
 ssh remote_host
+```
+
 If your username is different on the remoter server, you need to pass the remote user's name like this:
-
+```
 ssh username@remote_host
-Your first time connecting to a new host, you will see a message that looks like this:
+```
 
+Your first time connecting to a new host, you will see a message that looks like this:
+```
 The authenticity of host '111.111.11.111 (111.111.11.111)' can't be established.
 ECDSA key fingerprint is fd:fd:d4:f9:77:fe:73:84:e1:55:00:ad:d6:6d:22:fe.
 Are you sure you want to continue connecting (yes/no)? yes
 Type "yes" to accept the authenticity of the remote host.
+```
 
 If you are using password authentication, you will be prompted for the password for the remote account here. If you are using SSH keys, you will be prompted for your private key's passphrase if one is set, otherwise you will be logged in automatically.
 
-Running a Single Command on a Remote Server
+###Running a Single Command on a Remote Server
 
 To run a single command on a remote server instead of spawning a shell session, you can add the command after the connection information, like this:
-
+```
 ssh username@remote_host command_to_run
+```
+
 This will connect to the remote host, authenticate with your credentials, and execute the command you specified. The connection will immediately close afterwards.
 
-Logging into a Server with a Different Port
+###Logging into a Server with a Different Port
 
 By default the SSH daemon on a server runs on port 22. Your SSH client will assume that this is the case when trying to connect. If your SSH server is listening on a non-standard port (this is demonstrated in a later section), you will have to specify the new port number when connecting with your client.
 
 You can do this by specifying the port number with the -p option:
 
+```
 ssh -p port_num username@remote_host
+```
+
 To avoid having to do this every time you log into your remote server, you can create or edit a configuration file in the ~/.ssh directory within the home directory of your local computer.
 
 Edit or create the file now by typing:
-
+```
 nano ~/.ssh/config
+```
+
 In here, you can set host-specific configuration options. To specify your new port, use a format like this:
 
+```
 Host remote_alias
     HostName remote_host
     Port port_num
+```
+
 This will allow you to log in without specifying the specific port number on the command line.
 
 Adding your SSH Keys to an SSH Agent to Avoid Typing the Passphrase
