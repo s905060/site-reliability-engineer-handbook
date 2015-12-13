@@ -781,26 +781,32 @@ Traffic that is passed to this local port will be sent to the remote host. From 
 To establish the connection, we will pass the -D flag along with the local port where we wish to access the tunnel. We will also use the -f flag, which causes SSH to go into the background before executing and the -N flag, which does not open a shell or execute a program on the remote side.
 
 For instance, to establish a tunnel on port "7777", you can type:
-
+```
 ssh -f -N -D 7777 username@remote_host
+```
+
 From here, you can start pointing your SOCKS-aware application (like a web browser), to the port you selected. The application will send its information into a socket associated with the port.
 
 The method of directing traffic to the SOCKS port will differ depending on application. For instance, in Firefox, the general location is Preferences > Advanced > Settings > Manual proxy configurations. In Chrome, you can start the application with the --proxy-server= flag set. You will want to use the localhost interface and the port you forwarded.
 
 Since the connection is in the background, you will have to find its PID to kill it. You can do so by searching for the port you forwarded:
-
+```
 ps aux | grep 8888
 1001      5965  0.0  0.0  48168  1136 ?        Ss   12:28   0:00 ssh -f -N -D 7777 username@remote_host
 1001      6113  0.0  0.0  13648   952 pts/2    S+   12:37   0:00 grep --colour=auto 8888
-You can then kill the process by targeting the PID, which is the number in the second column, of the line that matches your SSH command:
+```
 
+You can then kill the process by targeting the PID, which is the number in the second column, of the line that matches your SSH command:
+```
 kill 5965
+```
+
 Another option is to start the connection without the -f flag. This will keep the connection in the foreground, preventing you from using the terminal window for the duration of the forwarding. The benefit of this is that you can easily kill the tunnel by typing "CTRL-C".
 
-Using SSH Escape Codes to Control Connections
+###Using SSH Escape Codes to Control Connections
 Even after establishing an SSH session, it is possible to exercise control over the connection from within the terminal. We can do this with something called SSH escape codes, which allow us to interact with our local SSH software from within a session.
 
-Forcing a Disconnect from the Client-Side (How to Exit Out of a Stuck or Frozen Session)
+###Forcing a Disconnect from the Client-Side (How to Exit Out of a Stuck or Frozen Session)
 
 One of the most useful feature of OpenSSH that goes largely unnoticed is the ability to control certain aspects of the session from within.
 
@@ -809,35 +815,45 @@ These commands can be executed starting with the ~ control character within an S
 One of the most useful controls is the ability to initiate a disconnect from the client. SSH connections are typically closed by the server, but this can be a problem if the server is suffering from issues or if the connection has been broken. By using a client-side disconnect, the connection can be cleanly closed from the client.
 
 To close a connection from the client, use the control character (~), with a dot. If your connection is having problems, you will likely be in what appears to be a stuck terminal session. Type the commands despite the lack of feedback to perform a client-side disconnect:
-
+```
 [ENTER]
 ~.
+```
+
 The connection should immediately close, returning you to your local shell session.
 
-Placing an SSH Session into the Background
+###Placing an SSH Session into the Background
 
 One of the most useful feature of OpenSSH that goes largely unnoticed is the ability to control certain aspects of the session from within the connection.
 
 These commands can be executed starting with the ~ control character from within an SSH connection. Control commands will only be interpreted if they are the first thing that is typed after a newline, so always press ENTER one or two times prior to using one.
 
 One capability that this provides is to put an SSH session into the background. To do this, we need to supply the control character (~) and then execute the conventional keyboard shortcut to background a task (CTRL-z):
-
+```
 [ENTER]
 ~[CTRL-z]
+```
+
 This will place the connection into the background, returning you to your local shell session. To return to your SSH session, you can use the conventional job control mechanisms.
 
 You can immediately re-activate your most recent backgrounded task by typing:
-
+```
 fg
-If you have multiple backgrounded tasks, you can see the available jobs by typing:
+```
 
+If you have multiple backgrounded tasks, you can see the available jobs by typing:
+```
 jobs
 [1]+  Stopped                 ssh username@some_host
 [2]   Stopped                 ssh username@another_host
-You can then bring any of the tasks to the foreground by using the index in the first column with a percentage sign:
+```
 
+You can then bring any of the tasks to the foreground by using the index in the first column with a percentage sign:
+```
 fg %2
-Changing Port Forwarding Options on an Existing SSH Connection
+```
+
+###Changing Port Forwarding Options on an Existing SSH Connection
 
 One of the most useful feature of OpenSSH that goes largely unnoticed is the ability to control certain aspects of the session from within the connection.
 
@@ -846,12 +862,14 @@ These commands can be executed starting with the ~ control character from within
 One thing that this allows is for a user to alter the port forwarding configuration after the connection has already been established. This allows you to create or tear down port forwarding rules on-the-fly.
 
 These capabilities are part of the SSH command line interface, which can be accessed during a session by using the control character (~) and "C":
-
+```
 [ENTER]
 ~C
 ssh>
-You will be given an SSH command prompt, which has a very limited set of valid commands. To see the available options, you can type -h from this prompt. If nothing is returned, you may have to increase the verbosity of your SSH output by using ~v a few times:
+```
 
+You will be given an SSH command prompt, which has a very limited set of valid commands. To see the available options, you can type -h from this prompt. If nothing is returned, you may have to increase the verbosity of your SSH output by using ~v a few times:
+```
 [ENTER]
 ~v
 ~v
@@ -865,17 +883,23 @@ Commands:
       -KL[bind_address:]port                 Cancel local forward
       -KR[bind_address:]port                 Cancel remote forward
       -KD[bind_address:]port                 Cancel dynamic forward
+```
+
 As you can see, you can easily implement any of the forwarding options using the appropriate options (see the forwarding section for more information). You can also destroy a tunnel with the associated "kill" command specified with a "K" before the forwarding type letter. For instance, to kill a local forward (-L), you could use the -KL command. You will only need to provide the port for this.
 
 So, to set up a local port forward, you may type:
-
+```
 [ENTER]
 ~C
 -L 8888:127.0.0.1:80
-Port 8888 on your local computer will now be able to communicate with the web server on the host you are connecting to. When you are finished, you can tear down that forward by typing:
+```
 
+Port 8888 on your local computer will now be able to communicate with the web server on the host you are connecting to. When you are finished, you can tear down that forward by typing:
+```
 [ENTER]
 ~C
 -KL 8888
-Conclusion
+```
+
+###Conclusion
 The above instructions should cover the majority of the information most users will need about SSH on a day-to-day basis. If you have other tips or wish to share your favorite configurations and methods, feel free to use the comments below.
