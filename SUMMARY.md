@@ -259,7 +259,7 @@
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
 * [Monitoring](monitoring.md)
    * [Nagios](nagios.md)
-       * How can I manually run a nagios check from the command line?
+       * [How can I manually run a nagios check from the command line?](how_can_i_manually_run_a_nagios_check_from_the_com.md)
    * [Zabbix](zabbix.md)
 * [Database](database.md)
    * [MySQL](mysql.md)
