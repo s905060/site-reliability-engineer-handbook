@@ -430,35 +430,48 @@ sudo groupadd -r sshmembers
 ```
 
 Make sure that you add whatever user accounts you need to this group. This can be done by typing:
-
+```
 sudo usermod -a -G sshmembers user1
 sudo usermod -a -G sshmembers user2
+```
+
 Now, restart the SSH daemon to implement your changes.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
-On CentOS/Fedora:
+```
 
+On CentOS/Fedora:
+```
 sudo service sshd restart
 Disabling Root Login
+```
 
 It is often advisable to completely disable root login through SSH after you have set up an SSH user account that has sudo privileges.
 
 To do this, open the SSH daemon configuration file with root or sudo on your remote server.
-
+```
 sudo nano /etc/ssh/sshd_config
-Inside, search for a directive called PermitRootLogin. If it is commented, uncomment it. Change the value to "no":
+```
 
+Inside, search for a directive called PermitRootLogin. If it is commented, uncomment it. Change the value to "no":
+```
 PermitRootLogin no
+```
+
 Save and close the file. To implement your changes, restart the SSH daemon.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
-On CentOS/Fedora:
+```
 
+On CentOS/Fedora:
+```
 sudo service sshd restart
+```
+
 Allowing Root Access for Specific Commands
 
 There are some cases where you might want to disable root access generally, but enable it in order to allow certain applications to run correctly. An example of this might be a backup routine.
