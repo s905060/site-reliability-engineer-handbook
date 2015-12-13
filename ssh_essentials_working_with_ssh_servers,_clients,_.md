@@ -746,24 +746,31 @@ To establish a remote tunnel to your remote server, you need to use the -R param
 These are given, in the order above (separated by colons), as arguments to the -R flag. We will also use the -f flag, which causes SSH to go into the background before executing and the -N flag, which does not open a shell or execute a program on the remote side.
 
 For instance, to connect to example.com on port 80 on our local computer, making the connection available on our remote host on port 8888, you could type:
-
+```
 ssh -f -N -R 8888:example.com:80 username@remote_host
+```
+
 Now, on the remote host, opening a web browser to 127.0.0.1:8888 would allow you to see whatever content is at example.com on port 80.
 
 A more general guide to the syntax is:
-
+```
 ssh -R remote_port:site_or_IP_to_access:site_port username@host
-Since the connection is in the background, you will have to find its PID to kill it. You can do so by searching for the port you forwarded:
+```
 
+Since the connection is in the background, you will have to find its PID to kill it. You can do so by searching for the port you forwarded:
+```
 ps aux | grep 8888
 1001      5965  0.0  0.0  48168  1136 ?        Ss   12:28   0:00 ssh -f -N -R 8888:example.com:80 username@remote_host
 1001      6113  0.0  0.0  13648   952 pts/2    S+   12:37   0:00 grep --colour=auto 8888
+```
 You can then kill the process by targeting the PID, which is the number in the second column, of the line that matches your SSH command:
-
+```
 kill 5965
+```
+
 Another option is to start the connection without the -f flag. This will keep the connection in the foreground, preventing you from using the terminal window for the duration of the forwarding. The benefit of this is that you can easily kill the tunnel by typing "CTRL-C".
 
-Configuring Dynamic Tunneling to a Remote Server
+###Configuring Dynamic Tunneling to a Remote Server
 
 SSH connections can be used to tunnel traffic from ports on the local host to ports on a remote host.
 
