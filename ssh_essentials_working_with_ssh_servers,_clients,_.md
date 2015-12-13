@@ -655,25 +655,35 @@ To set up multiplexing, you can manually set up the connections, or you can conf
 
 To configure multiplexing, edit your SSH client's configuration file on your local machine:
 
+```
 nano ~/.ssh/config
+```
+
 If you do not already have a wildcard host definition at the top of the file, add one now (as Host *). We will be setting the ControlMaster, ControlPath, and ControlPersist values to establish our multiplexing configuration.
 
 The ControlMaster should be set to "auto" in able to automatically allow multiplexing if possible. The ControlPath will establish the path to control socket. The first session will create this socket and subsequent sessions will be able to find it because it is labeled by username, host, and port.
 
 Setting the ControlPersist option to "1" will allow the initial master connection to be backgrounded. The "1" specifies that the TCP connection should automatically terminate one second after the last SSH session is closed:
-
+```
 Host *
     ControlMaster auto
     ControlPath ~/.ssh/multiplex/%r@%h:%p
     ControlPersist 1
-Save and close the file when you are finished. Now, we need to actually create the directory we specified in the control path:
+```
 
+Save and close the file when you are finished. Now, we need to actually create the directory we specified in the control path:
+```
 mkdir ~/.ssh/multiplex
+```
+
 Now, any sessions that are established with the same machine will attempt to use the existing socket and TCP connection. When the last session exists, the connection will be torn down after one second.
 
 If for some reason you need to bypass the multiplexing configuration temporarily, you can do so by passing the -S flag with "none":
 
+```
 ssh -S none username@remote_host
+```
+
 Setting Up SSH Tunnels
 Tunneling other traffic through a secure SSH tunnel is an excellent way to work around restrictive firewall settings. It is also a great way to encrypt otherwise unencrypted network traffic.
 
