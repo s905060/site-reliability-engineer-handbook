@@ -199,3 +199,8 @@ Uploads all local branch commits to GitHub
 ```$ git pull```
 
 Downloads bookmark history and incorporates changes
+
+```git pull --rebase <remote>```
+
+Fetch the specified remote’s copy of the current branch and immediately merge it into the local copy. This is the same as git fetch <remote> followed by git merge origin/<current-branch>.
+Same as the above command, but instead of using git merge to integrate the remote branch with the local one, use git rebase.
