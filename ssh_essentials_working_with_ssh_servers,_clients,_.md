@@ -576,7 +576,7 @@ ssh testhost
 ```
 
 You can also use wildcards to match more than one host. Keep in mind that later matches can override earlier ones. Because of this, you should put your most general matches at the top. For instance, you could default all connections to not allow X forwarding, with an override for example.com by having this in your file:
-
+```
 Host *
     ForwardX11 no
 
@@ -585,6 +585,8 @@ Host testhost
     ForwardX11 yes
     Port 4444
     User demo
+```
+
 Save and close the file when you are finished.
 
 Keeping Connections Alive to Avoid Timeout
