@@ -204,3 +204,14 @@ Downloads bookmark history and incorporates changes
 
 Fetch the specified remote’s copy of the current branch and immediately merge it into the local copy. This is the same as git fetch <remote> followed by git merge origin/<current-branch>.
 Same as the above command, but instead of using git merge to integrate the remote branch with the local one, use git rebase.
+
+Examples
+The following example demonstrates how to synchronize with the central repository's master branch:
+
+```
+git checkout master
+git pull --rebase origin
+```
+
+This simply moves your local changes onto the top of what everybody else has already contributed.
+
