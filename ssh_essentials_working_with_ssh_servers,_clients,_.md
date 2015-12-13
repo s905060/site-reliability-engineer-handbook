@@ -362,53 +362,73 @@ sudo service sshd restart
 
 Now, all accounts on the system will be unable to login with SSH using passwords.
 
-Changing the Port that the SSH Daemon Runs On
+###Changing the Port that the SSH Daemon Runs On
 
 Some administrators suggest that you change the default port that SSH runs on. This can help decrease the number of authentication attempts your server is subjected to from automated bots.
 
 To change the port that the SSH daemon listens on, you will have to log into your remote server. Open the sshd_config file on the remote system with root privileges, either by logging in with that user or by using sudo:
-
+```
 sudo nano /etc/ssh/sshd_config
-Once you are inside, you can change the port that SSH runs on by finding the Port 22 specification and modifying it to reflect the port you wish to use. For instance, to change the port to 4444, put this in your file:
+```
 
+Once you are inside, you can change the port that SSH runs on by finding the Port 22 specification and modifying it to reflect the port you wish to use. For instance, to change the port to 4444, put this in your file:
+```
 #Port 22
 Port 4444
+```
+
 Save and close the file when you are finished. To implement the changes, you must restart the SSH daemon.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
-On CentOS/Fedora:
+```
 
+On CentOS/Fedora:
+```
 sudo service sshd restart
+```
+
 After the daemon restarts, you will need to authenticate by specifying the port number (demonstrated in an earlier section).
 
-Limiting the Users Who can Connect Through SSH
+###Limiting the Users Who can Connect Through SSH
 
 To explicitly limit the user accounts who are able to login through SSH, you can take a few different approaches, each of which involve editing the SSH daemon config file.
 
 On your remote server, open this file now with root or sudo privileges:
-
+```
 sudo nano /etc/ssh/sshd_config
-The first method of specifying the accounts that are allowed to login is using the AllowUsers directive. Search for the AllowUsers directive in the file. If one does not exist, create it anywhere. After the directive, list the user accounts that should be allowed to login through SSH:
+```
 
+The first method of specifying the accounts that are allowed to login is using the AllowUsers directive. Search for the AllowUsers directive in the file. If one does not exist, create it anywhere. After the directive, list the user accounts that should be allowed to login through SSH:
+```
 AllowUsers user1 user2
+```
+
 Save and close the file. Restart the daemon to implement your changes.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
+```
+
 On CentOS/Fedora:
-
+```
 sudo service sshd restart
-If you are more comfortable with group management, you can use the AllowGroups directive instead. If this is the case, just add a single group that should be allowed SSH access (we will create this group and add members momentarily):
+```
 
+If you are more comfortable with group management, you can use the AllowGroups directive instead. If this is the case, just add a single group that should be allowed SSH access (we will create this group and add members momentarily):
+```
 AllowGroups sshmembers
+```
+
 Save and close the file.
 
 Now, you can create a system group (without a home directory) matching the group you specified by typing:
-
+```
 sudo groupadd -r sshmembers
+```
+
 Make sure that you add whatever user accounts you need to this group. This can be done by typing:
 
 sudo usermod -a -G sshmembers user1
