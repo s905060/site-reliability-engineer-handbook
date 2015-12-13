@@ -589,42 +589,52 @@ Host testhost
 
 Save and close the file when you are finished.
 
-Keeping Connections Alive to Avoid Timeout
+###Keeping Connections Alive to Avoid Timeout
 
 If you find yourself being disconnected from SSH sessions before you are ready, it is possible that your connection is timing out.
 
 You can configure your client to send a packet to the server every so often in order to avoid this situation:
 
 On your local computer, you can configure this for every connection by editing your ~/.ssh/config file. Open it now:
-
+```
 nano ~/.ssh/config
-If one does not already exist, at the top of the file, define a section that will match all hosts. Set the ServerAliveInterval to "120" to send a packet to the server every two minutes. This should be enough to notify the server not to close the connection:
+```
 
+If one does not already exist, at the top of the file, define a section that will match all hosts. Set the ServerAliveInterval to "120" to send a packet to the server every two minutes. This should be enough to notify the server not to close the connection:
+```
 Host *
     ServerAliveInterval 120
+```
+
 Save and close the file when you are finished.
 
-Disabling Host Checking
+###Disabling Host Checking
 
 By default, whenever you connect to a new server, you will be shown the remote SSH daemon's host key fingerprint.
-
+```
 The authenticity of host '111.111.11.111 (111.111.11.111)' can't be established.
 ECDSA key fingerprint is fd:fd:d4:f9:77:fe:73:84:e1:55:00:ad:d6:6d:22:fe.
 Are you sure you want to continue connecting (yes/no)? yes
+```
+
 This is configured so that you can verify the authenticity of the host you are attempting to connect to and spot instances where a malicious user may be trying to masquerade as the remote host.
 
 In certain circumstances, you may wish to disable this feature. Note: This can be a big security risk, so make sure you know what you are doing if you set your system up like this.
 
 To make the change, the open the ~/.ssh/config file on your local computer:
-
+```
 nano ~/.ssh/config
-If one does not already exist, at the top of the file, define a section that will match all hosts. Set the StrictHostKeyChecking directive to "no" to add new hosts automatically to the known_hosts file. Set the UserKnownHostsFile to /dev/null to not warn on new or changed hosts:
+```
 
+If one does not already exist, at the top of the file, define a section that will match all hosts. Set the StrictHostKeyChecking directive to "no" to add new hosts automatically to the known_hosts file. Set the UserKnownHostsFile to /dev/null to not warn on new or changed hosts:
+```
 Host *
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
-You can enable the checking on a case-by-case basis by reversing those options for other hosts. The default for StrictHostKeyChecking is "ask":
+```
 
+You can enable the checking on a case-by-case basis by reversing those options for other hosts. The default for StrictHostKeyChecking is "ask":
+```
 Host *
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
@@ -633,7 +643,9 @@ Host testhost
     HostName example.com
     StrictHostKeyChecking ask
     UserKnownHostsFile /home/demo/.ssh/known_hosts
-Multiplexing SSH Over a Single TCP Connection
+```
+
+###Multiplexing SSH Over a Single TCP Connection
 
 There are situations where establishing a new TCP connection can take longer than you would like. If you are making multiple connections to the same machine, you can take advantage of multiplexing.
 
