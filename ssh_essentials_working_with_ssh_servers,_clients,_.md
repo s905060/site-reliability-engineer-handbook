@@ -472,61 +472,82 @@ On CentOS/Fedora:
 sudo service sshd restart
 ```
 
-Allowing Root Access for Specific Commands
+###Allowing Root Access for Specific Commands
 
 There are some cases where you might want to disable root access generally, but enable it in order to allow certain applications to run correctly. An example of this might be a backup routine.
 
 This can be accomplished through the root user's authorized_keys file, which contains SSH keys that are authorized to use the account.
 
 Add the key from your local computer that you wish to use for this process (we recommend creating a new key for each automatic process) to the root user's authorized_keys file on the server. We will demonstrate with the ssh-copy-id command here, but you can use any of the methods of copying keys we discuss in other sections:
-
+```
 ssh-copy-id root@remote_host
+```
+
 Now, log into the remote server. We will need to adjust the entry in the authorized_keys file, so open it with root or sudo access:
-
+```
 sudo nano /root/.ssh/authorized_keys
-At the beginning of the line with the key you uploaded, add a command= listing that defines the command that this key is valid for. This should include the full path to the executable, plus any arguments:
+```
 
+At the beginning of the line with the key you uploaded, add a command= listing that defines the command that this key is valid for. This should include the full path to the executable, plus any arguments:
+```
 command="/path/to/command arg1 arg2" ssh-rsa ...
+```
+
 Save and close the file when you are finished.
 
 Now, open the sshd_config file with root or sudo privileges:
-
+```
 sudo nano /etc/ssh/sshd_config
+```
+
 Find the directive PermitRootLogin, and change the value to forced-commands-only. This will only allow SSH key logins to use root when a command has been specified for the key:
 
 PermitRootLogin forced-commands-only
 Save and close the file. Restart the SSH daemon to implement your changes.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
+```
 On CentOS/Fedora:
-
+```
 sudo service sshd restart
-Forwarding X Application Displays to the Client
+```
+
+###Forwarding X Application Displays to the Client
 
 The SSH daemon can be configured to automatically forward the display of X applications on the server to the client machine. For this to function correctly, the client must have an X windows system configured and enabled.
 
 To enable this functionality, log into your remote server and edit the sshd_config file as root or with sudo privileges:
-
+```
 sudo nano /etc/ssh/sshd_config
-Search for the X11Forwarding directive. If it is commented out, uncomment it. Create it if necessary and set the value to "yes":
+```
 
+Search for the X11Forwarding directive. If it is commented out, uncomment it. Create it if necessary and set the value to "yes":
+```
 X11Forwarding yes
+```
+
 Save and close the file. Restart your SSH daemon to implement these changes.
 
 On Ubuntu/Debian:
-
+```
 sudo service ssh restart
+```
+
 On CentOS/Fedora:
-
+```
 sudo service sshd restart
-To connect to the server and forward an application's display, you have to pass the -X option from the client upon connection:
+```
 
+To connect to the server and forward an application's display, you have to pass the -X option from the client upon connection:
+```
 ssh -X username@remote_host
+```
+
 Graphical applications started on the server through this session should be displayed on the local computer. The performance might be a bit slow, but it is very helpful in a pinch.
 
-Client-Side Configuration Options
+###Client-Side Configuration Options
 In the next section, we'll focus on some adjustments that you can make on the client side of the connection.
 
 Defining Server-Specific Connection Information
@@ -534,10 +555,12 @@ Defining Server-Specific Connection Information
 On your local computer, you can define individual configurations for some or all of the servers you connect to. These can be stored in the ~/.ssh/config file, which is read by your SSH client each time it is called.
 
 Create or open this file in your text editor on your local computer:
-
+```
 nano ~/.ssh/config
-Inside, you can define individual configuration options by introducing each with a Host keyword, followed by an alias. Beneath this and indented, you can define any of the directives found in the ssh_config man page:
+```
 
+Inside, you can define individual configuration options by introducing each with a Host keyword, followed by an alias. Beneath this and indented, you can define any of the directives found in the ssh_config man page:
+```
 man ssh_config
 An example configuration would be:
 
@@ -545,9 +568,13 @@ Host testhost
     HostName example.com
     Port 4444
     User demo
-You could then connect to example.com on port 4444 using the username "demo" by simply typing:
+```
 
+You could then connect to example.com on port 4444 using the username "demo" by simply typing:
+```
 ssh testhost
+```
+
 You can also use wildcards to match more than one host. Keep in mind that later matches can override earlier ones. Because of this, you should put your most general matches at the top. For instance, you could default all connections to not allow X forwarding, with an override for example.com by having this in your file:
 
 Host *
