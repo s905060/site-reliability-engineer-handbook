@@ -5,8 +5,10 @@ To get started you will need to run these commands in your terminal.
 ###New to Git? Learn the basic Git commands
 
 Configure Git for the first time
-git config --global user.name "YOURNAME"
-git config --global user.email "YOUR EMAIl"
+
+`git config --global user.name "YOURNAME"`
+
+`git config --global user.email "YOUR EMAIl"`
 
 ### Working with your repository
 ####I just want to clone this repository
