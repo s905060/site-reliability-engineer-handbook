@@ -290,7 +290,7 @@
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
    * [Elasticsearch](elasticsearch.md)
-   * Kafka
+   * [Kafka](kafka.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
    * [Puppet](puppet.md)
