@@ -1,5 +1,7 @@
 # HBase
 
+![](o_hbase_read_write_path2_small.png)
+
 ### Housekeeping
 
 First make sure HBase is running, with the following command in $HBASE_HOME: $ ./bin/start-hbase.sh
