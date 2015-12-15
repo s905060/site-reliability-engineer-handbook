@@ -288,6 +288,7 @@
    * [Hadoop](hadoop.md)
        * [Hadoop Safe Mode](hadoop_safe_mode.md)
    * [HBase](hbase.md)
+       * What are HBase Compactions?
    * [Elasticsearch](elasticsearch.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
