@@ -301,5 +301,6 @@
    * [Juniper](juniper.md)
 * [Version Control](version_control.md)
    * [Git](git.md)
+       * You have an empty repository
    * [SVN](svn.md)
 
