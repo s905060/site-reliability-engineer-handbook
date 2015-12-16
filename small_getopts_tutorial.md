@@ -114,3 +114,10 @@ For productive scripts I recommend to use the silent mode, since everything look
 |--|--|
 |invalid option	|VARNAME is set to ? (question-mark) and OPTARG is unset
 |required argument not found |	VARNAME is set to ? (question-mark), OPTARG is unset and an error message is printed
+
+###Silent Mode
+
+|||
+|--|--|
+|invalid option	|VARNAME is set to ? (question-mark) and OPTARG is set to the (invalid) option character
+|required argument not found|	VARNAME is set to : (colon) and OPTARG contains the option-character in question
