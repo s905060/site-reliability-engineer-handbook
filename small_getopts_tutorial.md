@@ -68,3 +68,15 @@ where:
 |OPTSTRING	|tells getopts which options to expect and where to expect arguments (see below)
 |VARNAME	|tells getopts which shell-variable to use for option reporting
 |ARGS	|tells getopts to parse these optional words instead of the positional parameters
+
+###The option-string
+
+The option-string tells getopts which options to expect and which of them must have an argument. The syntax is very simple — every option character is simply named as is, this example-string would tell getopts to look for -f, -A and -x:
+
+`getopts fAx VARNAME`
+
+When you want getopts to expect an argument for an option, just place a : (colon) after the proper option flag. If you want -A to expect an argument (i.e. to become -A SOMETHING) just do:
+
+`getopts fA:x VARNAME`
+
+If the very first character of the option-string is a : (colon), which would normally be nonsense because there's no option letter preceding it, getopts switches to "silent error reporting mode". In productive scripts, this is usually what you want because it allows you to handle errors yourself without being disturbed by annoying messages.
