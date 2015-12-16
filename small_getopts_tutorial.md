@@ -80,3 +80,20 @@ When you want getopts to expect an argument for an option, just place a : (colon
 `getopts fA:x VARNAME`
 
 If the very first character of the option-string is a : (colon), which would normally be nonsense because there's no option letter preceding it, getopts switches to "silent error reporting mode". In productive scripts, this is usually what you want because it allows you to handle errors yourself without being disturbed by annoying messages.
+
+###Custom arguments to parse
+
+The getopts utility parses the positional parameters of the current shell or function by default (which means it parses "$@").
+
+You can give your own set of arguments to the utility to parse. Whenever additional arguments are given after the VARNAME parameter, getopts doesn't try to parse the positional parameters, but these given words.
+
+This way, you are able to parse any option set you like, here for example from an array:
+```
+while getopts :f:h opt "${MY_OWN_SET[@]}"; do
+  ...
+done
+```
+
+A call to getopts without these additional arguments is equivalent to explicitly calling it with "$@":
+
+`getopts ... "$@"`
