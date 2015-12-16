@@ -263,3 +263,17 @@ $
 As expected, as above, getopts didn't accept this option and acted like programmed.
 
 Valid option, but without the mandatory argument:
+```
+$ ./go_test.sh -a
+Option -a requires an argument.
+$ 
+```
+
+The option was okay, but there is an argument missing.
+
+Let's provide the argument:
+```
+$ ./go_test.sh -a /etc/passwd
+-a was triggered, Parameter: /etc/passwd
+$
+```
