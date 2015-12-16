@@ -162,3 +162,33 @@ $
 
 Again — nothing happened. The very same case: getopts didn't see any valid or invalid options (letters preceded by a dash), so it wasn't triggered.
 The arguments given to your script are of course accessible as $1 - ${N}.
+
+###Calling it with option-arguments
+
+Now let's trigger getopts: Provide options.
+
+First, an invalid one:
+```
+$ ./go_test.sh -b
+Invalid option: -b
+$ 
+```
+
+As expected, getopts didn't accept this option and acted like told above: It placed ? into $opt and the invalid option character (b) into $OPTARG. With our case statement, we were able to detect this.
+Now, a valid one (-a):
+```
+$ ./go_test.sh -a
+-a was triggered!
+$ 
+```
+
+You see, the detection works perfectly. The a was put into the variable $opt for our case statement.
+Of course it's possible to mix valid and invalid options when calling:
+```
+$ ./go_test.sh -a -x -b -c
+-a was triggered!
+Invalid option: -x
+Invalid option: -b
+Invalid option: -c
+$ 
+```
