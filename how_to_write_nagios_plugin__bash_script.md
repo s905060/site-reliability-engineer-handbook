@@ -6,3 +6,13 @@ Nagios is IT Infrastructure Monitoring Tool. Nagios is designed as a client/serv
 Prerequisites:
 * Working Nagios Server Instance (Read more here for Ubuntu or CentOS)
 * Working Nagios NRPE Client Instance
+
+###Important:
+* Exit Code 0 = OK
+If Nagios plugin script is successfully executed and exits with an exit code 0 then Nagios server will show this check as OK and color it with GREEN color.
+
+* Exit Code 1 = WARNING
+If Nagios plugin script is successfully executed and exits with an exit code 1 then Nagios server will show this check as a WARNING and color it with ORANGE color.
+
+* Exit Code 2 = CRITICAL
+If Nagios plugin script is successfully executed and exits with an exit code 2 then Nagios server will show this check as CRITICAL and color it with RED color.
