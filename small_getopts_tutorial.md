@@ -121,3 +121,27 @@ For productive scripts I recommend to use the silent mode, since everything look
 |--|--|
 |invalid option	|VARNAME is set to ? (question-mark) and OPTARG is set to the (invalid) option character
 |required argument not found|	VARNAME is set to : (colon) and OPTARG contains the option-character in question
+
+###Using it
+A first example
+Enough said - action!
+
+Let's play with a very simple case: only one option (-a) expected, without any arguments. Also we disable the verbose error handling by preceding the whole option string with a colon (:):
+```
+#!/bin/bash
+ 
+while getopts ":a" opt; do
+  case $opt in
+    a)
+      echo "-a was triggered!" >&2
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+  esac
+done
+```
+
+I put that into a file named go_test.sh, which is the name you'll see below in the examples.
+
+Let's do some tests:
