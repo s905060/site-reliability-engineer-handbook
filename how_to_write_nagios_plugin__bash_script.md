@@ -16,3 +16,12 @@ If Nagios plugin script is successfully executed and exits with an exit code 1 t
 
 * Exit Code 2 = CRITICAL
 If Nagios plugin script is successfully executed and exits with an exit code 2 then Nagios server will show this check as CRITICAL and color it with RED color.
+
+###Location of Nagios Plugin Scripts:
+* If you compiled your NRPE Client yourself the location of Nagios Plugins will probably be:/usr/local/nagios/libexec
+* If you installed NRPE Client with YUM or from RPM the location of Nagios Plugins will be:/usr/lib/nagios/plugins
+* If you installed NRPE Client with apt-get or from DEB the location of Nagios Plugins will also be:/usr/lib/nagios/plugins
+If you agree, it is only fair we put our own Nagios Plugin Scripts in the same directory as other Nagios Plugin Scripts are.
+
+###Working Example:
+For a working example i have written a simple bash script which checks the number of currently opened files for the specified user with the specified WARNING and CRITICAL threshold. Make sure you will make your Nagios Plugin Bash script executable before you run it! Please note the bolded EXIT CODES in my bash script! You must have lsof installed on your Nagios Client for this script to work (yum install lsof).
