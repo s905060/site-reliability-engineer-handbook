@@ -263,6 +263,7 @@
 * [Monitoring](monitoring.md)
    * [Nagios](nagios.md)
        * [How can I manually run a nagios check from the command line?](how_can_i_manually_run_a_nagios_check_from_the_com.md)
+       * How To Write Nagios Plugin – Bash Script
    * [Zabbix](zabbix.md)
 * [Database](database.md)
    * [MySQL](mysql.md)
