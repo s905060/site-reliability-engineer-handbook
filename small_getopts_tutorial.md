@@ -207,3 +207,30 @@ The last examples lead us to some points you may consider:
 
 * invalid options don't stop the processing: If you want to stop the script, you have to do it yourself (exit in the right place)
 * multiple identical options are possible: If you want to disallow these, you have to check manually (e.g. by setting a variable or so)
+
+###An option with argument
+Let's extend our example from above. Just a little bit:
+
+* -a now takes an argument
+* on an error, the parsing exits with exit 1
+
+```
+#!/bin/bash
+ 
+while getopts ":a:" opt; do
+  case $opt in
+    a)
+      echo "-a was triggered, Parameter: $OPTARG" >&2
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+```
+Let's do the very same tests we did in the last example:
