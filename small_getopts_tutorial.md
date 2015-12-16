@@ -234,3 +234,32 @@ while getopts ":a:" opt; do
 done
 ```
 Let's do the very same tests we did in the last example:
+
+###Calling it without any arguments
+```
+$ ./go_test.sh
+$ 
+```
+
+As above, nothing happened. It wasn't triggered.
+
+###Calling it with non-option arguments
+```
+$ ./go_test.sh /etc/passwd
+$ 
+```
+
+The very same case: It wasn't triggered.
+
+###Calling it with option-arguments
+
+Invalid option:
+```
+$ ./go_test.sh -b
+Invalid option: -b
+$ 
+```
+
+As expected, as above, getopts didn't accept this option and acted like programmed.
+
+Valid option, but without the mandatory argument:
