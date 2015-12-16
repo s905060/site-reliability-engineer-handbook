@@ -60,3 +60,19 @@ IMPORTANT!! For this script to work properly when run via “check_nrpe” from 
 ```
 nagios  ALL=(ALL)     NOPASSWD:/usr/sbin/lsof,/usr/lib/nagios/plugins/check_open_files.sh
 ```
+
+###Test Run:
+Let’s test run this script locally from our Nagios Client machine:
+```
+[root@foo1 ]# /usr/lib/nagios/plugins/check_open_files.sh
+Missing parameters! Syntax: ./check_open_files.sh USER WARNING_THRESHOLD CRITICAL_THRESHOLD
+
+[root@foo1 ]# /usr/lib/nagios/plugins/check_open_files.sh apache 1200 1400
+CRITICAL - Number of open files is 1585
+
+[root@foo1 ]# /usr/lib/nagios/plugins/check_open_files.sh apache 1400 1600
+WARNING - Number of open files is 1585
+
+[root@foo1 ]# /usr/lib/nagios/plugins/check_open_files.sh apache 1600 1800
+OK - Number of open files is 1585
+```
