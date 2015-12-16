@@ -25,3 +25,32 @@ If you agree, it is only fair we put our own Nagios Plugin Scripts in the same d
 
 ###Working Example:
 For a working example i have written a simple bash script which checks the number of currently opened files for the specified user with the specified WARNING and CRITICAL threshold. Make sure you will make your Nagios Plugin Bash script executable before you run it! Please note the bolded EXIT CODES in my bash script! You must have lsof installed on your Nagios Client for this script to work (yum install lsof).
+
+```
+#!/bin/bash
+# Nagios Plugin Bash Script - check_open_files.sh
+# This script checks the number of currently opened files for the specified user with the specified WARNING and CRITICAL threshold
+#
+# Check for missing parameters
+if [[ -z "$1" ]] || [[ -z "$2" ]] || [[ -z "$3" ]]; then
+        echo "Missing parameters! Syntax: ./check_open_files.sh USER WARNING_THRESHOLD CRITICAL_THRESHOLD"
+        exit 2
+fi
+# Check for number of currently opened files
+ofiles=$(sudo /usr/sbin/lsof |grep $1 |grep REG |wc -l)
+# Check if number of currently opened files is lower than WARNING threshold parameter
+if [[ "$ofiles" -lt "$2" ]]; then
+        echo "OK - Number of open files is $ofiles"
+        exit 0
+fi
+# Check if number of currently opened files is greater than WARNING threshold parameter and lower than CRITICAL threshold parameter
+if [[ "$ofiles" -gt "$2" ]] && [[ "$ofiles" -lt "$3" ]]; then
+        echo "WARNING - Number of open files is $ofiles"
+        exit 1
+fi
+# Check if number of currently opened files is greater than CRITICAL threshold parameter
+if [[ "$ofiles" -gt "$3" ]]; then
+        echo "CRITICAL - Number of open files is $ofiles"
+        exit 2
+fi
+```
