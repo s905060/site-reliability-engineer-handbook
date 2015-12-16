@@ -54,3 +54,9 @@ if [[ "$ofiles" -gt "$3" ]]; then
         exit 2
 fi
 ```
+
+IMPORTANT!! For this script to work properly when run via “check_nrpe” from Nagios Server you must add this line to /etc/sudoers file on the Nagios Client side! This is because of the sudo command used in script.
+
+```
+nagios  ALL=(ALL)     NOPASSWD:/usr/sbin/lsof,/usr/lib/nagios/plugins/check_open_files.sh
+```
