@@ -96,4 +96,4 @@ done
 
 A call to getopts without these additional arguments is equivalent to explicitly calling it with "$@":
 
-`getopts ... "$@"`
+```getopts ... "$@"```
