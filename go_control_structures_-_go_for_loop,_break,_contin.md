@@ -127,3 +127,44 @@ Odd: 1
 Odd: 3
 Odd: 5
 ```
+
+###range keyword
+The range keyword allows you to iterate over items of a list like an array or a map. For understanding it, you could translate the range keyword to for each index of. When used with arrays and slices, it returns the integer index of the item. When used with maps, it returns the key of the next key-value pair. It works with returning either one value or two. If only one, it is the index of the item, and if it is two then it is the index and the corresponding value.
+
+Full program
+```
+package main
+
+import "fmt"
+
+func main() {
+    //on an array, range returns the index
+    a := [...]string{"a", "b", "c", "d"}
+    for i := range a {
+        fmt.Println("Array item", i, "is", a[i])
+    }
+
+    //on a map, range returns the key 
+    capitals := map[string] string {"France":"Paris", "Italy":"Rome", "Japan":"Tokyo" }
+    for key := range capitals {
+        fmt.Println("Map item: Capital of", key, "is", capitals[key])
+    }
+
+    //range can also return two items, the index/key and the corresponding value 
+    for key2, val := range capitals {
+        fmt.Println("Map item: Capital of", key2, "is", val)
+    }
+}
+```
+```
+Array item 0 is a
+Array item 1 is b
+Array item 2 is c
+Array item 3 is d
+Map item: Capital of Japan is Tokyo
+Map item: Capital of Italy is Rome
+Map item: Capital of France is Paris
+Map item: Capital of Japan is Tokyo
+Map item: Capital of Italy is Rome
+Map item: Capital of France is Paris
+```
