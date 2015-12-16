@@ -145,3 +145,20 @@ done
 I put that into a file named go_test.sh, which is the name you'll see below in the examples.
 
 Let's do some tests:
+
+###Calling it without any arguments
+```
+$ ./go_test.sh
+$ 
+```
+
+Nothing happened? Right. getopts didn't see any valid or invalid options (letters preceded by a dash), so it wasn't triggered.
+
+###Calling it with non-option arguments
+```
+$ ./go_test.sh /etc/passwd
+$ 
+```
+
+Again — nothing happened. The very same case: getopts didn't see any valid or invalid options (letters preceded by a dash), so it wasn't triggered.
+The arguments given to your script are of course accessible as $1 - ${N}.
