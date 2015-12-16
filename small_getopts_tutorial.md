@@ -192,3 +192,18 @@ Invalid option: -b
 Invalid option: -c
 $ 
 ```
+
+Finally, it's of course possible, to give our option multiple times:
+```
+$ ./go_test.sh -a -a -a -a
+-a was triggered!
+-a was triggered!
+-a was triggered!
+-a was triggered!
+$ 
+```
+
+The last examples lead us to some points you may consider:
+
+* invalid options don't stop the processing: If you want to stop the script, you have to do it yourself (exit in the right place)
+* multiple identical options are possible: If you want to disallow these, you have to check manually (e.g. by setting a variable or so)
