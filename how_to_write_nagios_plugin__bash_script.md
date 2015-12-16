@@ -76,3 +76,8 @@ WARNING - Number of open files is 1585
 [root@foo1 ]# /usr/lib/nagios/plugins/check_open_files.sh apache 1600 1800
 OK - Number of open files is 1585
 ```
+
+As we can see our script is covering all of the desired scenarios and the output is as requested by Nagios Server.
+
+###Finishing Up:
+All we need to do now is to edit the Nagios Client configuration file (nrpe.cfg) and add the new check to it. Our nrpe.cfg line check must include all of the parameters our script requires! We also must add a new service check on Nagios Server side and only then we are done!
