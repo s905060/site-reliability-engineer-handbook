@@ -108,3 +108,9 @@ Regarding error-reporting, there are two modes getopts can run in:
 
 For productive scripts I recommend to use the silent mode, since everything looks more professional, when you don't see annoying standard messages. Also it's easier to handle, since the failure cases are indicated in an easier way.
 
+###Verbose Mode
+
+| | |
+|--|--|
+|invalid option	|VARNAME is set to ? (question-mark) and OPTARG is unset
+|required argument not found |	VARNAME is set to ? (question-mark), OPTARG is unset and an error message is printed
