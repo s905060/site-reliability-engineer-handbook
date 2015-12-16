@@ -73,3 +73,6 @@ Value of i, j, s: 0 5 a
 Value of i, j, s: 1 6 aa
 Value of i, j, s: 2 7 aaa
 ```
+
+###break keyword
+The break keyword allows you to terminate a loop at that point and continue execution at the statement following the end of the for loop block. In the simplistic example below, we are making use of the break keyword to end a loop when a particular condition is met. Since the for loop has no conditions and checks as part of its declaration, it will run for ever unless we terminate the loop explicitly. Note that this is not terminating the program entirely; it is merely jumping out of the loop, and the program continues at the statement following the ending }. 
