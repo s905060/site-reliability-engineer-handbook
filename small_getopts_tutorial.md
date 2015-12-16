@@ -99,3 +99,12 @@ A call to getopts without these additional arguments is equivalent to explicitly
 ```
 getopts ... "$@"
 ```
+
+###Error Reporting
+Regarding error-reporting, there are two modes getopts can run in:
+
+* verbose mode
+* silent mode
+
+For productive scripts I recommend to use the silent mode, since everything looks more professional, when you don't see annoying standard messages. Also it's easier to handle, since the failure cases are indicated in an easier way.
+
