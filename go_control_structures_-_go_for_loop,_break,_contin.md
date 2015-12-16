@@ -98,3 +98,32 @@ Value of i is: 2
 A statement just after for loop.
 
 ```
+
+###continue keyword
+The continue keyword allows you to go back to the beginning of the for loop. Checks and increments part of the for loop are executed and therefore the next iteration of the loop is executed. This effectively means that you can use the continue statement to skip the portions of the code following the continue statement, and move on to the next iteration.
+
+In the example below, we are making use of the continue keyword in a loop to only print odd numbers. When we encounter a number that is even (i mod 2 is 0), we skip printing it and go back to the beginning of the loop by executing continue. 
+
+Full program
+```
+package main
+
+import "fmt"
+
+func main() {
+    
+    //a continue within this loop will bring back execution to the beginning of the loop.  Checks and increments in for loop will be executed.
+
+    for i := 0; i<7 ; i++ { //control comes back here when there is a ‘continue’ within this for block
+        if i%2 == 0 { 
+            continue //if it is an even number, go back to beginning of for loop
+        }
+        fmt.Println("Odd:", i)  //execution will reach here only when i%2 is not 0, and therefore it is odd
+    }
+}
+```
+```
+Odd: 1
+Odd: 3
+Odd: 5
+```
