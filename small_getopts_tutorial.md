@@ -31,3 +31,18 @@ which is complex to parse without the help of getopts.
 
 The option flags can be upper- and lowercase characters, or digits. It may recognize other characters, but that's not recommended (usability and maybe problems with special characters).
 
+###How it works
+In general you need to call getopts several times. Each time it will use the next positional parameter and a possible argument, if parsable, and provide it to you. getopts will not change the set of positional parameters. If you want to shift them, it must be done manually:
+```
+shift $((OPTIND-1))
+# now do something with $@
+```
+
+Since getopts sets an exit status of FALSE when there's nothing left to parse, it's easy to use in a while-loop:
+```
+while getopts ...; do
+  ...
+done
+```
+
+getopts will parse options and their possible arguments. It will stop parsing on the first non-option argument (a string that doesn't begin with a hyphen (-) that isn't an argument for any option in front of it). It will also stop parsing when it sees the -- (double-hyphen), which means end of options.
