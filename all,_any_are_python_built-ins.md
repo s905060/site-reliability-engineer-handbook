@@ -48,3 +48,26 @@ True
 >>> print q.size 
 3
 ```
+
+###Aside: all and any take iterables (and sequences)
+
+Specifically, they take an iterable that produces elements and they both short-circuit (check out the all to see an equivalent-code example in Python, but for right now easier and simpler to talk about lists specifically.
+
+What's the difference? It means that you don't have to instantiate a list first, you can just give it a generator expression (or any iterable), e.g.
+
+```
+def counting_generator():
+    counting_generator.count += 1
+    if counting_generator.count < 100:
+        yield True
+
+# given counting_generator its counter
+counting_generator.count = 0
+
+>>> print "The result was %r and produced %d items" % (any(counting_generator()), counting_generator.count)
+The result was True and produced 1 items.
+>>> counting_generator.count = 0
+>>> # if you don't include the if statement this will be an infinite loop!
+>>> print "The result was %r and produced %d items" % (all(counting_generator()), counting_generator.count)
+The result was True and produced 100 items.
+```
