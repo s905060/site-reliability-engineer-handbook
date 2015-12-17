@@ -14,3 +14,37 @@ False
 >>> print any([True, True, True, False, True, True])
 True
 ```
+
+The first example isn't true because in not all of the list is True, the second example is True because at least one of the list is True. You could rewrite this to an if comparison, e.g.:
+
+```
+>>> print "True" if (True and True and True and False and True and True) else "False" 
+False 
+>>> if (True or True or True or False or True or True): print "True"
+True
+```
+
+so this can be a really useful way to check a whole list of values and then use them. Further, you can check them all in one line and then work with the data, etc.
+
+###NOTE: 'all' and 'any' short-circuit
+
+NOTE: all and any short-circuit, so if it's important that *every* operation in a list of operations is completed, calculate the list first, THEN check it with all and any. e.g.
+
+```
+>>> q = Queue(50)
+>>> print any([q.enqueue(1), q.enqueue(2) ... q.enqueue(50)])  
+True
+>>> print q.size
+1
+```
+
+The operation short-circuits (stops) after the first True value (or, for any, the first False value). If you just calculate the list first, then use any or all on it, you'll be all good. E.g.
+
+```
+>>> q = Queue(5)
+>>> results = [q.enqueue(1), q.enqueue(2), q.enqueue(3)]
+>>> print any(results) 
+True
+>>> print q.size 
+3
+```
