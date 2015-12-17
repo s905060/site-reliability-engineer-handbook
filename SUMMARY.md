@@ -106,7 +106,7 @@
        * [Decorator](decorator.md)
        * [String Formatting](string_formatting.md)
        * [SimplePrograms](simpleprograms.md)
-       * 'all', 'any' are Python built-ins
+       * ['all', 'any' are Python built-ins](all,_any_are_python_built-ins.md)
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
