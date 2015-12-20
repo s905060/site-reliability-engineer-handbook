@@ -16,6 +16,7 @@ def myrun(cmd):
             break
     return ''.join(stdout)
 ```
+
 ```
 def run_command(command):
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
@@ -28,3 +29,7 @@ def run_command(command):
     rc = process.poll()
     return rc
 ```
+
+The poll() method will return
+the exit code if the process is completed.
+None if the process is still running.
