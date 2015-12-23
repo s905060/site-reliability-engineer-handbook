@@ -28,3 +28,11 @@ getent accepts various keys when searching in databases. For the passwd one, you
 ubuntu$ getent passwd greys
 greys:x:1000:1000:Gleb Reys,,,:/home/greys:/bin/bas
 ```
+
+###Using getent to find a username by UID
+
+Like I said, the opposite will work as well:
+```
+ubuntu$ getent passwd 1000
+greys:x:1000:1000:Gleb Reys,,,:/home/greys:/bin/bash
+```
