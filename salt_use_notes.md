@@ -162,27 +162,35 @@ def grans_test ():
 
 Synchronization grains
 
-sudo Salt '*' saltutil . sync_grains
+`sudo Salt '*' saltutil . sync_grains`
+
 Check machine grains information
 
-sudo Salt '*' Grains . Item grans_test
-Job management
-Salt real-time management of tasks are performed as Job
+`sudo Salt '*' Grains . Item grans_test`
+
+###Job management
+>Salt real-time management of tasks are performed as Job
+
 View Job being executed
 
-sudo Salt - Jobs run . Active
+`sudo Salt - Jobs run . Active`
+
 View Job list (including implementation over)
 
-sudo Salt - Jobs run . list_jobs
+`sudo Salt - Jobs run . list_jobs`
+
 Displays the Job Status
 
-sudo Salt - Jobs run . lookup_jid 20140408112045976162
-Minion state management
-View minion of the state up or down
+`sudo Salt - Jobs run . lookup_jid 20140408112045976162`
 
+###Minion state management
+View minion of the state up or down
+```
 sudo Salt - run manage . status   # See all state 
 sudo Salt - run manage . up         # Look up the 
 sudo Salt - run manage . down   # just look down the
+```
+
 View minion version, the command will prompt what you need to upgrade the version minion
 
-sudo Salt - run manage . versions
+`sudo Salt - run manage . versions`
