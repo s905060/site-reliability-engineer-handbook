@@ -306,7 +306,7 @@
        * [Puppet CLI](puppet_cli.md)
        * [Puppet DSL](puppet_dsl.md)
    * [Salt](salt.md)
-       * Salt use notes
+       * [Salt use notes](salt_use_notes.md)
 * [Networking Devices](networking_devices.md)
    * [Cisco](cisco.md)
    * [Juniper](juniper.md)
