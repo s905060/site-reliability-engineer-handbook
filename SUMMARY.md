@@ -109,7 +109,7 @@
        * ['all', 'any' are Python built-ins](all,_any_are_python_built-ins.md)
        * [TemporaryFile](temporaryfile.md)
        * [How to capture stdout in real-time with Python](how_to_capture_stdout_in_real-time_with_python.md)
-       * Python simple techniques and common reference
+       * [Python simple techniques and common reference](python_simple_techniques_and_common_reference.md)
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
