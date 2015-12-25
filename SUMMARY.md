@@ -297,6 +297,7 @@
    * [ELK](elk.md)
    * [Hadoop](hadoop.md)
        * [Hadoop Safe Mode](hadoop_safe_mode.md)
+       * Common hadoop command
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
    * [Elasticsearch](elasticsearch.md)
