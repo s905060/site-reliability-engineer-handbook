@@ -60,3 +60,7 @@ Current common GC collector summarized as follows:
 |Old generation	|CMS	|Multithreading	|The whole process had 2 brief stop-the-world
 |Old generation	|Serial Old (MSC)	|Threaded	|It is
 |Old generation	|Parallel Old	|Multithreading	|unkown
+
+The young generation and the old generation has its own garbage collection mechanism. And when we actually use, they are with each other, specifically with the relationship shown below:
+
+![](20140307092806124.jpg)
