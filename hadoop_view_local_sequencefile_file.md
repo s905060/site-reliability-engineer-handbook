@@ -4,8 +4,8 @@ Download from HDFS will sequencefile not view the local post. In fact hadoop com
 
 Check local sequencefile file as follows:
 
-`hadoop FS - Dfs . default . name = File : /// Sequence file -text local path`
+`hadoop FS -Dfs . default . name = File : /// Sequence file -text local path`
 
 On HDFS can look directly -text
 
-`hadoop FS   - Sequence text file on the local path`
+`hadoop FS   -Sequence text file on the local path`
