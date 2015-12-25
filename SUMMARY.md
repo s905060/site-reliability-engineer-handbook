@@ -299,6 +299,7 @@
    * [Hadoop](hadoop.md)
        * [Hadoop Safe Mode](hadoop_safe_mode.md)
        * [Common hadoop command](common_hadoop_command.md)
+       * Hadoop How to Kill all the specified user Job
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
    * [Elasticsearch](elasticsearch.md)
