@@ -51,3 +51,12 @@ Here you can see the individual usage situation S0, S1, E, O area, in addition t
 
 Due to limited JVM memory, and Java application does not manage unused memory, so the need for a JVM garbage collection mechanism (Garbage Collection), this is the JVM GC mechanism. 
 Current common GC collector summarized as follows:
+
+|Memory area	|GC algorithm	|Are Multithreading	|Whether the stop-the-world|
+|--|--|--|--|
+|The young generation	|Serial	|Threaded	|It is
+|The young generation	|ParNew	|Multithreading	|It is
+|The young generation	|Parallel |Scavenge	Multithreading	|It is
+|Old generation	|CMS	|Multithreading	|The whole process had 2 brief stop-the-world
+|Old generation	|Serial Old (MSC)	|Threaded	|It is
+|Old generation	|Parallel Old	|Multithreading	|unkown
