@@ -302,7 +302,7 @@
    * [Elasticsearch](elasticsearch.md)
    * [Kafka](kafka.md)
    * [Hive](hive.md)
-       * Hive notes
+       * [Hive notes](hive_notes.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
    * [Puppet](puppet.md)
