@@ -47,22 +47,29 @@ Matching simple way: Shell Style & Perl regular match
 |web?	|Match 4 character ID web beginning of minion
 |web [1-5]	|Match web1 to web5
 |web [1,3]	|Match web1 and web3
-|web1- (prod | devel)	|Match web1-prod and web1-devel
+|web1- (prod or devel)	|Match web1-prod and web1-devel
 
 A list of matching
 
-sudo Salt - L 'web1, web2' Test . ping
-Grains Match
+`sudo Salt - L 'web1, web2' Test . ping`
 
+Grains Match
+```
 sudo Salt - G 'virtual: physical'   Test . ping   # Match all physical machine 
-sudo Salt - G 'virtual: PHY *'   Test . ping   #grains match mode can also be used Shell Style & Perl regular mode
+sudo Salt - G 'virtual: PHY *'   Test . ping   
+#grains match mode can also be used Shell Style & Perl regular mode
+```
+
 Pillar Match
 
-sudo Salt - I 'master: ipv6: False' Test . ping
-SLS file matching
+`sudo Salt - I 'master: ipv6: False' Test . ping`
 
+SLS file matching
+```
 'Virtual: physical' : 
     - match : Grain
+```
+
 States
 minion states for implementing state management, the official reference documentation http://docs.saltstack.com/ref/states/all/index.html
 States define the path / src / Salt file_roots (in / etc / salt / master of variable definition), states use YAML file format definition 
