@@ -160,6 +160,7 @@ daemonize ()
 ```
 
 ###Simple HTTP server example
+
 ```
 import urllib
 from cgi import parse_header, parse_multipart
@@ -201,6 +202,7 @@ start_server()
 ```
 
 ###A functional method call
+
 ```
 #!/bin/env python
 
