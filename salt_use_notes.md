@@ -48,16 +48,18 @@ Matching simple way: Shell Style & Perl regular match
 |web [1-5]	|Match web1 to web5
 |web [1,3]	|Match web1 and web3
 |web1- (prod or devel)	|Match web1-prod and web1-devel
+```
 
 A list of matching
 
 `sudo Salt - L 'web1, web2' Test . ping`
 
 Grains Match
+
 ```
 sudo Salt - G 'virtual: physical'   Test . ping   # Match all physical machine 
-sudo Salt - G 'virtual: PHY *'   Test . ping   
-#grains match mode can also be used Shell Style & Perl regular mode
+
+sudo Salt - G 'virtual: PHY *'   Test . ping   #grains match mode can also be used Shell Style & Perl regular mode
 ```
 
 Pillar Match
@@ -65,80 +67,99 @@ Pillar Match
 `sudo Salt - I 'master: ipv6: False' Test . ping`
 
 SLS file matching
+
 ```
 'Virtual: physical' : 
     - match : Grain
 ```
 
-States
+###States
+
 minion states for implementing state management, the official reference documentation http://docs.saltstack.com/ref/states/all/index.html
 States define the path / src / Salt file_roots (in / etc / salt / master of variable definition), states use YAML file format definition 
 states the file suffix is sls (Salt State), sls document preparation needs attention: When you want to reserve a space, otherwise it will cause a parse error
 
-Manual mode execution state to modify the admin account bashrc Case
+Manual mode execution state to modify the admin account bashrc Case Prepare /src/salt/bashrc.sls , which reads as follows
 
-Prepare /src/salt/bashrc.sls , which reads as follows
-
+```
 / Home / admin /. bashrc : 
   File . managed : 
       - Source : Salt : // Files / bashrc 
       - user : admin
        -  group : admin
        - mode :  644
+```
+
 Ready for distribution bash file, Salt: // Files / bashrc correspondence / srv / salt / files / bashrc
 make bash.sls take effect
 
-sudo Salt '*' State . sls 'bashrc'
-Highstate way. In fact, as the state is using top.sls entrance file
+`sudo Salt '*' State . sls 'bashrc'`
 
-/src/salt/top.sls following documents, top.sls reference bashrc.sls
+Highstate way. In fact, as the state is using top.sls entrance file /src/salt/top.sls following documents, top.sls reference bashrc.sls
 
+```
 Base : 
     '*' : 
         - bashrc
+```
+
 Manually perform highstate into force
 
-sudo Salt '*' State . highstate
+`sudo Salt '*' State . highstate`
+
 Let minion performed automatically using a schedule highstate
 
 Defined /srv/pillar/top.sls
-
+```
  Base : 
     '*' : 
         - Schedule
+```
+
 Defined /srv/pillar/schedule.sls (30 minutes)
 
+```
 Schedule : 
     highstate : 
         function : State . highstate
             minutes :  30
-Pillar
+```
+
+###Pillar
+
 Official documents http://docs.saltstack.com/topics/tutorials/pillar.html
 pillar data definition path / SRV / pillar , entrance file: /srv/pillar/top.sls
 View pillar information
 
-sudo Salt '*' pillar . Data
+`sudo Salt '*' pillar . Data`
+
 Grains
 Official documents http://docs.saltstack.com/topics/targeting/grains.html
 View grains classification
 
-sudo Salt '*' Grains . LS
+`sudo Salt '*' Grains . LS`
+
 See all the information grains
 
-sudo Salt '*' Grains . items
+`sudo Salt '*' Grains . items`
+
 View grains a message
 
-sudo Salt '*' Grains . Item osrelease
+`sudo Salt '*' Grains . Item osrelease`
+
 Custom grains
 
 grains custom directory / SRV / Salt / _grains / , custom path /srv/salt/_grains/grans_test.py , example:
 
+```
 def grans_test (): 
   Grains =  {} 
   Grains [ 'grans_test' ]  =  'this is a grans Test!' 
   return Grains
  if __name__ ==  '__main__' : 
   Print grans_test ()
+```
+
 Synchronization grains
 
 sudo Salt '*' saltutil . sync_grains
