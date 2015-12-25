@@ -133,7 +133,7 @@
        * [Small getopts tutorial](small_getopts_tutorial.md)
    * [Java](java.md)
        * [Life cycle of a Thread (Thread States)](life_cycle_of_a_thread_thread_states.md)
-       * Understand JVM GC
+       * [Understand JVM GC](understand_jvm_gc.md)
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
