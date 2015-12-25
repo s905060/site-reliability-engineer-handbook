@@ -6,7 +6,7 @@
 ```
 
 ###Execute shell commands
-````
+```
 from subprocess import Popen, PIPE
 def run_cmd(cmd):
     #Popen call wrapper.return (code, stdout, stderr)
@@ -31,14 +31,15 @@ except :
 ```
 
 ###Json json format using tools
-
-#python 2.7以下
+```
+#Below python 2.7
 echo '{"hello":1}' | python -m simplejson.tool
-#python 2.7及以上
+#Above python 2.7
 echo '{"hello":1}' | python -m json.tool
 ```
 
 ###Get URL resources
+
 ```
 import urllib2
 response = urllib2.urlopen('http://www.opstool.com/')
@@ -121,6 +122,7 @@ logger=get_logger("mylogger")
 ```
 
 ### Achieve deamon run
+
 ```
 import sys
 import us
@@ -154,8 +156,8 @@ def daemonize (stdin='/dev/null', stdout='/dev/null', stderr='/dev/null'):
     os.dup2(si.fileno( ), sys.stdin.fileno( ))
     os.dup2(so.fileno( ), sys.stdout.fileno( ))
     os.dup2(se.fileno( ), sys.stderr.fileno( ))
-
-# Into the background 
+    
+    #Into the background 
 daemonize ()
 ```
 
