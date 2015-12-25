@@ -44,3 +44,10 @@ Examples
   0.00    0.13   10.61   60.38   63.44     249   117.204      2     1.468   118.673 
   0.00    0.13   10.61   60.38   63.44     249   117.204      2     1.468   118.673
 ```
+
+Here you can see the individual usage situation S0, S1, E, O area, in addition to the number of gc statistics
+
+###GC relationship between the young generation and the old generation
+
+Due to limited JVM memory, and Java application does not manage unused memory, so the need for a JVM garbage collection mechanism (Garbage Collection), this is the JVM GC mechanism. 
+Current common GC collector summarized as follows:
