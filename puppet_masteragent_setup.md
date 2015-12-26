@@ -236,3 +236,8 @@ class ssh inherits ssh::params {
 }
 include ssh
 ```
+
+The above does not work for prameterized classes (classes that take parameters when they are called)
+
+Using Variables between Classes
+
