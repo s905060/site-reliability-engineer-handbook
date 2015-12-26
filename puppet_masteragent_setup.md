@@ -20,3 +20,31 @@ Puppet's ssl info and certificates are located at `/var/lib/puppet/ssl`
 As briefly touched on before, Puppet uses SSL certificates to authenticate between the master and agent. When you first run:
 
 `sudo puppet agent --test --server=puppet.example.com`
+
+The Agent creates a Certificate Signing Request (CSR) and a private key to secure our request. The agent sends the request to the Master/Certificate Authority to sign and return the certificate. The agent will need to be rerun to check if the CA has signed the certificate.
+
+To check the list of certificates waiting to be signed by the Master/CA:
+
+`puppet ca list`
+
+To sign the certicate:
+
+```
+# Per host
+puppet cert sign [hostname]
+
+# Sign all
+puppet cert sign --all
+```
+
+Rather than signing each certificate manually you can set puppet to autosign certificates from a certain range.
+
+https://docs.puppetlabs.com/puppet/latest/reference/subsystem_agent_master_comm.html
+
+###Manifests dir
+
+Manifests is where Puppet puts files containing configuration information.
+
+Usually this dir contains a file called site.pp which tells Puppet where and which configurations to load for agents.
+
+You can also override the name and location of the manifests directory and `site.pp` file using the `manifestdir` and `manifest` configuration options, respectively. these options are set in the `puppet.conf` configuration file in the [master] section. See http://docs.puppetlabs.com/references/stable/configuration.html
