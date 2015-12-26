@@ -1,21 +1,21 @@
 # Megacli
 
-1.Show Rebuid procedure
+1. Show Rebuid procedure
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -PDRbld -ShowProg -physdrv[20:2] -aALL
 ```
 
-2.Check ES
+2. Check ES
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -PDList -aAll -NoLog | grep -Ei "(enclosure|slot)"
 ```
 
-3.Check all drives status
+3. Check all drives status
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -PDList -aAll -NoLog 
 ```
 
-4.Check all Virtual Disks status
+4. Check all Virtual Disks status
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -LdPdInfo -aAll -NoLog
 ```
@@ -45,7 +45,7 @@ RAID Level：
 /opt/MegaRAID/MegaCli/MegaCli64 -CfgForeign -Clear -a0 
 ```
 
-8.Check offline drive in RAID array
+8. Check offline drive in RAID array
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -pdgetmissing -a0 
 ```
@@ -60,7 +60,7 @@ RAID Level：
 /opt/MegaRAID/MegaCli/MegaCli64 -pdrbld -start -physdrv[12:10] -a0 
 ```
 
-11.Chek Megacli log
+11. Chek Megacli log
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -FwTermLog dsply -a0 > adp2.log
 ```
@@ -71,7 +71,7 @@ RAID Level：
 /opt/MegaRAID/MegaCli/MegaCli64 -pdhsp -set [-EnclAffinity] [-nonRevertible] -PhysDrv[32：1}] -a0
 ```
 
-13.Disable Rebuild
+13. Disable Rebuild
 ```
 /opt/MegaRAID/MegaCli/MegaCli64 -AdpAutoRbld -Dsbl -a0 
 ```
