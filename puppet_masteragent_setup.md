@@ -109,3 +109,24 @@ Or use the following command: `puppet module generate <companyName-serviceName>`
 Package is a resource type in Puppet. Some example resources are file, package, service etc.
 
 Example:
+```
+package {
+ "httpd":
+ ensure => present # Install
+}
+
+service{
+ “httpd”:
+ ensure  => true, # Start on boot
+ enable => true   # Needs to be running 
+}
+
+# Config file
+file{
+        "/etc/httpd/conf/httpd.conf”:
+         source => "puppet:///modules/httpd/httpd.conf”,  
+         mode  => 644,
+         owner  => root,
+         group  => root
+}
+```
