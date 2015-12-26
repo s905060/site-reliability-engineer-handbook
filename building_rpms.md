@@ -165,3 +165,13 @@ What is the Group field? If you're publishing your RPM for public consumption th
 # Find out what groups you have
 less /usr/share/doc/rpm-*/GROUPS
 ```
+
+What is the Source0 field? As we've already covered your source file should be placed in the SOURCES dir and Source0 should be the name of the source file so it is correctly referenced when we build the RPM.
+```
+Name:           silex-app
+Version:        1.4.5
+# Source0 refers to silex-app-1.4.5.zip in SOURCES dir
+Source0:        %{name}-%{version}.zip
+```
+
+You can also define multiple source files such as Source1, Source2 etc.
