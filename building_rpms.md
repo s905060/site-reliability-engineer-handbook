@@ -157,3 +157,11 @@ License:        Telstra Application Technologies
 Source0:        %{name}-%{version}.zip
 BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
 ```
+
+What is the Name field? Name of the source file.
+
+What is the Group field? If you're publishing your RPM for public consumption then you should use existing Groups. If its only internal to your Organization you're free to call it whatever you want.
+```
+# Find out what groups you have
+less /usr/share/doc/rpm-*/GROUPS
+```
