@@ -244,3 +244,25 @@ Vertical Partitioning is the act of splitting your table structure in a vertical
 **Example 2**: You have a "last_login" field in your table. It updates every time a user logs in to the website. But every update on a table causes the query cache for that table to be flushed. You can put that field into another table to keep updates to your users table to a minimum.
 
 But you also need to make sure you don't constantly need to join these 2 tables after the partitioning or you might actually suffer performance decline.
+
+###Split the Big DELETE or INSERT Queries
+
+If you need to perform a big DELETE or INSERT query on a live website, you need to be careful not to disturb the web traffic. When a big query like that is performed, it can lock your tables and bring your web application to a halt.
+
+Apache runs many parallel processes/threads. Therefore it works most efficiently when scripts finish executing as soon as possible, so the servers do not experience too many open connections and processes at once that consume resources, especially the memory.
+
+If you end up locking your tables for any extended period of time (like 30 seconds or more), on a high traffic web site, you will cause a process and query pileup, which might take a long time to clear or even crash your web server.
+
+If you have some kind of maintenance script that needs to delete large numbers of rows, just use the LIMIT clause to do it in smaller batches to avoid this congestion.
+
+```
+while (1) {
+    mysql_query("DELETE FROM logs WHERE log_date <= '2009-10-01' LIMIT 10000");
+    if (mysql_affected_rows() == 0) {
+        // done deleting
+        break;
+    }
+    // you can even pause a bit
+    usleep(50000);
+}
+```
