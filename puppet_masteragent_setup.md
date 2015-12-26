@@ -288,5 +288,12 @@ daemon_directory = /usr/libexec/postfix
 mail_owner = postfix
 myhostname = <%= @hostname %>
 mydomain = <%= @domain %>
-
 ```
+
+###Templates
+
+Puppet provides the ability to template config files. These are in the format of ERB templates which is plain text files with embedded ruby.
+
+If you want to evaluate ruby code inside a template file you need to enclose the code inside `<% ruby code %>` however if you want to evaluate a variable values (or expression) it needs to be enclosed within  `<=% ruby variable %>` tags
+
+We previously saw a file definition which uses a template (See Resources section) like below (condensed version):
