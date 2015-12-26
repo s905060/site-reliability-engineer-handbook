@@ -48,3 +48,41 @@ Manifests is where Puppet puts files containing configuration information.
 Usually this dir contains a file called site.pp which tells Puppet where and which configurations to load for agents.
 
 You can also override the name and location of the manifests directory and `site.pp` file using the `manifestdir` and `manifest` configuration options, respectively. these options are set in the `puppet.conf` configuration file in the [master] section. See http://docs.puppetlabs.com/references/stable/configuration.html
+
+###Master
+
+Puppet’s agent/master mode is pull-based. Usually, agents are configured to periodically fetch a catalog and apply it, and the master controls what goes into that catalog.
+
+On redhat or Debian systems the Master is started via an init script with the service command:
+```
+# Output can be viewed in /var/log/syslog
+sudo service puppetmaster start
+```
+
+For testing purposes you can do the following:
+```
+# --verbose      = gives detailed logging
+# --no-daemonize = keeps the output in the foreground
+# --debug        = this will produce detailed debug output
+
+sudo puppet master --verbose --no-daemonize
+```
+
+###Agent
+
+What is an Agent and how it works with the Puppet Master
+
+On redhat or Debian systems the Agent is started via an init script with the service command:
+```
+# Output can be viewed in /var/log/syslog
+sudo service puppet start
+```
+
+For testing purposes you can do the following:
+```
+# --verbose = gives detailed logging
+# --test    = run the puppet agent, outputs to standard out and exitssudo
+
+# If you don't specify the server, the agent will look for a host called `puppet` (/etc/hosts)
+sudo puppet agent --test --server=puppet.server.com
+```
