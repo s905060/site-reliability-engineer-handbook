@@ -23,3 +23,11 @@ Scenario: If the Client is not directly pass to ServerB, and ServerA can directl
    |                 |      |                 |      |                 | 
    + -------------- - +      + ---------------- +      + ---------------- +
 ```
+
+Suppose ServerA is 192.168.1.1 ServerB is 10.1.1.1, add the following configuration as long as the .ssh/config in
+```
+Host  10.1.1.1 
+    ProxyCommand ssh 192.168.1.1 'nc% h% P'
+```
+
+Configuration Explanation: For host 10.1.1.1 host ssh, equivalent to execute ssh 192.168.1.1 "nc 10.1.1.1 22", although the client is not the route to 10.1.1.1
