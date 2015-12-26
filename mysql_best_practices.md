@@ -66,3 +66,19 @@ As you can see, this rule also applies on a partial string search like "last_nam
 
 You should also understand which kinds of searches can not use the regular indexes. For instance, when searching for a word (e.g. "WHERE post_content LIKE '%apple%'"), you will not see a benefit from a normal index. You will be better off using mysql fulltext search or building your own indexing solution.
 
+###Index and Use Same Column Types for Joins
+
+If your application contains many JOIN queries, you need to make sure that the columns you join by are indexed on both tables. This affects how MySQL internally optimizes the join operation.
+
+Also, the columns that are joined, need to be the same type. For instance, if you join a DECIMAL column, to an INT column from another table, MySQL will be unable to use at least one of the indexes. Even the character encodings need to be the same type for string type columns.
+
+```
+// looking for companies in my state
+$r = mysql_query("SELECT company_name FROM users
+    LEFT JOIN companies ON (users.state = companies.state)
+    WHERE users.id = $user_id");
+ 
+// both state columns should be indexed
+// and they both should be the same type and character encoding
+// or MySQL might do full table scans
+```
