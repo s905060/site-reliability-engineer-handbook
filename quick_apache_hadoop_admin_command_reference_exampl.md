@@ -92,21 +92,23 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 
 ###9. Hadoop Filesystem Commands
 
-Command	Description
-hadoop fs -mkdir mydir	Create a directory (mydir) in HDFS
-hadoop fs -ls	List files and directories in HDFS
-hadoop fs -cat myfile	View a file content
-hadoop fs -du	Check disk space usage in HDFS
-hadoop fs -expunge	Empty trash on HDFS
-hadoop fs -chgrp hadoop file1	Change group membership of a file
-hadoop fs -chown huser file1	Change file ownership
-hadoop fs -rm file1	Delete a file in HDFS
-hadoop fs -touchz file2	Create an empty file
-hadoop fs -stat file1	Check the status of a file
-hadoop fs -test -e file1	Check if file exists on HDFS
-hadoop fs -test -z file1	Check if file is empty on HDFS
-hadoop fs -test -d file1	Check if file1 is a directory on HDFS
-10. Additional Hadoop Filesystem Commands
+|Command	|Description
+|--|--
+|hadoop fs -mkdir mydir	|Create a directory (mydir) in HDFS
+|hadoop fs -ls	|List files and directories in HDFS
+|hadoop fs -cat myfile	|View a file content
+|hadoop fs -du	|Check disk space usage in HDFS
+|hadoop fs -expunge	|Empty trash on HDFS
+|hadoop fs -chgrp hadoop file1	|Change group membership of a file
+|hadoop fs -chown huser file1	|Change file ownership
+|hadoop fs -rm file1	|Delete a file in HDFS
+|hadoop fs -touchz file2	|Create an empty file
+|hadoop fs -stat file1	|Check the status of a file
+|hadoop fs -test -e file1	|Check if file exists on HDFS
+|hadoop fs -test -z file1	|Check if file is empty on HDFS
+|hadoop fs -test -d file1	|Check if file1 is a directory on HDFS
+
+###10.Additional Hadoop Filesystem Commands
 
 Command	Description
 hadoop fs -copyFromLocal <source> <destination>	Copy from local fileystem to HDFS
