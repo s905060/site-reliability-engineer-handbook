@@ -164,3 +164,5 @@ First of all, ask yourself if there is any difference between having an empty st
 NULL columns require additional space and they can add complexity to your comparison statements. Just avoid them when you can. However, I understand some people might have very specific reasons to have NULL values, which is not always a bad thing.
 
 From MySQL docs:
+
+>"NULL columns require additional space in the row to record whether their values are NULL. For MyISAM tables, each NULL column takes one bit extra, rounded up to the nearest byte."
