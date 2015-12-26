@@ -63,3 +63,17 @@ In addition to the built-in macros, you can define your own to make it easier to
 # Accessing macro
 %{major}
 ```
+
+###How to pass custom macros as arguments?
+
+When you run rpmbuild you can provide it with arguments which can then be used within your .spec file:
+```
+# command
+rpmbuild -ba --define "package_version 1.2" myrpm-rpmbuild/SPEC/myrpm.spec
+```
+
+As highlighted in the previous section 'package_version' can be used as %{package_version} in the myrpm.spec file as shown below:
+```
+Name:           myrpm
+Version:        %{package_version}
+```
