@@ -213,3 +213,10 @@ There is a great explanation in the PHP docs for the mysql_unbuffered_query() fu
 
 However, it comes with certain limitations. You have to either read all the rows or call mysql_free_result() before you can perform another query. Also you are not allowed to use mysql_num_rows() or mysql_data_seek() on the result set.
 
+###Store IP Addresses as UNSIGNED INT
+
+Many programmers will create a VARCHAR(15) field without realizing they can actually store IP addresses as integer values. With an INT you go down to only 4 bytes of space, and have a fixed size field instead.
+
+You have to make sure your column is an UNSIGNED INT, because IP Addresses use the whole range of a 32 bit unsigned integer.
+
+In your queries you can use the INET_ATON() to convert and IP to an integer, and INET_NTOA() for vice versa. There are also similar functions in PHP called ip2long() and long2ip().
