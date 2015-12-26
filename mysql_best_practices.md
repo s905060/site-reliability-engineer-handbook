@@ -266,3 +266,14 @@ while (1) {
     usleep(50000);
 }
 ```
+
+###Smaller Columns Are Faster
+
+With database engines, disk is perhaps the most significant bottleneck. Keeping things smaller and more compact is usually helpful in terms of performance, to reduce the amount of disk transfer.
+
+MySQL docs have a list of Storage Requirements for all data types.
+
+If a table is expected to have very few rows, there is no reason to make the primary key an INT, instead of MEDIUMINT, SMALLINT or even in some cases TINYINT. If you do not need the time component, use DATE instead of DATETIME.
+
+Just make sure you leave reasonable room to grow or you might end up like Slashdot.
+
