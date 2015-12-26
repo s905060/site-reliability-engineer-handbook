@@ -103,3 +103,9 @@ mkdir -p /etc/puppet/modules/<module_name>/{files,templates,manifests}
 ```
 
 Or use the following command: `puppet module generate <companyName-serviceName>`
+
+###Resource
+
+Package is a resource type in Puppet. Some example resources are file, package, service etc.
+
+Example:
