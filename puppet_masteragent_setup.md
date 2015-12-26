@@ -306,3 +306,15 @@ file { '/etc/postfix/main.cf':
         notify  => Class['postfix:service'],    
     }
 ```
+
+Here we call the template function and where the template file resides. The values passed is in fact the path to the `postfix/templates/main.cf.erb` template file on disk.
+
+The contents attribute will apply the template with the the ruby variables transposed with the values passed (passing a value to class when its invoked) or fact variable values (see Facter section) to `/etc/postfix/main.cf`
+
+###Useful Commands
+
+Validate puppet code:
+
+```
+puppet parser validate service.pp
+```
