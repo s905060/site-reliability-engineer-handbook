@@ -202,3 +202,12 @@ if ($stmt = $mysqli->prepare("SELECT username FROM user WHERE state=?")) {
     $stmt->close();
 }
 ```
+
+###Unbuffered Queries
+
+Normally when you perform a query from a script, it will wait for the execution of that query to finish before it can continue. You can change that by using unbuffered queries.
+
+There is a great explanation in the PHP docs for the mysql_unbuffered_query() function:
+
+>"mysql_unbuffered_query() sends the SQL query query to MySQL without automatically fetching and buffering the result rows as mysql_query() does. This saves a considerable amount of memory with SQL queries that produce large result sets, and you can start working on the result set immediately after the first row has been retrieved as you don't have to wait until the complete SQL query has been performed."
+
