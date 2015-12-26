@@ -309,6 +309,7 @@
    * [Heap Sort](heap_sort.md)
    * [Merge Sort](merge_sort.md)
    * [Radix Sort](radix_sort.md)
+   * Cache algorithm definition
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
