@@ -94,3 +94,11 @@ A Module usually contain everything needed to configure an application. It also 
 To perform this automatic loading, Puppet checks the directories set in the `modulepath` which is set in the `[main]` secction of the `/etc/puppet/puppet.conf` file.
 
 Dirctory structure
+```
+# manifests = init.pp will go here
+# files     = any files we use will go here
+# templates = any templates our module might use
+
+mkdir -p /etc/puppet/modules/<module_name>/{files,templates,manifests}
+
+```
