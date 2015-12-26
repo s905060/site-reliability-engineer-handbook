@@ -1,0 +1,2 @@
+# hadoop Management Command --dfsadmin
+
