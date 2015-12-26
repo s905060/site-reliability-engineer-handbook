@@ -233,3 +233,14 @@ Fixed-length tables can improve performance because it is faster for MySQL engin
 They are also easier to cache and easier to reconstruct after a crash. But they also can take more space. For instance, if you convert a VARCHAR(20) field to a CHAR(20) field, it will always take 20 bytes of space regardless of what is it in.
 
 By using "Vertical Partitioning" techniques, you can separate the variable-length columns to a separate table. Which brings us to:
+
+
+###Vertical Partitioning
+
+Vertical Partitioning is the act of splitting your table structure in a vertical manner for optimization reasons.
+
+**Example 1**: You might have a users table that contains home addresses, that do not get read often. You can choose to split your table and store the address info on a separate table. This way your main users table will shrink in size. As you know, smaller tables perform faster.
+
+**Example 2**: You have a "last_login" field in your table. It updates every time a user logs in to the website. But every update on a table causes the query cache for that table to be flushed. You can put that field into another table to keep updates to your users table to a minimum.
+
+But you also need to make sure you don't constantly need to join these 2 tables after the partitioning or you might actually suffer performance decline.
