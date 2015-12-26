@@ -66,3 +66,8 @@ Docker is an implementation of a container. It provides a standard runtime for a
 Docker previously used `LXC` as the execution driver to talk to the kernel.
 
 `LXC` version needs to be compatible with Docker and because it is not developed by docker, now, docker uses the `libcontainer` as the default execution driver.
+
+###What is the docker client and daemon?
+
+The docker client sends commands to the docker daemon. The docker daemon is responsible for setting up containers which includes setting up cgroups, capabilities etc.
+
