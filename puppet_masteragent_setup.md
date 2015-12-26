@@ -100,5 +100,6 @@ Dirctory structure
 # templates = any templates our module might use
 
 mkdir -p /etc/puppet/modules/<module_name>/{files,templates,manifests}
-
 ```
+
+Or use the following command: `puppet module generate <companyName-serviceName>`
