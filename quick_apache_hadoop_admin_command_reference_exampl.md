@@ -48,6 +48,7 @@ hadoop fs -count -q /mydir	Check quota space on directory /mydir
 hadoop dfsadmin -setSpaceQuota /mydir 100M	Set quota to 100M on hdfs directory named /mydir
 hadoop dfsadmin -clrSpaceQuota /mydir	Clear quota on a HDFS directory
 hadooop dfsadmin -saveNameSpace	Backup Metadata (fsimage & edits). Put cluster in safe mode before this command.
+
 5. Hadoop Safe Mode (Maintenance Mode) Commands
 
 The following dfsadmin commands helps the cluster to enter or leave safe mode, which is also called as maintenance mode. In this mode, Namenode does not accept any changes to the name space, it does not replicate or delete blocks.
