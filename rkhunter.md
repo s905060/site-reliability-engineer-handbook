@@ -63,3 +63,7 @@ ALLOWHIDDENDIR=/dev/.static
 
 ALLOWHIDDENDIR=/dev/.initramfs
 ```
+
+1. Linkage for debugging rkhunter via watchdog: debugging linkage You can disable the 'os_specific' check in your rkhunter.conf file. Add it to the DISABLE_TESTS list.You can stop rkhunter from checking these by editing /etc/rkhunter.conf
+
+Un-comment the related ALLOWHIDDENDIR and ALLOWHIDDENFILE lines.
