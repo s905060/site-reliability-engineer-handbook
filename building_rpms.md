@@ -264,5 +264,4 @@ This allows setting of default attributes for files and directives.
 ```
  Files and Directories
 %defattr(<file mode>, <user>, <group>, <dir mode>)
-
 ```
