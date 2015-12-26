@@ -214,3 +214,9 @@ cp -r %{_builddir}/%{name}-%{version}/mypkg %{buildroot}/opt/mypkg
 
 cp %{_builddir}/%{name}-%{version}/mypkg.conf %{buildroot}/etc/mypkg.conf
 ```
+
+You are re-creating the tree that you want installed on your file system, with %{buildroot} as the equivalent of the target's root directory.
+
+Hope that clears it up!
+
+Now lets assume we have the following directory structure inside the silex-app dir:
