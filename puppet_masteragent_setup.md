@@ -132,3 +132,27 @@ file{
 ```
 
 No two resources of the same type can share the same title. Also, don't forget to always add a colon (:) after the title. That's important to remember and often overlooked!
+
+###How can I use common attributes across a resource type?
+```
+ # Setting default permission on the file resource
+    File{
+        owner => 'postfix',
+        group => 'postfix',
+        mode    => 0644,
+    }
+
+    file { '/etc/postfix/master.cf':
+        ensure  => present,
+        source  => 'puppet:///modules/postfix/master.cf',   
+        require => Class['postfix:install'],
+        notify  => Class['postfix:service'],
+    }
+
+    file { '/etc/postfix/main.cf':
+        ensure  => present,
+        content => template('postfix/main.cf.erb'),
+        require => Class['postfix:install'],
+        notify  => Class['postfix:service'],    
+    }
+```
