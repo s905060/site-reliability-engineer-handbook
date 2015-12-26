@@ -52,3 +52,14 @@ Source0:        %{name}-%{version}.zip
 %_initrddir %{_sysconfdir}/rc.d/init.d
 %_defaultdocdir %{_usr}/share/doc
 ```
+
+###How to define custom macros?
+
+In addition to the built-in macros, you can define your own to make it easier to manage your packages.
+```
+#%define macro_name value
+%define major 2
+
+# Accessing macro
+%{major}
+```
