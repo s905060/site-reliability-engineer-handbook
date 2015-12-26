@@ -214,7 +214,7 @@
    * [getent](getent.md)
    * [ipmitool](ipmitool.md)
    * [Building RPMs](building_rpms.md)
-   * Megacli
+   * [Megacli](megacli.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
