@@ -87,3 +87,20 @@ DRAM has become much cheaper over recent years and many motherboards support lar
 NVDIMM technology, which uses the DRAM slots and delivers NAND flash storage offers a middle ground by providing performance that comes close to DRAM speeds but provides a permanent storage medium.
 
 NVDIMM performance is already delivering latency as low as five microseconds, with the promise of further improvements to come. Combining NVDIMM with flash promised to offer some very interesting future caching solutions.
+
+```
+[root@benjr ~]# dmesg |grep -i write
+sda: Write Protect is off
+SCSI device sda: drive cache: write through
+sda: Write Protect is off
+SCSI device sda: drive cache: write through
+```
+
+```
+[root@benjr ~]# hdparm -W0 /dev/sda
+/dev/sda:
+setting drive write-caching to 0 (off)
+[root@benjr ~]# hdparm -W1 /dev/sda
+/dev/sda:
+setting drive write-caching to 1 (on)
+```
