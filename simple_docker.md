@@ -88,7 +88,7 @@ My docker instance failed to start with the following error:
 /usr/bin/docker: relocation error: /usr/bin/docker: symbol dm_task_get_info_with_deferred_remove, version Base not defined in file libdevmapper.so.1.02 with link time reference
 ```
 
-I just needed to update the device-mapper-event-libs package.
+I just needed to update the `device-mapper-event-libs` package.
 
 Reference:
 
