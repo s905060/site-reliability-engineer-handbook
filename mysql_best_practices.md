@@ -277,3 +277,13 @@ If a table is expected to have very few rows, there is no reason to make the pri
 
 Just make sure you leave reasonable room to grow or you might end up like Slashdot.
 
+###Choose the Right Storage Engine
+
+The two main storage engines in MySQL are MyISAM and InnoDB. Each have their own pros and cons.
+
+MyISAM is good for read-heavy applications, but it doesn't scale very well when there are a lot of writes. Even if you are updating one field of one row, the whole table gets locked, and no other process can even read from it until that query is finished. MyISAM is very fast at calculating SELECT COUNT(*) types of queries.
+
+InnoDB tends to be a more complicated storage engine and can be slower than MyISAM for most small applications. But it supports row-based locking, which scales better. It also supports some more advanced features such as transactions.
+
+* MyISAM Storage Engine
+* InnoDB Storage Engine
