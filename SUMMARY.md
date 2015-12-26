@@ -218,7 +218,7 @@
    * [Building RPMs](building_rpms.md)
    * [Megacli](megacli.md)
        * [Megacli package version](megacli_package_version.md)
-   * RKhunter
+   * [RKhunter](rkhunter.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
