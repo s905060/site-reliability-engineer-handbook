@@ -150,3 +150,9 @@ docker rm sharp_wilson
 # delete image
 docker rmi <image-id>
 ```
+
+###How to Run a Web Server inside a Docker Container and Access it via your Host
+
+I had previously created a centos container by running `docker run centos /bin/bash`
+
+Now when I do `docker ps -a` I get a container ID `a5da0b881f63` (this would be different for you) and a name of 'sharp_wilson' which is auto assigned by Docker and will be different for you.
