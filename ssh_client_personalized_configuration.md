@@ -10,7 +10,7 @@ Commonly used SSH client personalized configuration items
 |UserKnownHostsFile	|/Dev/null	|knownhosts file settings
 |StrictHostKeyChecking	|no	|Whether to join a host knownhosts file links
 
-Description: StrictHostKeyChecking no and UserKnownHostsFile / dev / null The two hosts kown key configured canceled checks for frequent reloading machine case, very useful.
+Description: StrictHostKeyChecking no and UserKnownHostsFile /dev/null The two hosts kown key configured canceled checks for frequent reloading machine case, very useful.
 
 Use ProxyCommand achieve springboard Login
 
