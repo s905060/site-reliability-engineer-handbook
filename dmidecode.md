@@ -3,7 +3,6 @@
 Burned into the motherboard manufacturer's serial number (SN) is unique, it can be used as a server unique index. It can easily crawl to the server's serial number by dmidecode command under Linux. 
 
 However, due to various manufacturers of SMBios write specifications are not the same brush, we need to do some compatible operating. 
-A brief summary of what the table below
 
 |Firm	|General grab method
 |-- |-- |
