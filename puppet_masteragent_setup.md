@@ -2,13 +2,13 @@
 
 ###Puppet configuration
 
-**/etc/puppet/puppet.conf** is your standard config file. There are 3 sections to take note of.
+`/etc/puppet/puppet.conf` is your standard config file. There are 3 sections to take note of.
 
-**[main]** - global configuration section
+`[main]` - global configuration section
 
-**[master]** - master specific configuration
+`[master]` - master specific configuration
 
-**[agent]** - agent specific configuration
+`[agent]` - agent specific configuration
 
 
 ###SSL Certificate
