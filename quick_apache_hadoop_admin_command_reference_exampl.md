@@ -110,14 +110,15 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 
 ###10.Additional Hadoop Filesystem Commands
 
-Command	Description
-hadoop fs -copyFromLocal <source> <destination>	Copy from local fileystem to HDFS
-hadoop fs -copyFromLocal file1 data	e.g: Copies file1 from local FS to data dir in HDFS
-hadoop fs -copyToLocal <source> <destination>	copy from hdfs to local filesystem
-hadoop fs -copyToLocal data/file1 /var/tmp	e.g: Copies file1 from HDFS data directory to /var/tmp on local FS
-hadoop fs -put <source> <destination>	Copy from remote location to HDFS
-hadoop fs -get <source> <destination>	Copy from HDFS to remote directory
-hadoop distcp hdfs://192.168.0.8:8020/input hdfs://192.168.0.8:8020/output	Copy data from one cluster to another using the cluster URL
-hadoop fs -mv file:///data/datafile /user/hduser/data	Move data file from the local directory to HDFS
-hadoop fs -setrep -w 3 file1	Set the replication factor for file1 to 3
-hadoop fs -getmerge mydir bigfile	Merge files in mydir directory and download it as one big file
+|Command	|Description
+|--|--
+|hadoop fs -copyFromLocal <source> <destination>	|Copy from local fileystem to HDFS
+|hadoop fs -copyFromLocal file1 data	|e.g: Copies file1 from local FS to data dir in HDFS
+|hadoop fs -copyToLocal <source> <destination>	|copy from hdfs to local filesystem
+|hadoop fs -copyToLocal data/file1 /var/tmp	|e.g: Copies file1 from HDFS data directory to /var/tmp on local FS
+|hadoop fs -put <source> <destination>	|Copy from remote location to HDFS
+|hadoop fs -get <source> <destination>	|Copy from HDFS to remote directory
+|hadoop distcp hdfs://192.168.0.8:8020/input hdfs://192.168.0.8:8020/output	|Copy data from one cluster to another using the cluster URL
+|hadoop fs -mv file:///data/datafile /user/hduser/data	|Move data file from the local directory to HDFS
+|hadoop fs -setrep -w 3 file1	|Set the replication factor for file1 to 3
+|hadoop fs -getmerge mydir bigfile	|Merge files in mydir directory and download it as one big file
