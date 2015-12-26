@@ -134,3 +134,11 @@ Even if you have a users table that has a unique username field, do not make tha
 There are also behind the scenes operations done by the MySQL engine itself, that uses the primary key field internally. Which become even more important, the more complicated the database setup is. (clusters, partitioning etc...).
 
 One possible exception to the rule are the "association tables", used for the many-to-many type of associations between 2 tables. For example a "posts_tags" table that contains 2 columns: post_id, tag_id, that is used for the relations between two tables named "post" and "tags". These tables can have a PRIMARY key that contains both id fields.
+
+###Use ENUM over VARCHAR
+
+ENUM type columns are very fast and compact. Internally they are stored like TINYINT, yet they can contain and display string values. This makes them a perfect candidate for certain fields.
+
+If you have a field, which will contain only a few different kinds of values, use ENUM instead of VARCHAR. For example, it could be a column named "status", and only contain values such as "active", "inactive", "pending", "expired" etc...
+
+There is even a way to get a "suggestion" from MySQL itself on how to restructure your table. When you do have a VARCHAR field, it can actually suggest you to change that column type to ENUM instead. This done using the PROCEDURE ANALYSE() call. Which brings us to:
