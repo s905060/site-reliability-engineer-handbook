@@ -274,7 +274,7 @@
    * [How to get Linux's TCP state statistics](how_to_get_linuxs_tcp_state_statistics.md)
    * [Linux TCP retransmission rate calculation](linux_tcp_retransmission_rate_calculation.md)
    * [How to determine OOM](how_to_determine_oom.md)
-   * How-to check Java process heapsize
+   * [How-to check Java process heapsize](how-to_check_java_process_heapsize.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
