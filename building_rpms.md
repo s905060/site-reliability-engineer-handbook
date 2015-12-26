@@ -290,7 +290,7 @@ If all goes well, your RPM will be available in the rpmbuild/RPMS dir.
 
 Now that we have a basic idea of building RPMs, lets take a look at some of the more finer details.
 
-Config Files
+###Config Files
 
 I found the following article quite useful to understand how the %config macro and its options work: Config file matrix
 
