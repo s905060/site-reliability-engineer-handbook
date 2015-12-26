@@ -270,3 +270,13 @@ package{ 'ssh':
     name   => $::ssh::params::ssh_package_name,
 }
 ```
+
+###Facter
+
+Puppet is an inventory management tool. It returns 'facts' about each node.
+
+Fact variables can be accessed as `$::osfamily`.
+
+You can use facter variables within a template. When puppet is run the fact variables will be replaced by fact values.
+
+Here's a snippet:
