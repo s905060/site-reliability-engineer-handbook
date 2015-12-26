@@ -281,7 +281,7 @@
    * [Linux TCP retransmission rate calculation](linux_tcp_retransmission_rate_calculation.md)
    * [How to determine OOM](how_to_determine_oom.md)
    * [How-to check Java process heapsize](how-to_check_java_process_heapsize.md)
-   * [Troubleshooting network issues](troubleshooting_network_issues.md)
+   * [Troubleshooting network issues](troubleshootingnetwork_issues_md.md)
    * [How to check what sudo acces a user has?](how_to_check_what_sudo_acces_a_user_has.md)
    * [How to copy your key to a remote server?](how_to_copy_your_key_to_a_remote_server.md)
    * [Linux date and Unix timstamp conversion](linux_date_and_unix_timstamp_conversion.md)
