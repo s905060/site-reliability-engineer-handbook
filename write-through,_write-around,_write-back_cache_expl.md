@@ -89,7 +89,7 @@ NVDIMM technology, which uses the DRAM slots and delivers NAND flash storage off
 NVDIMM performance is already delivering latency as low as five microseconds, with the promise of further improvements to come. Combining NVDIMM with flash promised to offer some very interesting future caching solutions.
 
 
-Disk Cache
+###Disk Cache
 ```
 [root@benjr ~]# dmesg |grep -i write
 sda: Write Protect is off
