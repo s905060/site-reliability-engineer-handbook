@@ -135,3 +135,18 @@ docker stop <name>
 # Show standard output of a container
 docker logs <name>
 ```
+
+###Docker Images
+```
+# commit
+docker commit sharp_wilson haani-niyaz/httpd
+
+# View images
+docker images
+
+# delete cotainer
+docker rm sharp_wilson
+
+# delete image
+docker rmi <image-id>
+```
