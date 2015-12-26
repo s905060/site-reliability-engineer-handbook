@@ -77,3 +77,69 @@ As highlighted in the previous section 'package_version' can be used as %{packag
 Name:           myrpm
 Version:        %{package_version}
 ```
+
+###Deep Dive
+
+Lets jump into building a RPM with a real example. We will be packaging a php application.
+
+Before we start I'm going to show you what the final spec file will look like and then I'll go on to explaining each part.
+
+```
+Name:           silex-app
+Version:        1.0
+Release:        1     
+Group:          Development/Libraries
+Summary:        PHP Silex App   
+License:        MIT
+Source0:        %{name}-%{version}.zip
+BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
+
+%description
+This is an example of a PHP Silex app packaged as a RPM
+
+%prep
+# Unzip source file to BUILD dir
+unzip %{SOURCE0}
+
+%build
+# The build section includes instructions, which are used to build and prepare the package for installation.
+
+%install
+# You must create these directories within the BuildRoot so you don't mess with the system directory
+# Create the directories as it should look like in your system directory
+# Normally in the make install process you set DESTDIR=${RPM_BUILD_ROOT} to achieve this
+
+mkdir %{buildroot}
+mkdir -p -m0755 %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/www %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/src %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/tests %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/composer.*  %{buildroot}/var/
+
+%clean
+rm -rf %{buildroot}
+
+# Removed the unzipped file from the BUILD dir
+rm -rf %{_builddir}/%{name}*
+
+# Remove source file
+rm %{SOURCE0}
+
+
+%files
+
+# Set the permissions to the files/directories created
+%defattr(-,apache,apache,-)
+
+# Speicfy file/dir created
+# Note that exact files must be specified so that when you remove the rpm those files/dirs are also removed
+/var/www
+/var/src
+/var/tests
+/var/composer.*
+
+
+%changelog
+* Sun Jul 13 2008 <some.user@ngmail.com> 
+- Initial Build.
+```
