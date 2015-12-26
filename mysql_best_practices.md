@@ -223,3 +223,13 @@ In your queries you can use the INET_ATON() to convert and IP to an integer, and
 
 `$r = "UPDATE users SET ip = INET_ATON('{$_SERVER['REMOTE_ADDR']}') WHERE user_id = $user_id";
 `
+
+###Fixed-length (Static) Tables are Faster
+
+When every single column in a table is "fixed-length", the table is also considered "static" or "fixed-length". Examples of column types that are NOT fixed-length are: VARCHAR, TEXT, BLOB. If you include even just 1 of these types of columns, the table ceases to be fixed-length and has to be handled differently by the MySQL engine.
+
+Fixed-length tables can improve performance because it is faster for MySQL engine to seek through the records. When it wants to read a specific row in a table, it can quickly calculate the position of it. If the row size is not fixed, every time it needs to do a seek, it has to consult the primary key index.
+
+They are also easier to cache and easier to reconstruct after a crash. But they also can take more space. For instance, if you convert a VARCHAR(20) field to a CHAR(20) field, it will always take 20 bytes of space regardless of what is it in.
+
+By using "Vertical Partitioning" techniques, you can separate the variable-length columns to a separate table. Which brings us to:
