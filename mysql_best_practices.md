@@ -82,3 +82,23 @@ $r = mysql_query("SELECT company_name FROM users
 // and they both should be the same type and character encoding
 // or MySQL might do full table scans
 ```
+
+###Do Not ORDER BY RAND()
+
+This is one of those tricks that sound cool at first, and many rookie programmers fall for this trap. You may not realize what kind of terrible bottleneck you can create once you start using this in your queries.
+
+If you really need random rows out of your results, there are much better ways of doing it. Granted it takes additional code, but you will prevent a bottleneck that gets exponentially worse as your data grows. The problem is, MySQL will have to perform RAND() operation (which takes processing power) for every single row in the table before sorting it and giving you just 1 row.
+
+```
+// what NOT to do:
+$r = mysql_query("SELECT username FROM user ORDER BY RAND() LIMIT 1");
+ 
+ 
+// much better:
+ 
+$r = mysql_query("SELECT count(*) FROM user");
+$d = mysql_fetch_row($r);
+$rand = mt_rand(0,$d[0] - 1);
+ 
+$r = mysql_query("SELECT username FROM user LIMIT $rand, 1");
+```
