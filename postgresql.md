@@ -1,37 +1,37 @@
 # Postgresql
 
-将文件导入到数据库
+Import the file into the database
 
 ```
 \COPY table_name FROM 'filepath' WITH DELIMITER ' '
 ```
 
-Alter修改列类型由character(255)为varchar(255)
+Alter column types from the character (255) as varchar (255)
 
 ```
 ALTER TABLE mytable ALTER COLUMN hostname TYPE varchar(255);
 ```
 
-Postgresql数据类型
+Postgresql Data Types
 
-|字段类型	|别名	|描述 |
+|Field Type	|Aliases	| Description |
 |-- |-- |-- |
-bigint	int8	有符号 8 字节整数
-bit [ (n) ]		定长位串
-bit varying [ (n) ]	varbit	变长位串
-boolean	bool	逻辑布尔量（真/假）
-bytea		二进制数据（"字节数组"）
-character varying [ (n) ]	varchar(n)	变长字符串
-character [ (n) ]	char(n)	定长字符串
-text		变长字符串
-inet		IPv4 或者 IPv6 网络地址
-macaddr		MAC 地址
-smallint	int,int2	有符号两字节整数
-integer	int4	四字节长有符号整数
-real	float4	单精度浮点数
-double precision	float8	双精度浮点数字
-date		日历日期（年，月，日）
-timestamp [ (p) ] [ without time zone ]		日期和时间
+|bigint	|int8	|Signed 8-byte integer
+|bit |[(n)]		|Fixed-length bit string
+|bit varying [(n)]	|varbit	|Variable-length bit string
+|boolean	|bool	|Boolean logic (true / false)
+|bytea	|	|Binary data ("byte array")
+|character varying [(n)]|	varchar (n)	|Variable-length strings
+|character [(n)]	|char (n)	|Fixed-length string
+|text		||Variable-length strings
+|inet		||IPv4 or IPv6 network address
+|macaddr	||	MAC address
+|smallint	|int, int2	|Signed two-byte integer
+|integer	|int4	|Signed four-byte integer
+|real	|float4	|Single-precision floating-point number
+|double precision	|float8	|Double-precision floating-point number
+|date		||Calendar date (year, month, day)
+timestamp [(p)] [without time zone]	||	Date and Time
 
 查看数据库中各个表的大小
 
