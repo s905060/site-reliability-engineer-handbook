@@ -31,7 +31,7 @@ Postgresql Data Types
 |real	|float4	|Single-precision floating-point number
 |double precision	|float8	|Double-precision floating-point number
 |date		||Calendar date (year, month, day)
-timestamp [(p)] [without time zone]	||	Date and Time
+|timestamp [(p)] [without time zone]	||	Date and Time
 
 查看数据库中各个表的大小
 
