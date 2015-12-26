@@ -130,3 +130,5 @@ file{
          group  => root
 }
 ```
+
+No two resources of the same type can share the same title. Also, don't forget to always add a colon (:) after the title. That's important to remember and often overlooked!
