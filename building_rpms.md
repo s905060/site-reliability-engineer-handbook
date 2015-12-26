@@ -273,3 +273,24 @@ What if I want to give different permissions to different files?
 ```
 
 All of the directories, sub-directories and files will be installed to the file system when the RPM is installed.
+
+###Building the RPM
+
+Now that the .spec file is complete, we can proceed to building the RPM.
+
+Note: Don't forget to place your source file in the SOURCES dir and set the build area in the ~/.rpmmacros file!
+
+Command to build the RPM:
+
+`rpmbuild -ba rpmbuild/SPECS/myappname.spec`
+
+If all goes well, your RPM will be available in the rpmbuild/RPMS dir.
+
+Nuts and Bolts
+
+Now that we have a basic idea of building RPMs, lets take a look at some of the more finer details.
+
+Config Files
+
+I found the following article quite useful to understand how the %config macro and its options work: Config file matrix
+
