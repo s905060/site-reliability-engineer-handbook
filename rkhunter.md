@@ -20,3 +20,23 @@ rkhunter "debugging" howto
 1. The first run of 'rkhunter' after installation may give some warning messages. They are is some way normal. Even on clean installed system, with no additional software installed, these warnings occur. You could take a at the FAQ of RKhunter. I got these warnings on Xubuntu beta, clean install:
 
 `sudo rkhunter --checkall`
+
+####warnings:
+
+```
+/usr/bin/mail
+
+/usr/bin/bsd/mail-x
+
+checking /dev for susp. files
+
+checking hidden files and direct
+
+/usr/bin/lwp-request
+```
+
+1. It is possible for a package manager database to become maliciously corrupted. RKhunter can only report on changes, but not on what has caused the change, it is reactive.
+2. Help Rootkit Hunter users on the rkhunter-users mailing list. the rkhunter mailinglist It is also a source of information on "false positives".
+3. "Intruder Detection Checklist". This list is available via the intruder detection list
+4. What to do with "common" warnings as:
+
