@@ -156,3 +156,6 @@ No two resources of the same type can share the same title. Also, don't forget t
         notify  => Class['postfix:service'],    
     }
 ```
+
+You will notice the File resource typed capitalized without a title. This syntax is referred to as a resource default which allows to specify defaults for a particular resource type. In this example all file resource types will share the owner & group permissions.
+
