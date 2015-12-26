@@ -131,7 +131,7 @@
        * [Exit codes](exit_codes.md)
        * [Special Variables](special_variables.md)
        * [Small getopts tutorial](small_getopts_tutorial.md)
-       * How rapid detection of base script syntax errors, it does not execute the script
+       * [How rapid detection of base script syntax errors, it does not execute the script](how_rapid_detection_of_base_script_syntax_errors,_.md)
    * [Java](java.md)
        * [Life cycle of a Thread (Thread States)](life_cycle_of_a_thread_thread_states.md)
        * [Understand JVM GC](understand_jvm_gc.md)
