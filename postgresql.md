@@ -33,48 +33,49 @@ Postgresql Data Types
 |date		||Calendar date (year, month, day)
 |timestamp [(p)] [without time zone]	||	Date and Time
 
-查看数据库中各个表的大小
+Check the size of each table in the database
 
 `\d+`
 
-启动postgresql
+Start postgresql
 
 `bin/pg_ctl start -D pg_data`
 
-停止postgresql
+Stop postgresql
 
 `/bin/pg_ctl stop -D pg_data`
 
-单表备份
+Single table backup
 
 `pg_dump -t 表名 > backup.sql`
 
-单表还原
+Restore a single table
 
 `psql -f backup.sql`
 
-清空表的所有内容，保留表结构
+Empty all the contents of the table, reserved table structure
 
 `truncate tablename`
 
-创建用户&授权
+Create User & Authorization
 
-#进入psql命令行
 ```
+# Enter the psql command line
 CREATE USER username WITH PASSWORD 'password';
 GRANT SELECT ON TABLE  tablname TO username ;
 ```
 
-查看用户列表
+See the list of users
 
 ```
 \du
-#或者
+# or
 select * from pg_shadow ;
 ```
 
-查看指定用户的权限
+Specifies the user's permission
+
 ```
-#进入psql 交互命令行
+# Psql interactive command line enter
 select * from INFORMATION_SCHEMA.role_table_grants  where grantee='username';
 ```
