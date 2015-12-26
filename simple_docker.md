@@ -93,3 +93,14 @@ I just needed to update the `device-mapper-event-libs` package.
 Reference:
 
 http://stackoverflow.com/questions/27216473/docker-1-3-fails-to-start-on-rhel6-5
+
+###Configure Docker to Communicate over Network
+```
+# Stop the service
+sudo /etc/init.d/docker stop
+
+# -H Bind to IP and port (Host option)
+# -d Start in Daemon mode
+# '&' is to give us the prompt back
+sudo docker run -H 192.168.33.10:2375 -d &
+```
