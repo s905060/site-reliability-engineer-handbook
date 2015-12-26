@@ -15,3 +15,28 @@ VM1 VM2 VM2..   x 10
 <— Hypervisor —>
 Physical Machine x 1
 ```
+
+###What is a container?
+```
+app               app               app
+container      container      container  
+<— OS  —>
+<— VM  —>
+```
+
+The single ‘user space’ is now a within a container which allows for multiple user spaces via containers. Each container has its user space and app.
+
+Question! Why not just install all apps within a ‘user space’ or container? We cannot share resources between applications. This filesystem, pid etc.
+
+Containers are essentially runtime environment which consume low resources.
+
+Question ! Can a container run on multiple operating systems?
+
+No, containers use the OS kernel.
+
+###How do containers work?
+
+* Each container will have its own root file system
+* Isolated process trees
+* Isolated network stack
+* Isolated users
