@@ -165,3 +165,11 @@ package { ["postfix", "mailx"]:
         ensure => present,
     }
 ```
+
+###Check if a resource exists:
+
+puppet resource file `/vagrant/modules/postfix/manifests/service.pp`
+
+
+Look at a resource:
+`puppet resource package vim`
