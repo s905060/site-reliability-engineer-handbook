@@ -278,7 +278,7 @@
    * [How to determine OOM](how_to_determine_oom.md)
    * [How-to check Java process heapsize](how-to_check_java_process_heapsize.md)
    * [Troubleshooting network issues](troubleshooting_network_issues.md)
-   * How to check what sudo acces a user has?
+   * [How to check what sudo acces a user has?](how_to_check_what_sudo_acces_a_user_has.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
