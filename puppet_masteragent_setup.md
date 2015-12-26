@@ -280,3 +280,13 @@ Fact variables can be accessed as `$::osfamily`.
 You can use facter variables within a template. When puppet is run the fact variables will be replaced by fact values.
 
 Here's a snippet:
+
+```
+soft_bounce = no
+command_directory = /usr/sbin
+daemon_directory = /usr/libexec/postfix
+mail_owner = postfix
+myhostname = <%= @hostname %>
+mydomain = <%= @domain %>
+
+```
