@@ -32,3 +32,11 @@ There are three main caching techniques that can be deployed, each with their ow
 **Write-around** cache is a similar technique to write-through cache, but write I/O is written directly to permanent storage, bypassing the cache. This can reduce the cache being flooded with write I/O that will not subsequently be re-read, but has the disadvantage is that a read request for recently written data will create a “cache miss” and have to be read from slower bulk storage and experience higher latency.
 
 **Write-back** cache is where write I/O is directed to cache and completion is immediately confirmed to the host. This results in low latency and high throughput for write-intensive applications, but there is data availability exposure risk because the only copy of the written data is in cache. As we will discuss later, suppliers have added resiliency with products that duplicate writes. Users need to consider whether write-back cache solutions offer enough protection as data is exposed until it is staged to external storage. Write-back cache is the best performing solution for mixed workloads as both read and write I/O have similar response time levels.
+
+###Where to cache
+
+There are a number of locations in which caching solutions can be deployed.
+
+In the server – Some caching solutions are deployed directly in the server, either on RAID cards or Fibre Channel host bus adapter (HBA) cards. Products in the market today include LSI’s range of Nytro MegaRAID PCIe cards and Qlogic’s FabricCache.
+
+Both these products aim to accelerate I/O by caching data on the card itself or in the case of FabricCache on a connected PCIe SSD device that uses the PCIe bus for power.
