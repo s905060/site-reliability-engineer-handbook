@@ -1,6 +1,6 @@
 # Troubleshooting network issues
 
-* ifconfig (or ip link, ip addr) - for obtaining information about network interfaces
+* ifconfig (or `ip link`, `ip addr`) - for obtaining information about network interfaces
 * ping - for validating, if target host is accessible from my machine. ping is also could be used for basic * DNS diagnostics - we could ping host by IP-address or by its hostname and then decide if DNS works at all. And then traceroute or tracepath or mtr to look what's going on on the way to there.
 * dig - diagnose everything DNS
 * `dmesg | less or dmesg | tail or dmesg | grep -i error` - for understanding what the Linux kernel thinks about some trouble.
@@ -8,7 +8,7 @@
 * telnet <host> <port> - is very useful for communicating with various TCP-services(e.g. on SMTP, HTTP protocols), also we could check general opportunity to connect to some TCP port.
 * iptables-save (on Linux) - to dump the full iptables tables
 * ethtool - get all the network interface card parameters (status of the link, speed, offload parameters...)
-* socat - the swiss army tool to test all network protocols (`UDP`, `multicast`, `SCTP`...). Especially useful (more so than telnet) with a few -d options.
+* socat - the swiss army tool to test all network protocols (`UDP`, `multicast`, `SCTP`...). Especially useful (more so than telnet) with a few `-d` options.
 * iperf - to test bandwidth availability
 * openssl (`s_client`, `ocsp`, `x509`...) to debug all SSL/TLS/PKI issues.
 * wireshark - the powerful tool for capturing and analyzing network traffic, which allows to analyze and catch many network bugs.
