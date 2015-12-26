@@ -102,3 +102,5 @@ $rand = mt_rand(0,$d[0] - 1);
  
 $r = mysql_query("SELECT username FROM user LIMIT $rand, 1");
 ```
+
+So you pick a random number less than the number of results and use that as the offset in your LIMIT clause.
