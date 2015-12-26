@@ -150,3 +150,17 @@ PROCEDURE ANALYSE() will let MySQL analyze the columns structures and the actual
 For example, if you created an INT field for your primary key, however do not have too many rows, it might suggest you to use a MEDIUMINT instead. Or if you are using a VARCHAR field, you might get a suggestion to convert it to ENUM, if there are only few unique values.
 
 You can also run this by clicking the "Propose table structure" link in phpmyadmin, in one of your table views.
+
+![](suggestions.jpg)
+
+Keep in mind these are only suggestions. And if your table is going to grow bigger, they may not even be the right suggestions to follow. The decision is ultimately yours.
+
+###Use NOT NULL If You Can
+
+Unless you have a very specific reason to use a NULL value, you should always set your columns as NOT NULL.
+
+First of all, ask yourself if there is any difference between having an empty string value vs. a NULL value (for INT fields: 0 vs. NULL). If there is no reason to have both, you do not need a NULL field. (Did you know that Oracle considers NULL and empty string as being the same?)
+
+NULL columns require additional space and they can add complexity to your comparison statements. Just avoid them when you can. However, I understand some people might have very specific reasons to have NULL values, which is not always a bad thing.
+
+From MySQL docs:
