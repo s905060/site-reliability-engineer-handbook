@@ -40,3 +40,25 @@ There are a number of locations in which caching solutions can be deployed.
 In the server – Some caching solutions are deployed directly in the server, either on RAID cards or Fibre Channel host bus adapter (HBA) cards. Products in the market today include LSI’s range of Nytro MegaRAID PCIe cards and Qlogic’s FabricCache.
 
 Both these products aim to accelerate I/O by caching data on the card itself or in the case of FabricCache on a connected PCIe SSD device that uses the PCIe bus for power.
+
+Placing the intelligence into an adaptor card provides some degree of abstraction from the application or operating system (OS), making it less host-dependent. However, this also means the adaptor card has no concept or understanding of the data is it caching and has to rely on optimisation algorithms based around frequency of use rather than application-based information.
+
+Qlogic FabricCache has the benefit that cached data can be shared between hosts. The Fibre Channel fabric is used to transfer cached data, which potentially provides a larger cache capacity than could be provided with a single device alone, as data doesn’t need to be cached if it is already available elsewhere on the fabric.
+
+Working with the hypervisor – In this case the hypervisor is involved in the caching process, typically through one of two methods.
+
+Some solutions, such as FVP from PernixData, are embedded as a kernel extension to the hypervisor and so work in close co-operation with the hypervisor. FVP acts as either a write-through or write-back cache and protects the integrity of write-back data by synchronously replicating it between vSphere cluster guests.
+
+VMware has integrated caching into the hypervisor with vSphere Flash Read Cache. This provides the benefit of full hypervisor integration, which means new features should be supported more quickly than third-party offerings. Microsoft offers a similar feature known as Write-Back Cache for Hyper-V in Windows Server 2012 R2.
+
+Other solutions, such as Infinio Systems’ Accelerator or Atlantis Computing’s ILIO USX, deploy a virtual machine on the hypervisor that provides storage resources to other hypervisor guests. Both of these solutions use system DRAM rather than flash to store cached data.
+
+Accelerator exposes an NFS datastore to the host that acts as a proxy to the primary datastore on permanent storage. Data in the cache is deduplicated and can be shared across a cluster of VMware vSphere hosts.
+
+ILIO USX is capable of caching SAN and NAS storage and has the additional benefit of supporting the emerging NVDIMM technology. It also makes significant storage capacity savings through deduplication of data in the cache.
+
+In the operating system – Microsoft provides write-back cache within Windows Server 2012 R2 that can be used with Hyper-V. There are other caching software solutions that deploy into the operating system, providing acceleration for Windows and Linux environments, such as FlashSoft from SanDisk.
+
+Having caching software integrated with the OS provides the ability to be more targeted with caching software, for example, by applying it only to certain disk volumes or folders, although these solutions may be less flexible with clustered environments.
+
+Deciding exactly where to cache data is dependent on the design and requirements of the infrastructure being deployed and that means taking into consideration some of the issues associated with caching solutions.
