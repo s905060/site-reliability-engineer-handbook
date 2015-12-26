@@ -191,7 +191,7 @@ The top scope can be access by prepending `::` to a variable. Its recommended to
 Puppet variables in the current scope are available as ruby instance variables i.e: `@myvariable`
 
 ###Puppet Conditionals
-Case example
+* Case example
 ```
 case $::osfamily{
         Solaris: {
@@ -209,7 +209,7 @@ case $::osfamily{
     }
 ```
 
-Selector example
+* Selector example
 ```
 $package_name = $::osfamily ?
     'RedHat'  => "openssh-server",
@@ -218,7 +218,7 @@ $package_name = $::osfamily ?
     default   => fail("Module propuppet-ssh does not support osfamily ${::osfamily}")
 ```
 
-Classes
+* Classes
 
 Class Inheritance example
 ```
@@ -239,5 +239,31 @@ include ssh
 
 The above does not work for prameterized classes (classes that take parameters when they are called)
 
-Using Variables between Classes
+* Using Variables between Classes
+```
+class ssh::params{
+    case $::osfamily{
+        Solaris: {
+            $ssh_package_name = 'openssh'
+        }
+        Debian: {
+            $ssh_package_Name = 'open_ssh_server'
+        }
+        RedHat: {
+            $ssh_package_Name = 'open_ssh_server'
+        }
+        default: {
+            fail("Module propuppet-ssh does not support osfamily ${::osfamily}")
+        }
+    }
+}
 
+
+class ssh::install {
+    include ssh::params
+
+package{ 'ssh':
+    ensure => present,
+    name   => $::ssh::params::ssh_package_name,
+}
+```
