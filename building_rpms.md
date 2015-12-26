@@ -185,3 +185,12 @@ unzip %{SOURCE0}
 
 Script command to 'prepare' (uncompress) the zip file to build it. Note that our silex-app-1.4.5.zip file will be unzipped to our BUILD dir when we build the RPM.
 
+####%build
+
+Script commands to "build" the program (e.g. to compile it) and get it ready for installing. We're not doing that here.
+
+####%install
+
+Here you are basically copying whatever you have in your %{_builddir} (BUILD dir) to %{buildroot}
+
+
