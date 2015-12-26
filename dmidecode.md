@@ -5,11 +5,12 @@ Burned into the motherboard manufacturer's serial number (SN) is unique, it can 
 However, due to various manufacturers of SMBios write specifications are not the same brush, we need to do some compatible operating. 
 A brief summary of what the table below
 
-Firm	General grab method
-Dell	dmidecode -s system-serial-number
-HP	dmidecode -s system-serial-number
-IBM	dmidecode -s system-serial-number
-Huawei	dmidecode -s system-serial-number (Huawei rack server) or dmidecode -s baseboard-serial-number (Huawei blade)
+|Firm	|General grab method
+|-- |-- |
+|Dell	|dmidecode -s system-serial-number
+|HP	    |dmidecode -s system-serial-number
+|IBM	|dmidecode -s system-serial-number
+|Huawei	|dmidecode -s system-serial-number (Huawei rack server) or dmidecode -s baseboard-serial-number (Huawei blade)
 
 Use a shell to cover all models, as follows:
 ```
