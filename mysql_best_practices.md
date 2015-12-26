@@ -297,3 +297,13 @@ ORM's are great for "Lazy Loading". It means that they can fetch values only as 
 ORM's can also batch your queries into transactions, which operate much faster than sending individual queries to the database.
 
 Currently my favorite ORM for PHP is Doctrine. I wrote an article on how to install Doctrine with CodeIgniter.
+
+###Be Careful with Persistent Connections
+
+Persistent Connections are meant to reduce the overhead of recreating connections to MySQL. When a persistent connection is created, it will stay open even after the script finishes running. Since Apache reuses it's child processes, next time the process runs for a new script, it will reuse the same MySQL connection.
+
+`mysql_pconnect() in PHP`
+
+It sounds great in theory. But from my personal experience (and many others), this features turns out to be not worth the trouble. You can have serious problems with connection limits, memory issues and so on.
+
+Apache runs extremely parallel, and creates many child processes. This is the main reason that persistent connections do not work very well in this environment. Before you consider using the mysql_pconnect() function, consult your system admin.
