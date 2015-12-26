@@ -265,3 +265,11 @@ This allows setting of default attributes for files and directives.
  Files and Directories
 %defattr(<file mode>, <user>, <group>, <dir mode>)
 ```
+
+What if I want to give different permissions to different files?
+```
+#%attr(<mode>, <user>, <group>) file
+%attr(0644, root, root) /var/www/.htaccess
+```
+
+All of the directories, sub-directories and files will be installed to the file system when the RPM is installed.
