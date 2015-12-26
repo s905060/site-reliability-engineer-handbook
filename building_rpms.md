@@ -193,4 +193,6 @@ Script commands to "build" the program (e.g. to compile it) and get it ready for
 
 Here you are basically copying whatever you have in your %{_builddir} (BUILD dir) to %{buildroot}
 
+What is the Buildroot? This was initially defined in the preamble section but it is best explained now.
 
+This is best explained with an example. Say you want to install your source files in /opt/mypkgname/ and you also want a config file in /etc/mypkgname.conf. To achieve this you would do the following in the %install section:
