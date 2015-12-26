@@ -104,3 +104,10 @@ sudo /etc/init.d/docker stop
 # '&' is to give us the prompt back
 sudo docker run -H 192.168.33.10:2375 -d &
 ```
+
+Now the client needs to be configured to listen on the network port instead of the local unix socket:
+```
+export DOCKER_HOST="tcp://192.168.33.10:2375"
+```
+
+Now when you run docker commands it will communicate via the network port. This also means you're local client can communicate with a remote docker container.
