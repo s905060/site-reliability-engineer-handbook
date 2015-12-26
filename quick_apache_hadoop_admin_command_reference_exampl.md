@@ -24,17 +24,19 @@
 |hadoop fsck -delete	|Delete corrupted files
 |hadoop fsck -move	|Move corrupted files to /lost+found directory
 
-3. Hadoop Job Commands
+###3.Hadoop Job Commands
 
-Command	Description
-hadoop job -submit <job-file>	Submit the job
-hadoop job -status <job-id>	Print job status completion percentage
-hadoop job -list all	List all jobs
-hadoop job -list-active-trackers	List all available TaskTrackers
-hadoop job -set-priority <job-id> <priority>	Set priority for a job. Valid priorities: VERY_HIGH, HIGH, NORMAL, LOW, VERY_LOW
-hadoop job -kill-task <task-id>	Kill a task
-hadoop job -history	Display job history including job details, failed and killed jobs
-4. Hadoop dfsadmin Commands
+|Command	|Description
+|--|--
+|hadoop job -submit <job-file>	|Submit the job
+|hadoop job -status <job-id>	|Print job status completion percentage
+|hadoop job -list all	|List all jobs
+|hadoop job -list-active-trackers	|List all available TaskTrackers
+|hadoop job -set-priority <job-id> <priority>	|Set priority for a job. Valid priorities: VERY_HIGH, HIGH, NORMAL, LOW, VERY_LOW
+|hadoop job -kill-task <task-id>	|Kill a task
+|hadoop job -history	|Display job history including job details, failed and killed jobs
+
+###4.Hadoop dfsadmin Commands
 
 Command	Description
 hadoop dfsadmin -report	Report filesystem info and statistics
