@@ -212,7 +212,7 @@
    * [zip](zip.md)
    * [FPM](fpm.md)
    * [getent](getent.md)
-   * ipmitool
+   * [ipmitool](ipmitool.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
