@@ -272,7 +272,7 @@
    * [How to Change JVM Heap Setting (-Xms -Xmx) of Tomcat – Configure setenv.sh file – Run catalina.sh](how_to_change_jvm_heap_setting_-xms_-xmx_of_tomcat.md)
    * [SSH ProxyCommand example: Going through one host to reach another server](ssh_proxycommand_example_going_through_one_host_to.md)
    * [How to get Linux's TCP state statistics](how_to_get_linuxs_tcp_state_statistics.md)
-   * Linux TCP retransmission rate calculation
+   * [Linux TCP retransmission rate calculation](linux_tcp_retransmission_rate_calculation.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
