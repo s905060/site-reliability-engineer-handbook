@@ -196,3 +196,21 @@ Here you are basically copying whatever you have in your %{_builddir} (BUILD dir
 What is the Buildroot? This was initially defined in the preamble section but it is best explained now.
 
 This is best explained with an example. Say you want to install your source files in /opt/mypkgname/ and you also want a config file in /etc/mypkgname.conf. To achieve this you would do the following in the %install section:
+
+```
+%install
+# Create the directory structure to mirror where the files are to be installed (when the RPM is installed) inside the Buildroot dir
+
+# As per the definition in the preamble, Buildroot will be:
+# /var/tmp/silex-app-1.4.5-buildroot
+
+mkdir %{buildroot} 
+mkdir -p %{buildroot}/opt/mypkg
+mkdir -p %{buildroot}/etc
+
+
+# Copy files across from the BUILD dir to Buildroot
+cp -r %{_builddir}/%{name}-%{version}/mypkg %{buildroot}/opt/mypkg
+
+cp %{_builddir}/%{name}-%{version}/mypkg.conf %{buildroot}/etc/mypkg.conf
+```
