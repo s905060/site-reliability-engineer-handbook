@@ -220,3 +220,11 @@ You are re-creating the tree that you want installed on your file system, with %
 Hope that clears it up!
 
 Now lets assume we have the following directory structure inside the silex-app dir:
+```
+|-- config
+|-- src 
+|-- tests      
+|-- www
+|-- composer.json
+|-- composer.lock    
+```
