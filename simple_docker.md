@@ -156,3 +156,36 @@ docker rmi <image-id>
 I had previously created a centos container by running `docker run centos /bin/bash`
 
 Now when I do `docker ps -a` I get a container ID `a5da0b881f63` (this would be different for you) and a name of 'sharp_wilson' which is auto assigned by Docker and will be different for you.
+
+```
+# Start docker
+docker start sharp_wilson
+
+# Check if its running
+docker ps
+
+# Attach to container
+docker attach sharp_wilson
+
+# Install httpd in container
+yum install -y httpd
+
+# Exit
+CTRL+P and CTRL+Q
+
+# Create an image
+docker commit  a5da0b881f63 haani-niyaz/httpd
+
+# Run the new container with port mapping
+# You are mapping local port 9999 to the container's httpd listening port 80
+docker run -it -p 9999:80 haani-niyaz/httpd /bin/bash &
+
+# Check if running and Attach as before
+
+# Run apache once in your container's shell
+apachectl
+
+# Now you can access the webserver via the browser
+# I am using my host VM's IP
+http://192.168.33.10:9999
+```
