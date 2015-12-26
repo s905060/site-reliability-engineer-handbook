@@ -1,0 +1,2 @@
+# SSH client personalized configuration
+
