@@ -47,3 +47,19 @@ Warning: Hidden directory found: /dev/.udev
 
 Warning: Hidden directory found: /dev/.initramfs
 ```
+
+To avoid these warnings, you can reconfigure rkhunter to ignore these files via whitelisting these warnings. Edit the rkhunter.conf file: gedit /etc/rkhunter.conf and remove the # in front of these lines:
+
+```
+#ALLOWHIDDENDIR=/dev/.udev
+
+#ALLOWHIDDENDIR=/dev/.static
+
+#ALLOWHIDDENDIR=/dev/.initramfs
+
+ALLOWHIDDENDIR=/dev/.udev
+
+ALLOWHIDDENDIR=/dev/.static
+
+ALLOWHIDDENDIR=/dev/.initramfs
+```
