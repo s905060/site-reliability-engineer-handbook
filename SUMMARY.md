@@ -213,6 +213,7 @@
    * [FPM](fpm.md)
    * [getent](getent.md)
    * [ipmitool](ipmitool.md)
+   * Building RPMs
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
