@@ -17,5 +17,5 @@ rkhunter "debugging" howto
 
 `sudo rkhunter --versioncheck`
 
-
+1. The first run of 'rkhunter' after installation may give some warning messages. They are is some way normal. Even on clean installed system, with no additional software installed, these warnings occur. You could take a at the FAQ of RKhunter. I got these warnings on Xubuntu beta, clean install:
 
