@@ -330,5 +330,6 @@
 * [Version Control](version_control.md)
    * [Git](git.md)
        * [You have an empty repository](you_have_an_empty_repository.md)
+       * Git study notes
    * [SVN](svn.md)
 
