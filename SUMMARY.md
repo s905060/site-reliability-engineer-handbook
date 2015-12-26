@@ -298,6 +298,7 @@
    * [Zabbix](zabbix.md)
 * [Database](database.md)
    * [MySQL](mysql.md)
+       * MySQL Best Practices
    * [Postgresql](postgresql.md)
        * [Postgresql Import Export Table](postgresql_import_export_table.md)
        * [Practical PostgreSQL](practical_postgresql.md)
