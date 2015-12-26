@@ -51,3 +51,13 @@ I.e: pid mnt net user
 Map a cgroup to a container and set limits to memory, cpu. block IO has access to cgroup = container
 
 * Capabilities Fine grain control on privileges
+
+###What is Docker?
+```
+Docker 
+    |
+[OS [Kernel[ namespaces| cgroups | capabilities ]]]
+```
+
+Docker is an implementation of a container. It provides a standard runtime for apps.
+
