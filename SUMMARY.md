@@ -279,6 +279,7 @@
    * [Zabbix](zabbix.md)
 * [Database](database.md)
    * [MySQL](mysql.md)
+   * Postgresql
 * [Algorithm](algorithm.md)
    * [Insertion Sort](insertion_sort.md)
    * [Hill Sort](hill_sort.md)
