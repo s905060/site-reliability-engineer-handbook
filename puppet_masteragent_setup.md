@@ -177,3 +177,62 @@ Look at a resource:
 ```
 puppet resource package vim
 ```
+
+###Variables
+
+Puppet is a declarative language so within the same scope you cannot redefine a variable.
+
+###What is a variable scope?
+
+Every class, definition or node introduces a scope. Outside of this scope is whats known as 'top scope'.
+
+The top scope can be access by prepending `::` to a variable. Its recommended to use Factor variables in the top scope.
+
+Puppet variables in the current scope are available as ruby instance variables i.e: `@myvariable`
+
+###Puppet Conditionals
+Case example
+```
+case $::osfamily{
+        Solaris: {
+            $ssh_package_name = 'openssh'
+        }
+        Debian: {
+            $ssh_package_Name = 'open_ssh_server'
+        }
+        RedHat: {
+            $ssh_package_Name = 'open_ssh_server'
+        }
+        default: {
+            fail("Module propuppet-ssh does not support osfamily ${::osfamily}")
+        }
+    }
+```
+
+Selector example
+```
+$package_name = $::osfamily ?
+    'RedHat'  => "openssh-server",
+    'Debian'  => "openssh-server",
+    'Solaris' => "openssh",
+    default   => fail("Module propuppet-ssh does not support osfamily ${::osfamily}")
+```
+
+Classes
+
+Class Inheritance example
+```
+class ssh::params {
+  case $::osfamily {
+  'Debian': { $sshd_package  = 'ssh' }
+  'RedHat': { $sshd_package  = 'openssh-server' }
+  default:  {fail("Login class does not work on osfamily: ${::osfamily}")}
+  }
+}
+class ssh inherits ssh::params {
+  package { $::ssh::params::sshd_package:
+    ensure => installed,
+  }
+}
+include ssh
+```
