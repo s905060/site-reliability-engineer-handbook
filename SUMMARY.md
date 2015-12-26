@@ -327,7 +327,7 @@
        * [Hadoop view local Sequencefile file](hadoop_view_local_sequencefile_file.md)
        * [Identify the most CPU-intensive jobs hadooop](identify_the_most_cpu-intensive_jobs_hadooop.md)
        * [Understanding hadoop fsck, fs -dus, -count -q size output](understanding_hadoop_fsck,_fs_-dus,_-count_-q_size.md)
-       * hadoop Management Command --dfsadmin
+       * [hadoop Management Command --dfsadmin](hadoop_management_command_--dfsadmin.md)
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
    * [Elasticsearch](elasticsearch.md)
