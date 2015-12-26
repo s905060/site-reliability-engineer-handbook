@@ -38,16 +38,17 @@
 
 ###4.Hadoop dfsadmin Commands
 
-Command	Description
-hadoop dfsadmin -report	Report filesystem info and statistics
-hadoop dfsadmin -metasave file.txt	Save namenode’s primary data structures to file.txt
-hadoop dfsadmin -setQuota 10 /quotatest	Set Hadoop directory quota to only 10 files
-hadoop dfsadmin -clrQuota /quotatest	Clear Hadoop directory quota
-hadoop dfsadmin -refreshNodes	Read hosts and exclude files to update datanodes that are allowed to connect to namenode. Mostly used to commission or decommsion nodes
-hadoop fs -count -q /mydir	Check quota space on directory /mydir
-hadoop dfsadmin -setSpaceQuota /mydir 100M	Set quota to 100M on hdfs directory named /mydir
-hadoop dfsadmin -clrSpaceQuota /mydir	Clear quota on a HDFS directory
-hadooop dfsadmin -saveNameSpace	Backup Metadata (fsimage & edits). Put cluster in safe mode before this command.
+|Command	|Description
+|--|--
+|hadoop dfsadmin -report	|Report filesystem info and statistics
+|hadoop dfsadmin -metasave file.txt	|Save namenode’s primary data structures to file.txt
+|hadoop dfsadmin -setQuota 10 /quotatest	|Set Hadoop directory quota to only 10 files
+|hadoop dfsadmin -clrQuota /quotatest	|Clear Hadoop directory quota
+|hadoop dfsadmin -refreshNodes	|Read hosts and exclude files to update datanodes that are allowed to connect to namenode. Mostly used to commission or decommsion nodes
+|hadoop fs -count -q /mydir	|Check quota space on directory /mydir
+|hadoop dfsadmin -setSpaceQuota /mydir 100M	|Set quota to 100M on hdfs directory named /mydir
+|hadoop dfsadmin -clrSpaceQuota /mydir	|Clear quota on a HDFS directory
+|hadooop dfsadmin -saveNameSpace	|Backup Metadata (fsimage & edits). Put cluster in safe mode before this command.
 
 5. Hadoop Safe Mode (Maintenance Mode) Commands
 
