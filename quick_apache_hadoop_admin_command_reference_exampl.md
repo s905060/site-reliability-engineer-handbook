@@ -74,20 +74,23 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 
 ###7.Hadoop mradmin Commands
 
-Command	Description
-hadoop mradmin -safemode get	Check Job tracker status
-hadoop mradmin -refreshQueues	Reload mapreduce configuration
-hadoop mradmin -refreshNodes	Reload active TaskTrackers
-hadoop mradmin -refreshServiceAcl	Force Jobtracker to reload service ACL
-hadoop mradmin -refreshUserToGroupsMappings	Force jobtracker to reload user group mappings
+|Command	|Description
+|--|--
+|hadoop mradmin -safemode get	|Check Job tracker status
+|hadoop mradmin -refreshQueues	|Reload mapreduce configuration
+|hadoop mradmin -refreshNodes	|Reload active TaskTrackers
+|hadoop mradmin -refreshServiceAcl	|Force Jobtracker to reload service ACL
+|hadoop mradmin -refreshUserToGroupsMappings	|Force jobtracker to reload user group mappings
 
 ###8.Hadoop Balancer Commands
 
-Command	Description
-start-balancer.sh	Balance the cluster
-hadoop dfsadmin -setBalancerBandwidth <bandwidthinbytes>	Adjust bandwidth used by the balancer
-hadoop balancer -threshold 20	Limit balancing to only 20% resources in the cluster
-9. Hadoop Filesystem Commands
+|Command	|Description
+|--|--
+|start-balancer.sh	|Balance the cluster
+|hadoop dfsadmin -setBalancerBandwidth <bandwidthinbytes>	|Adjust bandwidth used by the balancer
+|hadoop balancer -threshold 20	|Limit balancing to only 20% resources in the cluster
+
+###9. Hadoop Filesystem Commands
 
 Command	Description
 hadoop fs -mkdir mydir	Create a directory (mydir) in HDFS
