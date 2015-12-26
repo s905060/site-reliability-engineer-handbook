@@ -86,3 +86,11 @@ For testing purposes you can do the following:
 # If you don't specify the server, the agent will look for a host called `puppet` (/etc/hosts)
 sudo puppet agent --test --server=puppet.server.com
 ```
+
+###Modules
+
+A Module usually contain everything needed to configure an application. It also has a specific directory structure and `init.pp` file which allows Puppet to automatically load the file.
+
+To perform this automatic loading, Puppet checks the directories set in the `modulepath` which is set in the `[main]` secction of the `/etc/puppet/puppet.conf` file.
+
+Dirctory structure
