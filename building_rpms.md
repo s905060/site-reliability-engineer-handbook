@@ -143,3 +143,17 @@ rm %{SOURCE0}
 * Sun Jul 13 2008 <some.user@ngmail.com> 
 - Initial Build.
 ```
+
+###Taking the .spec File Apart
+
+Preamble
+```
+Name:           silex-app
+Version:        1.4.5
+Release:        1     
+Group:          Development/Libraries
+Summary:        PHP Silex App   
+License:        Telstra Application Technologies
+Source0:        %{name}-%{version}.zip
+BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
+```
