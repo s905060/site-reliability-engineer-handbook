@@ -7,8 +7,10 @@
 
 ###Download Xen VM generic configuration file
 
-`sudo wget HTTP : //mirrors.aliyun.com/ubuntu/dists/precise/main/installer-amd64/current/images/netboot/xen/xm-debian.cfg \ 
-- O / etc / xen / VM1 . conf`
+```
+sudo wget HTTP : //mirrors.aliyun.com/ubuntu/dists/precise/main/installer-amd64/current/images/netboot/xen/xm-debian.cfg \ 
+- O / etc / xen / VM1 . conf
+```
 
 To download the configuration file to be modified
 
