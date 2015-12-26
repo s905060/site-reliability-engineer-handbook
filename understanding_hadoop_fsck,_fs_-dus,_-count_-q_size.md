@@ -50,3 +50,11 @@ $ Hadoop FS - count - q / path / to / Directory
   QUOTA REMAINING_QUOTA SPACE_QUOTA REMAINING_SPACE_QUOTA DIR_COUNT FILE_COUNT CONTENT_SIZE FILE_NAME
    none INF   54,975,581,388,800           5277747062870         3922        418,464     16565944775310 hdfs : // master: 54310 / path / to / Directory
 ```
+
+fs -count -q outputs 8, respectively, as follows:
+
+|Quota namespace (limited number of files)	|The remaining quota namespace	|Quota physical space (limited footprint size)	|The remaining physical space	|Catalog Number statistics	|File count statistics	|The total size of the directory logical space	path|
+|--|--|--|--|--|--|--|
+|--|--|--|--|--|--|--|
+
+As can be seen in more detail you can see a directory space and qutoa occupancy by hadoop fs -count -q, it contains the physical space, logical space, number of files, directory number, qutoa remaining amount.
