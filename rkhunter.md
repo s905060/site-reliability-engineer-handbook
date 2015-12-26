@@ -46,5 +46,4 @@ Warning: Hidden directory found: /dev/.static
 Warning: Hidden directory found: /dev/.udev
 
 Warning: Hidden directory found: /dev/.initramfs
-
 ```
