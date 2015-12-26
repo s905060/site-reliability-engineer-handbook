@@ -192,6 +192,7 @@ Puppet variables in the current scope are available as ruby instance variables i
 
 ###Puppet Conditionals
 * Case example
+
 ```
 case $::osfamily{
         Solaris: {
@@ -210,6 +211,7 @@ case $::osfamily{
 ```
 
 * Selector example
+
 ```
 $package_name = $::osfamily ?
     'RedHat'  => "openssh-server",
@@ -240,6 +242,7 @@ include ssh
 The above does not work for prameterized classes (classes that take parameters when they are called)
 
 * Using Variables between Classes
+
 ```
 class ssh::params{
     case $::osfamily{
