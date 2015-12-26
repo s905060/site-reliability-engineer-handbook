@@ -17,7 +17,7 @@ date -d '2013-2-22 22:14' +%s
 
 Output is as follows:
 ```
-1361542440B.
+1361542440
 ```
 
 Convert Unix timestamp to a date and time
