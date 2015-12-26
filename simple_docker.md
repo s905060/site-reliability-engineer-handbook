@@ -61,3 +61,8 @@ Docker
 
 Docker is an implementation of a container. It provides a standard runtime for apps.
 
+###What is the difference between Docker and LXC?
+
+Docker previously used `LXC` as the execution driver to talk to the kernel.
+
+`LXC` version needs to be compatible with Docker and because it is not developed by docker, now, docker uses the `libcontainer` as the default execution driver.
