@@ -11,9 +11,10 @@ Network interfaces are configured at: `/etc/sysconfig/network-scripts/ifcfg-<int
 If you modify the config restart with: 
 `sudo service network restart`
 
-Does it have a path to the local network?
+##Does it have a path to the local network?
 
 Check if default gateway is present:
+```
 [vagrant@centos-5 ~]$ /sbin/route -n
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
@@ -21,16 +22,19 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.33.0    0.0.0.0         255.255.255.0   U     0      0        0 eth1
 169.254.0.0     0.0.0.0         255.255.0.0     U     0      0        0 eth1
 0.0.0.0         10.0.2.2        0.0.0.0         UG    0      0        0 eth0
-Note: the -n option stops the command from attempting to resolve the IPs to hostname
+```
+
+Note: the `-n` option stops the command from attempting to resolve the IPs to hostname
 
 Ping the gateway If you can’t ping it could just mean ICMP packets have been blocked. or (If ICMP isn’t blocked) your switch port on your host could be set to the wrong VLAN.
-Check DNS
+
+###Check DNS
 
 Perform a nslookup to check if it resolves the IP.
-If a name server is not configured check /etc/resolv.conf
+If a name server is not configured check `/etc/resolv.conf`
 
 Connectivity Matrix
-
+```
 |-- can_ping_host
 |   `-- not_responding
 |       `-- is_the_remote_port_open?
@@ -39,17 +43,21 @@ Connectivity Matrix
     |   `-- is_there_a_route_to_remote_host?
     `-- same_subnet?
         `-- is_the_nameserver_down?
-Is there a route to the remote host?
+```
 
-Perform a traceroute. If ping works but traceroute doesn’t it could be because UDP is blocked.
-Is the port open?
+###Is there a route to the remote host?
 
-Perform a telnet test. If it fails either the remote machine is not listening on that port or the firewall is blocking it.
-Check if the port on the remote machine is open by running nestat locally on the remote machine:
+Perform a `traceroute`. If ping works but traceroute doesn’t it could be because UDP is blocked.
 
-netstat -nlp
+###Is the port open?
 
-If the port is blocked by firewall check the firewall rule with iptables
+Perform a `telnet` test. If it fails either the remote machine is not listening on that port or the firewall is blocking it.
+
+Check if the port on the remote machine is open by running `nestat` locally on the remote machine:
+
+`netstat -nlp`
+
+If the port is blocked by firewall check the firewall rule with `iptables`
 
 Packet Captures
 
