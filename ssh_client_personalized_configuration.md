@@ -15,3 +15,11 @@ Description: StrictHostKeyChecking no and UserKnownHostsFile /dev/null The two h
 ###Use ProxyCommand achieve springboard Login
 
 Scenario: If the Client is not directly pass to ServerB, and ServerA can directly reach ServerB. So by Client Configuration, Client can ssh directly to ServerB
+
+```
+ + ---------------- +      + ---------------- +      + ------------- --- + 
+   |                 |      |                 |      |                 | 
+   |      Client      + ----> +     ServerA      + ----> +     ServerB      | 
+   |                 |      |                 |      |                 | 
+   + -------------- - +      + ---------------- +      + ---------------- +
+```
