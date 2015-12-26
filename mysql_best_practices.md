@@ -59,3 +59,10 @@ if (mysql_num_rows($r) > 0) {
 ###Index the Search Fields
 
 Indexes are not just for the primary keys or the unique keys. If there are any columns in your table that you will search by, you should almost always index them.
+
+![](search_index.jpg)
+
+As you can see, this rule also applies on a partial string search like "last_name LIKE 'a%'". When searching from the beginning of the string, MySQL is able to utilize the index on that column.
+
+You should also understand which kinds of searches can not use the regular indexes. For instance, when searching for a word (e.g. "WHERE post_content LIKE '%apple%'"), you will not see a benefit from a normal index. You will be better off using mysql fulltext search or building your own indexing solution.
+
