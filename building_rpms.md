@@ -256,3 +256,13 @@ cp -r %{_builddir}/%{name}-%{version}/composer.*  %{buildroot}/var/
 /var/tests
 /var/composer.*
 ```
+
+What is the %defattr attribute directive?
+
+This allows setting of default attributes for files and directives.
+
+```
+ Files and Directories
+%defattr(<file mode>, <user>, <group>, <dir mode>)
+
+```
