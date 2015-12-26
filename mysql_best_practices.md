@@ -32,3 +32,26 @@ After adding the index to the group_id field:
 ![](optimized_explain.jpg)
 
 Now instead of scanning 7883 rows, it will only scan 9 and 16 rows from the 2 tables. A good rule of thumb is to multiply all numbers under the "rows" column, and your query performance will be somewhat proportional to the resulting number.
+
+###LIMIT 1 When Getting a Unique Row
+
+Sometimes when you are querying your tables, you already know you are looking for just one row. You might be fetching a unique record, or you might just be just checking the existence of any number of records that satisfy your WHERE clause.
+
+In such cases, adding LIMIT 1 to your query can increase performance. This way the database engine will stop scanning for records after it finds just 1, instead of going thru the whole table or index.
+
+```
+// do I have any users from Alabama?
+ 
+// what NOT to do:
+$r = mysql_query("SELECT * FROM user WHERE state = 'Alabama'");
+if (mysql_num_rows($r) > 0) {
+    // ...
+}
+ 
+ 
+// much better:
+$r = mysql_query("SELECT 1 FROM user WHERE state = 'Alabama' LIMIT 1");
+if (mysql_num_rows($r) > 0) {
+    // ...
+}
+```
