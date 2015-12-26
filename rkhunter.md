@@ -11,4 +11,11 @@ rkhunter "debugging" howto
 
 `sudo rkhunter --propupd`
 
+1. To run rkhunter --propupd, automatic after software updates, add the line APT_AUTOGEN="yes" to /etc/default/rkhunter (this gets read by /etc/apt/apt.conf.d/90rkhunter).
+2. Wait till it completes gathering the new values, then exit. This should eliminate all the warnings except the hidden files related to the /dev folder. They show up occassionally and disappear with a next reboot of your system.
+3. Additionally, the --versioncheck option of rkhunter itself will indicate if a new version is available.
+
+`sudo rkhunter --versioncheck`
+
+
 
