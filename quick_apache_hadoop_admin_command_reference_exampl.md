@@ -50,25 +50,29 @@
 |hadoop dfsadmin -clrSpaceQuota /mydir	|Clear quota on a HDFS directory
 |hadooop dfsadmin -saveNameSpace	|Backup Metadata (fsimage & edits). Put cluster in safe mode before this command.
 
-5. Hadoop Safe Mode (Maintenance Mode) Commands
+###5.Hadoop Safe Mode (Maintenance Mode) Commands
 
 The following dfsadmin commands helps the cluster to enter or leave safe mode, which is also called as maintenance mode. In this mode, Namenode does not accept any changes to the name space, it does not replicate or delete blocks.
 
-Command	Description
-hadoop dfsadmin -safemode enter	Enter safe mode
-hadoop dfsadmin -safemode leave	Leave safe mode
-hadoop dfsadmin -safemode get	Get the status of mode
-hadoop dfsadmin -safemode wait	Wait until HDFS finishes data block replication
-6. Hadoop Configuration Files
+|Command	|Description
+|--|--
+|hadoop dfsadmin -safemode enter	|Enter safe mode
+|hadoop dfsadmin -safemode leave	|Leave safe mode
+|hadoop dfsadmin -safemode get	|Get the status of mode
+|hadoop dfsadmin -safemode wait	|Wait until HDFS finishes data block replication
 
-File	Description
-hadoop-env.sh	Sets ENV variables for Hadoop
-core-site.xml	Parameters for entire Hadoop cluster
-hdfs-site.xml	Parameters for HDFS and its clients
-mapred-site.xml	Parameters for MapReduce and its clients
-masters	Host machines for secondary Namenode
-slaves	List of slave hosts
-7. Hadoop mradmin Commands
+###6.Hadoop Configuration Files
+
+|File	|Description
+|--|--
+|hadoop-env.sh	|Sets ENV variables for Hadoop
+|core-site.xml	|Parameters for entire Hadoop cluster
+|hdfs-site.xml	|Parameters for HDFS and its clients
+|mapred-site.xml	|Parameters for MapReduce and its clients
+|masters	|Host machines for secondary Namenode
+|slaves	|List of slave hosts
+
+###7.Hadoop mradmin Commands
 
 Command	Description
 hadoop mradmin -safemode get	Check Job tracker status
@@ -76,7 +80,8 @@ hadoop mradmin -refreshQueues	Reload mapreduce configuration
 hadoop mradmin -refreshNodes	Reload active TaskTrackers
 hadoop mradmin -refreshServiceAcl	Force Jobtracker to reload service ACL
 hadoop mradmin -refreshUserToGroupsMappings	Force jobtracker to reload user group mappings
-8. Hadoop Balancer Commands
+
+###8.Hadoop Balancer Commands
 
 Command	Description
 start-balancer.sh	Balance the cluster
