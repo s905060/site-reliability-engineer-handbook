@@ -40,3 +40,14 @@ No, containers use the OS kernel.
 * Isolated process trees
 * Isolated network stack
 * Isolated users
+
+###How do you achieve this?
+
+* kernal namespaces
+I.e: pid mnt net user
+
+* cgroups Helps us group together resources and apply limits (flex resources)
+
+Map a cgroup to a container and set limits to memory, cpu. block IO has access to cgroup = container
+
+* Capabilities Fine grain control on privileges
