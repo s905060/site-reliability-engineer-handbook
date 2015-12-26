@@ -115,3 +115,23 @@ Now when you run docker commands it will communicate via the network port. This 
 ###Containers on the Machine
 
 Dockerizing Applications: A "Hello world" Working with Containers
+
+```
+# List running container
+docker ps
+
+# List containers
+docker ps -a
+
+# To start container
+docker start a5da0b881f63
+
+# Attach to container
+docker attach a5da0b881f63
+
+# To stop a container
+docker stop <name>
+
+# Show standard output of a container
+docker logs <name>
+```
