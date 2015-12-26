@@ -287,3 +287,13 @@ InnoDB tends to be a more complicated storage engine and can be slower than MyIS
 
 * MyISAM Storage Engine
 * InnoDB Storage Engine
+
+###Use an Object Relational Mapper
+
+By using an ORM (Object Relational Mapper), you can gain certain performance benefits. Everything an ORM can do, can be coded manually too. But this can mean too much extra work and require a high level of expertise.
+
+ORM's are great for "Lazy Loading". It means that they can fetch values only as they are needed. But you need to be careful with them or you can end up creating to many mini-queries that can reduce performance.
+
+ORM's can also batch your queries into transactions, which operate much faster than sending individual queries to the database.
+
+Currently my favorite ORM for PHP is Doctrine. I wrote an article on how to install Doctrine with CodeIgniter.
