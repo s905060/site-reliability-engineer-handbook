@@ -6,6 +6,36 @@ ipmitool - I lanplus - H address  - U account  - P password fru list
 
 ![](20130109201441_76203.jpg)
 
+The Linux ipmitool tool can easily in Linux command line with the operation of the server outside. 
+Summarized as follows: 
+
+1. Check the IPMI version
+
+`ipmitool - V`
+
+2. Reset ipmi card
+
+`ipmitool mc reset cold`
+
+3. Log ipmi console
+
+`ipmitool - I lanplus - H IPADDR - U USERNAME - PASSWORD P - e ^ Sol activate`
+
+4. Band reboot
+
+`ipmitool - I lanplus - H IPADDR - U USERNAME - PASSWORD power P RESET`
+
+5. The band is set to boot from the next pxe
+
+`ipmitool - I lanplus - H IPADDR - U USERNAME - PASSWORD chassis bootdev P pxe`
+
+6. Empty IPMI SEL
+
+`ipmitool sel clear`
+
+7. Access to the channel ipmi
+
+`for i in  { 1. . 14 };  do ipmitool LAN Print $ i 2 > / dev / null  | grep - q ^ Set  && echo $ i ;  DONE`
 
 ### " IPMI command to collect " 
 All IPMI functions are to BMC sending another complete, BMC reception occurs in the system event log
