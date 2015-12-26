@@ -228,3 +228,31 @@ Now lets assume we have the following directory structure inside the silex-app d
 |-- composer.json
 |-- composer.lock    
 ```
+
+When we build the RPM we want the www, src, test and the composer files copied to /var . Here's how you do it:
+
+```
+%install
+mkdir %{buildroot}
+mkdir -p -m0755 %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/www %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/src %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/tests %{buildroot}/var/
+cp -r %{_builddir}/%{name}-%{version}/composer.*  %{buildroot}/var/
+```
+
+%files Specifying all the files to be installed on the file system.
+
+```
+%files
+
+# Set the permissions to the files/directories created
+%defattr(-,apache,apache,-)
+
+# Speicfy file/dir created
+# Note that exact files must be specified so that when you remove the rpm those files/dirs are also removed
+/var/www
+/var/src
+/var/tests
+/var/composer.*
+```
