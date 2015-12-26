@@ -35,3 +35,20 @@ Version:        1.0
 Release:        0
 ...
 ```
+
+The above fields can then later be referenced as:
+```
+# Source0: test-1.0.zip
+Source0:        %{name}-%{version}.zip
+```
+
+###Examples of built-in macros
+```
+%_prefix /usr
+%_sysconfdir /etc
+%_localstatedir /var
+%_infodir /usr/share/info
+%_mandir /usr/share/man
+%_initrddir %{_sysconfdir}/rc.d/init.d
+%_defaultdocdir %{_usr}/share/doc
+```
