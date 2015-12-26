@@ -22,3 +22,7 @@ For RAID Level of output, refer to the following table to the corresponding asso
 |RAID Level : Primary-0, Secondary-0, RAID Level Qualifier-0|RAID 0
 |RAID Level : Primary-5, Secondary-0, RAID Level Qualifier-3|RAID 5
 |RAID Level : Primary-1, Secondary-3, RAID Level Qualifier-0|RAID 10
+
+Example result:
+
+![](20130206094250_75750.jpg)
