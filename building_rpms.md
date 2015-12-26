@@ -175,3 +175,13 @@ Source0:        %{name}-%{version}.zip
 ```
 
 You can also define multiple source files such as Source1, Source2 etc.
+
+####%prep
+```
+%prep
+# Unzip source file to BUILD dir
+unzip %{SOURCE0}
+```
+
+Script command to 'prepare' (uncompress) the zip file to build it. Note that our silex-app-1.4.5.zip file will be unzipped to our BUILD dir when we build the RPM.
+
