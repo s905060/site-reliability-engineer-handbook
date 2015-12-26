@@ -76,3 +76,10 @@ There will always be a trade-off between latency and resiliency and so it become
 One other consideration is the algorithms or logic used to determine what to cache. Some solutions use simple “least recently used” policies to discard data; others are more complex and look at the data for clues as to which should be retained in cache.
 
 Users should look at the cache occupancy criteria and ensure the rules fit the types of data they expect the cache to manage.
+
+###New caching technologies
+DRAM has become much cheaper over recent years and many motherboards support large numbers of DIMM slots. DRAM itself is extremely fast and offers low latency and so as a read cache, DRAM can be an attractive solution in larger servers.
+
+NVDIMM technology, which uses the DRAM slots and delivers NAND flash storage offers a middle ground by providing performance that comes close to DRAM speeds but provides a permanent storage medium.
+
+NVDIMM performance is already delivering latency as low as five microseconds, with the promise of further improvements to come. Combining NVDIMM with flash promised to offer some very interesting future caching solutions.
