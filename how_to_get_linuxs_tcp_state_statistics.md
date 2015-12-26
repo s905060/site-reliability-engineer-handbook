@@ -3,5 +3,5 @@
 Simple command line can be, for example, we want to link state each TCP port 80:
 
 ```
-netstat - N | grep `hostname -i` : 80  | awk '/ ^ tcp / {++ S [$ NF]} END {for (Key in S) Print Key, S [Key]}'
+netstat -n | grep `hostname -i`:80 |awk '/^tcp/{++S[$NF]}END{for (key in S) print key,S[key]}'
 ```
