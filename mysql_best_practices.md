@@ -55,3 +55,7 @@ if (mysql_num_rows($r) > 0) {
     // ...
 }
 ```
+
+###Index the Search Fields
+
+Indexes are not just for the primary keys or the unique keys. If there are any columns in your table that you will search by, you should almost always index them.
