@@ -40,3 +40,12 @@ checking hidden files and direct
 3. "Intruder Detection Checklist". This list is available via the intruder detection list
 4. What to do with "common" warnings as:
 
+```
+Warning: Hidden directory found: /dev/.static
+
+Warning: Hidden directory found: /dev/.udev
+
+Warning: Hidden directory found: /dev/.initramfs
+
+
+```
