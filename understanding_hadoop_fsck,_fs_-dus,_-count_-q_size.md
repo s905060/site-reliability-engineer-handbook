@@ -43,3 +43,10 @@ hdfs : // master: 54310 / path / to / Directory 16,565,944,775,310 <=== see here
 As examples of commands seen, hadoop fsck and hadoop fs -dus report file sizes are actually occupied HDFS file size, that this space is not backed up several blocks counted. Real physical space occupied by the file space = logic block backup data, namely 16565944775310 3 = 49697834325930, 49697834325930 This is a physical space.
 
 `hadoop fs -count -q`
+by performing hadoop fs -count -q / path / to / directory can see this directory real space usage. Execution results are as follows:
+
+```
+$ Hadoop FS - count - q / path / to / Directory
+  QUOTA REMAINING_QUOTA SPACE_QUOTA REMAINING_SPACE_QUOTA DIR_COUNT FILE_COUNT CONTENT_SIZE FILE_NAME
+   none INF   54,975,581,388,800           5277747062870         3922        418,464     16565944775310 hdfs : // master: 54310 / path / to / Directory
+```
