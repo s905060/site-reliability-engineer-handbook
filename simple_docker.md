@@ -71,3 +71,13 @@ Docker previously used `LXC` as the execution driver to talk to the kernel.
 
 The docker client sends commands to the docker daemon. The docker daemon is responsible for setting up containers which includes setting up cgroups, capabilities etc.
 
+###Installation
+
+On centos 6.5 do:
+```
+sudo yum install docker-io
+
+# Check info
+sudo docker info
+sudo docker version
+```
