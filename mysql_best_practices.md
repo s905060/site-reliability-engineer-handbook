@@ -166,3 +166,39 @@ NULL columns require additional space and they can add complexity to your compar
 From MySQL docs:
 
 >"NULL columns require additional space in the row to record whether their values are NULL. For MyISAM tables, each NULL column takes one bit extra, rounded up to the nearest byte."
+
+###Prepared Statements
+
+There are multiple benefits to using prepared statements, both for performance and security reasons.
+
+Prepared Statements will filter the variables you bind to them by default, which is great for protecting your application against SQL injection attacks. You can of course filter your variables manually too, but those methods are more prone to human error and forgetfulness by the programmer. This is less of an issue when using some kind of framework or ORM.
+
+Since our focus is on performance, I should also mention the benefits in that area. These benefits are more significant when the same query is being used multiple times in your application. You can assign different values to the same prepared statement, yet MySQL will only have to parse it once.
+
+Also latest versions of MySQL transmits prepared statements in a native binary form, which are more efficient and can also help reduce network delays.
+
+There was a time when many programmers used to avoid prepared statements on purpose, for a single important reason. They were not being cached by the MySQL query cache. But since sometime around version 5.1, query caching is supported too.
+
+To use prepared statements in PHP you check out the mysqli extension or use a database abstraction layer like PDO.
+
+```
+// create a prepared statement
+if ($stmt = $mysqli->prepare("SELECT username FROM user WHERE state=?")) {
+ 
+    // bind parameters
+    $stmt->bind_param("s", $state);
+ 
+    // execute
+    $stmt->execute();
+ 
+    // bind result variables
+    $stmt->bind_result($username);
+ 
+    // fetch value
+    $stmt->fetch();
+ 
+    printf("%s is from %s\n", $username, $state);
+ 
+    $stmt->close();
+}
+```
