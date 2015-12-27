@@ -284,3 +284,20 @@ kadmin: quit
 
 Start kadmin from a root shell on the slave KDC and use its add_principal command to create a new entry for the slave KDC's host service, and then use kadmin's ktadd command to simultaneously set a random key for the service and store the random key in the slave's default keytab file. This key is used by the kpropd service when authenticating clients.
 
+```
+# kadmin -p jimbo/admin@EXAMPLE.COM -r EXAMPLE.COM
+Authenticating as principal jimbo/admin@EXAMPLE.COM with password.
+Password for jimbo/admin@EXAMPLE.COM: 
+kadmin: add_principal -randkey host/slavekdc.example.com
+Principal "host/slavekdc.example.com@EXAMPLE.COM" created.
+kadmin: ktadd host/slavekdc.example.com@EXAMPLE.COM
+Entry for principal host/slavekdc.example.com with kvno 3, encryption type Triple DES cbc mode with \
+HMAC/sha1 added to keytab WRFILE:/etc/krb5.keytab.
+Entry for principal host/slavekdc.example.com with kvno 3, encryption type ArcFour with HMAC/md5 added \
+to keytab WRFILE:/etc/krb5.keytab.
+Entry for principal host/slavekdc.example.com with kvno 3, encryption type DES with HMAC/sha1 added \
+to keytab WRFILE:/etc/krb5.keytab.
+Entry for principal host/slavekdc.example.com with kvno 3, encryption type DES cbc mode with RSA-MD5 added \
+to keytab WRFILE:/etc/krb5.keytab.
+kadmin: quit
+```
