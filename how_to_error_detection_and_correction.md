@@ -47,3 +47,10 @@ sb_edac 12898 0
 edac_core 46773 3 sb_edac
 ...
 ```
+
+EDAC was loaded as a module, so I examined the directory /sys/devices/system/edac :
+```
+login2$ ls -s /sys/devices/system/edac/
+total 0
+0 mc
+```
