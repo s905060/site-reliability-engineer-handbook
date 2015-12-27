@@ -71,3 +71,17 @@ total 0
 0 ce_noinfo_count 0 csrow2 0 csrow5 0 device 0 sdram_scrub_rate 0 ue_count
 0 csrow0 0 csrow3 0 csrow6 0 mc_name 0 seconds_since_reset 0 ue_noinfo_count
 ```
+
+Notice that this system has two memory controllers, mc0 and mc1 , which control a number of DIMMs. These DIMMs are laid out in a “chip-select” row (csrow ) and a channel table (chx ) (see the EDAC documentation for more details). There can be multiple csrow values and multiple channels. For example, here is a simple ASCII sketch of two csrows and two channels.
+
+```
+Channel 0 Channel 1
+==============================
+csrow0 | DIMM_A0 | DIMM_B0 |
+csrow1 | DIMM_A0 | DIMM_B0 |
+==============================
+==============================
+csrow2 | DIMM_A1 | DIMM_B1 |
+csrow3 | DIMM_A1 | DIMM_B1 |
+==============================
+```
