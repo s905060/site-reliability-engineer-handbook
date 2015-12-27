@@ -54,3 +54,10 @@ login2$ ls -s /sys/devices/system/edac/
 total 0
 0 mc
 ```
+
+Because I can only see the mc devices, EDAC is only monitoring the memory controller(s). If I probe a little further,
+```
+login2$ ls -s /sys/devices/system/edac/mc
+total 0
+0 mc0 0 mc1
+```
