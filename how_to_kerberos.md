@@ -172,14 +172,14 @@ The create command creates the database that stores keys for the Kerberos realm.
 
  `/usr/kerberos/sbin/kadmin.local -q "addprinc username/admin"`
 
----
+ ---
 
-######Note
-The kadmin utility communicates with the kadmind server over the network, and uses Kerberos to handle authentication. Consequently, the first principal must already exist before connecting to the server over the network to administer it. Create the first principal with the kadmin.local command, which is specifically designed to be used on the same host as the KDC and does not use Kerberos for authentication.
+ ######Note
+ The kadmin utility communicates with the kadmind server over the network, and uses Kerberos to handle authentication. Consequently, the first principal must already exist before connecting to the server over the network to administer it. Create the first principal with the kadmin.local command, which is specifically designed to be used on the same host as the KDC and does not use Kerberos for authentication.
 
----
+ ---
 
- 6. Start Kerberos using the following commands:
+6. Start Kerberos using the following commands:
  ```
  /sbin/service krb5kdc start
  /sbin/service kadmin start
