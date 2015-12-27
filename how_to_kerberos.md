@@ -35,3 +35,7 @@ Although Kerberos removes a common and severe security threat, it may be difficu
 * For an application to use Kerberos, its source must be modified to make the appropriate calls into the Kerberos libraries. Applications modified in this way are considered to be Kerberos-aware, or kerberized. For some applications, this can be quite problematic due to the size of the application or its design. For other incompatible applications, changes must be made to the way in which the server and client communicate. Again, this may require extensive programming. Closed-source applications that do not have Kerberos support by default are often the most problematic.
 
 * Kerberos is an all-or-nothing solution. If Kerberos is used on the network, any unencrypted passwords transferred to a non-Kerberos aware service is at risk. Thus, the network gains no benefit from the use of Kerberos. To secure a network with Kerberos, one must either use Kerberos-aware versions of all client/server applications that transmit passwords unencrypted, or not use any such client/server applications at all.
+
+###Kerberos Terminology
+
+Kerberos has its own terminology to define various aspects of the service. Before learning how Kerberos works, it is important to learn the following terms.
