@@ -407,3 +407,10 @@ DEVEL.EXAMPLE.COM → EXAMPLE.COM → COM → ORG → EXAMPLE.ORG → PROD.EXAMP
 * ORG and EXAMPLE.ORG share a key for krbtgt/EXAMPLE.ORG@ORG
 
 * EXAMPLE.ORG and PROD.EXAMPLE.ORG share a key for krbtgt/PROD.EXAMPLE.ORG@EXAMPLE.ORG
+
+The more complicated, but also more flexible, method involves configuring the capaths section of /etc/krb5.conf, so that clients which have credentials for one realm will be able to look up which realm is next in the chain which will eventually lead to the being able to authenticate to servers.
+
+The format of the capaths section is relatively straightforward: each entry in the section is named after a realm in which a client might exist. Inside of that subsection, the set of intermediate realms from which the client must obtain credentials is listed as values of the key which corresponds to the realm in which a service might reside. If there are no intermediate realms, the value "." is used.
+
+Here's an example:
+
