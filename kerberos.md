@@ -175,3 +175,7 @@ Similar to the TGS, the HTTP Server will then do the following:
 * if the network address in the original request is not null, compares the source’s IP address to your network address (or within the requested list) within the Ticket.
 
 The HTTP Service then sends an Authenticator message containing its ID and timestamp in order to confirm its identity to you and is encrypted with the HTTP Service Session Key.
+
+![](Kerb.013.jpg)
+
+Your machine reads the Authenticator message by decrypting with the cached HTTP Service Session Key, and knows that it has to receive a message with the HTTP Service’s ID and timestamp.
