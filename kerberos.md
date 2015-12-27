@@ -125,3 +125,11 @@ The TGS will then do the following:
 * if the network address in the original request is not null, compares the source’s IP address to your network address (or within the requested list) within the TGT.
 
 The Ticket Granting Server then randomly generates the HTTP Service Session Key, and prepares the HTTP Service ticket for you that contains:
+
+* your name/ID,
+* HTTP Service name/ID,
+* your network address (may be a list of IP addresses for multiple machines, or may be null if wanting to use on any machine),
+* timestamp,
+* lifetime of the validity of the ticket, and
+* HTTP Service Session Key,
+and encrypts it with the HTTP Service Secret Key.
