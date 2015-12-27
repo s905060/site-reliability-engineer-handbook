@@ -16,4 +16,8 @@ The core layer provides routing services to other parts of the data center, as w
 
 This model scales somewhat well, but it is subject to bottlenecks if uplinks between layers are oversubscribed. This can come from latency incurred as traffic flows through each layer and from blocking of redundant links (assuming the use of the spanning tree protocol, STP).
 
+###Leaf-spine data center architectures
+
+In modern data centers, an alternative to the core/aggregation/access layer network topology has emerged known as leaf-spine. In a leaf-spine architecture, a series of leaf switches form the access layer. These switches are fully meshed to a series of spine switches.
+
 ![](sDC-CoreSpineLeaf-112513.png)
