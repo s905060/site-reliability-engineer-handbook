@@ -21,3 +21,5 @@ For the trivia-loving folks, Kerberos’ name comes from Greek mythology, the th
 Admins create realms – Kerberos realms – that will encompass all that is available to access. Granted, you may not have access to certain services or host machines that is defined within the policy management – developers should not access anything finance related, stuff like that. But a realm defines what Kerberos manages in terms of who can access what.
 
 Your machine, the Client, lives within this realm, as well as the service or host you want to request and the Key Distribution Center, KDC (no, not the KGB, although I always think of that, too). In the following example, I separate out the Authentication Server and the Ticket Granting Server, but both are within the KDC.
+
+![](Kerb.001.jpg)
