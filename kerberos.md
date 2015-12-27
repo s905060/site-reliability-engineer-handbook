@@ -132,4 +132,5 @@ The Ticket Granting Server then randomly generates the HTTP Service Session Key,
 * timestamp,
 * lifetime of the validity of the ticket, and
 * HTTP Service Session Key,
+
 and encrypts it with the HTTP Service Secret Key.
