@@ -134,3 +134,18 @@ The Ticket Granting Server then randomly generates the HTTP Service Session Key,
 * HTTP Service Session Key,
 
 and encrypts it with the HTTP Service Secret Key.
+
+![](Kerb.009.jpg)
+
+Then the TGS sends you two messages. One is the encrypted HTTP Service Ticket; the other contains:
+
+* HTTP Service name/ID,
+* timestamp,
+* lifetime of the validity of the ticket, and
+* HTTP Service Session Key,
+
+that is encrypted with the TGS Session Key.
+
+Your machine decrypts the latter message with the TGS Session Key that it cached earlier to obtain the HTTP Service Session Key.
+
+Your machine can not, however, decrypt the HTTP Service Ticket since it’s encrypted with the HTTP Service Secret Key.
