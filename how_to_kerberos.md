@@ -168,7 +168,9 @@ The create command creates the database that stores keys for the Kerberos realm.
 
  After kadmind has been started on the server, any user can access its services by running kadmin on any of the clients or servers in the realm. However, only users listed in the kadm5.acl file can modify the database in any way, except for changing their own passwords.
  
- 
+ Type the following kadmin.local command at the KDC terminal to create the first principal:
+
+ `/usr/kerberos/sbin/kadmin.local -q "addprinc username/admin"`
 
 ---
 
