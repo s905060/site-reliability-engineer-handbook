@@ -131,3 +131,23 @@ shows that all are files (no further subdirectories). The definition of each fil
 * mem_type : An attribute file that displays the type of memory currently on a csrow.
 * size_mb : An attribute file that contains the size (MB) of memory a csrow contains.
 * ue_count : An attribute file that contains the total number of uncorrectable errors that have occurred on a csrow.
+
+For the sample system, the values for the attribute and control files are:
+```
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/ce_count
+0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/ch0_ce_count
+0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/ch0_dimm_label
+CPU_SrcID#0_Channel#0_DIMM#0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/dev_type
+x8
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/edac_mode
+S4ECD4ED
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/mem_type
+Unbuffered-DDR3
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/size_mb
+8192
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/ue_count
+0
+```
