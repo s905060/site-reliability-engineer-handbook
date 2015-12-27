@@ -329,3 +329,17 @@ For the simplest case, in order for a client of a realm named A.EXAMPLE.COM to a
 
 To accomplish this, select a very strong password or passphrase, and create an entry for the principal in both realms using kadmin.
 
+```
+# kadmin -r A.EXAMPLE.COM
+kadmin: add_principal krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM
+Enter password for principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM":
+Re-enter password for principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM":
+Principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM" created.
+quit
+# kadmin -r B.EXAMPLE.COM
+kadmin: add_principal krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM
+Enter password for principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM":
+Re-enter password for principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM":
+Principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM" created.
+quit
+```
