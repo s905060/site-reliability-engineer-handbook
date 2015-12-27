@@ -206,3 +206,32 @@ The edac module in the sysfs filesystem (i.e., /sys/ ) has a huge amount of info
 Writing a simple script to read the file attributes of the memory errors for a system’s memory controllers is not difficult, and you can even store these in a simple database if you like. I also found a Nagios plugin that should allow you to check for memory errors, although I haven’t tested it.
 
 The plugin can be run as a simple script and gives you a bit of information, but I like a simple script that tells me whether I have any problems and where they are, so I modified the original script, which is really close to the original.
+
+```
+#!/bin/bash
+#
+# Original script: https://bitbucket.org/darkfader/nagios/src/c9dbc15609d0/check_mk/edac/plugins/edac?at=default
+
+# The best stop for alll things EDAC is http://buttersideup.com/edacwiki/ and the edac.txt in the kernel doc.
+
+# EDAC memory reporting
+if [ -d /sys/devices/system/edac/mc ]; then
+ # Iterate all memory controllers
+ for mc in /sys/devices/system/edac/mc/* ; do
+ ue_total_count=0
+ ce_total_count=0
+ for csrow in $mc/csrow* ; do
+ ue_count=`more $csrow/ue_count`
+ ce_count=`more $csrow/ce_count`
+ if [ "$ue_count" -gt 1 ]; then
+ ue_total_count=ue_total_count+$ue_count;
+ fi
+ if [ "$ce_count" -gt 1 ]; then
+ ce_total_count=ce_total_count+$ce_count;
+ fi
+ done
+ echo " Uncorrectable error count is $ue_total_count on memory controller $mc "
+ echo " Correctable error count is $ce_total_count on memory controller $mc "
+ done
+fi
+```
