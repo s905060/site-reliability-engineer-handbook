@@ -306,3 +306,9 @@ With its service key, the slave KDC could authenticate any client which would co
 
 `# echo host/masterkdc.example.com@EXAMPLE.COM > /var/kerberos/krb5kdc/kpropd.acl`
 
+Once the slave KDC has obtained a copy of the database, it will also need the master key which was used to encrypt it. If your KDC database's master key is stored in a stash file on the master KDC (typically named /var/kerberos/krb5kdc/.k5.REALM, either copy it to the slave KDC using any available secure method, or create a dummy database and identical stash file on the slave KDC by running kdb5_util create -s (the dummy database will be overwritten by the first successful database propagation) and supplying the same password.
+
+Ensure that the slave KDC's firewall allows the master KDC to contact it using TCP on port 754 (krb5_prop), and start the kprop service. Then, double-check that the kadmin service is disabled.
+
+Now perform a manual database propagation test by dumping the realm database, on the master KDC, to the default data file which the kprop command will read (/var/kerberos/krb5kdc/slave_datatrans), and then use the kprop command to transmit its contents to the slave KDC.
+
