@@ -246,3 +246,10 @@ foo.hq.example.com → HQ.EXAMPLE.COM
 ```
 
 In some configurations, this will be sufficient, but in others, the realm name which is derived will be the name of a non-existant realm. In these cases, the mapping from the server's DNS domain name to the name of its realm must be specified in the domain_realm section of the client system's krb5.conf. For example:
+```
+[domain_realm]
+.example.com = EXAMPLE.COM
+example.com = EXAMPLE.COM
+```
+
+The above configuration specifies two mappings. The first mapping specifies that any system in the "example.com" DNS domain belongs to the EXAMPLE.COM realm. The second specifies that a system with the exact name "example.com" is also in the realm. (The distinction between a domain and a specific host is marked by the presence or lack of an initial ".".) The mapping can also be stored directly in DNS.
