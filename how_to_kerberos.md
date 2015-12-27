@@ -442,3 +442,35 @@ A.EXAMPLE.COM → EXAMPLE.COM → B.EXAMPLE.COM
 ###Additional Resources
 
 For more information about Kerberos, refer to the following resources.
+
+###Installed Documentation
+
+The Kerberos V5 Installation Guide and the Kerberos V5 System Administrator's Guide in PostScript and HTML formats. These can be found in the /usr/share/doc/krb5-server-<version-number>/ directory (where <version-number> is the version number of the krb5-server package installed on your system).
+
+The Kerberos V5 UNIX User's Guide in PostScript and HTML formats. These can be found in the /usr/share/doc/krb5-workstation-<version-number>/ directory (where <version-number> is the version number of the krb5-workstation package installed on your system).
+
+Kerberos man pages — There are a number of man pages for the various applications and configuration files involved with a Kerberos implementation. The following is a list of some of the more important man pages.
+
+####Client Applications
+man kerberos — An introduction to the Kerberos system which describes how credentials work and provides recommendations for obtaining and destroying Kerberos tickets. The bottom of the man page references a number of related man pages.
+
+  * man kinit — Describes how to use this command to obtain and cache a ticket-granting ticket.
+
+  * man kdestroy — Describes how to use this command to destroy Kerberos credentials.
+
+  * man klist — Describes how to use this command to list cached Kerberos credentials.
+
+####Administrative Applications
+  * man kadmin — Describes how to use this command to administer the Kerberos V5 database.
+
+  * man kdb5_util — Describes how to use this command to create and perform low-level administrative functions on the Kerberos V5 database.
+
+####Server Applications
+  * man krb5kdc — Describes available command line options for the Kerberos V5 KDC.
+
+  * man kadmind — Describes available command line options for the Kerberos V5 administration server.
+
+####Configuration Files
+  * man krb5.conf — Describes the format and options available within the configuration file for the Kerberos V5 library.
+
+  * man kdc.conf — Describes the format and options available within the configuration file for the Kerberos V5 AS and KDC.
