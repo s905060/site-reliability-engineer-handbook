@@ -109,3 +109,7 @@ along with the encrypted Authenticator and TGT to the Ticket Granting Server.
 ![](Kerb.006.jpg)
 
 The Ticket Granting Server will first check the KDC database to see if the HTTP Service exists.
+
+![](Kerb.007.jpg)
+
+If so, the TGS decrypts the TGT with its Secret Key . Since the now-unencrypted TGT contains the TGS Session Key, the TGS can decrypt the Authenticator you sent.
