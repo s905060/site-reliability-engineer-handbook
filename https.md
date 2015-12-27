@@ -30,3 +30,14 @@ Once the connection is established, both parties can use the agreed algorithm an
 * *Key Exchange* - The encryption of the actual message data exchanged by the client and server will be done using a symmetric algorithm, the exact nature of which was already agreed during the Hello phase. A symmetric algorithm uses a single key for both encryption and decryption, in contrast to asymmetric algorithms that require a public/private key pair. Both parties need to agree on this single, symmetric key, a process that is accomplished securely using asymmetric encryption and the server’s public/private keys.
 
 The client generates a random key to be used for the main, symmetric algorithm. It encrypts it using an algorithm also agreed upon during the Hello phase, and the server’s public key (found on its SSL certificate). It sends this encrypted key to the server, where it is decrypted using the server’s private key, and the interesting parts of the handshake are complete. The parties are sufficiently happy that they are talking to the right person, and have secretly agreed on a key to symmetrically encrypt the data that they are about to send each other. HTTP requests and responses can now be sent by forming a plaintext message and then encrypting and sending it. The other party is the only one who knows how to decrypt this message, and so Man In The Middle Attackers are unable to read or modify any requests that they may intercept.
+
+###3. Certificates
+
+####3.1 Trust
+
+At its most basic level, an SSL certificate is simply a text file, and anyone with a text editor can create one. You can in fact trivially create a certificate claiming that you are Google Inc. and that you control the domain gmail.com. If this were the whole story then SSL would be a joke; identity verification would essentially be the client asking the server “are you Google?”, the server replying “er, yeah totally, here’s a piece of paper with ‘I am Google’ written on it” and the client saying “OK great, here’s all my data.” The magic that prevents this farce is in the digital signature, which allows a party to verify that another party’s piece of paper really is legit.
+
+There are 2 sensible reasons why you might trust a certificate:
+
+* If it’s on a list of certificates that you trust implicitly
+* If it’s able to prove that it is trusted by the controller of one of the certificates on the above list
