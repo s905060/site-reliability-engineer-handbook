@@ -343,3 +343,6 @@ Re-enter password for principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM":
 Principal "krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM" created.
 quit
 ```
+
+Use the get_principal command to verify that both entries have matching key version numbers (kvno values) and encryption types.
+
