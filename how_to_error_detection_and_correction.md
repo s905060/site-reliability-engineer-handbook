@@ -40,3 +40,10 @@ Rather than focus on getting EDAC working, I want to focus on what information i
 
 For the test system, I checked to see whether any EDAC modules were loaded with lsmod :
 
+```
+login2$ /sbin/lsmod
+...
+sb_edac 12898 0
+edac_core 46773 3 sb_edac
+...
+```
