@@ -42,3 +42,8 @@ Other important points:
 * Again, these secret keys are all stored in the KDC database; recall the Kerberos’ reliance on symmetric-key cryptography.
 * The KDC itself is encrypted with a master key to add a layer of difficulty from stealing keys from the database.
 * There are Kerberos configurations and implementations that use public-key cryptography instead of symmetrical key encryption.
+
+An aside: the order of the messages and their contents discussed here does not reflect the order in which they are sent over TCP or UDP.
+
+The example below describes what happens when you request something from an internal HTTP Service – like information regarding payroll within your corporate intranet.
+
