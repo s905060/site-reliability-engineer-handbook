@@ -321,3 +321,11 @@ Using kinit, verify that a client system whose krb5.conf lists only the slave KD
 
 That done, simply create a script which dumps the realm database and runs the kprop command to transmit the database to each slave KDC in turn, and configure the cron service to run the script periodically.
 
+###Setting Up Cross Realm Authentication
+
+Cross-realm authentication is the term which is used to describe situations in which clients (typically users) of one realm use Kerberos to authenticate to services (typically server processes running on a particular server system) which belong to a realm other than their own.
+
+For the simplest case, in order for a client of a realm named A.EXAMPLE.COM to access a service in the B.EXAMPLE.COM realm, both realms must share a key for a principal named krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM, and both keys must have the same key version number associated with them.
+
+To accomplish this, select a very strong password or passphrase, and create an entry for the principal in both realms using kadmin.
+
