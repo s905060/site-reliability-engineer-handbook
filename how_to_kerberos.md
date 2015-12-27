@@ -312,3 +312,8 @@ Ensure that the slave KDC's firewall allows the master KDC to contact it using T
 
 Now perform a manual database propagation test by dumping the realm database, on the master KDC, to the default data file which the kprop command will read (/var/kerberos/krb5kdc/slave_datatrans), and then use the kprop command to transmit its contents to the slave KDC.
 
+```
+# /usr/kerberos/sbin/kdb5_util dump /var/kerberos/krb5kdc/slave_datatrans
+# kprop slavekdc.example.com
+
+```
