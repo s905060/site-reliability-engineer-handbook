@@ -197,4 +197,8 @@ The create command creates the database that stores keys for the Kerberos realm.
 
  ---
  
- Once these steps are completed, the Kerberos server should be up and running.
+Once these steps are completed, the Kerberos server should be up and running.
+ 
+###Configuring a Kerberos 5 Client
+
+Setting up a Kerberos 5 client is less involved than setting up a server. At a minimum, install the client packages and provide each client with a valid krb5.conf configuration file. While ssh and slogin are the preferred method of remotely logging in to client systems, Kerberized versions of rsh and rlogin are still available, though deploying them requires that a few more configuration changes be made.
