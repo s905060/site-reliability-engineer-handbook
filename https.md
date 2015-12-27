@@ -63,3 +63,10 @@ This puts an enormous burden on all browser and OS publishers to trust only sque
 ####3.4 What are you trusting?
 
 It’s interesting to note that your client is technically not trying to verify whether or not it should trust the party that sent it a certificate, but whether it should trust the public key contained in the certificate. SSL certificates are completely open and public, so any attacker could grab Microsoft’s certificate, intercept a client’s request to Microsoft.com and present the legitimate certificate to it. The client would accept this and happily begin the handshake. However, when the client encrypts the key that will be used for actual data encryption, it will do so using the real Microsoft’s public key from this real certificate. Since the attacker doesn’t have Microsoft’s private key in order to decrypt it, they are now stuck. Even if the handshake is completed, they will still not be able to decrypt the key, and so will not be able to decrypt any of the data that the client sends to them. Order is maintained as long as the attacker doesn’t control a trusted certificate’s private key. If the client is somehow tricked into trusting a certificate and public key whose private key is controlled by an attacker, trouble begins.
+
+
+###4. Really really fun facts
+
+####4.1 Can a coffee shop monitor my HTTPS traffic over their network?
+
+Nope. The magic of public-key cryptography means that an attacker can watch every single byte of data exchanged between your client and the server and still have no idea what you are saying to each other beyond roughly how much data you are exchanging. However, your normal HTTP traffic is still very vulnerable on an insecure wi-fi network, and a flimsy website can fall victim to any number of workarounds that somehow trick you into sending HTTPS traffic either over plain HTTP or just to the wrong place completely. For example, even if a login form submits a username/password combo over HTTPS, if the form itself is loaded insecurely over HTTP then an attacker could intercept the form’s HTML on its way to your machine and modify it to send the login details to their own endpoint.
