@@ -113,3 +113,15 @@ The Ticket Granting Server will first check the KDC database to see if the HTTP 
 ![](Kerb.007.jpg)
 
 If so, the TGS decrypts the TGT with its Secret Key . Since the now-unencrypted TGT contains the TGS Session Key, the TGS can decrypt the Authenticator you sent.
+
+![](Kerb.008.jpg)
+
+The TGS will then do the following:
+
+* compare your client ID from the Authenticator to that of the TGT
+* compare the timestamp from the Authenticator to that of the TGT (typical Kerberos-system tolerance of difference is 2 minutes, but can be configured otherwise)
+* check to see if the TGT is expired (the lifetime element),
+* check that the Authenticator is not already in the TGS’s cache (for avoiding replay attacks), and
+* if the network address in the original request is not null, compares the source’s IP address to your network address (or within the requested list) within the TGT.
+
+The Ticket Granting Server then randomly generates the HTTP Service Session Key, and prepares the HTTP Service ticket for you that contains:
