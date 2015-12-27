@@ -179,3 +179,18 @@ The HTTP Service then sends an Authenticator message containing its ID and times
 ![](Kerb.013.jpg)
 
 Your machine reads the Authenticator message by decrypting with the cached HTTP Service Session Key, and knows that it has to receive a message with the HTTP Service’s ID and timestamp.
+
+![](Kerb.014.jpg)
+
+And now you have been authenticated to use the HTTP Service. Future requests use the cached HTTP Service Ticket, so long as it has not expired as defined within the lifetime attribute.
+
+While I will write on this later, the HTTP Service itself must be able to support Kerberos. As well, you must also have a browser that supports SPNEGO/Negotiate.
+
+![](Kerb.015.jpg)
+
+Perhaps re-read the points previously outlined; check out this or this current implementation, especially the one on which I am paid to work that communicates with this popular implementation; or review a tutorial, resource guide, the go-to video that was sent to me when I started learning about Kerberos, or the RFC itself.
+
+The above images were rendered with Keynote with icons used from font awesome and glyphicons, and are available on slideshare.
+
+〜
+In a future posts, I’ll write up how to actually setup a Kerberos realm, setting up an HTTP Service that will accept Negotiate authentication, and writing a web application that can plug into Kerberos for its authentication.
