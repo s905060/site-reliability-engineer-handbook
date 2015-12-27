@@ -202,3 +202,19 @@ Once these steps are completed, the Kerberos server should be up and running.
 ###Configuring a Kerberos 5 Client
 
 Setting up a Kerberos 5 client is less involved than setting up a server. At a minimum, install the client packages and provide each client with a valid krb5.conf configuration file. While ssh and slogin are the preferred method of remotely logging in to client systems, Kerberized versions of rsh and rlogin are still available, though deploying them requires that a few more configuration changes be made.
+
+1. Be sure that time synchronization is in place between the Kerberos client and the KDC. Refer to Section 42.6.5, “Configuring a Kerberos 5 Server” for more information. In addition, verify that DNS is working properly on the Kerberos client before configuring the Kerberos client programs.
+
+2. Install the krb5-libs and krb5-workstation packages on all of the client machines. Supply a valid /etc/krb5.conf file for each client (usually this can be the same krb5.conf file used by the KDC).
+
+3. Before a workstation in the realm can use Kerberos to authenticate users who connect using ssh or Kerberized rsh or rlogin, it must have its own host principal in the Kerberos database. The sshd, kshd, and klogind server programs all need access to the keys for the host service's principal. Additionally, in order to use the kerberized rsh and rlogin services, that workstation must have the xinetd package installed.
+
+ Using kadmin, add a host principal for the workstation on the KDC. The instance in this case is the hostname of the workstation. Use the -randkey option for the kadmin's addprinc command to create the principal and assign it a random key:
+
+ `addprinc -randkey host/blah.example.com`
+
+ Now that the principal has been created, keys can be extracted for the workstation by running kadmin on the workstation itself, and using the ktadd command within kadmin:
+
+ `ktadd -k /etc/krb5.keytab host/blah.example.com`
+
+ To use other kerberized network services, they must first be started. Below is a list of some common kerberized services and instructions about enabling them:
