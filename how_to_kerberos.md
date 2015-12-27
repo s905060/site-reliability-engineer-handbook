@@ -217,4 +217,4 @@ Setting up a Kerberos 5 client is less involved than setting up a server. At a m
 
  `ktadd -k /etc/krb5.keytab host/blah.example.com`
 
- To use other kerberized network services, they must first be started. Below is a list of some common kerberized services and instructions about enabling them:
+4. To use other kerberized network services, they must first be started. Below is a list of some common kerberized services and instructions about enabling them:
