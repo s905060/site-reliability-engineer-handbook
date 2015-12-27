@@ -146,3 +146,23 @@ Administrators should be careful not to allow users to authenticate to most netw
 When setting up Kerberos, install the KDC first. If it is necessary to set up slave servers, install the master first.
 
 To configure the first Kerberos KDC, follow these steps:
+
+1. Ensure that time synchronization and DNS are functioning correctly on all client and server machines before configuring Kerberos. Pay particular attention to time synchronization between the Kerberos server and its clients. If the time difference between the server and client is greater than five minutes (this is configurable in Kerberos 5), Kerberos clients can not authenticate to the server. This time synchronization is necessary to prevent an attacker from using an old Kerberos ticket to masquerade as a valid user.
+
+ It is advisable to set up a Network Time Protocol (NTP) compatible client/server network even if Kerberos is not being used. Red Hat Enterprise Linux includes the ntp package for this purpose. Refer to /usr/share/doc/ntp-<version-number>/index.html (where <version-number> is the version number of the ntp package installed on your system) for details about how to set up Network Time Protocol servers, and http://www.ntp.org for more information about NTP.
+
+2. Install the krb5-libs, krb5-server, and krb5-workstation packages on the dedicated machine which runs the KDC. This machine needs to be very secure — if possible, it should not run any services other than the KDC.
+
+3. Edit the /etc/krb5.conf and /var/kerberos/krb5kdc/kdc.conf configuration files to reflect the realm name and domain-to-realm mappings. A simple realm can be constructed by replacing instances of EXAMPLE.COM and example.com with the correct domain name — being certain to keep uppercase and lowercase names in the correct format — and by changing the KDC from kerberos.example.com to the name of the Kerberos server. By convention, all realm names are uppercase and all DNS hostnames and domain names are lowercase. For full details about the formats of these configuration files, refer to their respective man pages.
+
+4. Create the database using the kdb5_util utility from a shell prompt:
+
+ /usr/kerberos/sbin/kdb5_util create -s
+The create command creates the database that stores keys for the Kerberos realm. The -s switch forces creation of a stash file in which the master server key is stored. If no stash file is present from which to read the key, the Kerberos server (krb5kdc) prompts the user for the master server password (which can be used to regenerate the key) every time it starts.
+
+5. Edit the /var/kerberos/krb5kdc/kadm5.acl file. This file is used by kadmind to determine which principals have administrative access to the Kerberos database and their level of access. Most organizations can get by with a single line:
+
+ */admin@EXAMPLE.COM  *
+Most users are represented in the database by a single principal (with a NULL, or empty, instance, such as joe@EXAMPLE.COM). In this configuration, users with a second principal with an instance of admin (for example, joe/admin@EXAMPLE.COM) are able to wield full power over the realm's Kerberos database.
+
+ After kadmind has been started on the server, any user can access its services by running kadmin on any of the clients or servers in the realm. However, only users listed in the kadm5.acl file can modify the database in any way, except for changing their own passwords.
