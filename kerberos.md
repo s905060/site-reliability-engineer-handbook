@@ -23,3 +23,13 @@ Admins create realms – Kerberos realms – that will encompass all that is ava
 Your machine, the Client, lives within this realm, as well as the service or host you want to request and the Key Distribution Center, KDC (no, not the KGB, although I always think of that, too). In the following example, I separate out the Authentication Server and the Ticket Granting Server, but both are within the KDC.
 
 ![](Kerb.001.jpg)
+
+###To keep in the back of your mind
+You may want to come back up here after you read through the gritty details on how the example works.
+
+When requesting access to a service or host, three interactions take place between you and:
+
+* the Authentication Server
+* the Ticket Granting Server
+* the Service or host machine that you’re wanting access to.
+Other important points:
