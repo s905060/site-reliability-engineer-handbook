@@ -161,3 +161,15 @@ total 0
 0 ce_noinfo_count 0 csrow2 0 csrow5 0 device 0 sdram_scrub_rate 0 ue_count
 0 csrow0 0 csrow3 0 csrow6 0 mc_name 0 seconds_since_reset 0 ue_noinfo_count
 ```
+
+As with the csrow files, note the control and attribute files, which although similar to those for the csrows, are for the entire memory controller:
+
+* ce_count : The total count of correctable errors that have occurred on this memory controller (attribute file).
+* ce_noinfo_count : The total count of correctable errors on this memory controller, but with no information as to which DIMM slot is experiencing errors (attribute file).
+* mc_name : The type of memory controller being utilized (attribute file).
+* reset_counters : A write-only control file that zeroes out all of the statistical counters for correctable and uncorrectable errors on this memory controller and resets the timer indicating how long it has been since the last reset (counter zero). The basic command is echo < anything >  /sys/devices/system/edac/mc/mc0/reset_counters , where < anything > is literally anything (just use a 0 to make things easy).
+* sdram_scrub_rate : An attribute file that controls memory scrubbing. The scrubbing rate is set by writing a minimum bandwidth in bytes per second to the attribute file. The rate will be translated to an internal value at the specified rate. If the configuration fails or memory scrubbing is not implemented, the value of the attribute file will be -1 .
+* seconds_since_reset : An attribute file that displays how many seconds have elapsed since the last counter reset. This can be used with the error counters to measure error rates.
+* size_mb : An attribute file that contains the size (MB) of memory that this memory controller manages.
+* ue_count : An attribute file that contains the total number of uncorrectable errors that have occurred on this memory controller.
+* ue_noinfo_count : The total count of uncorrectable errors on this memory controller, but with no information as to which DIMM slot is experiencing errors (attribute file).
