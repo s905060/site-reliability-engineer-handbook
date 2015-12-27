@@ -85,3 +85,9 @@ csrow2 | DIMM_A1 | DIMM_B1 |
 csrow3 | DIMM_A1 | DIMM_B1 |
 ==============================
 ```
+
+The number of csrows depends on the electrical loading of a given motherboard and the memory controller and DIMM characteristics.
+
+**Example**
+
+For this example node, each memory controller has eight csrows and one channel table. You can get an idea of the layout by looking at the entries for csrowX (X = 0 to 7):
