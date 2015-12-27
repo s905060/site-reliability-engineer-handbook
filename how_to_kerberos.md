@@ -378,3 +378,13 @@ The default method, which requires no explicit configuration, is to give the rea
 The client in this scenario treats the realm name as one might treat a DNS name. It repeatedly strips off the components of its own realm's name to generate the names of realms which are "above" it in the hierarchy until it reaches a point which is also "above" the service's realm. At that point it begins prepending components of the service's realm name until it reaches the service's realm. Each realm which is involved in the process is another "hop".
 
 For example, using credentials in A.EXAMPLE.COM, authenticating to a service in B.EXAMPLE.COM:
+
+* A.EXAMPLE.COM → EXAMPLE.COM → B.EXAMPLE.COM
+A.EXAMPLE.COM and EXAMPLE.COM share a key for krbtgt/EXAMPLE.COM@A.EXAMPLE.COM
+
+* EXAMPLE.COM and B.EXAMPLE.COM share a key for krbtgt/B.EXAMPLE.COM@EXAMPLE.COM
+
+Another example, using credentials in SITE1.SALES.EXAMPLE.COM, authenticating to a service in EVERYWHERE.EXAMPLE.COM:
+
+
+SITE1.SALES.EXAMPLE.COM → SALES.EXAMPLE.COM → EXAMPLE.COM → EVERYWHERE.EXAMPLE.COM
