@@ -235,3 +235,11 @@ if [ -d /sys/devices/system/edac/mc ]; then
  done
 fi
 ```
+
+I could have just queried the CE and UE memory error counts for the memory controller (mc ), but I chose to search through the channel tables, so I could modify the script, just in case I want to point to the specific DIMM reporting more than zero errors.
+
+You can modify this script to return the UE and CE count values. HPC people can also put this script into something like Ganglia to track memory error counts. A simple cron job could run this script, although I don’t think you would want to run it every minute. Maybe running it once an hour at most or maybe once a day is reasonable. If you start to see the correctable error count climb slowly, you might want to run the script more often.
+
+Notice that I didn't compute “error rates.” Some vendors want to know this number to possibly judge whether the memory is bad, but I will leave this exercise up to you.
+
+Finally, if you see a correctable error, it does not mean the memory DIMM is bad. However, if you see one, keep checking that DIMM, just in case. If the error count keeps rising, you might want to contact your system vendor. Vendors typically do not publish correctable or uncorrectable error rates but you can call them and discuss what you are seeing on your system, because there might be a threshold at which they will replace the DIMM (they will usually discuss this with their memory vendor).
