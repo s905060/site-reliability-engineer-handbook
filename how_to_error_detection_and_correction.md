@@ -63,7 +63,6 @@ total 0
 ```
 
 I find two EDAC components, mc (memory controllers), for this system.
-
 Peering into mc0 shows the following:
 ```
 login2$ ls -s /sys/devices/system/edac/mc/mc0
