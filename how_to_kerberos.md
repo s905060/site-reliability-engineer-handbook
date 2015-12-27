@@ -346,3 +346,10 @@ quit
 
 Use the get_principal command to verify that both entries have matching key version numbers (kvno values) and encryption types.
 
+---
+
+####Dumping the Database Doesn't Do It
+Security-conscious administrators may attempt to use the add_principal command's -randkey option to assign a random key instead of a password, dump the new entry from the database of the first realm, and import it into the second. This will not work unless the master keys for the realm databases are identical, as the keys contained in a database dump are themselves encrypted using the master key.
+
+---
+
