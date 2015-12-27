@@ -106,3 +106,6 @@ You send an unencrypted message that contains:
 
 along with the encrypted Authenticator and TGT to the Ticket Granting Server.
 
+![](Kerb.006.jpg)
+
+The Ticket Granting Server will first check the KDC database to see if the HTTP Service exists.
