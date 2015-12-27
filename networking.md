@@ -20,4 +20,6 @@ This model scales somewhat well, but it is subject to bottlenecks if uplinks bet
 
 In modern data centers, an alternative to the core/aggregation/access layer network topology has emerged known as leaf-spine. In a leaf-spine architecture, a series of leaf switches form the access layer. These switches are fully meshed to a series of spine switches.
 
+The mesh ensures that access-layer switches are no more than one hop away from one another, minimizing latency and the likelihood of bottlenecks between access-layer switches. When networking vendors speak of an Ethernet fabric, this is generally the sort of topology they have in mind.
+
 ![](sDC-CoreSpineLeaf-112513.png)
