@@ -19,3 +19,7 @@ Most conventional network services use password-based authentication schemes. Su
 Even if this is the case, a network that is connected to the Internet can no longer be assumed to be secure. Any attacker who gains access to the network can use a simple packet analyzer, also known as a packet sniffer, to intercept usernames and passwords, compromising user accounts and the integrity of the entire security infrastructure.
 
 The primary design goal of Kerberos is to eliminate the transmission of unencrypted passwords across the network. If used properly, Kerberos effectively eliminates the threat that packet sniffers would otherwise pose on a network.
+
+###Disadvantages of Kerberos
+
+Although Kerberos removes a common and severe security threat, it may be difficult to implement for a variety of reasons:
