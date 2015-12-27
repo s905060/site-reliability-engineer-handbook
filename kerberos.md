@@ -47,3 +47,22 @@ An aside: the order of the messages and their contents discussed here does not r
 
 The example below describes what happens when you request something from an internal HTTP Service – like information regarding payroll within your corporate intranet.
 
+###You and the Authentication Server
+
+You want to access an HTTP Service, but first you must introduce yourself to the Authentication Server. Logging into your computer, or kinit USERNAME, initiates that introduction via a plaintext request for a Ticket Granting Ticket (TGT). The plaintext message contains:
+
+* your name/ID
+* the name/ID of the requested service (in this case, service is the Ticket Granting Server),
+* your network address (may be a list of IP addresses for multiple machines, or may be null if wanting to use on any machine), and
+* requested lifetime for the validity of the TGT,
+and is sent to the Authentication Server.
+
+![](Kerb.002.jpg)
+
+The Authentication Server will check if you are in the KDC database. This check is only to see if you exist; no credentials are checked.
+
+![](Kerb.003.jpg)
+
+If there are no errors (e.g. user is not found), it will randomly generate a key called a session key for use between you and the Ticket Granting Server (TGS).
+
+The Authentication Server will then send two messages back to you. One message is the TGT that contains:
