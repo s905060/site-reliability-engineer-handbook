@@ -153,7 +153,6 @@ login2$ more /sys/devices/system/edac/mc/mc0/csrow0/ue_count
 ```
 
 This particular csrow has an 8GB DDR3 unbuffered DIMM with no correctable or uncorrectable errors.
-
 In /sys/devices/system/edac/mc/mc0/ , you can see some attribute files that can be very useful:
 ```
 login2$ ls -s /sys/devices/system/edac/mc/mc0
