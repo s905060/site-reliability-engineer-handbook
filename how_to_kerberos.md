@@ -438,3 +438,7 @@ Clients in the A.EXAMPLE.COM realm can obtain cross-realm credentials from B.EXA
 A.EXAMPLE.COM → EXAMPLE.COM → B.EXAMPLE.COM
 
 ---
+
+###Additional Resources
+
+For more information about Kerberos, refer to the following resources.
