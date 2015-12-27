@@ -27,3 +27,16 @@ The study went on to report some other interesting results that bear repeating h
 * Error rates are unlikely to be dominated by software errors
 
 To me, these observations indicate that in real-world production, we see much higher error rates than what manufacturers are reporting. Moreover, the rate of correctable errors can be an important factor in watching for memory failure. Consequently, I think monitoring and capturing the correctable error information is very important.
+
+###Linux and Memory Errors
+
+When I worked for Linux Networx years ago, they were helping with a project that was called bluesmoke. The idea was to have a kernel module that could catch and report hardware-related errors within the system. This goes beyond just memory errors to include hardware errors in the cache, DMA, fabric switching, thermal throttling, hypertransport bus, and so on. The formal name of the project was EDAC, Error Detection and Correction.
+
+For many years, people wrote EDAC kernel modules for various chipsets so they could capture hardware-related error information and report it. This was initially done outside the kernel at the beginning of the project, but, starting with kernel 2.6.16 (released March 20, 2006), edac was included with the kernel. Starting with kernel 2.6.18, EDAC showed up in the /sys file system, typically in /sys/devices/system/edac .
+
+One of the best sources of information about EDAC can be found at the EDAC wiki. The page discusses how to get started and is also a good location for EDAC resources (bugs, FAQs, mailing list, etc.).
+
+Rather than focus on getting EDAC working, I want to focus on what information it can provide and why it is important. I'll be using a Dell PowerEdge R720 as an example system. It has two processors (Intel E5-2600 series) and 128GB of ECC memory. It was running CentOS 6.2 during the tests.
+
+For the test system, I checked to see whether any EDAC modules were loaded with lsmod :
+
