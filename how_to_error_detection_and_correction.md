@@ -61,3 +61,14 @@ login2$ ls -s /sys/devices/system/edac/mc
 total 0
 0 mc0 0 mc1
 ```
+
+I find two EDAC components, mc (memory controllers), for this system.
+
+Peering into mc0 shows the following:
+```
+login2$ ls -s /sys/devices/system/edac/mc/mc0
+total 0
+0 ce_count 0 csrow1 0 csrow4 0 csrow7 0 reset_counters 0 size_mb
+0 ce_noinfo_count 0 csrow2 0 csrow5 0 device 0 sdram_scrub_rate 0 ue_count
+0 csrow0 0 csrow3 0 csrow6 0 mc_name 0 seconds_since_reset 0 ue_noinfo_count
+```
