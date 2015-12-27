@@ -120,3 +120,14 @@ total 0
 0 ce_count 0 ch0_dimm_label 0 edac_mode 0 size_mb
 0 ch0_ce_count 0 dev_type 0 mem_type 0 ue_count
 ```
+
+shows that all are files (no further subdirectories). The definition of each file is:
+
+* ce_count : The total count of correctable errors that have occurred on this csrow (attribute file).
+* ch0_ce_count : The total count of correctable errors on this DIMM in channel 0 (attribute file).
+* ch0_dimm_label : The control file that labels this DIMM. This can be very useful for panic events to isolate the cause of the uncorrectable error. Note that DIMM labels must be assigned after booting, with information that correctly identifies the physical slot with its silk screen label on the board itself.
+* dev_type : An attribute file that will display the type of DRAM device being used on this DIMM. Typically this is x1 , x2 , x4 , or x8 .
+* edac_mode : An attribute file that displays the type of error detection and correction being utilized.
+* mem_type : An attribute file that displays the type of memory currently on a csrow.
+* size_mb : An attribute file that contains the size (MB) of memory a csrow contains.
+* ue_count : An attribute file that contains the total number of uncorrectable errors that have occurred on a csrow.
