@@ -41,3 +41,7 @@ There are 2 sensible reasons why you might trust a certificate:
 
 * If it’s on a list of certificates that you trust implicitly
 * If it’s able to prove that it is trusted by the controller of one of the certificates on the above list
+
+The first criteria is easy to check. Your browser has a pre-installed list of trusted SSL certificates from Certificate Authorities (CAs) that you can view, add and remove from. These certificates are controlled by a centralised group of (in theory, and generally in practice) extremely secure, reliable and trustworthy organisations like Symantec, Comodo and GoDaddy. If a server presents a certificate from that list then you know you can trust them.
+
+The second criteria is much harder. It’s easy for a server to say “er yeah, my name is er, Microsoft, you trust Symantec and er, they totally trust me, so it’s all cool.” A somewhat smart client might then go and ask Symantec “I’ve got a Microsoft here who say that you trust them, is this true?” But even if Symantec say “yep, we know them, Microsoft are legit”, you still don’t know whether the server claiming to be Microsoft actually is Microsoft or something much worse. This is where digital signatures come in.
