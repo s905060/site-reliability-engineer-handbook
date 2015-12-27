@@ -167,3 +167,13 @@ The create command creates the database that stores keys for the Kerberos realm.
  Most users are represented in the database by a single principal (with a NULL, or empty, instance, such as joe@EXAMPLE.COM). In this configuration, users with a second principal with an instance of admin (for example, joe/admin@EXAMPLE.COM) are able to wield full power over the realm's Kerberos database.
 
  After kadmind has been started on the server, any user can access its services by running kadmin on any of the clients or servers in the realm. However, only users listed in the kadm5.acl file can modify the database in any way, except for changing their own passwords.
+ 
+ 
+
+---
+
+######Note
+The kadmin utility communicates with the kadmind server over the network, and uses Kerberos to handle authentication. Consequently, the first principal must already exist before connecting to the server over the network to administer it. Create the first principal with the kadmin.local command, which is specifically designed to be used on the same host as the KDC and does not use Kerberos for authentication.
+
+---
+
