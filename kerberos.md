@@ -90,3 +90,9 @@ Your Client Secret Key is determined by prompting you for your password, appendi
 ![](Kerb.005.jpg)
 
 You can not, however, decrypt the TGT since you do not know the TGS Secret Key. The encrypted TGT is stored within your credential cache.
+
+###You and the Ticket Granting Server
+At this point, you have the TGT that you can not read because you do not have the TGS Secret Key to decrypt it. You do, however, have the TGS Session Key.
+
+It’s now your turn to send two messages. You first prepare the Authenticator, encrypted with the TGS Session Key, containing:
+
