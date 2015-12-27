@@ -120,3 +120,11 @@ Warning
 The Kerberos system can be compromised if a user on the network authenticates against a non-Kerberos aware service by transmitting a password in plain text. The use of non-Kerberos aware services is highly discouraged. Such services include Telnet and FTP. The use of other encrypted protocols, such as SSH or SSL-secured services, however, is preferred, although not ideal.
 
 ---
+
+##### Note
+Kerberos depends on the following network services to function correctly.
+
+  * Approximate clock synchronization between the machines on the network.
+  * A clock synchronization program should be set up for the network, such as ntpd. Refer to /usr/share/doc/ntp-<version-number>/index.html for details on setting up Network Time Protocol servers (where <version-number> is the version number of the ntp package installed on your system).
+  * Domain Name Service (DNS).
+  * You should ensure that the DNS entries and hosts on the network are all properly configured. Refer to the Kerberos V5 System Administrator's Guide in /usr/share/doc/krb5-server-<version-number> for more information (where <version-number> is the version number of the krb5-server package installed on your system).
