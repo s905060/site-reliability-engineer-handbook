@@ -140,3 +140,9 @@ Kerberos-aware services do not currently make use of Pluggable Authentication Mo
 Administrators should be careful not to allow users to authenticate to most network services using Kerberos passwords. Many protocols used by these services do not encrypt the password before sending it over the network, destroying the benefits of the Kerberos system. For example, users should not be allowed to authenticate to Telnet services with the same password they use for Kerberos authentication.
 
 ---
+
+###Configuring a Kerberos 5 Server
+
+When setting up Kerberos, install the KDC first. If it is necessary to set up slave servers, install the master first.
+
+To configure the first Kerberos KDC, follow these steps:
