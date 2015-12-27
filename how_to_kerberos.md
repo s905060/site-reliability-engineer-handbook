@@ -414,3 +414,12 @@ The format of the capaths section is relatively straightforward: each entry in t
 
 Here's an example:
 
+```
+[capaths]
+A.EXAMPLE.COM = {
+B.EXAMPLE.COM = .
+C.EXAMPLE.COM = B.EXAMPLE.COM
+D.EXAMPLE.COM = B.EXAMPLE.COM
+D.EXAMPLE.COM = C.EXAMPLE.COM
+}
+```
