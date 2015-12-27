@@ -66,3 +66,27 @@ The Authentication Server will check if you are in the KDC database. This check 
 If there are no errors (e.g. user is not found), it will randomly generate a key called a session key for use between you and the Ticket Granting Server (TGS).
 
 The Authentication Server will then send two messages back to you. One message is the TGT that contains:
+
+* your name/ID,
+* the TGS name/ID,
+* timestamp,
+* your network address (may be a list of IP addresses for multiple machines, or may be null if wanting to use on any machine)
+* lifetime of the TGT (could be what you initially requested, lower if you or the TGS’s secret keys are about to expire, or another limit that was implemented during the Kerberos setup), and
+* TGS Session Key,
+
+and is encrypted with the TGS Secret Key . The other message contains:
+
+* the TGS name/ID,
+* timestamp,
+* lifetime (same as above), and
+* TGS Session Key
+
+and is encrypted with your Client Secret Key. Note that the TGS Session Key is the shared key between you and the TGS.
+
+![](Kerb.004.jpg)
+
+Your Client Secret Key is determined by prompting you for your password, appending a salt (made up of user@REALMNAME.COM) and hashing the whole thing. Now you can use it for decrypting the second message in order to obtain the TGS Session Key. If the password is incorrect, then you will not be able to decrypt the message. Please note that this is the step in which the password you enter is implicitly validated.
+
+![](Kerb.005.jpg)
+
+You can not, however, decrypt the TGT since you do not know the TGS Secret Key. The encrypted TGT is stored within your credential cache.
