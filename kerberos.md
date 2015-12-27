@@ -96,3 +96,5 @@ At this point, you have the TGT that you can not read because you do not have th
 
 It’s now your turn to send two messages. You first prepare the Authenticator, encrypted with the TGS Session Key, containing:
 
+* your name/ID, and
+* timestamp.
