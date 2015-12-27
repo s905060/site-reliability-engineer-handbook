@@ -315,5 +315,4 @@ Now perform a manual database propagation test by dumping the realm database, on
 ```
 # /usr/kerberos/sbin/kdb5_util dump /var/kerberos/krb5kdc/slave_datatrans
 # kprop slavekdc.example.com
-
 ```
