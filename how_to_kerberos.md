@@ -190,7 +190,7 @@ The create command creates the database that stores keys for the Kerberos realm.
 
 8. Verify that the KDC is issuing tickets. First, run kinit to obtain a ticket and store it in a credential cache file. Next, use klist to view the list of credentials in the cache and use kdestroy to destroy the cache and the credentials it contains.
 
----
+  ---
 
  ######Note
  By default, kinit attempts to authenticate using the same system login username (not the Kerberos server). If that username does not correspond to a principal in the Kerberos database, kinit issues an error message. If that happens, supply kinit with the name of the correct principal as an argument on the command line (kinit <principal>).
