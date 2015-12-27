@@ -91,3 +91,21 @@ The number of csrows depends on the electrical loading of a given motherboard an
 **Example**
 
 For this example node, each memory controller has eight csrows and one channel table. You can get an idea of the layout by looking at the entries for csrowX (X = 0 to 7):
+```
+login2$ more /sys/devices/system/edac/mc/mc0/csrow0/ch0_dimm_label
+CPU_SrcID#0_Channel#0_DIMM#0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow1/ch0_dimm_label
+CPU_SrcID#0_Channel#0_DIMM#1
+login2$ more /sys/devices/system/edac/mc/mc0/csrow2/ch0_dimm_label
+CPU_SrcID#0_Channel#1_DIMM#0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow3/ch0_dimm_label
+CPU_SrcID#0_Channel#1_DIMM#1
+login2$ more /sys/devices/system/edac/mc/mc0/csrow4/ch0_dimm_label
+CPU_SrcID#0_Channel#2_DIMM#0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow5/ch0_dimm_label
+CPU_SrcID#0_Channel#2_DIMM#1
+login2$ more /sys/devices/system/edac/mc/mc0/csrow6/ch0_dimm_label
+CPU_SrcID#0_Channel#3_DIMM#0
+login2$ more /sys/devices/system/edac/mc/mc0/csrow7/ch0_dimm_label
+CPU_SrcID#0_Channel#3_DIMM#1
+```
