@@ -31,3 +31,9 @@ It is the simplest technique for detecting and correcting errors. The MSB of an 
 **Even parity** -- Even parity means the number of 1's in the given word including the parity bit should be even (2,4,6,....).
 
 **Odd parity** -- Odd parity means the number of 1's in the given word including the parity bit should be odd (1,3,5,....).
+
+###Use of Parity Bit
+The parity bit can be set to 0 and 1 depending on the type of the parity required.
+
+* For even parity, this bit is set to 1 or 0 such that the no. of "1 bits" in the entire word is even. Shown in fig. (a).
+* For odd parity, this bit is set to 1 or 0 such that the no. of "1 bits" in the entire word is odd. Shown in fig. (b).
