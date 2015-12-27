@@ -98,3 +98,11 @@ It’s now your turn to send two messages. You first prepare the Authenticator, 
 
 * your name/ID, and
 * timestamp.
+
+You send an unencrypted message that contains:
+
+* the requested HTTP Service name/ID you want access to, and
+* lifetime of the Ticket for the HTTP Service,
+
+along with the encrypted Authenticator and TGT to the Ticket Granting Server.
+
