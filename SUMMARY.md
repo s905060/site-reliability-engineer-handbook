@@ -36,7 +36,7 @@
    * [Exec](exec.md)
    * [How Linux actually handles fork and exec](how_linux_actually_handles_fork_and_exec.md)
    * [PROC](proc.md)
-   * Error Detection & Correction
+   * [Error Detection & Correction](error_detection_&_correction.md)
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
