@@ -265,3 +265,19 @@ To set up a slave KDC, first ensure that the master KDC's krb5.conf and kdc.conf
 
 Start kadmin.local from a root shell on the master KDC and use its add_principal command to create a new entry for the master KDC's host service, and then use its ktadd command to simultaneously set a random key for the service and store the random key in the master's default keytab file. This key will be used by the kprop command to authenticate to the slave servers. You will only need to do this once, regardless of how many slave servers you install.
 
+```
+# kadmin.local -r EXAMPLE.COM
+Authenticating as principal root/admin@EXAMPLE.COM with password.
+kadmin: add_principal -randkey host/masterkdc.example.com
+Principal "host/host/masterkdc.example.com@EXAMPLE.COM" created.
+kadmin: ktadd host/masterkdc.example.com
+Entry for principal host/masterkdc.example.com with kvno 3, encryption type Triple DES cbc mode with \
+HMAC/sha1 added to keytab WRFILE:/etc/krb5.keytab.
+Entry for principal host/masterkdc.example.com with kvno 3, encryption type ArcFour with HMAC/md5 \
+added to keytab WRFILE:/etc/krb5.keytab.
+Entry for principal host/masterkdc.example.com with kvno 3, encryption type DES with HMAC/sha1 added \
+to keytab WRFILE:/etc/krb5.keytab.
+Entry for principal host/masterkdc.example.com with kvno 3, encryption type DES cbc mode with RSA-MD5 \
+added to keytab WRFILE:/etc/krb5.keytab.
+kadmin: quit
+```
