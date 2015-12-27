@@ -281,3 +281,6 @@ Entry for principal host/masterkdc.example.com with kvno 3, encryption type DES 
 added to keytab WRFILE:/etc/krb5.keytab.
 kadmin: quit
 ```
+
+Start kadmin from a root shell on the slave KDC and use its add_principal command to create a new entry for the slave KDC's host service, and then use kadmin's ktadd command to simultaneously set a random key for the service and store the random key in the slave's default keytab file. This key is used by the kpropd service when authenticating clients.
+
