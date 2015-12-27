@@ -316,3 +316,8 @@ Now perform a manual database propagation test by dumping the realm database, on
 # /usr/kerberos/sbin/kdb5_util dump /var/kerberos/krb5kdc/slave_datatrans
 # kprop slavekdc.example.com
 ```
+
+Using kinit, verify that a client system whose krb5.conf lists only the slave KDC in its list of KDCs for your realm is now correctly able to obtain initial credentials from the slave KDC.
+
+That done, simply create a script which dumps the realm database and runs the kprop command to transmit the database to each slave KDC in turn, and configure the cron service to run the script periodically.
+
