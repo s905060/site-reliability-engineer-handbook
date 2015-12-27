@@ -157,12 +157,13 @@ To configure the first Kerberos KDC, follow these steps:
 
 4. Create the database using the kdb5_util utility from a shell prompt:
 
- /usr/kerberos/sbin/kdb5_util create -s
+ `/usr/kerberos/sbin/kdb5_util create -s`
 The create command creates the database that stores keys for the Kerberos realm. The -s switch forces creation of a stash file in which the master server key is stored. If no stash file is present from which to read the key, the Kerberos server (krb5kdc) prompts the user for the master server password (which can be used to regenerate the key) every time it starts.
 
 5. Edit the /var/kerberos/krb5kdc/kadm5.acl file. This file is used by kadmind to determine which principals have administrative access to the Kerberos database and their level of access. Most organizations can get by with a single line:
 
- */admin@EXAMPLE.COM  *
-Most users are represented in the database by a single principal (with a NULL, or empty, instance, such as joe@EXAMPLE.COM). In this configuration, users with a second principal with an instance of admin (for example, joe/admin@EXAMPLE.COM) are able to wield full power over the realm's Kerberos database.
+ `*/admin@EXAMPLE.COM  *`
+ 
+ Most users are represented in the database by a single principal (with a NULL, or empty, instance, such as joe@EXAMPLE.COM). In this configuration, users with a second principal with an instance of admin (for example, joe/admin@EXAMPLE.COM) are able to wield full power over the realm's Kerberos database.
 
  After kadmind has been started on the server, any user can access its services by running kadmin on any of the clients or servers in the realm. However, only users listed in the kadm5.acl file can modify the database in any way, except for changing their own passwords.
