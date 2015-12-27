@@ -149,3 +149,13 @@ that is encrypted with the TGS Session Key.
 Your machine decrypts the latter message with the TGS Session Key that it cached earlier to obtain the HTTP Service Session Key.
 
 Your machine can not, however, decrypt the HTTP Service Ticket since it’s encrypted with the HTTP Service Secret Key.
+
+![](Kerb.010.jpg)
+
+###You and the HTTP Service
+To now access the HTTP Service, your machine prepares another Authenticator message that contains:
+
+* your name/ID,
+* timestamp,
+
+and is encrypted with the HTTP Service Session Key. Your machine then sends the Authenticator and the still-encrypted HTTP Service Ticket received from the TGS.
