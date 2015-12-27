@@ -109,3 +109,14 @@ CPU_SrcID#0_Channel#3_DIMM#0
 login2$ more /sys/devices/system/edac/mc/mc0/csrow7/ch0_dimm_label
 CPU_SrcID#0_Channel#3_DIMM#1
 ```
+
+This information shows four memory channels (0–3) and two DIMMs for each channel (0 and 1).
+
+Each csrow subdirectory for each memory controller has several EDAC control and attribute files for that csrow. For example, the output for mc0/csrow0 ,
+
+```
+login2$ ls -s /sys/devices/system/edac/mc/mc0/csrow0
+total 0
+0 ce_count 0 ch0_dimm_label 0 edac_mode 0 size_mb
+0 ch0_ce_count 0 dev_type 0 mem_type 0 ue_count
+```
