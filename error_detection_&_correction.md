@@ -25,3 +25,9 @@ To detect and correct the errors, additional bits are added to the data bits at 
 
 ###Parity Checking of Error Detection
 It is the simplest technique for detecting and correcting errors. The MSB of an 8-bits word is used as the parity bit and the remaining 7 bits are used as data or message bits. The parity of 8-bits transmitted word can be either even parity or odd parity.
+
+![](parity_check.jpg)
+
+**Even parity** -- Even parity means the number of 1's in the given word including the parity bit should be even (2,4,6,....).
+
+**Odd parity** -- Odd parity means the number of 1's in the given word including the parity bit should be odd (1,3,5,....).
