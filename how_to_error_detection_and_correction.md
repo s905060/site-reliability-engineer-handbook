@@ -173,3 +173,24 @@ As with the csrow files, note the control and attribute files, which although si
 * size_mb : An attribute file that contains the size (MB) of memory that this memory controller manages.
 * ue_count : An attribute file that contains the total number of uncorrectable errors that have occurred on this memory controller.
 * ue_noinfo_count : The total count of uncorrectable errors on this memory controller, but with no information as to which DIMM slot is experiencing errors (attribute file).
+
+For the sample system, the values for the attribute and control files are:
+```
+login2$ more /sys/devices/system/edac/mc/mc0/ce_count
+0
+login2$ more /sys/devices/system/edac/mc/mc0/ce_noinfo_count
+0
+login2$ more /sys/devices/system/edac/mc/mc0/mc_name
+Sandy Bridge Socket#0
+login2$ more /sys/devices/system/edac/mc/mc0/reset_counters
+/sys/devices/system/edac/mc/mc0/reset_counters: Permission denied
+login2$ more /sys/devices/system/edac/mc/mc0/sdram_scrub_rate
+login2$ more /sys/devices/system/edac/mc/mc0/seconds_since_reset
+27759752
+login2$ more /sys/devices/system/edac/mc/mc0/size_mb
+65536
+login2$ more /sys/devices/system/edac/mc/mc0/ue_count
+0
+login2$ more /sys/devices/system/edac/mc/mc0/ue_noinfo_count
+0
+```
