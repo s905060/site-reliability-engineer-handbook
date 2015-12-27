@@ -396,14 +396,14 @@ SITE1.SALES.EXAMPLE.COM → SALES.EXAMPLE.COM → EXAMPLE.COM → EVERYWHERE.EXA
 
 Another example, this time using realm names whose names share no common suffix (DEVEL.EXAMPLE.COM and PROD.EXAMPLE.ORG):
 
-
 DEVEL.EXAMPLE.COM → EXAMPLE.COM → COM → ORG → EXAMPLE.ORG → PROD.EXAMPLE.ORG
-DEVEL.EXAMPLE.COM and EXAMPLE.COM share a key for krbtgt/EXAMPLE.COM@DEVEL.EXAMPLE.COM
 
-EXAMPLE.COM and COM share a key for krbtgt/COM@EXAMPLE.COM
+* DEVEL.EXAMPLE.COM and EXAMPLE.COM share a key for krbtgt/EXAMPLE.COM@DEVEL.EXAMPLE.COM
 
-COM and ORG share a key for krbtgt/ORG@COM
+* EXAMPLE.COM and COM share a key for krbtgt/COM@EXAMPLE.COM
 
-ORG and EXAMPLE.ORG share a key for krbtgt/EXAMPLE.ORG@ORG
+* COM and ORG share a key for krbtgt/ORG@COM
 
-EXAMPLE.ORG and PROD.EXAMPLE.ORG share a key for krbtgt/PROD.EXAMPLE.ORG@EXAMPLE.ORG
+* ORG and EXAMPLE.ORG share a key for krbtgt/EXAMPLE.ORG@ORG
+
+* EXAMPLE.ORG and PROD.EXAMPLE.ORG share a key for krbtgt/PROD.EXAMPLE.ORG@EXAMPLE.ORG
