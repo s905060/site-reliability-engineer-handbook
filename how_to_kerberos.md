@@ -429,3 +429,12 @@ In this example, clients in the A.EXAMPLE.COM realm can obtain cross-realm crede
 If those clients wish to contact a service in theC.EXAMPLE.COM realm, they will first need to obtain necessary credentials from the B.EXAMPLE.COM realm (this requires that krbtgt/B.EXAMPLE.COM@A.EXAMPLE.COM exist), and then use those credentials to obtain credentials for use in the C.EXAMPLE.COM realm (using krbtgt/C.EXAMPLE.COM@B.EXAMPLE.COM).
 
 If those clients wish to contact a service in the D.EXAMPLE.COM realm, they will first need to obtain necessary credentials from the B.EXAMPLE.COM realm, and then credentials from the C.EXAMPLE.COM realm, before finally obtaining credentials for use with the D.EXAMPLE.COM realm.
+
+---
+####Note
+Without a capath entry indicating otherwise, Kerberos assumes that cross-realm trust relationships form a hierarchy.
+Clients in the A.EXAMPLE.COM realm can obtain cross-realm credentials from B.EXAMPLE.COM realm directly. Without the "." indicating this, the client would instead attempt to use a hierarchical path, in this case:
+
+A.EXAMPLE.COM → EXAMPLE.COM → B.EXAMPLE.COM
+
+---
