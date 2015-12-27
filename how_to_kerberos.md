@@ -232,3 +232,17 @@ Setting up a Kerberos 5 client is less involved than setting up a server. At a m
  * An alternative to cyrus-imap can be found in the dovecot package, which is also included in Red Hat Enterprise Linux. This package contains an IMAP server but does not, to date, support GSS-API and Kerberos.
 
  * CVS — To use a kerberized CVS server, gserver uses a principal with a root of cvs and is otherwise identical to the CVS pserver.
+
+### Domain-to-Realm Mapping
+
+When a client attempts to access a service running on a particular server, it knows the name of the service (host) and the name of the server (foo.example.com), but because more than one realm may be deployed on your network, it must guess at the name of the realm in which the service resides.
+
+By default, the name of the realm is taken to be the DNS domain name of the server, upper-cased.
+
+```
+foo.example.org → EXAMPLE.ORG
+foo.example.com → EXAMPLE.COM
+foo.hq.example.com → HQ.EXAMPLE.COM
+```
+
+In some configurations, this will be sufficient, but in others, the realm name which is derived will be the name of a non-existant realm. In these cases, the mapping from the server's DNS domain name to the name of its realm must be specified in the domain_realm section of the client system's krb5.conf. For example:
