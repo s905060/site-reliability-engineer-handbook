@@ -198,3 +198,11 @@ login2$ more /sys/devices/system/edac/mc/mc0/ue_noinfo_count
 Notice that I can’t read the reset_counters file because it is just a control file for resetting the memory error counters. However, also notice that it has been 27,759,752 seconds (7,711 hours or 321 days) since the counters were reset (basically, since the system was booted). Also notice that the memory controller is managing about 64GB of memory, with no correctable errors (CEs) or uncorrectable errors (UEs) on the system.
 
 Also notice that the system is using Sandy Bridge processors (mc_name ). Recall that with newer processors, the memory controller is in the processor. Consequently, the memory controller (mc) will be listed as a processor.
+
+###System Administration Recommendations
+
+The edac module in the sysfs filesystem (i.e., /sys/ ) has a huge amount of information about memory errors. Normally you wouldn’t expect memory errors, either correctable or uncorrectable, to occur very often. However, as a good administrator, you should periodically scan your systems for memory errors.
+
+Writing a simple script to read the file attributes of the memory errors for a system’s memory controllers is not difficult, and you can even store these in a simple database if you like. I also found a Nagios plugin that should allow you to check for memory errors, although I haven’t tested it.
+
+The plugin can be run as a simple script and gives you a bit of information, but I like a simple script that tells me whether I have any problems and where they are, so I modified the original script, which is really close to the original.
