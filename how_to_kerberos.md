@@ -26,7 +26,7 @@ Although Kerberos removes a common and severe security threat, it may be difficu
 
 * Migrating user passwords from a standard UNIX password database, such as /etc/passwd or /etc/shadow, to a Kerberos password database can be tedious, as there is no automated mechanism to perform this task. Refer to Question 2.23 in the online Kerberos FAQ:
 
-http://www.nrl.navy.mil/CCS/people/kenh/kerberos-faq.html
+  http://www.nrl.navy.mil/CCS/people/kenh/kerberos-faq.html
 
 * Kerberos has only partial compatibility with the Pluggable Authentication Modules (PAM) system used by most Red Hat Enterprise Linux servers. Refer to Section 42.6.4, “Kerberos and PAM” for more information about this issue.
 
