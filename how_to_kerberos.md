@@ -254,3 +254,14 @@ example.com = EXAMPLE.COM
 ```
 
 The above configuration specifies two mappings. The first mapping specifies that any system in the "example.com" DNS domain belongs to the EXAMPLE.COM realm. The second specifies that a system with the exact name "example.com" is also in the realm. (The distinction between a domain and a specific host is marked by the presence or lack of an initial ".".) The mapping can also be stored directly in DNS.
+
+###Setting Up Secondary KDCs
+
+For a number of reasons, you may choose to run multiple KDCs for a given realm. In this scenario, one KDC (the master KDC) keeps a writable copy of the realm database and runs kadmind (it is also your realm's admin server), and one or more KDCs (slave KDCs) keep read-only copies of the database and run kpropd.
+
+The master-slave propagation procedure entails the master KDC dumping its database to a temporary dump file and then transmitting that file to each of its slaves, which then overwrite their previously-received read-only copies of the database with the contents of the dump file.
+
+To set up a slave KDC, first ensure that the master KDC's krb5.conf and kdc.conf files are copied to the slave KDC.
+
+Start kadmin.local from a root shell on the master KDC and use its add_principal command to create a new entry for the master KDC's host service, and then use its ktadd command to simultaneously set a random key for the service and store the random key in the master's default keytab file. This key will be used by the kprop command to authenticate to the slave servers. You will only need to do this once, regardless of how many slave servers you install.
+
