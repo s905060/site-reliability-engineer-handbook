@@ -179,3 +179,10 @@ The kadmin utility communicates with the kadmind server over the network, and us
 
 ---
 
+ 6. Start Kerberos using the following commands:
+ ```
+ /sbin/service krb5kdc start
+ /sbin/service kadmin start
+ /sbin/service krb524 start
+ ```
+
