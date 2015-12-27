@@ -218,3 +218,17 @@ Setting up a Kerberos 5 client is less involved than setting up a server. At a m
  `ktadd -k /etc/krb5.keytab host/blah.example.com`
 
 4. To use other kerberized network services, they must first be started. Below is a list of some common kerberized services and instructions about enabling them:
+
+ * ssh — OpenSSH uses GSS-API to authenticate users to servers if the client's and server's configuration both have GSSAPIAuthentication enabled. If the client also has GSSAPIDelegateCredentials enabled, the user's credentials are made available on the remote system.
+
+ * rsh and rlogin — To use the kerberized versions of rsh and rlogin, enable klogin, eklogin, and kshell.
+
+ * Telnet — To use kerberized Telnet, krb5-telnet must be enabled.
+
+ * FTP — To provide FTP access, create and extract a key for the principal with a root of ftp. Be certain to set the instance to the fully qualified hostname of the FTP server, then enable gssftp.
+
+ * IMAP — To use a kerberized IMAP server, the cyrus-imap package uses Kerberos 5 if it also has the cyrus-sasl-gssapi package installed. The cyrus-sasl-gssapi package contains the Cyrus SASL plugins which support GSS-API authentication. Cyrus IMAP should function properly with Kerberos as long as the cyrus user is able to find the proper key in /etc/krb5.keytab, and the root for the principal is set to imap (created with kadmin).
+
+ * An alternative to cyrus-imap can be found in the dovecot package, which is also included in Red Hat Enterprise Linux. This package contains an IMAP server but does not, to date, support GSS-API and Kerberos.
+
+ * CVS — To use a kerberized CVS server, gserver uses a principal with a root of cvs and is otherwise identical to the CVS pserver.
