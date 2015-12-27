@@ -20,3 +20,5 @@ An SSL connection between a client and server is set up by a handshake, the goal
 * To satisfy the client that it is talking to the right server (and optionally visa versa)
 * For the parties to have agreed on a “cipher suite”, which includes which encryption algorithm they will use to exchange data
 * For the parties to have agreed on any necessary keys for this algorithm
+
+Once the connection is established, both parties can use the agreed algorithm and keys to securely send messages to each other. We will break the handshake up into 3 main phases - Hello, Certificate Exchange and Key Exchange.
