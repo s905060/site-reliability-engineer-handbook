@@ -194,3 +194,7 @@ login2$ more /sys/devices/system/edac/mc/mc0/ue_count
 login2$ more /sys/devices/system/edac/mc/mc0/ue_noinfo_count
 0
 ```
+
+Notice that I can’t read the reset_counters file because it is just a control file for resetting the memory error counters. However, also notice that it has been 27,759,752 seconds (7,711 hours or 321 days) since the counters were reset (basically, since the system was booted). Also notice that the memory controller is managing about 64GB of memory, with no correctable errors (CEs) or uncorrectable errors (UEs) on the system.
+
+Also notice that the system is using Sandy Bridge processors (mc_name ). Recall that with newer processors, the memory controller is in the processor. Consequently, the memory controller (mc) will be listed as a processor.
