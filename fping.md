@@ -43,3 +43,12 @@ do
   fi
 done
 ```
+
+Another good example is when you want to perform an action only on hosts that are currently reachable.
+```
+#!/usr/bin/perl
+$myHosts = ‘cat /etc/hosts.backup | fping -a‘;
+foreach $host (split(/\n/,$myHosts)) {
+        # take action or call other function
+}
+```
