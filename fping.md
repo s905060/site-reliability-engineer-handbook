@@ -24,3 +24,7 @@ I/O redirectors (stdin). For example read all host names from ~/.ping.conf file
 You can also netmask to ping the entire network i.e generate a target list from a supplied IP netmask. For example, ping the class C 192.168.1.x:
 
 `$ fping -g 192.168.1.0/24`
+
+or
+
+`$ fping -g 192.168.1.0 192.168.1.255`
