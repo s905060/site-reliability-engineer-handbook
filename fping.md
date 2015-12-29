@@ -28,3 +28,18 @@ You can also netmask to ping the entire network i.e generate a target list from 
 or
 
 `$ fping -g 192.168.1.0 192.168.1.255`
+
+Sample shell script to send email if host is down
+```
+#!/bin/bash
+HOSTS="router sun printer laptop sony-laptop xbox backup-server"
+DLIST=""
+for h in $HOSTS
+do
+  fping -u $h >& /dev/null
+  if [ $? -ne 0 ]; then
+          echo ${h} host is down send email
+          # mail -s "Host ${h} down" admin@you.com </dev/null
+  fi
+done
+```
