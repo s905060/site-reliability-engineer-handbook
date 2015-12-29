@@ -20,3 +20,7 @@ You can read list of targets (hosts / servers) from a file. The -f option can on
 I/O redirectors (stdin). For example read all host names from ~/.ping.conf file
 
 `$ fping < ~/.ping.conf`
+
+You can also netmask to ping the entire network i.e generate a target list from a supplied IP netmask. For example, ping the class C 192.168.1.x:
+
+`$ fping -g 192.168.1.0/24`
