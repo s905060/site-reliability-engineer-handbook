@@ -28,3 +28,6 @@ controlkey <%= @keys_controlkey %>
 An ERB template looks like a plain-text document interspersed with tags containing Ruby code. When evaluated, this tagged code can modify text in the template.
 
 Puppet passes data to templates via special objects and variables, which you can use in the tagged Ruby code to control the templates’ output.
+
+###Tags
+ERB has two tags for Ruby code, a tag for comments, and a way to escape tag delimiters.
