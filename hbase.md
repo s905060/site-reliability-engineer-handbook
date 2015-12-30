@@ -25,3 +25,7 @@
 ![](Tcd_column_families_Figure2.jpg)
 
 ![](Tcd_column_families_Figure3.jpg)
+
+![](hfile-keyvalue-structure.jpg)
+
+![](hfile-structure.jpg)
