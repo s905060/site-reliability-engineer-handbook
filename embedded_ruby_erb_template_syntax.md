@@ -178,3 +178,5 @@ end
 ###Iteration
 
 Ruby lets you iterate over arrays and hashes with the each method. This method takes a block of code, and executes it once for each element in the array or hash. In a template, un-tagged text is treated as part of the code that gets repeated. (It might help to think of literal text as an instruction, telling the evaluator to insert that text into the final output.)
+
+To write a block of code in Ruby, use either `do |arguments| ... end or {|arguments| ... }`. Note that this is different from Puppet’s lambdas — but they work similarly.
