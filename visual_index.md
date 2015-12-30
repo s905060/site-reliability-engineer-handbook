@@ -92,3 +92,8 @@ A defined type, which makes a new resource type available. Note that the name of
       docroot => '/var/www-testhost',
     }
 ```
+
+Declaring a defined resource (or “instance”) of the type defined above.
+```
+    Apache::Vhost['homepages']
+```
