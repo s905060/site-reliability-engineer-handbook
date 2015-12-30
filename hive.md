@@ -16,3 +16,8 @@
 
 ![](hbase-structure.jpg)
 
+![](p1.png)
+
+![](Tcd_column_families_Figure2.jpg)
+
+![](Tcd_column_families_Figure3.jpg)
