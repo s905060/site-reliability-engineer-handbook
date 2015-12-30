@@ -59,3 +59,6 @@ The keys of the hash must be valid local variable names (minus the `$`). Inside 
 * If a template declares any mandatory parameters, you must set values for them with a parameter hash.
 * If a template declares any optional parameters, you can choose to provide values or let them use their defaults.
 * If a template declares no parameters, you can pass any number of parameters with any names; otherwise, you can only choose from the parameters requested by the template.
+
+###Extra ERB Files
+The template function can take any number of additional template files, and will concatenate their outputs together to produce the final string.
