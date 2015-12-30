@@ -113,3 +113,8 @@ A node definition.
       include common
     }
 ```
+
+A regular expression node definition.
+```
+    import nodes/*.pp
+```
