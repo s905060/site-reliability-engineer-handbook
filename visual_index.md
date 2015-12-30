@@ -160,3 +160,12 @@ An if statement using an in expression
       default:            { include role::generic }
     }
 ```
+
+A case statement.
+```
+    $rootgroup = $osfamily ? {
+        'Solaris'          => 'wheel',
+        /(Darwin|FreeBSD)/ => 'wheel',
+        default            => 'root',
+    }
+```
