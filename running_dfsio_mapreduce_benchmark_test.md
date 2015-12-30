@@ -199,3 +199,7 @@ AVG IO Rate = 1481181.8 / 1000 / 64 = 23.143465625
 Standard Deviation = square root of ( absolute value(sqrate / 1000 / tasks - AvgIoRate * AvgIoRate))
 Standard Deviation = square root of ( absolute value(34433252 / 1000 / 64 - 23.143465625 * 23.143465625)) =  1.549051762996757
 ```
+
+##Why is 64 file throughput write test better then the 4 file test?
+
+64 file test has a write throughput of 23MB/s and the 4 file had a write throughput of about 161MB/s.  64 file test yielded better results for a few reasons.
