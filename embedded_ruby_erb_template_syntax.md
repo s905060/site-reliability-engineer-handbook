@@ -84,4 +84,5 @@ Non-printing code doesn’t have to resolve to a value or be a complete statemen
 <% do |server| %>server <%= server %>
 <% end -%>
 ```
+
 You must keep `do |server|` inside the first tag, because you can’t insert an arbitrary statement between a method call and its required block.
