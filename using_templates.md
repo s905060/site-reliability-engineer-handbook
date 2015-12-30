@@ -24,7 +24,7 @@ The actual template can be either a separate file or a string value. You’ll us
 
 ###With a Template File: template and epp
 
-You can put template files in the templates directory of a module. EPP files should have the .epp extension, and ERB files should have the .erb extension.
+You can put template files in the templates directory of a module. EPP files should have the `.epp` extension, and ERB files should have the `.erb` extension.
 
 To use a template file, evaluate it with the template (ERB) or epp function as follows:
 
