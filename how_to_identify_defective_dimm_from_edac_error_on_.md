@@ -34,3 +34,16 @@ The structure of the message is:
  DIMM label                              Not given
  Module name                             amd64_edac
 ```
+
+###More explain about info given
+
+EDAC is composed of a "core" module (edac_core.ko) and several Memory Controller (MC) driver modules. On a given system, the CORE is loaded and one MC driver will be loaded. Both the CORE and the MC driver (or edac_device driver) have individual versions that reflect current release level of their respective modules. Thus, to "report" on what version a system is running, one must report both the CORE's and the MC driver's versions.
+
+The example server I used in this article has these two edac module loaded:
+
+```
+# lsmod | grep -i edac
+amd64_edac_mod         21913  0 
+edac_core              46645  4 amd64_edac_mod
+edac_mce_amd           15615  1 amd64_edac_mod
+```
