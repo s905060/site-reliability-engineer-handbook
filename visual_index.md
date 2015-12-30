@@ -34,3 +34,8 @@ Two resources using the before and subscribe relationship metaparameters (which 
 ```
     Package['ntp'] -> File['ntp.conf'] ~> Service['ntpd']
 ```
+
+ Chaining arrows forming relationships between three resources, using resource references.
+```
+    $package_list = ['ntp', 'apache2', 'vim-nox', 'wget']
+```
