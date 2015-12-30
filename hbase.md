@@ -2,6 +2,10 @@
 
 ![](adding-value-to-hbase-with-ibm-infosphere-biginsights-and-bigsql-7-638.jpg)
 
+![](hbase2.png)
+
+![](HBaseArchitecture-Blog-Fig5.png)
+
 ![](o_hbase_read_write_path2_small.png)
 
 ### Housekeeping
