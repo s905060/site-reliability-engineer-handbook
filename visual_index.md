@@ -50,3 +50,13 @@ A variable being assigned a hash value.
     ...
     content => "Managed by puppet master version ${serverversion}"
 ```
+
+A master-provided built-in variable being interpolated into a double-quoted string (with optional curly braces).
+```
+    class ntp {
+      package {'ntp':
+        ...
+      }
+      ...
+    }
+```
