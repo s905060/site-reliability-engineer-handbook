@@ -17,3 +17,20 @@ kernel: [Hardware Error]: CPU:6 (10:8:0) MC4_STATUS[-|CE|MiscV|-|AddrV|CECC]: 0x
 kernel: [Hardware Error]: MC4_ADDR: 0x0000000f075b2410
 kernel: [Hardware Error]: cache level: L3/GEN, mem/io: MEM, mem-tx: RD, part-proc: SRC (no timeout)
 ```
+
+You may get confused by the message above, here is a quick way to show you what are they:
+
+The structure of the message is:
+
+```
+ the memory controller                   (MC1)
+        Error type                              (CE)
+	memory page				(0xf075b2)
+        offset in the page                      (0x410)
+        The byte granularity                    (grain 0)
+        The error syndrome                      (0xb741)
+        memory row                              (row 6) 
+        memory channel                          (channel 0) 
+        DIMM label                              Not given
+        Module name                             amd64_edac
+```
