@@ -217,3 +217,7 @@ You can use Puppet functions inside templates, but their use is slightly differe
 * All functions are methods on the scope object.
 * You must prepend “function_” to the beginning of the function name.
 * The arguments of the function must be provided as an array, even if there is only one argument.
+
+For example, to evaluate one template inside another:
+
+`<%= scope.function_template(["my_module/template2.erb"]) %>`
