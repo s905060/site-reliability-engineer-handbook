@@ -97,3 +97,12 @@ Declaring a defined resource (or “instance”) of the type defined above.
 ```
     Apache::Vhost['homepages']
 ```
+
+A resource reference to the defined resource declared above. Note that every namespace segment must be capitalized.
+```
+    node 'www1.example.com' {
+      include common
+      include apache
+      include squid
+    }
+```
