@@ -42,3 +42,11 @@ ERB has two tags for Ruby code, a tag for comments, and a way to escape tag deli
 * `<%% or %%>` — A literal `<%` or `%>`, respectively.
 
 Text outside a tag becomes literal text, but it is subject to any tagged Ruby code surrounding it. For example, text surrounded by a tagged if statement only appears in the output if the condition is true.
+
+###Expression-Printing Tags
+
+`<%= @fqdn %>`
+
+An expression-printing tag inserts values into the output. It starts with an opening tag delimiter and equals sign (`<%=`) and ends with a closing tag delimiter (`%>`). It must contain a snippet of Ruby code that resolves to a value; if the value isn’t a string, it will be automatically converted to a string using its to_s method.
+
+For example, to insert the value of the `$fqdn` and `$hostname` facts in an Apache config file, you could do something like:
