@@ -103,3 +103,7 @@ A comment tag’s contents do not appear in the template’s output. It starts w
 You can trim line breaks after comment tags by adding a hyphen to the closing tag delimiter.
 
 `-%>` — If the tag ends a line, trim the following line break.
+
+###Literal Tag Delimiters
+
+If you need the template’s final output to contain a literal `<%` or `%>`, you can escape them as `<%%` or `%%>`.
