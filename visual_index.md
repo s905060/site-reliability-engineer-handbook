@@ -136,3 +136,10 @@ Two comments.
       include ntp
     }
 ```
+
+An if statement, whose conditions are expressions that use agent-provided facts.
+```
+    if $hostname =~ /^www(\d+)\./ {
+      notify { "Welcome web server #$1": }
+    }
+```
