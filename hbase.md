@@ -1,5 +1,7 @@
 # HBase
 
+![](hbase-structure.jpg)
+
 ![](adding-value-to-hbase-with-ibm-infosphere-biginsights-and-bigsql-7-638.jpg)
 
 ![](hbase2.png)
