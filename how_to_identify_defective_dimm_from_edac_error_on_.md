@@ -151,5 +151,6 @@ What it tells us is the physical DIMM:
 In the second memory controller(mc1).
 Fourth pair of DIMM (csrow6 and csrow7)
 ch0 tells it's the first DIMM in the DIMM pair.
-Use the info above, you can easily find it according the hardware info of the server(usually you can find the motherboard articheture map)
 ```
+
+Use the info above, you can easily find it according the hardware info of the server(usually you can find the motherboard articheture map)
