@@ -27,4 +27,18 @@ The actual template can be either a separate file or a string value. You’ll us
 You can put template files in the templates directory of a module. EPP files should have the `.epp` extension, and ERB files should have the `.erb` extension.
 
 To use a template file, evaluate it with the template (ERB) or epp function as follows:
+```
+# epp(<FILE REFERENCE>, [<PARAMETER HASH>])
+file { '/etc/ntp.conf':
+  ensure  => file,
+  content => epp('ntp/ntp.conf.epp', {'service_name' => 'xntpd', 'iburst_enable' => true}),
+  # Loads /etc/puppetlabs/code/environments/production/modules/ntp/templates/ntp.conf.epp
+}
 
+# template(<FILE REFERENCE>, [<ADDITIONAL FILES>, ...])
+file { '/etc/ntp.conf':
+  ensure  => file,
+  content => template('ntp/ntp.conf.erb'),
+  # Loads /etc/puppetlabs/code/environments/production/modules/ntp/templates/ntp.conf.erb
+}
+```
