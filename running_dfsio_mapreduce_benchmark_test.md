@@ -15,3 +15,6 @@ DFSIO is part of the hadoop distribution and can be found in "hadoop-mapreduce-c
 |-fileSize	|Genterate a file for each map task ( -nrFiles ) with this size. Example -nrFiles 10 -fileSize 250GB would generate 2500GB of data in HDFS cluster
 |-resFile	|Path to local file system ( not hdfs ) where TestDFSIO will store the resutls for the test
 |-bufferSize	|Buffer size in bytes for each map tasks when reading and writing IO. Defaults to 1000000bytes ( about 1MB )
+
+###Get usage from cli
+
