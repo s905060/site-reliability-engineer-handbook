@@ -176,5 +176,6 @@ A selector statement being used to set the value of the $rootgroup variable.
 ```
 
 A resource collector, sometimes called the “spaceship operator.”
-
+```
     Concat::Fragment <<| tag == "bacula-storage-dir-${bacula_director}" |>>
+```
