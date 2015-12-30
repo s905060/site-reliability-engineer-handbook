@@ -147,3 +147,11 @@ validate_erb() {
 
 You can then use `validate_erb` example.erb to validate an ERB template.
 
+###When to Use (and Not Use) Templates
+Templates are more powerful than normal strings, and less powerful than modeling individual settings as resources.
+
+Strings in the Puppet language already allow you to interpolate variables and expressions into text. So if you’re managing a short and simple config file, you can often use a heredoc and interpolate a few variables, or even something like ${ $my_array.join(', ') }.
+
+However, if you’re doing complex transformations (especially iterating over collections) or working with very large config files, you might need the extra capabilities of a template.
+
+Finally: Sometimes you end up in a situation where several different modules need to manage parts of the same config file, which is incredibly difficult to coordinate with either templates or interpolated strings. For shared configuration like this, you should try to model each setting in that file as an individual resource, with either a custom resource type or an Augeas, concat, or file_line resource. (This approach is similar to how core resource types like ssh_authorized_key and mount work.)
