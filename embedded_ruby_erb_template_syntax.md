@@ -211,3 +211,5 @@ These will become the equivalent Ruby objects when you access them from an ERB t
 Also, note that Puppet’s special undef value becomes Ruby’s special nil value in ERB templates.
 
 
+###Calling Puppet Functions from Templates
+You can use Puppet functions inside templates, but their use is slightly different from their use in manifests:
