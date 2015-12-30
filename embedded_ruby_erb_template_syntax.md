@@ -195,3 +195,8 @@ Some stuff with two
 ```
 
 This example also trims line breaks for the non-printing tags, so they won’t appear as blank lines in the output.
+
+
+##Manipulating Data
+
+Usually, your templates will use data from Puppet variables. These values will almost always be strings, numbers, arrays, and hashes.
