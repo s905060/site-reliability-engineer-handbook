@@ -70,3 +70,8 @@ Non-printing tags that contain iterative or conditional expressions can affect t
 
 For example, to insert text only if a certain variable was set, you could do something like:
 
+```
+<% if @broadcastclient == true -%>
+    broadcastclient
+    <% end -%>
+```
