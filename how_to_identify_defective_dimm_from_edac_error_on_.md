@@ -24,13 +24,13 @@ The structure of the message is:
 
 ```
  the memory controller                   (MC1)
-        Error type                              (CE)
-	memory page				(0xf075b2)
-        offset in the page                      (0x410)
-        The byte granularity                    (grain 0)
-        The error syndrome                      (0xb741)
-        memory row                              (row 6) 
-        memory channel                          (channel 0) 
-        DIMM label                              Not given
-        Module name                             amd64_edac
+ Error type                              (CE)
+ memory page				             (0xf075b2)
+ offset in the page                      (0x410)
+ The byte granularity                    (grain 0)
+ The error syndrome                      (0xb741)
+ memory row                              (row 6) 
+ memory channel                          (channel 0) 
+ DIMM label                              Not given
+ Module name                             amd64_edac
 ```
