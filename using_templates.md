@@ -42,3 +42,6 @@ file { '/etc/ntp.conf':
   # Loads /etc/puppetlabs/code/environments/production/modules/ntp/templates/ntp.conf.erb
 }
 ```
+
+###Referencing Files
+The first argument to these functions should be a string like `'<MODULE>/<FILE>'`, which will load `<FILE>` from `<MODULE>`’s templates directory.
