@@ -18,3 +18,36 @@ DFSIO is part of the hadoop distribution and can be found in "hadoop-mapreduce-c
 
 ###Get usage from cli
 
+```
+[gpadmin@hdm3 ~]$ hadoop jar /usr/lib/gphd/hadoop-mapreduce/hadoop-mapreduce-client-jobclient-2.0.2-alpha-gphd-2.0.1.0-tests.jar TestDFSIO -help
+13/08/21 11:27:41 INFO fs.TestDFSIO: TestDFSIO.0.0.6
+Illegal argument: -help
+Usage: TestDFSIO [genericOptions] -read | -write | -append | -clean [-nrFiles N] [-fileSize Size[B|KB|MB|GB|TB]] [-resFile resultFileName] [-bufferSize Bytes] [-rootDir]
+ 
+ 
+Other Available benchmarck tools:
+[gpadmin@hdm3 ~]$ hadoop jar /usr/lib/gphd/hadoop-mapreduce/hadoop-mapreduce-client-jobclient-*-tests.jar
+An example program must be given as the first argument.
+Valid program names are:
+  DFSCIOTest: Distributed i/o benchmark of libhdfs.
+  DistributedFSCheck: Distributed checkup of the file system consistency.
+  JHLogAnalyzer: Job History Log analyzer.
+  MRReliabilityTest: A program that tests the reliability of the MR framework by injecting faults/failures
+  SliveTest: HDFS Stress Test and Live Data Verification.
+  TestDFSIO: Distributed i/o benchmark.
+  fail: a job that always fails
+  filebench: Benchmark SequenceFile(Input|Output)Format (block,record compressed and uncompressed), Text(Input|Output)Format (compressed and uncompressed)
+  loadgen: Generic map/reduce load generator
+  mapredtest: A map/reduce test check.
+  minicluster: Single process HDFS and MR cluster.
+  mrbench: A map/reduce benchmark that can create many small jobs
+  nnbench: A benchmark that stresses the namenode.
+  sleep: A job that sleeps at each map and reduce task.
+  testbigmapoutput: A map/reduce program that works on a very big non-splittable file and does identity map/reduce
+  testfilesystem: A test for FileSystem read/write.
+  testmapredsort: A map/reduce program that validates the map-reduce framework's sort.
+  testsequencefile: A test for flat files of binary key value pairs.
+  testsequencefileinputformat: A test for sequence file input format.
+  testtextinputformat: A test for text input format.
+  threadedmapbench: A map/reduce benchmark that compares the performance of maps with multiple spills over maps with 1 spill
+```
