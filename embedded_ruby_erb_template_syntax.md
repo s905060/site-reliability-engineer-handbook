@@ -165,3 +165,12 @@ Ruby’s `if ... end` statement lets you write conditional text. You’ll want t
 ```
 <% if @broadcast != "NONE" %>broadcast <%= @broadcast %><% end %>
 ```
+
+The general format of an if statement is:
+```
+if <CONDITION>
+  ... code ...
+elsif <CONDITION>
+  ... other code ...
+end
+```
