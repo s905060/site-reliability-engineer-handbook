@@ -135,3 +135,9 @@ This is consistent with the error what we saw in the syslog, same information ca
 ce_count     csrow0  csrow2  csrow4  csrow6  device   reset_counters    seconds_since_reset  ue_count
 ce_noinfo_count  csrow1  csrow3  csrow5  csrow7  mc_name  sdram_scrub_rate  size_mb         ue_noinfo_count
 ```
+
+###Info Analysis
+
+So, according to above info we get, we can tell the server has two memory controllers, 8 pairs of dual ranked memory modules.
+
+As we know the memory error located at
