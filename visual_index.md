@@ -29,3 +29,8 @@ A resource declaration.
       subscribe => File['ntp.conf'],
     }
 ```
+
+Two resources using the before and subscribe relationship metaparameters (which accept resource references).
+```
+    Package['ntp'] -> File['ntp.conf'] ~> Service['ntpd']
+```
