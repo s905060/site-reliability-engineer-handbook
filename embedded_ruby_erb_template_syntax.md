@@ -150,3 +150,8 @@ Puppet’s data types are converted to Ruby classes as follows:
 |Resource reference	|Puppet::Pops::Types::PResourceType, or Puppet::Pops::Types::PHostClassType
 |Lambda (code block)	|Puppet::Pops::Evaluator::Closure
 |Data type (Type)	|A type class under Puppet::Pops::Types, e.g. Puppet::Pops::Types::PIntegerType
+
+###Testing for Undefined Variables
+
+If a Puppet variable was never defined, its value is undef, which means its value in a template will be nil.
+
