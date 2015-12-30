@@ -118,3 +118,9 @@ A regular expression node definition.
 ```
     import nodes/*.pp
 ```
+
+An import statement. Should be avoided in all but a few circumstances.
+```
+    # comment
+    /* comment */
+```
