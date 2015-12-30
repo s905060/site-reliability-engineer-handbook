@@ -203,3 +203,9 @@ Standard Deviation = square root of ( absolute value(34433252 / 1000 / 64 - 23.1
 ##Why is 64 file throughput write test better then the 4 file test?
 
 64 file test has a write throughput of 23MB/s and the 4 file had a write throughput of about 161MB/s.  64 file test yielded better results for a few reasons.
+
+1. The Test exec time sec is 50% better during the 64 file test.  This the total time it takes for the hadoop jar command to execute.
+
+2. In these tests there is always one reducer that runs after the all map tasks have completed.  The reducer is responsible for generating the result set in /benchmarks/TestDFSIO/io_write/part-00000 file.  It basically sums up all of these values "rate,sqrate,size,etc.." from each of the map tasks.  So the Throughput, IO rate, STD deviation, results are based on individual map tasks and not the overall throughput of the cluster.  We know that nrFiles is equal to number of map tasks and this specific cluster configuration will allow for up to 79 simultaneous Map tasks to execute.  In the 64 file test there will be 16 map tasks running simultaneously on each nodemanager node versus 1 map tasks on each node in the 4 file test.    The 4 file test yields a throughput results of 161MB/s on each nodmanager node.  The 64 file test yields ( 16 * 23MB/s ) 368MB/s per nodemanager node.  Clearly the 64 file test proves the mapreduce/HDFS performance optimal and the 4 file test is less then optimal.  It also shows how mapreduce IO performance can vary depending on the data size, number of map/reduce tasks, and available cluster resources. 
+
+3. One last key point is the STD deviation.  If you see the STD deviation being considerably high ( i don't have a use case ) then we can assume one of the cluster nodes is exhibiting performance related issues.  Could be hardware or software related. 
