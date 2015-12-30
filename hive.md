@@ -5,3 +5,14 @@
 ![](HiveArchitecture.JPG)
 
 ![](20130730112101750)
+
+![](big-data-big-sql-and-hbase-6-638.jpg)
+
+![](Cassandra_column_families_figure01.jpg)
+
+![](hbase_tables.png)
+
+![](HBase-column-families.png)
+
+![](hbase-structure.jpg)
+
