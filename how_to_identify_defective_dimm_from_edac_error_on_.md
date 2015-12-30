@@ -128,3 +128,10 @@ mc1: csrow7: 0 Uncorrected Errors
 mc1: csrow7: ch0: 0 Corrected Errors
 mc1: csrow7: ch1: 0 Corrected Errors
 ```
+
+This is consistent with the error what we saw in the syslog, same information can also be found in /sys/devices/system/edac/mc/mc[0|1]
+```
+# ls /sys/devices/system/edac/mc/mc1
+ce_count     csrow0  csrow2  csrow4  csrow6  device   reset_counters    seconds_since_reset  ue_count
+ce_noinfo_count  csrow1  csrow3  csrow5  csrow7  mc_name  sdram_scrub_rate  size_mb         ue_noinfo_count
+```
