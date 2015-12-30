@@ -228,3 +228,6 @@ To log a warning using Puppet’s own logging system, so that it will appear in 
 ```
 <%= scope.function_warning(["Template was missing some data; this config file may be malforme
 ```
+
+###Example Template
+This example template is taken from the puppetlabs/ntp module.
