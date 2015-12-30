@@ -144,3 +144,7 @@ l:size	1073741824000
 l:tasks	4
 l:time	6331377
 ```
+
+###Understanding the results
+
+Code from TestDFSIO.java
