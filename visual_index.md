@@ -196,3 +196,10 @@ A resource default for resources of the exec type.
       environment => 'RUBYLIB=/usr/lib/ruby/site_ruby/1.8/',
     }
 ```
+
+A resource override, which will only work in an inherited class.
+```
+    Exec <| title == 'update_migrations' |> {
+      environment => 'RUBYLIB=/usr/lib/ruby/site_ruby/1.8/',
+    }
+```
