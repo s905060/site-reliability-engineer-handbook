@@ -92,3 +92,9 @@ You can trim whitespace surrounding a non-printing tag by adding hyphens (-) to 
 
 * `<%-` — If the tag is indented, trim the indentation.
 * `-%>` — If the tag ends a line, trim the following line break.
+
+###Comment Tags
+
+`<%# This is a comment. %>`
+
+A comment tag’s contents do not appear in the template’s output. It starts with an opening tag delimiter and a hash sign (`<%#`) and ends with a closing tag delimiter (`%>`).
