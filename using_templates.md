@@ -67,3 +67,20 @@ The `template` function can take any number of additional template files, and wi
 
 If you have a string value that contains template content, you can evaluate it with the `inline_template (ERB)` or `inline_epp` functions as follows:
 
+```
+$ntp_conf_template = @(END)
+...template content goes here...
+END
+
+# inline_epp(<TEMPLATE STRING>, [<PARAMETER HASH>])
+file { '/etc/ntp.conf':
+  ensure  => file,
+  content => inline_epp($ntp_conf_template, {'service_name' => 'xntpd', 'iburst_enable' => true}),
+}
+
+# inline_template(<TEMPLATE STRING>, [<ADDITIONAL STRINGS>, ...])
+file { '/etc/ntp.conf':
+  ensure  => file,
+  content => inline_template($ntp_conf_template),
+}
+```
