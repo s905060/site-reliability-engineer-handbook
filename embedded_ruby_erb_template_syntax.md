@@ -32,11 +32,11 @@ Puppet passes data to templates via special objects and variables, which you can
 ###Tags
 ERB has two tags for Ruby code, a tag for comments, and a way to escape tag delimiters.
 
-* <%= EXPRESSION %> — Inserts the value of an expression.
+* `<%= EXPRESSION %>` — Inserts the value of an expression.
  * With -%> — Trims the following line break.
-* <% CODE %> — Executes code, but does not insert a value.
+* `<% CODE %>` — Executes code, but does not insert a value.
  * With <%- — Trims the preceding indentation.
  * With -%> — Trims the following line break.
-* <%# COMMENT %> — Removed from the final output.
+* `<%# COMMENT %>` — Removed from the final output.
  * With -%> — Trims the following line break.
-* <%% or %%> — A literal <% or %>, respectively.
+* `<%% or %%>` — A literal <% or %>, respectively.
