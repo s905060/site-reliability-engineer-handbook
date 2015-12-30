@@ -220,4 +220,6 @@ You can use Puppet functions inside templates, but their use is slightly differe
 
 For example, to evaluate one template inside another:
 
-```<%= scope.function_template(["my_module/template2.erb"]) %>```
+```
+<%= scope.function_template(["my_module/template2.erb"]) %>
+```
