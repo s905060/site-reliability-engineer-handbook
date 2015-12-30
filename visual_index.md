@@ -189,3 +189,10 @@ An exported resource collector, which works with exported resources
       timeout     => 180,
     }
 ```
+
+A resource default for resources of the exec type.
+```
+    Exec['update_migrations'] {
+      environment => 'RUBYLIB=/usr/lib/ruby/site_ruby/1.8/',
+    }
+```
