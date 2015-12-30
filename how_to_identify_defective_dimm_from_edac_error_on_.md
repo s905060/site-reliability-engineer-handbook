@@ -63,3 +63,11 @@ See more detail about EDAC in EDAC error detection and report
 Use edac-util tool to identify
 
 See  more examples about edac-util
+
+###Check MC info and status
+```
+# edac-util -vs
+edac-util: EDAC drivers are loaded. 2 MCs detected:
+  mc0:F10h
+  mc1:F10h
+```
