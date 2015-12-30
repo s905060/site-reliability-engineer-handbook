@@ -188,3 +188,8 @@ Some stuff with <%= val %>
 ```
 
 If `$values` was set to `['one', 'two']`, this example would produce:
+
+```
+Some stuff with one
+Some stuff with two
+```
