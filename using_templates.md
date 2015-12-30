@@ -117,3 +117,16 @@ You can also pipe EPP code directly to the validator:
 `cat example.epp | puppet epp validate`
 
 The command is silent on a successful validation. It reports and halts on the first error it encounters; to modify this behavior, check the command’s man page.
+
+###EPP Rendering
+
+`puppet epp render <TEMPLATE NAME>`
+
+You can render EPP from the command line with puppet epp render. If Puppet can evaluate the template, it outputs the result.
+
+If your template relies on specific parameters or values to function, you can simulate those values by passing a hash to the --values option:
+
+`puppet epp render example.epp --values '{x => 10, y => 20}'`
+
+You can also render inline EPP by using the -e flag or piping EPP code to puppet epp render, and even simulate facts using YAML. For details, see the command’s man page.
+
