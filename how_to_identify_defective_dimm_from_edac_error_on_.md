@@ -154,3 +154,7 @@ ch0 tells it's the first DIMM in the DIMM pair.
 ```
 
 Use the info above, you can easily find it according the hardware info of the server(usually you can find the motherboard articheture map)
+
+###Another way of locating the defective DIMM(May not work on some systems )
+
+Use dmidecode to show each memory module's address, see more dmidecode examples
