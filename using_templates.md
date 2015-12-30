@@ -50,3 +50,8 @@ The first argument to these functions should be a string like `'<MODULE>/<FILE>'
 |--|--|
 |ntp/ntp.conf.epp	|<MODULES DIRECTORY>/ntp/templates/ntp.conf.epp
 |activemq/amq/activemq.xml.erb	|<MODULES DIRECTORY>/activemq/templates/amq/activemq.xml.erb
+
+###EPP Parameters
+EPP templates can declare parameters, and you can provide values for them by passing a parameter hash to the epp function.
+
+The keys of the hash must be valid local variable names (minus the `$`). Inside the template, Puppet will create variables with those names and assign their values from the hash. (With a parameter hash of `{'service_name' => 'xntpd', 'iburst_enable' => true}`, an EPP template would receive variables called `$service_name` and `$iburst_enable`.)
