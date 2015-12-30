@@ -137,4 +137,4 @@ You can also render inline EPP by using the -e flag or piping EPP code to puppet
 
 You can use Ruby to check the syntax of ERB code by piping output from the erb command into ruby. The -P switch ignores lines that start with ‘%’, the -x switch outputs the template’s Ruby script, and the -T '-' sets the trim mode to be consistent with Puppet’s behavior. This output gets piped into Ruby’s syntax checker (-c).
 
-If you need to validate many templates quickly, you can implement this command as a shell function in your shell’s login script, such as .bashrc, .zshrc, or .profile:
+If you need to validate many templates quickly, you can implement this command as a shell function in your shell’s login script, such as `.bashrc`, `.zshrc`, or `.profile`:
