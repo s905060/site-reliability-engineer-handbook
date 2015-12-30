@@ -168,3 +168,34 @@ Code from TestDFSIO.java
 ![](image2013-8-21 12-50-8.png)
 
 ###Working out the details for 64 files 1TB job
+```
+First have to collect the RAW mapreudce results:
+####################################################################
+[gpadmin@hdm3 ~]$ hdfs dfs -cat /benchmarks/TestDFSIO/io_write/part*
+f:rate	1481181.8
+f:sqrate	3.4433252E7
+l:size	1099511627776
+l:tasks	64
+l:time	45497635
+ 
+The actual results from the test
+####################################################################
+13/08/21 10:56:45 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+13/08/21 10:56:45 INFO fs.TestDFSIO:            Date & time: Wed Aug 21 10:56:45 PDT 2013
+13/08/21 10:56:45 INFO fs.TestDFSIO:        Number of files: 64
+13/08/21 10:56:45 INFO fs.TestDFSIO: Total MBytes processed: 1048576.0
+13/08/21 10:56:45 INFO fs.TestDFSIO:      Throughput mb/sec: 23.046824301966463
+13/08/21 10:56:45 INFO fs.TestDFSIO: Average IO rate mb/sec: 23.143465042114258
+13/08/21 10:56:45 INFO fs.TestDFSIO:  IO rate std deviation: 1.5490700854356283
+13/08/21 10:56:45 INFO fs.TestDFSIO:     Test exec time sec: 796.676
+
+here is how the results are calculated
+###################################################################
+Throughput = size * 1000 / time * 1048576
+Throughput = 1099511627776 * 1000 / 45497635 * 1048576
+Throughput = 1099511627776000 / 47707728117760 = 23.04682430196646
+AVG IO Rate = rate / 1000 / tasks
+AVG IO Rate = 1481181.8 / 1000 / 64 = 23.143465625
+Standard Deviation = square root of ( absolute value(sqrate / 1000 / tasks - AvgIoRate * AvgIoRate))
+Standard Deviation = square root of ( absolute value(34433252 / 1000 / 64 - 23.143465625 * 23.143465625)) =  1.549051762996757
+```
