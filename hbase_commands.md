@@ -36,6 +36,7 @@ delete … to mark a cell value as deleted. Note: deletes must match the
 Example delete 't1', 'row-key-1', 'cf1:col2'
 
 ### Query
+```
 count … to count the number of
  rows in a table. Note: this
  operation may take a long
@@ -70,9 +71,10 @@ scan … to scan a table. Scanner
 Examples
  See the next page, in the
  walk-through example
- 
+```
+
 ### Walk-through Example
- 
+```
  $ hbase shell
 hbase> create 'orders', 'client', 'product'
 
@@ -115,6 +117,7 @@ hbase> list
 hbase> exit
 Note: This walk-through example creates a table orders, adds some data (via put) and the retrieves the data using
 get and scan. Finally, the table is removed again, using disable and drop.
+```
 
 ### Other Useful Stuff
 
