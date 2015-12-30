@@ -54,3 +54,8 @@ For example, to insert the value of the `$fqdn` and `$hostname` facts in an Apac
 ServerName <%= @fqdn %>
 ServerAlias <%= @hostname %>
 ```
+
+###Space Trimming
+You can trim line breaks after expression-printing tags by adding a hyphen to the closing tag delimiter.
+
+`-%>` — If the tag ends a line, trim the following line break.
