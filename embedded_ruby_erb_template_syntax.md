@@ -131,3 +131,8 @@ Puppet also passes templates an object called scope, which can access all variab
 
 
 There is also another way to use the `scope` object: you can call its `lookupvar` method and pass the variable’s name as its argument, like `scope.lookupvar('ntp::tinker')`. This is exactly equivalent to the above, but slightly less convenient. It predates the hash-style indexing, which was added in Puppet 3.0.
+
+
+###Puppet Data Types in Ruby
+
+Puppet’s data types are converted to Ruby classes as follows:
