@@ -88,3 +88,6 @@ file { '/etc/ntp.conf':
 In older versions of Puppet, inline_template was mostly used to get around limitations — tiny Ruby fragments were useful for transforming and manipulating data before Puppet had iteration functions like map or puppetlabs/stdlib functions like chomp and keys.
 
 In modern versions of Puppet, inline templates are usable in some of the same situations template files are. Since the heredoc syntax makes it easy to write large and complicated strings in a manifest, you can use inline_template and inline_epp to reduce the number of files needed for a simple module that manages a small config file.
+
+###EPP Parameters
+EPP templates can declare parameters, and you can provide values for them by passing a parameter hash to the epp function.
