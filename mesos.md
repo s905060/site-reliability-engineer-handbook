@@ -2,7 +2,7 @@
 
 ![](architecture3.jpg)
 
-![](download.jpeg)
+![](containers-devops-apache-mesos-and-cloud-8-638.jpg)
 
 ![](mesos_architecture.png)
 
