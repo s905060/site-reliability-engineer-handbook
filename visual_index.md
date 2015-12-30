@@ -84,3 +84,11 @@ A class definition, which makes a class avaliable for later use.
       }
     }
 ```
+
+A defined type, which makes a new resource type available. Note that the name of the type has two namespace segments.
+```
+    apache::vhost {'homepages':
+      port    => 8081,
+      docroot => '/var/www-testhost',
+    }
+```
