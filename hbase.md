@@ -29,3 +29,5 @@
 ![](hfile-keyvalue-structure.jpg)
 
 ![](hfile-structure.jpg)
+
+![](hfile-data-storeage.jpg)
