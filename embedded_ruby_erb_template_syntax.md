@@ -118,3 +118,9 @@ There are two ways to access variables in an ERB template:
 * `@variable`
 
 * ```scope['variable'] (and its older equivalent, scope.lookupvar('variable')) ```
+
+###@variable
+
+All variables in the current scope (including global variables) are passed to templates as Ruby instance variables, which begin with “at” signs (@). If you can access a variable by its short name in the surrounding manifest, you can access it in the template by replacing its $ sign with an @. So $os becomes @os, $trusted becomes @trusted, etc.
+
+This is the most legible way to access variables, but it doesn’t support variables from other scopes. For that, you need to use the scope object.
