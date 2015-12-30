@@ -203,3 +203,14 @@ A resource override, which will only work in an inherited class.
       environment => 'RUBYLIB=/usr/lib/ruby/site_ruby/1.8/',
     }
 ```
+
+A resource override using a collector, which will work anywhere. Dangerous, but very useful in rare cases.
+```
+    @user {'deploy':
+      uid     => 2004,
+      comment => 'Deployment User',
+      group   => www-data,
+      groups  => ["enterprise"],
+      tag     => [deploy, web],
+    }
+```
