@@ -67,3 +67,20 @@ A class definition, which makes a class avaliable for later use.
     require ntp
     class {'ntp':}
 ```
+
+ Declaring a class in three different ways: with the include function, with the require function, and with the resource-like syntax. Declaring a class causes the resources in it to be managed.
+```
+    define apache::vhost ($port, $docroot, $servername = $title, $vhost_name = '*') {
+      include apache
+      include apache::params
+      $vhost_dir = $apache::params::vhost_dir
+      file { "${vhost_dir}/${servername}.conf":
+          content => template('apache/vhost-default.conf.erb'),
+          owner   => 'www',
+          group   => 'www',
+          mode    => '644',
+          require => Package['httpd'],
+          notify  => Service['httpd'],
+      }
+    }
+```
