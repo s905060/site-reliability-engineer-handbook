@@ -144,3 +144,6 @@ validate_erb() {
   erb -P -x -T '-' $1 | ruby -c
 }
 ```
+
+You can then use `validate_erb` example.erb to validate an ERB template.
+
