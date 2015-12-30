@@ -65,5 +65,5 @@ The `template` function can take any number of additional template files, and wi
 
 ###With a Template String: inline_template and inline_epp
 
-If you have a string value that contains template content, you can evaluate it with the inline_template (ERB) or inline_epp functions as follows:
+If you have a string value that contains template content, you can evaluate it with the `inline_template (ERB)` or `inline_epp` functions as follows:
 
