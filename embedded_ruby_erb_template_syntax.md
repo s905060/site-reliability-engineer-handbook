@@ -59,3 +59,5 @@ ServerAlias <%= @hostname %>
 You can trim line breaks after expression-printing tags by adding a hyphen to the closing tag delimiter.
 
 `-%>` — If the tag ends a line, trim the following line break.
+
+### Non-Printing Tags
