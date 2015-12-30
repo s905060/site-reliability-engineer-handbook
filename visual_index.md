@@ -44,3 +44,9 @@ A variable being assigned an array value.
 ```
     $myhash = { key => { subkey => 'b' }}
 ```
+
+A variable being assigned a hash value.
+```
+    ...
+    content => "Managed by puppet master version ${serverversion}"
+```
