@@ -155,3 +155,5 @@ Puppet’s data types are converted to Ruby classes as follows:
 
 If a Puppet variable was never defined, its value is `undef`, which means its value in a template will be `nil`.
 
+###Some Basic Ruby for ERB Templates
+To manipulate and print data in ERB templates, you’ll need to know a small amount of Ruby. We can’t teach that on this page, but we can give a brief look at some of the things you’re likely to use.
