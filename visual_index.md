@@ -150,3 +150,13 @@ An if statement using a regular expression and the regex match operator.
       ...
     }
 ```
+
+An if statement using an in expression
+```
+    case $operatingsystem {
+      'Solaris':          { include role::solaris }
+      'RedHat', 'CentOS': { include role::redhat  }
+      /^(Debian|Ubuntu)$/:{ include role::debian  }
+      default:            { include role::generic }
+    }
+```
