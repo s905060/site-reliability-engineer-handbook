@@ -1,7 +1,7 @@
 # HBase Commands
 
 ### Housekeeping
-
+```
 First make sure HBase is running, with the following command in $HBASE_HOME: $ ./bin/start-hbase.sh
 The HBase Shell is a Ruby script in ${HBASE_HOME}/bin/hirb.rb and to start the shell use: $ hbase shell
 You can get an overview of all tables present in HBase using the list command (or restrict with list 'test.*').
@@ -10,8 +10,9 @@ To check how the cluster is doing use: status 'simple' | 'summary' | 'detailed' 
 alternative parameters, providing different level of details; only specify one of them).
 If you need to shut down the cluster use shutdown and to exit the shell use exit
 1 
-
+```
 ### Data Definition
+```
 create … to create a table. Pass table name, a dictionary of specifications
  per column family, and optionally a dictionary of table configuration.
 Example create 'test_table', 'cf1', 'cf2'
@@ -25,8 +26,10 @@ Examples
 drop … to drop a table. Note: the table must be disabled.
 disable … to disable a table, for example to drop it or to alter the schema.
 enable … to enable a table after altering the CF schema.
+```
 
 ### Data Manipulation
+```
 put … to put a 'value' into at specified table/row/column combination,
  also known as a 'cell' in HBase.
 Example put 't1', 'row-key-1', 'cf1:col2', 'value'
@@ -34,6 +37,7 @@ delete … to mark a cell value as deleted. Note: deletes must match the
  deleted cell's coordinates (table/row/column) exactly. When
  scanning, a delete cell suppresses older versions.
 Example delete 't1', 'row-key-1', 'cf1:col2'
+```
 
 ### Query
 ```
