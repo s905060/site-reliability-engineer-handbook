@@ -60,3 +60,10 @@ A master-provided built-in variable being interpolated into a double-quoted stri
       ...
     }
 ```
+
+A class definition, which makes a class avaliable for later use.
+```
+    include ntp
+    require ntp
+    class {'ntp':}
+```
