@@ -354,6 +354,7 @@
        * [Puppet DSL](puppet_dsl.md)
        * [Puppet Master/Agent Setup](puppet_masteragent_setup.md)
        * [Embedded Ruby (ERB) Template Syntax](embedded_ruby_erb_template_syntax.md)
+       * Using Templates
    * [Salt](salt.md)
        * [Salt use notes](salt_use_notes.md)
 * [Networking Devices](networking_devices.md)
