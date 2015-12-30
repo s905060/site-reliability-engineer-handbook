@@ -136,3 +136,17 @@ There is also another way to use the `scope` object: you can call its `lookupvar
 ###Puppet Data Types in Ruby
 
 Puppet’s data types are converted to Ruby classes as follows:
+
+|Puppet type	|Ruby class|
+|--|--|--
+|Boolean	|Boolean
+|Undef	|NilClass (value nil)
+|String	|String
+|Number	|subtype of Numeric
+|Array	|Array
+|Hash	|Hash
+|Default	|Symbol (value :default)
+|Regexp	|Regexp
+|Resource reference	|Puppet::Pops::Types::PResourceType, or Puppet::Pops::Types::PHostClassType
+|Lambda (code block)	|Puppet::Pops::Evaluator::Closure
+|Data type (Type)	|A type class under Puppet::Pops::Types, e.g. Puppet::Pops::Types::PIntegerType
