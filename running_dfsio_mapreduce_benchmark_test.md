@@ -148,3 +148,18 @@ l:time	6331377
 ###Understanding the results
 
 Code from TestDFSIO.java
+
+```
+835     double med = rate / 1000 / tasks;
+836     double stdDev = Math.sqrt(Math.abs(sqrate / 1000 / tasks - med*med));
+837     String resultLines[] = {
+838       "----- TestDFSIO ----- : " + testType,
+839       "           Date & time: " + new Date(System.currentTimeMillis()),
+840       "       Number of files: " + tasks,
+841       "Total MBytes processed: " + toMB(size),
+842       "     Throughput mb/sec: " + size * 1000.0 / (time * MEGA),
+843       "Average IO rate mb/sec: " + med,
+844       " IO rate std deviation: " + stdDev,
+845       "    Test exec time sec: " + (float)execTime / 1000,
+846       "" };
+```
