@@ -223,3 +223,8 @@ For example, to evaluate one template inside another:
 ```
 <%= scope.function_template(["my_module/template2.erb"]) %>
 ```
+
+To log a warning using Puppet’s own logging system, so that it will appear in reports:
+```
+<%= scope.function_warning(["Template was missing some data; this config file may be malforme
+```
