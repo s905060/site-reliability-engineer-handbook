@@ -143,3 +143,10 @@ An if statement, whose conditions are expressions that use agent-provided facts.
       notify { "Welcome web server #$1": }
     }
 ```
+
+An if statement using a regular expression and the regex match operator.
+```
+    if 'www' in $hostname {
+      ...
+    }
+```
