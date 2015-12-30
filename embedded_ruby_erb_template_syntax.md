@@ -50,3 +50,7 @@ Text outside a tag becomes literal text, but it is subject to any tagged Ruby co
 An expression-printing tag inserts values into the output. It starts with an opening tag delimiter and equals sign (`<%=`) and ends with a closing tag delimiter (`%>`). It must contain a snippet of Ruby code that resolves to a value; if the value isn’t a string, it will be automatically converted to a string using its to_s method.
 
 For example, to insert the value of the `$fqdn` and `$hostname` facts in an Apache config file, you could do something like:
+```
+ServerName <%= @fqdn %>
+ServerAlias <%= @hostname %>
+```
