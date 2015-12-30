@@ -225,3 +225,5 @@ A virtual resource.
       target              => '/etc/nagios3/conf.d/nagios_service.cfg',
       notify              => Service[$nagios::params::nagios_service],
     }
+
+An exported resource declaration.
