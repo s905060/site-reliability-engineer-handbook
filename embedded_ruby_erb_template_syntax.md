@@ -121,6 +121,10 @@ There are two ways to access variables in an ERB template:
 
 ###@variable
 
-All variables in the current scope (including global variables) are passed to templates as Ruby instance variables, which begin with “at” signs (@). If you can access a variable by its short name in the surrounding manifest, you can access it in the template by replacing its $ sign with an @. So $os becomes @os, $trusted becomes @trusted, etc.
+All variables in the current scope (including global variables) are passed to templates as Ruby instance variables, which begin with “at” signs (`@`). If you can access a variable by its short name in the surrounding manifest, you can access it in the template by replacing its $ sign with an @. So `$os` becomes `@os`, `$trusted` becomes `@trusted`, etc.
 
 This is the most legible way to access variables, but it doesn’t support variables from other scopes. For that, you need to use the scope object.
+
+### scope['variable'] or scope.lookupvar('variable')
+
+Puppet also passes templates an object called scope, which can access all variables (including out-of-scope ones) with a hash-style access expression. For example, to access `$ntp::tinker` you would use `scope['ntp::tinker']`.
