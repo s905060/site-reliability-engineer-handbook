@@ -124,3 +124,15 @@ An import statement. Should be avoided in all but a few circumstances.
     # comment
     /* comment */
 ```
+
+Two comments.
+```
+    if str2bool("$is_virtual") {
+      warning( 'Tried to include class ntp on virtual machine; this node may be misclassified.' )
+    }
+    elsif $operatingsystem == 'Darwin' {
+      warning( 'This NTP module does not yet work on our Mac laptops.' )
+    else {
+      include ntp
+    }
+```
