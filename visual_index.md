@@ -179,3 +179,13 @@ A resource collector, sometimes called the “spaceship operator.”
 ```
     Concat::Fragment <<| tag == "bacula-storage-dir-${bacula_director}" |>>
 ```
+
+An exported resource collector, which works with exported resources
+```
+    Exec {
+      path        => '/usr/bin:/bin:/usr/sbin:/sbin',
+      environment => 'RUBYLIB=/opt/puppet/lib/ruby/site_ruby/1.8/',
+      logoutput   => true,
+      timeout     => 180,
+    }
+```
