@@ -213,3 +213,7 @@ Also, note that Puppet’s special undef value becomes Ruby’s special nil valu
 
 ###Calling Puppet Functions from Templates
 You can use Puppet functions inside templates, but their use is slightly different from their use in manifests:
+
+* All functions are methods on the scope object.
+* You must prepend “function_” to the beginning of the function name.
+* The arguments of the function must be provided as an array, even if there is only one argument.
