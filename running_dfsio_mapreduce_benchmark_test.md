@@ -121,3 +121,26 @@ l:tasks	4
 l:time	6331377
 ```
 
+###Running the read job
+```
+hadoop jar /usr/lib/gphd/hadoop-mapreduce/hadoop-mapreduce-client-jobclient-2.0.2-alpha-gphd-2.0.1.0-tests.jar TestDFSIO -read -nrFiles 4 -fileSize 250GB -resFile /tmp/TestDFSIOwrite.txt
+
+
+ 
+13/08/21 09:40:12 INFO fs.TestDFSIO: ----- TestDFSIO ----- : read
+13/08/21 09:40:12 INFO fs.TestDFSIO:            Date & time: Wed Aug 21 09:40:12 PDT 2013
+13/08/21 09:40:12 INFO fs.TestDFSIO:        Number of files: 4
+13/08/21 09:40:12 INFO fs.TestDFSIO: Total MBytes processed: 1024000.0
+13/08/21 09:40:12 INFO fs.TestDFSIO:      Throughput mb/sec: 122.51965010589454
+13/08/21 09:40:12 INFO fs.TestDFSIO: Average IO rate mb/sec: 122.5361557006836
+13/08/21 09:40:12 INFO fs.TestDFSIO:  IO rate std deviation: 1.4152211082822392
+13/08/21 09:40:12 INFO fs.TestDFSIO:     Test exec time sec: 2141.713
+13/08/21 09:40:12 INFO fs.TestDFSIO:
+
+[gpadmin@hdm3 ~]$  hdfs dfs -cat /benchmarks/TestDFSIO/io_write/part*
+f:rate	647024.94
+f:sqrate	1.04674768E8
+l:size	1073741824000
+l:tasks	4
+l:time	6331377
+```
