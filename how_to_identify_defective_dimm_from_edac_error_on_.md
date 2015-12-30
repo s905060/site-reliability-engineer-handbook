@@ -71,3 +71,60 @@ edac-util: EDAC drivers are loaded. 2 MCs detected:
   mc0:F10h
   mc1:F10h
 ```
+
+###Check EDAC error report by edac-util tool
+```
+# edac-util -v 
+mc0: 0 Uncorrected Errors with no DIMM info
+mc0: 0 Corrected Errors with no DIMM info
+mc0: csrow0: 0 Uncorrected Errors
+mc0: csrow0: ch0: 0 Corrected Errors
+mc0: csrow0: ch1: 0 Corrected Errors
+mc0: csrow1: 0 Uncorrected Errors
+mc0: csrow1: ch0: 0 Corrected Errors
+mc0: csrow1: ch1: 0 Corrected Errors
+mc0: csrow2: 0 Uncorrected Errors
+mc0: csrow2: ch0: 0 Corrected Errors
+mc0: csrow2: ch1: 0 Corrected Errors
+mc0: csrow3: 0 Uncorrected Errors
+mc0: csrow3: ch0: 0 Corrected Errors
+mc0: csrow3: ch1: 0 Corrected Errors
+mc0: csrow4: 0 Uncorrected Errors
+mc0: csrow4: ch0: 0 Corrected Errors
+mc0: csrow4: ch1: 0 Corrected Errors
+mc0: csrow5: 0 Uncorrected Errors
+mc0: csrow5: ch0: 0 Corrected Errors
+mc0: csrow5: ch1: 0 Corrected Errors
+mc0: csrow6: 0 Uncorrected Errors
+mc0: csrow6: ch0: 0 Corrected Errors
+mc0: csrow6: ch1: 0 Corrected Errors
+mc0: csrow7: 0 Uncorrected Errors
+mc0: csrow7: ch0: 0 Corrected Errors
+mc0: csrow7: ch1: 0 Corrected Errors
+mc1: 0 Uncorrected Errors with no DIMM info
+mc1: 0 Corrected Errors with no DIMM info
+mc1: csrow0: 0 Uncorrected Errors
+mc1: csrow0: ch0: 0 Corrected Errors
+mc1: csrow0: ch1: 0 Corrected Errors
+mc1: csrow1: 0 Uncorrected Errors
+mc1: csrow1: ch0: 0 Corrected Errors
+mc1: csrow1: ch1: 0 Corrected Errors
+mc1: csrow2: 0 Uncorrected Errors
+mc1: csrow2: ch0: 0 Corrected Errors
+mc1: csrow2: ch1: 0 Corrected Errors
+mc1: csrow3: 0 Uncorrected Errors
+mc1: csrow3: ch0: 0 Corrected Errors
+mc1: csrow3: ch1: 0 Corrected Errors
+mc1: csrow4: 0 Uncorrected Errors
+mc1: csrow4: ch0: 0 Corrected Errors
+mc1: csrow4: ch1: 0 Corrected Errors
+mc1: csrow5: 0 Uncorrected Errors
+mc1: csrow5: ch0: 0 Corrected Errors
+mc1: csrow5: ch1: 0 Corrected Errors
+mc1: csrow6: 0 Uncorrected Errors
+mc1: csrow6: ch0: 7 Corrected Errors
+mc1: csrow6: ch1: 0 Corrected Errors
+mc1: csrow7: 0 Uncorrected Errors
+mc1: csrow7: ch0: 0 Corrected Errors
+mc1: csrow7: ch1: 0 Corrected Errors
+```
