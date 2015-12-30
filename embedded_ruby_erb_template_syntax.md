@@ -128,3 +128,6 @@ This is the most legible way to access variables, but it doesn’t support varia
 ### scope['variable'] or scope.lookupvar('variable')
 
 Puppet also passes templates an object called scope, which can access all variables (including out-of-scope ones) with a hash-style access expression. For example, to access `$ntp::tinker` you would use `scope['ntp::tinker']`.
+
+
+There is also another way to use the `scope` object: you can call its `lookupvar` method and pass the variable’s name as its argument, like `scope.lookupvar('ntp::tinker')`. This is exactly equivalent to the above, but slightly less convenient. It predates the hash-style indexing, which was added in Puppet 3.0.
