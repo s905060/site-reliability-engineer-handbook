@@ -203,3 +203,7 @@ Usually, your templates will use data from Puppet variables. These values will a
 
 These will become the equivalent Ruby objects when you access them from an ERB template. For information about the ways you can transform these objects, see the Ruby documentation for:
 
+* Strings
+* Integers
+* Arrays
+* Hashes
