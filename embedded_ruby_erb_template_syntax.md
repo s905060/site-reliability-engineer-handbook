@@ -86,3 +86,9 @@ Non-printing code doesn’t have to resolve to a value or be a complete statemen
 ```
 
 You must keep `do |server|` inside the first tag, because you can’t insert an arbitrary statement between a method call and its required block.
+
+###Space Trimming
+You can trim whitespace surrounding a non-printing tag by adding hyphens (-) to the tag delimiters.
+
+* `<%-` — If the tag is indented, trim the indentation.
+* `-%>` — If the tag ends a line, trim the following line break.
