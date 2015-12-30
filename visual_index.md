@@ -39,3 +39,8 @@ Two resources using the before and subscribe relationship metaparameters (which 
 ```
     $package_list = ['ntp', 'apache2', 'vim-nox', 'wget']
 ```
+
+A variable being assigned an array value.
+```
+    $myhash = { key => { subkey => 'b' }}
+```
