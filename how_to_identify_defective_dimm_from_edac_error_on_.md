@@ -48,13 +48,13 @@ edac_core              46645  4 amd64_edac_mod
 edac_mce_amd           15615  1 amd64_edac_mod
 ```
 
-Memory Controller (mc) Model, the memory controller's model abstracted in EDAC. Each 'mc' device controls a set of DIMM memory modules. These modules are laid out in a Chip-Select Row (csrowX) and Channel table (chX).
+**Memory Controller (mc) Model**, the memory controller's model abstracted in EDAC. Each 'mc' device controls a set of DIMM memory modules. These modules are laid out in a Chip-Select Row (csrowX) and Channel table (chX).
 
 There can be multiple csrows and multiple channels. Memory controllers allow for several csrows, with 8 csrows being a typical value.
 
-Channel, each channel represents a DIMM module. Dual channels allows for 128 bit data transfers to the CPU from memory. Some system supports more channels.
+**Channel**, each channel represents a DIMM module. Dual channels allows for 128 bit data transfers to the CPU from memory. Some system supports more channels.
 
-Csrow, Chip-Select Row, shows how memory module assembled, single or dual rank or more, the actual number of csrows depends on the electrical "loading" of a given motherboard, memory controller and DIMM characteristics.
+**Csrow**, Chip-Select Row, shows how memory module assembled, single or dual rank or more, the actual number of csrows depends on the electrical "loading" of a given motherboard, memory controller and DIMM characteristics.
 
 For single rank DIMM module, a pair of DIMMs merge into one csrow, typically, you will see only csrow0, while csrow1 will be empty.
 
