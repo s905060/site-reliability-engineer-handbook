@@ -107,3 +107,10 @@ You can trim line breaks after comment tags by adding a hyphen to the closing ta
 ###Literal Tag Delimiters
 
 If you need the template’s final output to contain a literal `<%` or `%>`, you can escape them as `<%%` or `%%>`.
+
+###Accessing Puppet Variables
+Templates can access Puppet’s variables. This is the main source of data for templates.
+
+An ERB template has its own local scope, and its parent scope is set to the class or defined type that evaluates the template. This means a template can use short names for variables from that class or type, but it can’t insert new variables into it.
+
+There are two ways to access variables in an ERB template:
