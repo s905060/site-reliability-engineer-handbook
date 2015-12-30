@@ -216,7 +216,7 @@ A resource override using a collector, which will work anywhere. Dangerous, but 
 ```
 
 A virtual resource.
-
+```
     @@nagios_service { "check_zfs${hostname}":
       use                 => 'generic-service',
       host_name           => "$fqdn",
@@ -225,5 +225,6 @@ A virtual resource.
       target              => '/etc/nagios3/conf.d/nagios_service.cfg',
       notify              => Service[$nagios::params::nagios_service],
     }
+```
 
 An exported resource declaration.
