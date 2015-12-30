@@ -193,3 +193,5 @@ If `$values` was set to `['one', 'two']`, this example would produce:
 Some stuff with one
 Some stuff with two
 ```
+
+This example also trims line breaks for the non-printing tags, so they won’t appear as blank lines in the output.
