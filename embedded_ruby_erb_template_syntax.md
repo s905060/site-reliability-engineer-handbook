@@ -77,3 +77,10 @@ For example, to insert text only if a certain variable was set, you could do som
 ```
 
 Non-printing code doesn’t have to resolve to a value or be a complete statement, but the tag must close at a place where it would be legal to write another statement. For example, you couldn’t write:
+```
+<%# Syntax error: %>
+<% @servers.each -%>
+# some server
+<% do |server| %>server <%= server %>
+<% end -%>
+```
