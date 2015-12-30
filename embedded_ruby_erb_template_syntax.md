@@ -161,3 +161,7 @@ To manipulate and print data in ERB templates, you’ll need to know a small amo
 ###if statements
 
 Ruby’s `if ... end` statement lets you write conditional text. You’ll want to put the control statements in non-printing tags, and the conditional text between the tags. (Like `<% if <CONDITION> %> text goes here <% end %>`.)
+
+```
+<% if @broadcast != "NONE" %>broadcast <%= @broadcast %><% end %>
+```
