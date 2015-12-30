@@ -200,3 +200,6 @@ This example also trims line breaks for the non-printing tags, so they won’t a
 ##Manipulating Data
 
 Usually, your templates will use data from Puppet variables. These values will almost always be strings, numbers, arrays, and hashes.
+
+These will become the equivalent Ruby objects when you access them from an ERB template. For information about the ways you can transform these objects, see the Ruby documentation for:
+
