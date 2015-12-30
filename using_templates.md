@@ -105,3 +105,15 @@ The inline_template function can take any number of additional template strings,
 Before deploying a template, you should validate its syntax and render its output to ensure it’s producing the results you expect.
 
 Puppet 4 includes the puppet epp command-line tool for EPP templates, while Ruby can check ERB syntax after trimming the template with its erb command.
+
+###EPP Validation
+
+`puppet epp validate <TEMPLATE NAME>`
+
+The puppet epp command includes an action that checks EPP code for syntax problems. The `<TEMPLATE NAME>` can be a file reference or can refer to a `<MODULE NAME>/<TEMPLATE FILENAME>` as the epp function. If a file reference can also refer to a module, Puppet validates the module’s template instead.
+
+You can also pipe EPP code directly to the validator:
+
+`cat example.epp | puppet epp validate`
+
+The command is silent on a successful validation. It reports and halts on the first error it encounters; to modify this behavior, check the command’s man page.
