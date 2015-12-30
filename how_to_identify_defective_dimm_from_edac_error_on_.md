@@ -1,2 +1,19 @@
 # How to identify defective DIMM from EDAC error on Linux
 
+DIMM error is rare, but sometime still happens. It's easy to identify them if they are completely dead, however, if a DIMM has some corrected errors, how to identify it?
+
+I have another article listed memory testing tools on linux, this time, I use EDAC error report utility
+
+Here is an example show you how to identify defective DIMM on an AMD_x64 archtecture machine, syslog reorted kernel error from EDAC (Error Detection and Correction kernel module).
+
+Here is a piece of typical error message from EDAC
+
+```
+kernel: [Hardware Error]: MC4 Error (node 1): DRAM ECC error detected on the NB.
+kernel: EDAC amd64 MC1: CE ERROR_ADDRESS= 0xf075b2410
+kernel: EDAC MC1: CE page 0xf075b2, offset 0x410, grain 0, syndrome 0xa082, row 6, channel 0, label "": amd64_edac
+kernel: [Hardware Error]: Error Status: Corrected error, no action required.
+kernel: [Hardware Error]: CPU:6 (10:8:0) MC4_STATUS[-|CE|MiscV|-|AddrV|CECC]: 0x9c414000a0080813
+kernel: [Hardware Error]: MC4_ADDR: 0x0000000f075b2410
+kernel: [Hardware Error]: cache level: L3/GEN, mem/io: MEM, mem-tx: RD, part-proc: SRC (no timeout)
+```
