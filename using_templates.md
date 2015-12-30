@@ -94,3 +94,6 @@ EPP templates can declare parameters, and you can provide values for them by pas
 
 The keys of the hash must be valid local variable names (minus the $). Inside the template, Puppet will create variables with those names and assign their values from the hash. (With a parameter hash of `{'service_name' => 'xntpd', 'iburst_enable' => true}`, an EPP template would receive variables called `$service_name and $iburst_enable`.)
 
+* If a template declares any mandatory parameters, you must set values for them with a parameter hash.
+* If a template declares any optional parameters, you can choose to provide values or let them use their defaults.
+* If a template declares no parameters, you can pass any number of parameters with any names; otherwise, you can only choose from the parameters requested by the template.
