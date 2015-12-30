@@ -159,3 +159,5 @@ If a Puppet variable was never defined, its value is `undef`, which means its va
 To manipulate and print data in ERB templates, you’ll need to know a small amount of Ruby. We can’t teach that on this page, but we can give a brief look at some of the things you’re likely to use.
 
 ###if statements
+
+Ruby’s `if ... end` statement lets you write conditional text. You’ll want to put the control statements in non-printing tags, and the conditional text between the tags. (Like `<% if <CONDITION> %> text goes here <% end %>`.)
