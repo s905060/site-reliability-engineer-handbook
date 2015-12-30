@@ -207,3 +207,5 @@ These will become the equivalent Ruby objects when you access them from an ERB t
 * Integers
 * Arrays
 * Hashes
+
+Also, note that Puppet’s special undef value becomes Ruby’s special nil value in ERB templates.
