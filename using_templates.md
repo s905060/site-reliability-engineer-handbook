@@ -100,3 +100,8 @@ The keys of the hash must be valid local variable names (minus the $). Inside th
 
 ###Extra ERB Strings
 The inline_template function can take any number of additional template strings, and will concatenate their outputs together to produce the final value.
+
+###Validating and Previewing Templates
+Before deploying a template, you should validate its syntax and render its output to ensure it’s producing the results you expect.
+
+Puppet 4 includes the puppet epp command-line tool for EPP templates, while Ruby can check ERB syntax after trimming the template with its erb command.
