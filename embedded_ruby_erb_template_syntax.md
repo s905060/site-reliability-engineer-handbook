@@ -40,3 +40,5 @@ ERB has two tags for Ruby code, a tag for comments, and a way to escape tag deli
 * `<%# COMMENT %>` — Removed from the final output.
  * With `-%>` — Trims the following line break.
 * `<%% or %%>` — A literal `<%` or `%>`, respectively.
+
+Text outside a tag becomes literal text, but it is subject to any tagged Ruby code surrounding it. For example, text surrounded by a tagged if statement only appears in the output if the condition is true.
