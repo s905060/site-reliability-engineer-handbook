@@ -62,3 +62,8 @@ The keys of the hash must be valid local variable names (minus the `$`). Inside 
 
 ###Extra ERB Files
 The `template` function can take any number of additional template files, and will concatenate their outputs together to produce the final string.
+
+###With a Template String: inline_template and inline_epp
+
+If you have a string value that contains template content, you can evaluate it with the inline_template (ERB) or inline_epp functions as follows:
+
