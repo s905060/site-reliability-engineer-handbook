@@ -186,3 +186,5 @@ To write a block of code in Ruby, use either `do |arguments| ... end or {|argume
 Some stuff with <%= val %>
 <% end -%>
 ```
+
+If `$values` was set to `['one', 'two']`, this example would produce:
