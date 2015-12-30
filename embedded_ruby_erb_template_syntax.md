@@ -114,3 +114,7 @@ Templates can access Puppet’s variables. This is the main source of data for t
 An ERB template has its own local scope, and its parent scope is set to the class or defined type that evaluates the template. This means a template can use short names for variables from that class or type, but it can’t insert new variables into it.
 
 There are two ways to access variables in an ERB template:
+
+* `@variable`
+
+* ```scope['variable'] (and its older equivalent, scope.lookupvar('variable')) ```
