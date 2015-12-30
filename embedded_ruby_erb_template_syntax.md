@@ -61,3 +61,5 @@ You can trim line breaks after expression-printing tags by adding a hyphen to th
 `-%>` — If the tag ends a line, trim the following line break.
 
 ### Non-Printing Tags
+
+`<% if @broadcastclient == true %> ...text... <% end %>`
