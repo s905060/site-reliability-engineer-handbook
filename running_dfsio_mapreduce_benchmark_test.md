@@ -165,3 +165,6 @@ Code from TestDFSIO.java
 ```
 
 ###About the Math
+![](image2013-8-21 12-50-8.png)
+
+###Working out the details for 64 files 1TB job
