@@ -171,3 +171,8 @@ Memory Device Mapped Address
     Partition Row Position: 2
     Interleave Position: 2
 ```
+
+Use the memory error address reported in syslog to locate the defective DIMM.
+```
+kernel: EDAC amd64 MC1: CE ERROR_ADDRESS= 0xf075b2410
+```
