@@ -342,7 +342,7 @@
        * [Running DFSIO mapreduce benchmark test](running_dfsio_mapreduce_benchmark_test.md)
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
-       * HBase Commands
+       * [HBase Commands](hbase_commands.md)
    * [Hive](hive.md)
        * [Hive notes](hive_notes.md)
    * [Elasticsearch](elasticsearch.md)
