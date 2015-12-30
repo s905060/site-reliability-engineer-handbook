@@ -141,3 +141,7 @@ ce_noinfo_count  csrow1  csrow3  csrow5  csrow7  mc_name  sdram_scrub_rate  size
 So, according to above info we get, we can tell the server has two memory controllers, 8 pairs of dual ranked memory modules.
 
 As we know the memory error located at
+
+```
+mc1: csrow6: ch0: 7 Corrected Errors
+```
