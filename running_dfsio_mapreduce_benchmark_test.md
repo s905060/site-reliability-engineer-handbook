@@ -99,3 +99,25 @@ l:tasks	64
 l:time	45497635
 ```
 
+###Running the Write Job
+```
+hadoop jar /usr/lib/gphd/hadoop-mapreduce/hadoop-mapreduce-client-jobclient-2.0.2-alpha-gphd-2.0.1.0-tests.jar TestDFSIO -write -nrFiles 4 -fileSize 250GB -resFile /tmp/TestDFSIOwrite.txt
+
+13/08/20 23:17:38 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+13/08/20 23:17:38 INFO fs.TestDFSIO:            Date & time: Tue Aug 20 23:17:38 PDT 2013
+13/08/20 23:17:38 INFO fs.TestDFSIO:        Number of files: 4
+13/08/20 23:17:38 INFO fs.TestDFSIO: Total MBytes processed: 1024000.0
+13/08/20 23:17:38 INFO fs.TestDFSIO:      Throughput mb/sec: 161.73416935999862
+13/08/20 23:17:38 INFO fs.TestDFSIO: Average IO rate mb/sec: 161.75624084472656
+13/08/20 23:17:38 INFO fs.TestDFSIO:  IO rate std deviation: 1.8999879033336318
+13/08/20 23:17:38 INFO fs.TestDFSIO:     Test exec time sec: 1603.932
+13/08/20 23:17:38 INFO fs.TestDFSIO:
+
+[gpadmin@hdm3 ~]$ hdfs dfs -cat /benchmarks/TestDFSIO/io_write/part*
+f:rate	647024.94
+f:sqrate	1.04674768E8
+l:size	1073741824000
+l:tasks	4
+l:time	6331377
+```
+
