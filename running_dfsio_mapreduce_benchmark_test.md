@@ -51,3 +51,27 @@ Valid program names are:
   testtextinputformat: A test for text input format.
   threadedmapbench: A map/reduce benchmark that compares the performance of maps with multiple spills over maps with 1 spill
 ```
+
+###Test runs
+
+###Running the Write Job
+```
+hadoop jar /usr/lib/gphd/hadoop-mapreduce/hadoop-mapreduce-client-jobclient-2.0.2-alpha-gphd-2.0.1.0-tests.jar TestDFSIO -write -nrFiles 64 -fileSize 16GB -resFile /tmp/TestDFSIOwrite.txt
+
+13/08/21 10:56:45 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+13/08/21 10:56:45 INFO fs.TestDFSIO:            Date & time: Wed Aug 21 10:56:45 PDT 2013
+13/08/21 10:56:45 INFO fs.TestDFSIO:        Number of files: 64
+13/08/21 10:56:45 INFO fs.TestDFSIO: Total MBytes processed: 1048576.0
+13/08/21 10:56:45 INFO fs.TestDFSIO:      Throughput mb/sec: 23.046824301966463
+13/08/21 10:56:45 INFO fs.TestDFSIO: Average IO rate mb/sec: 23.143465042114258
+13/08/21 10:56:45 INFO fs.TestDFSIO:  IO rate std deviation: 1.5490700854356283
+13/08/21 10:56:45 INFO fs.TestDFSIO:     Test exec time sec: 796.676
+13/08/21 10:56:45 INFO fs.TestDFSIO:
+
+[gpadmin@hdm3 ~]$ hdfs dfs -cat /benchmarks/TestDFSIO/io_write/part*
+f:rate	1481181.8
+f:sqrate	3.4433252E7
+l:size	1099511627776
+l:tasks	64
+l:time	45497635
+```
