@@ -106,3 +106,10 @@ A resource reference to the defined resource declared above. Note that every nam
       include squid
     }
 ```
+
+A node definition.
+```
+    node /^www\d+$/ {
+      include common
+    }
+```
