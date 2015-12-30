@@ -158,3 +158,16 @@ Use the info above, you can easily find it according the hardware info of the se
 ###Another way of locating the defective DIMM(May not work on some systems )
 
 Use dmidecode to show each memory module's address, see more dmidecode examples
+
+```
+#dmidecode -t 20
+Handle 0x0058, DMI type 20, 19 bytes
+Memory Device Mapped Address
+    Starting Address: 0x00F00000000
+    Ending Address: 0x00FFFFFFFFF
+    Range Size: 4 GB
+    Physical Device Handle: 0x0057
+    Memory Array Mapped Address Handle: 0x0038
+    Partition Row Position: 2
+    Interleave Position: 2
+```
