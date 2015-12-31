@@ -187,3 +187,12 @@ timeout, tries, try _ sleep, user.
 
 ###cron
 Manages cron jobs. Largely self-explanatory
+
+```
+cron { logrotate:
+command => "/usr/sbin/logrotate",
+user => root,
+hour => 2,
+minute => 0
+}
+```
