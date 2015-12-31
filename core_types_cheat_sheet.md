@@ -134,8 +134,7 @@ Mac.",
  default => "And I’m a PC.",
 },
 }
-
+```
 **ATTRIBUTES**
 * message — Defaults to title.
 * See also: withpath
-```
