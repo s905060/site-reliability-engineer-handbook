@@ -327,7 +327,7 @@
    * [IV. Backing Services](iv_backing_services.md)
    * [V. Build, release, run](v_build,_release,_run.md)
    * [I. Codebase](i_codebase.md)
-   * VIII. Concurrency
+   * [VIII. Concurrency](viii_concurrency.md)
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
