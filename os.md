@@ -457,3 +457,13 @@ print "daemon started"
 time.sleep(10)
 print "daemon terminated"
 ```
+
+However, it takes a bit more work to create a real daemon. First, call setpgrp to make the new process a “process group leader”. Otherwise, signals sent to a (by that time) unrelated process group might cause problems in your daemon:
+
+`os.setpgrp()`
+
+It’s also a good idea to remove the user mode mask, to make sure files created by the daemon actually gets the mode flags specified by the program:
+
+`os.umask(0)`
+
+Then, you should redirect the stdout/stderr files, instead of just closing them. If you don’t do this, you may get unexpected exceptions the day some of your code tries to write something to the console via stdout or stderr.
