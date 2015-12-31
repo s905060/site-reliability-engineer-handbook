@@ -63,3 +63,8 @@ for directories.
 links, provider, recurselimit, replace,
 selrange, selrole, seltype, seluser,
 sourceselect, type.
+
+###package
+Manages software packages. Some platforms have better
+package tools than others, so you’ll have to do some
+research on yours; check the type reference for more info.
