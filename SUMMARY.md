@@ -328,6 +328,7 @@
    * [V. Build, release, run](v_build,_release,_run.md)
    * [I. Codebase](i_codebase.md)
    * [VIII. Concurrency](viii_concurrency.md)
+   * III. Config
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
