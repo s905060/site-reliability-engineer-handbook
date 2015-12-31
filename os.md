@@ -291,7 +291,6 @@ Warning: Since os.system passes the command on to the shell as is, it can be dan
 The exec function starts a new process, replacing the current one (“go to process”, in other words). In the following example, note that the “goodbye” message is never printed:
 
 
-
 ###Using the os module to start a new process
 ```
 import os
