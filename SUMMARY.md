@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Software Engineering
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [Filesystems](filesystems.md)
@@ -321,6 +320,7 @@
    * [Merge Sort](merge_sort.md)
    * [Radix Sort](radix_sort.md)
    * [Cache algorithm definition](cache_algorithm_definition.md)
+* Software Engineering
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
