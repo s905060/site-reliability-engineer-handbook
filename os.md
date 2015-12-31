@@ -223,3 +223,15 @@ print "mode", oct(stat.S_IMODE(st[stat.ST_MODE]))
 print "atime", time.ctime(st[stat.ST_ATIME])
 print "mtime", time.ctime(st[stat.ST_MTIME])
 ```
+
+```
+original =>
+mode 0666
+atime Thu Oct 14 15:15:50 1999
+mtime Mon Nov 13 15:42:36 1995
+copy =>
+mode 0666
+atime Thu Oct 14 15:15:50 1999
+mtime Mon Nov 13 15:42:36 1995
+
+```
