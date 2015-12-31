@@ -14,8 +14,8 @@ for param in os.environ.keys():
     print "%20s %s" % (param,os.environ[param])
 ```
 
-Example: Using the os module to rename and remove files
-### File: os-example-3.py
+###Example: Using the os module to rename and remove files
+
 ```
 import os
 import string
