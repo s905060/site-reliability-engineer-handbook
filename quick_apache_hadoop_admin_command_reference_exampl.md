@@ -86,8 +86,9 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 ###8.Hadoop haadmin Commands
 |Command	|Description
 |--|--
-|hdfs haadmin -getServiceState nn1 | Failover NameNode 
+|hdfs haadmin -getServiceState nn1 | Check NameNode Status
 |hdfs haadmin -transitionToActive --forcemanual nn1 | Force transition for a NN to Active
+|hdfs haadmin -failover nn2 nn1|Failover NameNode 
 
 ###9.Hadoop Balancer Commands
 
