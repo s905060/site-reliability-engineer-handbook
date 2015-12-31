@@ -477,3 +477,8 @@ sys.stdin.close()
 sys.stdout = NullDevice()
 sys.stderr = NullDevice()
 ```
+
+In other words, while Python’s print and C’s printf/fprintf won’t crash your program if the devices have been disconnected, sys.stdout.write() happily throws an IOError exception when the application runs as a daemon. But your program works just fine when running in the foreground…
+
+By the way, the _exit function used in the examples above terminates the current process. In contrast to sys.exit, this works also if the caller happens to catch the SystemExit exception:
+
