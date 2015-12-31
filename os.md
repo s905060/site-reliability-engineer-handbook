@@ -253,3 +253,18 @@ os.system(command)
 -rwxrw-r--   1 effbot  effbot       259 Oct  7 20:38 anydbm-example-1.py
 ...
 ```
+
+###Using the os module to start a new process
+```
+import os
+import sys
+
+program = "python"
+arguments = ["hello.py"]
+
+print os.execvp(program, (program,) +  tuple(arguments))
+print "goodbye"
+```
+```
+hello again, and welcome to the show
+```
