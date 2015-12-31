@@ -1,0 +1,2 @@
+# Puppet Module Cheat Sheet
+
