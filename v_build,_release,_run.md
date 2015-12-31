@@ -7,7 +7,7 @@ A [codebase](./codebase) is transformed into a (non-development) deploy through 
 * The *release stage* takes the build produced by the build stage and combines it with the deploy's current [config](./config).  The resulting *release* contains both the build and the config and is ready for immediate execution in the execution environment.
 * The *run stage* (also known as "runtime") runs the app in the execution environment, by launching some set of the app's [processes](./processes) against a selected release.
 
-![Code becomes a build, which is combined with config to create a release.](/images/release.png)
+![Code becomes a build, which is combined with config to create a release.](release.png)
 
 **The twelve-factor app uses strict separation between the build, release, and run stages.**  For example, it is impossible to make changes to the code at runtime, since there is no way to propagate those changes back to the build stage.
 
