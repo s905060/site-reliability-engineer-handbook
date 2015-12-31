@@ -249,3 +249,13 @@ project, provider, role _ membership, roles.
 
 ###group
 Manages groups
+
+**ATTRIBUTES**
+* name (defaults to title)
+* gid — The group ID; must be specified numerically,
+and will be chosen automatically if omitted.
+* ensure — Whether the group should exist.
+ * present
+ * absent
+* See also: allowdupe, auth _ membership,
+members, provider.
