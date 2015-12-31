@@ -373,6 +373,7 @@
        * [Embedded Ruby (ERB) Template Syntax](embedded_ruby_erb_template_syntax.md)
        * [Using Templates](using_templates.md)
        * [Visual Index](visual_index.md)
+       * Puppet Module Cheat Sheet
    * [Salt](salt.md)
        * [Salt use notes](salt_use_notes.md)
 * [Networking Devices](networking_devices.md)
