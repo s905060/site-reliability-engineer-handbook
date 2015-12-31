@@ -332,7 +332,7 @@
    * [II. Dependencies](ii_dependencies.md)
    * [X. Dev/prod parity](x_devprod_parity.md)
    * [IX. Disposability](ix_disposability.md)
-   * Introduction
+   * [Introduction](introduction.md)
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
