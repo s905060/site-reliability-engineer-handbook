@@ -32,3 +32,31 @@ class apache::config::ssl {
 Subdirectories add intermediate namespaces
 ```
 
+###files
+Nodes can download any files in this directory
+from Puppet's built-in file server.
+* Use the source attribute to download file
+contents from the server.
+* Use puppet:/// URIs to specify which file to fetch.
+* Files in this directory are served at
+puppet:///modules/modulename/
+filename​
+
+```
+apache/files/httpd.conf
+To fetch this file:
+file {'/etc/apache2/httpd.conf':
+ ensure => file,
+ source =>
+'puppet:///modules/apache/httpd.conf',
+}
+
+apache/files/extra/ssl
+Puppet's file server can navigate
+any subdirectories:
+file {'/etc/apache2/httpd-ssl.conf':
+ ensure => file,
+ source =>
+'puppet:///modules/apache/extra/ssl',
+}
+```
