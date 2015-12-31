@@ -326,6 +326,7 @@
    * [Background](background.md)
    * [IV. Backing Services](iv_backing_services.md)
    * [V. Build, release, run](v_build,_release,_run.md)
+   * I. Codebase
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
