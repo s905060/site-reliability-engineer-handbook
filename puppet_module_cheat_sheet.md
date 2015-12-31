@@ -64,10 +64,17 @@ file {'/etc/apache2/httpd-ssl.conf':
 lib
 This directory holds Ruby plugins, which can add
 features to Puppet and Facter.
-apache/lib/puppet/type/apache_setting.rb
+
+**apache/lib/puppet/type/apache_setting.rb**
+
 A custom type.
-apache/lib/puppet/parser/functions/htpasswd.rb
+
+**apache/lib/puppet/parser/functions/htpasswd.rb**
+
 A custom function.
-apache/lib/facter/apache_confdir.rb
+
+**apache/lib/facter/apache_confdir.rb**
+
 A custom fact.
-templates
+
+###templates
