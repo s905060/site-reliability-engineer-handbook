@@ -334,6 +334,7 @@
    * [IX. Disposability](ix_disposability.md)
    * [Introduction](introduction.md)
    * [XI. Logs](xi_logs.md)
+   * VII. Port binding
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
