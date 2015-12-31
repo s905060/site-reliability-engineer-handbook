@@ -387,3 +387,7 @@ print "goodbye"
 goodbye
 hello again, and welcome to the show
 ```
+
+The following example provides a spawn method that works on either platform:
+
+ 
