@@ -335,6 +335,7 @@
    * [Introduction](introduction.md)
    * [XI. Logs](xi_logs.md)
    * [VII. Port binding](vii_port_binding.md)
+   * VI. Processes
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
