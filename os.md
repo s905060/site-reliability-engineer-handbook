@@ -362,3 +362,28 @@ goodbye
 You can also use spawn to run other programs in the background. The following example adds an optional mode argument to the run function; when set to os.P_NOWAIT, the script doesn’t wait for the other program to finish.
 
 The default flag value os.P_WAIT tells spawn to wait until the new process is finished. Other flags include os.P_OVERLAY which makes spawn behave like exec, and os.P_DETACH which runs the new process in the background, detached from both console and keyboard.
+
+###Using the os module to run another program in the background (Windows)
+
+```
+import os
+import string
+
+def run(program, *args, **kw):
+    # find executable
+    mode = kw.get("mode", os.P_WAIT)
+    for path in string.split(os.environ["PATH"], os.pathsep):
+        file = os.path.join(path, program) + ".exe"
+        try:
+            return os.spawnv(mode, file, (file,) + args)
+        except os.error:
+            pass
+    raise os.error, "cannot find executable"
+
+run("python", "hello.py", mode=os.P_NOWAIT)
+print "goodbye"
+```
+```
+goodbye
+hello again, and welcome to the show
+```
