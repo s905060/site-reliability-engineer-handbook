@@ -204,6 +204,14 @@ fstat samples/sample.jpg
 - inode/dev: 0 0
 ```
 
+Some fields don’t make sense on non-Unix platforms; for example, the (inode, dev) tuple provides a unique identity for each file on Unix, but can contain arbitrary data on other platforms.
+
+The stat module contains a number of useful constants and helper functions for dealing with the members of the stat tuple. Some of these are shown in the examples below.
+
+You can modify the mode and time fields using the chmod and utime functions:
+
+
+
 ###Using the os module to change a file’s privileges and timestamps
 
 ```
