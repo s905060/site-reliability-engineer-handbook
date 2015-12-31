@@ -329,6 +329,7 @@
    * [I. Codebase](i_codebase.md)
    * [VIII. Concurrency](viii_concurrency.md)
    * [III. Config](iii_config.md)
+   * II. Dependencies
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
