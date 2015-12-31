@@ -306,6 +306,10 @@ print "goodbye"
 hello again, and welcome to the show
 ```
 
+Python provides a whole bunch of exec functions, with slightly varying behavior. The above example uses execvp, which searches for the program along the standard path, passes the contents of the second argument tuple as individual arguments to that program, and runs it with the current set of environment variables. See the Python Library Reference for more information on the other seven ways to call this function.
+
+Under Unix, you can call other programs from the current one by combining exec with two other functions, fork and wait. The former makes a copy of the current process, the latter waits for a child process to finish.
+
 ###Using the os module to run another program (Unix)
 
 ```
