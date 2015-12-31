@@ -128,11 +128,11 @@ Sends an arbitrary message to the agent run-time log.
 notify { "This message is getting logged
 on the agent node.": }
 notify { "Mac warning":
-message => $operatingsystem ? {
- 'Darwin' => "This seems to be a
+    message => $operatingsystem ? {
+        'Darwin' => "This seems to be a
 Mac.",
- default => "And I’m a PC.",
-},
+    default => "And I’m a PC.",
+    },
 }
 ```
 
