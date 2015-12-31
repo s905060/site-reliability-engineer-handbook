@@ -284,6 +284,14 @@ os.system(command)
 ...
 ```
 
+The command is run via the operating system’s standard shell, and returns the shell’s exit status. Under Windows 95/98, the shell is usually command.com whose exit status is always 0.
+
+Warning: Since os.system passes the command on to the shell as is, it can be dangerous to use if you don’t check the arguments carefully (consider running os.system(“viewer %s” % file) with the file variable set to “sample.jpg; rm -rf $HOME”). When unsure, it’s usually better to use exec or spawn instead (see below).
+
+The exec function starts a new process, replacing the current one (“go to process”, in other words). In the following example, note that the “goodbye” message is never printed:
+
+
+
 ###Using the os module to start a new process
 ```
 import os
