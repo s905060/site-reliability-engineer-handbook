@@ -330,3 +330,7 @@ print "goodbye"
 hello again, and welcome to the show
 goodbye
 ```
+
+The fork returns zero in the new process (the return from fork is the first thing that happens in that process!), and a non-zero process identifier in the original process. Or in other words, “not pid” is true only if we’re in the new process.
+
+fork and wait are not available on Windows, but you can use the spawn function instead. Unfortunately, there’s no standard version of spawn that searches for an executable along the path, so you have to do that yourself:
