@@ -482,3 +482,23 @@ In other words, while Python’s print and C’s printf/fprintf won’t crash yo
 
 By the way, the _exit function used in the examples above terminates the current process. In contrast to sys.exit, this works also if the caller happens to catch the SystemExit exception:
 
+###Example: Using the os module to exit the current process
+```
+import os
+import sys
+
+try:
+    sys.exit(1)
+except SystemExit, value:
+    print "caught exit(%s)" % value
+
+try:
+    os._exit(2)
+except SystemExit, value:
+    print "caught exit(%s)" % value
+
+print "bye!"
+```
+```
+caught exit(1)
+```
