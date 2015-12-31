@@ -164,3 +164,23 @@ st = os.fstat(fp.fileno())
 print "fstat", file
 dump(st)
 ```
+
+```
+stat samples/sample.jpg
+- size: 4762 bytes
+- owner: 0 0
+- created: Tue Sep 07 22:45:58 1999
+- last accessed: Sun Sep 19 00:00:00 1999
+- last modified: Sun May 19 01:42:16 1996
+- mode: 0100666
+- inode/dev: 0 2
+
+fstat samples/sample.jpg
+- size: 4762 bytes
+- owner: 0 0
+- created: Tue Sep 07 22:45:58 1999
+- last accessed: Sun Sep 19 00:00:00 1999
+- last modified: Sun May 19 01:42:16 1996
+- mode: 0100666
+- inode/dev: 0 0
+```
