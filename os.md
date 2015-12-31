@@ -233,5 +233,4 @@ copy =>
 mode 0666
 atime Thu Oct 14 15:15:50 1999
 mtime Mon Nov 13 15:42:36 1995
-
 ```
