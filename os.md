@@ -66,6 +66,12 @@ replace(file, "hello", "tjena")
 replace(file, "tjena", "hello")
 ```
 
+###Working with directories
+
+The os module also contains a number of functions that work on entire directories.
+
+The listdir function returns a list of all filenames in a given directory. The current and parent directory markers used on Unix and Windows (. and ..) are not included in this list.
+
 ###Example: Using the os module to list the files in a directory
 
 ```
