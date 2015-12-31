@@ -336,6 +336,7 @@
    * [XI. Logs](xi_logs.md)
    * [VII. Port binding](vii_port_binding.md)
    * [VI. Processes](vi_processes.md)
+   * The Twelve Factors
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
