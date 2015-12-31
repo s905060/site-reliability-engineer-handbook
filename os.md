@@ -143,6 +143,10 @@ OSError: [Errno 41] Directory not empty: 'samples'
 ```
 To remove non-empty directories, you can use the rmtree function in the shutil module.
 
+###Working with file attributes
+
+The stat function fetches information about an existing file. It returns a 9-tuple which contains the size, inode change timestamp, modification timestamp, and access privileges.
+
 ###Using the os module to get information about a file
 ```
 import os
