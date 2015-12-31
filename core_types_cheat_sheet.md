@@ -31,3 +31,35 @@ service { 'sshd':
 
 ###file
 Manages local files
+
+**ATTRIBUTES**
+* ensure — Whether the file should exist, and what it
+should be.
+* present
+* absent
+* file
+* directory
+* link
+* path — The fully qualified path to the file; defaults
+to title.
+* source — Where to download the file. A puppet:///
+URL to a file on the master, or a path to a local file on
+the agent.
+* content — A string with the file’s desired contents.
+Most useful when paired with templates, but you can
+also use the output of the file function.
+* target — The symlink target. (When ensure => link.)
+* recurse — Whether to recursively manage the
+directory. (When ensure => directory.)
+* true or false
+* purge — Whether to keep unmanaged files out of the
+directory. (When recurse => true.)
+* true or false
+* owner — By name or UID.
+* group — By name or GID.
+* mode — Must be specified exactly. Does the right thing
+for directories.
+* See also: backup, checksum, force, ignore,
+links, provider, recurselimit, replace,
+selrange, selrole, seltype, seluser,
+sourceselect, type.
