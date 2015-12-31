@@ -259,3 +259,7 @@ and will be chosen automatically if omitted.
  * absent
 * See also: allowdupe, auth _ membership,
 members, provider.
+
+EVERYTHING ELSE
+You are ready. Go check the types reference at
+http://docs.puppetlabs.com/references/latest/type.html
