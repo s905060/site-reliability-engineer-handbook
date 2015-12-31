@@ -61,3 +61,17 @@ file = "samples/sample.txt"
 replace(file, "hello", "tjena")
 replace(file, "tjena", "hello")
 ```
+
+###Example: Using the os module to list the files in a directory
+
+```
+import os
+
+for file in os.listdir("samples"):
+    print file
+
+sample.au
+sample.jpg
+sample.wav
+...
+```
