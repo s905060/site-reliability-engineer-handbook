@@ -334,3 +334,27 @@ goodbye
 The fork returns zero in the new process (the return from fork is the first thing that happens in that process!), and a non-zero process identifier in the original process. Or in other words, “not pid” is true only if we’re in the new process.
 
 fork and wait are not available on Windows, but you can use the spawn function instead. Unfortunately, there’s no standard version of spawn that searches for an executable along the path, so you have to do that yourself:
+
+###Using the os module to run another program (Windows)
+```
+import os
+import string
+
+def run(program, *args):
+    # find executable
+    for path in string.split(os.environ["PATH"], os.pathsep):
+        file = os.path.join(path, program) + ".exe"
+        try:
+            return os.spawnv(os.P_WAIT, file, (file,) + args)
+        except os.error:
+            pass
+    raise os.error, "cannot find executable"
+
+run("python", "hello.py")
+
+print "goodbye"
+```
+```
+hello again, and welcome to the show
+goodbye
+```
