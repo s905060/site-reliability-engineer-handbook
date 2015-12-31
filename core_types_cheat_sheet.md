@@ -220,3 +220,29 @@ user { "dave":
     managehome => true,
 }
 ```
+
+**ATTRIBUTES**
+* name (defaults to title)
+* uid — The user ID. Must be specified numerically;
+chosen automatically if omitted.
+* ensure — Whether the user should exist.
+ * present
+ * absent
+ * role
+* gid — The user’s primary group. Can be specified
+numerically or by name.
+* groups — An array of secondary groups to which the
+user belongs. (Don’t include the group specified as the
+GID.)
+* home — The user’s home directory.
+* managehome — Whether to manage the home
+directory when managing the user; if you don’t set this
+to true, you’ll need to create the user’s home directory
+manually.
+ * true or false
+* shell — The user’s login shell.
+* See also: allowdupe, auths, comment, expiry,
+key _ membership, keys, membership,
+password, password _ max _ age, password _
+min _ age, profile _ membership, profiles,
+project, provider, role _ membership, roles.
