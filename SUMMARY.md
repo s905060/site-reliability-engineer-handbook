@@ -333,7 +333,7 @@
    * [X. Dev/prod parity](x_devprod_parity.md)
    * [IX. Disposability](ix_disposability.md)
    * [Introduction](introduction.md)
-   * XI. Logs
+   * [XI. Logs](xi_logs.md)
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
