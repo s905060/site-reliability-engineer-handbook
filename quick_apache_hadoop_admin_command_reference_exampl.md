@@ -82,7 +82,14 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 |hadoop mradmin -refreshServiceAcl	|Force Jobtracker to reload service ACL
 |hadoop mradmin -refreshUserToGroupsMappings	|Force jobtracker to reload user group mappings
 
-###8.Hadoop Balancer Commands
+
+###8.Hadoop haadmin Commands
+|Command	|Description
+|--|--
+|hdfs haadmin -getServiceState nn1 | Failover NameNode 
+|hdfs haadmin -transitionToActive --forcemanual nn1 | Force transition for a NN to Active
+
+###9.Hadoop Balancer Commands
 
 |Command	|Description
 |--|--
@@ -90,7 +97,7 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 |hadoop dfsadmin -setBalancerBandwidth <bandwidthinbytes>	|Adjust bandwidth used by the balancer
 |hadoop balancer -threshold 20	|Limit balancing to only 20% resources in the cluster
 
-###9. Hadoop Filesystem Commands
+###10. Hadoop Filesystem Commands
 
 |Command	|Description
 |--|--
@@ -108,7 +115,7 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 |hadoop fs -test -z file1	|Check if file is empty on HDFS
 |hadoop fs -test -d file1	|Check if file1 is a directory on HDFS
 
-###10.Additional Hadoop Filesystem Commands
+###11.Additional Hadoop Filesystem Commands
 
 |Command	|Description
 |--|--
