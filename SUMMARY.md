@@ -334,8 +334,8 @@
    * [IX. Disposability](ix_disposability.md)
    * [Introduction](introduction.md)
    * [XI. Logs](xi_logs.md)
-   * [VII. Port binding](vii_port_binding.md)
    * [The Twelve Factors](the_twelve_factors.md)
+       * [VII. Port binding](vii_port_binding.md)
        * test
 * [VI. Processes](vi_processes.md)
 * [Data Structure](data_structure.md)
