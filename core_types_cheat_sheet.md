@@ -139,3 +139,11 @@ Mac.",
 **ATTRIBUTES**
 * message — Defaults to title.
 * See also: withpath
+
+###GRAB BAG
+###exec
+
+Executes an arbitrary command on the agent node. When
+using execs, make sure the command can be safely run
+multiple times or specify that it should only run under
+certain conditions.
