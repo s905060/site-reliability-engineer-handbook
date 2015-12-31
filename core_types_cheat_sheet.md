@@ -51,10 +51,10 @@ also use the output of the file function.
 * target — The symlink target. (When ensure => link.)
 * recurse — Whether to recursively manage the
 directory. (When ensure => directory.)
-* true or false
+ * true or false
 * purge — Whether to keep unmanaged files out of the
 directory. (When recurse => true.)
-* true or false
+ * true or false
 * owner — By name or UID.
 * group — By name or GID.
 * mode — Must be specified exactly. Does the right thing
@@ -71,4 +71,18 @@ research on yours; check the type reference for more info.
 
 **ATTRIBUTES**
 * ensure — The state for this package.
-* present
+ * present
+ * latest
+ * {any version string}
+ * absent
+ * purged (Potentially dangerous. Ensures absent, then
+   zaps configuration files and dependencies, including
+   those that other packages depend on. Providerdependent.)
+* name — The name of the package, as known to your
+packaging system; defaults to title.
+* source — Where to obtain the package, if your
+system’s packaging tools don’t use a repository.
+* See also: adminfile, allowcdrom, category,
+configfiles, description, flavor, instance,
+platform, provider, responsefile, root,
+status, type, vendor.
