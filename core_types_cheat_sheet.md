@@ -169,3 +169,18 @@ logoutput => true,
 exec {'pwd':}
 exec {'whoami':}
 ```
+
+* creates — A file created by this command; if the file
+exists, the command won’t run.
+* refreshonly — If true, the exec will only run if a
+resource it subscribes to (or a resource which notifies
+it) has changed.
+ * true or false
+* onlyif — A command or array of commands; if any
+have a non-zero return value, the command won’t run.
+* unless — The opposite of onlyif.
+* environment — An array of environment
+variables to set (e.g. ['MYVAR=somevalue',
+'OTHERVAR=othervalue']).
+* See also: cwd, group, logoutput, returns,
+timeout, tries, try _ sleep, user.
