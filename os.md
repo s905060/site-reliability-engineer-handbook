@@ -126,6 +126,8 @@ os.remove("test/multiple/levels/file")
 os.removedirs("test/multiple/levels")
 ```
 
+Note that removedirs removes all empty directories along the given path, starting with the last directory in the given path name. In contrast, the mkdir and rmdir functions can only handle a single directory level.
+
 ###Example: Using the os module to create and remove directories
 ```
 import os
