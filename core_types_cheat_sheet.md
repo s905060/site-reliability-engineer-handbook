@@ -196,3 +196,13 @@ hour => 2,
 minute => 0
 }
 ```
+
+**ATTRIBUTES**
+* command — The command to execute.
+* ensure — Whether the job should exist.
+ * present
+ * absent
+* hour, minute, month, monthday, and weekday
+— The timing of the cron job.
+* See also: environment, name, provider,
+special, target, user.
