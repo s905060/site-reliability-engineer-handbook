@@ -325,6 +325,7 @@
    * [XII. Admin processes](xii_admin_processes.md)
    * [Background](background.md)
    * [IV. Backing Services](iv_backing_services.md)
+   * V. Build, release, run
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
