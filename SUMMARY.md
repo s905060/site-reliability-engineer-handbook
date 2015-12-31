@@ -330,7 +330,7 @@
    * [VIII. Concurrency](viii_concurrency.md)
    * [III. Config](iii_config.md)
    * [II. Dependencies](ii_dependencies.md)
-   * X. Dev/prod parity
+   * [X. Dev/prod parity](x_devprod_parity.md)
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
