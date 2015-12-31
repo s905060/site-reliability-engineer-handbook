@@ -246,3 +246,6 @@ key _ membership, keys, membership,
 password, password _ max _ age, password _
 min _ age, profile _ membership, profiles,
 project, provider, role _ membership, roles.
+
+###group
+Manages groups
