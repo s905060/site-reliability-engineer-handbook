@@ -85,6 +85,7 @@ sample.jpg
 sample.wav
 ...
 ```
+The getcwd and chdir functions are used to get and set the current directory:
 
 ###Example: Using the os module to change the working directory
 ```
@@ -106,6 +107,7 @@ print "3", os.getcwd()
 2 /ematter/librarybook/samples
 3 /ematter/librarybook
 ```
+The makedirs and removedirs functions are used to create and remove directory hierarchies.
 
 ###Example: Using the os module to create and remove multiple directory levels
 ```
