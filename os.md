@@ -443,3 +443,17 @@ The above example first attempts to call a function named spawnvp. If that doesn
 
 On Unix, fork can also be used to turn the current process into a background process (a “daemon”). Basically, all you need to do is to fork off a copy of the current process, and terminate the original process:
 
+
+###Example: Using the os module to run as daemon (Unix)
+```
+import os
+import time
+
+pid = os.fork()
+if pid:
+    os._exit(0) # kill original
+
+print "daemon started"
+time.sleep(10)
+print "daemon terminated"
+```
