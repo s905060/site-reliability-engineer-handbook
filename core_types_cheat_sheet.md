@@ -86,3 +86,11 @@ system’s packaging tools don’t use a repository.
 configfiles, description, flavor, instance,
 platform, provider, responsefile, root,
 status, type, vendor.
+
+###service
+Manages services running on the node. Like with
+packages, some platforms have better tools than others,
+so read up. To restart a service whenever a file changes,
+subscribe to the file or have the file notify the service.
+(subscribe => File['sshd _ config'] or notify
+=> Service['sshd'])
