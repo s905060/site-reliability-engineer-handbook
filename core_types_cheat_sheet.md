@@ -26,3 +26,8 @@ service { 'sshd':
     hasrestart => true,
 }
 ```
+
+![](Screen Shot 2015-12-31 at 3.15.38 AM.png)
+
+###file
+Manages local files
