@@ -184,3 +184,6 @@ variables to set (e.g. ['MYVAR=somevalue',
 'OTHERVAR=othervalue']).
 * See also: cwd, group, logoutput, returns,
 timeout, tries, try _ sleep, user.
+
+###cron
+Manages cron jobs. Largely self-explanatory
