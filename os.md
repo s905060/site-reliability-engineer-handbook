@@ -211,7 +211,6 @@ The stat module contains a number of useful constants and helper functions for d
 You can modify the mode and time fields using the chmod and utime functions:
 
 
-
 ###Using the os module to change a file’s privileges and timestamps
 
 ```
