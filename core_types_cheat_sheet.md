@@ -147,3 +147,10 @@ Executes an arbitrary command on the agent node. When
 using execs, make sure the command can be safely run
 multiple times or specify that it should only run under
 certain conditions.
+
+**ATTRIBUTES**
+* command — The command to run; defaults to title. If
+this isn’t a fully-qualified path, use the path attribute.
+* path — A search path for executables; colonseparated
+list or an array. This is most useful as a
+resource default, e.g.:
