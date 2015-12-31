@@ -14,6 +14,10 @@ for param in os.environ.keys():
     print "%20s %s" % (param,os.environ[param])
 ```
 
+###Working with files
+
+The built-in open function lets you create, open, and modify files. This module adds those extra functions you need to rename and remove files:
+
 ###Example: Using the os module to rename and remove files
 
 ```
