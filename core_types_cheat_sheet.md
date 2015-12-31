@@ -68,3 +68,7 @@ sourceselect, type.
 Manages software packages. Some platforms have better
 package tools than others, so you’ll have to do some
 research on yours; check the type reference for more info.
+
+**ATTRIBUTES**
+* ensure — The state for this package.
+* present
