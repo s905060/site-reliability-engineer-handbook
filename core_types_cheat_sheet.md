@@ -119,3 +119,19 @@ grepping the process table. Defaults to the name of
 the service.
 * See also: binary, control, manifest, path,
 provider.
+
+###HELLO WORLD
+###notify
+Sends an arbitrary message to the agent run-time log.
+
+```
+notify { "This message is getting logged
+on the agent node.": }
+notify { "Mac warning":
+message => $operatingsystem ? {
+ 'Darwin' => "This seems to be a
+Mac.",
+ default => "And I’m a PC.",
+},
+}
+```
