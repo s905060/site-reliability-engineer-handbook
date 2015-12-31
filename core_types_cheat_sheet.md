@@ -94,3 +94,28 @@ so read up. To restart a service whenever a file changes,
 subscribe to the file or have the file notify the service.
 (subscribe => File['sshd _ config'] or notify
 => Service['sshd'])
+
+**ATTRIBUTES**
+* ensure — The desired status of the service.
+ * running (or true)
+ * stopped (or false)
+* enable — Whether the service should start on boot.
+Doesn’t work everywhere.
+ * true or false
+* name — The name of the service to run; defaults
+to title.
+* status, start, stop, and restart — Manually
+specified commands for working around bad init
+scripts.
+* hasrestart — Whether to use the init script’s restart
+command instead of stop+start. Defaults to false.
+ * true or false
+* hasstatus — Whether to use the init script’s status
+command instead of grepping the process table.
+Defaults to false.
+ * true or false
+* pattern — A regular expression to use when
+grepping the process table. Defaults to the name of
+the service.
+* See also: binary, control, manifest, path,
+provider.
