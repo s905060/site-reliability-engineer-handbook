@@ -206,3 +206,6 @@ minute => 0
 — The timing of the cron job.
 * See also: environment, name, provider,
 special, target, user.
+
+###user
+Manages user accounts; mostly used for system users.
