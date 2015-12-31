@@ -261,6 +261,10 @@ atime Thu Oct 14 15:15:50 1999
 mtime Mon Nov 13 15:42:36 1995
 ```
 
+###Working with processes
+
+The system function runs a new command under the current process, and waits for it to finish.
+
 ###Using the os module to run an operating system command
 ```
 import os
