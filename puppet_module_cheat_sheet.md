@@ -61,7 +61,8 @@ file {'/etc/apache2/httpd-ssl.conf':
 }
 ```
 
-lib
+###lib
+
 This directory holds Ruby plugins, which can add
 features to Puppet and Facter.
 
