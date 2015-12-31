@@ -331,6 +331,7 @@
    * [III. Config](iii_config.md)
    * [II. Dependencies](ii_dependencies.md)
    * [X. Dev/prod parity](x_devprod_parity.md)
+   * IX. Disposability
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
