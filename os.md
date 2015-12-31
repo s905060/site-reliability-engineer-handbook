@@ -467,3 +467,13 @@ It’s also a good idea to remove the user mode mask, to make sure files created
 `os.umask(0)`
 
 Then, you should redirect the stdout/stderr files, instead of just closing them. If you don’t do this, you may get unexpected exceptions the day some of your code tries to write something to the console via stdout or stderr.
+
+```
+class NullDevice:
+    def write(self, s):
+        pass
+
+sys.stdin.close()
+sys.stdout = NullDevice()
+sys.stderr = NullDevice()
+```
