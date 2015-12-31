@@ -141,6 +141,7 @@ Traceback (innermost last):
   File "os-example-7", line 6, in ?
 OSError: [Errno 41] Directory not empty: 'samples'
 ```
+To remove non-empty directories, you can use the rmtree function in the shutil module.
 
 ###Using the os module to get information about a file
 ```
