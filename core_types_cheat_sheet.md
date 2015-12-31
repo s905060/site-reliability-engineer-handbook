@@ -154,3 +154,18 @@ this isn’t a fully-qualified path, use the path attribute.
 * path — A search path for executables; colonseparated
 list or an array. This is most useful as a
 resource default, e.g.:
+
+```
+Exec {
+path => [
+ '/usr/local/bin',
+ '/opt/local/bin',
+ '/usr/bin',
+ '/usr/sbin',
+ '/bin',
+ '/sbin'],
+logoutput => true,
+}
+exec {'pwd':}
+exec {'whoami':}
+```
