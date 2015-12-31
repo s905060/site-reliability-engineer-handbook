@@ -79,3 +79,24 @@ A custom function.
 A custom fact.
 
 ###templates
+This directory holds ERB templates.
+
+* Use the template function to create a string
+by rendering a template.
+
+* Use the content attribute to fill file contents with a
+string.
+
+* Template files are referenced as
+modulename/filename.erb​.
+
+```
+apache/templates/vhost.erb
+To use this template:
+file
+{'/etc/apache2/sites-enabled/wordpress.conf'
+:
+ensure => file,
+content => template('apache/vhost.erb'),
+} 
+```
