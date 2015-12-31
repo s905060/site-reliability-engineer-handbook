@@ -438,3 +438,8 @@ goodbye
 ```
 
 The above example first attempts to call a function named spawnvp. If that doesn’t exist (it doesn’t, in 2.0 and earlier), the function looks for a function named spawnv and searches the path all by itself. As a last resort, it falls back on exec and fork.
+
+###Working with daemon processes
+
+On Unix, fork can also be used to turn the current process into a background process (a “daemon”). Basically, all you need to do is to fork off a copy of the current process, and terminate the original process:
+
