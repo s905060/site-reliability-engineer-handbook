@@ -212,11 +212,11 @@ Manages user accounts; mostly used for system users.
 
 ```
 user { "dave":
-ensure => present,
-uid => '507',
-gid => 'admin',
-shell => '/bin/zsh',
-home => '/home/dave',
-managehome => true,
+    ensure => present,
+    uid => '507',
+    gid => 'admin',
+    shell => '/bin/zsh',
+    home => '/home/dave',
+    managehome => true,
 }
 ```
