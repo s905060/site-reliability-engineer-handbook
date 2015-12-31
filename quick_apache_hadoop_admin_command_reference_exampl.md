@@ -87,9 +87,7 @@ The following dfsadmin commands helps the cluster to enter or leave safe mode, w
 |Command	|Description
 |--|--
 |hdfs haadmin -getServiceState nn1 | Determine whether the given NameNode is active or standby.
-
-
-| | Check the health of the given NameNode.
+|hdfs haadmin -checkHealth nn1 | Check the health of the given NameNode.
 |hdfs haadmin -transitionToActive --forcemanual nn1 | Force transition for a NN to Active
 |hdfs haadmin -failover nn2 nn1|Failover NameNode 
 
