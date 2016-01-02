@@ -12,3 +12,7 @@ It is really easy to setup Githug. You can simply install it with the following 
 
 This should work on MacOS X and the common Linux distros. On Linux, you can simply use yum, apt-get or the packet-installation software, that your distro uses, to install gem.
 
+###Solutions
+
+As I had some trouble myself with some of those levels, I thought, that it might be helpful for other people to find a solution to the levels. I decided to make my solutions available, hoping they might help you. My approach of solving the levels might differ from your approach, but that’s the beauty of such problems. There often isn’t this one way to get things done. But without any further ado, here’s my solution.
+
