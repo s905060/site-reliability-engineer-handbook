@@ -384,6 +384,6 @@
    * [Git](git.md)
        * [You have an empty repository](you_have_an_empty_repository.md)
        * [Git study notes](git_study_notes.md)
-       * Githug – What is it?
+       * [Githug – What is it?](githug__what_is_it.md)
    * [SVN](svn.md)
 
