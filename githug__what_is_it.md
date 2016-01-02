@@ -153,9 +153,11 @@ git tag new_tag
 ###Level 18: push_tags
 
 There are tags in the repository that aren’t pushed into remote repository. Push them now.
-
+```
 git push ––tags
-Level 19: commit_amend
+```
+
+###Level 19: commit_amend
 
 The README file has been committed, but it looks like the file forgotten_file.rb was missing from the commit.Add the file and amend your previous commit to include it.
 
