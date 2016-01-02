@@ -311,9 +311,11 @@ I like check which branch I’m on by using git branch before I merge changes is
 ###Level 39: fetch
 
 Looks like a new branch was pushed into our remote repository. Get the changes without merging them with the local repository.
-
+```
 git fetch origin
-Level 40: repack
+```
+
+###Level 40: repack
 
 Optimise how your repository is packaged ensuring that redundant packs are removed.
 
