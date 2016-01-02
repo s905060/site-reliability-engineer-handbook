@@ -325,15 +325,17 @@ git repack -d
 ###Level 41: cherry-pick
 
 Your new feature isn’t worth the time and you’re going to delete it. But it has one commit that fills in README file, and you want this commit to be on the master as well.
-
+```
 git branch
 git checkout new-feature
 git log ––oneline
 git checkout master
 git cherry-picker ca32a6d
+```
+
 I usually like to use ––onelinewhen I display the log in my Terminal. And as you might guess, the Hash I cherry-pick, belongs to the commit, that included the READMEfile. You can cherry-pick more than one file at a time, for further information you might want to read either this simple introduction or the documentation.
 
-Level 42: grep
+###Level 42: grep
 
 Your project’s deadline approaches, you should evaluate how many TODOs are left in your code
 
