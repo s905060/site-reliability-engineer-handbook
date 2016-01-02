@@ -146,9 +146,11 @@ Enter the hash of the last commit that will be printed. For a nicer output, I ch
 ###Level 17: tag
 
 We have a git repo and we want to tag the current commit with new_tag.
-
+```
 git tag new_tag
-Level 18: push_tags
+```
+
+###Level 18: push_tags
 
 There are tags in the repository that aren’t pushed into remote repository. Push them now.
 
