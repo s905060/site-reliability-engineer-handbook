@@ -177,9 +177,11 @@ In addition, the date part is accepted in the following formats: YYYY.MM.DD, MM/
 ###Level 21: reset
 
 There are two files to be committed.The goal was to add each file as a separate commit, however both were added by accident.Unstage the file to_commit_second.rb using the reset command (don’t commit anything).
-
+```
 git reset HEAD to_commit_second.rb
-Level 22: reset_soft
+```
+
+###Level 22: reset_soft
 
 You committed too soon. Now you want to undo the last commit, while keeping the index.
 
