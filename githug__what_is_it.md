@@ -198,9 +198,11 @@ git checkout –– config.rb
 ###Level 24: remote
 
 This project has a remote repository.Identify it.
-
+```
 git remote
-Level 25: remote_url
+```
+
+###Level 25: remote_url
 
 The remote repositories have a url associated to them.Please enter the url of remote_location.
 
