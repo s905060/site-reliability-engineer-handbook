@@ -7,6 +7,7 @@ Githug is written in Ruby and maintained on Github. There are more levels to com
 ###Installation
 
 It is really easy to setup Githug. You can simply install it with the following command:
+
 `gem install githug`
 
 This should work on MacOS X and the common Linux distros. On Linux, you can simply use yum, apt-get or the packet-installation software, that your distro uses, to install gem.
