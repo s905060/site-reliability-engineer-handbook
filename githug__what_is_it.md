@@ -214,9 +214,11 @@ Copy the url of the remote repo
 ###Level 26: pull
 
 You need to pull changes from your origin repository.
-
+```
 git pull origin master
-Level 27: remote_add
+```
+
+###Level 27: remote_add
 
 Add a remote repository called origin with the url https://github.com/githug/githug
 
