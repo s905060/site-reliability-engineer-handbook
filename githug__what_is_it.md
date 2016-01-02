@@ -221,9 +221,11 @@ git pull origin master
 ###Level 27: remote_add
 
 Add a remote repository called origin with the url https://github.com/githug/githug
-
+```
 git remote add origin https://github.com/githug/githug
-Level 28: push
+```
+
+###Level 28: push
 
 Your local master branch has diverged from the remote origin/master branch. Rebase your commit onto origin/master and push it to remote.
 
