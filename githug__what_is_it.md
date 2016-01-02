@@ -122,22 +122,28 @@ git stash
 ###Level 14: rename
 
 We have a file called oldfile.txt. We want to rename it to newfile.txt and stage this change.
-
+```
 git mv oldfile.txt newfile.txt
-Level 15: restructure
+```
+
+###Level 15: restructure
 
 You added some files to your repository, but now realize that your project needs to be restructured.Make a new folder named src, and move all of the .html files into this folder.
-
+```
 mkdir src
 git mv *.html src/
-Level 16: log
+```
+
+###Level 16: log
 
 You will be asked for the hash of most recent commit.You will need to investigate the logs of the repository for this.
-
+```
 git log ––oneline
+```
+
 Enter the hash of the last commit that will be printed. For a nicer output, I chose the option ––oneline.
 
-Level 17: tag
+###Level 17: tag
 
 We have a git repo and we want to tag the current commit with new_tag.
 
