@@ -205,11 +205,13 @@ git remote
 ###Level 25: remote_url
 
 The remote repositories have a url associated to them.Please enter the url of remote_location.
-
+```
 git remote -v
+```
+
 Copy the url of the remote repo
 
-Level 26: pull
+###Level 26: pull
 
 You need to pull changes from your origin repository.
 
