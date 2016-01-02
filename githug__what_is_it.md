@@ -168,11 +168,13 @@ git commit ––amend
 ###Level 20: commit_in_future
 
 Commit your changes with the future date (e.g. tomorrow).
-
+```
 git commit ––date=25.10.2015T22:23:23
+```
+
 In addition, the date part is accepted in the following formats: YYYY.MM.DD, MM/DD/YYYY and DD.MM.YYYY.
 
-Level 21: reset
+###Level 21: reset
 
 There are two files to be committed.The goal was to add each file as a separate commit, however both were added by accident.Unstage the file to_commit_second.rb using the reset command (don’t commit anything).
 
