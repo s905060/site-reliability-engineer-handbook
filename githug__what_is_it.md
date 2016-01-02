@@ -184,9 +184,11 @@ git reset HEAD to_commit_second.rb
 ###Level 22: reset_soft
 
 You committed too soon. Now you want to undo the last commit, while keeping the index.
-
+```
 git reset ––soft HEAD^
-Level 23: checkout_file
+```
+
+###Level 23: checkout_file
 
 A file has been modified, but you don’t want to keep the modification.Checkout the config.rb file from the last commit.
 
