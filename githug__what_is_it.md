@@ -236,11 +236,13 @@ git push origin master
 ###Level 29: diff
 
 There have been modifications to the app.rb file since your last commit.Find out which line has changed.
-
+```
 git diff
+```
+
 Explanation: You get the output, starting at line 23, which displays “erb :success”. The changes three lines below, so the changes are in line 26.
 
-Level 30: blame
+###Level 30: blame
 
 Someone has put a password inside the file config.rb find out who it was.
 
