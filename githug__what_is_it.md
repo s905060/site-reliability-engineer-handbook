@@ -90,28 +90,36 @@ You now have to simply insert the name of the untracked file: database.yml
 ###Level 10: number_of_files_commited
 
 There are some files in this repository, how many of the files will be committed?
-
+```
 git status
+```
+
 Look, at those files, that are ready to be committed. Those are rubyfile1.rb and rubyfile4.rb
 
-Level 11: rm
+###Level 11: rm
 
 A file has been removed from the working tree, however the file was not removed from the repository.Find out what this file was and remove it.
-
+```
 git status
 git rm deleteme.rb
-Level 12: rm_cached
+```
+
+###Level 12: rm_cached
 
 A file has accidentally been added to your staging area, find out which file and remove it from the staging area.NOTE Do not remove the file from the file system, only from git.
-
+```
 git status
 git rm ––cached deleteme.rb
-Level 13: stash
+```
+
+###Level 13: stash
 
 You’ve made some changes and want to work on them later. You should save them, but don’t commit them.
-
+```
 git stash
-Level 14: rename
+```
+
+###Level 14: rename
 
 We have a file called oldfile.txt. We want to rename it to newfile.txt and stage this change.
 
