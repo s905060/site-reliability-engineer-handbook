@@ -245,52 +245,70 @@ Explanation: You get the output, starting at line 23, which displays “erb :suc
 ###Level 30: blame
 
 Someone has put a password inside the file config.rb find out who it was.
-
+```
 git blame `config.rb`
-Level 31: branch
+```
+
+###Level 31: branch
 
 You want to work on a piece of code that has the potential to break things, create the branch test_code.
-
+```
 git branch test_code
-Level 32: checkout
+```
+
+###Level 32: checkout
 
 Create and switch to a new branch called my_branch.You will need to create a branch like you did in the previous level.
-
+```
 git checkout -b my_branch
-Level 33: checkout_tag
+```
+
+###Level 33: checkout_tag
 
 You need to fix a bug in the version 1.2 of your app. Checkout the tag v1.2.
-
+```
 git checkout v1.2
-Level 34: checkout_tag_over_branch
+```
+
+###Level 34: checkout_tag_over_branch
 
 You need to fix a bug in the version 1.2 of your app. Checkout the tag v1.2 (Note: There is also a branch named v1.2).
-
+```
 git checkout tags/v1.2
-Level 35: branch_at
+```
+
+###Level 35: branch_at
 
 You forgot to branch at the previous commit and made a commit on top of it. Create branch test_branch at the commit before the last.
-
+```
 git branch test_branch HEAD^
-Level 36: delete_branch
+```
+
+###Level 36: delete_branch
 
 You have created too many branches for your project. There is an old branch in your repo called ‘delete_me’, you should delete it.
-
+```
 git branch -d delete_me
-Level 37: push_branch
+```
+
+###Level 37: push_branch
 
 You’ve made some changes to a local branch and want to share it, but aren’t yet ready to merge it with the ‘master’ branch.Push only ‘test_branch’ to the remote repository
-
+```
 git push origin test_branch
-Level 38: merge
+```
+
+###Level 38: merge
 
 We have a file in the branch ‘feature’; Let’s merge it to the master branch.
-
+```
 git branch
 git merge feature
+```
+
 I like check which branch I’m on by using git branch before I merge changes is. This helped me a lot in the past and I recommend you to do the same, in case you merge into the wrong branch.
 
-Level 39: fetch
+###Level 39: fetch
 
 Looks like a new branch was pushed into our remote repository. Get the changes without merging them with the local repository.
 
