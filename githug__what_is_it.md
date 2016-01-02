@@ -191,9 +191,11 @@ git reset ––soft HEAD^
 ###Level 23: checkout_file
 
 A file has been modified, but you don’t want to keep the modification.Checkout the config.rb file from the last commit.
-
+```
 git checkout –– config.rb
-Level 24: remote
+```
+
+###Level 24: remote
 
 This project has a remote repository.Identify it.
 
