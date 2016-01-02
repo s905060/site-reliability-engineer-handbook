@@ -441,4 +441,5 @@ vim poem.txt
 git add poem.txt
 git commit
 ```
+
 Edit the file so all the included lines disappear and only the one line that rhymes stays. You might be interested in this introduction.
