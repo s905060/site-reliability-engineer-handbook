@@ -228,10 +228,12 @@ git remote add origin https://github.com/githug/githug
 ###Level 28: push
 
 Your local master branch has diverged from the remote origin/master branch. Rebase your commit onto origin/master and push it to remote.
-
+```
 git rebase origin/master master
 git push origin master
-Level 29: diff
+```
+
+###Level 29: diff
 
 There have been modifications to the app.rb file since your last commit.Find out which line has changed.
 
