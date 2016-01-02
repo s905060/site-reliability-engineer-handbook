@@ -318,9 +318,11 @@ git fetch origin
 ###Level 40: repack
 
 Optimise how your repository is packaged ensuring that redundant packs are removed.
-
+```
 git repack -d
-Level 41: cherry-pick
+```
+
+###Level 41: cherry-pick
 
 Your new feature isn’t worth the time and you’re going to delete it. But it has one commit that fills in README file, and you want this commit to be on the master as well.
 
