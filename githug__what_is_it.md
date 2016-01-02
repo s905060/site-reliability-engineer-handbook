@@ -160,10 +160,12 @@ git push ––tags
 ###Level 19: commit_amend
 
 The README file has been committed, but it looks like the file forgotten_file.rb was missing from the commit.Add the file and amend your previous commit to include it.
-
+```
 git add forgotten_file.rb
 git commit ––amend
-Level 20: commit_in_future
+```
+
+###Level 20: commit_in_future
 
 Commit your changes with the future date (e.g. tomorrow).
 
