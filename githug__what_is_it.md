@@ -338,44 +338,54 @@ I usually like to use ––onelinewhen I display the log in my Terminal. And as
 ###Level 42: grep
 
 Your project’s deadline approaches, you should evaluate how many TODOs are left in your code
-
+```
 git grep TODO
+```
+
 After this, you just have to count the lines.
 
-Level 43: rename_commit
+###Level 43: rename_commit
 
 Correct the typo in the message of your first (non-root) commit.
-
+```
 git log
 git rebase -i ffc13cc
+```
+
 You need to look for the commit you want to rename, then replace the command pick with the word reword and then save the file. Another file opens, where you can rename your commit message.
 
-Level 44: squash
+###Level 44: squash
 
 You have committed several times but would like all those changes to be one commit.
-
+```
 git log
 git rebase -i
+```
+
 Squash the first two commits into the newest one, which you want to pick.
 
-Level 45: merge_squash
+###Level 45: merge_squash
 
 Merge all commits from the long-feature-branch as a single commit.
-
+```
 git merge ––squash long-feature-branch
 git commit
-Level 46: reorder
+```
+
+###Level 46: reorder
 
 You have committed several times but in the wrong order. Please reorder your commits.
-
+```
 git log
 git rebase -i
+```
+
 Then just switch the commit order, by copy-pasting the third commit after the second commit.
 
-Level 47: bisect
+###Level 47: bisect
 
 A bug was introduced somewhere along the way.You know that running ruby prog.rb 5 should output 15.You can also run make test.What are the first 7 chars of the hash of the commit that introduced the bug.
-
+```
 git bisect start
 ruby prog.rb 5 // Expect output 15
 git bisect bad
@@ -385,39 +395,50 @@ git bisect good
 ruby prog.rb 5 // Test the output and decide, whether it’s good or bad
 git bisect bad
 //eat, sleep, check, repeat
-Level 48: stage_lines
+```
+
+###Level 48: stage_lines
 
 You’ve made changes within a single file that belong to two different features, but neither of the changes are yet staged. Stage only the changes belonging to the first feature.
-
+```
 git add -p
+```
+
 And then stage the lines manually.
 
-Level 49: find_old_branch
+###Level 49: find_old_branch
 
 You have been working on a branch but got distracted by a major issue and forgot the name of it. Switch back to that branch.
-
+```
 git reflog
 git checkout solve_world_hunger // The last branch I was on before the last commit
-Level 50: revert
+```
+
+###Level 50: revert
 
 You have committed several times but want to undo the middle commit.
 All commits have been pushed, so you can’t change existing history.
-
+```
 git revert HEAD^1
-Level 51: restore
+```
+
+###Level 51: restore
 
 You decided to delete your latest commit by running git reset ––hard HEAD^.(Not a smart thing to do.)You then change your mind, and want that commit back.Restore the deleted commit.
-
+```
 git reflog
 git checkout bdc3d2b
-Level 52: conflict
+```
+
+###Level 52: conflict
 
 You need to merge mybranch into the current branch (master). But there may be some incorrect changes in mybranch which may cause conflicts. Solve any merge-conflicts you come across and finish the merge.
-
+```
 git branch // Just check, which branch you are one
 git merge mybranch
 git status
 vim poem.txt
 git add poem.txt
 git commit
+```
 Edit the file so all the included lines disappear and only the one line that rhymes stays. You might be interested in this introduction.
