@@ -72,18 +72,22 @@ Insert: *.swp
 ###LeveL 8: include
 
 Notice a few files with the ‘.a’ extension.We want git to ignore all but the ‘lib.a’ file.
-
+```
 vim .gitignore
 *.a
 !lib.a
-Level 9: status
+```
+
+###Level 9: status
 
 There are some files in this repository, one of the files is untracked, which file is it?
-
+```
 git status
+```
+
 You now have to simply insert the name of the untracked file: database.yml
 
-Level 10: number_of_files_commited
+###Level 10: number_of_files_commited
 
 There are some files in this repository, how many of the files will be committed?
 
