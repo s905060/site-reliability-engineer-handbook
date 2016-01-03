@@ -5,6 +5,5 @@ openssl passwd -1 -salt <8 random character for your choice> <the password you w
 ```
 
 ```
-openssl passwd -1 -salt 'random-phrase-here'
-'your-password-here
+openssl passwd -1 -salt 'random-phrase-here' 'your-password-here
 ```
