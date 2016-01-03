@@ -41,35 +41,45 @@ limits the core file size (KB)
 **data**
 maximum data size (KB)
 
-fsize
+**fsize**
 maximum filesize (KB)
-memlock
+
+**memlock**
 maximum locked-in-memory address space (KB)
-nofile
+
+**nofile**
 maximum number of open files
-rss
+
+**rss**
 maximum resident set size (KB) (Ignored in Linux 2.4.30 and higher)
-stack
+
+**stack**
 maximum stack size (KB)
-cpu
+
+**cpu**
 maximum CPU time (minutes)
-nproc
+
+**nproc**
 maximum number of processes
-as
-address space limit (KB)
-maxlogins
+as address space limit (KB)
+
+**maxlogins**
 maximum number of logins for this user except for this with uid=0
-maxsyslogins
-maximum number of all logins on system
-priority
-the priority to run user process with (negative values boost process priority)
-locks
+
+**maxsyslogins**
+maximum number of all logins on system priority the priority to run user process with (negative values boost process priority)
+
+**locks**
 maximum locked files (Linux 2.4 and higher)
-sigpending
+
+**sigpending**
 maximum number of pending signals (Linux 2.6 and higher)
-msgqueue
+
+**msgqueue**
 maximum memory used by POSIX message queues (bytes) (Linux 2.6 and higher)
-nice
+
+**nice**
 maximum nice priority allowed to raise to (Linux 2.6.12 and higher) values: [-20,19]
-rtprio
+
+**rtprio**
 maximum realtime priority allowed for non-privileged processes (Linux 2.6.12 and higher)
