@@ -94,3 +94,19 @@ Also, please note that all limit settings are set per login. They are not global
 In the limits configuration file, the '#' character introduces a comment - after which the rest of the line is ignored.
 
 The pam_limits module does report configuration problems found in its configuration file and errors via syslog(3).
+
+###Examples
+
+These are some example lines which might be specified in /etc/security/limits.conf.
+```
+*               soft    core            0
+*               hard    nofile          512
+@student        hard    nproc           20
+@faculty        soft    nproc           20
+@faculty        hard    nproc           50
+ftp             hard    nproc           0
+@student        -       maxlogins       4
+:123            hard    cpu             5000
+@500:           soft    cpu             10000
+600:700         hard    locks           10
+```
