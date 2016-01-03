@@ -83,3 +83,14 @@ maximum nice priority allowed to raise to (Linux 2.6.12 and higher) values: [-20
 
 **rtprio**
 maximum realtime priority allowed for non-privileged processes (Linux 2.6.12 and higher)
+
+All items support the values -1, unlimited or infinity indicating no limit, except for priority and nice.
+If a hard limit or soft limit of a resource is set to a valid value, but outside of the supported range of the local system, the system may reject the new limit or unexpected behavior may occur. If the control value required is used, the module will reject the login if a limit could not be set.
+
+In general, individual limits have priority over group limits, so if you impose no limits for admin group, but one of the members in this group have a limits line, the user will have its limits set according to this line.
+
+Also, please note that all limit settings are set per login. They are not global, nor are they permanent; existing only for the duration of the session.
+
+In the limits configuration file, the '#' character introduces a comment - after which the rest of the line is ignored.
+
+The pam_limits module does report configuration problems found in its configuration file and errors via syslog(3).
