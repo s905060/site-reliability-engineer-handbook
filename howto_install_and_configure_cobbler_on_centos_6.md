@@ -121,7 +121,13 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
      range dynamic-bootp        192.168.1.100 192.168.1.254;
 ```
 After the above changes it's time to restart cobbler
+```
 service cobblerd restart
+```
+
 All changes are now active, let's check if cobbler has any recomendations to get things working:
+```
 cobbler check
+```
+
 Correct settings sugested by Cobbler check command
