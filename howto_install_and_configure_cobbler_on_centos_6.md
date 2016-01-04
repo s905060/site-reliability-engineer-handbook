@@ -29,3 +29,14 @@ to:
 ```
 SELINUX=disabled
 ```
+
+###Disable iptables
+Stop Iptables:
+```
+service iptables stop
+```
+
+Disable iptables:
+```
+chkconfig iptables off
+```
