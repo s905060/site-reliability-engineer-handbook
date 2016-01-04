@@ -48,20 +48,22 @@ http://download.fedora.redhat.com/pub/epel/6/i386/epel-release-6-5.noarch.rp
 m
 ```
 
-Install Cobbler and prerequisites
+###Install Cobbler and prerequisites
 Install the required packages:
+```
 yum install cobbler cobbler-web pykickstart
+```
+
 Enable the required services:
-Start the required services:
-Configure Cobbler and prerequisites Install and Configure ISC Dhcp and Bind
-For a complete standalone install server we need to install a local dhcp server and a dns server, we will use the bind dns software and the dhcp software both from ISC. Bind has a track record of being hard to configure because of the miriad of options but since cobbler does all the configuring for us we dont need to worry about that.
-First install Bind and Dhcp
-yum install -y bind bind-utils dhcp
-Enable Bind
-http://wiki.bsdserver.nl/ Printed on 2015/08/14 00:03
-rpm -Uhv
-http://download.fedora.redhat.com/pub/epel/6/i386/epel-release-6-5.noarch.rp
-m
+```
 chkconfig httpd on
 chkconfig xinetd on
 chkconfig cobblerd on
+```
+
+Start the required services:
+```
+service httpd start
+service xinetd start
+service cobblerd start
+```
