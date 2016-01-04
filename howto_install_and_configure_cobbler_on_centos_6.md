@@ -20,6 +20,12 @@ vi /etc/sysconfig/network
 ###Configure the resolver
 ###Disable selinux
 Change the following line from:
-```SELINUX=enforcing```
+```
+SELINUX=enforcing
+
+```
 to:
-```SELINUX=disabled```
+
+```
+SELINUX=disabled
+```
