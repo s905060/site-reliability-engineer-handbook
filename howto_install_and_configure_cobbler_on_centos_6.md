@@ -131,3 +131,53 @@ cobbler check
 ```
 
 Correct settings sugested by Cobbler check command
+```
+vi /etc/cobbler/settings.conf
+```
+
+change the following lines in the settings file to match the example below
+```
+server: 192.168.1.66
+next_server: 192.168.1.66
+```
+
+Now we need to install some network bootloaders
+```
+cobbler get-loaders
+```
+
+This will download all required boot loaders and some more exotic boot loaders for other architectures.
+Enable the tftpd daemon in xinetd
+```
+vi /etc/xinetd.d/tftp
+```
+
+And change the line:
+```
+disable = yes
+```
+
+to:
+```
+disable = no
+```
+Enable the Rsync daemon in xinetd
+
+```
+vi /etc/xinetd.d/rsync
+```
+
+And change the line:
+```
+disable = yes
+```
+
+to:
+```
+disable = no
+```
+
+Now we can restart xinetd
+```
+service xinetd restart
+```
