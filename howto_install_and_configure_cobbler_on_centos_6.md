@@ -16,3 +16,10 @@ First we set the correct hostname and gateway
 ```
 vi /etc/sysconfig/network
 ```
+
+###Configure the resolver
+###Disable selinux
+Change the following line from:
+```SELINUX=enforcing```
+to:
+```SELINUX=disabled```
