@@ -297,6 +297,7 @@
    * [How to Error Detection and Correction](how_to_error_detection_and_correction.md)
    * [How To Kerberos](how_to_kerberos.md)
    * [How to identify defective DIMM from EDAC error on Linux](how_to_identify_defective_dimm_from_edac_error_on_.md)
+   * Howto Install and Configure Cobbler on Centos 6
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
