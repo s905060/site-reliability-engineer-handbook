@@ -67,3 +67,6 @@ service httpd start
 service xinetd start
 service cobblerd start
 ```
+
+###Configure Cobbler and prerequisites 
+###Install and Configure ISC Dhcp and Bind
