@@ -7,3 +7,12 @@ After the installation finnishes we need to perform the following steps before w
 3. Disable Selinux
 4. Disable Iptables Firewall
 5. Install EPEL Yum Repository
+
+###Configure Linux
+###Configure the network interfaces
+In Redhat 6 Network configurations are handled by network-manager. Since I always install a minimalistic server network-manager is by default not installed and configuration should be done the old fashioned way by edditing the configuration files directly.
+First we set the correct hostname and gateway
+
+```
+vi /etc/sysconfig/network
+```
