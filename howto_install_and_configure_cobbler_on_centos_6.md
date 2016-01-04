@@ -77,3 +77,8 @@ First install Bind and Dhcp
 ```
 yum install -y bind bind-utils dhcp
 ```
+
+Enable Bind
+```
+chkconfig named on
+```
