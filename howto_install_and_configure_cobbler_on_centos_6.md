@@ -72,4 +72,8 @@ service cobblerd start
 ###Install and Configure ISC Dhcp and Bind
 
 For a complete standalone install server we need to install a local dhcp server and a dns server, we will use the bind dns software and the dhcp software both from ISC. Bind has a track record of being hard to configure because of the miriad of options but since cobbler does all the configuring for us we dont need to worry about that.
+
 First install Bind and Dhcp
+```
+yum install -y bind bind-utils dhcp
+```
