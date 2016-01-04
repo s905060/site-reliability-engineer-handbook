@@ -106,3 +106,22 @@ module = manage_bind
 [dhcp]
 module = manage_isc
 ```
+
+Configuring Bind and Dhcp is done via cobbler, open the following files and make the the changes as stated below:
+```
+vi /etc/cobbler/dhcp.template
+```
+
+Make sure the following lines match your network configuration
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+     option routers             192.168.1.1;
+     option domain-name-servers 192.168.1.1;
+     option subnet-mask         255.255.255.0;
+     range dynamic-bootp        192.168.1.100 192.168.1.254;
+```
+After the above changes it's time to restart cobbler
+service cobblerd restart
+All changes are now active, let's check if cobbler has any recomendations to get things working:
+cobbler check
+Correct settings sugested by Cobbler check command
