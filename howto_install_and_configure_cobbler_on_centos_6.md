@@ -82,3 +82,27 @@ Enable Bind
 ```
 chkconfig named on
 ```
+
+Start Bind
+```
+service named start
+```
+Enable Dhcp
+```
+chkconfig dhcpd on
+```
+Start Dhcp
+```
+service dhcpd start
+```
+Enable dns and dhcp management in cobbler
+```
+vi /etc/cobbler/modules.conf
+```
+and configure the dns and dhcp lines to look like the example below
+```
+[dns]
+module = manage_bind
+[dhcp]
+module = manage_isc
+```
