@@ -235,6 +235,7 @@
    * [ARP spoofing](arp_spoofing.md)
    * [Kerberos](kerberos.md)
    * [HTTPS](https.md)
+   * Beginners’ Guide To PGP
 * [Virtualization](virtualization.md)
    * [Docker](docker.md)
        * [Expose Docker Remote API on CentOS](expose_docker_remote_api_on_centos.md)
