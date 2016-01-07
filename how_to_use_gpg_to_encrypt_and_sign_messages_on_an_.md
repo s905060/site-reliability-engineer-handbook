@@ -235,3 +235,15 @@ The parameters basically encrypt the email, sign it with your private key to gua
 You should also include a second "-r" recipient with your own email address if you want to be able to read the message ever. This is because the message will be encrypted with each person's public key, and will only be able to be decrypted with the associated private key.
 
 So if it was only encrypted with the other party's public key, you would not be able to view the message again, unless you somehow obtained their private key. Adding yourself as a second recipient encrypts the message two separate times, one for each recipient.
+
+###Decrypt Messages
+
+When you receive a message, simply call GPG on the message file:
+```
+gpg file_name
+```
+
+The software will prompt you as necessary.
+
+If you have the message as a raw text stream, you can copy and paste it after you just typing gpg without any arguments. You can press "CTRL-D" to signify the end of the message and GPG will decrypt it for you.
+
