@@ -173,3 +173,10 @@ When they receive this new, signed key, they can import it, adding on the signin
 ```
 gpg --import file_name
 ```
+
+###How To Make Your Public Key Highly Available
+There is not really anything malicious that can happen if unknown people have your public key.
+
+Because of this, it may be beneficial to make your public key easily available. People can then easily find your information to send you secure messages, from the very first communication.
+
+You can send anyone your public key by requesting it from the GPG system:
