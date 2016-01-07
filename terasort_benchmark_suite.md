@@ -28,5 +28,11 @@ The syntax for running TeraGen is as follows:
 
 ```
 $ hadoop jar hadoop-*examples*.jar teragen <number of 100-byte rows> <output dir>
+```
+
+Using the HDFS output directory /user/hduser/terasort-input as an example, the command to run TeraGen in order to generate 1TB of input data (i.e. 1,000,000,000,000 bytes) is:
+
+```
+$ hadoop jar hadoop-*examples*.jar teragen 10000000000 /user/hduser/terasort-input
 
 ```
