@@ -110,3 +110,6 @@ tprTYmxyjzSvaIw5tjsgylMZ48+qp/Awe34UWL9AWk3DvmydAerAxLdiK/80KJp0
 GPG would be pretty useless if you could not accept other public keys from people you wished to communicate with.
 
 You can import someone's public key in a variety of ways. If you've obtained a public key from someone in a text file, GPG can import it with the following command:
+```
+gpg --import name_of_pub_key_file
+```
