@@ -35,4 +35,3 @@ $ hadoop jar hadoop-*test*.jar nnbench -operation create_write \
 ```
 
 Note that by default the benchmark waits 2 minutes before it actually starts!
-
