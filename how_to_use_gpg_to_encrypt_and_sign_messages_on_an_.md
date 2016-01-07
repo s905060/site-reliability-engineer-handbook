@@ -26,3 +26,8 @@ This can prevent a third-party from "spoofing" the identity of someone. It also 
 ###Set Up GPG Keys
 GPG should be installed by default on Ubuntu 12.04. If it is not, you can install it with:
 
+```
+sudo apt-get install gnupg
+```
+
+To begin using GPG to encrypt your communications, you need to create a key pair. You can do this by issuing the following command:
