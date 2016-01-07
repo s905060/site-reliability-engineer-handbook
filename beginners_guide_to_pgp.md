@@ -263,3 +263,14 @@ Finally, we should probably talk a little about key management. One of the downs
 
 Obviously, a critical part of security in PGP is the ability to trust that the public key belongs to its purported owner. While complete trust is difficult to achieve, there are a few methods you can use to increase your level of trust.
 
+1.  **Meet in person**. If someone physically hands you their public key, then obviously this eliminates the problem of trust. Of course, this is very inefficient.
+
+2. **Verify the fingerprint**. Each PGP certificate has a unique fingerprint which is calculated as the hash of the certificate represented in hexadecimal. It looks like this:
+```
+0150 2502 DD3A 928D CE52 8CB9 B895 6DBF EE7C 105C
+```
+If you can get the key’s owner to verify the fingerprint, possibly by reading it over the phone, then you can be fairly confident in the validity of the certificate. Obviously, finding an appropriate communication channel to verify the fingerprint can be tricky.
+
+3. **Download the key from multiple IP addresses/devices/servers** A MITM attack is difficult to pull off as it is. It becomes much harder if the attacker has to watch the communications of multiple IP addresses and servers. To this end you can increase the trust in the public key by downloading it from multiple locations (home, work, the library, Starbucks, over Tor, etc), from multiple devices, and from multiple servers. Gather up all the keys and check to make sure they are all they same. If so, you can be reasonably confident the key is valid. It would be extremely difficult to pull off a MITM attack after all that.
+
+4. **Web of trust**. In PGP you have the ability to use your private key to sign the someone else’s public key. This creates the opportunity to introduce a sort of six degrees of separation trust model. Let’s say you’ve downloaded Charlie’s public key but don’t know if you can trust it. Charlie’s key is signed by Bob, who you also don’t trust, and Bob’s key is signed by Alice, who you do trust. Because you trust Alice, this gives you chain of trust that goes all the way to Charlie, allowing you to trust Charlie’s key. The only downside to web of trust is that it can be difficult to get started and make enough connections to link you to all the keys you wish to download.
