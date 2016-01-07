@@ -360,6 +360,7 @@
        * [Running DFSIO mapreduce benchmark test](running_dfsio_mapreduce_benchmark_test.md)
        * [Quick Apache Hadoop Admin Command Reference Examples](quick_apache_hadoop_admin_command_reference_exampl.md)
        * [TeraSort benchmark suite](terasort_benchmark_suite.md)
+       * NameNode benchmark (nnbench)
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
