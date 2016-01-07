@@ -174,3 +174,6 @@ Keep in mind, if you are decrypting data on your normal computer, you could be r
 
 Any air gapped computer (one permanently disconnected from the internet) would work for this purpose. Or you could boot into a Linux live system (such as Tails) from a USB stick to isolate your work environment from preexisting malware.
 
+###Signing Data
+
+Just like with encryption you can either sign a message from your clipboard or sign whole files. The process is just as straightforward as before except this time you will select “sign” rather than “encrypt”. Here you will again be prompted for your password. The resulting output will look like this:
