@@ -51,3 +51,8 @@ where
 3. The filler consists of 7 runs of 10 characters from ‘A’ to ‘Z’.
 
 If you have a very fast cluster, your map tasks might finish in a few seconds if you use a relatively small default HDFS block size such as 128MB (which is not a bad idea though in general). This means that the time to start/stop map tasks might be larger than the time to perform the actual task. In other words, the overhead for managing the TaskTrackers might exceed the job’s “payload”. An easy way to work around this is to increase the HDFS block size for files written by TeraGen. Keep in mind that the HDFS block size is a per-file setting, and the value specified by the dfs.block.size property in hdfs-default.xml (or conf/hdfs-site.xml if you use a custom configuration file) is just a default value. So if, for example, you want to use an HDFS block size of 512MB (i.e. 536870912 bytes) for the TeraSort benchmark suite, overwrite dfs.block.size when running TeraGen:
+
+```
+$ hadoop jar hadoop-*examples*.jar teragen -D dfs.block.size=536870912 ...
+```
+
