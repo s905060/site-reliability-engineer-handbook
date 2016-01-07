@@ -56,3 +56,19 @@ If you have a very fast cluster, your map tasks might finish in a few seconds if
 $ hadoop jar hadoop-*examples*.jar teragen -D dfs.block.size=536870912 ...
 ```
 
+###TeraSort: Run the actual TeraSort benchmark
+
+TeraSort (source code) is implemented as a MapReduce sort job with a custom partitioner that uses a sorted list of n-1 sampled keys that define the key range for each reduce.
+
+The syntax to run the TeraSort benchmark is as follows:
+
+```
+$ hadoop jar hadoop-*examples*.jar terasort <input dir> <output dir>
+```
+
+Using the input directory /user/hduser/terasort-input and the output directory /user/hduser/terasort-output as an example, the command to run the TeraSort benchmark is:
+
+```
+$ hadoop jar hadoop-*examples*.jar terasort /user/hduser/terasort-input /user/hduser/terasort-output
+```
+
