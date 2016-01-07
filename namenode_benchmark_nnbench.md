@@ -33,3 +33,6 @@ $ hadoop jar hadoop-*test*.jar nnbench -operation create_write \
     -replicationFactorPerFile 3 -readFileAfterOpen true \
     -baseDir /benchmarks/NNBench-`hostname -s`
 ```
+
+Note that by default the benchmark waits 2 minutes before it actually starts!
+
