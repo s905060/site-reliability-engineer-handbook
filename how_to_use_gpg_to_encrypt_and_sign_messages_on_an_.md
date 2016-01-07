@@ -23,3 +23,6 @@ Another benefit of this system is that the sender of a message can "sign" the me
 
 This can prevent a third-party from "spoofing" the identity of someone. It also helps to ensure that the message was transmitted in-full, without damage or file corruption.
 
+###Set Up GPG Keys
+GPG should be installed by default on Ubuntu 12.04. If it is not, you can install it with:
+
