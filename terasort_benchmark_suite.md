@@ -72,3 +72,81 @@ Using the input directory /user/hduser/terasort-input and the output directory /
 $ hadoop jar hadoop-*examples*.jar terasort /user/hduser/terasort-input /user/hduser/terasort-output
 ```
 
+###TeraValidate: Validate the sorted output data of TeraSort
+
+TeraValidate (source code) ensures that the output data of TeraSort is globally sorted.
+
+TeraValidate creates one map task per file in TeraSort’s output directory. A map task ensures that each key is less than or equal to the previous one. The map task also generates records with the first and last keys of the file, and the reduce task ensures that the first key of file i is greater than the last key of file i-1. The reduce tasks do not generate any output if everything is properly sorted. If they do detect any problems, they output the keys that are out of order.
+
+The syntax to run the TeraValidate test is as follows:
+
+```
+$ hadoop jar hadoop-*examples*.jar teravalidate <terasort output dir (= input data)> <teravalidate output dir>
+```
+
+Using the output directory /user/hduser/terasort-output from the previous sections and the report (output) directory /user/hduser/terasort-validate as an example, the command to run the TeraValidate test is:
+
+```
+$ hadoop jar hadoop-*examples*.jar teravalidate /user/hduser/terasort-output /user/hduser/terasort-validate</pre>
+```
+
+###Further tips and tricks
+
+Hadoop provides a very convenient way to access statistics about a job from the command line:
+
+```
+$ hadoop job -history all <job output directory>
+```
+
+This command retrieves a job’s history files (two files that are by default stored in <job output directory>/_logs/history) and computes job statistics from them:
+
+```
+$ hadoop fs -ls /user/hduser/terasort-input/_logs/history
+Found 2 items
+-rw-r--r--   3 hadoop supergroup      17877 2011-02-11 11:58 /user/hduser/terasort-input/_logs/history/master_1297410440884_job_201102110201_0014_conf.xml
+-rw-r--r--   3 hadoop supergroup      36758 2011-02-11 11:58 /user/hduser/terasort-input/_logs/history/master_1297410440884_job_201102110201_0014_hadoop_TeraGen
+```
+
+>Note: Unfortunately, not all benchmarks/tests shipped with Hadoop write such job history log files. The TestDFSIO benchmark, for instance, does not save job history files.
+
+Here is an exemplary snippet of such job statistics for TeraGen from a small cluster:
+
+```
+$ hadoop job -history all /user/hduser/terasort-input
+
+Hadoop job: job_201102110201_0014
+=====================================
+Job tracker host name: master
+job tracker start time: Fri Feb 11 2011
+User: hadoop
+JobName: TeraGen
+JobConf: hdfs://master:54310/app/hadoop/tmp/mapred/system/job_201102110201_0014/job.xml
+Submitted At: 11-Feb-2011
+Launched At: 11-Feb-2011 13:58:14 (0sec)
+Finished At: 11-Feb-2011 15:00:56 (1hrs, 2mins, 41sec)
+Status: SUCCESS
+=====================================
+
+Task Summary
+============================
+Kind    Total   Successful      Failed  Killed  StartTime       FinishTime
+
+Setup   1       1               0       0       11-Feb-2011 13:58:15    11-Feb-2011 13:58:16 (1sec)
+Map     24      24              0       0       11-Feb-2011 13:58:18    11-Feb-2011 15:00:47 (1hrs, 2mins, 28sec)
+Reduce  0       0               0       0
+Cleanup 1       1               0       0       11-Feb-2011 15:00:50    11-Feb-2011 15:00:53 (2sec)
+============================
+
+Analysis
+=========
+
+Time taken by best performing map task task_201102110201_0014_m_000006: 59mins, 5sec
+Average time taken by map tasks: 1hrs, 1mins, 24sec
+Worse performing map tasks:
+TaskId          Timetaken
+task_201102110201_0014_m_000004 1hrs, 2mins, 24sec
+task_201102110201_0014_m_000020 1hrs, 2mins, 19sec
+task_201102110201_0014_m_000013 1hrs, 2mins, 9sec
+[...]
+```
+
