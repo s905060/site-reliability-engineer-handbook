@@ -119,3 +119,9 @@ QjgA/j1J7nN42zDMJxoAKQDvp+H3dErZVY7hJ8qHeGVbExWGAP97G/jWhl6FEg7M
 You might want to consider uploading your public key to a key server such as the MIT Key Server or PGP Global Directory. These are searchable directories from which other people can download your public key without first asking you for it. This functionality comes in especially handy when using email. Some email clients can be configured to search the key servers for the PGP keys of your contacts or anyone who has sent you an encrypted email and import them automatically.
 
 Just keep in mind that once you upload a key to a server, you typically can’t remove it. It’s probably a good idea to play around with PGP first, get used to it, then once you’ve created your permanent key, upload it. That way you don’t litter the key server with multiple keys bearing your name.
+
+###Importing Keys
+
+In order to encrypt files to send to others, you will first need to import their public key into PGP. You can do this by downloading the .asc file containing their public key (either directly from others or from a key server), clicking “Import” or “Import Certificate”, and selecting the file. In Linux you can import a key simply by double clicking the .asc file. In Windows you have the option to copy the public key block and import it directly from the clipboard.
+
+The software will typically let you view, edit and sign the public keys on your keyring. More on signing other people’s keys later.
