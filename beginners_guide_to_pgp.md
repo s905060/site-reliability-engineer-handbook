@@ -260,3 +260,6 @@ Otherwise, you could easily use an online hash calculator.
 Finally, we should probably talk a little about key management. One of the downsides to PGP is susceptibility to something called a man-in-the-middle attack. This attack works like this: Let’s say you want to securely communicate with someone using PGP. The first thing you would do is download their public key. However, it may be possible for an attacker to intercept your internet communications before they reach the server containing the public key. The attacker could send you one of his own public keys and make you think it’s the public key of your communication partner. Not knowing any better, you would encrypt your messages with the attacker’s public key allowing him view all your communications. Even worse, the attacker could re-encrypt the message with the correct public key and forward it along it the destination. Neither you nor your communication partner would know the message was intercepted.
 
 ![](man-in-the-middle.png)
+
+Obviously, a critical part of security in PGP is the ability to trust that the public key belongs to its purported owner. While complete trust is difficult to achieve, there are a few methods you can use to increase your level of trust.
+
