@@ -130,3 +130,13 @@ gpg --keyserver pgp.mit.edu  --search-keys search_parameters
 ###How To Verify and Sign Keys
 While you can freely distribute your generated public key file and people can use this to contact you in an encrypted way, there is still an issue of trust in the initial public key transmission.
 
+###Verify the Other Person's Identity
+
+How do you know that the person giving you the public key is who they say they are? In some cases, this may be simple. You may be sitting right next to the person with your laptops both open and exchanging keys. This should be a pretty secure way of identifying that you are receiving the correct, legitimate key.
+
+But there are many other circumstances where such personal contact is not possible. You may not know the other party personally, or you may be separated by physical distance. If you never want to communicate over insecure channels, verification of the public key could be problematic.
+
+Luckily, instead of verifying the entire public keys of both parties, you can simply compare the "fingerprint" derived from these keys. This will give you a reasonable assurance that you both are using the same public key information.
+
+You can get the fingerprint of a public key by typing:
+
