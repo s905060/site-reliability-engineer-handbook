@@ -195,3 +195,14 @@ JBU9xmavTM71PfV6Pkh4j1pfWImXc1D8dS+jcvKeXInBfm2XZsfOCesk12YnK3Nc
 u1Xe1lxzSt7Cegum4S/YuxmYoh462oGZ7FA4Cr2lvAPVpO9zmgQ8JITXiqYg2wB3
 . . .
 ```
+
+You can then copy and paste this or send this in an appropriate medium.
+
+If you want to publish your key to a key server, you can do it manually through the forms available on most of the server sites.
+
+Another option is to do this through the GPG interface.
+
+Look up your key ID by typing:
+```
+gpg --list-keys your_email@address.com
+```
