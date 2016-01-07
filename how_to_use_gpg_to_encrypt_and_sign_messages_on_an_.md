@@ -247,3 +247,16 @@ The software will prompt you as necessary.
 
 If you have the message as a raw text stream, you can copy and paste it after you just typing gpg without any arguments. You can press "CTRL-D" to signify the end of the message and GPG will decrypt it for you.
 
+Key Maintenance
+There are a number of procedures that you may need to use on a regular basis to manage your key database.
+
+To list your available GPG keys that you have from other people, you can issue this command:
+
+```
+gpg --list-keys
+```
+
+Your key information can become outdated if you are relying on information pulled from public key servers. You do not want to be relying on revoked keys, because that would mean you are trusting potentially compromised keys.
+
+You can update the key information by issuing:
+
