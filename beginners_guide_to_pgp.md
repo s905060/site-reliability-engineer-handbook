@@ -243,3 +243,12 @@ baac30350a721472bd34e811f16bd68c4e4672cfb47df73aee12376b2adcae8d
 Then just compare this output with the hash in the signed release notes. If the two match, you know you have a good file.
 
 You may be asking, how in the world do I calculate a hash function? Some operating systems will let you do this from the terminal. For example in Linux you can just type:
+```
+user@users-desktop:~$ sha256sum [FILE]
+```
+```
+user@users-desktop:~$ sha1sum [FILE]
+```
+```
+user@users-desktop:~$ md5sum [FILE]
+```
