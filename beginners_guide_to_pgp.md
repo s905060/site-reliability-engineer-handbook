@@ -177,3 +177,17 @@ Any air gapped computer (one permanently disconnected from the internet) would w
 ###Signing Data
 
 Just like with encryption you can either sign a message from your clipboard or sign whole files. The process is just as straightforward as before except this time you will select “sign” rather than “encrypt”. Here you will again be prompted for your password. The resulting output will look like this:
+
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+This is an example of a PGP signed message.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.14 (GNU/Linux)
+
+iF4EAREIAAYFAlK5pacACgkQuJVtv+58EFxiXgD/QGwQVCZMAlE7fL6V1Kbv4Ogq
+Sa9VTEw+s9mWwiBInp4A/3guc2PvZb8iIdrCyWGwIMJIOQS8OuhWfjtN3CBhOSA1
+=S+B+
+-----END PGP SIGNATURE-----
+```
