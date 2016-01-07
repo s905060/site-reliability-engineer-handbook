@@ -234,3 +234,12 @@ K6o6VP8xT/1yRhWbR0Yp
 =DYos
 -----END PGP SIGNATURE-----
 ```
+
+So what is going on here is that the installation files for Linux, OS X, and Windows (.exe and .zip) were run through the SHA-256 hash function and the outputs were then signed. To verify the integrity of the Bitcoin-QT for Windows (say), you would first verify the signature on this message then hash the bitcoin-0.8.6-win32-setup.exe file with SHA-256. The output should look like this:
+```
+baac30350a721472bd34e811f16bd68c4e4672cfb47df73aee12376b2adcae8d
+```
+
+Then just compare this output with the hash in the signed release notes. If the two match, you know you have a good file.
+
+You may be asking, how in the world do I calculate a hash function? Some operating systems will let you do this from the terminal. For example in Linux you can just type:
