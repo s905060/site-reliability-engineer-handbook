@@ -113,3 +113,7 @@ You can import someone's public key in a variety of ways. If you've obtained a p
 ```
 gpg --import name_of_pub_key_file
 ```
+
+There is also the possibility that the person you are wishing to communicate with has uploaded their key to a public key server. These key servers are used to house people's public keys from all over the world.
+
+A popular key server that syncs its information with a variety of other servers is the MIT public key server. You can search for people by their name or email address by going here in your web browser:
