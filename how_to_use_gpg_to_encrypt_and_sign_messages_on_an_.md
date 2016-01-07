@@ -218,3 +218,6 @@ To upload your key to a certain key server, you can then use this syntax:
 ```
 gpg --send-keys --keyserver pgp.mit.edu key_id
 ```
+
+###Encrypt and Decrypt Messages with GPG
+You can easily encrypt and decrypt messages after you have configured your keys with the other party.
