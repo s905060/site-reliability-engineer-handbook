@@ -361,6 +361,7 @@
        * [Quick Apache Hadoop Admin Command Reference Examples](quick_apache_hadoop_admin_command_reference_exampl.md)
        * [TeraSort benchmark suite](terasort_benchmark_suite.md)
        * [NameNode benchmark (nnbench)](namenode_benchmark_nnbench.md)
+       * MapReduce benchmark (mrbench)
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
