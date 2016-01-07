@@ -17,3 +17,9 @@ This would allow for a one-way message transfer that can be created and encrypte
 
 So in this scenario, each party has their own private key and the other user's public key.
 
+###Validate the Identity of the Sender
+
+Another benefit of this system is that the sender of a message can "sign" the message with their private key. The public key that the receiver has can be used to verify that the signature is actually being sent by the indicated user.
+
+This can prevent a third-party from "spoofing" the identity of someone. It also helps to ensure that the message was transmitted in-full, without damage or file corruption.
+
