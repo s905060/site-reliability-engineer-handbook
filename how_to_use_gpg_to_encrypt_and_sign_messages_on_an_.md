@@ -156,3 +156,10 @@ This will produce a much more manageable string of numbers to compare. You can c
 Signing a key tells your software that you trust the key that you have been provided with and that you have verified that it is associated with the person in question.
 
 To sign a key that you've imported, simply type:
+```
+gpg --sign-key email@example.com
+```
+
+After you've signed the key, it means you verify that you trust the person is who he/she claims to be. This can help other people decide whether to trust that person too. If someone trusts you, and they see that you've signed this person's key, they may be more likely to trust their identity too.
+
+You should allow the person whose key you are signing the advantages of your trusted relationship by sending them back the signed key. You can do this by typing:
