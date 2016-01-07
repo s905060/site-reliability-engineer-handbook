@@ -221,3 +221,17 @@ gpg --send-keys --keyserver pgp.mit.edu key_id
 
 ###Encrypt and Decrypt Messages with GPG
 You can easily encrypt and decrypt messages after you have configured your keys with the other party.
+
+
+###Encrypt Messages
+
+You can encrypt messages using the "--encrypt" flag for GPG. The basic syntax would be:
+```
+gpg --encrypt --sign --armor -r person@email.com name_of_file
+```
+
+The parameters basically encrypt the email, sign it with your private key to guarantee that it is coming from you, and generates the message in a text format instead of raw bytes.
+
+You should also include a second "-r" recipient with your own email address if you want to be able to read the message ever. This is because the message will be encrypted with each person's public key, and will only be able to be decrypted with the associated private key.
+
+So if it was only encrypted with the other party's public key, you would not be able to view the message again, unless you somehow obtained their private key. Adding yourself as a second recipient encrypts the message two separate times, one for each recipient.
