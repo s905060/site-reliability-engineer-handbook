@@ -34,5 +34,20 @@ Using the HDFS output directory /user/hduser/terasort-input as an example, the c
 
 ```
 $ hadoop jar hadoop-*examples*.jar teragen 10000000000 /user/hduser/terasort-input
+```
+
+Please note that the first parameter supplied to TeraGen is 10 billion (10,000,000,000), i.e. not 1 trillion = 1 TB (1,000,000,000,000). The reason is that the first parameter specifies the number of rows of input data to generate, each of which having a size of 100 bytes.
+
+Here is the actual TeraGen data format per row to clear things up:
 
 ```
+<10 bytes key><10 bytes rowid><78 bytes filler>\r\n
+```
+
+where
+
+1. The keys are random characters from the set ‘ ‘ .. ‘~’.
+2. The rowid is the right justified row id as a int.
+3. The filler consists of 7 runs of 10 characters from ‘A’ to ‘Z’.
+
+If you have a very fast cluster, your map tasks might finish in a few seconds if you use a relatively small default HDFS block size such as 128MB (which is not a bad idea though in general). This means that the time to start/stop map tasks might be larger than the time to perform the actual task. In other words, the overhead for managing the TaskTrackers might exceed the job’s “payload”. An easy way to work around this is to increase the HDFS block size for files written by TeraGen. Keep in mind that the HDFS block size is a per-file setting, and the value specified by the dfs.block.size property in hdfs-default.xml (or conf/hdfs-site.xml if you use a custom configuration file) is just a default value. So if, for example, you want to use an HDFS block size of 512MB (i.e. 536870912 bytes) for the TeraSort benchmark suite, overwrite dfs.block.size when running TeraGen:
