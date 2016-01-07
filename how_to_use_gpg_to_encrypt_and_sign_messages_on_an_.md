@@ -127,3 +127,6 @@ You can also search the key server from within GPG by typing the following:
 gpg --keyserver pgp.mit.edu  --search-keys search_parameters
 ```
 
+###How To Verify and Sign Keys
+While you can freely distribute your generated public key file and people can use this to contact you in an encrypted way, there is still an issue of trust in the initial public key transmission.
+
