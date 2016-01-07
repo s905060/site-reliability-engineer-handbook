@@ -206,3 +206,5 @@ If you’ve done it right you will see a response that looks something like this
 Good signature from B8956DBFEE7C105C Chris Pacia  (trust ultimate) created at 2013-11-16T12:05:37-0500 using DSA
 ```
 
+When verifying the signature on software, the developer will typically provide a link to a .sig file for you to download. However, when releasing software on multiple platforms, it’s not uncommon for a developer to provide a single signed message containing the hashes of the files rather than a separate signature for each version. Consider the following release notes for Bitcoin-QT:
+
