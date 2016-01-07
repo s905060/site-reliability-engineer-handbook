@@ -131,3 +131,34 @@ The software will typically let you view, edit and sign the public keys on your 
 You have two options for encrypting data in PGP ― you can encrypt a plain text message from the clipboard or encrypt whole files. Let’s start with encrypting plain text messages. The first thing you need to do is pull up your plain text editor (Notepad in Windows, GNU Emacs works well for this in Linux). You’ll have to forgive me for not being familiar with OS X, but I assume you can encrypt from the clipboard in that operating system (though I’m not positive).
 
 Type whatever message you want and copy it to the clipboard. In Windows, you’ll need to right click on the Kleopatra tray icon and click Clipboard>>Encrypt. The software will prompt you do select a public key from your keyring with which to encrypt the message. The encrypted ciphertext will replace the unencrypted plaintext in your clipboard.
+
+![](gpg25-300x146.jpg)
+
+In Emacs you’ll need to highlight the text, click Options>>Encryption/Decryption>>Encrypt Region. Or you can simply save the file to disk and right click and click encrypt.
+
+![](emacs23@chris-Studio-1749_008.png)
+
+![](Desktop_007.png)
+
+The resulting encrypted message will look like this:
+
+```
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1.4.14 (GNU/Linux)
+
+jA0EAwMCNUyTD6Yu1QtgyemPt3ysidtpK5AXDobS2mB5+ym7/zNqMe4u/fli9pPV
+PakBAwNtRCE45qIFUpCj3Pjh3jRoPVmiQOb8n5PuhipuIP4v6ANCboWnCUam7NGd
+VHuU2OLX36QWOoPI5Ewl9xto+3iqjlclTaiRlHo0JHU8EOv75BpjahzKhDCV2lMQ
+q9QOHBESsU9xhk/t7gnT2EfhxzPHTb2N7fkPRFqItMU949hSvaYtN3AA80qxjkic
+jpEbftLI1brvEK2WpyMPDt+YPnIvJ2mHfsmB41VNlr14BS5zpfWTEDjkTJALRWVj
+MRARwU8/iE/hh9FMkYb8mB2cmJh6TgqpYF45qtacdKOKVqQBToPwS0dFf5Pw25Qx
+jaRKTzfoP9mhD1nkHuNP79zhj9+uTMwRp00d117CuopnTeaTMQTYJeHNpsX79Jx3
+EF6QQjrw38UNz2IZGplKHFKT39laI7NywviI7LmfJYHMoIFhdz97Woad1MCMPq/G
+qqlA/QRrheMz90NG9OQRtc6q2hNCsQUI7kRV7kTrgPCrzKepLwZ3EBcSea8vyQcH
+f43blJP1VucaTf9jvGPX1qgisOFHBYcZKv1+1I4sRIFcSWpKr3VeCr76bq+vMk1D
+7+rT8SaYs0efFkfF/Y6+yOoporP0HsxVxAIUZ7zPXIH2UxtGfcfcu/pWxNQ1WrM5
+dwWFasQaXg==
+=tfo5
+-----END PGP MESSAGE-----
+```
+
