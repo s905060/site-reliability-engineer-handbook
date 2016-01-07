@@ -196,3 +196,9 @@ Notice that the message is at the top under the header, while the signature is a
 
 Also keep in mind that encrypting and signing are not mutually exclusive. You can opt to both encrypt and sign data to protect the message from eavesdroppers and allow the recipient to verify the message came from you.
 
+###Verifying Signatures
+
+To verify a signature on a signed message or file you will obviously have to first download and import the corresponding public key. Just like with decryption, you can either verify the signed message from your clipboard or by selecting the file. If you’re verifying a signed file, you’ll likely be prompted to select both the file and the detached signature (.sig) file.
+
+If you’ve done it right you will see a response that looks something like this:
+
