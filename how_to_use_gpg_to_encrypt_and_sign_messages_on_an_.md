@@ -163,3 +163,13 @@ gpg --sign-key email@example.com
 After you've signed the key, it means you verify that you trust the person is who he/she claims to be. This can help other people decide whether to trust that person too. If someone trusts you, and they see that you've signed this person's key, they may be more likely to trust their identity too.
 
 You should allow the person whose key you are signing the advantages of your trusted relationship by sending them back the signed key. You can do this by typing:
+```
+gpg --export --armor email@example.com
+```
+
+You'll have to type in your passphrase again. Afterwards, their public key, signed by you, will be spit out on the screen. Send them this, so that they can benefit from gaining your "stamp of approval" when interacting with others.
+
+When they receive this new, signed key, they can import it, adding on the signing information you've generated, into their GPG database. They can do this by typing:
+```
+gpg --import file_name
+```
