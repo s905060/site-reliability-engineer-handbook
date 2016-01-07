@@ -191,3 +191,8 @@ Sa9VTEw+s9mWwiBInp4A/3guc2PvZb8iIdrCyWGwIMJIOQS8OuhWfjtN3CBhOSA1
 =S+B+
 -----END PGP SIGNATURE-----
 ```
+
+Notice that the message is at the top under the header, while the signature is at the bottom. If you chose to sign an entire file, the software will generate a separate .sig signature file that you will need to send along with the original file.
+
+Also keep in mind that encrypting and signing are not mutually exclusive. You can opt to both encrypt and sign data to protect the message from eavesdroppers and allow the recipient to verify the message came from you.
+
