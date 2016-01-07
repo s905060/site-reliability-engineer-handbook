@@ -259,4 +259,13 @@ gpg --list-keys
 Your key information can become outdated if you are relying on information pulled from public key servers. You do not want to be relying on revoked keys, because that would mean you are trusting potentially compromised keys.
 
 You can update the key information by issuing:
+```
+gpg --refresh-keys
+```
 
+This will fetch new information from the key servers.
+
+You can pull information from a specific key server by using:
+```
+gpg --keyserver key_server --refresh-keys
+```
