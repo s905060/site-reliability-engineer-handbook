@@ -53,3 +53,5 @@ And Mac users should download the GPG Suite for OS X from here.
 ![](Selection_005.png)
 ![](gnupg-kleopatra-home.png)
 ![](gka-key-list.1375965203.png)
+
+In each of these operating systems you can access GPG as well as a number of advanced options from the command line, but as a new user, you’re better off learning to use the GUI for now.
