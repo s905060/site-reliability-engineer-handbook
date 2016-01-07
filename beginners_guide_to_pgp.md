@@ -125,3 +125,9 @@ Just keep in mind that once you upload a key to a server, you typically can’t 
 In order to encrypt files to send to others, you will first need to import their public key into PGP. You can do this by downloading the .asc file containing their public key (either directly from others or from a key server), clicking “Import” or “Import Certificate”, and selecting the file. In Linux you can import a key simply by double clicking the .asc file. In Windows you have the option to copy the public key block and import it directly from the clipboard.
 
 The software will typically let you view, edit and sign the public keys on your keyring. More on signing other people’s keys later.
+
+###Encrypting Data
+
+You have two options for encrypting data in PGP ― you can encrypt a plain text message from the clipboard or encrypt whole files. Let’s start with encrypting plain text messages. The first thing you need to do is pull up your plain text editor (Notepad in Windows, GNU Emacs works well for this in Linux). You’ll have to forgive me for not being familiar with OS X, but I assume you can encrypt from the clipboard in that operating system (though I’m not positive).
+
+Type whatever message you want and copy it to the clipboard. In Windows, you’ll need to right click on the Kleopatra tray icon and click Clipboard>>Encrypt. The software will prompt you do select a public key from your keyring with which to encrypt the message. The encrypted ciphertext will replace the unencrypted plaintext in your clipboard.
