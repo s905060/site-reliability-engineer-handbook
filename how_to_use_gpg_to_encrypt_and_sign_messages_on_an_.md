@@ -269,3 +269,10 @@ You can pull information from a specific key server by using:
 ```
 gpg --keyserver key_server --refresh-keys
 ```
+
+###Conclusion
+Using GPG correctly can help you secure your communications with different people. This is extremely helpful, especially when dealing with sensitive information, but also when dealing with regular, every day messaging.
+
+Because of the way that certain encrypted communications can be flagged by monitoring programs, it is recommended to use encryption for everything, not just "secret" data. That will make it more difficult for people to know when you are sending important data or just sending a friendly hello.
+
+GPG encryption is only useful when both parties use good security practices and are vigilant about their other security practices. Educate those who you communicate regularly with about the importance of these practices if you want to have the possibility of cryptographically secure communication.
