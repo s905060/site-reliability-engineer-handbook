@@ -139,4 +139,12 @@ But there are many other circumstances where such personal contact is not possib
 Luckily, instead of verifying the entire public keys of both parties, you can simply compare the "fingerprint" derived from these keys. This will give you a reasonable assurance that you both are using the same public key information.
 
 You can get the fingerprint of a public key by typing:
-
+```
+gpg --fingerprint your_email@address.com
+```
+```
+pub   4096R/311B1F84 2013-10-04
+      Key fingerprint = CB9E C70F 2421 AF06 7D72  F980 8287 6A15 311B 1F84
+uid                  Test User <test.user@address.com>
+sub   4096R/8822A56A 2013-10-04
+```
