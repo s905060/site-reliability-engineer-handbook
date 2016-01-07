@@ -208,3 +208,29 @@ Good signature from B8956DBFEE7C105C Chris Pacia  (trust ultimate) created at 20
 
 When verifying the signature on software, the developer will typically provide a link to a .sig file for you to download. However, when releasing software on multiple platforms, it’s not uncommon for a developer to provide a single signed message containing the hashes of the files rather than a separate signature for each version. Consider the following release notes for Bitcoin-QT:
 
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+73495de53d1a30676884961e39ff46c3851ff770eeaa767331d065ff0ce8dd0c  bitcoin-0.8.6-linux.tar.gz
+ec85816e6cd034230ec5dc83c105334aa91bfa38fd959ba3d1d3bd5d4df3208b  bitcoin-0.8.6-macosx.dmg
+baac30350a721472bd34e811f16bd68c4e4672cfb47df73aee12376b2adcae8d  bitcoin-0.8.6-win32-setup.exe
+582fcb973a29e1a6e44ddc6602400e77fc85b53f6f54a1105d22d84d992e3c83  bitcoin-0.8.6-win32.zip
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.20 (Darwin)
+
+iQIcBAEBCAAGBQJSpjKpAAoJEBt7+0V79uISEvgP/2T2Pt1wO2WMaK3DL4D/uFq6
+xcuhCjrV1FHt1UoYTdohl112dO3q6qsakguBxvaGMe80KCJS85JT7B2Sbs/goyYT
+2WxkEv+ttQFVnB32MlFeGYrPt9I7xmNQqYoQMGsV+VeCfqSDElxVpPCLDYFbBLUk
+lkHa4LTkXsGI351iIEjUB4jXSKeJvWQQ6HdxKOIUaxA6AZX8qGKuGbSYUMNy/pBi
+lqZNOTWtFjRkPR+qhhjjpx9J9A9l4dFYvH6lJDS9mj2jOUCTtg3hKwYg3KvSOtjl
+6Mkm6qkJtf0SxJpx3tQjH4rav7G1WY0Y546X2+uF9BuFKvhDVY74fe8pAh+ASF18
+lq4pbpg6pElk94CESPEDxIIB1wgozKBidLSzCtKfqgTDPQtFDny1nA3Km+FGQX5Y
+HATPB0EeuB5juJs7rHpO/OhweI1cORPPfhaTiA6Cf6Tioyl+FX/ZmVXclUUYEF1M
+fXS8JsAIZxIdDgjeo6xTwI2llN5Gs3JmypGM0dggNslMUEeCX/O5uciyoZ6y+TUZ
+TZLRVY4WsS0FpsA07UuYuasi1B1WzGm8BW4Akt3XO7awVwyHSUfePS02qGdUwfDS
+sDzf5SoBphnBUcRiVoHL1lhn8bfW0henksL6YUJIfY4w5q5S9vM/5uk+vxghWGRk
+K6o6VP8xT/1yRhWbR0Yp
+=DYos
+-----END PGP SIGNATURE-----
+```
