@@ -35,3 +35,23 @@ To begin using GPG to encrypt your communications, you need to create a key pair
 ```
 gpg --gen-key
 ```
+
+This will take you through a few questions that will configure your keys.
+
+* Please select what kind of key you want: (1) RSA and RSA (default)
+
+* What keysize do you want? 4096
+
+* Key is valid for? 0
+
+* Is this correct? y
+
+* Real name: your real name here
+
+* Email address: your_email@address.com
+
+* Comment: Optional comment that will be visible in your signature
+
+* Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+* Enter passphrase: Enter a secure passphrase here (upper & lower case, digits, symbols)
