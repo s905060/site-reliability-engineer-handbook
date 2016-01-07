@@ -162,3 +162,15 @@ dwWFasQaXg==
 -----END PGP MESSAGE-----
 ```
 
+Some things to keep in mind, once you encrypt something with someone else’s public key, you can’t decrypt it. You can, however, encrypt a message using multiple public keys and the message can be decrypted with any of the corresponding private keys. So you could encrypt a message with someone else’s public key and your public key, then you can both decrypt it at a later date. Also, if you encrypt data using only your public key, it basically works like symmetric key encryption in that only you will be able to decrypt it.
+
+To encrypt an entire file select “Sign/Encrypt File” from the menu and select the file you want to encrypt. Just like before, you’ll need to select a public key(s) from your keyring with which to encrypt the file.
+
+###Decrypting Data
+
+To decrypt either a message or a file, you need to do all of the above in reverse. Just this time use the decypt option from the menu. Here you will be prompted to enter your password for your private key that you created along with your key pair. This is what prevents an attacker from stealing your private key and decrypting messages intended for you.
+
+Keep in mind, if you are decrypting data on your normal computer, you could be running the risk that malware could copy and upload the data after you’ve decrypted it. This might be an acceptable risk for everyday communications, but if you’re dealing with extremely sensitive data you should probably transfer the encrypted data to a secure viewing station prior to decryption.
+
+Any air gapped computer (one permanently disconnected from the internet) would work for this purpose. Or you could boot into a Linux live system (such as Tails) from a USB stick to isolate your work environment from preexisting malware.
+
