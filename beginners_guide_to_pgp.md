@@ -202,3 +202,7 @@ To verify a signature on a signed message or file you will obviously have to fir
 
 If you’ve done it right you will see a response that looks something like this:
 
+```
+Good signature from B8956DBFEE7C105C Chris Pacia  (trust ultimate) created at 2013-11-16T12:05:37-0500 using DSA
+```
+
