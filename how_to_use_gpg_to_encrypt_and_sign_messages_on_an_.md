@@ -55,3 +55,9 @@ This will take you through a few questions that will configure your keys.
 * Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
 
 * Enter passphrase: Enter a secure passphrase here (upper & lower case, digits, symbols)
+
+At this point, it will need to generate the keys using entropy. This is basically a term to describe the amount of unpredictability that exists in a system. GPG uses this entropy to generate a random set of keys.
+
+It is best to open a new terminal and ssh into the VPS while this runs. Install some software, do some work, and just use the machine as much as possible to let it generate the needed entropy.
+
+This process may take a long time, depending on how active you can make your system. There is an article here about how to generate additional entropy with haveged, which may be of use.
