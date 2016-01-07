@@ -359,6 +359,7 @@
        * [hadoop Management Command --dfsadmin](hadoop_management_command_--dfsadmin.md)
        * [Quick Apache Hadoop Admin Command Reference Examples](quick_apache_hadoop_admin_command_reference_exampl.md)
        * [Running DFSIO mapreduce benchmark test](running_dfsio_mapreduce_benchmark_test.md)
+           * TeraSort benchmark suite
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
