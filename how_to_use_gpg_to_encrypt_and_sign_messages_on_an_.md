@@ -31,3 +31,7 @@ sudo apt-get install gnupg
 ```
 
 To begin using GPG to encrypt your communications, you need to create a key pair. You can do this by issuing the following command:
+
+```
+gpg --gen-key
+```
