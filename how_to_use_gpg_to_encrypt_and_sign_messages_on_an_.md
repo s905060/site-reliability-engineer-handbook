@@ -71,3 +71,37 @@ This should be done as soon as you make the key pair, not when you need it. This
 ```
 gpg --gen-revoke your_email@address.com
 ```
+
+You will be asked for the reason that it is being revoked. You can choose any of the available options, but since this is being done ahead of time, you won't have the specifics.
+
+You will then be offered to supply a comment and finally, to confirm the selections.
+
+Afterwards, a revocation certificate will be generated to the screen. Copy and paste this to a secure location, or print it for later use:
+
+```
+Revocation certificate created.
+
+Please move it to a medium which you can hide away; if Mallory gets
+access to this certificate he can use it to make your key unusable.
+It is smart to print this certificate and store it away, just in case
+your media become unreadable.  But have some caution:  The print system of
+your machine might store the data and make it available to others!
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+Comment: A revocation certificate should follow
+
+iQIfBCABAgAJBQJSTxNSAh0AAAoJEIKHahUxGx+E15EP/1BL2pCTqSG9IYbz4CMN
+bCW9HgeNpb24BK9u6fAuyH8aieLVD7It80LnSg/+PgG9t4KlzUky5sOoo54Qc3rD
+H+JClu4oaRpq25vWd7+Vb2oOwwd/27Y1KRt6TODwK61z20XkGPU2NJ/ATPn9yIR9
+4B10QxqqQSpQeB7rr2+Ahsyl5jefswwXmduDziZlZqf+g4lv8lZlJ8C3+GKv06fB
+FJwE6XO4Y69LNAeL+tzSE9y5lARKVMfqor/wS7lNBdFzo3BE0w68HN6iD+nDbo8r
+xCdQ9E2ui9os/5yf9Y3Uzky1GTLmBhTqPnl8AOyHHLTqqOT47arpwRXXDeNd4B7C
+DiE0p1yevG6uZGfhVAkisNfi4VrprTx73NGwyahCc3gO/5e2GnKokCde/NhOknci
+Wl4oSL/7a3Wx8h/XKeNvkiurInuZugFnZVKbW5kvIbHDWJOanEQnLJp3Q2tvebrr
+BBHyiVeQiEwOpFRvBuZW3znifoGrIc7KMmuEUPvA243xFcRTO3G1D1X9B3TTSlc/
+o8jOlv6y2pcdBfp4aUkFtunE4GfXmIfCF5Vn3TkCyBV/Y2aW/fpA3Y+nUy5hPhSt
+tprTYmxyjzSvaIw5tjsgylMZ48+qp/Awe34UWL9AWk3DvmydAerAxLdiK/80KJp0
+88qdrRRgEuw3qfBJbNZ7oM/o
+=isbs
+-----END PGP PUBLIC KEY BLOCK-----
+```
