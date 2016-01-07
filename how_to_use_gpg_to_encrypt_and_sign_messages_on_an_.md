@@ -148,3 +148,11 @@ pub   4096R/311B1F84 2013-10-04
 uid                  Test User <test.user@address.com>
 sub   4096R/8822A56A 2013-10-04
 ```
+
+This will produce a much more manageable string of numbers to compare. You can compare this string with the person themselves, or someone else who has access to that person.
+
+###Sign Their Key
+
+Signing a key tells your software that you trust the key that you have been provided with and that you have verified that it is associated with the person in question.
+
+To sign a key that you've imported, simply type:
