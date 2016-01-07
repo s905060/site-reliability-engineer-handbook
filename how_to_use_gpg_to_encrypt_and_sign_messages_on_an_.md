@@ -61,3 +61,10 @@ At this point, it will need to generate the keys using entropy. This is basicall
 It is best to open a new terminal and ssh into the VPS while this runs. Install some software, do some work, and just use the machine as much as possible to let it generate the needed entropy.
 
 This process may take a long time, depending on how active you can make your system. There is an article here about how to generate additional entropy with haveged, which may be of use.
+
+###Create a Revocation Certificate
+
+You need to have a way of invalidating your key pair in case there is a security breach, or in case you lose your secret key. There is an easy way of doing this with the GPG software.
+
+This should be done as soon as you make the key pair, not when you need it. This revocation key must be generated ahead of time and kept in a secure, separate location in case your computer is compromised or inoperable. Type:
+
