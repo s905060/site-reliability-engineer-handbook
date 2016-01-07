@@ -68,3 +68,6 @@ You need to have a way of invalidating your key pair in case there is a security
 
 This should be done as soon as you make the key pair, not when you need it. This revocation key must be generated ahead of time and kept in a secure, separate location in case your computer is compromised or inoperable. Type:
 
+```
+gpg --gen-revoke your_email@address.com
+```
