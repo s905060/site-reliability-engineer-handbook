@@ -49,3 +49,7 @@ The first thing you need to do to get started is download and install GPG. If yo
 Windows users can download Gpg4win here.
 
 And Mac users should download the GPG Suite for OS X from here.
+
+![](Selection_005.png)
+![](gnupg-kleopatra-home.png)
+![](gka-key-list.1375965203.png)
