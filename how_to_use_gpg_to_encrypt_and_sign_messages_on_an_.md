@@ -206,3 +206,15 @@ Look up your key ID by typing:
 ```
 gpg --list-keys your_email@address.com
 ```
+
+The highlighted portion is your key ID. It is a short way to reference the key to the internal software.
+```
+pub   4096R/311B1F84 2013-10-04
+uid                  Test User <test.user@address.com>
+sub   4096R/8822A56A 2013-10-04
+```
+
+To upload your key to a certain key server, you can then use this syntax:
+```
+gpg --send-keys --keyserver pgp.mit.edu key_id
+```
