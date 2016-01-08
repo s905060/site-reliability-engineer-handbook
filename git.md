@@ -1,5 +1,7 @@
 # Git
 
+[Best Git Tutorial Video](https://vimeo.com/14629850)
+
 ![](bg2015120901.png)
 
 **HEAD**: the current commit your repo is on. Most of the time HEAD points to the latest commit in your branch, but that doesn't have to be the case. HEAD really just means "what is my repo currently pointing at". Thanks svick for the heads up on this one (no pun intended)
