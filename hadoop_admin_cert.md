@@ -624,7 +624,7 @@ Golden rules:
 * def, hadoop allocates 1 GB of mem to each daemon it runs. controlled by ```HADOOP_HEAPSIZE``` setting in hadoop-env.sh
 * the tasktrackers launches seperate child JVMs to run MR tasks in. take up memeory.
 * the max no of map tasks that can run on the tasktracker at one time is controlled my ```mapred.tasktracker.map.tasks.maximum```
-* master nodes: each of the nn and secondary nn and jobtracker daemons use 1 GB each by def
+* master nodes: each of the nn and secondary nn and jobtracker daemons use 1 GB each by defau
 * general rule of thumb for mem allocation for nn: allow 1 GB of mem per million blocks of storage. e.g a 200-node cluster with 4TB of disk space per node, block size 128 MB and replication X3 has room for around 2 million blovks therefore nn should have 2gb
 
 #### Java
