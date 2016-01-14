@@ -220,7 +220,7 @@ these resources are described as containers with a fixed amount of memory (appli
 ### Entities involved in YARN:
 
 * the client, which submits the MR job
-* the YARN resource manager, wh coordinates the allocation of compute resources on the cluster
+* the YARN resource manager, which coordinates the allocation of compute resources on the cluster
 * the YARN node manager, which launch and monitor the compute containers on the machines in the cluster.
 * the MR application master which coordinates the tasks running the MR job. the application master and the MR tasks run in containers that are scheduled by the resource manager and managed by the node managers.
 * the HDFS which is used for sharing job files between the other entities.
@@ -320,7 +320,7 @@ previous versions of hadoop scheduled jobs in order of submission, called the FI
 to view all jobs currently running on the cluster:
 ```yarn application -list```
 ```yarn application -list all``` to view all
-```yarn application -status "app id"
+```yarn application -status "app id"```
 
 
 #### The Fair Scheduler
