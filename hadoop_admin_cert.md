@@ -612,10 +612,11 @@ there is no single/ global location for config info. each hadoop node in the clu
 * the secondary nn, although idle, has a comparable mem footprint to the primary when it creates a checkpoint. keeping the secondary nn backup on a different node from the nn allows recovery in the event of loss (or corruption) of all the nn metadata files.
 * with a busy cluster, the jobtracker uses a lot of memory and CPU. so best to have its own node.
 
-```Golden rules:
+```
+Golden rules:
 	* run the hdfs control scripts from the nn.
 	* run the MapReduce control scripts from the jobtracker machine
-	```
+```
 
 ### Environment setting
 
