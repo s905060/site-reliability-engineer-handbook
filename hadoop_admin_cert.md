@@ -525,14 +525,10 @@ The Fair Scheduler attempts to allocate resources so that all running applicatio
 the same share of resources.
 
 Enabling the Fair Scheduler
-The scheduler in use is determined by the setting of yarn.resourcemanager.schedu
-ler.class . The Capacity Scheduler is used by default (although the Fair Scheduler is
-the default in some Hadoop distributions, such as CDH), but this can be changed by
-setting yarn.resourcemanager.scheduler.class in yarn-site.xml to the fully-
-qualified classname of the scheduler, org.apache.hadoop.yarn.server.resourceman
-ager.scheduler.fair.FairScheduler .
+The scheduler in use is determined by the setting of yarn.resourcemanager.scheduler.class . The Capacity Scheduler is used by default (although the Fair Scheduler is the default in some Hadoop distributions, such as CDH), but this can be changed by setting yarn.resourcemanager.scheduler.class in yarn-site.xml to the fully-qualified classname of the scheduler, org.apache.hadoop.yarn.server.resourceman
+ager.scheduler.fair.FairScheduler.
 
-onfigured using an allocation file named fair-scheduler.xml that
+configured using an allocation file named fair-scheduler.xml that
 is loaded from the classpath. (The name can be changed by setting the property
 yarn.scheduler.fair.allocation.file .)
 
