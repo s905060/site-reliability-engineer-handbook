@@ -495,8 +495,7 @@ is the case in MapReduce 1. If the resources to run the task are available, then
 application will be eligible for them
 
 n some ways, the biggest benefit of YARN is that it opens up Hadoop to other types
-of distributed application beyond MapReduce. MapReduce is just one YARN ap‐
-plication amongst many.
+of distributed application beyond MapReduce. MapReduce is just one YARN application amongst many.
 
 #### Scheduling in YARN
 
