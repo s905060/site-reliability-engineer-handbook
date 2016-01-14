@@ -56,7 +56,7 @@ ack packets from the pipeline are sent back to the client
 
 2. second copy of the block is placed on a node residing on a different rack
 
-3. third copy of the block is placed on different node in the same rach as the second copy
+3. third copy of the block is placed on different node in the same rack as the second copy
 
 ### Anatomy of a file read
 
