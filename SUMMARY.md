@@ -364,6 +364,7 @@
        * [TeraSort benchmark suite](terasort_benchmark_suite.md)
        * [NameNode benchmark (nnbench)](namenode_benchmark_nnbench.md)
        * [MapReduce benchmark (mrbench)](mapreduce_benchmark_mrbench.md)
+       * Hadoop Admin Cert
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
