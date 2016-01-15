@@ -750,7 +750,7 @@ to enable Kerberos:
 
 ### Delegation Tokens:
 
-isntead of using a three-step kerberos ticket exchange protocol to authenticate each call of communication between services (e.g multiple comms between hdfs and nn in read and write), hadoop uses ```delegation tokens``` to allow later authenticated access without having to contact KDC again (avoids high loads on KDC)
+instead of using a three-step kerberos ticket exchange protocol to authenticate each call of communication between services (e.g multiple comms between hdfs and nn in read and write), hadoop uses ```delegation tokens``` to allow later authenticated access without having to contact KDC again (avoids high loads on KDC)
 
 RPC = Remote proceedure call: is an inter-process communication that allows a computer program to cause a subroutine or procedure to execute in another address space (commonly on another computer on a shared network) without the programmer explicitly coding the details for this remote interaction
 
