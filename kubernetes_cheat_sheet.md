@@ -70,5 +70,15 @@ In order to troubleshoot the cluster, you may wish to use the following commands
 * To check the status of components such as the scheduler, etcd, and controller manager use: `kubectl get cs`
 
 ###Abstractions Details
+
 ![](k8s-cheatsheet-abstractions-details.png)
 
+The interactions are as follows:
+
+1. A replication controller (RC) looks after one or more pods. The RC keeps a number of pods (so called replicas) up and running.
+    * To launch a pod and implicitly create a RC: `kubectl run ubuntu --image=ubuntu`
+    * To create a RC from a manifest, use: `kubectl create -f nginx-rc.yaml`. See the YAML formatted RC manifest file itself for the actual definition.
+    * To list all RCs in a certain namespace:`kubectl get rc --namespace="kube-system"`
+    * To change the number of pods in a RC, scale it like so: `kubectl scale --replicas=2 rc nginx`
+    * Containers in a pod may use ephemeral local disk space but for sustainable, persistent scenarios as well as sharing data between containers in a pod you can use volumes.
+    * Implement health checks via `readinessProbe` and `livenessProbe` fields on the pod-level.
