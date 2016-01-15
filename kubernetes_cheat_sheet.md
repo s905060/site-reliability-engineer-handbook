@@ -25,3 +25,30 @@ From a physical perspective, a Kubernetes cluster consists of:
 2. A distributed key-value store, currently etcd, for maintaining the resource state in a persistent and reliable manner, throughout the cluster.
 3. A number of nodes that carry out the work.
 4. A command line tool called `kubectl` allowing to query and manipulate the cluster state; this is a fancy way of saying: running containers, creating services and administrating the cluster (logging, monitoring, debugging).
+
+![](k8s-cheatsheet-abstractions-overview.png)
+
+List pods:
+`kubectl get pods`
+
+Get info about pod 'nginx-hl2nb':
+`kubectl describe pod nginx-hl2nb`
+
+List replication controllers:
+`kubectl get rc`
+
+Get info about replication controller 'nginx':
+`kubectl describe rc nginx`
+
+Expose replication controller 'nginx' as a service on port 80:
+`kubectl expose rc nginx --port=80 --target-port=8000`
+
+List services:
+`kubectl get svc`
+
+Get info about service 'nginx':
+`kubectl describe svc nginx`
+
+Destroy/remove a resource :
+`kubectl delete pod nginx-hl2nb` &&
+`kubectl delete rc nginx`
