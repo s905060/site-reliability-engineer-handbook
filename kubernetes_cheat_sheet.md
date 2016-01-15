@@ -84,3 +84,5 @@ The interactions are as follows:
     * Implement health checks via `readinessProbe` and `livenessProbe` fields on the pod-level.
 2. A service represents a logical group of pods (backed by a RC). It provides a stable interface to interact with the pods. To create a service from a YAML file, use: `kubectl create -f my-service.yaml`. The service selects the targeted pods it routes traffic to via labels, for example, to list all pods labelled with 'app=webserver' use: 
 `kubectl get pods -l="app=webserver"`.
+
+3. From either the end-user perspective or other services in a cluster, one interacts with a service. To expose a RC named 'nginx' that has a pod serving on port 8000 as a service on port 80, use `kubectl expose rc nginx --port=80 --target-port=8000`. Also to list the endpoints, use: `kubectl get ep`
