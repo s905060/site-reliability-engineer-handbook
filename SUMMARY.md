@@ -347,7 +347,7 @@
    * [Kubernetes](kubernetes.md)
        * [K8S-Network](k8s-network.md)
        * [Kubernetes Recipes](kubernetes_recipes.md)
-       * Kubernetes Cheat Sheet
+       * [Kubernetes Cheat Sheet](kubernetes_cheat_sheet.md)
    * [ETCD](etcd.md)
    * [RESTful API HTTP methods](restful_api_http_methods.md)
    * [Web cache](web_cache.md)
