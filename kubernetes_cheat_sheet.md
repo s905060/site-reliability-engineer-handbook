@@ -57,3 +57,12 @@ Destroy/remove a resource :
 ###Organize your resources
 
 The primary organization mechanism in Kubernetes are so called labels: these key/value pairs allow you to tag any sort of resource such as a pod or a RC. Both the key and the value are transparent to Kubernetes, which is an elaborate way to say: Kubernetes doesn't know and doesn't care about it; labels only have a meaning to you. Kubernetes, however, will use the labels to, for example, select pods that belong to a service, select pods that a certain RC is supposed to look after, for rolling upgrades and to debug containers online.
+
+###Troubleshooting
+
+In order to troubleshoot the cluster, you may wish to use the following commands:
+
+* To debug a container, enter it so: `kubectl exec nginx-hl2nb /bin/sh` (note: in this case the first container will be used, otherwise use `-c $NAME_OF_CONTAINER` to specify which container to enter)
+* To see the logs of a pod in a rolling fashion use `kubectl logs -f nginx-hl2nb` (note: same as with exec, you can specify the container if you wish to)
+* The Kubelet logs are per default at: `/var/log/kubelet.log`
+* To check the status of components such as the scheduler, etcd, and controller manager use: `kubectl get cs`
