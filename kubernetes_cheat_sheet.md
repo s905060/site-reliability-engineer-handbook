@@ -86,3 +86,7 @@ The interactions are as follows:
 `kubectl get pods -l="app=webserver"`.
 
 3. From either the end-user perspective or other services in a cluster, one interacts with a service. To expose a RC named 'nginx' that has a pod serving on port 8000 as a service on port 80, use `kubectl expose rc nginx --port=80 --target-port=8000`. Also to list the endpoints, use: `kubectl get ep`
+
+4. On each node a local proxy runs that provides for basic service discovery and load balancing.
+
+5. A container in a pod may use one or more secrets to handle sensitive information such as passwords or API credentials. To list all secrets, use: `kubectl get secrets`
