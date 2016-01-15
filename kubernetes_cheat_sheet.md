@@ -90,3 +90,11 @@ The interactions are as follows:
 4. On each node a local proxy runs that provides for basic service discovery and load balancing.
 
 5. A container in a pod may use one or more secrets to handle sensitive information such as passwords or API credentials. To list all secrets, use: `kubectl get secrets`
+
+6. A autoscaler is available on a per-RC basis. It scales the replicas depending on the average CPU utilization of the RC's pods.
+
+7. For batch workloads, you can use jobs. To view completed pods of a job, use: `kubectl get pods --show-all`
+
+8. Changes to resources such as pods, RCs, services, etc. are available through events: `kubectl get events`
+
+9. To separate users, groups or applications use namespaces.To list all namespaces, use: `kubectl get ns` and to see the resource quotas of a namespace use `kubectl get quota`. When a pod doesn't specify its resource constraints such as CPU shares or memory requested it effectively can consume unbounded resources. You really want to specify default limits along with the quotas. Note: while quotas work on the namespace-level for, say, entire groups of users or projects, the limits work on a per-pod level.
