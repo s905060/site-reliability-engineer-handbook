@@ -754,7 +754,7 @@ instead of using a three-step kerberos ticket exchange protocol to authenticate 
 
 RPC = Remote proceedure call: is an inter-process communication that allows a computer program to cause a subroutine or procedure to execute in another address space (commonly on another computer on a shared network) without the programmer explicitly coding the details for this remote interaction
 
-### kernal tuning (had op)
+### kernel tuning (hadoop)
 Kernel parameters should be configured in /etc/sysctl.conf so that settings survive reboots.
 
 #### vm.swappiness
