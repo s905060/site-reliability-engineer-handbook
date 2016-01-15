@@ -971,9 +971,9 @@ in safe mode the namenode does not issue any block-replication or delegation ins
 
 safemode is exited when the minimal replication condition is reached (99.9%) of the blocks in the whole filesystem meet thier min replication level
 
-hadoop dfsadmin -safemode get 		: checks if safemode is on
-hadoop dfsadmin -safemode enter 	: enters safemode
-hadoop dfsadmin -safemode leave 	: leaves
+`hadoop dfsadmin -safemode get` 		: checks if safemode is on
+`hadoop dfsadmin -safemode enter` 	: enters safemode
+`hadoop dfsadmin -safemode leave`	: leaves
 
 
 ### Audit loggin
