@@ -53,3 +53,7 @@ Destroy/remove a resource :
 `kubectl delete pod nginx-hl2nb` &&
 `kubectl delete rc nginx` &&
 `kubectl delete svc nginx`
+
+###Organize your resources
+
+The primary organization mechanism in Kubernetes are so called labels: these key/value pairs allow you to tag any sort of resource such as a pod or a RC. Both the key and the value are transparent to Kubernetes, which is an elaborate way to say: Kubernetes doesn't know and doesn't care about it; labels only have a meaning to you. Kubernetes, however, will use the labels to, for example, select pods that belong to a service, select pods that a certain RC is supposed to look after, for rolling upgrades and to debug containers online.
