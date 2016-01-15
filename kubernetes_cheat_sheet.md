@@ -82,3 +82,5 @@ The interactions are as follows:
     * To change the number of pods in a RC, scale it like so: `kubectl scale --replicas=2 rc nginx`
     * Containers in a pod may use ephemeral local disk space but for sustainable, persistent scenarios as well as sharing data between containers in a pod you can use volumes.
     * Implement health checks via `readinessProbe` and `livenessProbe` fields on the pod-level.
+2. A service represents a logical group of pods (backed by a RC). It provides a stable interface to interact with the pods. To create a service from a YAML file, use: `kubectl create -f my-service.yaml`. The service selects the targeted pods it routes traffic to via labels, for example, to list all pods labelled with 'app=webserver' use: 
+`kubectl get pods -l="app=webserver"`.
