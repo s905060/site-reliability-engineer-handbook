@@ -838,8 +838,9 @@ multiple processes can modify data in each allocation group without conflict
 # cloudera admin notes: Hadoop installation and initial config
 
 each machine in the hadoop cluster has its own set of configuration files. config files all reside in hadoop's conf dir.
-```/etc/hadoop/conf ```
+`/etc/hadoop/conf `
 
+```
 core-site.xml 		core
 hdfs-site.xml 		hdfs
 yarn-site.xml
@@ -850,15 +851,16 @@ hadoop-metrics.properties
 include,exclude 		host inclusion/exclusion in a cluster
 allocations.xml 		FairScheduler
 hadoop-env.sh 			Environment variables
+```
 
-
-in hadoop-env.sh
-
+in `hadoop-env.sh`
+```
 HADOOP_CLASSPATH,
 HADOOP_HEADPSIZE (controls the heap size for all the hadoop daemons, default to 1gb),
 HADOOP_LOG_DIR,
 HADOOP_PID_DIR,
 JAVA_HOME
+```
 
 when setting env variables, do it here to ensure that they are passed through to the control scripts
 
