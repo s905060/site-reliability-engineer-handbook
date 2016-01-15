@@ -948,11 +948,11 @@ the fsimage file is a persistent checkpoint of the filesystem metadata. it is no
 
 edit log gets really big so hosting this on the secondary nn is a better option. the sec nn purppose is to produce checkpoints of the primary nn in-memory filesystem metadata. the process in which this is done:
 
-1) the secondary asks the primary to roll its edits file, so new edits go to a new file
-2) the secondary retrieves fsimage and edits from the primary (http get)
-3) the secondary loads fsimage into memory, applies each operation from the edits, then creates a new consolidated fsimage file
-4) the secondary sends the new fsimage back to the primary (http post).
-5) the primary replaces the old fsimage with the new one and theold edits file with the new one it started in step 1.
+1.  the secondary asks the primary to roll its edits file, so new edits go to a new file
+2.  the secondary retrieves fsimage and edits from the primary (http get)
+3.  the secondary loads fsimage into memory, applies each operation from the edits, then creates a new consolidated fsimage file
+4.  the secondary sends the new fsimage back to the primary (http post).
+5.  the primary replaces the old fsimage with the new one and theold edits file with the new one it started in step 1.
 
 this can be done manually using ```hadoop dfsadmin -saveNamespace```
 
@@ -972,7 +972,9 @@ in safe mode the namenode does not issue any block-replication or delegation ins
 safemode is exited when the minimal replication condition is reached (99.9%) of the blocks in the whole filesystem meet thier min replication level
 
 `hadoop dfsadmin -safemode get` 		: checks if safemode is on
+
 `hadoop dfsadmin -safemode enter` 	: enters safemode
+
 `hadoop dfsadmin -safemode leave`	: leaves
 
 
