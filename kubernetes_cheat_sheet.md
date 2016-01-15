@@ -51,4 +51,5 @@ Get info about service 'nginx':
 
 Destroy/remove a resource :
 `kubectl delete pod nginx-hl2nb` &&
-`kubectl delete rc nginx`
+`kubectl delete rc nginx` &&
+`kubectl delete svc nginx`
