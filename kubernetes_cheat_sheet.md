@@ -26,6 +26,8 @@ From a physical perspective, a Kubernetes cluster consists of:
 3. A number of nodes that carry out the work.
 4. A command line tool called `kubectl` allowing to query and manipulate the cluster state; this is a fancy way of saying: running containers, creating services and administrating the cluster (logging, monitoring, debugging).
 
+###Abstractions Overview
+
 ![](k8s-cheatsheet-abstractions-overview.png)
 
 List pods:
@@ -66,3 +68,7 @@ In order to troubleshoot the cluster, you may wish to use the following commands
 * To see the logs of a pod in a rolling fashion use `kubectl logs -f nginx-hl2nb` (note: same as with exec, you can specify the container if you wish to)
 * The Kubelet logs are per default at: `/var/log/kubelet.log`
 * To check the status of components such as the scheduler, etcd, and controller manager use: `kubectl get cs`
+
+###Abstractions Details
+![](k8s-cheatsheet-abstractions-details.png)
+
