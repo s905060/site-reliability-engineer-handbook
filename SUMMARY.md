@@ -38,7 +38,7 @@
    * [PROC](proc.md)
    * [Error Detection & Correction](error_detection_&_correction.md)
    * [limits.conf](limitsconf.md)
-   * PXE Boot
+   * [PXE Boot](pxe_boot.md)
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
