@@ -130,3 +130,11 @@ The process should now be listening on port 2003:
 # netstat -nap | grep 2003
 tcp        0      0 0.0.0.0:2003                0.0.0.0:*                   LISTEN      2674/python 
 ```
+
+###Publish Metrics
+
+A metric is any measurable quantity that can vary over time, for example:
+
+* number of requests per second
+* request processing time
+* CPU usage
