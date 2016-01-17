@@ -80,6 +80,6 @@ So now you have created a few replicas of a Pod, how do you load balance between
 
 If Pods are ephemeral and their IP address might change if they get restarted how can I reliably reference my backend container from a frontend container?
 
-Service is an abstraction that defines a set of Pods and a policy to access them. Services find their group of Pods using Labels. Because Services are abstraction you don’t usually see them in diagrams which makes the concept hard to understand.
+Service is an **abstraction** that defines a set of Pods and a policy to access them. Services find their group of Pods using Labels. Because Services are abstraction you don’t usually see them in diagrams which makes the concept hard to understand.
 
-Now, imagine you have 2 backend Pods and you defined a backend Service named ‘backend-service’ with label selector (tier=backend, app=myapp). Service backend-service will facilitate two key things:
+Now, imagine you have 2 backend Pods and you defined a backend Service named ‘backend-service’ with label selector **(tier=backend, app=myapp)**. Service backend-service will facilitate two key things:
