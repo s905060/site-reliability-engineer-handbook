@@ -154,3 +154,12 @@ The datapoint format is defined as:
 * a value at position 1
 * a Unix Epoch timestamp at position 2
 * spaces for the position separators
+
+For example, here are some valid datapoints:
+
+* The number of metrics received by the carbon-cache process every minute
+    * carbon.agents.graphite-tutorial.metricsReceived 28198 1400509108
+* The number of metrics created by the carbon-cache process every minute
+    * carbon.agents.graphite-tutorial.creates 8 1400509110
+* The p95 response times for a sample server endpoint over a minute
+    * PRODUCTION.host.graphite-tutorial.responseTime.p95 0.10 1400509112
