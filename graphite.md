@@ -331,3 +331,9 @@ In the previous section, we made copies of all the example configuration files i
 
 * /opt/graphite/conf/storage-schemas.conf
 * /opt/graphite/conf/storage-aggregation.conf
+
+###Default Storage Schemas
+
+The storage-schemas configuration file is composed of multiple entries containing a pattern against which to match metric names and a retention definition. By default there are two entries: carbon and everything else.
+
+The carbon entry matches metric names that start with the "carbon" string. Carbon daemons emit their own internal metrics every 60 seconds - by default, but it can be changed. For example, a carbon-cache process will emit a metric for the number of metric files it creates every minute. The retention definition indicates that data points reported every 60 seconds will be retained for 90 days.
