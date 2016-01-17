@@ -70,3 +70,21 @@ SELECT * FROM [Category Sales For 1997]
 WHERE CategoryName='Beverages'
 ```
 
+###SQL Updating a View
+You can update a view by using the following syntax:
+
+###SQL CREATE OR REPLACE VIEW Syntax
+```
+CREATE OR REPLACE VIEW view_name AS
+SELECT column_name(s)
+FROM table_name
+```
+
+Now we want to add the "Category" column to the "Current Product List" view. We will update the view with the following SQL:
+```
+CREATE OR REPLACE VIEW [Current Product List] AS
+SELECT ProductID,ProductName,Category
+FROM Products
+WHERE Discontinued=No
+```
+WHERE condition
