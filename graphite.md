@@ -62,3 +62,9 @@ Inside the bin folder, you’ll find the three different types of Carbon daemons
 * **Cache**: accepts metrics over various protocols and writes them to disk as efficiently as possible; caches metric values in RAM as they are received, and flushes them to disk on a specified interval using the underlying Whisper library.
 * **Relay**: serves two distinct purposes: replication and sharding of incoming metrics.
 * **Aggregator**: runs in front of a cache to buffer metrics over time before reporting them into Whisper.
+
+###Install Whisper
+
+Whisper is a database library for storing time-series data that is then retrieved and manipulated by applications using the create, update, and fetch operations.
+
+To install Whisper, run the following commands:
