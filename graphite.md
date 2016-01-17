@@ -1049,6 +1049,8 @@ Let’s say I have an application that runs on hundreds of servers and each of t
 
 We want to see the average among all the p95 latencies
 
-* scale: multiply a value by a constant The latencies are reported in milliseconds, but we want to display them in seconds
+* scale: multiply a value by a constant 
+
+The latencies are reported in milliseconds, but we want to display them in seconds
 
 * alias: change the name of the metric when displaying
