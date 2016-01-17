@@ -401,3 +401,12 @@ The default storage schemas and storage aggregations work well for testing, but 
 ###Modify Storage Schemas
 
 First off, I'll modify the carbon entry. I'd like to keep the metrics reported by Carbon every 60 seconds for 180 days (6 months). After 180 days, I'd like to rollup the metrics to a precision of 10 minutes and keep those for another 180 days.
+```
+[carbon]
+pattern = ^carbon\.
+retentions = 1min:180d,10min:180d
+```
+
+At Squarespace we use the Dropwizard framework to build RESTful web services. We have many of these services running in staging and production environments and they all use the Dropwizard Metrics library to publish application and business metrics every 10 seconds. I'd like to keep 10-second data for 3 days. After 3 days, the data should be aggregated to 1-minute data and kept for 180 days (6 months). Finally, after 6 months, the data should be aggregated to 10-minute data and kept for 180 days.
+
+NOTE: If my metrics library published data points at a different rate, my retention definition would need to change to match it.
