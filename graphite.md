@@ -309,3 +309,6 @@ Aggregations come into play when data from a high precision bucket is moved to a
 
 * Bucket A: 10-second resolution retained for 6 hours (higher precision)
 * Bucket B: 60-second resolution retained for 1 day (lower precision)
+
+We might have an application publishing data points every 10 seconds. Any data points published less than 6 hours ago will be found in Bucket A. However, if I start to query for data points published more than 6 hours ago, they will be found in Bucket B.
+
