@@ -163,3 +163,10 @@ For example, here are some valid datapoints:
     * carbon.agents.graphite-tutorial.creates 8 1400509110
 * The p95 response times for a sample server endpoint over a minute
     * PRODUCTION.host.graphite-tutorial.responseTime.p95 0.10 1400509112
+
+Client applications have multiple ways to publish metrics:
+
+* using the plaintext protocol with tools such as the netcat (nc) command
+* using the pickle protocol
+* using the Advanced Message Queueing Protocol (AMQP)
+* using libraries such as the Dropwizard Metrics library
