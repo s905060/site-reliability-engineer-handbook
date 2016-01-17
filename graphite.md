@@ -138,3 +138,9 @@ A metric is any measurable quantity that can vary over time, for example:
 * number of requests per second
 * request processing time
 * CPU usage
+
+A datapoint is a tuple containing:
+
+* a metric name
+* a measured value
+* at a specific point in time (usually a timestamp)
