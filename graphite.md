@@ -931,3 +931,7 @@ This will create a new database and store it in the /opt/graphite/storage direct
 # ls -l /opt/graphite/storage/graphite.db 
 -rw-r--r--. 1 root root 74752 May 23 14:46 /opt/graphite/storage/graphite.db
 ```
+
+###Graphite Webapp Settings
+
+The configuration file containing the graphite-webapp settings is located in the /opt/graphite/webapp/graphite folder. Copy the sample configuration file:
