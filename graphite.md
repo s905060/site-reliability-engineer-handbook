@@ -428,3 +428,19 @@ retentions = 60s:1d
 I'm going to keep the default storage aggregation entries, but will add a couple more for metrics ending in ratio, m1_rate and p95.
 
 NOTE: Any new entries should be added before the default entry.
+```
+[ratio]
+pattern = \.ratio$
+xFilesFactor = 0.1
+aggregationMethod = average
+
+[m1_rate]
+pattern = \.m1_rate$
+xFilesFactor = 0.1
+aggregationMethod = sum
+
+[p95]
+pattern = \.p95$
+xFilesFactor = 0.1
+aggregationMethod = max
+```
