@@ -47,3 +47,8 @@ DBS $(date)
 EOF
 [ "$?" != "0" ] &&  logger "$0 - MySQL Backup failed" || :
 ```
+
+Last line will log a message in /var/log/message file if backup failed.
+
+**Other usage**
+To log a message contained in the /var/log/myapp.log file, use:
