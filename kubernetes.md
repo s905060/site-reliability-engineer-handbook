@@ -101,3 +101,8 @@ A node (the orange box) is a physical or virtual machine that acts as a Kubernet
 * Kubelet: is the primary node agent.
 * kube-proxy: used by Services to proxy connections to Pods as explained above.
 * Docker or Rocket. The container technology that Kubernetes uses to create containers.
+
+
+###Kubernetes Master
+
+The cluster has a Kubernetes Master (the box in purple). The Kubernetes Master provides a unified view into the cluster and has a number of components such the Kubernetes API Server. The API Server provides a REST endpoint that can be used to interact with the cluster. The master also includes the Replication Controllers used to create and replicate Pods.
