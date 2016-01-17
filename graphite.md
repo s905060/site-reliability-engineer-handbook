@@ -395,3 +395,9 @@ pattern = .*
 xFilesFactor = 0.5
 aggregationMethod = average
 ```
+
+The default storage schemas and storage aggregations work well for testing, but for real production metrics you might want to modify the configuration files.
+
+###Modify Storage Schemas
+
+First off, I'll modify the carbon entry. I'd like to keep the metrics reported by Carbon every 60 seconds for 180 days (6 months). After 180 days, I'd like to rollup the metrics to a precision of 10 minutes and keep those for another 180 days.
