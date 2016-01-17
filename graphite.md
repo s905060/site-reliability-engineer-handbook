@@ -275,3 +275,30 @@ Given these two pieces of information, Whisper performs some simple math to figu
 If a Whisper file is created with this storage schema configuration, it will have a size of 56 KB. If you run it through the whisper-dump.py script, the following will be the output. Note that an archive corresponds to a bucket and the seconds per point and points attributes match our computations above.
 
 Meta data:
+
+```
+aggregation method: average
+  max retention: 604800
+  xFilesFactor: 0.5
+
+Archive 0 info:
+  offset: 52
+  seconds per point: 10
+  points: 2160
+  retention: 21600
+  size: 25920
+
+Archive 1 info:
+  offset: 25972
+  seconds per point: 60
+  points: 1440
+  retention: 86400
+  size: 17280
+
+Archive 2 info:
+  offset: 43252
+  seconds per point: 600
+  points: 1008
+  retention: 604800
+  size: 12096
+```
