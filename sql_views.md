@@ -37,3 +37,11 @@ We can query the view above as follows:
 ```
 SELECT * FROM [Current Product List]
 ```
+
+Another view in the Northwind sample database selects every product in the "Products" table with a unit price higher than the average unit price:
+```
+CREATE VIEW [Products Above Average Price] AS
+SELECT ProductName,UnitPrice
+FROM Products
+WHERE UnitPrice>(SELECT AVG(UnitPrice) FROM Products)
+```
