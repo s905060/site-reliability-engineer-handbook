@@ -1675,3 +1675,32 @@ To illustrate, I am going to build a dashboard to monitor the carbon-cache proce
 To build a dashboard to monitor the carbon-cache process, specify the following in the Edit Dashboard window.
 
 NOTE: This dashboard will monitor all carbon-cache processes that you have running. Notice the use of the asterisk (*) in the metric name to match all values following the carbon.agents prefix.
+
+```
+[
+  {
+    "target": [
+      "aliasByNode(carbon.agents.*.metricsReceived,2)"
+    ],
+    "title": "Carbon Caches - Metrics Received"
+  },
+  {
+    "target": [
+      "aliasByNode(carbon.agents.*.creates,2)"
+    ],
+    "title": "Carbon Caches - Create Operations"
+  },
+  {
+    "target": [
+      "aliasByNode(carbon.agents.*.cpuUsage,2)"
+    ],
+    "title": "Carbon Caches - CPU Usage"
+  },
+  {
+    "target": [
+      "aliasByNode(carbon.agents.*.memUsage,2)"
+    ],
+    "title": "Carbon Caches - Memory Usage"
+  }
+]
+```
