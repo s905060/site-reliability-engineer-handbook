@@ -1667,3 +1667,11 @@ You may also configure and save your dashboard, load other dashboards, change th
 ![](fig9-small.png)
 
 To illustrate, I am going to build a dashboard to monitor the carbon-cache process. As mentioned in a previous section, Carbon processes report internal metrics. I don't like to build dashboards manually, instead I will use the Edit Dashboard feature.
+
+![](1fig10.png)
+
+![](1fig11.png)
+
+To build a dashboard to monitor the carbon-cache process, specify the following in the Edit Dashboard window.
+
+NOTE: This dashboard will monitor all carbon-cache processes that you have running. Notice the use of the asterisk (*) in the metric name to match all values following the carbon.agents prefix.
