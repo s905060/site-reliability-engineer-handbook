@@ -187,3 +187,14 @@ The carbon-cache log files will contain information about the new metrics receiv
 19/05/2014 10:42:53 :: creating database file /opt/graphite/storage/whisper/carbon/agents/graphite-tutorial/creates.wsp (archive=[(60, 129600)] xff=0.5 agg=average)
 19/05/2014 10:42:57 :: creating database file /opt/graphite/storage/whisper/PRODUCTION/host/graphite-tutorial/responseTime/p95.wsp (archive=[(60, 1440)] xff=0.5 agg=average)
 ```
+
+Carbon interacts with Whisper to store the time-series data to the filesystem. Navigate the filesystem to make sure the data files have been created:
+```
+# ls -l /opt/graphite/storage/whisper/carbon/agents/graphite-tutorial/
+total 3040
+-rw-r--r--. 1 root root 1555228 May 19 10:42 creates.wsp
+-rw-r--r--. 1 root root 1555228 May 19 10:42 metricsReceived.wsp
+# ls -l /opt/graphite/storage/whisper/PRODUCTION/host/graphite-tutorial/responseTime/
+total 20
+-rw-r--r--. 1 root root 17308 May 19 10:42 p95.wsp
+```
