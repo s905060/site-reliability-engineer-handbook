@@ -259,3 +259,9 @@ We first need to understand how data is stored in the Whisper files. When a Whis
 * Bucket A: data points with 10-second resolution
 * Bucket B: data points with 60-second resolution
 * Bucket C: data points with 10-minute resolution
+
+Each bucket also has a retention attribute indicating the length of time data points in the bucket should be retained for. For example:
+
+* Bucket A: data points with 10-second resolution retained for 6 hours
+* Bucket B: data points with 60-second resolution retained for 1 day
+* Bucket C: data points with 10-minute resolution retained for 7 days
