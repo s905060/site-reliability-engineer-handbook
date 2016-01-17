@@ -57,3 +57,10 @@ Before I go on to explain Replication Controllers and Services, let me first int
 ###Labels
 
 As you can see from the diagram, some of the Pods have labels (label). A Label is a key/value pair attached to Pods and convey user-defined attributes. For example you might create a ‘tier’ and an ‘app’ tags to tag your containers by applying the Labels (tier=frontend, app=myapp) to your frontend Pods and Labels (tier=backend, app=myapp) to backend Pods. You can then use Selectors to select Pods with particular Labels and apply Services or Replication Controllers to them.
+
+
+###Replication Controllers
+
+Do I create Pods manually, what if I want to create a few copies of the same Pod, do I have to create each one individually, can I group Pods into logical groups?
+
+Replication Controllers ensure the specified number of Pod “replicas” are running at any one time. If you created a Replication Controller for a Pod and specified 3 replicas, it will create 3 Pods and will continuously monitor them. If one Pod dies then the Replication Controller will replace it to maintain a total count of 3. This is illustrated in the animated image below:
