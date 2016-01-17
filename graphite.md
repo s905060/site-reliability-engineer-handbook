@@ -271,3 +271,7 @@ Given these two pieces of information, Whisper performs some simple math to figu
 * Bucket A: 6 hours x 60 mins/hour x 6 data points/min = 2160 points
 * Bucket B: 1 day x 24 hours/day x 60 mins/hour x 1 data point/min = 1440 points
 * Bucket C: 7 days x 24 hours/day x 6 data points/hour = 1008 points
+
+If a Whisper file is created with this storage schema configuration, it will have a size of 56 KB. If you run it through the whisper-dump.py script, the following will be the output. Note that an archive corresponds to a bucket and the seconds per point and points attributes match our computations above.
+
+Meta data:
