@@ -1483,6 +1483,7 @@ l a user interface to navigate metrics and build and save dashboards
 The installation of graphite-web is really a maze. I have installed it multiple times - in RHEL, CentOS, Ubuntu and Mac OS X - and every time the steps have been different. Treat it as a game, enjoy it, and you'll know that you've completed the maze when all the required dependencies have been installed.
 
 Instructions for RHEL 6.5:
+
 ```
 # cd /tmp
 # git clone https://github.com/graphite-project/graphite-web.git
