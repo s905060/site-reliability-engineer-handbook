@@ -15,3 +15,9 @@ Kubernetes orchestrates your containers so together they are performing a Sympho
 * organise containers in groups and provide load balancing between them,
 * easily roll out new versions of application containers,
 * provide container resilience, if a container dies it gets replaced, etc..
+
+In fact, with Kubernetes you can deploy a full cluster of multi-tiered containers (frontend, backend, etc…) with a single configuration file and a single command:
+
+```
+$ kubectl create -f single-config-file.yaml
+```
