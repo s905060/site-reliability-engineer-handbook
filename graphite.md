@@ -343,3 +343,10 @@ The carbon entry matches metric names that start with the "carbon" string. Carbo
 pattern = ^carbon\.
 retentions = 60s:90d
 ```
+
+The everything else entry captures any other metric that is not carbon-related by specifying a pattern with an asterisk. The retention definition indicates that data points reported every 60 seconds will be retained for 1 day.
+```
+[default_1min_for_1day]
+pattern = .*
+retentions = 60s:1d
+```
