@@ -179,3 +179,11 @@ echo "carbon.agents.graphite-tutorial.metricsReceived 28198 `date +%s`" | nc loc
 echo "carbon.agents.graphite-tutorial.creates 8 `date +%s`" | nc localhost 2003
 echo "PRODUCTION.host.graphite-tutorial.responseTime.p95 0.10 `date +%s`" | nc localhost 2003
 ```
+
+The carbon-cache log files will contain information about the new metrics received and where the information was stored:
+```
+# tail -f /opt/graphite/storage/log/carbon-cache/carbon-cache-a/creates.log
+19/05/2014 10:42:44 :: creating database file /opt/graphite/storage/whisper/carbon/agents/graphite-tutorial/metricsReceived.wsp (archive=[(60, 129600)] xff=0.5 agg=average)
+19/05/2014 10:42:53 :: creating database file /opt/graphite/storage/whisper/carbon/agents/graphite-tutorial/creates.wsp (archive=[(60, 129600)] xff=0.5 agg=average)
+19/05/2014 10:42:57 :: creating database file /opt/graphite/storage/whisper/PRODUCTION/host/graphite-tutorial/responseTime/p95.wsp (archive=[(60, 1440)] xff=0.5 agg=average)
+```
