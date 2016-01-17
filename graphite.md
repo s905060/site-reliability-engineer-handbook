@@ -967,3 +967,12 @@ tcp        0      0 0.0.0.0:2003                0.0.0.0:*                   LIST
 # netstat -nap | grep 7002
 tcp        0      0 0.0.0.0:7002                0.0.0.0:*                   LISTEN      14101/python
 ```
+
+However, you could specify the carbon-cache process to read from explicitly in the settings file:
+```
+# vi /opt/graphite/webapp/graphite/local_settings.py
+#########################
+# Cluster Configuration #
+#########################
+CARBONLINK_HOSTS = ["127.0.0.1:7002:a"]
+``
