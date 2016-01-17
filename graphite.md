@@ -1061,3 +1061,9 @@ The web application displays metrics as a tree. If you navigate the metric tree 
 ![](fig3.png)
 
 You may click on any metric and it will be graphed (past 24 hours by default) in the panel on the right. To change the date range to query, use the buttons in the panel above the graph.
+
+![](fig4-small.png)
+
+###Create a Dashboard
+
+The default view is great to quickly browse metrics and visualize them. But if you want to build a dashboard, point your browser to http://your-ip:8085/dashboard. The top portion of the page is another way to navigate your metrics. You can either click on the options to navigate, or start typing to get suggestions. You can click on a metric and a graph tile will appear in the bottom section. As you keep clicking on new metrics, additional tiles appear in the panel below thereby creating a dashboard. At times you might want to display multiple metrics in a single graph. To do this, drag and drop a tile on top of another one and the metrics will be graphed together. You may also change the position of the tiles in the layout by dragging them around.
