@@ -1055,3 +1055,5 @@ carbon.agents.graphite-tutorial.metricsReceived
 carbon.agents.graphite-tutorial.creates
 PRODUCTION.host.graphite-tutorial.responseTime.p95
 ```
+
+The web application displays metrics as a tree. If you navigate the metric tree in the left panel, you should be able to see all of these metrics.
