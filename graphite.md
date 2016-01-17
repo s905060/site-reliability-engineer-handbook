@@ -56,3 +56,9 @@ drwxr-xr-x. 2 root root 4096 May 18 23:56 conf
 drwxr-xr-x. 4 root root 4096 May 18 23:56 lib
 drwxr-xr-x. 6 root root 4096 May 18 23:56 storage
 ```
+
+Inside the bin folder, you’ll find the three different types of Carbon daemons.
+
+* **Cache**: accepts metrics over various protocols and writes them to disk as efficiently as possible; caches metric values in RAM as they are received, and flushes them to disk on a specified interval using the underlying Whisper library.
+* **Relay**: serves two distinct purposes: replication and sharding of incoming metrics.
+* **Aggregator**: runs in front of a cache to buffer metrics over time before reporting them into Whisper.
