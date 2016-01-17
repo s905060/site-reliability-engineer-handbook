@@ -373,3 +373,25 @@ By default there are four entries:
 * l Any other metrics
     * Use the average aggregation function
     * At least 50% of data points should be present to aggregate
+
+```
+[min]
+pattern = \.min$
+xFilesFactor = 0.1
+aggregationMethod = min
+
+[max]
+pattern = \.max$
+xFilesFactor = 0.1
+aggregationMethod = max
+
+[sum]
+pattern = \.count$
+xFilesFactor = 0
+aggregationMethod = sum
+
+[default_average]
+pattern = .*
+xFilesFactor = 0.5
+aggregationMethod = average
+```
