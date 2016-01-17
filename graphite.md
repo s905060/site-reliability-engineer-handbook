@@ -302,3 +302,10 @@ Archive 2 info:
   retention: 604800
   size: 12096
 ```
+
+###What about aggregations?
+
+Aggregations come into play when data from a high precision bucket is moved to a lower precision bucket. Let's use Bucket A and B from our previous example.
+
+* Bucket A: 10-second resolution retained for 6 hours (higher precision)
+* Bucket B: 60-second resolution retained for 1 day (lower precision)
