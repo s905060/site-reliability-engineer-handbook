@@ -64,3 +64,12 @@ As you can see from the diagram, some of the Pods have labels (label). A Label i
 Do I create Pods manually, what if I want to create a few copies of the same Pod, do I have to create each one individually, can I group Pods into logical groups?
 
 Replication Controllers ensure the specified number of Pod “replicas” are running at any one time. If you created a Replication Controller for a Pod and specified 3 replicas, it will create 3 Pods and will continuously monitor them. If one Pod dies then the Replication Controller will replace it to maintain a total count of 3. This is illustrated in the animated image below:
+
+![](kubernetes_replication_controller.gif)
+
+If the Pod that died comes back then you have 4 Pods, consequently the Replication Controller will terminate one so the total count is 3. If you change the number of replicas to 5 on the fly, the Replication Controller will immediately start 2 new Pods so the total count is 5. You can also scale down Pods this way, a handy feature performing rolling updates.
+
+When creating a Replication Controller you need to specify two things:
+
+1. Pod Template: the template that will be used to create the Pods replicas.
+2. Labels: the labels for the Pods that this Replication Controller should monitor.
