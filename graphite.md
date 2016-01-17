@@ -358,3 +358,18 @@ The storage-aggregation configuration file is also composed of multiple entries 
 * a pattern against which to match metric names
 * an xFilesFactor value
 * an aggregation function
+
+By default there are four entries:
+
+* l Metrics ending in .min
+    * Use the min aggregation function
+    * At least 10% of data points should be present to aggregate
+* l Metrics ending in .max
+    * Use the max aggregation function
+    * At least 10% of data points should be present to aggregate
+* l Metrics ending in .count
+    * Use the sum aggregation function
+    * Aggregate if there is at least one data point
+* l Any other metrics
+    * Use the average aggregation function
+    * At least 50% of data points should be present to aggregate
