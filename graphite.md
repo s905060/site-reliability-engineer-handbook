@@ -975,4 +975,14 @@ However, you could specify the carbon-cache process to read from explicitly in t
 # Cluster Configuration #
 #########################
 CARBONLINK_HOSTS = ["127.0.0.1:7002:a"]
-``
+```
+
+This means that I have a carbon-cache process running locally, with the query port set to 7002 and the name set to 'a'. If you look at the Carbon configuration file, you should see something like this:
+```
+# vi /opt/graphite/conf/carbon.conf
+[cache]
+LINE_RECEIVER_INTERFACE = 0.0.0.0
+LINE_RECEIVER_PORT = 2003
+CACHE_QUERY_INTERFACE = 0.0.0.0
+CACHE_QUERY_PORT = 7002
+```
