@@ -1042,3 +1042,7 @@ http://your-ip:8085/render?target=carbon.agents.*.cpuUsage&width=500&height=300&
 Graphite's API supports a wide variety of display options as well as data manipulation functions that follow a simple functional syntax. Functions can be nested, allowing for complex expressions and calculations. View the online documentation to peruse all of the available functions:
 
 * Graphite Functions: http://graphite.readthedocs.org/en/latest/functions.html
+
+Let’s say I have an application that runs on hundreds of servers and each of them publishes their individual p95 response times every 10 seconds. Using functions provided by the API, I can massage the metrics and build an informative graph:
+
+* averageSeries: computes the average of all the values in the set
