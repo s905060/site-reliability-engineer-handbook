@@ -1034,5 +1034,5 @@ Sample request #2:
 * Graph dimensions: 500x300
 * Time range: 12 hours ago until 5 minutes ago
 * Response format: JSON data
-* 
+
 http://your-ip:8085/render?target=carbon.agents.*.cpuUsage&width=500&height=300&from=-12h&until=-5min&format=json
