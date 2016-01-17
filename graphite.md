@@ -20,3 +20,7 @@ Specifications:
 * Instance Type: m3.xlarge
 * Elastic Block Store (EBS) Volume: 250 GB
 * Python Version: 2.6.6
+
+###Introduction to Carbon & Whisper
+
+Graphite is composed of multiple back-end and front-end components. The back-end components are used to store numeric time-series data. The front-end components are used to retrieve the metric data and optionally render graphs. In this article, I'll focus first on the back-end components: Carbon and Whisper.
