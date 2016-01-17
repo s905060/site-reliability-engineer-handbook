@@ -87,4 +87,10 @@ SELECT ProductID,ProductName,Category
 FROM Products
 WHERE Discontinued=No
 ```
+
+###SQL Dropping a View
+You can delete a view with the DROP VIEW command.
+
+###SQL DROP VIEW Syntax
+DROP VIEW view_name
 WHERE condition
