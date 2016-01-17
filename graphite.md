@@ -251,3 +251,7 @@ There might be some confusion when you or your fellow developers and system admi
 * Why are my data points getting averaged?
 * I've been publishing data points intermittently, why are there no data points?
 * I've been publishing data points for many days, why am I only getting data for one day?
+
+###How does Whisper store data?
+
+We first need to understand how data is stored in the Whisper files. When a Whisper file is created, it has a fixed size that will never change. Within the Whisper file there are potentially multiple "buckets", that you need to define in the configuration files, for data points at different resolutions. For example:
