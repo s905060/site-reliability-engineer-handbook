@@ -1430,16 +1430,18 @@ NOTE: If my metrics library published data points at a different rate, my retent
 pattern = ^(PRODUCTION|STAGING).*
 retentions = 10s:3d,1min:180d,10min:180d
 Metrics that are not carbon, production, or staging metrics are probably just test metrics. I'll keep those around only for one day and assume that they will be published every minute.
-
+```
 [default_1min_for_1day]
 pattern = .*
 retentions = 60s:1d
-Modify Storage Aggregations
+```
+
+###Modify Storage Aggregations
 
 I'm going to keep the default storage aggregation entries, but will add a couple more for metrics ending in ratio, m1_rate and p95.
 
 NOTE: Any new entries should be added before the default entry.
-
+```
 [ratio]
 pattern = \.ratio$
 xFilesFactor = 0.1
@@ -1454,6 +1456,8 @@ aggregationMethod = sum
 pattern = \.p95$
 xFilesFactor = 0.1
 aggregationMethod = max
+```
+
 At this point you have configured your Graphite backend to match the data point publishing rates of your application and fully understand how the data points are stored in the filesystem. In the next section, we'll attempt to visualize the data using graphite-webapp.
 
 ###Graphite Webapp
