@@ -89,3 +89,6 @@ Now, imagine you have 2 backend Pods and you defined a backend Service named ‘
 * So now your frontend has got an IP address for the backend-service, but which one of the 2 backend Pods will it access? The Service will provide transparent load balancing between the 2 backend Pods and forward the request to any one of them (see the animated diagram below). This is done by using a proxy (kube-proxy) that runs on each Node. More technical details here.
 
 This animated diagram illustrates the function of Services. Note that this diagram is overly simplified. The underlying networking and routing involved to achieve this transparent load balancing is relatively advanced if you are not into network configurations. Have a peek here if you are interested in a deep dive.
+
+![](kubernetes_service.gif)
+
