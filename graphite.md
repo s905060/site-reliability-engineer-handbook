@@ -889,3 +889,14 @@ The goal is to install at least all of the required dependencies. Install the op
 1 optional dependencies not met. Please consider the optional items before proceeding.
 All necessary dependencies are met.
 ```
+
+I've installed enough packages to meet the required dependencies. I can now install graphite-web:
+```
+# cd /tmp/graphite-web
+# sudo python setup.py install
+# ls -l /opt/graphite/webapp/
+total 12
+drwxr-xr-x.  6 root root 4096 May 23 14:33 content
+drwxr-xr-x. 15 root root 4096 May 23 14:33 graphite
+-rw-r--r--.  1 root root  280 May 23 14:33 graphite_web-0.10.0_alpha-py2.6.egg-info
+```
