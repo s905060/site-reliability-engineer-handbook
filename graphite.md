@@ -1036,3 +1036,9 @@ Sample request #2:
 * Response format: JSON data
 
 http://your-ip:8085/render?target=carbon.agents.*.cpuUsage&width=500&height=300&from=-12h&until=-5min&format=json
+
+![](fig19-small.png)
+
+Graphite's API supports a wide variety of display options as well as data manipulation functions that follow a simple functional syntax. Functions can be nested, allowing for complex expressions and calculations. View the online documentation to peruse all of the available functions:
+
+* Graphite Functions: http://graphite.readthedocs.org/en/latest/functions.html
