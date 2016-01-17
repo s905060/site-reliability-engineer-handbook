@@ -422,3 +422,9 @@ Metrics that are not carbon, production, or staging metrics are probably just te
 pattern = .*
 retentions = 60s:1d
 ```
+
+###Modify Storage Aggregations
+
+I'm going to keep the default storage aggregation entries, but will add a couple more for metrics ending in ratio, m1_rate and p95.
+
+NOTE: Any new entries should be added before the default entry.
