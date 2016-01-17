@@ -900,3 +900,9 @@ drwxr-xr-x.  6 root root 4096 May 23 14:33 content
 drwxr-xr-x. 15 root root 4096 May 23 14:33 graphite
 -rw-r--r--.  1 root root  280 May 23 14:33 graphite_web-0.10.0_alpha-py2.6.egg-info
 ```
+
+The setup script moves the web application files to the proper location under /opt/graphite/webapp.
+
+###Initialize the Database
+
+The web application maintains an internal database to store user information and dashboards. Initialize the database by running the following:
