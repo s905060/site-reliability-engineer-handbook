@@ -1057,3 +1057,7 @@ PRODUCTION.host.graphite-tutorial.responseTime.p95
 ```
 
 The web application displays metrics as a tree. If you navigate the metric tree in the left panel, you should be able to see all of these metrics.
+
+![](fig3.png)
+
+You may click on any metric and it will be graphed (past 24 hours by default) in the panel on the right. To change the date range to query, use the buttons in the panel above the graph.
