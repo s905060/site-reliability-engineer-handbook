@@ -1017,3 +1017,18 @@ refresh_interval = 60
 autocomplete_delay = 375
 merge_hover_delay = 750
 ```
+
+I modify the default graph template to have a black background and a white foreground. I also like the font to be smaller.
+```
+# vi /opt/graphite/conf/graphTemplates.conf
+[default]
+background = black
+foreground = white
+minorLine = grey
+majorLine = rose
+lineColors = blue,green,red,purple,brown,yellow,aqua,grey,magenta,pink,gold,rose
+fontName = Sans
+fontSize = 9
+fontBold = False
+fontItalic = False
+```
