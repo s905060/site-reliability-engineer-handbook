@@ -255,3 +255,7 @@ There might be some confusion when you or your fellow developers and system admi
 ###How does Whisper store data?
 
 We first need to understand how data is stored in the Whisper files. When a Whisper file is created, it has a fixed size that will never change. Within the Whisper file there are potentially multiple "buckets", that you need to define in the configuration files, for data points at different resolutions. For example:
+
+* Bucket A: data points with 10-second resolution
+* Bucket B: data points with 60-second resolution
+* Bucket C: data points with 10-minute resolution
