@@ -73,3 +73,6 @@ When creating a Replication Controller you need to specify two things:
 
 1. Pod Template: the template that will be used to create the Pods replicas.
 2. Labels: the labels for the Pods that this Replication Controller should monitor.
+
+So now you have created a few replicas of a Pod, how do you load balance between them? Enter Services.
+
