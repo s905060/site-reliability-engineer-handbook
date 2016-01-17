@@ -1054,3 +1054,12 @@ We want to see the average among all the p95 latencies
 The latencies are reported in milliseconds, but we want to display them in seconds
 
 * alias: change the name of the metric when displaying
+
+ Instead of the full metric name, we want to display only avg p95 in the graph legend
+
+The argument passed as part of the metric query to the API would be:
+
+alias(scale(averageSeries(PRODUCTION.host.*.requests.p95),0.001),'avg p95')
+
+The API would return the following graph:
+
