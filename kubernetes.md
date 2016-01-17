@@ -23,3 +23,7 @@ $ kubectl create -f single-config-file.yaml
 ```
 
 kubectl is a command-line program for interacting with the Kubernetes API. Now let’s introduce some of the key concepts.
+
+###Cluster
+
+A cluster is a group of nodes, they can be physical servers or virtual machines that has the Kubernetes platform installed. The diagram below is an illustration of such cluster. Note this diagram is very simplified to highlight the key concepts. For a typical Kubernetes architecture diagram see here.
