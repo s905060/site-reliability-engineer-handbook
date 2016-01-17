@@ -242,3 +242,8 @@ Archive 0 data:
 1438: 0,          0
 1439: 0,          0
 ```
+
+Aggregation method, max retention, xFilesFactor, and all of the other attributes of the Whisper file are important to understand. Don't worry if you're lost at this point, I'll be covering these in more detail in the next section.
+
+###Whisper Storage Schemas & Aggregations
+
