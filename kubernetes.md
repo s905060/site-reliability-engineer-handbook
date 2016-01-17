@@ -46,3 +46,10 @@ I will start off with Pods because they are the smallest deployable units in Kub
 
 Pods (green boxes) are scheduled to Nodes and contain a group of co-located Containers and Volumes. Containers in the same Pod share the same network namespace and can communicate with each other using localhost. Pods are considered to be ephemeral rather than durable entities. You might be asking yourself a few questions:
 
+* **If Pods are ephemeral how can I persist my container data across container restarts?** Well, Kubernetes supports the concept of Volumes so you can use a Volume type that is persistent.
+
+* **Do I create Pods manually, what if I want to create a few copies of the same container do I have to create each one individually?** You can create individual Pods manually, but you can use a Replication Controller to rollout multiple copies using a Pod template, which will be explained below.
+
+* **If Pods are ephemeral and their IP address might change if they get restarted how can I reliability reference my backend container from a frontend container?** In this case you will use a Service as explained below.
+
+Before I go on to explain Replication Controllers and Services, let me first introduce Labels.
