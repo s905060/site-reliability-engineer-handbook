@@ -148,3 +148,9 @@ A datapoint is a tuple containing:
 Client applications publish metrics by sending data points to a Carbon process. The application establishes a TCP connection on the Carbon process' port and sends data points in a simple plaintext format. In our example, the port is 2003. The TCP connection may remain open and reused as many times as necessary. The Carbon process listens for incoming data but does not send any response back to the client.
 
 The datapoint format is defined as:
+
+* a single line of text per data point
+* a dotted metric name at position 0
+* a value at position 1
+* a Unix Epoch timestamp at position 2
+* spaces for the position separators
