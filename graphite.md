@@ -444,3 +444,4 @@ pattern = \.p95$
 xFilesFactor = 0.1
 aggregationMethod = max
 ```
+At this point you have configured your Graphite backend to match the data point publishing rates of your application and fully understand how the data points are stored in the filesystem. In the next section, we'll attempt to visualize the data using graphite-webapp.
