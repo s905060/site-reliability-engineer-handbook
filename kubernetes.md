@@ -41,3 +41,8 @@ Looking at the diagram you can spot the following components, I used icons to re
 * Kubernetes Master
 
 I will start off with Pods because they are the smallest deployable units in Kubernetes that can be created scheduled and managed. It’s all about the Pods, if you deploy a single container it will be deployed in its own Pod.
+
+###Pods
+
+Pods (green boxes) are scheduled to Nodes and contain a group of co-located Containers and Volumes. Containers in the same Pod share the same network namespace and can communicate with each other using localhost. Pods are considered to be ephemeral rather than durable entities. You might be asking yourself a few questions:
+
