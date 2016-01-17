@@ -1046,3 +1046,9 @@ Graphite's API supports a wide variety of display options as well as data manipu
 Let’s say I have an application that runs on hundreds of servers and each of them publishes their individual p95 response times every 10 seconds. Using functions provided by the API, I can massage the metrics and build an informative graph:
 
 * averageSeries: computes the average of all the values in the set
+
+We want to see the average among all the p95 latencies
+
+* scale: multiply a value by a constant The latencies are reported in milliseconds, but we want to display them in seconds
+
+* alias: change the name of the metric when displaying
