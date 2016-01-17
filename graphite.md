@@ -265,3 +265,9 @@ Each bucket also has a retention attribute indicating the length of time data po
 * Bucket A: data points with 10-second resolution retained for 6 hours
 * Bucket B: data points with 60-second resolution retained for 1 day
 * Bucket C: data points with 10-minute resolution retained for 7 days
+
+Given these two pieces of information, Whisper performs some simple math to figure out how many points it will actually need to keep in each bucket:
+
+* Bucket A: 6 hours x 60 mins/hour x 6 data points/min = 2160 points
+* Bucket B: 1 day x 24 hours/day x 60 mins/hour x 1 data point/min = 1440 points
+* Bucket C: 7 days x 24 hours/day x 6 data points/hour = 1008 points
