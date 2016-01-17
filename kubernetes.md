@@ -53,3 +53,7 @@ Pods (green boxes) are scheduled to Nodes and contain a group of co-located Cont
 * **If Pods are ephemeral and their IP address might change if they get restarted how can I reliability reference my backend container from a frontend container?** In this case you will use a Service as explained below.
 
 Before I go on to explain Replication Controllers and Services, let me first introduce Labels.
+
+###Labels
+
+As you can see from the diagram, some of the Pods have labels (label). A Label is a key/value pair attached to Pods and convey user-defined attributes. For example you might create a ‘tier’ and an ‘app’ tags to tag your containers by applying the Labels (tier=frontend, app=myapp) to your frontend Pods and Labels (tier=backend, app=myapp) to backend Pods. You can then use Selectors to select Pods with particular Labels and apply Services or Replication Controllers to them.
