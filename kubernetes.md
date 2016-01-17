@@ -110,3 +110,6 @@ The cluster has a Kubernetes Master (the box in purple). The Kubernetes Master p
 ###Where to next
 
 Now armed with the basic knowledge of the key concepts of Kubernetes you can have a look at my recent follow on post “Getting Started with Kubernetes on Google Container Engine“. You can also have a look at the Kubernetes user guide. The user guide provides a quick walkthrough and a thorough walkthrough.
+
+If you can’t wait and want to get your hands on some Kubernetes practice then head over to Google Container Engine. Google Container Engine is a hosted Kubernetes container environment. Simply signup/signin and run through the Walkthroughs examples.
+
