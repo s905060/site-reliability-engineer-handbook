@@ -906,3 +906,22 @@ The setup script moves the web application files to the proper location under /o
 ###Initialize the Database
 
 The web application maintains an internal database to store user information and dashboards. Initialize the database by running the following:
+
+```
+# cd /opt/graphite
+# export PYTHONPATH=$PYTHONPATH:`pwd`/webapp
+# django-admin.py syncdb --settings=graphite.settings
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'): feangulo
+Email address: feangulo@yaipan.com
+Password: 
+Password (again): 
+Error: Blank passwords aren't allowed.
+Password: 
+Password (again): 
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+```
