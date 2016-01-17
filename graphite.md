@@ -1049,3 +1049,9 @@ Open a web browser and point it to http://your-ip:8085. Make sure that the Graph
 ###Navigate the Metrics
 
 In a previous section, we had published a couple of metrics to the carbon-cache using the netcat command. Specifically, we had published the following:
+
+```
+carbon.agents.graphite-tutorial.metricsReceived
+carbon.agents.graphite-tutorial.creates
+PRODUCTION.host.graphite-tutorial.responseTime.p95
+```
