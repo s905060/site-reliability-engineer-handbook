@@ -106,3 +106,7 @@ A node (the orange box) is a physical or virtual machine that acts as a Kubernet
 ###Kubernetes Master
 
 The cluster has a Kubernetes Master (the box in purple). The Kubernetes Master provides a unified view into the cluster and has a number of components such the Kubernetes API Server. The API Server provides a REST endpoint that can be used to interact with the cluster. The master also includes the Replication Controllers used to create and replicate Pods.
+
+###Where to next
+
+Now armed with the basic knowledge of the key concepts of Kubernetes you can have a look at my recent follow on post “Getting Started with Kubernetes on Google Container Engine“. You can also have a look at the Kubernetes user guide. The user guide provides a quick walkthrough and a thorough walkthrough.
