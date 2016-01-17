@@ -113,3 +113,20 @@ Under the cache section, the line receiver port has a default value and it is us
 LINE_RECEIVER_INTERFACE = 0.0.0.0
 LINE_RECEIVER_PORT = 2003
 ```
+
+Start a carbon-cache process by running the following command:
+
+```
+# cd /opt/graphite/bin
+# ./carbon-cache.py start
+Starting carbon-cache (instance a)
+```
+
+The process should now be listening on port 2003:
+```
+# ps -efla | grep carbon-cache
+1 S root      2674     1  0  80   0 - 75916 ep_pol 00:18 ?        00:00:03 /usr/bin/python ./carbon-cache.py start
+
+# netstat -nap | grep 2003
+tcp        0      0 0.0.0.0:2003                0.0.0.0:*                   LISTEN      2674/python 
+```
