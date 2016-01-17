@@ -45,3 +45,11 @@ SELECT ProductName,UnitPrice
 FROM Products
 WHERE UnitPrice>(SELECT AVG(UnitPrice) FROM Products)
 ```
+
+We can query the view above as follows:
+```
+SELECT * FROM [Products Above Average Price]
+```
+
+Another view in the Northwind database calculates the total sale for each category in 1997. Note that this view selects its data from another view called "Product Sales for 1997":
+
