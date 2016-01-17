@@ -350,3 +350,11 @@ The everything else entry captures any other metric that is not carbon-related b
 pattern = .*
 retentions = 60s:1d
 ```
+
+###Default Storage Aggregation
+
+The storage-aggregation configuration file is also composed of multiple entries containing:
+
+* a pattern against which to match metric names
+* an xFilesFactor value
+* an aggregation function
