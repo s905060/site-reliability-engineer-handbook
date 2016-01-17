@@ -1036,3 +1036,8 @@ fontItalic = False
 ###Run the Web Application
 
 We are finally ready to run the web application. I'm going to run it on port 8085 but you may set the port to any value you'd like. Run the following commands:
+```
+# cd /opt/graphite
+# PYTHONPATH=`pwd`/storage/whisper ./bin/run-graphite-devel-server.py --port=8085 --libs=`pwd`/webapp /opt/graphite 1>/opt/graphite/storage/log/webapp/process.log 2>&1 &
+# tail -f /opt/graphite/storage/log/webapp/process.log
+```
