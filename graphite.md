@@ -925,3 +925,9 @@ Installing custom SQL ...
 Installing indexes ...
 Installed 0 object(s) from 0 fixture(s)
 ```
+
+This will create a new database and store it in the /opt/graphite/storage directory:
+```
+# ls -l /opt/graphite/storage/graphite.db 
+-rw-r--r--. 1 root root 74752 May 23 14:46 /opt/graphite/storage/graphite.db
+```
