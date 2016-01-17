@@ -83,3 +83,7 @@ If Pods are ephemeral and their IP address might change if they get restarted ho
 Service is an **abstraction** that defines a set of Pods and a policy to access them. Services find their group of Pods using Labels. Because Services are abstraction you don’t usually see them in diagrams which makes the concept hard to understand.
 
 Now, imagine you have 2 backend Pods and you defined a backend Service named ‘backend-service’ with label selector **(tier=backend, app=myapp)**. Service backend-service will facilitate two key things:
+
+* A cluster-local DNS entry will be created for the Service so your frontend Pod only need to do a DNS lookup for hostname ‘backend-service’ this will resolve to a stable IP address that your frontend application can use.
+
+* So now your frontend has got an IP address for the backend-service, but which one of the 2 backend Pods will it access? The Service will provide transparent load balancing between the 2 backend Pods and forward the request to any one of them (see the animated diagram below). This is done by using a proxy (kube-proxy) that runs on each Node. More technical details here.
