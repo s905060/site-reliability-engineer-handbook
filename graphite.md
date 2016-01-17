@@ -874,3 +874,18 @@ Instructions for RHEL 6.5:
 
 The goal is to install at least all of the required dependencies. Install the optional dependencies if you're planning on using the AMQ functionality or the caching functionality using Memcache.
 
+```
+# sudo yum install cairo-devel
+# sudo yum install pycairo-devel
+# sudo pip install django
+# sudo pip install pyparsing
+# sudo pip install django-tagging
+# sudo pip install python-memcached
+# sudo pip install txamqp
+# sudo pip install pytz
+# cd /tmp/graphite-web
+# python check-dependencies.py
+[OPTIONAL] Unable to import the 'python-rrdtool' module, this is required for reading RRD.
+1 optional dependencies not met. Please consider the optional items before proceeding.
+All necessary dependencies are met.
+```
