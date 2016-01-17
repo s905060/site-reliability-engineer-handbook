@@ -137,7 +137,7 @@
        * [Special Variables](special_variables.md)
        * [Small getopts tutorial](small_getopts_tutorial.md)
        * [How rapid detection of base script syntax errors, it does not execute the script](how_rapid_detection_of_base_script_syntax_errors,_.md)
-       * Write message to a syslog / log file
+       * [Write message to a syslog / log file](write_message_to_a_syslog__log_file.md)
    * [Java](java.md)
        * [Life cycle of a Thread (Thread States)](life_cycle_of_a_thread_thread_states.md)
        * [Understand JVM GC](understand_jvm_gc.md)
