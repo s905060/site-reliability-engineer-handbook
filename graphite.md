@@ -1538,6 +1538,7 @@ Graphite Webapp Settings
 
 The configuration file containing the graphite-webapp settings is located in the /opt/graphite/webapp/graphite folder. Copy the sample configuration file:
 
+```
 # vi /opt/graphite/webapp/graphite/local_settings.py
 #########################
 # General Configuration #
@@ -1556,45 +1557,57 @@ DATABASES = {
         'PORT': ''
     }
 }
-At this point, if you followed the instructions in the previous sections, you should only have one carbon-cache process running on port 2003 with a query port on 7002. These are the defaults expected by the graphite-webapp. Therefore, there are no other changes required to the configuration file.
+```
 
+At this point, if you followed the instructions in the previous sections, you should only have one carbon-cache process running on port 2003 with a query port on 7002. These are the defaults expected by the graphite-webapp. Therefore, there are no other changes required to the configuration file.
+```
 # ps -efla | grep carbon-cache
 1 S root     14101     1  0  80   0 - 75955 ep_pol May20 ?        00:00:26 /usr/bin/python ./carbon-cache.py start
 # netstat -nap | grep 2003
 tcp        0      0 0.0.0.0:2003                0.0.0.0:*                   LISTEN      14101/python
 # netstat -nap | grep 7002
 tcp        0      0 0.0.0.0:7002                0.0.0.0:*                   LISTEN      14101/python
-However, you could specify the carbon-cache process to read from explicitly in the settings file:
+```
 
+However, you could specify the carbon-cache process to read from explicitly in the settings file:
+```
 # vi /opt/graphite/webapp/graphite/local_settings.py
 #########################
 # Cluster Configuration #
 #########################
 CARBONLINK_HOSTS = ["127.0.0.1:7002:a"]
-This means that I have a carbon-cache process running locally, with the query port set to 7002 and the name set to 'a'. If you look at the Carbon configuration file, you should see something like this:
+```
 
+This means that I have a carbon-cache process running locally, with the query port set to 7002 and the name set to 'a'. If you look at the Carbon configuration file, you should see something like this:
+```
 # vi /opt/graphite/conf/carbon.conf
 [cache]
 LINE_RECEIVER_INTERFACE = 0.0.0.0
 LINE_RECEIVER_PORT = 2003
 CACHE_QUERY_INTERFACE = 0.0.0.0
 CACHE_QUERY_PORT = 7002
-NOTE: Where did the ‘a’ come from? That’s the default name assigned. To define more caches, you’d need to create additional named sections in the configuration file.
+```
 
+NOTE: Where did the ‘a’ come from? That’s the default name assigned. To define more caches, you’d need to create additional named sections in the configuration file.
+```
 [cache:b]
 LINE_RECEIVER_INTERFACE = 0.0.0.0
 LINE_RECEIVER_PORT = 2004
 CACHE_QUERY_INTERFACE = 0.0.0.0
 CACHE_QUERY_PORT = 7003
+```
+
 Dashboard and Graph Template Configuration
 
 The Graphite webapp comes with dashboard and graph template defaults. Copy the sample configuration files:
-
+```
 # cd /opt/graphite/conf
 # cp dashboard.conf.example dashboard.conf
 # cp graphTemplates.conf.example graphTemplates.conf
-I modify the dashboard configuration file to have larger graph tiles.
+```
 
+I modify the dashboard configuration file to have larger graph tiles.
+```
 # vi /opt/graphite/conf/dashboard.conf
 [ui]
 default_graph_width = 500
@@ -1603,8 +1616,10 @@ automatic_variants = true
 refresh_interval = 60
 autocomplete_delay = 375
 merge_hover_delay = 750
-I modify the default graph template to have a black background and a white foreground. I also like the font to be smaller.
+```
 
+I modify the default graph template to have a black background and a white foreground. I also like the font to be smaller.
+```
 # vi /opt/graphite/conf/graphTemplates.conf
 [default]
 background = black
@@ -1616,20 +1631,21 @@ fontName = Sans
 fontSize = 9
 fontBold = False
 fontItalic = False
-Run the Web Application
+```
+
+###Run the Web Application
 
 We are finally ready to run the web application. I'm going to run it on port 8085 but you may set the port to any value you'd like. Run the following commands:
-
+```
 # cd /opt/graphite
 # PYTHONPATH=`pwd`/storage/whisper ./bin/run-graphite-devel-server.py --port=8085 --libs=`pwd`/webapp /opt/graphite 1>/opt/graphite/storage/log/webapp/process.log 2>&1 &
 # tail -f /opt/graphite/storage/log/webapp/process.log
+```
+
 Open a web browser and point it to http://your-ip:8085. Make sure that the Graphite web application loads. If you're tailing the process.log file, you should be able to see any resources that are loaded and any queries that are made from the web application.
 
-(Click on the image to enlarge it)
 
-
-
-Navigate the Metrics
+###Navigate the Metrics
 
 In a previous section, we had published a couple of metrics to the carbon-cache using the netcat command. Specifically, we had published the following:
 
@@ -1639,20 +1655,11 @@ PRODUCTION.host.graphite-tutorial.responseTime.p95
 The web application displays metrics as a tree. If you navigate the metric tree in the left panel, you should be able to see all of these metrics.
 
 
-
 You may click on any metric and it will be graphed (past 24 hours by default) in the panel on the right. To change the date range to query, use the buttons in the panel above the graph.
 
-(Click on the image to enlarge it)
-
-
-
-Create a Dashboard
+###Create a Dashboard
 
 The default view is great to quickly browse metrics and visualize them. But if you want to build a dashboard, point your browser to http://your-ip:8085/dashboard. The top portion of the page is another way to navigate your metrics. You can either click on the options to navigate, or start typing to get suggestions. You can click on a metric and a graph tile will appear in the bottom section. As you keep clicking on new metrics, additional tiles appear in the panel below thereby creating a dashboard. At times you might want to display multiple metrics in a single graph. To do this, drag and drop a tile on top of another one and the metrics will be graphed together. You may also change the position of the tiles in the layout by dragging them around.
-
-(Click on the image to enlarge it)
-
-
 
 The user interface looks very simple, but don't be discouraged. You can do very powerful operations on your metric data. If you click on one of the graph tiles, you will get a dialog. It displays the list of metrics being graphed and you may edit them directly. There are also multiple menus in the dialog to apply functions on the data, change aspects of the visualization, and many other operations.
 
