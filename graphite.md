@@ -170,3 +170,5 @@ Client applications have multiple ways to publish metrics:
 * using the pickle protocol
 * using the Advanced Message Queueing Protocol (AMQP)
 * using libraries such as the Dropwizard Metrics library
+
+For simplicity, in this tutorial I'll be using the plaintext protocol through the netcat command. To publish the example datapoints listed above, run the following commands:
