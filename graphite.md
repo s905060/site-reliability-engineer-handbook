@@ -1004,3 +1004,15 @@ Changing content in the Edit Dashboard dialog updates the dashboard on the brows
 ![](fig14.png)
 
 To look up the dashboard, open the Finder:
+
+![](fig15.png)
+
+![](fig16.png)
+
+On a production Graphite installation, the Graphite Caches dashboard would look more like this:
+
+![](fig17.png)
+
+###It’s All About the API
+
+Graphite has some drawbacks like any other tool: it doesn't scale well, the storage mechanism isn't the most optimal - but the fact is that Graphite's API is a beauty. Having a user interface is nice, but the most important is that whatever you can do through the UI, you can also do via graphite-web API requests. Users are able to request custom graphs by building a simple URL. The parameters are specified in the query string of the HTTP GET request. By default a PNG image is returned as the response, but the user may also indicate the required format of the response - for example, JSON data.
