@@ -113,3 +113,4 @@ Now armed with the basic knowledge of the key concepts of Kubernetes you can hav
 
 If you can’t wait and want to get your hands on some Kubernetes practice then head over to Google Container Engine. Google Container Engine is a hosted Kubernetes container environment. Simply signup/signin and run through the Walkthroughs examples.
 
+[Recommended Tutorial](https://www.youtube.com/watch?v=9Wzw84Q-8yc)
