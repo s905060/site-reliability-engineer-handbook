@@ -214,3 +214,31 @@ points: 1440
 size: 17280
 offset: 28
 ```
+
+The whisper-dump script is a more complete script that outputs the original data for all storage retention periods along with the metadata information about the Whisper file:
+```
+# whisper-dump.py /opt/graphite/storage/whisper/PRODUCTION/host/graphite-tutorial/responseTime/p95.wsp 
+Meta data:
+  aggregation method: average
+  max retention: 86400
+  xFilesFactor: 0.5
+
+Archive 0 info:
+  offset: 28
+  seconds per point: 60
+  points: 1440
+  retention: 86400
+  size: 17280
+
+Archive 0 data:
+0: 1400609220, 0.1000000000000000055511151231257827
+1: 0,          0
+2: 0,          0
+3: 0,          0
+4: 0,          0
+5: 0,          0
+...
+1437: 0,          0
+1438: 0,          0
+1439: 0,          0
+```
