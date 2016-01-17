@@ -857,3 +857,17 @@ l a user interface to navigate metrics and build and save dashboards
 The installation of graphite-web is really a maze. I have installed it multiple times - in RHEL, CentOS, Ubuntu and Mac OS X - and every time the steps have been different. Treat it as a game, enjoy it, and you'll know that you've completed the maze when all the required dependencies have been installed.
 
 Instructions for RHEL 6.5:
+```
+# cd /tmp
+# git clone https://github.com/graphite-project/graphite-web.git
+# cd /tmp/graphite-web
+# python check-dependencies.py
+[REQUIRED] Unable to import the 'django' module, do you have Django installed for python 2.6.6?
+[REQUIRED] Unable to import the 'pyparsing' module, do you have pyparsing module installed for python 2.6.6?
+[REQUIRED] Unable to import the 'tagging' module, do you have django-tagging installed for python 2.6.6?
+[OPTIONAL] Unable to import the 'memcache' module, do you have python-memcached installed for python 2.6.6? This feature is not required but greatly improves performance.
+[OPTIONAL] Unable to import the 'txamqp' module, this is required if you want to use AMQP as an input to Carbon. Note that txamqp requires python 2.5 or greater.
+[OPTIONAL] Unable to import the 'python-rrdtool' module, this is required for reading RRD.
+3 optional dependencies not met. Please consider the optional items before proceeding.
+3 necessary dependencies not met. Graphite will not function until these dependencies are fulfilled.
+```
