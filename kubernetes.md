@@ -92,3 +92,4 @@ This animated diagram illustrates the function of Services. Note that this diagr
 
 ![](kubernetes_service.gif)
 
+There is a special type of Kubernetes Services called ‘LoadBalancer’, which is used as an external load balancer to balance traffic between a number of Pods. Handy for load balancing Web traffic for example.
