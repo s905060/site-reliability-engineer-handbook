@@ -198,3 +198,19 @@ total 3040
 total 20
 -rw-r--r--. 1 root root 17308 May 19 10:42 p95.wsp
 ```
+
+Finally, you can retrieve metadata information about the Whisper file that was created for the metric using the whisper-info script:
+```
+# whisper-info.py /opt/graphite/storage/whisper/PRODUCTION/host/graphite-tutorial/responseTime/p95.wsp 
+maxRetention: 86400
+xFilesFactor: 0.5
+aggregationMethod: average
+fileSize: 17308
+
+Archive 0
+retention: 86400
+secondsPerPoint: 60
+points: 1440
+size: 17280
+offset: 28
+```
