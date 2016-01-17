@@ -246,4 +246,8 @@ Archive 0 data:
 Aggregation method, max retention, xFilesFactor, and all of the other attributes of the Whisper file are important to understand. Don't worry if you're lost at this point, I'll be covering these in more detail in the next section.
 
 ###Whisper Storage Schemas & Aggregations
+There might be some confusion when you or your fellow developers and system administrators start publishing data points and get unexpected results:
 
+* Why are my data points getting averaged?
+* I've been publishing data points intermittently, why are there no data points?
+* I've been publishing data points for many days, why am I only getting data for one day?
