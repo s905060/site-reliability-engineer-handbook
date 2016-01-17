@@ -1655,3 +1655,11 @@ The default view is great to quickly browse metrics and visualize them. But if y
 
 
 The user interface looks very simple, but don't be discouraged. You can do very powerful operations on your metric data. If you click on one of the graph tiles, you will get a dialog. It displays the list of metrics being graphed and you may edit them directly. There are also multiple menus in the dialog to apply functions on the data, change aspects of the visualization, and many other operations.
+
+![](3fig6.png)
+
+![](2fig7.png)
+
+![](fig8.png)
+
+You may also configure and save your dashboard, load other dashboards, change the date range of the current dashboard, share a dashboard, among other things, using the top-most menu. By far my favorite thing is the Dashboard -> Edit Dashboard feature. It saves me a lot of time when I need to create or modify dashboards.
