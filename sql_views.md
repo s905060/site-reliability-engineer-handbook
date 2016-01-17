@@ -52,4 +52,22 @@ SELECT * FROM [Products Above Average Price]
 ```
 
 Another view in the Northwind database calculates the total sale for each category in 1997. Note that this view selects its data from another view called "Product Sales for 1997":
+````
+CREATE VIEW [Category Sales For 1997] AS
+SELECT DISTINCT CategoryName,Sum(ProductSales) AS CategorySales
+FROM [Product Sales for 1997]
+GROUP BY CategoryName
+```
+
+We can query the view above as follows:
+```
+SELECT * FROM [Category Sales For 1997]
+```
+
+We can also add a condition to the query. Now we want to see the total sale only for the category "Beverages":
+
+```
+SELECT * FROM [Category Sales For 1997]
+WHERE CategoryName='Beverages'
+```
 
