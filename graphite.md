@@ -93,3 +93,16 @@ The Whisper scripts should now be in place:
 ###Start a Carbon Cache Process
 
 The Carbon installation comes with sensible defaults for port numbers and many other configuration parameters. Copy the existing example configuration files:
+```
+# cd /opt/graphite/conf
+# cp aggregation-rules.conf.example aggregation-rules.conf
+# cp blacklist.conf.example blacklist.conf
+# cp carbon.conf.example carbon.conf
+# cp carbon.amqp.conf.example carbon.amqp.conf
+# cp relay-rules.conf.example relay-rules.conf
+# cp rewrite-rules.conf.example rewrite-rules.conf
+# cp storage-schemas.conf.example storage-schemas.conf
+# cp storage-aggregation.conf.example storage-aggregation.conf
+# cp whitelist.conf.example whitelist.conf
+# vi carbon.conf
+```
