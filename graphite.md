@@ -1025,3 +1025,14 @@ Sample request #1:
 * Response format: PNG image (default)
 
 http://your-ip:8085/render?target=carbon.agents.*.cpuUsage&width=500&height=300&from=-12h&until=-5min
+
+![](fig18.png)
+
+Sample request #2:
+
+* Metric: CPU usage of all carbon-cache processes
+* Graph dimensions: 500x300
+* Time range: 12 hours ago until 5 minutes ago
+* Response format: JSON data
+* 
+http://your-ip:8085/render?target=carbon.agents.*.cpuUsage&width=500&height=300&from=-12h&until=-5min&format=json
