@@ -935,3 +935,24 @@ This will create a new database and store it in the /opt/graphite/storage direct
 ###Graphite Webapp Settings
 
 The configuration file containing the graphite-webapp settings is located in the /opt/graphite/webapp/graphite folder. Copy the sample configuration file:
+
+```
+# vi /opt/graphite/webapp/graphite/local_settings.py
+#########################
+# General Configuration #
+#########################
+TIME_ZONE = 'UTC'
+##########################
+# Database Configuration #
+##########################
+DATABASES = {
+    'default': {
+        'NAME': '/opt/graphite/storage/graphite.db',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': ''
+    }
+}
+```
