@@ -172,3 +172,10 @@ Client applications have multiple ways to publish metrics:
 * using libraries such as the Dropwizard Metrics library
 
 For simplicity, in this tutorial I'll be using the plaintext protocol through the netcat command. To publish the example datapoints listed above, run the following commands:
+
+```
+sudo yum install nc
+echo "carbon.agents.graphite-tutorial.metricsReceived 28198 `date +%s`" | nc localhost 2003
+echo "carbon.agents.graphite-tutorial.creates 8 `date +%s`" | nc localhost 2003
+echo "PRODUCTION.host.graphite-tutorial.responseTime.p95 0.10 `date +%s`" | nc localhost 2003
+```
