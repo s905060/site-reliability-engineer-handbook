@@ -999,3 +999,9 @@ CACHE_QUERY_PORT = 7003
 ###Dashboard and Graph Template Configuration
 
 The Graphite webapp comes with dashboard and graph template defaults. Copy the sample configuration files:
+
+```
+# cd /opt/graphite/conf
+# cp dashboard.conf.example dashboard.conf
+# cp graphTemplates.conf.example graphTemplates.conf
+```
