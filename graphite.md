@@ -1044,3 +1044,8 @@ We are finally ready to run the web application. I'm going to run it on port 808
 
 Open a web browser and point it to http://your-ip:8085. Make sure that the Graphite web application loads. If you're tailing the process.log file, you should be able to see any resources that are loaded and any queries that are made from the web application.
 
+![](fig2-small.png)
+
+###Navigate the Metrics
+
+In a previous section, we had published a couple of metrics to the carbon-cache using the netcat command. Specifically, we had published the following:
