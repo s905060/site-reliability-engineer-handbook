@@ -986,3 +986,12 @@ LINE_RECEIVER_PORT = 2003
 CACHE_QUERY_INTERFACE = 0.0.0.0
 CACHE_QUERY_PORT = 7002
 ```
+
+NOTE: Where did the ‘a’ come from? That’s the default name assigned. To define more caches, you’d need to create additional named sections in the configuration file.
+```
+[cache:b]
+LINE_RECEIVER_INTERFACE = 0.0.0.0
+LINE_RECEIVER_PORT = 2004
+CACHE_QUERY_INTERFACE = 0.0.0.0
+CACHE_QUERY_PORT = 7003
+```
