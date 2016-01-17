@@ -51,4 +51,19 @@ EOF
 Last line will log a message in /var/log/message file if backup failed.
 
 **Other usage**
+
 To log a message contained in the /var/log/myapp.log file, use:
+```
+$ logger -f /var/log/myapp.log
+```
+
+Log the message to standard error (screen), as well as the system log:
+```
+$ logger -s "Hard disk full"
+```
+
+Refer to the man page for more options:
+```
+man logger
+man syslogd
+```
