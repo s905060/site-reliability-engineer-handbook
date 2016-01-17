@@ -39,3 +39,5 @@ Looking at the diagram you can spot the following components, I used icons to re
 * Service (service)
 * Nodes
 * Kubernetes Master
+
+I will start off with Pods because they are the smallest deployable units in Kubernetes that can be created scheduled and managed. It’s all about the Pods, if you deploy a single container it will be deployed in its own Pod.
