@@ -1063,3 +1063,12 @@ alias(scale(averageSeries(PRODUCTION.host.*.requests.p95),0.001),'avg p95')
 
 The API would return the following graph:
 
+![](fig20.png)
+
+Congratulations! We have installed and configured carbon, whisper and the graphite-webapp, published metrics, navigated metrics and built a dashboard. You can now build your own awesome dashboards for your business and application metrics.
+
+This was an introductory article on Graphite. For advanced topics see:
+
+* Stress Testing Carbon Caches
+* Carbon Aggregators
+* Graphite Querying Statistics on an ELK Stack
