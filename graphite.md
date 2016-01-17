@@ -871,3 +871,6 @@ Instructions for RHEL 6.5:
 3 optional dependencies not met. Please consider the optional items before proceeding.
 3 necessary dependencies not met. Graphite will not function until these dependencies are fulfilled.
 ```
+
+The goal is to install at least all of the required dependencies. Install the optional dependencies if you're planning on using the AMQ functionality or the caching functionality using Memcache.
+
