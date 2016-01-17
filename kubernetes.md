@@ -94,3 +94,6 @@ This animated diagram illustrates the function of Services. Note that this diagr
 
 There is a special type of Kubernetes Services called ‘LoadBalancer’, which is used as an external load balancer to balance traffic between a number of Pods. Handy for load balancing Web traffic for example.
 
+###Nodes
+
+A node (the orange box) is a physical or virtual machine that acts as a Kubernetes worker, used to be called Minion. Each node runs the following key Kubernetes components:
