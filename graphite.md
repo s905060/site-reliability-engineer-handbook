@@ -1531,11 +1531,14 @@ The setup script moves the web application files to the proper location under /o
 ###Initialize the Database
 
 The web application maintains an internal database to store user information and dashboards. Initialize the database by running the following:
-
+```
 # cd /opt/graphite
 # export PYTHONPATH=$PYTHONPATH:`pwd`/webapp
 # django-admin.py syncdb --settings=graphite.settings
+```
+
 You just installed Django's auth system, which means you don't have any superusers defined.
+```
 Would you like to create one now? (yes/no): yes
 Username (leave blank to use 'root'): feangulo
 Email address: feangulo@yaipan.com
@@ -1548,11 +1551,15 @@ Superuser created successfully.
 Installing custom SQL ...
 Installing indexes ...
 Installed 0 object(s) from 0 fixture(s)
-This will create a new database and store it in the /opt/graphite/storage directory:
+```
 
+This will create a new database and store it in the /opt/graphite/storage directory:
+```
 # ls -l /opt/graphite/storage/graphite.db 
 -rw-r--r--. 1 root root 74752 May 23 14:46 /opt/graphite/storage/graphite.db
-Graphite Webapp Settings
+```
+
+###Graphite Webapp Settings
 
 The configuration file containing the graphite-webapp settings is located in the /opt/graphite/webapp/graphite folder. Copy the sample configuration file:
 
