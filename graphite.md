@@ -106,3 +106,10 @@ The Carbon installation comes with sensible defaults for port numbers and many o
 # cp whitelist.conf.example whitelist.conf
 # vi carbon.conf
 ```
+
+Under the cache section, the line receiver port has a default value and it is used to accept incoming metrics through the plaintext protocol (see below):
+```
+[cache]
+LINE_RECEIVER_INTERFACE = 0.0.0.0
+LINE_RECEIVER_PORT = 2003
+```
