@@ -89,3 +89,7 @@ The Whisper scripts should now be in place:
 -rwxr-xr-x. 1 root root 1060 May 19 00:00 /usr/bin/whisper-set-aggregation-method.py
 -rwxr-xr-x. 1 root root  969 May 19 00:00 /usr/bin/whisper-update.py
 ```
+
+###Start a Carbon Cache Process
+
+The Carbon installation comes with sensible defaults for port numbers and many other configuration parameters. Copy the existing example configuration files:
