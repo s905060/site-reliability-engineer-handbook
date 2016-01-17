@@ -313,3 +313,21 @@ Aggregations come into play when data from a high precision bucket is moved to a
 We might have an application publishing data points every 10 seconds. Any data points published less than 6 hours ago will be found in Bucket A. However, if I start to query for data points published more than 6 hours ago, they will be found in Bucket B.
 
 ###How are data points moved to Bucket B?
+The lower precision value is divided by the higher precision value to determine the number of data points that will need to be aggregated.
+
+l 60 seconds (Bucket B) / 10 seconds (Bucket A) = 6 data points to aggregate
+
+NOTE: Whisper needs the lower precision value to be cleanly divisible by the higher precision value (i.e. the division must result in a whole number). Otherwise the aggregation might not be accurate.
+
+To aggregate the data, Whisper reads 6 10-second data points from Bucket A and applies a function to them to come up with the single 60-second data point that will be stored in Bucket B. There are five options for the aggregation function: average, sum, max, min and last. The choice of aggregation function depends on the data points you're dealing with. 95th percentile values, for example, should probably be aggregated with the max function. For counters, on the other hand, the sum function would be more appropriate.
+
+Whisper also handles the concept of an xFilesFactor when aggregating data points. It represents the ratio of data points a bucket must contain to be aggregated accurately. In our previous example, Whisper determined that it needed to aggregate 6 10-second data points. It could be possible that only 4 data points have data and the other 2 are null - due to networking issues, application restarts, etc.
+
+If our Whisper file has an xFilesFactor of 0.5, it means that it will aggregate the data only if at least 50% of the data points are present. If more than 50% of the data points are null, Whisper will create a null aggregation. In our case, we have 4 out of 6 data points - 66%. The aggregation function will be applied on the non-null data points to create the aggregated value.
+
+You may set the xFilesFactor to any value between 0 and 1. A value of 0 indicates that the aggregation should be computed even if there is only one data point available. A value of 1 indicates that the aggregation should be computed only if all data points are present.
+
+In the previous section, we made copies of all the example configuration files in the /opt/graphite/conf directory. The configuration files that control how Whisper files are created are:
+
+* /opt/graphite/conf/storage-schemas.conf
+* /opt/graphite/conf/storage-aggregation.conf
