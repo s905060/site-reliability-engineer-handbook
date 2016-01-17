@@ -9,3 +9,9 @@ Let’s start the clock.
 Kubernetes (k8s) is an open source platform for automating container operations such as deployment, scheduling and scalability across a cluster of nodes.  If you have ever used Docker container technology to deploy your containers, then think of Docker as a low level component used internally by Kubernetes to deploy containers. Not just Docker, but Kubernetes also supports Rocket, another container technology.
 
 Kubernetes orchestrates your containers so together they are performing a Symphony. This could be anything from, but not limited to, the following:
+
+* automate the deployment and replication of containers,
+* scale in or out containers on the fly,
+* organise containers in groups and provide load balancing between them,
+* easily roll out new versions of application containers,
+* provide container resilience, if a container dies it gets replaced, etc..
