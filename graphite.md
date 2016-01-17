@@ -312,3 +312,4 @@ Aggregations come into play when data from a high precision bucket is moved to a
 
 We might have an application publishing data points every 10 seconds. Any data points published less than 6 hours ago will be found in Bucket A. However, if I start to query for data points published more than 6 hours ago, they will be found in Bucket B.
 
+###How are data points moved to Bucket B?
