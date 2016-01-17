@@ -1515,7 +1515,7 @@ drwxr-xr-x. 15 root root 4096 May 23 14:33 graphite
 
 The setup script moves the web application files to the proper location under /opt/graphite/webapp.
 
-Initialize the Database
+###Initialize the Database
 
 The web application maintains an internal database to store user information and dashboards. Initialize the database by running the following:
 
