@@ -97,3 +97,7 @@ There is a special type of Kubernetes Services called ‘LoadBalancer’, which 
 ###Nodes
 
 A node (the orange box) is a physical or virtual machine that acts as a Kubernetes worker, used to be called Minion. Each node runs the following key Kubernetes components:
+
+* Kubelet: is the primary node agent.
+* kube-proxy: used by Services to proxy connections to Pods as explained above.
+* Docker or Rocket. The container technology that Kubernetes uses to create containers.
