@@ -842,7 +842,7 @@ xFilesFactor = 0.1
 aggregationMethod = max
 At this point you have configured your Graphite backend to match the data point publishing rates of your application and fully understand how the data points are stored in the filesystem. In the next section, we'll attempt to visualize the data using graphite-webapp.
 
-Graphite Webapp
+###Graphite Webapp
 
 Now that we have the back-end components up and running and storing numeric time-series data in the formats that we have specified, it's time to take a look at the front-end components of Graphite. Specifically, we need a way to query and visualize the information that is stored.
 
