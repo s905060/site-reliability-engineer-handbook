@@ -34,3 +34,24 @@ Metrics can be published to a load balancer or directly to a Carbon process. The
 Carbon refers to a series of daemons that make up the storage backend of a Graphite installation. The daemons listen for time-series data using an event-driven networking engine called Twisted. The Twisted framework permits Carbon daemons to handle a large number of clients and a large amount of traffic with a low amount of overhead.
 
 To install Carbon, run the following commands (assuming RHEL operating system):
+```
+# sudo yum groupinstall "Development Tools"
+# sudo yum install python-devel
+# sudo yum install git
+# sudo easy_install pip
+# sudo pip install twisted
+# cd /tmp
+# git clone https://github.com/graphite-project/carbon.git
+# cd /tmp/carbon
+# sudo python setup.py install
+```
+
+The /opt/graphite directory should now have the carbon libraries and configuration files:
+
+```
+# ls -l /opt/graphite
+drwxr-xr-x. 2 root root 4096 May 18 23:56 bin
+drwxr-xr-x. 2 root root 4096 May 18 23:56 conf
+drwxr-xr-x. 4 root root 4096 May 18 23:56 lib
+drwxr-xr-x. 6 root root 4096 May 18 23:56 storage
+```
