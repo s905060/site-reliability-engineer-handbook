@@ -1471,11 +1471,12 @@ The Installation Maze
 The installation of graphite-web is really a maze. I have installed it multiple times - in RHEL, CentOS, Ubuntu and Mac OS X - and every time the steps have been different. Treat it as a game, enjoy it, and you'll know that you've completed the maze when all the required dependencies have been installed.
 
 Instructions for RHEL 6.5:
-
+```
 # cd /tmp
 # git clone https://github.com/graphite-project/graphite-web.git
 # cd /tmp/graphite-web
 # python check-dependencies.py
+
 [REQUIRED] Unable to import the 'django' module, do you have Django installed for python 2.6.6?
 [REQUIRED] Unable to import the 'pyparsing' module, do you have pyparsing module installed for python 2.6.6?
 [REQUIRED] Unable to import the 'tagging' module, do you have django-tagging installed for python 2.6.6?
@@ -1499,8 +1500,10 @@ The goal is to install at least all of the required dependencies. Install the op
 [OPTIONAL] Unable to import the 'python-rrdtool' module, this is required for reading RRD.
 1 optional dependencies not met. Please consider the optional items before proceeding.
 All necessary dependencies are met.
-I've installed enough packages to meet the required dependencies. I can now install graphite-web:
+```
 
+I've installed enough packages to meet the required dependencies. I can now install graphite-web:
+```
 # cd /tmp/graphite-web
 # sudo python setup.py install
 # ls -l /opt/graphite/webapp/
@@ -1508,6 +1511,8 @@ total 12
 drwxr-xr-x.  6 root root 4096 May 23 14:33 content
 drwxr-xr-x. 15 root root 4096 May 23 14:33 graphite
 -rw-r--r--.  1 root root  280 May 23 14:33 graphite_web-0.10.0_alpha-py2.6.egg-info
+```
+
 The setup script moves the web application files to the proper location under /opt/graphite/webapp.
 
 Initialize the Database
