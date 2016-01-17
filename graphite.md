@@ -958,3 +958,12 @@ DATABASES = {
 ```
 
 At this point, if you followed the instructions in the previous sections, you should only have one carbon-cache process running on port 2003 with a query port on 7002. These are the defaults expected by the graphite-webapp. Therefore, there are no other changes required to the configuration file.
+
+```
+# ps -efla | grep carbon-cache
+1 S root     14101     1  0  80   0 - 75955 ep_pol May20 ?        00:00:26 /usr/bin/python ./carbon-cache.py start
+# netstat -nap | grep 2003
+tcp        0      0 0.0.0.0:2003                0.0.0.0:*                   LISTEN      14101/python
+# netstat -nap | grep 7002
+tcp        0      0 0.0.0.0:7002                0.0.0.0:*                   LISTEN      14101/python
+```
