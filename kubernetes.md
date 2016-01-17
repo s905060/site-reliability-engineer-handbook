@@ -21,3 +21,5 @@ In fact, with Kubernetes you can deploy a full cluster of multi-tiered container
 ```
 $ kubectl create -f single-config-file.yaml
 ```
+
+kubectl is a command-line program for interacting with the Kubernetes API. Now let’s introduce some of the key concepts.
