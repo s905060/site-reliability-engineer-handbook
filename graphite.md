@@ -1704,3 +1704,5 @@ NOTE: This dashboard will monitor all carbon-cache processes that you have runni
   }
 ]
 ```
+
+Update the dashboard definition and you should now see something like this:
