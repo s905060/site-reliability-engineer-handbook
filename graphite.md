@@ -956,3 +956,5 @@ DATABASES = {
     }
 }
 ```
+
+At this point, if you followed the instructions in the previous sections, you should only have one carbon-cache process running on port 2003 with a query port on 7002. These are the defaults expected by the graphite-webapp. Therefore, there are no other changes required to the configuration file.
