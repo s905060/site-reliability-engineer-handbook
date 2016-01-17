@@ -68,3 +68,24 @@ Inside the bin folder, you’ll find the three different types of Carbon daemons
 Whisper is a database library for storing time-series data that is then retrieved and manipulated by applications using the create, update, and fetch operations.
 
 To install Whisper, run the following commands:
+
+```
+# cd /tmp
+# git clone https://github.com/graphite-project/whisper.git
+# cd /tmp/whisper
+# sudo python setup.py install
+```
+
+The Whisper scripts should now be in place:
+
+```
+# ls -l /usr/bin/whisper*
+-rwxr-xr-x. 1 root root 1711 May 19 00:00 /usr/bin/whisper-create.py
+-rwxr-xr-x. 1 root root 2902 May 19 00:00 /usr/bin/whisper-dump.py
+-rwxr-xr-x. 1 root root 1779 May 19 00:00 /usr/bin/whisper-fetch.py
+-rwxr-xr-x. 1 root root 1121 May 19 00:00 /usr/bin/whisper-info.py
+-rwxr-xr-x. 1 root root  674 May 19 00:00 /usr/bin/whisper-merge.py
+-rwxr-xr-x. 1 root root 5982 May 19 00:00 /usr/bin/whisper-resize.py
+-rwxr-xr-x. 1 root root 1060 May 19 00:00 /usr/bin/whisper-set-aggregation-method.py
+-rwxr-xr-x. 1 root root  969 May 19 00:00 /usr/bin/whisper-update.py
+```
