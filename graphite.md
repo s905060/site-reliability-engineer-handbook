@@ -1055,7 +1055,7 @@ The latencies are reported in milliseconds, but we want to display them in secon
 
 * alias: change the name of the metric when displaying
 
- Instead of the full metric name, we want to display only avg p95 in the graph legend
+Instead of the full metric name, we want to display only avg p95 in the graph legend
 
 The argument passed as part of the metric query to the API would be:
 
