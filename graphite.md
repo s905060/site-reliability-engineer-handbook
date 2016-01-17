@@ -1663,3 +1663,7 @@ The user interface looks very simple, but don't be discouraged. You can do very 
 ![](fig8.png)
 
 You may also configure and save your dashboard, load other dashboards, change the date range of the current dashboard, share a dashboard, among other things, using the top-most menu. By far my favorite thing is the Dashboard -> Edit Dashboard feature. It saves me a lot of time when I need to create or modify dashboards.
+
+![](fig9-small.png)
+
+To illustrate, I am going to build a dashboard to monitor the carbon-cache process. As mentioned in a previous section, Carbon processes report internal metrics. I don't like to build dashboards manually, instead I will use the Edit Dashboard feature.
