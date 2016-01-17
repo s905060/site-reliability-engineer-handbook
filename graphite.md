@@ -1005,3 +1005,15 @@ The Graphite webapp comes with dashboard and graph template defaults. Copy the s
 # cp dashboard.conf.example dashboard.conf
 # cp graphTemplates.conf.example graphTemplates.conf
 ```
+
+I modify the dashboard configuration file to have larger graph tiles.
+```
+# vi /opt/graphite/conf/dashboard.conf
+[ui]
+default_graph_width = 500
+default_graph_height = 400
+automatic_variants = true
+refresh_interval = 60
+autocomplete_delay = 375
+merge_hover_delay = 750
+```
