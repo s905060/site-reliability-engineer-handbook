@@ -65,7 +65,6 @@ SELECT * FROM [Category Sales For 1997]
 ```
 
 We can also add a condition to the query. Now we want to see the total sale only for the category "Beverages":
-
 ```
 SELECT * FROM [Category Sales For 1997]
 WHERE CategoryName='Beverages'
