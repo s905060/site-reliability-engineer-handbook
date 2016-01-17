@@ -1710,3 +1710,5 @@ Update the dashboard definition and you should now see something like this:
 ![](fig12-small.png)
 
 Changing content in the Edit Dashboard dialog updates the dashboard on the browser. However, it does not save it to Graphite's internal database of dashboards. Go ahead and save the dashboard so that you can share it and open it up later.
+
+
