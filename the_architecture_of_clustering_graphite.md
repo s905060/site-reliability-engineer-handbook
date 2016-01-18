@@ -441,3 +441,12 @@ This demonstrates two discussed situations:
 * That each metric type's database file exists twice as a result of a REPLICATION_FACTOR = 2 configuration.
 
 This should allow you to understand, explore and predict the storage situations for a given number of metrics collected at a particular precision, retention and replication factor.
+
+###Usability performance
+
+Performance in this area is pretty straightfoward.
+
+The Graphite Web apps themselves are just web servers; very easy to scale, but don't expect to unless you have many users generating lots of graph data. Graphite Web also supports Memcached for in-memory caching of rendered graphs and fetched metrics (hence the Memcached layer in my diagram - this is something that I'm using) - this is defined with the MEMCACHE_HOSTS directive in the Graphite Web local_settings.py configuration.
+
+Referencing the observation of storage node I/O utilization in a previous section, keep these things in mind when it comes to fetching data as well, since metrics data is being read from these same disks.
+
