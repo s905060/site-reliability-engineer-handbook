@@ -276,3 +276,14 @@ The setup should be pretty straight forward to understand at this point:
     * All metrics are sent to this dedicated Carbon-Relay box. It then proxies all the data to each of the Graphite machines using the Pickle protocol and according to its own configured RELAY_METHOD.
 * Put a fourth box behind the two Graphite boxes. This will be a dedicated Graphite Web.
     * This will now be the "master" Web app to use. It will be configured to query the Graphite Web instance API running local to each Graphite box.
+
+The dedicated Carbon-Relay will be configured like this:
+```
+[relay]
+LINE_RECEIVER_INTERFACE = 0.0.0.0
+LINE_RECEIVER_PORT = 2003
+PICKLE_RECEIVER_INTERFACE = 0.0.0.0
+PICKLE_RECEIVER_PORT = 2004
+RELAY_METHOD = consistent-hashing 
+DESTINATIONS = 10.0.1.10:2004, 10.0.1.11:2004
+```
