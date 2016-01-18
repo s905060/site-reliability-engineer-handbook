@@ -36,3 +36,9 @@ $WHISPER_DIR/carbon/whisper/HostB/memory-used.wsp
     * Graphite Web can be used directly for composing basic graphs.
     * Graphite Web provides the REST API that can be queried by third-party tools (such as Grafana) to create complete dashboards.
     * The API can return either raw text data or a rendered graph (.png format).
+
+###A Standalone Graphite Setup
+
+So, I think the best favor you can do for yourself is starting with the most basic, necessary components and configuration. The 'install guides' (I've snarkily continued placing in quotes) do the typical thing: include long lists of software packages to install without descriptions of why (Which are actual requirements? Are some just optional and you think they're cool?), followed by arbitrary configurations without explanation (Are these your personal optimizations? Are these configurations necessary to function? Are they unnecessarily elaborate?).
+
+In any case, I will make the following installation recommendations / notes:
