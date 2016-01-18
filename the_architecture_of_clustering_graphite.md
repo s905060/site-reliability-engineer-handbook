@@ -30,3 +30,9 @@ $WHISPER_DIR/carbon/whisper/HostB/memory-free.wsp
 $WHISPER_DIR/carbon/whisper/HostB/memory-used.wsp
 ```
     * The size of database files is determined by the number of data points stored - this is configurable (details later).
+
+* Graphite Web
+    * A Django web UI that can query Carbon daemons and read Whisper data to return complete metrics data, such as all memory used values logged for Host A over the last 6 hours.
+    * Graphite Web can be used directly for composing basic graphs.
+    * Graphite Web provides the REST API that can be queried by third-party tools (such as Grafana) to create complete dashboards.
+    * The API can return either raw text data or a rendered graph (.png format).
