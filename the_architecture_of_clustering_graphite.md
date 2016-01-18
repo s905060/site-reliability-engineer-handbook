@@ -260,3 +260,7 @@ You can run many Carbon-Cache daemons per-host. As I mentioned, many people tend
 Fortunately for me, nothing scales up indefinitely. I'm a fan of breaking things out into clusters or federated pools of services. Eventually, you're going to max out your hardware or hit a point of disproportionately expensive performance density.
 
 And I love this point–
+
+###Clustering Architecture
+
+###How clustering works
