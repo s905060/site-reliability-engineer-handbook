@@ -115,3 +115,7 @@ Something you'll discover through further configuration efforts is that retentio
 retentions = 10s:7d,60s:90d
 ...
 ```
+
+This grants you the ability to do precise anomaly inspection on a recent event, while being able to graph long-term trends. `This is a major advantage of Graphite` that is a pain-point in other monitoring solutions. I'll detail this later in the scaling architecture notes.
+
+The key takeaway is that storage consumption can (and should) be predicted. For the meantime, the defaults aren't bad and it's not worth over-thinking it until you discover a need.
