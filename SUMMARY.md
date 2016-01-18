@@ -374,6 +374,7 @@
        * [NameNode benchmark (nnbench)](namenode_benchmark_nnbench.md)
        * [MapReduce benchmark (mrbench)](mapreduce_benchmark_mrbench.md)
        * [Hadoop Admin Cert](hadoop_admin_cert.md)
+       * Rack Awareness
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
