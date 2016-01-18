@@ -318,3 +318,7 @@ So this probably introduces a few questions. Where does a single given metric ul
 Assuming you're using consistent-hashing on every relay in the cluster, every metric inbound is hashed by name and delivered to the same host and then to the same Carbon-Cache daemon and written to the same Whisper db, every time. All Carbon-Cache daemons in the cluster receive an even distribution (practically) of all the inbound metrics, in whole.
 
 The master Graphite Web will query APIs of all the secondary Graphite Web instances. Each instance will read from the local Whisper data and Carbon-Cache instances and return the data if it has it. The master Graphite Web instance will ultimately combine and present the data through the same ole' methods as a stand-alone Graphite setup. You can compose a single graph for a single hosts made from metrics data stored on 100 Graphite boxes. Likewise, the aggregated data could be fed through the master Graphite Web REST API into a third-party dashboarding utility.
+
+###A basic cluster, diagrammed
+
+This is a diagram I made for internal documentation purposes, so it references different port configurations (and other things like memcached and backing the Web app with MySQL rather than sqlite - other details you'll discover in general configuration efforts). Functionally, it visualizes everything mentioned: with one dedicated relay, two storage nodes each with two Carbon-Cache daemons, and a master Web app:
