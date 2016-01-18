@@ -439,4 +439,5 @@ This demonstrates two discussed situations:
 
 * That the variety of CPU metrics types for this single host are distributed across various storage-nodes (consistent-hashing)
 * That each metric type's database file exists twice as a result of a REPLICATION_FACTOR = 2 configuration.
+
 This should allow you to understand, explore and predict the storage situations for a given number of metrics collected at a particular precision, retention and replication factor.
