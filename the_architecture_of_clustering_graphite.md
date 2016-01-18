@@ -218,3 +218,12 @@ Carbon-Relay provides the listening capabilities of Carbon-Cache and ingests Lin
 
 Carbon-Relay is also configured in the same `carbon.conf` file, in its own section:
 
+```
+[relay]
+LINE_RECEIVER_INTERFACE = 0.0.0.0
+LINE_RECEIVER_PORT = 2003
+PICKLE_RECEIVER_INTERFACE = 0.0.0.0
+PICKLE_RECEIVER_PORT = 2004
+RELAY_METHOD = consistent-hashing 
+DESTINATIONS = 127.0.0.1:2014:1, 127.0.0.1:2024:2 
+```
