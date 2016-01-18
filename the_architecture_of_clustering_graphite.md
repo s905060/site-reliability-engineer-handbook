@@ -11,3 +11,10 @@ So while you can find plenty of those (in case you are looking for basic install
 In whole is basically a collection of a few components that allow for the aggregation, storage and querying of metrics from many hosts. Graphite itself does not provide agents for collecting data on monitored hosts, default dashboards or alerting functionality. Consider it a "metrics core" on which a full monitoring / alerting system can be built by adding additional layers.
 
 The core components:
+
+* Carbon
+    * An event-driven, Python-based daemon that listens on a TCP port, expecting a stream of time-series data.
+    * Time-series data in concept: someMetric:someValue:timeStamp
+    * Carbon expects time-series data in a particular format (of two primary types - details later). Third party tools that support * Graphite are used to feed properly formatted data, such as Collectd or StatsD.
+    * Metrics can be anything from OS memory usage to event counts fired off from an application (e.g. number of times a function was called).
+    * After Carbon receives metrics, it periodically flushes them to a storage database.
