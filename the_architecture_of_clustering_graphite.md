@@ -89,3 +89,5 @@ $WHISPER_DIR/carbon/whisper/HostA/memory-used.wsp
 $WHISPER_DIR/carbon/whisper/HostB/memory-free.wsp 
 $WHISPER_DIR/carbon/whisper/HostB/memory-used.wsp
 ```
+
+Let's say Host A was a really important box and we wanted more historical data on it - 90 days versus only needing 7 days for Host B. We would define a retention rule that's matched to the metric name with a regular expression:
