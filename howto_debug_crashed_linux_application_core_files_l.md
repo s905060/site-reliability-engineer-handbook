@@ -80,3 +80,7 @@ Reload the settings in /etc/sysctl.conf by running the following command:
 ```
 # sysctl -p
 ```
+
+###How Do I Enable Core Dumping For Specific Deamon?
+
+To enable core dumping for specific deamons, add the following line in the /etc/sysconfig/daemon-file file. In this example, edit /etc/init.d/lighttped and add line as follows:
