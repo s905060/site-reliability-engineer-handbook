@@ -169,3 +169,15 @@ DATABASES = {
     }
 }
 ```
+
+###Components Summary
+
+You feed metrics into a Carbon-Cache daemon which persists the data on-disk in fixed-size Whisper database files, according your configured resolution and retention periods. Graphite Web queries this data, both already on-disk or still in-memory and presents it for final consumption.
+
+Metrics consumption can be visualized directly using the basic Graphite Web graphing tools, or through a third-party dashboarding solution–such as Grafana–that interacts with the Graphite Web API.
+
+###Breaking Out Components
+
+###Multiple Carbon-Cache daemons
+
+So what about when we want to break out components? Graphite allows you to run multiple Carbon-Cache daemons on a single box to make better use of resources (many people will do something like one Carbon-Cache daemon per CPU cores). The configuration file changes a bit to accommodate additional daemons, like so:
