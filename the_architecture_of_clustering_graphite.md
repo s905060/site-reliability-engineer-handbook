@@ -264,3 +264,9 @@ And I love this point–
 ###Clustering Architecture
 
 ###How clustering works
+
+The importance of how selective I was on the descriptions of Graphite's components all leads up to the architecture of clustering Graphite, since this is what this write-up is all about. We know how all the core daemons operate, interact and scale out. We understand the flow of metrics inbound and data outbound.
+
+Clustering Graphite operates on these same principles, but multiplies under itself as a pyramid structure. Let's say for instance we completely saturate our resources on our Graphite box. This box has a Carbon-Relay daemon accepting metrics from 1,000 machines, which are forwarded to eight Carbon-Cache daemons. The CPUs are chugging along 24/7 and 80% the disks are sustaining a high queue length. We can't introduce more monitored hosts and pulling up a 10 day period of graph data for 200 machines is painfully slow.
+
+The setup should be pretty straight forward to understand at this point:
