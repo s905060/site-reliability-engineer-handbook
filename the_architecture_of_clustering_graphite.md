@@ -181,3 +181,20 @@ Metrics consumption can be visualized directly using the basic Graphite Web grap
 ###Multiple Carbon-Cache daemons
 
 So what about when we want to break out components? Graphite allows you to run multiple Carbon-Cache daemons on a single box to make better use of resources (many people will do something like one Carbon-Cache daemon per CPU cores). The configuration file changes a bit to accommodate additional daemons, like so:
+
+```
+[cache]
+LINE_RECEIVER_INTERFACE = 127.0.0.1
+PICKLE_RECEIVER_INTERFACE = 127.0.0.1
+CACHE_QUERY_INTERFACE = 127.0.0.1
+
+[cache:1]
+LINE_RECEIVER_PORT = 2013
+PICKLE_RECEIVER_PORT = 2014
+CACHE_QUERY_PORT = 7012
+
+[cache:2]
+LINE_RECEIVER_PORT = 2023
+PICKLE_RECEIVER_PORT = 2024
+CACHE_QUERY_PORT = 7022
+```
