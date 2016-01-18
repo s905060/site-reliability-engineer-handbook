@@ -357,5 +357,5 @@ This is a big one. Since Whisper database files are of fixed-size, they doesn't 
 
 Fortunately, this can be predicted.
 
-A given retention setting will tell you how many total data points will be stored, and each datapoint as a fixed size of 12 bits. So if you are storing someMetricA at 10 second intervals for 7 days, the math would look like this:
+A given retention setting will tell you how many total data points will be stored, and each datapoint as a fixed size of 12 bits. So if you are storing `someMetricA` at 10 second intervals for 7 days, the math would look like this:
 
