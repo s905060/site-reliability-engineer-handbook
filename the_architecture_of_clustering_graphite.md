@@ -127,3 +127,14 @@ Carbon-Cache and Whisper are on the side of writing data. Graphite Web is how da
 * Directly from Whisper database files on-disk
 * From Carbon-Cache daemons on their `CACHE_QUERY_PORT` (remember this directive in the carbon config?)
 * From other instances of Graphite Web through the REST API
+
+Once data is fetched by Graphite Web, it delivers it in two fashions:
+
+* Makes it directly accessible in your web browser by simply visiting the Graphite Web app address, and allows you to construct your own graphs or dashboards
+* As raw data or rendered png graphs emitted through a REST API
+
+The reason one Graphite Web instance can demand data through the API of another instance is fundamental to how Graphite clustering works, in respect to querying data from many nodes. Secondly, the API from the Web app is consumed by third-party dashboards; even if you're not going to use Graphites provided graphing capabilities, consider Graphite Web the API endpoint.
+
+Lastly, the reason Graphite web can query data from either a Carbon-Cache instance through the CACHE_QUERY_PORT or directly from on-disk Whisper database files is another great piece of functionality: metrics don't have to be flushed to disk before they're available for querying. As soon as a metric is received by a Carbon-Cache daemon, it's immediately accessible. Graphite Web both read on-disk data and query the in-memory data in all listed Carbon-Cache daemons, combine and deliver. If you've ever tried high-resolution, real-time anomaly detection in SNMP, you'll love this characteristic of Graphite.
+
+At the minimum, your Graphite Web configuration will have two things: a basic storage back-end for saving users and dashboards created directly in the app, and a Carbon-Cache instance (CARBONLINK_HOSTS) that it will query for data. And it's all defined in the local_settings.py config file:
