@@ -322,3 +322,5 @@ The master Graphite Web will query APIs of all the secondary Graphite Web instan
 ###A basic cluster, diagrammed
 
 This is a diagram I made for internal documentation purposes, so it references different port configurations (and other things like memcached and backing the Web app with MySQL rather than sqlite - other details you'll discover in general configuration efforts). Functionally, it visualizes everything mentioned: with one dedicated relay, two storage nodes each with two Carbon-Cache daemons, and a master Web app:
+
+![](graphite-cluster.png)
