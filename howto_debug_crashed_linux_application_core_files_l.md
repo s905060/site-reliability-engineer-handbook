@@ -20,3 +20,13 @@ Sample outputs:
 ```
 0
 ```
+
+The output 0 (zero) means core file is not created.
+
+**Change Core File Limits**
+
+In this example, set the size limit of core files to 75000 bytes:
+```
+# ulimit -c 75000
+```
+
