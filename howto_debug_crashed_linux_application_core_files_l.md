@@ -114,3 +114,9 @@ You need use the gdb command as follows:
 ```
 $ gdb /path/to/application /path/to/corefile
 ```
+
+See the gdb command man page for more information.
+
+strace command
+
+System administrators, diagnosticians and trouble-shooters will find it invaluable for solving problems with programs for which the source is not readily available since they do not need to be recompiled in order to trace them. This is also useful to submit bug reports to open source developers. See how to use the strace command under Linux to debug the problems.
