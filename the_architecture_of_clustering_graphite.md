@@ -198,3 +198,12 @@ LINE_RECEIVER_PORT = 2023
 PICKLE_RECEIVER_PORT = 2024
 CACHE_QUERY_PORT = 7022
 ```
+
+And instead of running: 
+`bin/carbon-cache.py start`
+
+You would run: 
+```
+bin/carbon-cache.py --instance=1 start 
+bin/carbon-cache.py --instance=2 start
+```
