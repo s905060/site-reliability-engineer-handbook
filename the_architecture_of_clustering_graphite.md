@@ -342,3 +342,7 @@ The summary of scaling out to defeat CPU and I/O bottlenecks is actually quite i
 I have a specific view in my Grafana dashboard that shows the per-host write IOPS, the cluster total write IOPS and the average CPU-wait times for all my storage nodes:
 
 ![](graphite-view0.png)
+
+This was a newly provisioned cluster, so these metrics are cake-levels ;).
+
+An interesting anecdote for the many of you running in AWS, Collectd's IOPS metric seems to align perfectly with Amazon's EBS volume IOPS graph. Assuming this same IOPS value is what's used to quantify Provisioned IOPS volumes, you should have some ability to order up the right volumes. Start by tracking your metrics inbound (through monitoring Graphite with itself):
