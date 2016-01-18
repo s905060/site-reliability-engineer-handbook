@@ -64,3 +64,6 @@ CACHE_QUERY_PORT = 7002
 ```
 
 If you recall the mention that Carbon accepts metrics in two different formats, that's what's going on here:
+
+* Metrics in `line` format should be received on `port 2003`
+* Metrics in `pickle` format should be received on `port 2004`
