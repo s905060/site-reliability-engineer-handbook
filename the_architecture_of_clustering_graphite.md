@@ -252,3 +252,11 @@ DATABASES = {
     }
 }
 ```
+
+Now, data will be queried from the Whisper database files and two separate Carbon-Cache daemons. The results are combined and emitted through the various delivery methods of the web app.
+
+You can run many Carbon-Cache daemons per-host. As I mentioned, many people tend to run a daemon per CPU core. Although, unless you have extremely fast storage, it's probably the CPU will not become your first bottleneck. It's not uncommon to find Graphite boxes packed with SSDs or large RAID10 arrays.
+
+Fortunately for me, nothing scales up indefinitely. I'm a fan of breaking things out into clusters or federated pools of services. Eventually, you're going to max out your hardware or hit a point of disproportionately expensive performance density.
+
+And I love this point–
