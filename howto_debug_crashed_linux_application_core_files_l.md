@@ -70,3 +70,13 @@ Save and close the file. Where,
     * **%t -** time of dump (seconds since 0:00h, 1 Jan 1970)
     * **%h -** hostname (same as ’nodename’ returned by uname(2))
     * **%e -** executable filename
+
+Finally, enable debugging for all apps, enter (Redhat and friends specific):
+```
+# echo "DAEMON_COREFILE_LIMIT='unlimited'" >> /etc/sysconfig/init
+```
+
+Reload the settings in /etc/sysctl.conf by running the following command:
+```
+# sysctl -p
+```
