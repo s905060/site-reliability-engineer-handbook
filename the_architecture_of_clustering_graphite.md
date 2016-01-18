@@ -371,3 +371,5 @@ Either be explicit about what metrics you intend to store and avoid dynamically 
 
 Lastly, there's two great tools on helping you calculate storage:
 
+* J. Javier Maestro's whisper-calculator.py: it's a Python script that you can feed Whisper retention syntax (e.g. 10s:30d,10m:180d) and it will tell you how many data points it translates to.
+* whisper-info.py: a script included with Whisper that you can point at an existing database file to get data point and sizing values
