@@ -403,3 +403,34 @@ This would send metrics to two of the `DESTINATIONS` hosts listed. If you had 8 
 In terms of reading the data, Graphite Web is actually smart enough to detect duplicate data and present it only once. If data is missing entirely, you just get a gap in your graphs. I love this.
 
 Observing the file structure is pretty straightforward. Here I remotely list (with Ansible) the Whisper database files for "somehost" cpu-0 metrics:
+
+```
+$ ansible storage-nodes -m command -a "ls -l /data/carbon/whisper/somehost/cpu-0"
+
+10.0.1.5 | success | rc=0 >>
+-rw-r--r-- 1 root root 794932 Mar  7 19:14 cpu-nice.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:14 cpu-softirq.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:14 cpu-steal.wsp
+
+
+10.0.1.36 | success | rc=0 >>
+-rw-r--r-- 1 root root 794932 Mar  7 19:14 cpu-idle.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:14 cpu-nice.wsp
+
+
+10.0.1.29 | success | rc=0 >>
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-interrupt.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-steal.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-system.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-user.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-wait.wsp
+
+
+10.0.1.56 | success | rc=0 >>
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-idle.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-interrupt.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-softirq.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-system.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-user.wsp
+-rw-r--r-- 1 root root 794932 Mar  7 19:15 cpu-wait.wsp
+```
