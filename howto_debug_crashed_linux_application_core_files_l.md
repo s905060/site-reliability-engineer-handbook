@@ -53,3 +53,20 @@ kernel.core_uses_pid = 1
 kernel.core_pattern = /tmp/core-%e-%s-%u-%g-%p-%t
 fs.suid_dumpable = 2
 ```
+
+Save and close the file. Where,
+
+1. **kernel.core_uses_pid = 1** - Appends the coring processes PID to the core file name.
+
+2. **fs.suid_dumpable = 2** - Make sure you get core dumps for setuid programs.
+
+3. **kernel.core_pattern = /tmp/core-%e-%s-%u-%g-%p-%t** - When the application terminates abnormally, a core file should appear in the /tmp. The kernel.core_pattern sysctl controls exact location of core file. You can define the core file name with the following template whih can contain % specifiers which are substituted by the following values when a core file is created:
+
+    * **%% -** A single % character
+    * **%p -** PID of dumped process
+    * **%u -** real UID of dumped process
+    * **%g -** real GID of dumped process
+    * ** %s -** number of signal causing dump
+    * **%t -** time of dump (seconds since 0:00h, 1 Jan 1970)
+    * **%h -** hostname (same as ’nodename’ returned by uname(2))
+    * **%e -** executable filename
