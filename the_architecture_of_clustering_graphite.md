@@ -238,3 +238,17 @@ Once it's wired up, you can start the Carbon-Relay daemon:
 ###Accessing multiple Carbon-Cache daemons
 
 Next, Graphite Web needs to know where to read data. Additional Carbon-Cache daemons simply need to be listed as an array in `local_settings.py`:
+
+```
+CARBONLINK_HOSTS = ['127.0.0.1:7012', '127.0.0.1:7022']
+DATABASES = {
+    'default': {
+        'NAME': '/opt/graphite/storage/graphite.db',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': ''
+    }
+}
+```
