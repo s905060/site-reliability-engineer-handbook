@@ -312,7 +312,7 @@
        * [How To Write Nagios Plugin – Bash Script](how_to_write_nagios_plugin__bash_script.md)
    * [Zabbix](zabbix.md)
    * [Graphite](graphite.md)
-       * The architecture of clustering Graphite
+       * [The architecture of clustering Graphite](the_architecture_of_clustering_graphite.md)
 * [Database](database.md)
    * [MySQL](mysql.md)
        * [MySQL Best Practices](mysql_best_practices.md)
