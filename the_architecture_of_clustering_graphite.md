@@ -372,4 +372,9 @@ Either be explicit about what metrics you intend to store and avoid dynamically 
 Lastly, there's two great tools on helping you calculate storage:
 
 * J. Javier Maestro's whisper-calculator.py: it's a Python script that you can feed Whisper retention syntax (e.g. 10s:30d,10m:180d) and it will tell you how many data points it translates to.
-* whisper-info.py: a script included with Whisper that you can point at an existing database file to get data point and sizing values
+* whisper-info.py: a script included with Whisper that you can point at an existing database file to get data point and sizing
+values
+
+You should spend a lot of time thinking about storage. I've heard of people storing years of data in under 20GB while I killed ~600GB on a quick test with only a few hundred monitored hosts.
+
+Since you're likely using costly high-performance storage, take advantage of having a fixed-size database and being explicit about what you're storing and how.
