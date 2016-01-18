@@ -362,3 +362,12 @@ A given retention setting will tell you how many total data points will be store
 ```
 10s for 7 days = 7 days * 24 (hours) * 60 = 10,080 total minutes = 604,800 seconds = one data point every 10 seconds = 60,480 data points total over a 7 day period
 ```
+
+Each data point will consume 12 bytes, which translates to ~709MB of storage at this archival rate– for this single metric. If you had 100 hosts sending this metric, you obviously have a multiplicative factor here..
+
+Keep in mind that Collectd will send many metrics (usually ~40-60 types depending on what your OS supports). Another major consideration is dynamically created metric types. The Collectd TCPConns plugin will generate a named metric *per* TCP port. If you have a have a service that establishes many outbound connections over many TCP ports and are storing at high resolution, you can easily chew up tens or hundreds of gigabytes unintentionally.
+
+Either be explicit about what metrics you intend to store and avoid dynamically generated metrics, configure more aggressive storage controls in Whisper for these metrics, or simply provision a TON of storage capacity ;).
+
+Lastly, there's two great tools on helping you calculate storage:
+
