@@ -270,3 +270,9 @@ The importance of how selective I was on the descriptions of Graphite's componen
 Clustering Graphite operates on these same principles, but multiplies under itself as a pyramid structure. Let's say for instance we completely saturate our resources on our Graphite box. This box has a Carbon-Relay daemon accepting metrics from 1,000 machines, which are forwarded to eight Carbon-Cache daemons. The CPUs are chugging along 24/7 and 80% the disks are sustaining a high queue length. We can't introduce more monitored hosts and pulling up a 10 day period of graph data for 200 machines is painfully slow.
 
 The setup should be pretty straight forward to understand at this point:
+
+* Double your Graphite boxes.
+* Put a third box in front of these two Graphite boxes. This will be a dedicated Graphite-Relay.
+    * All metrics are sent to this dedicated Carbon-Relay box. It then proxies all the data to each of the Graphite machines using the Pickle protocol and according to its own configured RELAY_METHOD.
+* Put a fourth box behind the two Graphite boxes. This will be a dedicated Graphite Web.
+    * This will now be the "master" Web app to use. It will be configured to query the Graphite Web instance API running local to each Graphite box.
