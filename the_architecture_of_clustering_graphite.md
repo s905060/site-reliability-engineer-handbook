@@ -80,5 +80,5 @@ You can ignore all the other config files and directives for now.
 
 (I'm going to touch on Whisper a bit. So while I'm skipping out on basic setup again, it's worth understanding some of the core functionality that ultimately relates to storage and I/O considerations that become major thinking points down the line scaling Graphite.)
 
-When Carbon-Cache writes data to disk, it stores it in the Whisper database format. As previously mentioned, a .wsp file is created per unique metric. Each file is created at the time a given metric type is first received. Every file is a fixed-size (for performance) determined by the resolution and retention configured in Whisper's config, storage-schemas.conf.
+When Carbon-Cache writes data to disk, it stores it in the Whisper database format. As previously mentioned, a `.wsp` file is created per unique metric. Each file is created at the time a given metric type is first received. Every file is a fixed-size (for performance) determined by the resolution and retention configured in Whisper's config, `storage-schemas.conf`.
 
