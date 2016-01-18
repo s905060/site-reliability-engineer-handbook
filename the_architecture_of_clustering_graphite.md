@@ -340,3 +340,5 @@ A large article could be written just on the topic of how many relays to run per
 The summary of scaling out to defeat CPU and I/O bottlenecks is actually quite interesting: monitor your Graphite cluster with itself. See what your utilization looks like.
 
 I have a specific view in my Grafana dashboard that shows the per-host write IOPS, the cluster total write IOPS and the average CPU-wait times for all my storage nodes:
+
+![](graphite-view0.png)
