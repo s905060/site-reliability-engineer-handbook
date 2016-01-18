@@ -378,3 +378,11 @@ values
 You should spend a lot of time thinking about storage. I've heard of people storing years of data in under 20GB while I killed ~600GB on a quick test with only a few hundred monitored hosts.
 
 Since you're likely using costly high-performance storage, take advantage of having a fixed-size database and being explicit about what you're storing and how.
+
+###Fault tolerance
+
+The two primary areas of fault tolerance are the top-level relays and the actual Whisper storage.
+
+The relays are simple: have more than one and use some sensible load-balancing strategy. Remember how I said it's worth understanding consistent hashing? It doesn't matter which top-level relay a host pushes metrics into. It will hit the same storage node, same Carbon-Cache daemon and be stored into the same Whisper database file. Amazon ELB works fine for this, but does a "great" job at balancing things evenly (hence the disproportionate metrics inbound across my two relays in the previous graph). I'm more of an HAproxy fan, but whatever floats your boat.
+
+The storage fault tolerance is easy to approach but will require your thinking hat to consider the scaling and sizing repercussions. Carbon-Relay supports replication of proxied metrics, meaning each received metric will be sent to two different downstream storage nodes. This would be defined at the top level relays using the REPLICATION_FACTOR directive:
