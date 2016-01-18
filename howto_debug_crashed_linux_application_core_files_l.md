@@ -93,3 +93,15 @@ Please note that DAEMON_COREFILE_LIMIT is Redhat specific, for all other distro 
 ulimit -c unlimited >/dev/null 2>&1
 echo /tmp/core-%e-%s-%u-%g-%p-%t > /proc/sys/kernel/core_pattern
 ```
+
+Save and close the file. Restart / reload lighttpd:
+```
+# /etc/init.d/lighttpd restart
+# su - lighttpd
+$ ulimit -c
+```
+
+Sample outputs:
+```
+unlimited
+```
