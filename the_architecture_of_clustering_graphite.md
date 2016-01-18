@@ -361,5 +361,4 @@ A given retention setting will tell you how many total data points will be store
 
 ```
 10s for 7 days = 7 days * 24 (hours) * 60 = 10,080 total minutes = 604,800 seconds = one data point every 10 seconds = 60,480 data points total over a 7 day period
-
 ```
