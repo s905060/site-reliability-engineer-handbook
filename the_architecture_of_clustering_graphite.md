@@ -310,3 +310,11 @@ DATABASES = {
 Rather than specifying local Carbon-Cache daemons with the `CARBONLINK_HOSTS` directive, we specify upstream Graphite Web addresses with the `CLUSTER_SERVERS` directive.
 
 If you create any graphs or dashboards using the Carbon Web app, they will be stored on the master server. The upstream Graphite Web instances running local to Whisper data are now merely API endpoints.
+
+###How data is routed in and out a cluster
+
+So this probably introduces a few questions. Where does a single given metric ultimately end up? How does the "master" Graphite Web instance know where to locate a given metric?
+
+Assuming you're using consistent-hashing on every relay in the cluster, every metric inbound is hashed by name and delivered to the same host and then to the same Carbon-Cache daemon and written to the same Whisper db, every time. All Carbon-Cache daemons in the cluster receive an even distribution (practically) of all the inbound metrics, in whole.
+
+The master Graphite Web will query APIs of all the secondary Graphite Web instances. Each instance will read from the local Whisper data and Carbon-Cache instances and return the data if it has it. The master Graphite Web instance will ultimately combine and present the data through the same ole' methods as a stand-alone Graphite setup. You can compose a single graph for a single hosts made from metrics data stored on 100 Graphite boxes. Likewise, the aggregated data could be fed through the master Graphite Web REST API into a third-party dashboarding utility.
