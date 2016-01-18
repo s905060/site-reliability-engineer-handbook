@@ -200,7 +200,9 @@ CACHE_QUERY_PORT = 7022
 ```
 
 And instead of running: 
-`bin/carbon-cache.py start`
+```
+bin/carbon-cache.py start
+```
 
 You would run: 
 ```
