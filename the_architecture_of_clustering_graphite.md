@@ -228,9 +228,9 @@ RELAY_METHOD = consistent-hashing
 DESTINATIONS = 127.0.0.1:2014:1, 127.0.0.1:2024:2 
 ```
 
-You'll see that the two local Carbon-Cache instances (:1 and :2) are the destinations where received metrics will be sent to. Take note that the destinations are on the Carbon-Cache PICKLE_RECEIVER_PORT addresses. This is a scenario where the Pickle format is used; Carbon-to-Carbon daemon communication. It's supported and is simply more efficient.
+You'll see that the two local Carbon-Cache instances (:1 and :2) are the destinations where received metrics will be sent to. Take note that the destinations are on the Carbon-Cache `PICKLE_RECEIVER_PORT` addresses. This is a scenario where the Pickle format is used; Carbon-to-Carbon daemon communication. It's supported and is simply more efficient.
 
-Lastly, take note of the RELAY_METHOD directive. Carbon-Relay can choose which Carbon-Cache daemon to send metrics to by either user-defined regex rules matching the metric name, or through consistent-hashing. I highly recommend understanding consistent-hashing, as the choice of what relay method to use at various levels will play a crucial role down the line when clustering Graphite. For now, consistent-hashing will allow a hands-off and mostly even distribution between Cache daemons.
+Lastly, take note of the `RELAY_METHOD` directive. Carbon-Relay can choose which Carbon-Cache daemon to send metrics to by either user-defined regex rules matching the metric name, or through consistent-hashing. I highly recommend understanding consistent-hashing, as the choice of what relay method to use at various levels will play a crucial role down the line when clustering Graphite. For now, consistent-hashing will allow a hands-off and mostly even distribution between Cache daemons.
 
 Once it's wired up, you can start the Carbon-Relay daemon: 
-bin/carbon-relay.py start
+`bin/carbon-relay.py` start
