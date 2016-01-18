@@ -67,3 +67,11 @@ If you recall the mention that Carbon accepts metrics in two different formats, 
 
 * Metrics in `line` format should be received on `port 2003`
 * Metrics in `pickle` format should be received on `port 2004`
+
+The difference is that line format is a plaintext protocol with one metric name, value and timestamp per datum. The pickle format allows for metrics to be sent in batches and is used where heavy amounts of metrics are being transferred.
+
+**This is an important area** of confusion that seems overlooked and inadequately described. If you're using a tool like Collectd to feed metrics from theoretical Host A, it's sending in line format and should be transmitting to your Graphite box on port 2003. The pickle format is used when a Carbon-Relay daemon is load-balancing / proxying metrics data to multiple Carbon-Cache daemons in a Graphite cluster. Understanding these functional boundaries should help clarify why all these listening directives with fuzzy names exist.
+
+Pretty much everyone reading this is probably starting out with a single Graphite box and intends to feed data like CPU and memory usage via Collectd. Basically, you want a Carbon-Cache daemon listening on port 2003 on an interface that all your monitored hosts can point their Collectd daemons at to fire off line data. This config simply needs to exist in `carbon.conf`. And when you start the `carbon-cache` daemon: done deal.
+
+You can ignore all the other config files and directives for now.
