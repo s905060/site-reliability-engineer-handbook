@@ -45,3 +45,11 @@ In any case, I will make the following installation recommendations / notes:
 
 * Use PIP to install Carbon / Whisper / Graphite Web if you want it to go down easily.
 * Manually install Twisted version 13.1, first: `pip install twisted==13.1`. For some reason I didn't care to sort out, newer versions prevented Graphite daemons from starting properly.
+
+Function first, optimization later.
+
+I'm going to strip out all of the configuration lines that can be left as defaults so that we can focus on the mechanics of the Graphite components.
+
+###Carbon config
+
+Carbon actually has multiple daemons that can be used for different scenarios, and each has their own section in the Carbon config. Carbon-Cache specifically is the core daemon that represents what the Carbon component of Graphite does, so it's the only section that really matters right now:
