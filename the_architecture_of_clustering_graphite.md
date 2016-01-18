@@ -18,3 +18,15 @@ The core components:
     * Carbon expects time-series data in a particular format (of two primary types - details later). Third party tools that support * Graphite are used to feed properly formatted data, such as Collectd or StatsD.
     * Metrics can be anything from OS memory usage to event counts fired off from an application (e.g. number of times a function was called).
     * After Carbon receives metrics, it periodically flushes them to a storage database.
+
+* Whisper
+    * A lightweight, flat-file database format for storing time-series data.
+    * It does not run as a stand-alone service or bind to a port. * Carbon natively supports writing to disk in "Whisper format".
+    * Each unique metric type is stored in a fixed-size file. If you fed in the metrics memory free and memory used for both Host A and Host B, the following database files would be created:
+```
+$WHISPER_DIR/carbon/whisper/HostA/memory-free.wsp 
+$WHISPER_DIR/carbon/whisper/HostA/memory-used.wsp 
+$WHISPER_DIR/carbon/whisper/HostB/memory-free.wsp 
+$WHISPER_DIR/carbon/whisper/HostB/memory-used.wsp
+```
+    * The size of database files is determined by the number of data points stored - this is configurable (details later).
