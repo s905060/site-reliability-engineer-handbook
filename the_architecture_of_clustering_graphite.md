@@ -53,3 +53,14 @@ I'm going to strip out all of the configuration lines that can be left as defaul
 ###Carbon config
 
 Carbon actually has multiple daemons that can be used for different scenarios, and each has their own section in the Carbon config. Carbon-Cache specifically is the core daemon that represents what the Carbon component of Graphite does, so it's the only section that really matters right now:
+```
+[cache]
+LINE_RECEIVER_INTERFACE = 0.0.0.0
+LINE_RECEIVER_PORT = 2003
+PICKLE_RECEIVER_INTERFACE = 0.0.0.0
+PICKLE_RECEIVER_PORT = 2004
+CACHE_QUERY_INTERFACE = 0.0.0.0
+CACHE_QUERY_PORT = 7002
+```
+
+If you recall the mention that Carbon accepts metrics in two different formats, that's what's going on here:
