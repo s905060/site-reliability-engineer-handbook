@@ -398,7 +398,7 @@ REPLICATION_FACTOR = 2
 DESTINATIONS = 127.0.0.1:2014:1, 127.0.0.1:2024:2 
 ```
 
-This would send metrics to two of the DESTINATIONS hosts listed. If you had 8 total storage nodes with a replication factor of 3, three separate nodes would be chosen (also through consistent-hashing) to store the data.
+This would send metrics to two of the `DESTINATIONS` hosts listed. If you had 8 total storage nodes with a replication factor of 3, three separate nodes would be chosen (also through consistent-hashing) to store the data.
 
 In terms of reading the data, Graphite Web is actually smart enough to detect duplicate data and present it only once. If data is missing entirely, you just get a gap in your graphs. I love this.
 
