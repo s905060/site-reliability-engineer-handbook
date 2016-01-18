@@ -84,3 +84,12 @@ Reload the settings in /etc/sysctl.conf by running the following command:
 ###How Do I Enable Core Dumping For Specific Deamon?
 
 To enable core dumping for specific deamons, add the following line in the /etc/sysconfig/daemon-file file. In this example, edit /etc/init.d/lighttped and add line as follows:
+```
+DAEMON_COREFILE_LIMIT='unlimited'
+```
+
+Please note that DAEMON_COREFILE_LIMIT is Redhat specific, for all other distro add configuration as follows:
+```
+ulimit -c unlimited >/dev/null 2>&1
+echo /tmp/core-%e-%s-%u-%g-%p-%t > /proc/sys/kernel/core_pattern
+```
