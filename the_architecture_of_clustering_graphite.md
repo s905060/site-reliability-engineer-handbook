@@ -42,3 +42,6 @@ $WHISPER_DIR/carbon/whisper/HostB/memory-used.wsp
 So, I think the best favor you can do for yourself is starting with the most basic, necessary components and configuration. The 'install guides' (I've snarkily continued placing in quotes) do the typical thing: include long lists of software packages to install without descriptions of why (Which are actual requirements? Are some just optional and you think they're cool?), followed by arbitrary configurations without explanation (Are these your personal optimizations? Are these configurations necessary to function? Are they unnecessarily elaborate?).
 
 In any case, I will make the following installation recommendations / notes:
+
+* Use PIP to install Carbon / Whisper / Graphite Web if you want it to go down easily.
+* Manually install Twisted version 13.1, first: `pip install twisted==13.1`. For some reason I didn't care to sort out, newer versions prevented Graphite daemons from starting properly.
