@@ -30,3 +30,9 @@ In this example, set the size limit of core files to 75000 bytes:
 # ulimit -c 75000
 ```
 
+###HowTo: Enable Core File Dumps For Application Crashes And Segmentation Faults
+
+Edit /etc/profile file and find line that read as follows to make persistent configuration:
+
+
+
