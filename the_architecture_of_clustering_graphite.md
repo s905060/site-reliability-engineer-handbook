@@ -346,3 +346,16 @@ I have a specific view in my Grafana dashboard that shows the per-host write IOP
 This was a newly provisioned cluster, so these metrics are cake-levels ;).
 
 An interesting anecdote for the many of you running in AWS, Collectd's IOPS metric seems to align perfectly with Amazon's EBS volume IOPS graph. Assuming this same IOPS value is what's used to quantify Provisioned IOPS volumes, you should have some ability to order up the right volumes. Start by tracking your metrics inbound (through monitoring Graphite with itself):
+
+![](graphite-view1.png)
+
+Correlate this with the observed aggregate and per-host IOPS and provision EBS volumes accordingly. A good general indicator of total I/O capacity is tracking your write queue lengths and average I/O latency. If your disks are pegged 24/7 with a 150+ write queue length and 30ms latency, you're generally in bad shape.
+
+###Storage predictions
+
+This is a big one. Since Whisper database files are of fixed-size, they doesn't just grow like a MySQL database. I previously mentioned that a Whisper file is created for each metric upon initial receipt, the size is determined right off the bat by the configured precision and retention periods. A Whisper database file never become smaller or larger on its own, no matter how many metrics are present.
+
+Fortunately, this can be predicted.
+
+A given retention setting will tell you how many total data points will be stored, and each datapoint as a fixed size of 12 bits. So if you are storing someMetricA at 10 second intervals for 7 days, the math would look like this:
+
