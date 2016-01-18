@@ -287,3 +287,7 @@ PICKLE_RECEIVER_PORT = 2004
 RELAY_METHOD = consistent-hashing 
 DESTINATIONS = 10.0.1.10:2004, 10.0.1.11:2004
 ```
+
+Where `10.0.1.10` and `10.0.1.11` are the two Graphite boxes. We're again relaying data through the Pickle protocol on port 2004.
+
+The master Graphite Web `local_settings.py` will look like this:
