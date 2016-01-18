@@ -109,3 +109,9 @@ retentions = 60s:90d
 Note: you'll notice the `[carbon]` entry, which is used for default metrics (such as number of metrics received) fed in by the Carbon-Cache daemon itself.
 
 Something you'll discover through further configuration efforts is that retention resolution can be tiered. For instance, you could store high resolution metrics @ every 10 seconds for 7 days and lower resolution metrics @ every 60 seconds for 90 days with the following retention line:
+
+```
+...
+retentions = 10s:7d,60s:90d
+...
+```
