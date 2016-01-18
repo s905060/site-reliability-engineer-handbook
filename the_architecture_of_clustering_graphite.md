@@ -209,3 +209,12 @@ You would run:
 bin/carbon-cache.py --instance=1 start 
 bin/carbon-cache.py --instance=2 start
 ```
+
+...In order to start each respective instance.
+
+Now, notice that the Carbon-Cache daemons are no longer bound to `0.0.0.0`, but rather, localhost. That's because we're not going to write directly to Carbon-Cache anymore. This is where a new Graphite daemon steps in: Carbon-Relay.
+
+Carbon-Relay provides the listening capabilities of Carbon-Cache and ingests Line and Pickle formatted metrics, only it expects to forward them to Carbon-Cache daemons for storage. Consider it a metrics proxy. This is what will bind to your network-accessible interface on ports 2003 and 2004 and accept inputs from Collectd and friends.
+
+Carbon-Relay is also configured in the same `carbon.conf` file, in its own section:
+
