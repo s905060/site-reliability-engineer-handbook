@@ -105,3 +105,9 @@ Sample outputs:
 ```
 unlimited
 ```
+
+Now, you can send core files to vendor or software writes.
+
+###How Do I Read Core Files?
+
+You need use the gdb command as follows:
