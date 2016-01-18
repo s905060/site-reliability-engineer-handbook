@@ -152,3 +152,5 @@ DATABASES = {
     }
 }
 ```
+
+Keep in mind that Graphite Web also reads data directly from Whisper, so you must specify any non-standard paths with the `WHISPER_DIR` directive. For instance, if you intend to store your databases on a second hard drive mounted at /data:
