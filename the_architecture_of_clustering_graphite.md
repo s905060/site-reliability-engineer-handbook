@@ -291,3 +291,18 @@ DESTINATIONS = 10.0.1.10:2004, 10.0.1.11:2004
 Where `10.0.1.10` and `10.0.1.11` are the two Graphite boxes. We're again relaying data through the Pickle protocol on port 2004.
 
 The master Graphite Web `local_settings.py` will look like this:
+
+```
+CLUSTER_SERVERS = ["10.0.1.10:80", "10.0.1.11:80"]
+
+DATABASES = {
+    'default': {
+        'NAME': '/opt/graphite/storage/graphite.db',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': ''
+    }
+}
+```
