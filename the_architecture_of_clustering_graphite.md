@@ -450,3 +450,10 @@ The Graphite Web apps themselves are just web servers; very easy to scale, but d
 
 Referencing the observation of storage node I/O utilization in a previous section, keep these things in mind when it comes to fetching data as well, since metrics data is being read from these same disks.
 
+###Wrap Up
+
+As I mentioned, I've only got two weeks (of scattered time) in on building a Graphite infrastructure for large-scale. I've certainly made many discoveries and am expecting many more - so feedback and corrections are welcome!
+
+There's things I'm looking forward to like the pending switch to the Ceres time-series database backend. The clusters that I'm running in production are anticipating many hundreds of millions of data points. I found that Hosted Graphite is using Basho Riak as a storage backend while researching this possibility on my own. There's a ton of dashboards I still haven't tried (but am loving Grafana, if you didn't notice the multiple mentions), and I'm sure even more will be released soon.
+
+As new discoveries are made, I'll be sure to write about them. Until then, happy graphing.
