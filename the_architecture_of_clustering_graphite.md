@@ -123,3 +123,7 @@ The key takeaway is that storage consumption can (and should) be predicted. For 
 ###Graphite Web config
 
 Carbon-Cache and Whisper are on the side of writing data. Graphite Web is how data is queried. Basically, it's a Django app that can read metric data from one of three sources:
+
+* Directly from Whisper database files on-disk
+* From Carbon-Cache daemons on their `CACHE_QUERY_PORT` (remember this directive in the carbon config?)
+* From other instances of Graphite Web through the REST API
