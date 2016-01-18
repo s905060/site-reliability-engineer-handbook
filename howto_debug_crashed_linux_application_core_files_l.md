@@ -41,3 +41,15 @@ Update it as follows:
 ```
 ulimit -c unlimited >/dev/null 2>&1
 ```
+
+Save and close the file. Edit /etc/sysctl.conf, enter:
+```
+# vi /etc/sysctl.conf
+```
+
+Append the following lines:
+```
+kernel.core_uses_pid = 1
+kernel.core_pattern = /tmp/core-%e-%s-%u-%g-%p-%t
+fs.suid_dumpable = 2
+```
