@@ -154,3 +154,18 @@ DATABASES = {
 ```
 
 Keep in mind that Graphite Web also reads data directly from Whisper, so you must specify any non-standard paths with the `WHISPER_DIR` directive. For instance, if you intend to store your databases on a second hard drive mounted at /data:
+
+```
+CARBONLINK_HOSTS = ['127.0.0.1:7002']
+WHISPER_DIR = "/data/carbon/whisper"
+DATABASES = {
+    'default': {
+        'NAME': '/opt/graphite/storage/graphite.db',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': ''
+    }
+}
+```
