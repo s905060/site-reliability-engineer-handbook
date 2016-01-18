@@ -306,3 +306,7 @@ DATABASES = {
     }
 }
 ```
+
+Rather than specifying local Carbon-Cache daemons with the `CARBONLINK_HOSTS` directive, we specify upstream Graphite Web addresses with the `CLUSTER_SERVERS` directive.
+
+If you create any graphs or dashboards using the Carbon Web app, they will be stored on the master server. The upstream Graphite Web instances running local to Whisper data are now merely API endpoints.
