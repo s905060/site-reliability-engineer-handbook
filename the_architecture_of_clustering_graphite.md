@@ -331,3 +331,12 @@ The purpose of breaking out all of these components is simple: you want to colle
 
 We can accomplish all of that.
 
+###Defeating CPU & I/O limitations
+
+As you add more nodes dedicated to running Carbon-Cache daemons, you're adding more total block devices (be it EBS volumes, SSDs, spindles, etc.) for metric storage. You're also gaining more total memory that Carbon-Cache daemons are occupying where temporal data / not-yet-flushed-to-disk can be fetched.
+
+A large article could be written just on the topic of how many relays to run per storage node, the implications of context switch costs for running too many daemons per box (are those "real" cores? etc.). Hell. A whole article could (and has been many times) written on what "IOPS" even means.
+
+The summary of scaling out to defeat CPU and I/O bottlenecks is actually quite interesting: monitor your Graphite cluster with itself. See what your utilization looks like.
+
+I have a specific view in my Grafana dashboard that shows the per-host write IOPS, the cluster total write IOPS and the average CPU-wait times for all my storage nodes:
