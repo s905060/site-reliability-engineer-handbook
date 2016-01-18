@@ -25,3 +25,11 @@ hadoopdn002 /hadoop/rack1
 hadoopdn006 /hadoop/rack2
 hadoopdn007 /hadoop/rack2
 ```
+
+Given this information, you can write a script that compares the IP address or DNS name of the node with the first column; when they match, the script returns the value from the second column of the corresponding row.
+
+For example, based on the previous information, if you pass hadoopdn001, it should return /hadoop/rack1; if you pass hadoopdn006, it should return /hadoop/rack2. Likewise, if you pass hadoopdn101, it should return /default/rack because there is no entry for hadoopdn101 in the file.
+
+> NOTE: Default Rack
+>
+If the value for net.topology.script.file.name is not configured, the default value of /default-rack is returned for any IP addresses; thus, all nodes are considered to be on the same rack.
