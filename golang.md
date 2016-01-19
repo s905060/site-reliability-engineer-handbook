@@ -42,3 +42,8 @@ Floating Point Numbers can be defined as numbers with a decimal component or mor
 Go has two floating point types : **float32 and float64**
 
 Go also has two complex number types : **complex64 and complex128**
+
+```
+var x float64 = 34.23
+var y complex64 = 3 + 2i
+```
