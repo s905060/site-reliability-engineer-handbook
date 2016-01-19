@@ -451,3 +451,13 @@ Let us replace the sender and the receiver function
 func sender(c chan<- string)
 func receiver(c <-chan string)
 ```
+
+There is also a select option when handling channels, this acts like a switch statement selecting the channel which is ready.
+
+###Final words
+
+To move ahead with Go, have a look at the official documentation and I recommend the tour.
+
+Also go through the talks held on Go, in various Gophercons I will be attending Gopeherconf India next year.
+
+Have a look at the way Go code is organised and also how the testing framework is used in Go. Learn to use the automatic code formatting tool gofmt and also the automatic documentation generator godoc.
