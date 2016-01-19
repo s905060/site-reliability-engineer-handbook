@@ -162,3 +162,14 @@ switch i {
 ###Arrays
 
 The type [n]T is an array of size n of type T.
+
+```
+var a [10]int 
+x := [5]float64 {
+	34,
+	63,
+	56,
+	84,
+	23,
+}
+```
