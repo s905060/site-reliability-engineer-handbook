@@ -188,3 +188,14 @@ A map is an unordered collection of key-value pairs. Also known as an associativ
 var x map[string]int
 x["Hello"] = 1
 ```
+
+###Functions
+
+Functions are defined using the keyword func followed by the function name and arguments and the return values.
+```
+func say_hello() {
+	fmt.Println("Hello From the function")
+}
+```
+
+If the result parameters are named, a return statement without arguments return the current values of the variables
