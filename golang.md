@@ -127,3 +127,14 @@ for _, i := range a {
 	sum = sum + i
 }
 ```
+
+###If
+
+If statements are also similar to those in C and Java.
+```
+if num % 2 == 0 {
+	fmt.Println("Even")
+} else {
+	fmt.Println("Odd")
+}
+```
