@@ -94,3 +94,9 @@ Here the data type is internally assigned.
 x := 8
 y := "Hello world"
 ```
+
+You can also declare constants using the assignment operator, Numeric constants in Go are high-precision values.
+```
+const y = "Hello world"
+const Pi = 3.14
+```
