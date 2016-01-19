@@ -66,3 +66,9 @@ Using indices, individual character of a string can be obtained.
 var weird string = "weird string"
 a := `Hello to all`
 ```
+
+###Boolean
+
+Booleans are a special 1 bit integer type used to indicate True or False.
+
+The logical operators which can be used on booleans are :
