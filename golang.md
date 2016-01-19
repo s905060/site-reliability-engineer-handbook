@@ -221,3 +221,16 @@ func main() {
 	a, b := calculate(3, 4)
 }
 ```
+
+###Variadic Function
+
+Functions can take 0 to undefined variables of a particular data type.
+```
+func total(args ...int) (sum int) {
+	sum := 0
+	for _, i := range args {
+		sum = sum + i
+	}
+	return sum
+}
+```
