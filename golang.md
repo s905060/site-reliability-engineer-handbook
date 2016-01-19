@@ -372,3 +372,9 @@ Output :
 {Lab 5 Roy}
 {3 Donalds}
 ```
+
+In Go interfaces are implicitly satisfied, this one of the best features of the language.
+
+Let us take an example, the Println function takes an interface which holds a method of type String() string
+
+Defining our own method for the dog type we can print the data as per what is most suitable to us.
