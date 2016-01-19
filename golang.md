@@ -426,3 +426,17 @@ For intercommunication of concurrent functions we use channels. Channels must be
 ```
 var c chan string = make(chan string)
 ```
+
+Lets consider a small example
+
+```
+func sender(c chan string) {
+     for {
+              c <- "Hello"
+     }
+}
+func receiver(c chan string) {
+     for{
+                fmt.Println(
+                
+```
