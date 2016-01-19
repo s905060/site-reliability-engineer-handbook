@@ -61,3 +61,8 @@ Strings can be concatenated using the + symbol.
 The length of a string can be obtained using the len(<string>) function.
 
 Using indices, individual character of a string can be obtained.
+
+```
+var weird string = "weird string"
+a := `Hello to all`
+```
