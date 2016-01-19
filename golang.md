@@ -206,3 +206,18 @@ func details(a []int) (x, y int) {
 	y := cap(a)
 }
 ```
+
+###Multiple return types
+
+Go supports multiple return types.
+```
+func calculate(a, b int) (sum, prod int) {
+	sum := a + b
+	prod := a * b
+	return sum, prod
+}
+
+func main() {
+	a, b := calculate(3, 4)
+}
+```
