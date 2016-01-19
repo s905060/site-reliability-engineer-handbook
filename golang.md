@@ -78,3 +78,11 @@ and &&
 or ||
 not !
 ```
+
+###Variables
+
+Variables in Go are initialized using the var keyword and then followed by the variable name and variable type.
+```
+var x int
+var y string = "Hello world"
+```
