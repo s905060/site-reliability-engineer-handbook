@@ -288,3 +288,12 @@ Output :
 y points to x and the value of y is obtained using a * operator. The & operator is used to get the address of a variable.
 
 The new operator is used to allocate memory to a pointer variable.
+
+```
+x := new(int)
+*x = 9
+fmt.Println(*x)
+
+Output :
+9
+```
