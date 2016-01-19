@@ -34,3 +34,11 @@ There are also 3 machine dependent integer types: **uint, int and uintptr**. The
 var x int = 404
 var y uint32 = 234242
 ```
+
+###Floating Point Numbers
+
+Floating Point Numbers can be defined as numbers with a decimal component or more generally known as Real Numbers.
+
+Go has two floating point types : **float32 and float64**
+
+Go also has two complex number types : **complex64 and complex128**
