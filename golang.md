@@ -180,3 +180,11 @@ A slice is a segment of an array. The length of a slice is not fixed. Creation o
 ```
 x := make([]int, 5)
 ```
+
+###Maps
+
+A map is an unordered collection of key-value pairs. Also known as an associative array, a hash table or a dictionary, maps are used to look up a value by its associated key.
+```
+var x map[string]int
+x["Hello"] = 1
+```
