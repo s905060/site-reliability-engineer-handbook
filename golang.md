@@ -119,3 +119,11 @@ for i != 0 {
 	fmt.Println("The value of i :", i)
 }
 ```
+
+The **range** keyword can be used to range over a list of values also
+```
+a := [ ]int{4, 3, 1, 7, 3, 9, 2}
+for _, i := range a {
+	sum = sum + i
+}
+```
