@@ -276,3 +276,14 @@ Here, the func increm returns a func of type func() int which still refers to th
 ###Pointers
 
 Pointers, yes pointers! Go has pointers, but no pointer arithmetic.
+```
+x := 5
+y := &x
+fmt.Println(*y)
+```
+
+Output :
+5
+y points to x and the value of y is obtained using a * operator. The & operator is used to get the address of a variable.
+
+The new operator is used to allocate memory to a pointer variable.
