@@ -28,5 +28,5 @@ Integers are numbers without a decimal component. Unlike us, the computers use a
 
 Also, a **byte** is an alias for **uint8** and a rune for **int32**.
 
-There are also 3 machine dependent integer types: uint, int and uintptr. They are machine dependent because their size depends on the type of architecture you are using.
+There are also 3 machine dependent integer types: **uint, int and uintptr**. They are machine dependent because their size depends on the type of architecture you are using.
 
