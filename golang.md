@@ -440,3 +440,9 @@ func receiver(c chan string) {
                 fmt.Println(
                 
 ```
+
+Here the sender  function continuously sends the string to the c channel and the receiver function prints the value received from the channel continuously.
+
+The function prototype can also restrict the direction of data flow from and to the channel.
+
+Let us replace the sender and the receiver function
