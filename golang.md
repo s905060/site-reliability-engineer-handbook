@@ -378,3 +378,14 @@ In Go interfaces are implicitly satisfied, this one of the best features of the 
 Let us take an example, the Println function takes an interface which holds a method of type String() string
 
 Defining our own method for the dog type we can print the data as per what is most suitable to us.
+
+```
+func (d dog) String() string {
+	return fmt.Sprintf("The dog is %s, it is currently %d years old and belongs to %s", d.breed, d.age, d.owner)
+}
+b :=dog { "Lab", 5, "Roy" }
+fmt.Println(b)
+
+Output :
+The dog is Lab, It is 5 years old and belongs to Roy
+```
