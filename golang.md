@@ -234,3 +234,19 @@ func total(args ...int) (sum int) {
 	return sum
 }
 ```
+
+###Closure
+
+Consider the following example
+```
+func main() {
+dog := func() {
+		fmt.Println("Woof!")
+}
+	dog()
+}
+```
+
+Here we are actually assigning the function to a variable.
+
+Similarly.
