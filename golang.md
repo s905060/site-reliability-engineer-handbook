@@ -301,3 +301,21 @@ Output :
 ###STRUCTURES, METHODS AND INTERFACES
 ###Structures 
 A structure is a user defined data type which contains named fields. A structure is basically an object in Go which has data types and methods on it.
+
+```
+type dog struct {
+	breed string
+	age int
+	owner string
+}
+
+type cow struct {
+	age int
+	farm string
+}
+
+rocky := dog { "Lab", 5, "Roy" }
+bigcow := cow { age : 3, farm : "Donalds" }
+fmt.Println("Dogs age is : ", rocky.age )
+fmt.Println("Cows age is : ", bigcow.age )
+```
