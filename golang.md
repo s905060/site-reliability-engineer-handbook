@@ -100,3 +100,9 @@ You can also declare constants using the assignment operator, Numeric constants 
 const y = "Hello world"
 const Pi = 3.14
 ```
+
+###Loops and Control Structures
+
+**For**
+
+For loops are used just as in C and Java.
