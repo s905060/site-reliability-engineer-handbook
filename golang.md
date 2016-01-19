@@ -30,3 +30,7 @@ Also, a **byte** is an alias for **uint8** and a rune for **int32**.
 
 There are also 3 machine dependent integer types: **uint, int and uintptr**. They are machine dependent because their size depends on the type of architecture you are using.
 
+```
+var x int = 404
+var y uint32 = 234242
+```
