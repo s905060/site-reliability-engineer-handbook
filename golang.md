@@ -250,3 +250,23 @@ dog := func() {
 Here we are actually assigning the function to a variable.
 
 Similarly.
+
+```
+func increm() func() int {
+	x := 0
+	return func() int {
+		x = x + 1
+		return x
+	}
+}
+
+func main() {
+	y := increm()
+	fmt.Println(y)
+	fmt.Println(y)
+}
+
+Output :
+1
+2
+```
