@@ -112,3 +112,10 @@ for i := 0; i < 10; i++ {
 	fmt.Println("The value of i : ", i)
 }   
 ```
+
+or
+```
+for i != 0 {
+	fmt.Println("The value of i :", i)
+}
+```
