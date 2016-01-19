@@ -319,3 +319,5 @@ bigcow := cow { age : 3, farm : "Donalds" }
 fmt.Println("Dogs age is : ", rocky.age )
 fmt.Println("Cows age is : ", bigcow.age )
 ```
+We declare structures using the type and struct keyword. Individual elements of the structure are accessed using the dot operator.
+
