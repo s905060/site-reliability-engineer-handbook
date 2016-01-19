@@ -360,3 +360,15 @@ type Speaker interface {
 So, any type which has a method called speak automatically satisfies the Speaker interface.
 
 Hence we can have.
+
+```
+var a Speaker
+a :=  dog { "Lab", 5, "Roy" }
+fmt.Println(a)
+a := cow { age : 3, farm : "Donalds" }
+fmt.Println(a)
+
+Output :
+{Lab 5 Roy}
+{3 Donalds}
+```
