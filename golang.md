@@ -72,3 +72,9 @@ a := `Hello to all`
 Booleans are a special 1 bit integer type used to indicate True or False.
 
 The logical operators which can be used on booleans are :
+
+```
+and &&
+or ||
+not !
+```
