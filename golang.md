@@ -446,3 +446,8 @@ Here the sender  function continuously sends the string to the c channel and the
 The function prototype can also restrict the direction of data flow from and to the channel.
 
 Let us replace the sender and the receiver function
+
+```
+func sender(c chan<- string)
+func receiver(c <-chan string)
+```
