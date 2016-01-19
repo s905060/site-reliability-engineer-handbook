@@ -396,3 +396,6 @@ Because the dog has a String function and the interface taken by Println require
 
 Go has a rich support for concurrency via goroutines and channels. This is one of the highlights of the language.
 
+###Goroutines
+
+Goroutines can be described as functions which run concurrently from other functions. They’re invoked following the go keyword. As the function is invoked it runs concurrently and the rest of the code is executed without waiting for the completion of that function. The main function is implicitly a goroutine.
