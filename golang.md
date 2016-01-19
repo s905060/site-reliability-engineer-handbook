@@ -322,3 +322,6 @@ fmt.Println("Cows age is : ", bigcow.age )
 
 We declare structures using the type and struct keyword. Individual elements of the structure are accessed using the dot operator.
 
+###Methods
+
+Assume, we want to know what the dog/cow says, we can define a method on the given structure to perform a specific task, in our case to speak.
