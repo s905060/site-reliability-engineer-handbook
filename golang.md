@@ -270,3 +270,9 @@ Output :
 1
 2
 ```
+
+Here, the func increm returns a func of type func() int which still refers to the variable x which is outside the body of the func. This is known as a closure func.
+
+###Pointers
+
+Pointers, yes pointers! Go has pointers, but no pointer arithmetic.
