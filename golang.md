@@ -173,3 +173,10 @@ x := [5]float64 {
 	23,
 }
 ```
+
+###Slices
+
+A slice is a segment of an array. The length of a slice is not fixed. Creation of slice is via the make command.
+```
+x := make([]int, 5)
+```
