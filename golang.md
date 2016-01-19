@@ -422,3 +422,7 @@ Now the function prints out all the no’s from different goroutines, as they’
 ###Channels
 
 For intercommunication of concurrent functions we use channels. Channels must be created before being used, using the chan keyword. Let us create a channel of type string.
+
+```
+var c chan string = make(chan string)
+```
