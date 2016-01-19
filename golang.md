@@ -106,3 +106,10 @@ const Pi = 3.14
 **For**
 
 For loops are used just as in C and Java.
+
+```
+for i := 0; i < 10; i++ {
+	fmt.Println("The value of i : ", i)
+}
+
+```
