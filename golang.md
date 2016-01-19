@@ -47,3 +47,17 @@ Go also has two complex number types : **complex64 and complex128**
 var x float64 = 34.23
 var y complex64 = 3 + 2i
 ```
+
+###Strings
+
+A string is a sequence of characters of a definite length for textual representation.
+
+String literals in Go can be created using either double quotes “Hello World” or back quotes `Hello World`.
+
+Double quotes cannot contain newlines but allow special escape sequences like \n and \t.
+
+Strings can be concatenated using the + symbol.
+
+The length of a string can be obtained using the len(<string>) function.
+
+Using indices, individual character of a string can be obtained.
