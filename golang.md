@@ -351,3 +351,12 @@ Here, the function speak takes a dog and cow types respectively and responds wit
 ###Interfaces
 
 Interfaces are basically a collection of methods. Lets define an interface on the function speak.
+```
+type Speaker interface {
+	speak() string
+}
+```
+
+So, any type which has a method called speak automatically satisfies the Speaker interface.
+
+Hence we can have.
