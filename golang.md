@@ -297,3 +297,7 @@ fmt.Println(*x)
 Output :
 9
 ```
+
+###STRUCTURES, METHODS AND INTERFACES
+###Structures 
+A structure is a user defined data type which contains named fields. A structure is basically an object in Go which has data types and methods on it.
