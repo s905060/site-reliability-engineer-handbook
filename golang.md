@@ -399,3 +399,20 @@ Go has a rich support for concurrency via goroutines and channels. This is one o
 ###Goroutines
 
 Goroutines can be described as functions which run concurrently from other functions. They’re invoked following the go keyword. As the function is invoked it runs concurrently and the rest of the code is executed without waiting for the completion of that function. The main function is implicitly a goroutine.
+
+```
+func foo(n int) {
+	for i := 0; i < n; i = i + 2; {
+		fmt.Printf("%d : %d ", n, i)
+		time.Sleep(time.Milliseconds * 50)
+        }
+} 
+
+func main() {
+      for i := 0; i < 10; i++ {
+            go f(i)
+    }
+     var input string
+     fmt.Scanln(&input)
+}
+```
