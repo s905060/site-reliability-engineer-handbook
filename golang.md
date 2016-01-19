@@ -389,3 +389,10 @@ fmt.Println(b)
 Output :
 The dog is Lab, It is 5 years old and belongs to Roy
 ```
+
+Because the dog has a String function and the interface taken by Println requires a String function, we satisfy that interface.
+
+###Concurrency
+
+Go has a rich support for concurrency via goroutines and channels. This is one of the highlights of the language.
+
