@@ -86,3 +86,11 @@ Variables in Go are initialized using the var keyword and then followed by the v
 var x int
 var y string = "Hello world"
 ```
+
+You can also initialize variables in a shorter way.
+
+Here the data type is internally assigned.
+```
+x := 8
+y := "Hello world"
+```
