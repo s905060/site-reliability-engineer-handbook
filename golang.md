@@ -199,3 +199,10 @@ func say_hello() {
 ```
 
 If the result parameters are named, a return statement without arguments return the current values of the variables
+
+```
+func details(a []int) (x, y int) {
+	x := len(a)
+	y := cap(a)
+}
+```
