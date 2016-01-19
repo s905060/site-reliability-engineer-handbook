@@ -416,3 +416,9 @@ func main() {
      fmt.Scanln(&input)
 }
 ```
+
+Now the function prints out all the no’s from different goroutines, as they’re concurrently run. The sleeper makes sure that a particular routine waits for 50ms before the next iteration, this gives time for the other routines to run.
+
+###Channels
+
+For intercommunication of concurrent functions we use channels. Channels must be created before being used, using the chan keyword. Let us create a channel of type string.
