@@ -325,3 +325,23 @@ We declare structures using the type and struct keyword. Individual elements of 
 ###Methods
 
 Assume, we want to know what the dog/cow says, we can define a method on the given structure to perform a specific task, in our case to speak.
+```
+func (d dog) speak() string {
+	return "Woof"
+}
+
+func (c cow) speak() string {
+	return "Moo"
+}
+```
+
+With this you can now use:
+
+```
+fmt.Println(dog.speak())
+fmt.Println(cow.speak())
+
+Output :
+Woof
+Moo
+```
