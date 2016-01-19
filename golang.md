@@ -157,3 +157,8 @@ switch i {
 	default : fmt.Println("Unknown Number")
 }
 ```
+
+###ARRAYS, SLICES AND MAPS
+###Arrays
+
+The type [n]T is an array of size n of type T.
