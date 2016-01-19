@@ -345,3 +345,9 @@ Output :
 Woof
 Moo
 ```
+
+Here, the function speak takes a dog and cow types respectively and responds with a string based on the type.
+
+###Interfaces
+
+Interfaces are basically a collection of methods. Lets define an interface on the function speak.
