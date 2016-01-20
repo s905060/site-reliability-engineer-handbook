@@ -171,3 +171,10 @@ class FileCatNoEmpty(FileCat):
         nonempty_lines = [l for l in lines if l != '\n']
         return nonempty_lines
 ```
+
+When you use the FileCatNoEmpty object you get the result of the FileCat object with the empty lines stripped.
+
+As you can see while in the first example the original implementation has been called as the last thing, in the second one it is called before everything else. There is therefore no fixed position for the call of the original method, and it depends on what you want to do.
+
+###Always call super()?
+Shall we always call the original method implementation? In theory a well designed API should make it always possible but we know that boundary cases exist: the original method may have side effect that you want to avoid and sometimes the API cannot be refactored to avoid them. In those cases you may prefer to skip the call to the original implementation of the method; Python does not make it mandatory, so feel free to walk that path if you think the situation requires it. Be sure to know what you are doing, however, and document why you are completely overwriting the method.
