@@ -6,3 +6,19 @@ The vi editor can be just a little difficult to get started with, so I thought I
 
 ###vi/vim delete commands - reference
 A lot of times all people need is a quick reference, so I’ll start with a quick reference of vi/vim delete commands:
+
+```
+x   - delete current character
+dw  - delete current word
+dd  - delete current line
+5dd - delete five lines
+
+d$  - delete to end of line
+d0  - delete to beginning of line
+
+:1,.d
+delete to beginning of file
+
+:.,$d
+delete to end of file
+```
