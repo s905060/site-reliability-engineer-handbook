@@ -73,3 +73,15 @@ This shows that the Child class does not actually contain the get_value() method
 
 ###Method overriding in action
 In Python method overriding occours simply defining in the child class a method with the same name of a method in the parent class. When you define a method in the object you make this latter able to satisfy that method call, so the implementations of its ancestors do not come in play.
+```
+class Parent(object):
+    def __init__(self):
+        self.value = 5
+
+    def get_value(self):
+        return self.value
+
+class Child(Parent):
+    def get_value(self):
+        return self.value + 1
+```
