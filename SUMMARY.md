@@ -405,5 +405,5 @@
        * [Githug – What is it?](githug__what_is_it.md)
        * [Squashing commits in a git feature branch into a single commit in master](squashing_commits_in_a_git_feature_branch_into_a_s.md)
    * [SVN](svn.md)
-* Editor
+* [Editor](editor.md)
 
