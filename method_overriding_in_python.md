@@ -140,3 +140,17 @@ class TimestampLogger(Logger):
                                       msg=message)
         super(TimestampLogger, self).log(message)
 ```
+
+The TimestampLogger object adds some information to the message string before calling the original implementation of its log() method.
+```
+>>> l = Logger()
+>>> l.log('hi!')
+hi!
+>>>
+>>> t = TimestampLogger()
+>>> t.log('hi!')
+2014-05-19T13:18:53.402123 hi!
+>>> 
+```
+
+###An example of post-filtering
