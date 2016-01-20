@@ -108,3 +108,21 @@ dict_proxy({'__module__': '__main__',
             'get_value': <function get_value at 0xb69a65a4>,
             '__doc__': None})
 ```
+
+since now the Child class actually contains a get_value() method with a different implementation (the id of the two functions are different).
+
+This is of uttermost importance in Python. Inheritance delegation occours automatically, but if a method is overridden the implementation of the ancestors is not considered at all. So, if you want to run the implementation of one or more of the ancestors of your class, you have to call them explicitly.
+
+Why should you want to call the implementation of objects that are deeper in the class hierarchy?
+
+You may want to call it because many times you override a method to enhance its nature, that is to improve the "quality" of the result, and to improve something you need to first access it. So, by calling the original implementation, you get the result you later want to improve.
+
+There is however a well defined reason why you must always call the original implementation. This reason may be called "hidden side effects".
+
+When you inherit from a class, you are actually inheriting a whole class hierarchy which internal structure is (or shall be considered) unknown. This means that any method call may hide a complex set of operations on the whole class hierarchy, and some of them may be vital for the library or the framework you are using.
+
+Python makes you call the original implementation of an overridden method explicitly (not differently from other object-oriented languages). This surely follows the Python idea that "Explicit is better than implicit" (The Zen of Python), but this advice is not just a matter of taste or some sort of programming mannerism.
+
+When you override you have to think if you want to filter the arguments for the original implementation, if you want to filter its results, or both. You typically want to filter arguments (pre-filter) if you want to change the data that the parent implementation shall process while you filter the results (post-filter) if you want to add an additional processing layer. Obviously both things may be done together in the same method. Since you have to explicitly call the parent implementation you are free to do it where you want in the code of the new method: the decision about the type of filtering you want to achieve affects the position of the call.
+
+###An example of pre-filtering
