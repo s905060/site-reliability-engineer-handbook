@@ -117,7 +117,7 @@
        * [Python simple techniques and common reference](python_simple_techniques_and_common_reference.md)
        * [python reference fragments](python_reference_fragments.md)
        * [getpass](getpass.md)
-       * Method overriding in Python
+       * [Method overriding in Python](method_overriding_in_python.md)
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
