@@ -126,3 +126,17 @@ Python makes you call the original implementation of an overridden method explic
 When you override you have to think if you want to filter the arguments for the original implementation, if you want to filter its results, or both. You typically want to filter arguments (pre-filter) if you want to change the data that the parent implementation shall process while you filter the results (post-filter) if you want to add an additional processing layer. Obviously both things may be done together in the same method. Since you have to explicitly call the parent implementation you are free to do it where you want in the code of the new method: the decision about the type of filtering you want to achieve affects the position of the call.
 
 ###An example of pre-filtering
+
+```
+import datetime
+
+class Logger(object):
+    def log(self, message):
+        print message
+
+class TimestampLogger(Logger):
+    def log(self, message):
+        message = "{ts} {msg}".format(ts=datetime.datetime.now().isoformat(),
+                                      msg=message)
+        super(TimestampLogger, self).log(message)
+```
