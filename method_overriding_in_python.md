@@ -28,3 +28,43 @@ As you can see the Child class is empty, but since it inherits from Parent Pytho
 5
 ```
 Indeed get_value() is not exactly part of the Child class as if it were defined in it
+
+```
+>>> p = Parent()
+>>> c = Child()
+>>>
+>>> dir(p)
+['__class__', '__delattr__', '__dict__', '__doc__', '__format__',
+ '__getattribute__', '__hash__', '__init__', '__module__', '__new__',
+ '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+ '__str__', '__subclasshook__', '__weakref__', 'get_value', 'value']
+>>>
+>>> dir(c)
+['__class__', '__delattr__', '__dict__', '__doc__', '__format__',
+ '__getattribute__', '__hash__', '__init__', '__module__', '__new__',
+ '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+ '__str__', '__subclasshook__', '__weakref__', 'get_value', 'value']
+>>>
+>>> dir(Parent)
+['__class__', '__delattr__', '__dict__', '__doc__', '__format__',
+ '__getattribute__', '__hash__', '__init__', '__module__', '__new__',
+ '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+ '__str__', '__subclasshook__', '__weakref__', 'get_value']
+>>>
+>>> dir(Child)
+['__class__', '__delattr__', '__dict__', '__doc__', '__format__',
+ '__getattribute__', '__hash__', '__init__', '__module__', '__new__',
+ '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+ '__str__', '__subclasshook__', '__weakref__', 'get_value']
+>>>
+>>> Parent.__dict__
+dict_proxy({'__module__': '__main__',
+            'get_value': <function get_value at 0xb69a656c>,
+            '__dict__': <attribute '__dict__' of 'Parent' objects>,
+            '__weakref__': <attribute '__weakref__' of 'Parent' objects>,
+            '__doc__': None,
+            '__init__': <function __init__ at 0xb69a6534>})
+>>>
+>>> Child.__dict__
+dict_proxy({'__module__': '__main__', '__doc__': None})
+```
