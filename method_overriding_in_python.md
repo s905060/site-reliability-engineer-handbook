@@ -180,6 +180,6 @@ As you can see while in the first example the original implementation has been c
 Shall we always call the original method implementation? In theory a well designed API should make it always possible but we know that boundary cases exist: the original method may have side effect that you want to avoid and sometimes the API cannot be refactored to avoid them. In those cases you may prefer to skip the call to the original implementation of the method; Python does not make it mandatory, so feel free to walk that path if you think the situation requires it. Be sure to know what you are doing, however, and document why you are completely overwriting the method.
 
 ###Summary
-Call the original implementation of a method you are overriding whenever possible. This meakes the underlying API work as expected. When in need of skipping the call be sure to document the reasons.
-Always use super(cls, self) for Python 2.x or super() for Python 3.x to call the original implementation of a method. This respects the resolution order in case of multiple inheritance and, for Python 3.x, protects from changes in the class hierarchy.
-If you call to the original implementation of a method do it as soon as you have all the data you need to run it.
+* Call the original implementation of a method you are overriding whenever possible. This meakes the underlying API work as expected. When in need of skipping the call be sure to document the reasons.
+* Always use super(cls, self) for Python 2.x or super() for Python 3.x to call the original implementation of a method. This respects the resolution order in case of multiple inheritance and, for Python 3.x, protects from changes in the class hierarchy.
+* If you call to the original implementation of a method do it as soon as you have all the data you need to run it.
