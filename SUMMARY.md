@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Editor
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [Filesystems](filesystems.md)
@@ -349,6 +348,7 @@
        * [X. Dev/prod parity](x_devprod_parity.md)
        * [XI. Logs](xi_logs.md)
        * [XII. Admin processes](xii_admin_processes.md)
+* Editor
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
