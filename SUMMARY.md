@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Editor
 * [Operating System](operating_system.md)
    * [Linux Boot Process](linux_boot_process.md)
    * [Filesystems](filesystems.md)
