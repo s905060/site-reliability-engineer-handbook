@@ -20,3 +20,11 @@ class Parent(object):
 class Child(Parent):
     pass
 ```
+
+As you can see the Child class is empty, but since it inherits from Parent Python takes charge of routing all method calls. So you may use the get_value() method of Child objects and exerything works as expected.
+```
+>>> c = Child()
+>>> c.get_value()
+5
+```
+Indeed get_value() is not exactly part of the Child class as if it were defined in it
