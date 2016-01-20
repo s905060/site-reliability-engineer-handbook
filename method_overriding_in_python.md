@@ -8,3 +8,15 @@ Overriding is a very important part of OOP since it is the feature that makes in
 As for most OOP languages, in Python inheritance works through implicit delegation: when the object cannot satisfy a request, it first tries to forward the request to its ancestors, following the specific language rules in the case of multiple inheritance.
 
 An exemple:
+
+```
+class Parent(object):
+    def __init__(self):
+        self.value = 5
+
+    def get_value(self):
+        return self.value
+
+class Child(Parent):
+    pass
+```
