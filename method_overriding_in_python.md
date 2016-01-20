@@ -85,3 +85,11 @@ class Child(Parent):
     def get_value(self):
         return self.value + 1
 ```
+
+Now Child objects behave differently
+```
+>>> c = Child()
+>>> c.get_value()
+6
+```
+and taking a look inside the class we spot a difference
