@@ -68,3 +68,8 @@ dict_proxy({'__module__': '__main__',
 >>> Child.__dict__
 dict_proxy({'__module__': '__main__', '__doc__': None})
 ```
+
+This shows that the Child class does not actually contain the get_value() method and that a mechanism of automatical delegation is active under the hood. For an insight on this mechanism check this post.
+
+###Method overriding in action
+In Python method overriding occours simply defining in the child class a method with the same name of a method in the parent class. When you define a method in the object you make this latter able to satisfy that method call, so the implementations of its ancestors do not come in play.
