@@ -11,3 +11,21 @@ To squash all commits in the feature branch into one, do
 `git rebase -i master`
 
 Your text editor will open with a file like this:
+```
+pick 3394ba1 commit msg 1
+pick a4e4de9 commit msg 2
+pick 2c57042 commit msg 3
+pick 24386f9 commit msg 4
+pick b86e92c commit msg 5
+pick 08728d8 commit msg 6
+```
+
+Change it to look like
+```
+pick 3394ba1 commit msg 1
+squash a4e4de9 commit msg 2
+squash 2c57042 commit msg 3
+squash 24386f9 commit msg 4
+squash b86e92c commit msg 5
+squash 08728d8 commit msg 6
+```
