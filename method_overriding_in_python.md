@@ -93,3 +93,18 @@ Now Child objects behave differently
 6
 ```
 and taking a look inside the class we spot a difference
+
+```
+>>> Parent.__dict__
+dict_proxy({'__module__': '__main__',
+            'get_value': <function get_value at 0xb69a656c>,
+            '__dict__': <attribute '__dict__' of 'Parent' objects>,
+            '__weakref__': <attribute '__weakref__' of 'Parent' objects>,
+            '__doc__': None,
+            '__init__': <function __init__ at 0xb69a6534>})
+>>>
+>>> Child.__dict__
+dict_proxy({'__module__': '__main__',
+            'get_value': <function get_value at 0xb69a65a4>,
+            '__doc__': None})
+```
