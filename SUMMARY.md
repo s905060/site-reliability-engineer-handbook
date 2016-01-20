@@ -403,6 +403,6 @@
        * [You have an empty repository](you_have_an_empty_repository.md)
        * [Git study notes](git_study_notes.md)
        * [Githug – What is it?](githug__what_is_it.md)
-       * Squashing commits in a git feature branch into a single commit in master
+       * [Squashing commits in a git feature branch into a single commit in master](squashing_commits_in_a_git_feature_branch_into_a_s.md)
    * [SVN](svn.md)
 
