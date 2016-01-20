@@ -348,7 +348,6 @@
        * [X. Dev/prod parity](x_devprod_parity.md)
        * [XI. Logs](xi_logs.md)
        * [XII. Admin processes](xii_admin_processes.md)
-* Editor
 * [Data Structure](data_structure.md)
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
@@ -399,6 +398,7 @@
 * [Networking Devices](networking_devices.md)
    * [Cisco](cisco.md)
    * [Juniper](juniper.md)
+* Editor
 * [Version Control](version_control.md)
    * [Git](git.md)
        * [You have an empty repository](you_have_an_empty_repository.md)
