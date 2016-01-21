@@ -116,3 +116,23 @@ RinRao 2122 38 37 => D
 Edwin 2537 87 97 95 => A
 Dayan 2415 30 47 => D
 ```
+
+![](Screen Shot 2016-01-20 at 7.46.29 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.46.38 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.46.46 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.46.55 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.47.04 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.47.15 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.47.27 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.47.38 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.47.49 PM.png)
+
+![](Screen Shot 2016-01-20 at 7.47.57 PM.png)
