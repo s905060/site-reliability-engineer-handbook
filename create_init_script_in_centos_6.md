@@ -199,4 +199,19 @@ Command start-domain executed successfully.
 Shutting down glassfish4: Waiting for the domain to stop ......
 Command stop-domain executed successfully.
                                                            [  OK  ]
-```                                                           
+```
+
+####Use the restart operand
+```
+[root@server ~]# service glassfish4 restart
+Shutting down glassfish4: Waiting for the domain to stop ..
+Command stop-domain executed successfully.
+                                                           [  OK  ]
+Starting glassfish4: Waiting for domain1 to start ......................
+Successfully started the domain : domain1
+domain  Location: /home/gfish/glassfish4/glassfish/domains/domain1
+Log File: /home/gfish/glassfish4/glassfish/domains/domain1/logs/server.log
+Admin Port: 4848
+Command start-domain executed successfully.
+                                                           [  OK  ]
+```
