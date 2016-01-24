@@ -192,3 +192,11 @@ Admin Port: 4848
 Command start-domain executed successfully.
                                                            [  OK  ]
 ```
+
+####Use the stop operand
+```
+[root@server ~]# service glassfish4 stop
+Shutting down glassfish4: Waiting for the domain to stop ......
+Command stop-domain executed successfully.
+                                                           [  OK  ]
+```                                                           
