@@ -182,6 +182,7 @@ glassfish4      0:off   1:off   2:off   3:on    4:on    5:on    6:off
 
 ####Use the start operand
 
+```
 [root@server ~]# service glassfish4 start
 Starting glassfish4: Waiting for domain1 to start .........................
 Successfully started the domain : domain1
@@ -190,3 +191,4 @@ Log File: /home/gfish/glassfish4/glassfish/domains/domain1/logs/server.log
 Admin Port: 4848
 Command start-domain executed successfully.
                                                            [  OK  ]
+```
