@@ -305,7 +305,7 @@
    * [Howto Install and Configure Cobbler on Centos 6](howto_install_and_configure_cobbler_on_centos_6.md)
    * [How To Use GPG to Encrypt and Sign Messages on an Ubuntu 12.04 VPS](how_to_use_gpg_to_encrypt_and_sign_messages_on_an_.md)
    * [HowTo: Debug Crashed Linux Application Core Files Like A Pro](howto_debug_crashed_linux_application_core_files_l.md)
-   * Create init script in CentOS 6
+   * [Create init script in CentOS 6](create_init_script_in_centos_6.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
