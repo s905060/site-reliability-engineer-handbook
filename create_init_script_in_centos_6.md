@@ -16,6 +16,6 @@ To help understand the scripts, I had to start learning shell scripting.  A very
 
 ####The skeleton script
 
-There is a file inside CentOS that explains a bit about how to write init scripts.  The path to the file is /usr/share/doc/initscripts-*/sysvinitfiles.  You can open this file in a text editor, and have a read.
+There is a file inside CentOS that explains a bit about how to write init scripts.  The path to the file is `/usr/share/doc/initscripts-*/sysvinitfiles`.  You can open this file in a text editor, and have a read.
 
 Included in this file is a base outline of an init script that we can base our script on.  The following is the content of the outline:
