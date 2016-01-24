@@ -168,6 +168,6 @@ exit $RETVAL
 
 ####Add the script to chkconfig
 
-The script is placed inside the /etc/init.d/ directory, and given the name glassfish4.
+The script is placed inside the `/etc/init.d/` directory, and given the name glassfish4.
 
 Then, the script is added to the list using the chkconfig command.
