@@ -215,3 +215,15 @@ Admin Port: 4848
 Command start-domain executed successfully.
                                                            [  OK  ]
 ```
+
+####Use the status operand
+```
+[root@server ~]# service glassfish4 status
+Checking glassfish4 status: domain1 running
+```
+
+####Use any other operands
+```
+[root@server ~]# service glassfish4 lalala
+Usage: glassfish4 {start|stop|status|restart}
+```
