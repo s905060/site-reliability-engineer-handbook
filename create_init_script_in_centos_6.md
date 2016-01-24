@@ -175,3 +175,7 @@ Then, the script is added to the list using the chkconfig command.
 ```
 [root@server ~]# chkconfig --add glassfish4
 ```
+```
+[root@server ~]# chkconfig --list glassfish4
+glassfish4      0:off   1:off   2:off   3:on    4:on    5:on    6:off
+```
