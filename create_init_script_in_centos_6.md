@@ -90,3 +90,22 @@ case "$1" in
 esac
 exit $?
 ```
+
+####Create init script by modifying the skeleton script
+
+Using the skeleton script as a base, and comparing it with other established init scripts, I have come up with the following for GlassFish 4:
+
+#!/bin/bash
+#
+# glassfish4    GlassFish Server Open Source Edition 4.0
+#
+# chkconfig: 345 70 30
+# description: GlassFish Server is a Java EE Application Server Platform
+# processname: glassfish4
+
+# Source function library.
+. /etc/init.d/functions
+
+RETVAL=0
+prog="glassfish4"
+LOCKFILE=/var/lock/subsys/$prog
