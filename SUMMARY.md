@@ -257,7 +257,7 @@
        * [Xen virtual machines installed on Ubuntu](xen_virtual_machines_installed_on_ubuntu.md)
        * [Xen Common notes](xen_common_notes.md)
    * [KVM](kvm.md)
-* [Trouble Shooting](trouble_shooting.md)
+* [How-To](how-to.md)
    * [CentOS:  nf_conntrack: table full, dropping packet](centos_nf_conntrack__table_full,_dropping_packet.md)
    * [How To Fix “Error: database disk image is malformed” On CentOS / Fedora](how_to_fix_error_database_disk_image_is_malformed_on_centos__fedora.md)
    * [Finding the PID of the process using a specific port?](finding_the_pid_of_the_process_using_a_specific_port.md)
