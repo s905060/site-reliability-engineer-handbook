@@ -38,3 +38,10 @@ OR
 ```
 
 To verify new changes, type:
+```
+# e2label /dev/sda1 
+Webserver
+```
+
+**Mount file system by label at Linux server boot time**
+The /dev/sda1 partition can be mounted by label at server boot time at /wwwdata location. Edit the /etc/fstab file, enter:
