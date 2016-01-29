@@ -24,3 +24,10 @@ e2label /dev/sda5
 ```
 
 Sample outputs:
+![](view-the-label-on-linux-command.jpg)
+
+**Modify partition labels / Change disk name**
+To add or change the label of partition /dev/sda1 to "Webserver", enter:
+```
+$ sudo e2label /dev/sda1 Webserver
+```
