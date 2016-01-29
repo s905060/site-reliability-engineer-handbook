@@ -31,3 +31,10 @@ To add or change the label of partition /dev/sda1 to "Webserver", enter:
 ```
 $ sudo e2label /dev/sda1 Webserver
 ```
+
+OR
+```
+# e2label /dev/sda1 Webserver
+```
+
+To verify new changes, type:
