@@ -46,3 +46,12 @@ Webserver
 **Mount file system by label at Linux server boot time**
 
 The /dev/sda1 partition can be mounted by label at server boot time at /wwwdata location. Edit the /etc/fstab file, enter:
+```
+$ sudo vi /etc/fstab
+```
+
+Set or update it as follows:
+
+```
+LABEL=Webserver /wwwdata              ext4    defaults        1 2
+```
