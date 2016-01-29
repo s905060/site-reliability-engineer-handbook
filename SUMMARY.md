@@ -322,6 +322,7 @@
    * [MySQL](mysql.md)
        * [MySQL Best Practices](mysql_best_practices.md)
        * [SQL Views](sql_views.md)
+       * The \G modifier in the MySQL command line client
    * [Postgresql](postgresql.md)
        * [Postgresql Import Export Table](postgresql_import_export_table.md)
        * [Practical PostgreSQL](practical_postgresql.md)
