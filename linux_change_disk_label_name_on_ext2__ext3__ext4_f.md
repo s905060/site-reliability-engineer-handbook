@@ -55,3 +55,9 @@ Set or update it as follows:
 ```
 LABEL=Webserver /wwwdata              ext4    defaults        1 2
 ```
+
+Save and close the file. You can also use the mount command as follows:
+
+```
+mount -L label_name_here /path/to/mount/point
+```
