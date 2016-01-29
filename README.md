@@ -55,4 +55,4 @@ This is the Unix philosophy:
 August, 2015
 
 ---
-###### ** All contents/examples are copied from internet. **
+## ** All contents/examples are copied from internet. **
