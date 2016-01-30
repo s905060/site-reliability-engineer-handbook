@@ -36,3 +36,10 @@ In actuality, fsck is simply a front-end for the various filesystem checkers (`f
 
 Read filesystem-specific checker manual pages for further details. For example, to learn more about ext3-specific `fsck` checking, run:
 `man fsck.ext3`
+
+Dropping Into Single-User Mode
+These instructions should help you bring your Linux system into single-user mode and unmount any filesystems you'd like to check with fsck.
+First, initiate runlevel 1 (single-user mode) with the init command:
+```
+sudo init 1
+```
