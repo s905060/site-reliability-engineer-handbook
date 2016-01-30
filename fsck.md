@@ -43,3 +43,16 @@ First, initiate runlevel 1 (single-user mode) with the init command:
 ```
 sudo init 1
 ```
+
+Now unmount the filesystem using umount. For instance, if /home is mounted on /dev/sda2, you could run:
+
+```
+umount /home
+```
+
+...or:
+```
+umount /dev/sda2
+```
+
+Make sure to run umount for any filesystem you want to check with fsck.
