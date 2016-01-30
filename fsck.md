@@ -103,3 +103,19 @@ View all filesystems that can be checked with fsck. Filesystems will appear as e
 fsck.cramfs  fsck.ext3  fsck.ext4dev  fsck.minix  fsck.nfs      fsck.reiserfs  fsck.xfs
 fsck.ext2    fsck.ext4  fsck.jfs      fsck.msdos  fsck.reiser4  fsck.vfat
 ```
+
+```
+fsck -n /dev/sda2
+```
+
+Check /dev/sda2 for errors, but do not attempt to repair them; instead, print any errors to standard output.
+```
+fsck -f /dev/sda2
+```
+
+Normally, fsck will skip parts of the filesystem marked as "clean" — meaning all pending writes were successfully made. The -f ("force") option specifies that fsck should check parts of the filesystem even if they are not "dirty". The result is a less efficient, but a more thorough check.
+```
+fsck -t ext2 /dev/fd0
+```
+
+This command will check the ext2 filesystem on the floppy diskette device /dev/fd0.
