@@ -21,11 +21,11 @@ If no filesystems are specified on the command line, and the `-A` option is not 
 
 The exit code returned by `fsck` is a unique number representing the sum of the following condition values:
 
-**0** - No errors
-**1** - Filesystem errors corrected
-**2** - System should be rebooted
-**4** - Filesystem errors left uncorrected
-**8** - Operational error
-**16** - Usage or syntax error
-**32** - Fsck canceled by user request
-**128** - Shared-library error
+* **0** - No errors
+* **1** - Filesystem errors corrected
+* **2** - System should be rebooted
+* **4** - Filesystem errors left uncorrected
+* **8** - Operational error
+* **16** - Usage or syntax error
+* **32** - Fsck canceled by user request
+* **128** - Shared-library error
