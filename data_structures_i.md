@@ -104,12 +104,15 @@ class Holder<T>
 ```
 
 The <T> bit means our Holder is a generic class, specialized on some type that will be called T. Then, when someone comes along to use our Holder, they replace the T with the type they want, like so:
-
+```
 Holder<int> holder = new Holder<int>();
 holder.HeldValue = 10;
-
+```
+```
 Holder<string> stringHolder = new Holder<string>();
 stringHolder.HeldValue = "Camelus Maximus";
+```
+
 Now we’ve got the best of both worlds: code reuse and type safety. Most of the data structures we’re going to examine will be generics, so it’s important to be comfortable working with them.
 
 Conclusion
