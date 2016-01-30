@@ -94,3 +94,12 @@ UUID=afceabb6-a3f4-41c2-9ae6-0393d85c7c70 /home           ext4    defaults      
 UUID=c6ca8b8f-0b46-4c06-a934-a9dd3525faa7 none            swap    sw              0       0
 #/dev/sdb1       /media/usb0     auto    rw,user,noauto  0       0
 ```
+```
+ls /sbin/fsck.*
+```
+
+View all filesystems that can be checked with fsck. Filesystems will appear as extensions to the fsck.* files; for example:
+```
+fsck.cramfs  fsck.ext3  fsck.ext4dev  fsck.minix  fsck.nfs      fsck.reiserfs  fsck.xfs
+fsck.ext2    fsck.ext4  fsck.jfs      fsck.msdos  fsck.reiser4  fsck.vfat
+```
