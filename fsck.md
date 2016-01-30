@@ -11,3 +11,9 @@ The fsck command itself interacts with a matching filesystem-specific fsck comma
 * Check for errors, and make no attempt to repair them, but display the errors on standard output.
 
 While normally run at boot time, fsck can be run manually on unmounted filesystems by a superuser.
+
+`fsck` is used to check, and optionally repair, one or more filesystems.
+filesys can be a device name (e.g. `/dev/hdc1`, `/dev/sdb2`), a mount point (e.g. `/`, `/usr`, `/home`), or an `ext2` label or UUID specifier (for example "`UUID=8868abf6-88c5-4a83-98b8-bfc24057f7bd`" or "`LABEL=root`").
+Normally, fsck will try to handle filesystems on different physical disk drives in parallel to reduce the total amount of time needed to check all of them.
+If no filesystems are specified on the command line, and the -A option is not specified, fsck will default to checking filesystems in /etc/fstab serially. This is equivalent to the combination of the -A and -s options.
+The exit code returned by fsck is a unique number representing the sum of the following condition values:
