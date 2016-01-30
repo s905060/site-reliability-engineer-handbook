@@ -256,7 +256,7 @@
        * [Time zone Docker vessel problems](time_zone_docker_vessel_problems.md)
        * [Distinction between Docker's Save and Export](distinction_between_dockers_save_and_export.md)
        * [Simple Docker](simple_docker.md)
-       * Docker Cheat Sheet
+       * [Docker Cheat Sheet](docker_cheat_sheet.md)
    * [Xen](xen.md)
        * [Xen virtual machines installed on Ubuntu](xen_virtual_machines_installed_on_ubuntu.md)
        * [Xen Common notes](xen_common_notes.md)
