@@ -76,3 +76,21 @@ Check all configured filesystems. fsck will process the file /etc/fstab and chec
 ```
 cat /etc/fstab
 ```
+
+View all configured filesystems. Output will resemble the following:
+```
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab man page.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda5 during installation
+UUID=c3a6839b-00f1-4cf4-8b00-e61fbcdba6c0 /               ext4    errors=remount-ro 0       1
+# /home was on /dev/sda7 during installation
+UUID=afceabb6-a3f4-41c2-9ae6-0393d85c7c70 /home           ext4    defaults        0       2
+# swap was on /dev/sda6 during installation
+UUID=c6ca8b8f-0b46-4c06-a934-a9dd3525faa7 none            swap    sw              0       0
+#/dev/sdb1       /media/usb0     auto    rw,user,noauto  0       0
+```
