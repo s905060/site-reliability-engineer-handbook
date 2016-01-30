@@ -72,3 +72,7 @@ fsck -A
 ```
 
 Check all configured filesystems. fsck will process the file /etc/fstab and check all file systems listed there. Systems will be checked in order of their <pass> value, as listed in the fstab file. Systems with a pass value of 0 will be skipped; the system with a pass value of 1 will be listed first, and remaining systems will be checked in ascending order of their pass value.
+
+```
+cat /etc/fstab
+```
