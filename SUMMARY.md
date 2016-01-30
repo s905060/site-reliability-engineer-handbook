@@ -125,6 +125,7 @@
        * [Go Time Formatting / Parsing](go_time_formatting__parsing.md)
        * [Go Control structures - Go for loop, break, continue, range](go_control_structures_-_go_for_loop,_break,_contin.md)
        * [Golang-Regex-Tutorial](golang-regex-tutorial.md)
+       * Go Cheat Sheet
    * [Bash](bash.md)
        * [Regex](regex.md)
            * [Validate an ip address](validate_an_ip_address.md)
