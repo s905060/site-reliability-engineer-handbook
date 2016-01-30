@@ -9,3 +9,5 @@ The fsck command itself interacts with a matching filesystem-specific fsck comma
 * Check for errors, and prompt the user interactively to decide how to resolve individual problems;
 * Check for errors, and attempt to fix any errors automatically; or,
 * Check for errors, and make no attempt to repair them, but display the errors on standard output.
+
+While normally run at boot time, fsck can be run manually on unmounted filesystems by a superuser.
