@@ -56,3 +56,19 @@ umount /dev/sda2
 ```
 
 Make sure to run umount for any filesystem you want to check with fsck.
+
+Checking Filesystems
+```
+fsck /dev/sda2
+```
+This command will attempt to check /dev/sda2, and report any errors it finds.
+```
+fsck -y /dev/sda2
+```
+
+Check /dev/sda2, and attempt to automatically fix any errors found.
+```
+fsck -A
+```
+
+Check all configured filesystems. fsck will process the file /etc/fstab and check all file systems listed there. Systems will be checked in order of their <pass> value, as listed in the fstab file. Systems with a pass value of 0 will be skipped; the system with a pass value of 1 will be listed first, and remaining systems will be checked in ascending order of their pass value.
