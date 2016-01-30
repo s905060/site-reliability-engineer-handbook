@@ -29,3 +29,10 @@ The exit code returned by `fsck` is a unique number representing the sum of the 
 * **16** - Usage or syntax error
 * **32** - Fsck canceled by user request
 * **128** - Shared-library error
+
+The exit code returned when multiple filesystems are checked is the bitwise OR of the exit codes for each filesystem that is checked.
+
+In actuality, fsck is simply a front-end for the various filesystem checkers (`fsck.fstype`) available under Linux. The filesystem-specific checker is searched for in `/sbin` first, then in` /etc/fs` and `/etc`, and finally in the directories listed in the `PATH` environment variable.
+
+Read filesystem-specific checker manual pages for further details. For example, to learn more about ext3-specific `fsck` checking, run:
+`man fsck.ext3`
