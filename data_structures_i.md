@@ -75,7 +75,7 @@ For a tabular view of Big O notation and the pros and cons of each algorithm, se
 
 Generics
 The last thing I need to cover before we can start discussing data structures themselves is a technology called generics. Generics were added to C# in version 2.0, and provide a way to reuse code while still having type safety. For example, let’s say I have a class called a Holder. Its only purpose is to hold on to one piece of data, so that different callers can share data between themselves without needing to know who else they might be sharing with. If I want the Holder to hold integers, it might look like this:
-
+```
 class IntHolder
 {
     private int heldValue;
@@ -85,12 +85,13 @@ class IntHolder
         set { heldValue = value; }
     }
 }
+```
 Now imagine I want a Holder that holds floats, or Booleans, or anything. I have to make a new class for every single kind of thing I might want to hold. This is a pretty trivial class, so it might not be that much code, but it clearly demonstrates the need for a better solution.
 
 Alternatively, the Holder could hold objects, so that one class can hold anything, but this isn’t ideal either. When someone accesses Holder's HeldValue, the first thing they’ll do is cast it to what they expect it to be so they can use it. For example, suppose person A puts an int value into the Holder. Then person B comes along and tries to get at the value in the Holder. The problem is B thinks it’s supposed to be a string, and the minute he tries to cast it that way, things will go downhill fast. Obviously, the type safety that we had with our separate IntHolder and StringHolder structures was quite useful.
 
 C# 2.0 addressed this issue by adding generics, which are extremely powerful and useful. Their syntax is similar to that of C++’s templates (meaning that it’s confusing). Changing our Holder to a generic would make it look like this:
-
+```
 class Holder<T>
 {
     private T heldValue;
@@ -100,6 +101,8 @@ class Holder<T>
         set { heldValue = value; }
     }
 }
+```
+
 The <T> bit means our Holder is a generic class, specialized on some type that will be called T. Then, when someone comes along to use our Holder, they replace the T with the type they want, like so:
 
 Holder<int> holder = new Holder<int>();
