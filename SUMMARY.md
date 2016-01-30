@@ -230,7 +230,7 @@
    * [RKhunter](rkhunter.md)
    * [fping](fping.md)
    * [blkid](blkid.md)
-   * FSCK
+   * [FSCK](fsck.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
