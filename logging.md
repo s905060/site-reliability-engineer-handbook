@@ -38,3 +38,7 @@ $ python logging_file_example.py
 FILE:
 DEBUG:root:This message should go to the log file
 ```
+
+###Rotating Log Files
+
+Running the script repeatedly causes more messages to be appended to the file. To create a new file each time the program runs, pass a filemode argument to basicConfig() with a value of 'w'. Rather than managing the creation of files this way, though, it is simpler to use a RotatingFileHandler:
