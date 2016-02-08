@@ -72,7 +72,7 @@ for filename in logfiles:
 ```
 
 The result should be six separate files, each with part of the log history for the application:
-```
+```python
 $ python logging_rotatingfile_example.py
 
 logging_rotatingfile_example.out
@@ -82,3 +82,7 @@ logging_rotatingfile_example.out.3
 logging_rotatingfile_example.out.4
 logging_rotatingfile_example.out.5
 ```
+
+The most current file is always logging_rotatingfile_example.out, and each time it reaches the size limit it is renamed with the suffix .1. Each of the existing backup files is renamed to increment the suffix (.1 becomes .2, etc.) and the .5 file is erased.
+
+>Note Obviously this example sets the log length much much too small as an extreme example. Set maxBytes to a more appropriate value in a real program.
