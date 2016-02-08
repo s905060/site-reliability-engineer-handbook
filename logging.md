@@ -163,3 +163,12 @@ logger2 = logging.getLogger('package2.module2')
 logger1.warning('This message comes from one module')
 logger2.warning('And this message comes from another module')
 ```
+
+And the output:
+```python
+$ python logging_modules_example.py
+
+WARNING:package1.module1:This message comes from one module
+WARNING:package2.module2:And this message comes from another module
+There are many, many, more options for configuring logging, including different log message formatting options, having messages delivered to multiple destinations, and changing the configuration of a long-running application on the fly using a socket interface. All of these options are covered in depth in the library module documentation.
+```
