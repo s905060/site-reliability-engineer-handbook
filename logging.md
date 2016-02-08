@@ -31,6 +31,7 @@ print body
 ```
 
 After running the script, the log message is written to logging_example.out:
+
 ```python
 $ python logging_file_example.py
 
