@@ -86,3 +86,18 @@ logging_rotatingfile_example.out.5
 The most current file is always logging_rotatingfile_example.out, and each time it reaches the size limit it is renamed with the suffix .1. Each of the existing backup files is renamed to increment the suffix (.1 becomes .2, etc.) and the .5 file is erased.
 
 >Note Obviously this example sets the log length much much too small as an extreme example. Set maxBytes to a more appropriate value in a real program.
+
+###Verbosity Levels
+
+Another useful feature of the logging API is the ability to produce different messages at different log levels. This code to be instrumented with debug messages, for example, while setting the log level down so that those debug messages are not written on a production system.
+
+|Level	|Value
+|--|--
+|CRITICAL|	50
+|ERROR|	40
+|WARNING|	30
+|INFO|	20
+|DEBUG|	10
+|UNSET|	0
+
+The logger, handler, and log message call each specify a level. The log message is only emitted if the handler and logger are configured to emit messages of that level or higher. For example, if a message is CRITICAL, and the logger is set to ERROR, the message is emitted (50 > 40). If a message is a WARNING, and the logger is set to produce only messages set to ERROR, the message is not emitted (30 < 40).
