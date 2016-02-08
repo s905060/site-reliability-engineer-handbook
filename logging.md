@@ -70,3 +70,15 @@ logfiles = glob.glob('%s*' % LOG_FILENAME)
 for filename in logfiles:
     print filename
 ```
+
+The result should be six separate files, each with part of the log history for the application:
+```
+$ python logging_rotatingfile_example.py
+
+logging_rotatingfile_example.out
+logging_rotatingfile_example.out.1
+logging_rotatingfile_example.out.2
+logging_rotatingfile_example.out.3
+logging_rotatingfile_example.out.4
+logging_rotatingfile_example.out.5
+```
