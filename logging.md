@@ -151,3 +151,15 @@ Developers of libraries, rather than applications, should also use logging. For 
 ###Naming Logger Instances
 
 All of the previous log messages all have ‘root’ embedded in them. The logging module supports a hierarchy of loggers with different names. An easy way to tell where a specific log message comes from is to use a separate logger object for each module. Every new logger inherits the configuration of its parent, and log messages sent to a logger include the name of that logger. Optionally, each logger can be configured differently, so that messages from different modules are handled in different ways. Below is an example of how to log from different modules so it is easy to trace the source of the message:
+
+```python
+import logging
+
+logging.basicConfig(level=logging.WARNING)
+
+logger1 = logging.getLogger('package1.module1')
+logger2 = logging.getLogger('package2.module2')
+
+logger1.warning('This message comes from one module')
+logger2.warning('And this message comes from another module')
+```
