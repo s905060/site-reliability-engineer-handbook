@@ -143,3 +143,11 @@ WARNING:root:This is a warning message
 ERROR:root:This is an error message
 CRITICAL:root:This is a critical error message
 ```
+
+###Logging in Libraries
+
+Developers of libraries, rather than applications, should also use logging. For them, there is even less work to do. Simply create a logger instance for each context, using an appropriate name, and then log messages using the stanard levels. As long as a library uses the logging API with consistent naming and level selections, the application can be configured to show or hide messages from the library, as desired.
+
+###Naming Logger Instances
+
+All of the previous log messages all have ‘root’ embedded in them. The logging module supports a hierarchy of loggers with different names. An easy way to tell where a specific log message comes from is to use a separate logger object for each module. Every new logger inherits the configuration of its parent, and log messages sent to a logger include the name of that logger. Optionally, each logger can be configured differently, so that messages from different modules are handled in different ways. Below is an example of how to log from different modules so it is easy to trace the source of the message:
