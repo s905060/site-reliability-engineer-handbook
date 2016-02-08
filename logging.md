@@ -9,3 +9,31 @@ There are two perspectives for examining logging. Application developers set up 
 ###Logging to a File
 
 Most applications are probably going to want to log to a file. Use the basicConfig() function to set up the default handler so that debug messages are written to a file.
+
+```python
+import logging
+
+LOG_FILENAME = 'logging_example.out'
+logging.basicConfig(filename=LOG_FILENAME,
+                    level=logging.DEBUG,
+                    )
+
+logging.debug('This message should go to the log file')
+
+f = open(LOG_FILENAME, 'rt')
+try:
+    body = f.read()
+finally:
+    f.close()
+
+print 'FILE:'
+print body
+```
+
+After running the script, the log message is written to logging_example.out:
+```python
+$ python logging_file_example.py
+
+FILE:
+DEBUG:root:This message should go to the log file
+```
