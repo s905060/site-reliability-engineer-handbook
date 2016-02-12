@@ -121,6 +121,7 @@
        * [Multiple levels of 'collection.defaultdict' in Python](multiple_levels_of_collectiondefaultdict_in_python.md)
        * [String Format](string_format.md)
        * [Logging](logging.md)
+       * Convert Unicode Object to Python Dict
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
