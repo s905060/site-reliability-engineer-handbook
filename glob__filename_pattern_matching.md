@@ -7,3 +7,17 @@ The pattern rules for glob are not regular expressions. Instead, they follow sta
 ###Example Data
 
 The examples below assume the following test files are present in the current working directory:
+```
+$ python glob_maketestdata.py
+
+dir
+dir/file.txt
+dir/file1.txt
+dir/file2.txt
+dir/filea.txt
+dir/fileb.txt
+dir/subdir
+dir/subdir/subfile.txt
+```
+
+Note Use glob_maketestdata.py in the sample code to create these files if you want to run the examples.
