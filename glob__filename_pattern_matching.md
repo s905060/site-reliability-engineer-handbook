@@ -25,10 +25,12 @@ Note Use glob_maketestdata.py in the sample code to create these files if you wa
 ###Wildcards
 
 An asterisk (*) matches zero or more characters in a segment of a name. For example, dir/*.
-
+```
 import glob
 for name in glob.glob('dir/*'):
     print name
+```
+
 The pattern matches every pathname (file or directory) in the directory dir, without recursing further into subdirectories.
 
 $ python glob_asterisk.py
