@@ -122,6 +122,7 @@
        * [String Format](string_format.md)
        * [Logging](logging.md)
        * [Convert Unicode Object to Python Dict](convert_unicode_object_to_python_dict.md)
+       * The dir( ) Function
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
