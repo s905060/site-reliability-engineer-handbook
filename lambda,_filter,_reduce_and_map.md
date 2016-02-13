@@ -89,6 +89,7 @@ If seq = [ s1, s2, s3, ... , sn ], calling reduce(func, seq) works like this:
 The list looks like this now: [ func(func(s1, s2),s3), ... , sn ]
 * Continue like this until just one element is left and return this element as the result of reduce()
 We illustrate this process in the following example:
+
 ```
 >>> reduce(lambda x,y: x+y, [47,11,42,13])
 113
