@@ -21,8 +21,12 @@ The following example of a lambda function returns the sum of its two arguments:
 
 The advantage of the lambda operator can be seen when it is used in combination with the map() function. 
 map() is a function with two arguments:
+```
 r = map(func, seq)
+```
+
 The first argument func is the name of a function and the second a sequence (e.g. a list) seq. map() applies the function func to all the elements of the sequence seq. It returns a new list with the elements changed by func
+```python
 def fahrenheit(T):
     return ((float(9)/5)*T + 32)
 def celsius(T):
@@ -31,6 +35,8 @@ temp = (36.5, 37, 37.5,39)
 
 F = map(fahrenheit, temp)
 C = map(celsius, F)
+```
+
 In the example above we haven't used lambda. By using lambda, we wouldn't have had to define and name the functions fahrenheit() and celsius(). You can see this in the following interactive session:
 >>> Celsius = [39.2, 36.5, 37.3, 37.8]
 >>> Fahrenheit = map(lambda x: (float(9)/5)*x + 32, Celsius)
