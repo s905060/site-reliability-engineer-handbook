@@ -44,7 +44,7 @@ dir/subdir
 ```
 
 To list files in a subdirectory, you must include the subdirectory in the pattern:
-
+```
 import glob
 
 print 'Named explicitly:'
@@ -54,6 +54,8 @@ for name in glob.glob('dir/subdir/*'):
 print 'Named with wildcard:'
 for name in glob.glob('dir/*/*'):
     print '\t', name
+```
+
 The first case above lists the subdirectory name explicitly, while the second case depends on a wildcard to find the directory.
 
 $ python glob_subdir.py
