@@ -125,6 +125,7 @@
        * [The dir( ) Function](the_dir__function.md)
        * [Python dictionary has_key() Method](python_dictionary_haskey__method.md)
        * [glob – Filename pattern matching](glob__filename_pattern_matching.md)
+       * Lambda, filter, reduce and map
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
