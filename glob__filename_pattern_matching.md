@@ -79,10 +79,11 @@ for name in glob.glob('dir/file?.txt'):
 ```
 
 Matches all of the filenames which begin with “file”, have one more character of any type, then end with ”.txt”.
-
+```
 $ python glob_question.py
 
 dir/file1.txt
 dir/file2.txt
 dir/filea.txt
 dir/fileb.txt
+```
