@@ -32,7 +32,7 @@ for name in glob.glob('dir/*'):
 ```
 
 The pattern matches every pathname (file or directory) in the directory dir, without recursing further into subdirectories.
-
+```
 $ python glob_asterisk.py
 
 dir/file.txt
@@ -41,6 +41,8 @@ dir/file2.txt
 dir/filea.txt
 dir/fileb.txt
 dir/subdir
+```
+
 To list files in a subdirectory, you must include the subdirectory in the pattern:
 
 import glob
