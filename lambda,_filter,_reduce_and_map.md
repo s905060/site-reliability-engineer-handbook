@@ -38,6 +38,7 @@ C = map(celsius, F)
 ```
 
 In the example above we haven't used lambda. By using lambda, we wouldn't have had to define and name the functions fahrenheit() and celsius(). You can see this in the following interactive session:
+```python
 >>> Celsius = [39.2, 36.5, 37.3, 37.8]
 >>> Fahrenheit = map(lambda x: (float(9)/5)*x + 32, Celsius)
 >>> print Fahrenheit
@@ -46,6 +47,8 @@ In the example above we haven't used lambda. By using lambda, we wouldn't have h
 >>> print C
 [39.200000000000003, 36.5, 37.300000000000004, 37.799999999999997]
 >>> 
+```
+
 map() can be applied to more than one list. The lists have to have the same length. map() will apply its lambda function to the elements of the argument lists, i.e. it first applies to the elements with the 0th index, then to the elements with the 1st index until the n-th index is reached:
 >>> a = [1,2,3,4]
 >>> b = [17,12,11,10]
