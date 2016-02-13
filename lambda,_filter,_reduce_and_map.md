@@ -94,3 +94,20 @@ We illustrate this process in the following example:
 >>> reduce(lambda x,y: x+y, [47,11,42,13])
 113
 ```
+
+The following diagram shows the intermediate steps of the calculation: 
+
+![](reduce_diagram.png)
+
+###Examples of reduce()
+
+Determining the maximum of a list of numerical values by using reduce:
+```
+>>> f = lambda a,b: a if (a > b) else b
+>>> reduce(f, [47,11,42,102,13])
+102
+>>> 
+Calculating the sum of the numbers from 1 to 100:
+>>> reduce(lambda x, y: x+y, range(1,101))
+5050
+```
