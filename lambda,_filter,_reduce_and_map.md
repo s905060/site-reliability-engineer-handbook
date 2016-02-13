@@ -50,6 +50,7 @@ In the example above we haven't used lambda. By using lambda, we wouldn't have h
 ```
 
 map() can be applied to more than one list. The lists have to have the same length. map() will apply its lambda function to the elements of the argument lists, i.e. it first applies to the elements with the 0th index, then to the elements with the 1st index until the n-th index is reached:
+```
 >>> a = [1,2,3,4]
 >>> b = [17,12,11,10]
 >>> c = [-1,-4,5,9]
@@ -59,4 +60,6 @@ map() can be applied to more than one list. The lists have to have the same leng
 [17, 10, 19, 23]
 >>> map(lambda x,y,z:x+y-z, a,b,c)
 [19, 18, 9, 5]
+```
+
 We can see in the example above that the parameter x gets its values from the list a, while y gets its values from b and z from list c.
