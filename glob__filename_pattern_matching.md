@@ -7,7 +7,7 @@ The pattern rules for glob are not regular expressions. Instead, they follow sta
 ###Example Data
 
 The examples below assume the following test files are present in the current working directory:
-```
+```python
 $ python glob_maketestdata.py
 
 dir
@@ -25,14 +25,14 @@ Note Use glob_maketestdata.py in the sample code to create these files if you wa
 ###Wildcards
 
 An asterisk (*) matches zero or more characters in a segment of a name. For example, dir/*.
-```
+```python
 import glob
 for name in glob.glob('dir/*'):
     print name
 ```
 
 The pattern matches every pathname (file or directory) in the directory dir, without recursing further into subdirectories.
-```
+```python
 $ python glob_asterisk.py
 
 dir/file.txt
@@ -44,7 +44,7 @@ dir/subdir
 ```
 
 To list files in a subdirectory, you must include the subdirectory in the pattern:
-```
+```python
 import glob
 
 print 'Named explicitly:'
@@ -57,7 +57,7 @@ for name in glob.glob('dir/*/*'):
 ```
 
 The first case above lists the subdirectory name explicitly, while the second case depends on a wildcard to find the directory.
-```
+```python
 $ python glob_subdir.py
 
 Named explicitly:
@@ -71,7 +71,7 @@ The results, in this case, are the same. If there was another subdirectory, the 
 ###Single Character Wildcard
 
 The other wildcard character supported is the question mark (?). It matches any single character in that position in the name. For example,
-```
+```python
 import glob
 
 for name in glob.glob('dir/file?.txt'):
@@ -79,7 +79,7 @@ for name in glob.glob('dir/file?.txt'):
 ```
 
 Matches all of the filenames which begin with “file”, have one more character of any type, then end with ”.txt”.
-```
+```python
 $ python glob_question.py
 
 dir/file1.txt
@@ -98,7 +98,7 @@ for name in glob.glob('dir/*[0-9].*'):
 ```
 
 The character range [0-9] matches any single digit. The range is ordered based on the character code for each letter/digit, and the dash indicates an unbroken range of sequential characters. The same range value could be written [0123456789].
-```
+```python
 $ python glob_charrange.py
 
 dir/file1.txt
