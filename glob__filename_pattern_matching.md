@@ -91,7 +91,7 @@ dir/fileb.txt
 ###Character Ranges
 
 When you need to match a specific character, use a character range instead of a question mark. For example, to find all of the files which have a digit in the name before the extension:
-```
+```python
 import glob
 for name in glob.glob('dir/*[0-9].*'):
     print name
