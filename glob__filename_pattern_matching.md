@@ -57,12 +57,14 @@ for name in glob.glob('dir/*/*'):
 ```
 
 The first case above lists the subdirectory name explicitly, while the second case depends on a wildcard to find the directory.
-
+```
 $ python glob_subdir.py
 
 Named explicitly:
         dir/subdir/subfile.txt
 Named with wildcard:
         dir/subdir/subfile.txt
+```
+
 The results, in this case, are the same. If there was another subdirectory, the wildcard would match both subdirectories and include the filenames from both.
 
