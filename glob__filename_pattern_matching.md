@@ -68,3 +68,19 @@ Named with wildcard:
 
 The results, in this case, are the same. If there was another subdirectory, the wildcard would match both subdirectories and include the filenames from both.
 
+###Single Character Wildcard
+
+The other wildcard character supported is the question mark (?). It matches any single character in that position in the name. For example,
+
+import glob
+
+for name in glob.glob('dir/file?.txt'):
+    print name
+Matches all of the filenames which begin with “file”, have one more character of any type, then end with ”.txt”.
+
+$ python glob_question.py
+
+dir/file1.txt
+dir/file2.txt
+dir/filea.txt
+dir/fileb.txt
