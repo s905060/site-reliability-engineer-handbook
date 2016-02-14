@@ -95,6 +95,7 @@ Test passed.
 
 ####Reuse testing class objects
 When testing class, you want to use the same object multiple times throughout the method testing. In this case, you can use extra globs dictionary. 
+
 ```python
 """
 This is the "iniFileGenerator" module.
