@@ -36,3 +36,54 @@ ok
 2 passed and 0 failed.
 Test passed.
 ```
+
+You can class test with doctest. One issue to consider is to create object to test the method. This is an example. 
+
+```python
+"""
+This is the "iniFileGenerator" module.
+ 
+>>> f = iniFileGenerator()
+>>> f.get()
+hello
+"""
+```
+
+class iniFileGenerator:
+    def __ini__(self, hintFilePath):
+        self.hintFilePath = hintFilePath
+    def get(self):
+        """
+        >>> iniFileGenerator().get()
+        hello
+        """
+        print "hello"
+         
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+No news is good news, if you want to get the test result you need to use command line. 
+refactoringChecker> python iniFileGenerator.py -v
+Trying:
+    f = iniFileGenerator()
+Expecting nothing
+ok
+Trying:
+    f.get()
+Expecting:
+    hello
+ok
+Trying:
+    iniFileGenerator().get()
+Expecting:
+    hello
+ok
+2 items had no tests:
+    __main__.iniFileGenerator
+    __main__.iniFileGenerator.__ini__
+2 items passed all tests:
+   2 tests in __main__
+   1 tests in __main__.iniFileGenerator.get
+3 tests in 4 items.
+3 passed and 0 failed.
+Test passed.
