@@ -47,7 +47,6 @@ This is the "iniFileGenerator" module.
 >>> f.get()
 hello
 """
-```
 
 class iniFileGenerator:
     def __ini__(self, hintFilePath):
@@ -62,6 +61,8 @@ class iniFileGenerator:
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
+```
+
 No news is good news, if you want to get the test result you need to use command line. 
 refactoringChecker> python iniFileGenerator.py -v
 Trying:
