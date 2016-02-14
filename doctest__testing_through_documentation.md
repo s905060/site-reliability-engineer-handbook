@@ -64,6 +64,7 @@ if __name__ == "__main__":
 ```
 
 No news is good news, if you want to get the test result you need to use command line. 
+```
 refactoringChecker> python iniFileGenerator.py -v
 Trying:
     f = iniFileGenerator()
@@ -88,3 +89,4 @@ ok
 3 tests in 4 items.
 3 passed and 0 failed.
 Test passed.
+```
