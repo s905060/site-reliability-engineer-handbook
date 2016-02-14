@@ -92,3 +92,26 @@ ok
 3 passed and 0 failed.
 Test passed.
 ```
+
+####Reuse testing class objects
+When testing class, you want to use the same object multiple times throughout the method testing. In this case, you can use extra globs dictionary. 
+```python
+"""
+This is the "iniFileGenerator" module.
+>>> print f.hintFilePath
+./tests/unit_test_files/hint.txt
+"""
+class iniFileGenerator:
+    def __init__(self, hintFilePath):
+        self.hintFilePath = hintFilePath
+    def hello(self):
+        """
+        >>> f.hello()
+        hello
+        """
+        print "hello"
+if __name__ == "__main__":
+    import doctest
+    hintFile = "./tests/unit_test_files/hint.txt"
+    doctest.testmod(extraglobs={'f': iniFileGenerator(hintFile)})
+```
