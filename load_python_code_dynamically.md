@@ -33,3 +33,12 @@ def load_module(code_path):
         traceback.print_exc(file = sys.stderr)
         raise
 ```
+
+A few notes:
+
+* call load_module with the path to a .py file that you want to load
+* the md5.new generates a unique module identifier. If you don’t do this it’s difficult to import two modules in different directories with the same name!
+* the different excepts are to give you a flavor of the issues you may see, ImportError is expected, the others are not
+
+The return value is a module, which is a Python object that you can address in all the normal ways that you’d use a module. For example, if you have the following file extension.py:
+
