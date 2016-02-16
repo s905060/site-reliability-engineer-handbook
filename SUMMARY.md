@@ -127,6 +127,7 @@
        * [glob – Filename pattern matching](glob__filename_pattern_matching.md)
        * [Lambda, filter, reduce and map](lambda,_filter,_reduce_and_map.md)
        * [doctest – Testing through documentation](doctest__testing_through_documentation.md)
+       * Load Python code dynamically
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
