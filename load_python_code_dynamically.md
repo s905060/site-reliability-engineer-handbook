@@ -42,3 +42,13 @@ A few notes:
 
 The return value is a module, which is a Python object that you can address in all the normal ways that you’d use a module. For example, if you have the following file extension.py:
 
+```python
+def hello(x): print "Hello, %s" % x
+```
+
+You can use it as follows to get Hello, world.
+
+```python
+m = load_module('extension.py')
+m.hello("World")
+```
