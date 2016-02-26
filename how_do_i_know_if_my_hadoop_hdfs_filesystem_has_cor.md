@@ -32,7 +32,7 @@ FSCK ended at Fri Mar 27 XX:03:21 UTC 201X in XXX milliseconds
 The filesystem under path '/' is CORRUPT
 ```
 
-How do I know which files have blocks that are corrupt?
+###How do I know which files have blocks that are corrupt?
 The output of the fsck above will be very verbose, but it will mention which blocks are corrupt. We can do some grepping of the fsck above so that we aren't "reading through a firehose".
 ```
 hdfs fsck / | egrep -v '^\.+$' | grep -v replica | grep -v Replica
@@ -53,7 +53,7 @@ The next step would be to determine the importance of the file, can it just be r
 
 If it's easy enough just to replace the file, that's the route I would take.
 
-Remove the corrupted file from your hadoop cluster
+###Remove the corrupted file from your hadoop cluster
 
 This command will move the corrupted file to the trash.
 ```
@@ -66,3 +66,10 @@ Or you can skip the trash to permanently delete (which is probably what you want
 hdfs dfs -rm -skipTrash /path/to/filename.fileextension
 hdfs dfs -rm -skipTrash hdfs://ip.or.hostname.of.namenode:50070/path/to/filename.fileextension
 ```
+
+###How would I repair a corrupted file if it was not easy to replace?
+This might or might not be possible, but the first step would be to gather information on the file's location, and blocks.
+
+hdfs fsck /path/to/filename/fileextension -locations -blocks -files
+hdfs fsck hdfs://ip.or.hostname.of.namenode:50070/path/to/filename/fileextension -locations -blocks -files
+From this data, you can track down the node where the corruption is. On those nodes, you can look through logs and determine what the issue is. If a disk was replaced, i/o errors on the server, etc. If possible to recover on that machine and get the partition with the blocks online that would report back to hadoop and the file would be healthy again. If that isn't possible, you will unforunately have to find another way to regenerate.
