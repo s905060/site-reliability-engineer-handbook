@@ -393,6 +393,7 @@
        * [MapReduce benchmark (mrbench)](mapreduce_benchmark_mrbench.md)
        * [Hadoop Admin Cert](hadoop_admin_cert.md)
        * [Rack Awareness](rack_awareness.md)
+       * How do I know if my hadoop hdfs filesystem has corrupt blocks, and how do I fix it?
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
