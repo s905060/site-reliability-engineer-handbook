@@ -74,4 +74,4 @@ hdfs fsck /path/to/filename/fileextension -locations -blocks -files
 hdfs fsck hdfs://ip.or.hostname.of.namenode:50070/path/to/filename/fileextension -locations -blocks -files
 ```
 
-From this data, you can track down the node where the corruption is. On those nodes, you can look through logs and determine what the issue is. If a disk was replaced, i/o errors on the server, etc. If possible to recover on that machine and get the partition with the blocks online that would report back to hadoop and the file would be healthy again. If that isn't possible, you will unforunately have to find another way to regenerate.
+From this data, you can track down the node where the corruption is. On those nodes, you can look through logs and determine what the issue is. If a disk was replaced, i/o errors on the server, etc. If possible to recover on that machine and get the partition with the blocks online that would report back to hadoop and the file would be healthy again. If that isn't possible, you will unfortunately have to find another way to regenerate.
