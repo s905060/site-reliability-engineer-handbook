@@ -58,8 +58,6 @@ Remove the corrupted file from your hadoop cluster
 This command will move the corrupted file to the trash.
 ```
 hdfs dfs -rm /path/to/filename.fileextension
-```
-```
 hdfs dfs -rm hdfs://ip.or.hostname.of.namenode:50070/path/to/filename.fileextension
 ```
 
