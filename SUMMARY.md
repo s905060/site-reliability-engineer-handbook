@@ -378,7 +378,7 @@
    * [Web cache](web_cache.md)
    * [Mesos](mesos.md)
    * [ELK](elk.md)
-   * Cassandra
+   * [Cassandra](cassandra.md)
    * [Hadoop](hadoop.md)
        * [Hadoop Safe Mode](hadoop_safe_mode.md)
        * [Common hadoop command](common_hadoop_command.md)
