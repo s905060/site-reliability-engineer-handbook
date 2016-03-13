@@ -367,7 +367,6 @@
        * [XI. Logs](xi_logs.md)
        * [XII. Admin processes](xii_admin_processes.md)
 * [Data Structure](data_structure.md)
-   * Cassandra
 * [Service](service.md)
    * [Cloud-Init](cloud-init.md)
    * [Kubernetes](kubernetes.md)
@@ -379,6 +378,7 @@
    * [Web cache](web_cache.md)
    * [Mesos](mesos.md)
    * [ELK](elk.md)
+   * Cassandra
    * [Hadoop](hadoop.md)
        * [Hadoop Safe Mode](hadoop_safe_mode.md)
        * [Common hadoop command](common_hadoop_command.md)
