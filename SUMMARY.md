@@ -402,7 +402,7 @@
        * [Hive notes](hive_notes.md)
    * [Elasticsearch](elasticsearch.md)
    * [Kafka](kafka.md)
-   * Scylla
+   * [Scylla](scylla.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
    * [Puppet](puppet.md)
