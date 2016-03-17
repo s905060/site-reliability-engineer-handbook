@@ -7,7 +7,7 @@
 * Dictionaries of configuration used in the creation and alteration of tables are Ruby Hashes.
 They look like this:
 
-```python
+```hbase
 {‘key1′ => ‘value1′, ‘key2′ => ‘value2′, …}
 ```
 
