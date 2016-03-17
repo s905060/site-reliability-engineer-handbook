@@ -547,3 +547,31 @@ Disables, drops and recreates the specified table while still maintaing the prev
 * rename_snapshot
 * restore_snapshot
 * snapshot
+
+
+## Security Commands
+
+
+###grant
+Grant users specific rights.
+
+grant <user> <permissions> [<@namespace> [<table> [<column family> [<column qualifier>]]]
+permissions is either zero or more letters from the set “RWXCA”.
+READ(‘R’), WRITE(‘W’), EXEC(‘X’), CREATE(‘C’), ADMIN(‘A’)
+
+Note: A namespace must always precede with ‘@’ character.
+```
+hbase> grant 'bobsmith', 'RWXCA'
+hbase> grant 'bobsmith', 'RWXCA', '@ns1'
+hbase> grant 'bobsmith', 'RW', 't1', 'f1', 'col1'
+hbase> grant 'bobsmith', 'RW', 'ns1:t1', 'f1', 'col1'
+```
+
+###revoke
+Revoke a user’s access rights.
+```
+revoke <user> [<table> [<column family> [<column qualifier>]]
+hbase> revoke 'bobsmith'
+hbase> revoke 'bobsmith', 't1', 'f1', 'col1'
+hbase> revoke 'bobsmith', 'ns1:t1', 'f1', 'col1'
+```
