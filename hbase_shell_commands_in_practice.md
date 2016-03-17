@@ -309,3 +309,18 @@ All below commands are self explanatory.
 Alter namespace properties.
 
 To add/modify a property:
+```
+hbase> alter_namespace 'ns1', {METHOD => 'set', 'PROERTY_NAME' => 'PROPERTY_VALUE'}
+```
+To delete a property:
+```
+hbase> alter_namespace 'ns1', {METHOD => 'unset', NAME=>'PROERTY_NAME'}
+```
+  * create_namespace
+
+Create namespace; pass namespace name, and optionally a dictionary of namespace configuration.
+Examples:
+```
+hbase> create_namespace 'ns1'
+hbase> create_namespace 'ns1', {'PROERTY_NAME'=>'PROPERTY_VALUE'}
+```
