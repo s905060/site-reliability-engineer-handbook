@@ -353,4 +353,19 @@ hbase> t.append 'r1', 'c1', 'value', {VISIBILITY=>'PRIVATE|SECRET'}
 ```
 
 ## count
+Count the number of rows in a table. Return value is the number of rows. This operation may take a LONG time (Run ‘$HADOOP_HOME/bin/hadoop jar hbase.jar rowcount’ to run a counting mapreduce job). Current count is shown every 1000 rows by default. Count interval may be optionally specified. Scan caching is enabled on count scans by default. Default cache size is 10 rows. If our rows are small in size, you may want to increase this parameter. Examples:
+```
+hbase> count 'ns1:t1'
+hbase> count 't1'
+hbase> count 't1', INTERVAL => 100000
+hbase> count 't1', CACHE => 1000
+hbase> count 't1', INTERVAL => 10, CACHE => 1000
+```
 
+The same commands also can be run on a table reference. Suppose you had a reference t to table ‘t1′, the corresponding commands would be:
+```
+hbase> t.count
+hbase> t.count INTERVAL => 100000
+hbase> t.count CACHE => 1000
+hbase> t.count INTERVAL => 10, CACHE => 1000
+```
