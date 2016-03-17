@@ -138,3 +138,20 @@ hbase> create 't1', 'f1', {NUMREGIONS => 15, SPLITALGO => 'HexStringSplit', CONF
 hbase> t1 = create 't1', 'f1'
 ```
 Which gives a reference to the table named ‘t1′, on which we can then call methods t1.scan, t1.get.
+
+
+## describe
+
+Prints the schema of a table. We can also use abbreviated ‘desc’ for the same thing.
+```
+hbase(main):005:0> desc 'blog'
+Table blog is ENABLED                                                                                                                           
+COLUMN FAMILIES DESCRIPTION                                                                                                                     
+{NAME => 'content', DATA_BLOCK_ENCODING => 'NONE', BLOOMFILTER => 'ROW', REPLICATION_SCOPE => '0', VERSIONS => '1', COMPRESSION => 'NONE', MIN_V
+ERSIONS => '0', TTL => 'FOREVER', KEEP_DELETED_CELLS => 'FALSE', BLOCKSIZE => '65536', IN_MEMORY => 'false', BLOCKCACHE => 'true'}              
+{NAME => 'info', DATA_BLOCK_ENCODING => 'NONE', BLOOMFILTER => 'ROW', REPLICATION_SCOPE => '0', VERSIONS => '1', COMPRESSION => 'NONE', MIN_VERS
+IONS => '0', TTL => 'FOREVER', KEEP_DELETED_CELLS => 'FALSE', BLOCKSIZE => '65536', IN_MEMORY => 'false', BLOCKCACHE => 'true'}                 
+2 row(s) in 0.1070 seconds
+
+hbase(main):006:0>
+```
