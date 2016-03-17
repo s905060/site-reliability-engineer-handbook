@@ -537,3 +537,13 @@ Disables, drops and recreates the specified table while still maintaing the prev
 * remove_peer
 * set_peer_tableCFs
 * show_peer_tableCFs
+
+
+## Snapshot Commands
+
+* clone_snapshot
+* delete_snapshot
+* list_snapshots
+* rename_snapshot
+* restore_snapshot
+* snapshot
