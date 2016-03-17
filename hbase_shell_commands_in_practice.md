@@ -1,6 +1,8 @@
 # HBase Shell Commands in Practice
 
-**HBase Shell Usage**
+
+## HBase Shell Usage
+
 * Quote all names in HBase Shell such as table and column names.
 * Commas delimit command parameters.
 * Type <RETURN> after entering a command to run it.
@@ -25,3 +27,14 @@ hbase> put 't1', "testxefxff", 'f1:', "x01x33x40"
 ```
 
 The HBase shell is the (J)Ruby IRB with the below HBase-specific commands added.
+
+
+## HBase Shell Commands
+
+
+HBase Shell Commands can be categorized into below types.
+
+* HBase Shell General Commands
+* Data Definition Commands
+* Data Manipulation Commands
+* Other HBase Shell Commands
