@@ -277,3 +277,7 @@ Server is ready.
 ```
 
 Note that if the Dump file is too large, you may need to add -J-Xmx512m This parameter specifies the maximum heap memory that jhat -J-Xmx512m -port 9998 /tmp/dump.dat. You can then enter the host address in the browser: 9998 View of:
+
+![](174715_FTKZ_111708.png)
+
+Section above the red line out of the box you can own to explore, the last one to support OQL (Object Query Language).
