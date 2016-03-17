@@ -324,3 +324,11 @@ Examples:
 hbase> create_namespace 'ns1'
 hbase> create_namespace 'ns1', {'PROERTY_NAME'=>'PROPERTY_VALUE'}
 ```
+
+describe_namespace
+```
+hbase> describe_namespace 'ns1'
+```
+* drop_namespace
+* list_namespace
+* list_namespace_tables
