@@ -281,3 +281,25 @@ Note that if the Dump file is too large, you may need to add -J-Xmx512m This par
 ![](174715_FTKZ_111708.png)
 
 Section above the red line out of the box you can own to explore, the last one to support OQL (Object Query Language).
+
+
+## D, jstat-(the JVM statistics monitoring tool)
+
+Syntax is as follows:
+
+```
+jstat [generalOption | outputOptions vmid [interval [s | ms] [count]]]
+```
+
+vmid is a Java virtual machine ID, the Linux / Unix systems in general is the process ID. interval is the sampling interval. count is the number of samples. For example, the following output is the GC information, the sampling interval is 250ms, the number of samples is 4:
+
+```
+@ Ubuntu root: / # jstat--gc 21711 250 4
+ S0C S1C S0U S1U EC EU OC OU PC PU YGC YGCT FGC FGCT GCT   
+192.0 192.0 64.0 0.0 6144.0 1854.9 32000.0 4111.6 55296.0 25472.7 702 3 0.431 0.218 0.649
+192.0 192.0 64.0 0.0 6144.0 1972.2 32000.0 4111.6 55296.0 25472.7 702 3 0.431 0.218 0.649
+192.0 192.0 64.0 0.0 6144.0 1972.2 32000.0 4111.6 55296.0 25472.7 702 3 0.431 0.218 0.649
+192.0 192.0 64.0 0.0 6144.0 2109.7 32000.0 4111.6 55296.0 25472.7 702 3 0.431 0.218 0.649
+```
+
+To understand the meaning of each of the above column, look at the JVM heap memory layout:
