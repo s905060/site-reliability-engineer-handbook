@@ -299,3 +299,13 @@ PageFilter
 .....
 KeyOnlyFilter
 ```
+
+
+## Namespace Commands
+
+All below commands are self explanatory.
+  * alter_namespace
+
+Alter namespace properties.
+
+To add/modify a property:
