@@ -256,3 +256,46 @@ hbase> t.flush
 hbase> t.disable
 hbase> t.drop
 ```
+
+
+## is_disabled
+
+To know whether an HBase table is disabled or not.
+```
+hbase> is_disabled 't1'
+  hbase> is_disabled 'ns1:t1'
+```
+
+
+## is_enabled
+
+To know whether an HBase table is enabled or not.
+```
+hbase> is_enabled 't1'
+  hbase> is_enabled 'ns1:t1'
+```
+
+
+## list
+
+List all tables in hbase. Optional regular expression parameter could be used to filter the output. Examples:
+```
+hbase> list
+hbase> list 'abc.*'
+hbase> list 'ns:abc.*'
+hbase> list 'ns:.*'
+```
+
+
+## show_filters
+
+Show all the filters in hbase. Example:
+```
+hbase> show_filters
+
+ColumnPrefixFilter
+TimestampsFilter
+PageFilter
+.....
+KeyOnlyFilter
+```
