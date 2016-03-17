@@ -46,3 +46,32 @@ Com.sun.tools.hat.Main -port 9998 29920  / tmp / the dump .dat
 25687 com.sun.tools.hat.Main -port 9999 dump.dat
 21711 mrf-center.jar
 ```
+
+
+## B, jstack
+
+jstack primarily used to view information about a Java thread stack within the process. Syntax is as follows:
+
+```
+jstack [option] pid
+jstack [option] executable core
+jstack [Option-] [Server- the above mentioned id @] remote- hostname -OR & lt-IP
+```
+
+Command line parameter options are as follows:
+
+```
+-l long listings, will print additional lock information in the event of a deadlock can be used to observe jstack -l pid lock holdings
+-m mixed mode, not only Java stack information output, the output will be C / C ++ stack information (such as Native Method)
+```
+
+jstack can navigate to the thread stack, the stack according to the information we can target specific code, so it is very much in use JVM performance tuning. Now we come to an instance of a Java process to find the most CPU-intensive Java threads and stack positioning information used commands are ps, top, printf, jstack, grep.
+
+The first step is to identify the Java process ID, Java applications deployed on the server name I was mrf-center:
+
+```
+@ Ubuntu root: / # PS -ef | grep MRF-Center | grep -v grep
+21711 1 1 14:47 PTS root / 3     00:02:10 Java -jar MRF-center.jar
+```
+
+To get the process ID is 21711, the second step in the process to find the most CPU-intensive threads, you can use the ps -Lfp pid or ps -mp pid -o THREAD, tid, time or top -Hp pid, I use a third The output is as follows:
