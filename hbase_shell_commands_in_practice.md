@@ -31,10 +31,29 @@ The HBase shell is the (J)Ruby IRB with the below HBase-specific commands added.
 
 ## HBase Shell Commands
 
-
 HBase Shell Commands can be categorized into below types.
 
 * HBase Shell General Commands
 * Data Definition Commands
 * Data Manipulation Commands
 * Other HBase Shell Commands
+
+
+## General Commands
+
+* status – shows the cluster status
+* table_help – help on Table reference commands, scan, put, get, disable, drop etc.
+* version – displays HBase version
+* whoami – shows the current HBase user.
+
+```hbase
+hbase(main):001:0> help "status"
+Command: status
+Show cluster status. Can be 'summary', 'simple', or 'detailed'. The
+default is 'summary'. Examples:
+
+hbase> status
+hbase> status 'simple'
+hbase> status 'summary'
+hbase> status 'detailed'
+```
