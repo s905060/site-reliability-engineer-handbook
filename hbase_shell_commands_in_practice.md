@@ -425,3 +425,52 @@ hbase> get 't1', 'r1' {COLUMN => ['cf:qualifier1:toInt',
 ```
 
 Note that you can specify a FORMATTER by column only (cf:qualifer). You cannot specify a FORMATTER for all columns of a column family.
+
+
+## get_counter
+
+Return a counter cell value at specified table/row/column coordinates.
+```
+hbase> get_counter 'ns1:t1', 'r1', 'c1'
+  hbase> get_counter 't1', 'r1', 'c1'
+incr
+```
+
+Increments a cell ‘value’ at specified table/row/column coordinates. To increment a cell value in table ‘ns1:t1′ or ‘t1′ at row ‘r1′ under column ‘c1′ by 1 (can be omitted) or 10 do:
+```
+hbase> incr 'ns1:t1', 'r1', 'c1'
+hbase> incr 't1', 'r1', 'c1'
+hbase> incr 't1', 'r1', 'c1', 1
+hbase> incr 't1', 'r1', 'c1', 10
+hbase> incr 't1', 'r1', 'c1', 10, {ATTRIBUTES=>{'mykey'=>'myvalue'}}
+hbase> incr 't1', 'r1', 'c1', {ATTRIBUTES=>{'mykey'=>'myvalue'}}
+hbase> incr 't1', 'r1', 'c1', 10, {VISIBILITY=>'PRIVATE|SECRET'}
+```
+
+
+## put
+
+Put a cell ‘value’ at specified table/row/column and optionally timestamp coordinates. To put a cell value into table ‘ns1:t1′ or ‘t1′ at row ‘r1′ under column ‘c1′ marked with the time ‘ts1′, do:
+```
+hbase> put 'ns1:t1', 'r1', 'c1', 'value'
+hbase> put 't1', 'r1', 'c1', 'value'
+hbase> put 't1', 'r1', 'c1', 'value', ts1
+hbase> put 't1', 'r1', 'c1', 'value', {ATTRIBUTES=>{'mykey'=>'myvalue'}}
+hbase> put 't1', 'r1', 'c1', 'value', ts1, {ATTRIBUTES=>{'mykey'=>'myvalue'}}
+hbase> put 't1', 'r1', 'c1', 'value', ts1, {VISIBILITY=>'PRIVATE|SECRET'}
+```
+
+
+## scan
+
+Scan a table; pass table name and optionally a dictionary of scanner specifications. Scanner specifications may include one or more of: TIMERANGE, FILTER, LIMIT, STARTROW, STOPROW, TIMESTAMP, MAXLENGTH,
+or COLUMNS, CACHE
+
+If no columns are specified, all columns will be scanned. To scan all members of a column family, leave the qualifier empty as in ‘col_family:’.
+
+The filter can be specified in two ways:
+1. Using a filterString
+2. Using the entire package name of the filter.
+
+Some examples:
+
