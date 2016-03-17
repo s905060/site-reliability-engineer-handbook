@@ -75,3 +75,22 @@ The first step is to identify the Java process ID, Java applications deployed on
 ```
 
 To get the process ID is 21711, the second step in the process to find the most CPU-intensive threads, you can use the ps -Lfp pid or ps -mp pid -o THREAD, tid, time or top -Hp pid, I use a third The output is as follows:
+
+![](170402_A57i_111708.png)
+
+TIME column each Java thread is consuming CPU time, CPU time is the longest thread ID to 21742 threads with
+
+```
+the printf  "% X \ N"  21742
+```
+
+Get 21742 hexadecimal value 54ee, the following will be used.    
+
+OK, the next step and finally turn jstack play, which is used to process the output of 21711 stack information, and then based on the hexadecimal value of the thread ID of grep, as follows:
+
+```
+@ Ubuntu root: / # jstack 21711 | grep 54ee
+"PollIntervalRetrySchedulerThread"  PRIO = 10 = 0x00007f950043e000 NID TID = 0x54ee  in  the Object.wait () [0x00007f94c6eda000]
+```
+
+CPU consumption can be seen in this class PollIntervalRetrySchedulerThread Object.wait (), I find my code, locate the following code:
