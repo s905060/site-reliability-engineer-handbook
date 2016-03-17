@@ -18,7 +18,7 @@ and are opened and closed with curley-braces.
 * Constants do not need to be quoted. Type ‘Object.constants’ to see a (messy) list of all constants in the environment.
 * If you are using binary keys or values and need to enter them in the shell, use double-quote’d hexadecimal representation. For example:
 
-```
+```hbase
 hbase> get 't1', "keyx03x3fxcd"
 hbase> get 't1', "key�03�23�11"
 hbase> put 't1', "testxefxff", 'f1:', "x01x33x40"
