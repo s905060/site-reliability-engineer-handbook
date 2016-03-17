@@ -332,3 +332,25 @@ hbase> describe_namespace 'ns1'
 * drop_namespace
 * list_namespace
 * list_namespace_tables
+
+
+# DML Commands
+
+
+## append
+
+Appends a cell ‘value’ at specified table/row/column coordinates.
+```
+hbase> append 't1', 'r1', 'c1', 'value', ATTRIBUTES=>{'mykey'=>'myvalue'}
+hbase> append 't1', 'r1', 'c1', 'value', {VISIBILITY=>'PRIVATE|SECRET'}
+```
+
+The same commands also can be run on a table reference. Suppose you had a reference
+t to table ‘t1′, the corresponding command would be:
+```
+hbase> t.append 'r1', 'c1', 'value', ATTRIBUTES=>{'mykey'=>'myvalue'}
+hbase> t.append 'r1', 'c1', 'value', {VISIBILITY=>'PRIVATE|SECRET'}
+```
+
+## count
+
