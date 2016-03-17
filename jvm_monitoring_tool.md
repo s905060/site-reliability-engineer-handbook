@@ -192,3 +192,43 @@ PS Perm Generation
 ```
 
 Use jmap -histo [: live] pid Check the number of objects in the heap memory, the size of the histogram, if only to bring live statistics living object, as follows:
+
+```
+@ Ubuntu root: / # jmap -histo: Live 21711 | More
+ 
+ NUM      #instances #Bytes in, class name
+----------------------------------------------
+   1: 38445 5597736 <constMethodKlass>
+   2: 38445 5237288 <methodKlass>
+   3: 3500 3749504 <constantPoolKlass>
+   4: 60858 3242600 <symbolKlass>
+   5: 3500 2715264 <instanceKlassKlass>
+   6: 2796 2131424 <constantPoolCacheKlass>
+   7: 5543 1317400 [I
+   8: 13714 1010768 [C
+   9: 4752 1003344 [B
+  10: 1225 639656 <methodDataKlass>
+  11: 14194 454208 java.lang.String
+  12: 3809 396136 java.lang.Class
+  13: 4979 311952 [S
+  14: 5598 287064 [[I
+  15: 3028 266464 java.lang.reflect.Method
+  16: 280 163520 <objArrayKlassKlass>
+  17: 4355 139360 java.util.HashMap $ Entry
+  18: 1869 138568 [Ljava.util.HashMap $ Entry;
+  19: 2443 97720 java.util.LinkedHashMap $ Entry
+  20: 2072 82880 java.lang.ref.SoftReference
+  21: 1807 71528 [Ljava.lang.Object;
+  22: 2206 70592 java.lang.ref.WeakReference
+  23: 934 52304 java.util.LinkedHashMap
+  24: 871 48776 java.beans.MethodDescriptor
+  25: 1442 46144 java.util.concurrent.ConcurrentHashMap $ HashEntry
+  26: 804 38592 java.util.HashMap
+  27: 948 37920 java.util.concurrent.ConcurrentHashMap $ Segment
+  28: 1621 35696 [Ljava.lang.Class;
+  29: 1313 34880 [Ljava.lang.String;
+  30: 1396 33504 java.util.LinkedList $ Entry
+  31: 462 33264 java.lang.reflect.Field
+  32: 1024 32768 java.util.Hashtable $ Entry
+  33: 948 31440 [Ljava.util.concurrent.ConcurrentHashMap $ HashEntry;
+```
