@@ -94,3 +94,22 @@ OK, the next step and finally turn jstack play, which is used to process the out
 ```
 
 CPU consumption can be seen in this class PollIntervalRetrySchedulerThread Object.wait (), I find my code, locate the following code:
+```
+// Idle wait
+. getLog () the info ( "the Thread ["  + getName () +  "] IS IDLE Waiting ..." );
+schedulerThreadState = PollTaskSchedulerThreadState.IdleWaiting;
+Long  now = System.currentTimeMillis ();
+Long  the waitTime getIdleWaitTime + = now ();
+Long  timeUntilContinue = the waitTime - now;
+the synchronized (sigLock) {
+    the try  {
+        IF (! halted.get ()) {
+            sigLock.wait (timeUntilContinue);
+        }
+    } 
+    the catch  (InterruptedException the ignore) {
+    }
+}
+```
+
+It is idle to wait for polling task code above sigLock.wait (timeUntilContinue) corresponds to the front of Object.wait ().
