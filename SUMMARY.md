@@ -398,6 +398,7 @@
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
+       * HBase Shell Commands in Practice
    * [Hive](hive.md)
        * [Hive notes](hive_notes.md)
    * [Elasticsearch](elasticsearch.md)
