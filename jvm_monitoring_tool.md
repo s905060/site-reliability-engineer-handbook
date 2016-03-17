@@ -193,7 +193,7 @@ PS Perm Generation
 
 Use jmap -histo [: live] pid Check the number of objects in the heap memory, the size of the histogram, if only to bring live statistics living object, as follows:
 
-```
+```bash
 @ Ubuntu root: / # jmap -histo: Live 21711 | More
  
  NUM      #instances #Bytes in, class name
@@ -235,7 +235,7 @@ Use jmap -histo [: live] pid Check the number of objects in the heap memory, the
 
 class name is the object type, as follows:
 
-```
+```bash
 B byte
 C char
 D double
@@ -249,13 +249,13 @@ Z boolean
 
 There is also a very common situation is: jmap to dump the process memory usage to a file, and then jhat analysis view. jmap carried dump command format is as follows:
 
-```
+```bash
 -dump jmap: the format = B, File = dumpFileName PID
 ```
 
 I'm just as to be above the process ID 21711 Dump:
 
-```
+```bash
 @ Ubuntu root: / # jmap -dump: the format = B, File = / tmp / dump.dat 21711     
 To the heap Dumping  / tmp / the dump .dat ...
 The dump Heap  File  created
@@ -263,7 +263,7 @@ The dump Heap  File  created
 
 out of the dump file can be used MAT, VisualVM and other tools to view, here in jhat Views:
 
-```
+```bash
 @ Ubuntu root: / # jhat -port 9998 /tmp/dump.dat
 From Reading  / tmp / the dump .dat ...
 Dump  File  created Tue On Jan 28, 2014 17:46:14 CST
@@ -287,13 +287,13 @@ Section above the red line out of the box you can own to explore, the last one t
 
 Syntax is as follows:
 
-```
+```bash
 jstat [generalOption | outputOptions vmid [interval [s | ms] [count]]]
 ```
 
 vmid is a Java virtual machine ID, the Linux / Unix systems in general is the process ID. interval is the sampling interval. count is the number of samples. For example, the following output is the GC information, the sampling interval is 250ms, the number of samples is 4:
 
-```
+```bash
 @ Ubuntu root: / # jstat--gc 21711 250 4
  S0C S1C S0U S1U EC EU OC OU PC PU YGC YGCT FGC FGCT GCT   
 192.0 192.0 64.0 0.0 6144.0 1854.9 32000.0 4111.6 55296.0 25472.7 702 3 0.431 0.218 0.649
@@ -308,14 +308,14 @@ To understand the meaning of each of the above column, look at the JVM heap memo
 
 As can be seen:
 
-```
+```bash
 The young generation heap = + + permanent tenured generation generations
 The young generation = Eden Area + two Survivor areas (From and To)
 ```
 
 Now to explain the meaning of each column:
 
-```
+```bash
 S0C, S1C, S0U, S1U: Survivor 0 /1 area capacity (Capacity) and usage (Used)
 EC, EU: Eden area and capacity usage
 OC, OU: the old generation capacity and usage
@@ -333,14 +333,14 @@ hprof to show CPU usage, memory usage statistics heap.
 
 Syntax is as follows:
 
-```
+```bash
 java -agentlib: hprof [= options] ToBeProfiledClass
 java -Xrunprof [: options] ToBeProfiledClass
 javac -J-agentlib: hprof [= options] ToBeProfiledClass
 ```
 
 Complete command options are as follows:
-```
+```bash
 Option Name and Value Description Default
 --------------------- ----------- -------
 heap = dump | sites | all heap profiling all
@@ -364,26 +364,26 @@ Several examples come on an official guide.
 
 CPU Usage Sampling Profiling (cpu = samples) examples:
 
-```
+```bash
 java -agentlib: hprof = cpu = samples, interval = 20, depth = 3 Hello
 ```
 
 The above CPU consumption every 20 ms sampling information, the stack depth of 3, profile file name generation is java.hprof.txt, in the current directory. 
 
 Examples of CPU Usage Times Profiling (cpu = times), and with respect to CPU Usage Sampling Profile can get more fine-grained CPU consumption information can be fine to start and end of each method call, which is implemented using bytecode injection technology (BCI):
-```
+```bash
 -J & lt-agentlib the javac: hprof the CPU = = Times  Hello.java
 ```
 
 Heap Allocation Profiling (heap = sites) examples:
 
-```
+```bash
 javac -J-agentlib: hprof = heap = sites Hello.java
 ```
 
 Examples Heap Dump (heap = dump), which can generate more detailed information than the above Heap Dump Heap Allocation Profiling:
 
-```
+```bash
 javac -J-agentlib: hprof = heap = dump Hello.java
 ```
 
