@@ -554,8 +554,10 @@ Disables, drops and recreates the specified table while still maintaing the prev
 
 ###grant
 Grant users specific rights.
-
+```
 grant <user> <permissions> [<@namespace> [<table> [<column family> [<column qualifier>]]]
+```
+
 permissions is either zero or more letters from the set “RWXCA”.
 READ(‘R’), WRITE(‘W’), EXEC(‘X’), CREATE(‘C’), ADMIN(‘A’)
 
