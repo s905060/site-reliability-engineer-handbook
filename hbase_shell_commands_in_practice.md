@@ -12,3 +12,8 @@ They look like this:
 ```
 
 and are opened and closed with curley-braces.
+
+* Key/values are delimited by the ‘=>’ character combination.
+* Usually keys are predefined constants such as NAME, VERSIONS, COMPRESSION, etc.
+* Constants do not need to be quoted. Type ‘Object.constants’ to see a (messy) list of all constants in the environment.
+* If you are using binary keys or values and need to enter them in the shell, use double-quote’d hexadecimal representation. For example:
