@@ -412,3 +412,16 @@ hbase> get 't1', 'r1', ['c1', 'c2']
 hbsase> get 't1','r1', {COLUMN => 'c1', ATTRIBUTES => {'mykey'=>'myvalue'}}
 hbsase> get 't1','r1', {COLUMN => 'c1', AUTHORIZATIONS => ['PRIVATE','SECRET']}
 ```
+
+Besides the default ‘toStringBinary’ format, ‘get’ also supports custom formatting by column. A user can define a FORMATTER by adding it to the column name in the get specification. The FORMATTER can be stipulated:
+
+1. either as a org.apache.hadoop.hbase.util.Bytes method name (e.g, toInt, toString)
+2. or as a custom class followed by method name: e.g. ‘c(MyFormatterClass).format’.
+
+Example formatting cf:qualifier1 and cf:qualifier2 both as Integers:
+```
+hbase> get 't1', 'r1' {COLUMN => ['cf:qualifier1:toInt',
+'cf:qualifier2:c(org.apache.hadoop.hbase.util.Bytes).toInt'] }
+```
+
+Note that you can specify a FORMATTER by column only (cf:qualifer). You cannot specify a FORMATTER for all columns of a column family.
