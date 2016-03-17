@@ -340,3 +340,51 @@ javac -J-agentlib: hprof [= options] ToBeProfiledClass
 ```
 
 Complete command options are as follows:
+```
+Option Name and Value Description Default
+--------------------- ----------- -------
+heap = dump | sites | all heap profiling all
+the Samples = the CPU | Times | Old OFF the CPU Usage
+monitor = y | n monitor contention n
+the format = A | B text (TXT) or binary Output A
+File = < File > to the Write Data  File              java.hprof [.txt]
+net = <host>: <port> send data over a socket off
+depth = <size> stack trace depth 4
+= interval The <MS> Sample interval The  in  MS 10
+cutoff = <value> output cutoff point 0.0001
+Y = lineno | N Line Number  in  traces Y?
+= Y Thread | N Thread  in  traces N?
+Y = DOE | N the dump ON  Exit Y?
+msa = y | n Solaris micro state accounting n
+Y = Force | N Force Output to < File > Y
+verbose = y | n print messages about dumps y
+```
+
+Several examples come on an official guide.
+
+CPU Usage Sampling Profiling (cpu = samples) examples:
+
+```
+java -agentlib: hprof = cpu = samples, interval = 20, depth = 3 Hello
+```
+
+The above CPU consumption every 20 ms sampling information, the stack depth of 3, profile file name generation is java.hprof.txt, in the current directory. 
+
+Examples of CPU Usage Times Profiling (cpu = times), and with respect to CPU Usage Sampling Profile can get more fine-grained CPU consumption information can be fine to start and end of each method call, which is implemented using bytecode injection technology (BCI):
+```
+-J & lt-agentlib the javac: hprof the CPU = = Times  Hello.java
+```
+
+Heap Allocation Profiling (heap = sites) examples:
+
+```
+javac -J-agentlib: hprof = heap = sites Hello.java
+```
+
+Examples Heap Dump (heap = dump), which can generate more detailed information than the above Heap Dump Heap Allocation Profiling:
+
+```
+javac -J-agentlib: hprof = heap = dump Hello.java
+```
+
+Although the JVM startup parameters added -Xrunprof: heap = sites parameter can generate CPU / Heap Profile file, but the impact on JVM performance is very large, it is not recommended for online server environments.
