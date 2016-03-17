@@ -324,3 +324,19 @@ YGC, YGT: the young generation GC and GC frequency and time-consuming
 FGC, FGCT: Full GC frequency and time-consuming Full GC
 GCT: GC total time
 ```
+
+
+## E, hprof (Heap / the CPU the Profiling Tool)
+
+
+hprof to show CPU usage, memory usage statistics heap.
+
+Syntax is as follows:
+
+```
+java -agentlib: hprof [= options] ToBeProfiledClass
+java -Xrunprof [: options] ToBeProfiledClass
+javac -J-agentlib: hprof [= options] ToBeProfiledClass
+```
+
+Complete command options are as follows:
