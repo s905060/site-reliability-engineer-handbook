@@ -303,3 +303,24 @@ vmid is a Java virtual machine ID, the Linux / Unix systems in general is the pr
 ```
 
 To understand the meaning of each of the above column, look at the JVM heap memory layout:
+
+![](181847_dAR9_111708.jpg)
+
+As can be seen:
+
+```
+The young generation heap = + + permanent tenured generation generations
+The young generation = Eden Area + two Survivor areas (From and To)
+```
+
+Now to explain the meaning of each column:
+
+```
+S0C, S1C, S0U, S1U: Survivor 0 /1 area capacity (Capacity) and usage (Used)
+EC, EU: Eden area and capacity usage
+OC, OU: the old generation capacity and usage
+PC, PU: permanent generation of capacity and usage
+YGC, YGT: the young generation GC and GC frequency and time-consuming
+FGC, FGCT: Full GC frequency and time-consuming Full GC
+GCT: GC total time
+```
