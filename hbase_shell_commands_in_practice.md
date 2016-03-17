@@ -506,3 +506,21 @@ Disables, drops and recreates the specified table. After truncate of an HBase ta
 
 Disables, drops and recreates the specified table while still maintaing the previous region boundaries.
 
+* Admin Commands
+* assign
+* balance_switch
+* balancer
+* catalogjanitor_enabled
+* catalogjanitor_run
+* catalogjanitor_switch
+* close_region
+* compact
+* flush
+* hlog_roll
+* major_compact
+* merge_region
+* move
+* split
+* trace
+* unassign
+*zk_dump
