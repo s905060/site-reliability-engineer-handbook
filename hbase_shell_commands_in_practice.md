@@ -99,3 +99,42 @@ Gets the status of the alter command. Indicates the number of regions of the tab
 hbase> alter_status 't1'
 hbase> alter_status 'ns1:t1'
 ```
+
+
+## create
+
+Used for Creating tables. Pass a table name, and a set of column family specifications (at least one), and, optionally, table configuration as arguments.
+
+**Examples:**
+
+1. Create a table with namespace=ns1 and table qualifier/name=t1
+```
+hbase> create 'ns1:t1', {NAME => 'f1', VERSIONS => 5}
+```
+
+2. Create a table with namespace=default and table qualifier=t1
+```
+hbase> create 't1', {NAME => 'f1'}, {NAME => 'f2'}, {NAME => 'f3'}
+hbase> # The above in shorthand would be the following:
+hbase> create 't1', 'f1', 'f2', 'f3'
+hbase> create 't1', {NAME => 'f1', VERSIONS => 1, TTL => 2592000, BLOCKCACHE => true}
+hbase> create 't1', {NAME => 'f1', CONFIGURATION => {'hbase.hstore.blockingStoreFiles' => '10'}}
+```
+
+3. Table configuration options can be put at the end.
+```
+hbase> create 'ns1:t1', 'f1', SPLITS => ['10', '20', '30', '40']
+hbase> create 't1', 'f1', SPLITS => ['10', '20', '30', '40']
+hbase> create 't1', 'f1', SPLITS_FILE => 'splits.txt', OWNER => 'johndoe'
+hbase> create 't1', {NAME => 'f1', VERSIONS => 5}, METADATA => { 'mykey' => 'myvalue' }
+hbase> # Optionally pre-split the table into NUMREGIONS, using
+hbase> # SPLITALGO ("HexStringSplit", "UniformSplit" or classname)
+hbase> create 't1', 'f1', {NUMREGIONS => 15, SPLITALGO => 'HexStringSplit'}
+hbase> create 't1', 'f1', {NUMREGIONS => 15, SPLITALGO => 'HexStringSplit', CONFIGURATION => {'hbase.hregion.scan.loadColumnFamiliesOnDemand' => 'true'}}
+```
+
+4. We can also keep around a reference to the created table.
+```
+hbase> t1 = create 't1', 'f1'
+```
+Which gives a reference to the table named ‘t1′, on which we can then call methods t1.scan, t1.get.
