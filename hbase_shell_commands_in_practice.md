@@ -495,3 +495,14 @@ For experts, there is an additional option — CACHE_BLOCKS — which switches b
 ```
 hbase> scan 't1', {COLUMNS => ['c1', 'c2'], CACHE_BLOCKS => false}
 ```
+
+
+## truncate
+
+Disables, drops and recreates the specified table. After truncate of an HBase table, schema will be present but not the records.
+
+
+## truncate_preserve
+
+Disables, drops and recreates the specified table while still maintaing the previous region boundaries.
+
