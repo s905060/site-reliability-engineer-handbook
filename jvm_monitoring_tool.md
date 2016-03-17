@@ -232,3 +232,17 @@ Use jmap -histo [: live] pid Check the number of objects in the heap memory, the
   32: 1024 32768 java.util.Hashtable $ Entry
   33: 948 31440 [Ljava.util.concurrent.ConcurrentHashMap $ HashEntry;
 ```
+
+class name is the object type, as follows:
+
+```
+B byte
+C char
+D double
+F float
+I int
+J long
+Z boolean
+[Array, such as [I represent int []
+[L + class name other objects
+```
