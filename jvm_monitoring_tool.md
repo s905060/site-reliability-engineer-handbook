@@ -246,3 +246,34 @@ Z boolean
 [Array, such as [I represent int []
 [L + class name other objects
 ```
+
+There is also a very common situation is: jmap to dump the process memory usage to a file, and then jhat analysis view. jmap carried dump command format is as follows:
+
+```
+-dump jmap: the format = B, File = dumpFileName PID
+```
+
+I'm just as to be above the process ID 21711 Dump:
+
+```
+@ Ubuntu root: / # jmap -dump: the format = B, File = / tmp / dump.dat 21711     
+To the heap Dumping  / tmp / the dump .dat ...
+The dump Heap  File  created
+```
+
+out of the dump file can be used MAT, VisualVM and other tools to view, here in jhat Views:
+
+```
+@ Ubuntu root: / # jhat -port 9998 /tmp/dump.dat
+From Reading  / tmp / the dump .dat ...
+Dump  File  created Tue On Jan 28, 2014 17:46:14 CST
+Snapshot  the Read , Resolving ...
+Resolving 132207 objects ...
+Chasing references, expect 26 dots ..........................
+Eliminating duplicate references ..........................
+Snapshot resolved.
+Started HTTP server on port 9998
+Server is ready.
+```
+
+Note that if the Dump file is too large, you may need to add -J-Xmx512m This parameter specifies the maximum heap memory that jhat -J-Xmx512m -port 9998 /tmp/dump.dat. You can then enter the host address in the browser: 9998 View of:
