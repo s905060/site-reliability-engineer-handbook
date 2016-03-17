@@ -221,3 +221,38 @@ To check the existence of an HBase Table
 hbase> exists 't1'
   hbase> exists 'ns1:t1'
 ```
+
+
+## get_table
+
+Gets the given table name and return it as an actual object to be manipulated by the user.
+```
+hbase(main):014:0> t1 = get_table 'blog'
+0 row(s) in 0.0130 seconds
+
+=> Hbase::Table - blog
+hbase(main):015:0>
+```
+
+On reference to table we can perform all actions of a table like shown below.
+
+We can call ‘put’ on the table: it puts a row ‘r’ with column family ‘cf’, column ‘q’ and value ‘v’ into table t1.
+```
+hbase> t1.put 'r', 'cf:q', 'v'
+```
+
+To read the data out, we can scan the table with below command which will read all the rows in table ‘t’.
+```
+hbase> t1.scan
+```
+
+Essentially, any command that takes a table name can also be done via table reference. Other commands include things like: get, delete, deleteall, get_all_columns, get_counter, count, incr. These functions, along with
+the standard JRuby object methods are also available via tab completion.
+
+We can also do general admin actions directly on a table; things like enable, disable, flush and drop just by typing:
+```
+hbase> t.enable
+hbase> t.flush
+hbase> t.disable
+hbase> t.drop
+```
