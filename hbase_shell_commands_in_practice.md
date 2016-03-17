@@ -506,7 +506,8 @@ Disables, drops and recreates the specified table. After truncate of an HBase ta
 
 Disables, drops and recreates the specified table while still maintaing the previous region boundaries.
 
-* Admin Commands
+
+## Admin Commands
 * assign
 * balance_switch
 * balancer
@@ -523,4 +524,16 @@ Disables, drops and recreates the specified table while still maintaing the prev
 * split
 * trace
 * unassign
-*zk_dump
+* zk_dump
+
+
+## Replication Commands
+
+* add_peer
+* disable_peer
+* enable_peer
+* list_peers
+* list_replicated_tables
+* remove_peer
+* set_peer_tableCFs
+* show_peer_tableCFs
