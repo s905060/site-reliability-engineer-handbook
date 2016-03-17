@@ -577,3 +577,33 @@ hbase> revoke 'bobsmith'
 hbase> revoke 'bobsmith', 't1', 'f1', 'col1'
 hbase> revoke 'bobsmith', 'ns1:t1', 'f1', 'col1'
 ```
+
+
+## user_permission
+
+Show all permissions for the particular user.
+```
+Syntax : user_permission <table>
+hbase> user_permission
+hbase> user_permission 'table1'
+hbase> user_permission 'namespace1:table1'
+hbase> user_permission '.*'
+hbase> user_permission '^[A-C].*'
+```
+
+
+## Visibility labels Commands
+
+* add_labels
+* clear_auths
+* get_auths
+* set_auths
+* set_visibility
+
+
+## whoami
+
+Show the current hbase user.
+```
+hbase> whoami
+```
