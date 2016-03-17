@@ -190,3 +190,5 @@ PS Perm Generation
    49.73443603515625% used
    ....
 ```
+
+Use jmap -histo [: live] pid Check the number of objects in the heap memory, the size of the histogram, if only to bring live statistics living object, as follows:
