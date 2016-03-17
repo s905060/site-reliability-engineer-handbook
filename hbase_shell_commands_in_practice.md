@@ -369,3 +369,46 @@ hbase> t.count INTERVAL => 100000
 hbase> t.count CACHE => 1000
 hbase> t.count INTERVAL => 10, CACHE => 1000
 ```
+
+
+## delete
+
+Put a delete cell value at specified table/row/column and optionally timestamp coordinates. Deletes must match the deleted cell’s coordinates exactly. When scanning, a delete cell suppresses older versions. To delete a cell from ‘t1′ at row ‘r1′ under column ‘c1′ marked with the time ‘ts1′, do:
+```
+hbase> delete 'ns1:t1', 'r1', 'c1', ts1
+hbase> delete 't1', 'r1', 'c1', ts1
+hbase> delete 't1', 'r1', 'c1', ts1, {VISIBILITY=>'PRIVATE|SECRET'}
+```
+
+
+## deleteall
+
+Delete all cells in a given row; pass a table name, row, and optionally a column and timestamp. Examples:
+```
+hbase> deleteall 'ns1:t1', 'r1'
+hbase> deleteall 't1', 'r1'
+hbase> deleteall 't1', 'r1', 'c1'
+hbase> deleteall 't1', 'r1', 'c1', ts1
+hbase> deleteall 't1', 'r1', 'c1', ts1, {VISIBILITY=>'PRIVATE|SECRET'}
+```
+
+
+## get
+
+Get row or cell contents; pass table name, row, and optionally a dictionary of column(s), timestamp, timerange and versions. Examples:
+```
+hbase> get 'ns1:t1', 'r1'
+hbase> get 't1', 'r1'
+hbase> get 't1', 'r1', {TIMERANGE => [ts1, ts2]}
+hbase> get 't1', 'r1', {COLUMN => 'c1'}
+hbase> get 't1', 'r1', {COLUMN => ['c1', 'c2', 'c3']}
+hbase> get 't1', 'r1', {COLUMN => 'c1', TIMESTAMP => ts1}
+hbase> get 't1', 'r1', {COLUMN => 'c1', TIMERANGE => [ts1, ts2], VERSIONS => 4}
+hbase> get 't1', 'r1', {COLUMN => 'c1', TIMESTAMP => ts1, VERSIONS => 4}
+hbase> get 't1', 'r1', {FILTER => "ValueFilter(=, 'binary:abc')"}
+hbase> get 't1', 'r1', 'c1'
+hbase> get 't1', 'r1', 'c1', 'c2'
+hbase> get 't1', 'r1', ['c1', 'c2']
+hbsase> get 't1','r1', {COLUMN => 'c1', ATTRIBUTES => {'mykey'=>'myvalue'}}
+hbsase> get 't1','r1', {COLUMN => 'c1', AUTHORIZATIONS => ['PRIVATE','SECRET']}
+```
