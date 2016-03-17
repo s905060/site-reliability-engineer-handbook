@@ -155,3 +155,69 @@ IONS => '0', TTL => 'FOREVER', KEEP_DELETED_CELLS => 'FALSE', BLOCKSIZE => '6553
 
 hbase(main):006:0>
 ```
+
+
+## disable
+
+disable an existing HBase table.Disabled tables will not be deleted from HBase but they are not available for regular access. This table is excluded from the list command and we can not run any other command except either enable or drop commands on disabled tables. Disabling is similar to deleting the tables temporarily.
+```
+hbase> disable 't1'
+  hbase> disable 'ns1:t1'
+```
+
+
+## disable_all
+
+Disable all of tables matching the given regex:
+```
+hbase> disable_all 't.*'
+hbase> disable_all 'ns:t.*'
+hbase> disable_all 'ns:.*'
+```
+
+
+## drop
+
+Dropping of HBase tables means deleting the tables permanently. To drop a table it must first be disabled.
+```
+hbase> drop 't1'
+  hbase> drop 'ns1:t1'
+```
+
+
+## drop_all
+
+Drop all of the tables matching the given regex:
+```
+hbase> drop_all 't.*'
+hbase> drop_all 'ns:t.*'
+hbase> drop_all 'ns:.*'
+```
+
+
+## enable
+
+Used to enable a table which might be currently disabled.
+```
+hbase> enable 't1'
+  hbase> enable 'ns1:t1'
+```
+
+
+## enable_all
+
+Enable all of the tables matching the given regex:
+```
+hbase> enable_all 't.*'
+hbase> enable_all 'ns:t.*'
+hbase> enable_all 'ns:.*'
+```
+
+
+## exists
+
+To check the existence of an HBase Table
+```
+hbase> exists 't1'
+  hbase> exists 'ns1:t1'
+```
