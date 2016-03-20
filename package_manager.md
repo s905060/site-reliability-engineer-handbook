@@ -64,3 +64,9 @@ Get information about a remote package
     rpm -qpi <url>
     apt-cache show package
 ```
+
+List all remote packages
+```
+    (browse rpmfind.net or your other site)
+    apt-cache dumpavail
+```
