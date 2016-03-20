@@ -35,3 +35,18 @@ POST method:
 ```
  curl -X POST --user "user:pass" -d "image_id=ami-84db39ed&hwp_id=m1.small&keyname=marios_key"  http://localhost:3001/api/instances?format=xml 
 ```
+
+This example assumes you have set your services endpoint at /service and that you have enabled the comment and user resource. So lets first login to a drupal site:
+```
+curl -X POST -i -H "Content-type: application/json" -c cookies.txt -X POST http://localhost:8888/service/user/login -d '
+    {
+        "username":"user",
+        "password":"password"
+    }
+    '
+```
+
+* `-i` means show http response headers
+* `-H` allows you to set http request headers. And drupal services need just the content-type header
+* `-c` is to save the cookies on the cookies.txt file. And since we are doing a login this is important
+* `-d` allows you to set the request body, which you will be using on drupal services to send the parameters
