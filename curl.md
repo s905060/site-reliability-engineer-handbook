@@ -66,3 +66,10 @@ curl -i -H "Content-type: application/json" -b cookies.txt -X POST http://localh
 ```
 curl -i -H "Content-Type: application/json" -b cookies.txt -X POST http://localhost:8888/service/user/logout
 ```
+
+And this is just an example to logout.
+
+If you want to see what parameters and which method (POST, GET, DELETE) to use you can open the services module files to review directly from the source ;-). This two directories are the most interesting:
+
+* services/resources/: contains all the resource definitions, so you can see exactly which parameters are accepted by each resource.
+* services/tests/functional/: contains functional tests, so you will see actual PHP examples of the resources being used to create, delete or retrieve data from a drupal service.
