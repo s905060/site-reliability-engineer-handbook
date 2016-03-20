@@ -70,3 +70,7 @@ List all remote packages
     (browse rpmfind.net or your other site)
     apt-cache dumpavail
 ```
+
+1. thanks to Adriaan Penning
+
+2. i.e. "dpkg --search /etc" will display all packages that have files in etc.
