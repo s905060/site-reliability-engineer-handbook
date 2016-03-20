@@ -42,4 +42,25 @@ Extract files in a package without installing it
 
 * or Midnight Commander works on .debs too.
 
-
+Install a package from a local file
+```
+    rpm -i file.rpm
+    dpkg --install file.deb
+```
+Remove a package from the system
+```
+    rpm -e pkgname              (saves copies of modified config files)
+    dpkg --purge pkgname        (removes everything)
+    dpkg --remove pkgname       (leaves config files behind)
+```
+Identify the package that owns a file
+```
+    rpm -qf full-path-to file
+    rpm -qf name-of-file-in-local-dir
+    dpkg --search any-portion-of-file's-path (2)
+```
+Get information about a remote package
+```
+    rpm -qpi <url>
+    apt-cache show package
+```
