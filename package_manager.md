@@ -31,3 +31,8 @@ List files in a package on the local hard drive
 ```
 List files in an uninstalled package (depends on dist)
 
+* grep through the Contents.arch file found in ftp.us.debian.org/debian/dists/frozen/
+
+Extract files in a package without installing it
+
+* (Open it in Midnight Commander (mc) and then enter CONTENTS.cpio(1))
