@@ -50,3 +50,19 @@ curl -X POST -i -H "Content-type: application/json" -c cookies.txt -X POST http:
 * `-H` allows you to set http request headers. And drupal services need just the content-type header
 * `-c` is to save the cookies on the cookies.txt file. And since we are doing a login this is important
 * `-d` allows you to set the request body, which you will be using on drupal services to send the parameters
+
+```
+curl -i -H "Content-type: application/json" -b cookies.txt -X POST http://localhost:8888/service/comment -d '
+    {
+        "nid":"579",
+        "subject":"Test Subject",
+        "comment_body": { "und": [ { "value": "Test Comment" } ] }
+    }
+    '
+```
+
+* Here we use `-b` instead of `-c` because we now want to _send_ the cookie to let drupal now that we already logged in.
+
+```
+curl -i -H "Content-Type: application/json" -b cookies.txt -X POST http://localhost:8888/service/user/logout
+```
