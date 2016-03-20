@@ -241,7 +241,7 @@
    * [fping](fping.md)
    * [blkid](blkid.md)
    * [FSCK](fsck.md)
-   * Package Manager
+   * [Package Manager](package_manager.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
