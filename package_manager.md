@@ -36,3 +36,10 @@ List files in an uninstalled package (depends on dist)
 Extract files in a package without installing it
 
 * (Open it in Midnight Commander (mc) and then enter CONTENTS.cpio(1))
+```
+ dpkg-deb --extract file.deb dir-to-extract-to
+```
+
+* or Midnight Commander works on .debs too.
+
+
