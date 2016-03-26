@@ -405,7 +405,7 @@
        * [Hive notes](hive_notes.md)
    * [Elasticsearch](elasticsearch.md)
    * [Kafka](kafka.md)
-       * Kafka Cheat Sheet
+       * [Kafka Cheat Sheet](kafka_cheat_sheet.md)
    * [Scylla](scylla.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
