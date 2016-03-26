@@ -242,7 +242,7 @@
    * [blkid](blkid.md)
    * [FSCK](fsck.md)
    * [Package Manager](package_manager.md)
-   * mktemp
+   * [mktemp](mktemp.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
