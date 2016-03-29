@@ -243,6 +243,7 @@
    * [FSCK](fsck.md)
    * [Package Manager](package_manager.md)
    * [mktemp](mktemp.md)
+   * ls
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
