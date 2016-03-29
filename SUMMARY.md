@@ -244,6 +244,7 @@
    * [Package Manager](package_manager.md)
    * [mktemp](mktemp.md)
    * [ls](ls.md)
+   * Comm
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
