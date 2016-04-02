@@ -40,3 +40,12 @@ lrwxrwxrwx 1 root root 10 2010-03-23 23:56 333db32c-b91e-41da-86c7-801c88059660 
 lrwxrwxrwx 1 root root 10 2010-03-23 23:56 A00CB51F0CB4F180 -> ../../sda1
 lrwxrwxrwx 1 root root 10 2010-03-23 23:56 ec4dfd3a-5811-4967-a28d-ba76c8ad55a9 -> ../../hdb1
 ```
+
+## 3./dev/.udev/db/
+the partition information is also stored by udev. cat the file which ends as your block device file of your partition. For example lets get uuid for sda2:
+```
+# cat /dev/.udev/db/*sda2 | grep uuid
+S:disk/by-uuid/333db32c-b91e-41da-86c7-801c88059660
+```
+
+in other words this is the same UUID which we retrieved previously.
