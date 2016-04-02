@@ -71,3 +71,9 @@ As it was not already enough we can also use a vol_id command to retrieve UUID f
 ID_FS_UUID=333db32c-b91e-41da-86c7-801c88059660
 ID_FS_UUID_ENC=333db32c-b91e-41da-86c7-801c88059660
 ```
+
+## 7.hwinfo
+another way on how to access a UUID and the hardrives/block devices is to use hwinfo command. hwinfo is not installed by defualt so you may need to install it first:
+```bash
+hwinfo --block
+```
