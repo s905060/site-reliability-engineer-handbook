@@ -63,3 +63,11 @@ Same as previous command now we use udevinfo which actually 'udevadm info':
 #udevinfo -q all -n /dev/sda2 | grep uuid
 S: disk/by-uuid/333db32c-b91e-41da-86c7-801c88059660
 ```
+
+## 6.vol_id
+As it was not already enough we can also use a vol_id command to retrieve UUID from partition:
+```bash
+# vol_id /dev/sda2 | grep UUID
+ID_FS_UUID=333db32c-b91e-41da-86c7-801c88059660
+ID_FS_UUID_ENC=333db32c-b91e-41da-86c7-801c88059660
+```
