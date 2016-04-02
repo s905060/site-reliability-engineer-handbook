@@ -77,3 +77,46 @@ another way on how to access a UUID and the hardrives/block devices is to use hw
 ```bash
 hwinfo --block
 ```
+
+## 8.Change UUID
+Now let's talk about how to change a partition's UUID. First we need to install uuid command ( if not already installed ) which will help us to generate uuid string: EXAMPLE:
+```bash
+# uuid
+3fa4ae0a-365b-11df-9470-000c29e84ddd
+# uuid
+46a967c2-365b-11df-ae47-000c29e84ddd
+```
+
+NOTE: on some systems you can have uuidgen command instead of uuid !
+
+let's see how it works: old partition UUID:
+```bash
+# vol_id  /dev/hdb1
+ID_FS_USAGE=filesystem
+ID_FS_TYPE=ext3
+ID_FS_VERSION=1.0
+ID_FS_UUID=50722b6b-dfd8-4faf-bb27-220fd69b0deb
+ID_FS_UUID_ENC=50722b6b-dfd8-4faf-bb27-220fd69b0deb
+ID_FS_LABEL=
+ID_FS_LABEL_ENC=
+ID_FS_LABEL_SAFE=
+```
+
+now we use a tune2fs linux command to change /dev/hdb1 partition's UUID:
+```bash
+# tune2fs /dev/hdb1 -U `uuid`
+tune2fs 1.41.3 (12-Oct-2008)
+```
+
+confirm changes:
+```bash
+#vol_id  /dev/hdb1
+ID_FS_USAGE=filesystem
+ID_FS_TYPE=ext3
+ID_FS_VERSION=1.0
+ID_FS_UUID=94d5ceae-365b-11df-81ee-000c29e84ddd
+ID_FS_UUID_ENC=94d5ceae-365b-11df-81ee-000c29e84ddd
+ID_FS_LABEL=
+ID_FS_LABEL_ENC=
+ID_FS_LABEL_SAFE=
+```
