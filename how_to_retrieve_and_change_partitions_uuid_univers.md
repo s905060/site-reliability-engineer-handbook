@@ -52,7 +52,14 @@ in other words this is the same UUID which we retrieved previously.
 
 ## 4.udevadm
 yet again retrieve the same information using udevadm command:
-```
+```bash
 #udevadm info -q all -n /dev/sda2 | grep uuid
+S: disk/by-uuid/333db32c-b91e-41da-86c7-801c88059660
+```
+
+## 5.udevinfo
+Same as previous command now we use udevinfo which actually 'udevadm info':
+```bash
+#udevinfo -q all -n /dev/sda2 | grep uuid
 S: disk/by-uuid/333db32c-b91e-41da-86c7-801c88059660
 ```
