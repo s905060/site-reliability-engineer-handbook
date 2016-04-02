@@ -29,3 +29,14 @@ or you can specify argument to retrieve a single partition UUID:
 /dev/sda2: UUID="333db32c-b91e-41da-86c7-801c88059660" 
 TYPE="ext3"
 ```
+
+## 2./dev/disk/by-uuid/
+another way is to consult /dev/disk/by-uuid/ :
+
+```bash
+ls -l /dev/disk/by-uuid/
+total 0
+lrwxrwxrwx 1 root root 10 2010-03-23 23:56 333db32c-b91e-41da-86c7-801c88059660 -> ../../sda2
+lrwxrwxrwx 1 root root 10 2010-03-23 23:56 A00CB51F0CB4F180 -> ../../sda1
+lrwxrwxrwx 1 root root 10 2010-03-23 23:56 ec4dfd3a-5811-4967-a28d-ba76c8ad55a9 -> ../../hdb1
+```
