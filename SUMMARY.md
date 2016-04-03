@@ -327,6 +327,7 @@
    * [Create init script in CentOS 6](create_init_script_in_centos_6.md)
    * [Linux Change Disk Label Name on EXT2 / EXT3 / EXT4 File Systems](linux_change_disk_label_name_on_ext2__ext3__ext4_f.md)
    * [How to retrieve and change partition's UUID Universally Unique Identifier on linux](how_to_retrieve_and_change_partitions_uuid_univers.md)
+   * Using Text-Mode Serial Console Redirection
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
