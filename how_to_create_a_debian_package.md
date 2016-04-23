@@ -155,3 +155,16 @@ Note: We can use "dch -i" command to edit our changelog file.
   On Debian systems, the complete text of the GNU General  
   Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".  
 ```
+
+9.- Rules file
+The rules file invokes the original software Makefile script, as well as the debhelper suite of tools (with the prefix "dh_). These tools handle different tasks, including the creation of the .deb file (dh_builddeb).
+```sh
+ #!/usr/bin/make -f  
+ # -*- makefile -*-  
+ # Uncomment this to turn on verbose mode.  
+ #export DH_VERBOSE=1  
+ %:  
+     dh $@ 
+```
+
+The rules file can be run with different targets: clean (invokes make clean), build (invokes make) and binary (invokes make install). Usage of fakeroot command is recommended so you don't need to build your packages as root.
