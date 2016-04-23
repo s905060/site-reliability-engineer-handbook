@@ -277,3 +277,17 @@ This will also install the following dependencies:
 * libogg
 * libogg-devel
 * libvorbis
+
+
+## 6. Verify the Source and Binary RPM Files
+
+
+
+Once the rpmbuild is completed, you can verify the source rpm and binary rpm is created in the below directories.
+```sh
+# ls -l /root/rpmbuild/SRPMS/
+-rw-r--r-- 1 root root 1162483 Aug 25 15:46 icecast-2.3.3-0.src.rpm
+
+# ls -l /root/rpmbuild/RPMS/x86_64/
+-rw-r--r--. 1 root root 349181 Feb  4 12:54 icecast-2.3.3-0.x86_64.rpm
+```
