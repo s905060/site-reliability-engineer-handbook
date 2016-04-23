@@ -92,3 +92,9 @@ Now we have a new directory, called "debian", with all the necessary Debian file
  * copyright: copyright information
 
 As well, some other example files are created by dh_make, that we won't use at this point and can be deleted safely.
+
+```sh
+ root@debian-package:/opt/hello-0.1/debian# rm -f *.ex *.EX README.*  
+ root@debian-package:/opt/hello-0.1/debian# ls  
+ changelog compat control copyright docs rules source  
+```
