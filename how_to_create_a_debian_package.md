@@ -244,3 +244,11 @@ root@debian-package:/opt/hello-0.1# fakeroot debian/rules clean
    dh_builddeb  
  dpkg-deb: building package `hello' in `../hello_0.1-1_amd64.deb'.  
 ```
+
+At this point we have already our .deb file created!. We can see the shared libraries needed to build our program (in this case libc6, because of the stdio.h include) listed in our debian/hello.substvars file:
+
+```sh
+ root@debian-package:/opt/hello-1.0# cat debian/hello.substvars   
+ shlibs:Depends=libc6 (>= 2.2.5)  
+ misc:Depends=  
+```
