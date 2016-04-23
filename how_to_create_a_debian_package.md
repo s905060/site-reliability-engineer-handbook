@@ -58,3 +58,9 @@ Makefile:
  clean:  
       rm -f *.o hello_world   
  ```
+ 
+There are a two interesting things that we can see in our Makefile:
+* It uses DESTDIR variable to support the DESTDIR convention. 
+* Dpkg-buildflags is used to get C compiler options (CFLAGS) as well as linker options (LDFLAGS). This complies with the hardening requirements described in Debian documentation.
+
+On the other hand, if your software has any external dependencies, you would need to install those, so you can compile it successfully. Typically you would be able to install them using apt-get.
