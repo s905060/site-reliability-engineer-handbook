@@ -1,7 +1,8 @@
 # How to create a Debian package
 
 
-1.- The package creation process
+
+## 1.- The package creation process
 
 
 There are several tools involved in this process, used to build, check and sign the package. Debuild is a wrapper that will call them appropriately, so we don't need to do it manually. Here is a brief description of the tools it invokes:
@@ -9,20 +10,29 @@ There are several tools involved in this process, used to build, check and sign 
 * lintian: Dissects Debian packages trying to find bugs or policy violations.
 * debsign: Signs packages (.dsc and .changes files) using GPG or PGP.
 
-2.- Installing necessary software to build our packages
+
+## 2.- Installing necessary software to build our packages
+
+
 ```sh 
  apt-get install dh-make build-essential
  apt-get install devscripts fakeroot debootstrap pbuilder
 ```
 
-3.- Setting up environment variables
+
+## 3.- Setting up environment variables
+
+
 ```sh
  DEBEMAIL="your_email_address@domain.com"  
  DEBFULLNAME="Your Name"  
  export DEBEMAIL DEBFULLNAME  
 ```
 
-4.- Uncompressing our source code (format of the tar.gz file is software-version.tar.gz)
+
+## 4.- Uncompressing our source code (format of the tar.gz file is software-version.tar.gz)
+
+
 
 In my case, for the purpose of this little how-to, I will build the Debian package for a simple "hello world" program written in C.
 ```sh
@@ -65,7 +75,10 @@ There are a two interesting things that we can see in our Makefile:
 
 On the other hand, if your software has any external dependencies, you would need to install those, so you can compile it successfully. Typically you would be able to install them using apt-get.
 
-5.- Building the Debian files skeleton
+
+## 5.- Building the Debian files skeleton
+
+
 ```sh
  root@debian-package:/opt# cd hello-0.1  
  root@debian-package:/opt/hello-0.1# dh_make -f ../hello-0.1.tar.gz   
@@ -99,7 +112,10 @@ As well, some other example files are created by dh_make, that we won't use at t
  changelog compat control copyright docs rules source  
 ```
 
-6.- Control file
+
+## 6.- Control file
+
+
 The control file has two sections, the first part refers to the source package and the second to the binary one. More information about the different fields can be found in deb-control manual page.
 ```sh
  Source: hello  
@@ -118,7 +134,10 @@ The control file has two sections, the first part refers to the source package a
 
 The variable ${shlibs:Depends} will be substituted by the shared library dependencies needed to build our binary package. Those are calculated automatically by dh_shlibdeps, one of the tools of the debhelper suite.
 
-7.- Changelog file
+
+## 7.- Changelog file
+
+
 ```sh
  root@debian-package:/opt/hello-0.1# cat debian/changelog   
  hello (0.1-1) unstable; urgency=low  
@@ -130,7 +149,10 @@ ITP stands for Intend to Package and, for our package to be included in a Debian
 
 Note: We can use "dch -i" command to edit our changelog file.
 
-8.- Copyright file
+
+## 8.- Copyright file
+
+
 
 ```sh
  root@debian-package:/opt/hello-0.1# cat debian/copyright   
@@ -156,7 +178,10 @@ Note: We can use "dch -i" command to edit our changelog file.
   Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".  
 ```
 
-9.- Rules file
+
+## 9.- Rules file
+
+
 The rules file invokes the original software Makefile script, as well as the debhelper suite of tools (with the prefix "dh_). These tools handle different tasks, including the creation of the .deb file (dh_builddeb).
 ```sh
  #!/usr/bin/make -f  
@@ -253,7 +278,10 @@ At this point we have already our .deb file created!. We can see the shared libr
  misc:Depends=  
 ```
 
-10.- Inspecting package contents
+
+## 10.- Inspecting package contents
+
+
 ```sh
  root@debian-package:/opt/hello-0.1# find debian/hello  
  debian/hello  
@@ -280,11 +308,17 @@ At this point we have already our .deb file created!. We can see the shared libr
  -rw-r--r-- root/root    174 2014-06-30 23:51 ./usr/share/doc/hello/changelog.Debian.gz  
 ```
 
-11.- Package maintenance scripts
+
+## 11.- Package maintenance scripts
+
+
 
 It is possible to supply scripts that will run when the package is installed, upgraded or removed. These scripts are the control information files: preinst, postinst, prerm, postrm. And in some cases, may prompt the user if necessary, typically through a program such as debconf. More information on how to create this scripts can be found at the Debian Policy Manual.
 
-12.- Debuild
+
+## 12.- Debuild
+
+
 As mentioned before, we can use debuild to build the Debian binary and source packages, check it with lintian, and sign it with debsign. We can use "debuild -us -uc" to build the packages without signing the .changes file. More information can be found with "man debuild".
 
 ```sh
@@ -400,7 +434,9 @@ Both source and binary packages have been built now. One of Lintian checks warne
  -rw-r--r-- 1 root root 441 Jun 30 23:43 hello-0.1.tar.gz  
 ```
 
-13.- Extracting sources
+
+## 13.- Extracting sources
+
 Finally we can use dpkg-source command to extract the sources from our package:
 ```sh
  root@debian-package:/opt# dpkg-source -x hello_0.1-1.dsc
