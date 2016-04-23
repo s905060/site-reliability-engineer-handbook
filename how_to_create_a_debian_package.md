@@ -64,3 +64,30 @@ There are a two interesting things that we can see in our Makefile:
 * Dpkg-buildflags is used to get C compiler options (CFLAGS) as well as linker options (LDFLAGS). This complies with the hardening requirements described in Debian documentation.
 
 On the other hand, if your software has any external dependencies, you would need to install those, so you can compile it successfully. Typically you would be able to install them using apt-get.
+
+5.- Building the Debian files skeleton
+```sh
+ root@debian-package:/opt# cd hello-0.1  
+ root@debian-package:/opt/hello-0.1# dh_make -f ../hello-0.1.tar.gz   
+ Type of package: single binary, indep binary, multiple binary, library, kernel module, kernel patch?  
+  [s/i/m/l/k/n] s  
+ Maintainer name : Your name
+ Email-Address  : your_email_address@domain.com   
+ Date       : Tue, 24 Jun 2014 21:50:02 +0000  
+ Package Name   : hello  
+ Version     : 0.1  
+ License     : blank  
+ Type of Package : Single  
+ Hit <enter> to confirm:   
+ Done. Please edit the files in the debian/ subdirectory now. You should also  
+ check that the hello Makefiles install into $DESTDIR and not in / . 
+```
+
+As we only want to build a single binary package, I chose that option. Multiple binary package option would in fact, build multiple .deb packages.
+
+Now we have a new directory, called "debian", with all the necessary Debian files that we need to build our package, including examples. This includes important files like:
+ * control: includes meta data about the package
+ * rules: specifies how the package is going to be built
+ * changelog: history of the debian package
+ * copyright: copyright information
+As well, some other example files are created by dh_make, that we won't use at this point and can be deleted safely.
