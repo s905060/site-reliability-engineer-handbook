@@ -98,3 +98,22 @@ As well, some other example files are created by dh_make, that we won't use at t
  root@debian-package:/opt/hello-0.1/debian# ls  
  changelog compat control copyright docs rules source  
 ```
+
+6.- Control file
+The control file has two sections, the first part refers to the source package and the second to the binary one. More information about the different fields can be found in deb-control manual page.
+```sh
+ Source: hello  
+ Maintainer: Your Name <your_email_address@domain.com>   
+ Build-Depends: debhelper (>= 8.0.0)   
+ Standards-Version: 3.9.3   
+ Section: utils
+  
+ Package: hello  
+ Priority: extra  
+ Architecture: any   
+ Depends: ${shlibs:Depends}, ${misc:Depends}  
+ Description: Test package for hello world  
+  This software literally prints "hello world".
+```
+
+The variable ${shlibs:Depends} will be substituted by the shared library dependencies needed to build our binary package. Those are calculated automatically by dh_shlibdeps, one of the tools of the debhelper suite.
