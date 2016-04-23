@@ -179,3 +179,77 @@ In %build section, you will see the CFLAGS with configure options that defines t
 Below that line, you will see the make utility which determines the list of files needs to be compiled and compiles them appropriately.
 
 In % install section, the line below the %install that says “make install” is used to take the binaries compiled from the previous step and installs or copies them to the appropriate locations so they can be accessed.
+
+
+## 5. Create the RPM File using rpmbuild
+
+
+
+Once the SPEC file is ready, you can start building your rpm with rpm –b command. The –b option is used to perform all the phases of the build process. If you see any errors during this phase, then you need to resolve it before re-attempting again. The errors will be usually of library dependencies and you can download and install it as necessary.
+
+```sh
+# cd /root/rpmbuild/SPECS
+
+# rpmbuild -ba icecast.spec
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.Kohe4t
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd /root/rpmbuild/BUILD
++ rm -rf icecast-2.3.3
++ /usr/bin/gzip -dc /root/rpmbuild/SOURCES/icecast-2.3.3.tar.gz
++ /bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd icecast-2.3.3
++ /bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.ynm7H7
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd icecast-2.3.3
++ CFLAGS='-O2 -g'
++ ./configure --prefix=/usr --mandir=/usr/share/man --sysconfdir=/etc
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+..
+..
+..
+Wrote: /root/rpmbuild/SRPMS/icecast-2.3.3-0.src.rpm
+Wrote: /root/rpmbuild/RPMS/x86_64/icecast-2.3.3-0.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.dzahrv
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd icecast-2.3.3
++ '[' /root/rpmbuild/BUILDROOT/icecast-2.3.3-0.x86_64 '!=' / ']'
++ rm -rf /root/rpmbuild/BUILDROOT/icecast-2.3.3-0.x86_64
++ exit 0
+```
+
+Note: If you are using SuSE Linux, if rpmbuild is not available, try using “rpm -ba” to build the rpm package.
+
+During the above rpmbuild install, you might notice the following error messages:
+
+
+**Error 1: XSLT configuration could not be found**
+
+
+```sh
+checking for xslt-config... no
+configure: error: XSLT configuration could not be found
+error: Bad exit status from /var/tmp/rpm-tmp.8J0ynG (%build)
+RPM build errors:
+    Bad exit status from /var/tmp/rpm-tmp.8J0ynG (%build)
+```
+
+**Solution 1: Install libxstl-devel**
+
+For the xslt-config, you need to install libxstl-devel package as shown below.
+```sh
+yum install libxstl-devel
+```
+
