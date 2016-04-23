@@ -30,3 +30,23 @@ Let us see how to create a simple source and BIN RPM packages using a tar file.
 
 If you are new to rpm package, you may first want to understand how to use rpm command to install, upgrade and remove packages on CentOS or RedHat.
 
+
+## 1. Install rpm-build Package
+
+
+
+To build an rpm file based on the spec file that we just created, we need to use rpmbuild command.
+
+rpmbuild command is part of rpm-build package. Install it as shown show below.
+```sh
+# yum install rpm-build
+```
+
+rpm-build is dependent on the following package. If you don’t have these installed already, yum will automatically install these dependencies for you.
+
+```sh
+elfutils-libelf
+rpm
+rpm-libs
+rpm-python
+```
