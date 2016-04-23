@@ -385,3 +385,17 @@ root@debian-package:/opt/hello-0.1# debuild -us -uc
  Finished running lintian.  
 ```
 
+Both source and binary packages have been built now. One of Lintian checks warned us about our package not including a manual page for hello_world binary. Although it is just a reminder, more information about this warning can be displayed using "lintian-info -t lintian_tag" command. In our case lintian_tag is "binary-without-manpage". 
+
+```sh
+ root@debian-package:/opt/hello-0.1# ls -l ../  
+ total 32  
+ drwxr-xr-x 3 root root 4096 Jul 2 03:07 hello-0.1  
+ -rw-r--r-- 1 root root 3020 Jul 2 03:09 hello_0.1-1_amd64.build  
+ -rw-r--r-- 1 root root 1407 Jul 2 03:08 hello_0.1-1_amd64.changes  
+ -rw-r--r-- 1 root root 3338 Jul 2 03:08 hello_0.1-1_amd64.deb  
+ -rw-r--r-- 1 root root 1378 Jul 2 03:07 hello_0.1-1.debian.tar.gz  
+ -rw-r--r-- 1 root root 735 Jul 2 03:07 hello_0.1-1.dsc  
+ -rw-r--r-- 1 root root 441 Jun 30 23:43 hello_0.1.orig.tar.gz  
+ -rw-r--r-- 1 root root 441 Jun 30 23:43 hello-0.1.tar.gz  
+```
