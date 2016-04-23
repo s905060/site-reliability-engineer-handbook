@@ -168,3 +168,79 @@ The rules file invokes the original software Makefile script, as well as the deb
 ```
 
 The rules file can be run with different targets: clean (invokes make clean), build (invokes make) and binary (invokes make install). Usage of fakeroot command is recommended so you don't need to build your packages as root.
+
+```sh
+root@debian-package:/opt/hello-0.1# fakeroot debian/rules clean  
+ dh clean   
+   dh_testdir  
+   dh_auto_clean  
+ make[1]: Entering directory `/opt/hello-0.1'  
+ rm -f *.o hello_world   
+ make[1]: Leaving directory `/opt/hello-0.1'  
+   dh_clean  
+ root@debian-package:/opt/hello-0.1# fakeroot debian/rules build  
+ dh build   
+   dh_testdir  
+   dh_auto_configure  
+   dh_auto_build  
+ make[1]: Entering directory `/opt/hello-0.1'  
+ cc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  -c -o hello_world.o hello_world.c  
+ cc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -o hello_world hello_world.o  
+ make[1]: Leaving directory `/opt/hello-0.1'  
+   dh_auto_test  
+ root@debian-package:/opt/hello-0.1# fakeroot debian/rules binary  
+ dh binary   
+   dh_testroot  
+   dh_prep  
+   dh_installdirs  
+   dh_auto_install  
+ make[1]: Entering directory `/opt/hello-0.1'  
+ mkdir -p /opt/hello-0.1/debian/hello/usr//bin  
+ cp hello_world /opt/hello-0.1/debian/hello/usr//bin  
+ chmod 755 /opt/hello-0.1/debian/hello/usr//bin/hello_world  
+ make[1]: Leaving directory `/opt/hello-0.1'  
+   dh_install  
+   dh_installdocs  
+   dh_installchangelogs  
+   dh_installexamples  
+   dh_installman  
+   dh_installcatalogs  
+   dh_installcron  
+   dh_installdebconf  
+   dh_installemacsen  
+   dh_installifupdown  
+   dh_installinfo  
+   dh_pysupport  
+ dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p  
+   dh_installinit  
+   dh_installmenu  
+   dh_installmime  
+   dh_installmodules  
+   dh_installlogcheck  
+   dh_installlogrotate  
+   dh_installpam  
+   dh_installppp  
+   dh_installudev  
+   dh_installwm  
+   dh_installxfonts  
+   dh_installgsettings  
+   dh_bugfiles  
+   dh_ucf  
+   dh_lintian  
+   dh_gconf  
+   dh_icons  
+   dh_perl  
+   dh_usrlocal  
+   dh_link  
+   dh_compress  
+   dh_fixperms  
+   dh_strip  
+   dh_makeshlibs  
+   dh_shlibdeps  
+   dh_installdeb  
+   dh_gencontrol  
+ dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe  
+   dh_md5sums  
+   dh_builddeb  
+ dpkg-deb: building package `hello' in `../hello_0.1-1_amd64.deb'.  
+```
