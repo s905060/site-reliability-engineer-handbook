@@ -252,3 +252,136 @@ At this point we have already our .deb file created!. We can see the shared libr
  shlibs:Depends=libc6 (>= 2.2.5)  
  misc:Depends=  
 ```
+
+10.- Inspecting package contents
+```sh
+ root@debian-package:/opt/hello-0.1# find debian/hello  
+ debian/hello  
+ debian/hello/DEBIAN  
+ debian/hello/DEBIAN/control  
+ debian/hello/DEBIAN/md5sums  
+ debian/hello/usr  
+ debian/hello/usr/bin  
+ debian/hello/usr/bin/hello_world  
+ debian/hello/usr/share  
+ debian/hello/usr/share/doc  
+ debian/hello/usr/share/doc/hello  
+ debian/hello/usr/share/doc/hello/copyright  
+ debian/hello/usr/share/doc/hello/changelog.Debian.gz  
+ root@debian-package:/opt/hello-0.1# dpkg --contents ../hello_0.1-1_amd64.deb   
+ drwxr-xr-x root/root     0 2014-07-02 02:07 ./  
+ drwxr-xr-x root/root     0 2014-07-02 02:07 ./usr/  
+ drwxr-xr-x root/root     0 2014-07-02 02:07 ./usr/bin/  
+ -rwxr-xr-x root/root   6160 2014-07-02 02:07 ./usr/bin/hello_world  
+ drwxr-xr-x root/root     0 2014-07-02 02:07 ./usr/share/  
+ drwxr-xr-x root/root     0 2014-07-02 02:07 ./usr/share/doc/  
+ drwxr-xr-x root/root     0 2014-07-02 02:07 ./usr/share/doc/hello/  
+ -rw-r--r-- root/root    940 2014-07-02 01:12 ./usr/share/doc/hello/copyright  
+ -rw-r--r-- root/root    174 2014-06-30 23:51 ./usr/share/doc/hello/changelog.Debian.gz  
+```
+
+11.- Package maintenance scripts
+
+It is possible to supply scripts that will run when the package is installed, upgraded or removed. These scripts are the control information files: preinst, postinst, prerm, postrm. And in some cases, may prompt the user if necessary, typically through a program such as debconf. More information on how to create this scripts can be found at the Debian Policy Manual.
+
+12.- Debuild
+As mentioned before, we can use debuild to build the Debian binary and source packages, check it with lintian, and sign it with debsign. We can use "debuild -us -uc" to build the packages without signing the .changes file. More information can be found with "man debuild".
+
+```sh
+root@debian-package:/opt/hello-0.1# debuild -us -uc  
+  dpkg-buildpackage -rfakeroot -D -us -uc  
+ dpkg-buildpackage: warning: using a gain-root-command while being root  
+ dpkg-buildpackage: source package hello  
+ dpkg-buildpackage: source version 0.1-1  
+ dpkg-buildpackage: source changed by Your Name <your_email_address@domain.com>  
+  dpkg-source --before-build hello-0.1  
+ dpkg-buildpackage: host architecture amd64  
+  fakeroot debian/rules clean  
+ dh clean   
+   dh_testdir  
+   dh_auto_clean  
+ make[1]: Entering directory `/opt/hello-0.1'  
+ rm -f *.o hello_world   
+ make[1]: Leaving directory `/opt/hello-0.1'  
+   dh_clean  
+  dpkg-source -b hello-0.1  
+ dpkg-source: info: using source format `3.0 (quilt)'  
+ dpkg-source: info: building hello using existing ./hello_0.1.orig.tar.gz  
+ dpkg-source: info: building hello in hello_0.1-1.debian.tar.gz  
+ dpkg-source: info: building hello in hello_0.1-1.dsc  
+  debian/rules build  
+ dh build   
+   dh_testdir  
+   dh_auto_configure  
+   dh_auto_build  
+ make[1]: Entering directory `/opt/hello-0.1'  
+ cc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  -c -o hello_world.o hello_world.c  
+ cc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wl,-z,relro -o hello_world hello_world.o  
+ make[1]: Leaving directory `/opt/hello-0.1'  
+   dh_auto_test  
+  fakeroot debian/rules binary  
+ dh binary   
+   dh_testroot  
+   dh_prep  
+   dh_installdirs  
+   dh_auto_install  
+ make[1]: Entering directory `/opt/hello-0.1'  
+ mkdir -p /opt/hello-0.1/debian/hello/usr//bin  
+ cp hello_world /opt/hello-0.1/debian/hello/usr//bin  
+ chmod 755 /opt/hello-0.1/debian/hello/usr//bin/hello_world  
+ make[1]: Leaving directory `/opt/hello-0.1'  
+   dh_install  
+   dh_installdocs  
+   dh_installchangelogs  
+   dh_installexamples  
+   dh_installman  
+   dh_installcatalogs  
+   dh_installcron  
+   dh_installdebconf  
+   dh_installemacsen  
+   dh_installifupdown  
+   dh_installinfo  
+   dh_pysupport  
+ dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p  
+   dh_installinit  
+   dh_installmenu  
+   dh_installmime  
+   dh_installmodules  
+   dh_installlogcheck  
+   dh_installlogrotate  
+   dh_installpam  
+   dh_installppp  
+   dh_installudev  
+   dh_installwm  
+   dh_installxfonts  
+   dh_installgsettings  
+   dh_bugfiles  
+   dh_ucf  
+   dh_lintian  
+   dh_gconf  
+   dh_icons  
+   dh_perl  
+   dh_usrlocal  
+   dh_link  
+   dh_compress  
+   dh_fixperms  
+   dh_strip  
+   dh_makeshlibs  
+   dh_shlibdeps  
+   dh_installdeb  
+   dh_gencontrol  
+ dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe  
+   dh_md5sums  
+   dh_builddeb  
+ dpkg-deb: building package `hello' in `../hello_0.1-1_amd64.deb'.  
+  dpkg-genchanges >../hello_0.1-1_amd64.changes  
+ dpkg-genchanges: warning: missing Priority for source files  
+ dpkg-genchanges: including full source code in upload  
+  dpkg-source --after-build hello-0.1  
+ dpkg-buildpackage: full upload (original source is included)  
+ Now running lintian...  
+ warning: the authors of lintian do not recommend running it with root privileges!  
+ W: hello: binary-without-manpage usr/bin/hello_world  
+ Finished running lintian.  
+```
+
