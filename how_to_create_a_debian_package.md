@@ -117,3 +117,41 @@ The control file has two sections, the first part refers to the source package a
 ```
 
 The variable ${shlibs:Depends} will be substituted by the shared library dependencies needed to build our binary package. Those are calculated automatically by dh_shlibdeps, one of the tools of the debhelper suite.
+
+7.- Changelog file
+```sh
+ root@debian-package:/opt/hello-0.1# cat debian/changelog   
+ hello (0.1-1) unstable; urgency=low  
+  * Initial release (Closes: #100) # there was no previous ITP  
+  -- Your Name <your_email_address@domain.com> Wed, 25 Jun 2014 19:50:08 +0000  
+```
+
+ITP stands for Intend to Package and, for our package to be included in a Debian distribution, the changelog file should close an existing bug. For our example we closed bug #100, this way we won't see lintian warnings requiring for this number later.
+
+Note: We can use "dch -i" command to edit our changelog file.
+
+8.- Copyright file
+
+```sh
+ root@debian-package:/opt/hello-0.1# cat debian/copyright   
+ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/  
+ Upstream-Name: hello  
+ Files: *  
+ Copyright: 2014 Your Name <your_email_address@domain.com>  
+ License: GPL-2  
+  This package is free software; you can redistribute it and/or modify  
+  it under the terms of the GNU General Public License as published by  
+  the Free Software Foundation; either version 2 of the License, or  
+  (at your option) any later version.  
+  .  
+  This package is distributed in the hope that it will be useful,  
+  but WITHOUT ANY WARRANTY; without even the implied warranty of  
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the  
+  GNU General Public License for more details.  
+  .  
+  You should have received a copy of the GNU General Public License  
+  along with this program. If not, see <http://www.gnu.org/licenses/>  
+  .  
+  On Debian systems, the complete text of the GNU General  
+  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".  
+```
