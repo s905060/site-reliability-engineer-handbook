@@ -399,3 +399,13 @@ Both source and binary packages have been built now. One of Lintian checks warne
  -rw-r--r-- 1 root root 441 Jun 30 23:43 hello_0.1.orig.tar.gz  
  -rw-r--r-- 1 root root 441 Jun 30 23:43 hello-0.1.tar.gz  
 ```
+
+13.- Extracting sources
+Finally we can use dpkg-source command to extract the sources from our package:
+```sh
+ root@debian-package:/opt# dpkg-source -x hello_0.1-1.dsc
+ dpkg-source: warning: extracting unsigned source package (hello_0.1-1.dsc)  
+ dpkg-source: info: extracting hello in hello-0.1  
+ dpkg-source: info: unpacking hello_0.1.orig.tar.gz  
+ dpkg-source: info: unpacking hello_0.1-1.debian.tar.gz  
+```
