@@ -291,3 +291,37 @@ Once the rpmbuild is completed, you can verify the source rpm and binary rpm is 
 # ls -l /root/rpmbuild/RPMS/x86_64/
 -rw-r--r--. 1 root root 349181 Feb  4 12:54 icecast-2.3.3-0.x86_64.rpm
 ```
+
+
+## 7. Install the RPM File to Verify
+
+
+
+As a final step, you can install the binary rpm to verify that it installs successfully and all the dependencies are resolved.
+
+```sh
+# rpm -ivvh /root/rpmbuild/RPMS/x86_64/icecast-2.3.3-0.x86_64.rpm
+D: ============== /root/rpmbuild/RPMS/x86_64/icecast-2.3.3-0.x86_64.rpm
+D: loading keyring from pubkeys in /var/lib/rpm/pubkeys/*.key
+D: couldn't find any keys in /var/lib/rpm/pubkeys/*.key
+D: loading keyring from rpmdb
+D: opening  db environment /var/lib/rpm cdb:mpool:joinenv
+D: opening  db index       /var/lib/rpm/Packages rdonly mode=0x0
+D:  read h#     210 Header sanity check: OK
+D: added key gpg-pubkey-c105b9de-4e0fd3a3 to keyring
+D: Using legacy gpg-pubkey(s) from rpmdb
+D: Expected size:       349181 = lead(96)+sigs(180)+pad(4)+data(348901)
+D:   Actual size:       349181
+D: ========== relocations
+D:      added binary package [0]
+D: found 0 source and 1 binary packages
+D: ========== +++ icecast-2.3.3-0 x86_64/linux 0x2
+..
+..
+```
+
+After the above installation, you can verify that your custom created rpm file was installed successfully as shown below.
+```sh
+# rpm -qa icecast
+icecast-2.3.3-0.x86_64
+```
