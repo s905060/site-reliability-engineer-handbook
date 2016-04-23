@@ -173,3 +173,9 @@ cd /usr/src/redhat/BUILD/icecast
 chown -R root.root .
 chmod -R a+rX,g-w,o-w .
 ```
+
+In %build section, you will see the CFLAGS with configure options that defines the options that can be using during RPM installation and the prefix option , mandatory directory to be present for the installation and sysconfig directory under which the system files needs to be copied over.
+
+Below that line, you will see the make utility which determines the list of files needs to be compiled and compiles them appropriately.
+
+In % install section, the line below the %install that says “make install” is used to take the binaries compiled from the previous step and installs or copies them to the appropriate locations so they can be accessed.
