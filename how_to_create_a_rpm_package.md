@@ -106,3 +106,5 @@ In this step, we direct RPM in the build process by creating a spec file. The sp
 6. %install – the % install section is also executed as sh script just like %prep and %build. This is the step that is used for the installation.
 7. %files – This section contains the list of files that are part of the package. If the files are not part of the %files section then it wont be available in the package. Complete paths are required and you can set the attributes and ownership of the files in this section.
 8. %clean – This section instructs the RPM to clean up any files that are not part of the application’s normal build area. Lets say for an example, If the application creates a temporary directory structure in /tmp/ as part of its build, it will not be removed. By adding a sh script in %clean section, the directory can be removed after the build process is completed.
+
+Here is the SPEC file that I created for the icecast application to build an RPM file.
