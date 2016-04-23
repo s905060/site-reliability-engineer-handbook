@@ -37,3 +37,21 @@ Now let’s start writing a Init script. First we need to add a header to the In
 **Provides** specifies what is the facility provided by this Init script. The name should be unique.
 
 **Required-start** specifies the set of facilities that should be started before starting this service. In our case, postgresql and networking has to be started before starting my_daemon. Remember, here ‘postgresql’ will have a separate Init script which says ‘Provides: postgresql’. This ensures dependency based booting. Based on this dependency, the ‘inserv’ command or ‘update-rc.d’ will put the entries in run-level directories with appropriate sequence number. For example, the entries can be like follows
+
+```shell
+/etc/rc2.d/S12postgresql
+/etc/rc2.d/S03networking
+/etc/rc2.d/S13my_daemon
+```
+
+Which indicates, networking will be started first, then postgresql and then my_daemon.
+
+To know more about run-levels, refer to stage#6 (which is runlevel) of Linux boot process.
+
+**Required-Stop** specifies the list of facilities that has to be stopped only after stopping this facility. Here only after my_daemon is stopped, the postgresql and networking facilities will be stopped.
+
+**Default-Start** Default-Stop defines the run-levels in which the service has to be started or stopped.
+
+**Short-Description** and **Description** are used to give some description with regard the to the facility provided. Description can span across multiple lines, Short-Description is limited to single line.
+
+Let’s look at an actual Init script.
