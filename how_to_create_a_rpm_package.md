@@ -253,3 +253,27 @@ For the xslt-config, you need to install libxstl-devel package as shown below.
 yum install libxstl-devel
 ```
 
+This will also install the following dependencies:
+
+* libgcrypt
+* libgcrypt-devel
+* libgpg-error-devel
+
+**Error 2: libvorbis Error**
+
+checking for libvorbis... configure: error: must have Ogg Vorbis v1.0 or above installed
+error: Bad exit status from /var/tmp/rpm-tmp.m4Gk3f (%build)
+
+**Solution 2: Install libvorbis-devel**
+
+For the Ogg Vorbis v1.0, install the libvorbis-devel package as shown below:
+
+```sh
+yum install libvorbis-devel
+```
+
+This will also install the following dependencies:
+
+* libogg
+* libogg-devel
+* libvorbis
