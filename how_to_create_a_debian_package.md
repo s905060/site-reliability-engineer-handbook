@@ -90,4 +90,5 @@ Now we have a new directory, called "debian", with all the necessary Debian file
  * rules: specifies how the package is going to be built
  * changelog: history of the debian package
  * copyright: copyright information
+
 As well, some other example files are created by dh_make, that we won't use at this point and can be deleted safely.
