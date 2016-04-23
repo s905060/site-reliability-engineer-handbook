@@ -329,7 +329,7 @@
    * [How to retrieve and change partition's UUID Universally Unique Identifier on linux](how_to_retrieve_and_change_partitions_uuid_univers.md)
    * [Using Text-Mode Serial Console Redirection](using_text-mode_serial_console_redirection.md)
    * [How to Write Linux Init Scripts Based on LSB Init Standard](how_to_write_linux_init_scripts_based_on_lsb_init_.md)
-   * How to create a Debian package
+   * [How to create a Debian package](how_to_create_a_debian_package.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
