@@ -73,3 +73,20 @@ If you want to use your own directory structure instead of the /root/rpmbuild, y
 
 * Use –buildroot option and specify the custom directory during the rpmbuild
 * Specify the topdir parameter in the rpmrc file or rpmmacros file.
+
+
+## 3. Download Source Tar File
+
+
+
+Next, download the source tar file for the package that you want to build and save it under SOURCES directory.
+
+For this example, I’ve used the source code of icecase open source application, which is a server software for streaming multi-media. But, the steps are exactly the same for building RPM for any other application. You just have to download the corresponding source code for the RPM that you are trying to build.
+```sh
+# cd /root/rpmbuild/SOURCES/
+
+# wget http://downloads.xiph.org/releases/icecast/icecast-2.3.3.tar.gz
+
+# ls -l
+-rw-r--r--. 1 root root 1161774 Jun 11  2012 icecast-2.3.3.tar.gz
+```
