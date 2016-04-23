@@ -50,3 +50,26 @@ rpm
 rpm-libs
 rpm-python
 ```
+
+
+## 2. RPM Build Directories
+
+
+
+rpm-build will automatically create the following directory structures that will be used during the RPM build.
+```sh
+# ls -lF /root/rpmbuild/
+drwxr-xr-x. 2 root root 4096 Feb  4 12:21 BUILD/
+drwxr-xr-x. 2 root root 4096 Feb  4 12:21 BUILDROOT/
+drwxr-xr-x. 2 root root 4096 Feb  4 12:21 RPMS/
+drwxr-xr-x. 2 root root 4096 Feb  4 12:21 SOURCES/
+drwxr-xr-x. 2 root root 4096 Feb  4 12:21 SPECS/
+drwxr-xr-x. 2 root root 4096 Feb  4 12:21 SRPMS/
+```
+
+Note: The above directory structure is for both CentOS and RedHat when using rpmbuild package. You can also use /usr/src/redhat directory, but you need to change the topdir parameter accordingly during the rpm build. If you are doing this on SuSE Enterprise Linux, use /usr/src/packages directory.
+
+If you want to use your own directory structure instead of the /root/rpmbuild, you can use one of the following option:
+
+* Use –buildroot option and specify the custom directory during the rpmbuild
+* Specify the topdir parameter in the rpmrc file or rpmmacros file.
