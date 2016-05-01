@@ -57,3 +57,21 @@ Example:
 >>> filter(d, 'abcd')
 'bcd'
 ```
+
+
+## zip
+
+zip(seq1 [, seq2 [...]]) -> [(seq1[0], seq2[0] ...), (...)]
+
+Return a list of tuples, where each tuple contains the i-th element
+from each of the argument sequences.  The returned list is truncated
+
+in length to the length of the shortest argument sequence.
+
+Example: 
+```python
+>>> 
+zip( range(5), range(1,20,2) )
+
+[(0, 1), (1, 3), (2, 5), (3, 7), (4, 9)]
+```
