@@ -36,3 +36,24 @@ Example:
 >>> reduce(lambda x, y: x+y, range(0,10), 10)
 55
 ```
+
+
+## filter
+
+Namespace:  Python builtin
+Docstring:
+filter(function or None, sequence) -> list, tuple, or string
+
+Return those items of sequence for which function(item) is true.  If
+function is None, return the items that are true.  If sequence is a tuple
+
+or string, return the same type, else return a list.
+Example: 
+```python
+>>> filter(lambda d: d != 'a', 'abcd')　　＃ filter out letter 'a'。
+'bcd'
+>>> def d(x):　＃ not using lambda function, instead using a predefined function 
+ 　　　　　return True if x != 'a' else False
+>>> filter(d, 'abcd')
+'bcd'
+```
