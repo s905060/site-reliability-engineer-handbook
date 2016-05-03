@@ -156,7 +156,7 @@
        * [Life cycle of a Thread (Thread States)](life_cycle_of_a_thread_thread_states.md)
        * [Understand JVM GC](understand_jvm_gc.md)
        * [JVM Monitoring tool](jvm_monitoring_tool.md)
-       * Enable Garbage Collection Logging
+       * [Enable Garbage Collection Logging](enable_garbage_collection_logging.md)
 * [Linux Command Line Tool](linux_command_line_tool.md)
    * [Basic](basic.md)
    * [DIFF](diff.md)
