@@ -428,6 +428,7 @@
        * [Visual Index](visual_index.md)
        * [Puppet Module Cheat Sheet](puppet_module_cheat_sheet.md)
        * [Core Types Cheat Sheet](core_types_cheat_sheet.md)
+       * Iterate over datastructures in Puppet manifests
    * [Salt](salt.md)
        * [Salt use notes](salt_use_notes.md)
 * [Networking Devices](networking_devices.md)
