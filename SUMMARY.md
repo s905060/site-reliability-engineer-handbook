@@ -349,6 +349,7 @@
        * [MySQL Best Practices](mysql_best_practices.md)
        * [SQL Views](sql_views.md)
        * [The \G modifier in the MySQL command line client](the_g_modifier_in_the_mysql_command_line_client.md)
+       * 20 MySQL (Mysqladmin) Commands for Database Administration in Linux
    * [Postgresql](postgresql.md)
        * [Postgresql Import Export Table](postgresql_import_export_table.md)
        * [Practical PostgreSQL](practical_postgresql.md)
