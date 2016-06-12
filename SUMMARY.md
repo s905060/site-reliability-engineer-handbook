@@ -248,6 +248,7 @@
    * [ls](ls.md)
    * [Comm](comm.md)
    * [taskset](taskset.md)
+   * fio
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
