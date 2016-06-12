@@ -79,17 +79,30 @@ fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=randwrite --bs=128k --di
 fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=randwrite --bs=256k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
 
 
-# random read, 8K block, 16 jobs
+# random write, 8K block, 16 jobs
 fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=randread --bs=8k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
 
-# random read, 64K block, 16 jobs
+# random write, 64K block, 16 jobs
 fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=randread --bs=64k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
 
-# random read, 128K block, 16 jobs
+# random write, 128K block, 16 jobs
 fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=randread --bs=128k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
 
-# random read, 256K block, 16 jobs
+# random write, 256K block, 16 jobs
 fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=randread --bs=256k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
+
+
+# sequential write, 8K block, 16 jobs
+fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=write --bs=8k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
+
+# sequential write, 64K block, 16 jobs
+fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=write --bs=64k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
+
+# sequential write, 128K block, 16 jobs
+fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=write --bs=128k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
+
+# sequential write, 256K block, 16 jobs
+fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=write --bs=256k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
 
 
 # sequential read, 8K block, 16 jobs
@@ -103,4 +116,5 @@ fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=read --bs=128k --direct=
 
 # sequential read, 256K block, 16 jobs
 fio --name=/tmp/fio --ioengine=libaio --iodepth=128 -rw=read --bs=256k --direct=1 --size=10G --numjobs=16 --runtime=30 --group_reporting
+
 ```
