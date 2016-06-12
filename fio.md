@@ -116,26 +116,4 @@ fio --name=/dev/sdb --ioengine=libaio --iodepth=128 -rw=read --bs=128k --direct=
 
 # sequential read, 256K block, 16 jobs
 fio --name=/dev/sdb --ioengine=libaio --iodepth=128 -rw=read --bs=256k --direct=1 --size=1G --numjobs=12 --runtime=30 --group_reporting
-
-
-# sequential write, 128K block, 16 jobs
-fio --name=/dev/sdb --directory=/tmp/fio --ioengine=libaio --iodepth=128 -rw=write --bs=128k --direct=1 --size=1G --numjobs=16 --runtime=30 --group_reporting
-
-# sequential write, 256K block, 16 jobs
-fio --name=/dev/sdb --directory=/tmp/fio --ioengine=libaio --iodepth=128 -rw=write --bs=256k --direct=1 --size=1G --numjobs=16 --runtime=30 --group_reporting
-
-
-# sequential read, 8K block, 16 jobs
-fio --name=/dev/sdb --directory=/tmp/fio --ioengine=libaio --iodepth=128 -rw=read --bs=8k --direct=1 --size=1G --numjobs=16 --runtime=30 --group_reporting
-
-# sequential read, 64K block, 16 jobs
-fio --name=/dev/sdb --directory=/tmp/fio --ioengine=libaio --iodepth=128 -rw=read --bs=64k --direct=1 --size=1G --numjobs=16 --runtime=30 --group_reporting
-
-# sequential read, 128K block, 16 jobs
-fio --name=/dev/sdb --directory=/tmp/fio --ioengine=libaio --iodepth=128 -rw=read --bs=128k --direct=1 --size=1G --numjobs=16 --runtime=30 --group_reporting
-
-# sequential read, 256K block, 16 jobs
-fio --name=/dev/sdb --directory=/tmp/fio --ioengine=libaio --iodepth=128 -rw=read --bs=256k --direct=1 --size=1G --numjobs=16 --runtime=30 --group_reporting
-
-
 ```
