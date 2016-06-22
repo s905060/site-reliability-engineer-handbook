@@ -172,3 +172,56 @@ numChildren = 0
 
 The output is similar to normal get command, but it will wait for znode changes in the background. <Start here>
 
+
+## Set Data
+
+
+Set the data of the specified znode. Once you finish this set operation, you can check the data using the get CLI command.
+
+Syntax
+```bash
+set /path /data
+```
+
+Sample
+```bash
+set /SecondZnode Data-updated
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 1] get /SecondZnode “Data-updated”
+cZxid = 0x82
+ctime = Tue Sep 29 16:29:50 IST 2015
+mZxid = 0x83
+mtime = Tue Sep 29 16:29:50 IST 2015
+pZxid = 0x82
+cversion = 0
+dataVersion = 1
+aclVersion = 0
+ephemeralOwner = 0x15018b47db00000
+dataLength = 14
+numChildren = 0
+```
+
+If you assigned watch option in get command (as in previous command), then the output will be similar as shown below −
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 1] get /FirstZnode “Mysecondzookeeper-app”
+
+WATCHER: :
+
+WatchedEvent state:SyncConnected type:NodeDataChanged path:/FirstZnode
+cZxid = 0x7f
+ctime = Tue Sep 29 16:15:47 IST 2015
+mZxid = 0x84
+mtime = Tue Sep 29 17:14:47 IST 2015
+pZxid = 0x7f
+cversion = 0
+dataVersion = 1
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 23
+numChildren = 0
+```
