@@ -81,3 +81,60 @@ Created /SecondZnode
 
 Remember when a client connection is lost, the ephemeral znode will be deleted. You can try it by quitting the ZooKeeper CLI and then re-opening the CLI.
 
+
+## Get Data
+
+
+It returns the associated data of the znode and metadata of the specified znode. You will get information such as when the data was last modified, where it was modified, and information about the data. This CLI is also used to assign watches to show notification about the data.
+
+Syntax
+```bash
+get /path 
+```
+
+Sample
+```bash
+get /FirstZnode
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 1] get /FirstZnode
+“Myfirstzookeeper-app”
+cZxid = 0x7f
+ctime = Tue Sep 29 16:15:47 IST 2015
+mZxid = 0x7f
+mtime = Tue Sep 29 16:15:47 IST 2015
+pZxid = 0x7f
+cversion = 0
+dataVersion = 0
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 22
+numChildren = 0
+```
+
+**To access a sequential znode, you must enter the full path of the znode.**
+
+Sample
+```bash
+get /FirstZnode0000000023
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 1] get /FirstZnode0000000023
+“Second-data”
+cZxid = 0x80
+ctime = Tue Sep 29 16:25:47 IST 2015
+mZxid = 0x80
+mtime = Tue Sep 29 16:25:47 IST 2015
+pZxid = 0x80
+cversion = 0
+dataVersion = 0
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 13
+numChildren = 0
+```
+
