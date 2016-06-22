@@ -299,3 +299,27 @@ ephemeralOwner = 0x0
 dataLength = 23
 numChildren = 0
 ```
+
+
+## Remove a Znode
+
+Removes a specified znode and recursively all its children. This would happen only if such a znode is available.
+
+Syntax
+```bash
+rmr /path
+```
+
+Sample
+```bash
+rmr /FirstZnode
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 10] rmr /FirstZnode
+[zk: localhost:2181(CONNECTED) 11] get /FirstZnode
+Node does not exist: /FirstZnode
+```
+
+Delete (delete /path) command is similar to remove command, except the fact that it works only on znodes with no children.
