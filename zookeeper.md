@@ -138,3 +138,37 @@ dataLength = 13
 numChildren = 0
 ```
 
+
+## Watch
+
+Watches show a notification when the specified znode or znode’s children data changes. You can set a watch only in get command.
+
+Syntax
+```bash
+get /path [watch] 1
+```
+
+Sample
+```bash
+get /FirstZnode 1
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 1] get /FirstZnode 1
+“Myfirstzookeeper-app”
+cZxid = 0x7f
+ctime = Tue Sep 29 16:15:47 IST 2015
+mZxid = 0x7f
+mtime = Tue Sep 29 16:15:47 IST 2015
+pZxid = 0x7f
+cversion = 0
+dataVersion = 0
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 22
+numChildren = 0
+```
+
+The output is similar to normal get command, but it will wait for znode changes in the background. <Start here>
+
