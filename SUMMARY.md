@@ -420,7 +420,7 @@
    * [Kafka](kafka.md)
        * [Kafka Cheat Sheet](kafka_cheat_sheet.md)
    * [Scylla](scylla.md)
-   * Zookeeper
+   * [Zookeeper](zookeeper.md)
 * [Automation Tool](automation_tool.md)
    * [Ansible](ansible.md)
    * [Puppet](puppet.md)
