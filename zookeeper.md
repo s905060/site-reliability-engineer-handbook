@@ -248,3 +248,23 @@ created /FirstZnode/Child1
 [zk: localhost:2181(CONNECTED) 17] create /FirstZnode/Child2 “secondchildren”
 created /FirstZnode/Child2
 ```
+
+
+## List Children
+
+This command is used to list and display the children of a znode.
+
+Syntax
+```bash
+ls /path
+```
+
+Sample
+```bash
+ls /MyFirstZnode
+```
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 2] ls /MyFirstZnode
+[mysecondsubnode, myfirstsubnode]
+```
