@@ -225,3 +225,26 @@ ephemeralOwner = 0x0
 dataLength = 23
 numChildren = 0
 ```
+
+
+## Create Children / Sub-znode
+
+Creating children is similar to creating new znodes. The only difference is that the path of the child znode will have the parent path as well.
+
+Syntax
+```bash
+create /parent/path/subnode/path /data
+```
+
+Sample
+```bash
+create /FirstZnode/Child1 firstchildren
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 16] create /FirstZnode/Child1 “firstchildren”
+created /FirstZnode/Child1
+[zk: localhost:2181(CONNECTED) 17] create /FirstZnode/Child2 “secondchildren”
+created /FirstZnode/Child2
+```
