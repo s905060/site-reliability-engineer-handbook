@@ -268,3 +268,34 @@ Output
 [zk: localhost:2181(CONNECTED) 2] ls /MyFirstZnode
 [mysecondsubnode, myfirstsubnode]
 ```
+
+
+## Check Status
+
+Status describes the metadata of a specified znode. It contains details such as Timestamp, Version number, ACL, Data length, and Children znode.
+
+Syntax
+```bash
+stat /path
+```
+
+Sample
+```bash
+stat /FirstZnode
+```
+
+Output
+```bash
+[zk: localhost:2181(CONNECTED) 1] stat /FirstZnode
+cZxid = 0x7f
+ctime = Tue Sep 29 16:15:47 IST 2015
+mZxid = 0x7f
+mtime = Tue Sep 29 17:14:24 IST 2015
+pZxid = 0x7f
+cversion = 0
+dataVersion = 1
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 23
+numChildren = 0
+```
