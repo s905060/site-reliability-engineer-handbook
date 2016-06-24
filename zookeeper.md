@@ -1,5 +1,15 @@
 # Zookeeper
 
+
+
+## How to check zookeeper server status
+```
+$ /usr/lib/zookeeper/bin/zkServer.sh status
+JMX enabled by default
+Using config: /usr/lib/zookeeper/bin/../conf/zoo.cfg
+Mode: follower
+```
+
 ZooKeeper Command Line Interface (CLI) is used to interact with the ZooKeeper ensemble for development purpose. It is useful for debugging and working around with different options.
 
 To perform ZooKeeper CLI operations, first turn on your ZooKeeper server (“bin/zkServer.sh start”) and then, ZooKeeper client (“bin/zkCli.sh”). Once the client starts, you can perform the following operation −
