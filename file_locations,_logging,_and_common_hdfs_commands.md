@@ -101,3 +101,42 @@ Log files with the <.date> extension have the following format:
 When a .log file is rotated, the current date is appended to the file name; for example: hadoop-datanode- hdp121.localdomain.com.log.2013-02-08.
 
 Use these files to compare the past state of your cluster with the current state, to identify potential patterns.
+
+
+## Enabling Logging
+
+
+To enable logging, change the settings in the hadoop-env.cmd file. After modifying hadoop-env.cmd, recreate the NameNode service XML and then restart the NameNode.
+
+To enable audit logging, change the hdfs.audit.logger value to INFO,RFAAUDIT. Overwrite the NameNode service XML and restart the NameNode.
+
+1. Open the Hadoop Environment script, %HADOOP_HOME%\etc\hadoop\hadoop- env.cmd.
+
+2. Prepend the following text in the HADOOP_NAMENODE_OPTS definition, for example to enable Garbage Collection logging:
+
+```bash
+ -Xloggc:%HADOOP_LOG_DIR%/gc-namenode.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps
+```
+
+For example:
+
+```bash
+set HADOOP_NAMENODE_OPTS=-Xloggc:%HADOOP_LOG_DIR%/gc-namenode.log 
+-verbose:gc 
+-XX:+PrintGCDetails 
+-XX:+PrintGCTimeStamps 
+-XX:+PrintGCDateStamps 
+-Dhadoop.security.logger=%HADOOP_SECURITY_LOGGER% 
+-Dhdfs.audit.logger=%HDFS_AUDIT_LOGGER% %HADOOP_NAMENODE_OPTS%
+```
+
+3. Run the following command to recreate the NameNode service XML:
+
+```bash
+ %HADOOP_HOME%\bin\hdfs --service namenode > %HADOOP_HOME%\bin\namenode.xml
+```
+
+4. Verify that the NameNode Service XML was updated.
+
+5. Restart the NameNode service.
+
