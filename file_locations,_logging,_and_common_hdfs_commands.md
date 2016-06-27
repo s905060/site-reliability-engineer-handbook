@@ -133,3 +133,71 @@ set HADOOP_NAMENODE_OPTS=-Xloggc:%HADOOP_LOG_DIR%/gc-namenode.log
 4. Verify that the NameNode Service XML was updated.
 5. Restart the NameNode service.
 
+
+## Common HDFS Commands
+
+This section provides common HDFS commands to troubleshoot HDP deployment on Windows platform. An exhaustive list of HDFS commands is available here.
+
+1. **Get the Hadoop version:** Run the following command on your cluster host machine:
+```bash
+ hadoop version
+```
+2. **Check block information:** This command provides a directory listing and displays which node contains the block. Run this command on your HDFS cluster host machine to determine if a block is under-replicated.
+```bash
+ hdfs fsck / -blocks -locations -files 
+```
+You should see output similar to the following:
+```bash
+ FSCK started by hdfs from /10.0.3.15 for path / at Tue Feb 12 04:06:18 PST 2013 
+ / <dir> 
+ /apps <dir> 
+ /apps/hbase <dir> 
+ /apps/hbase/data <dir> 
+ /apps/hbase/data/-ROOT- <dir> 
+ /apps/hbase/data/-ROOT-/.tableinfo.0000000001 727 bytes, 1 block(s): 
+ Under replicated blk_-3081593132029220269_1008. 
+ Target Replicas is 3 but found 1 replica(s). 0. blk_-3081593132029220269_1008 
+ len=727 repl=1 [10.0.3.15:50010] 
+ /apps/hbase/data/-ROOT-/.tmp <dir> 
+ /apps/hbase/data/-ROOT-/70236052 <dir> 
+ /apps/hbase/data/-ROOT-/70236052/.oldlogs <dir> 
+ /apps/hbase/data/-ROOT-/70236052/.oldlogs/hlog.1360352391409 421 bytes, 1 block(s): Under
+ replicated blk_709473237440669041_1006. 
+ Target Replicas is 3 but found 1
+ replica(s). 0. blk_709473237440669041_1006 len=421 repl=1 [10.0.3.15:50010] 
+ ```
+3. **HDFS report:** Use this command to receive HDFS status. Execute the following command as the hadoop user:
+```bash
+ hdfs dfsadmin -report 
+```
+You should see output similar to the following:
+
+```
+-bash-4.1$ hadoop dfsadmin -report
+Safe mode is ON
+Configured Capacity: 11543003135 (10.75 GB)
+Present Capacity: 4097507328 (3.82 GB)
+DFS Remaining: 3914780672 (3.65 GB)
+DFS Used: 182726656 (174.26 MB)
+DFS Used%: 4.46%
+Under replicated blocks: 289
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+-------------------------------------------------
+Datanodes available: 1 (1 total, 0 dead)
+Name: 10.0.3.15:50010
+Decommission Status : Normal
+Configured Capacity: 11543003135 (10.75 GB)
+DFS Used: 182726656 (174.26 MB)
+Non DFS Used: 7445495807 (6.93 GB)
+DFS Remaining: 3914780672(3.65 GB)
+DFS Used%: 1.58%
+DFS Remaining%: 33.91%
+Last contact: Sat Feb 09 13:34:54 PST 2013
+```
+4. **Safemode:** Safemode is a state where no changes can be made to the blocks. HDFS cluster is in safemode state during start up because the cluster needs to validate all the blocks and their locations. Once validated, safemode is then disabled.
+The options for safemode command are: hdfs dfsadmin -safemode [enter | leave | get]
+To enter safemode, execute the following command on your NameNode host machine:
+```bash
+hdfs dfsadmin -safemode enter
+```
