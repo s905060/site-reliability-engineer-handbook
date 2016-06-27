@@ -410,6 +410,7 @@
        * [Hadoop Admin Cert](hadoop_admin_cert.md)
        * [Rack Awareness](rack_awareness.md)
        * [How do I know if my hadoop hdfs filesystem has corrupt blocks, and how do I fix it?](how_do_i_know_if_my_hadoop_hdfs_filesystem_has_cor.md)
+       * File Locations, Logging, and Common HDFS Commands
    * [HBase](hbase.md)
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
