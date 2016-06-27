@@ -113,13 +113,10 @@ To enable audit logging, change the hdfs.audit.logger value to INFO,RFAAUDIT. Ov
 1. Open the Hadoop Environment script, %HADOOP_HOME%\etc\hadoop\hadoop- env.cmd.
 
 2. Prepend the following text in the HADOOP_NAMENODE_OPTS definition, for example to enable Garbage Collection logging:
-
 ```bash
  -Xloggc:%HADOOP_LOG_DIR%/gc-namenode.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps
 ```
-
 For example:
-
 ```bash
 set HADOOP_NAMENODE_OPTS=-Xloggc:%HADOOP_LOG_DIR%/gc-namenode.log 
 -verbose:gc 
@@ -129,14 +126,10 @@ set HADOOP_NAMENODE_OPTS=-Xloggc:%HADOOP_LOG_DIR%/gc-namenode.log
 -Dhadoop.security.logger=%HADOOP_SECURITY_LOGGER% 
 -Dhdfs.audit.logger=%HDFS_AUDIT_LOGGER% %HADOOP_NAMENODE_OPTS%
 ```
-
 3. Run the following command to recreate the NameNode service XML:
-
 ```bash
  %HADOOP_HOME%\bin\hdfs --service namenode > %HADOOP_HOME%\bin\namenode.xml
 ```
-
 4. Verify that the NameNode Service XML was updated.
-
 5. Restart the NameNode service.
 
