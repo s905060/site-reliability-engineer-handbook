@@ -57,6 +57,14 @@ The important step in data node commission process is to run the Cluster Balance
 
 Balancer attempts to provide a balance to a certain threshold among data nodes by copying block data from older nodes to newly commissioned nodes.
 
+You can adjust the network bandwidth used by the balancer, by running the dfsadmin -setBalanacerBandwidth command before you run the balancer; for example:
+```bash
+hdfs dfsadmin -setBalanacerBandwidth newbandwidth
+```
+where newbandwidth is the maximum amount of network bandwidth, in bytes per second, that each DataNode can use during the balancing operation. For more information about the bandwidth command, see this page.
+
+The balancer can take a long time to run, especially if you are running it for the first time, or do not run it regularly.
+
 So, this is how you can do – Commissioning and Decommissioning Nodes in a Hadoop Cluster.
 
 Got a question for us? Please mention it in the comments section and we will get back to you.
