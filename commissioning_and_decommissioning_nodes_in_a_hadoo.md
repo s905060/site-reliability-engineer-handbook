@@ -52,8 +52,9 @@ The ‘slaves’ file on master server contains the list of all data nodes. This
 ![](2July-2016_Correction-01.png)
 
 The important step in data node commission process is to run the Cluster Balancer.
-
-`>hadoop balancer -threshold 40`
+```bash
+>hdfs balancer -threshold 40
+```
 
 Balancer attempts to provide a balance to a certain threshold among data nodes by copying block data from older nodes to newly commissioned nodes.
 
