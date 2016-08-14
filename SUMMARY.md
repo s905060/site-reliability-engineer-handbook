@@ -416,7 +416,7 @@
        * [What are HBase Compactions?](what_are_hbase_compactions.md)
        * [HBase Commands](hbase_commands.md)
        * [HBase Shell Commands in Practice](hbase_shell_commands_in_practice.md)
-       * How to fix corrupted files for an HBase table
+       * [How to fix corrupted files for an HBase table](how_to_fix_corrupted_files_for_an_hbase_table.md)
    * [Hive](hive.md)
        * [Hive notes](hive_notes.md)
    * [Elasticsearch](elasticsearch.md)
