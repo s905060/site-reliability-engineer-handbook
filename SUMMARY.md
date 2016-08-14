@@ -129,7 +129,7 @@
        * [doctest – Testing through documentation](doctest__testing_through_documentation.md)
        * [Load Python code dynamically](load_python_code_dynamically.md)
        * [Map, Reduce, Zip, Filter](map,_reduce,_zip,_filter.md)
-       * DICTIONARY COMPREHENSION
+       * [DICTIONARY COMPREHENSION](dictionary_comprehension.md)
    * [Golang](golang.md)
        * [Go file operations](go_file_operations.md)
        * [GO EXEC](go_exec.md)
