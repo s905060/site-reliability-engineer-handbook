@@ -2,8 +2,6 @@
 
 [xv if c else yv for (c,xv,yv) in zip(condition,x,y)]
 
-
-
 ## zip
 
 Suppose we have two lists, we want to make them a list making pairs with . How can we do that?
