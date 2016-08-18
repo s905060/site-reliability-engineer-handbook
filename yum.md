@@ -303,3 +303,53 @@ Description : Support libraries that are needed by the commands and
 
 Leaving Shell
 ```
+
+
+
+eliminates all files that yum uses to determine the remote availability of packages. These metadata are downloaded again the next time yum is run.
+```bash
+yum clean metadata
+```	
+
+To see which installed packages on your system have updates available, use the following command:
+```bash
+yum check-update
+```
+```
+For example:
+~]# yum check-update
+Loaded plugins: product-id, refresh-packagekit, subscription-manager
+Updating Red Hat repositories.
+INFO:rhsm-app.repolib:repos updated: 0
+PackageKit.x86_64                  0.5.8-2.el6                rhel
+PackageKit-glib.x86_64             0.5.8-2.el6                rhel
+PackageKit-yum.x86_64              0.5.8-2.el6                rhel
+PackageKit-yum-plugin.x86_64       0.5.8-2.el6                rhel
+glibc.x86_64                       2.11.90-20.el6             rhel
+glibc-common.x86_64                2.10.90-22                 rhel
+kernel.x86_64                      2.6.31-14.el6              rhel
+kernel-firmware.noarch             2.6.31-14.el6              rhel
+rpm.x86_64                         4.7.1-5.el6                rhel
+rpm-libs.x86_64                    4.7.1-5.el6                rhel
+rpm-python.x86_64                  4.7.1-5.el6                rhel
+udev.x86_64                        147-2.15.el6               rhel
+yum.noarch                         3.2.24-4.el6               rhel
+```
+
+The packages in the above output are listed as having updates available. The first package in the list is PackageKit, the graphical package manager. The line in the example output tells us:
+
+**PackageKit** — the name of the package
+
+**x86_64** — the CPU architecture the package was built for
+
+**0.5.8** — the version of the updated package to be installed
+
+**rhel** — the repository in which the updated package is located
+
+The output also shows us that we can update the kernel (the kernel package), Yum and RPM themselves (the yum and rpm packages), as well as their dependencies (such as the kernel-firmware, rpm-libs, and rpm-python packages), all using yum.
+
+The yum --showduplicates list package command doesn’t limit packages to their latest versions in the info, list and search commands.
+
+```bash
+yum --showduplicates list package_name
+```
