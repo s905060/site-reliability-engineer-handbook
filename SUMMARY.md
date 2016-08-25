@@ -251,7 +251,7 @@
    * [Comm](comm.md)
    * [taskset](taskset.md)
    * [fio](fio.md)
-   * tree
+   * [tree](tree.md)
 * [Security](security.md)
    * [Common](common.md)
    * [DNS VULNERABILITIES](dns_vulnerabilities.md)
