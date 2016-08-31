@@ -1,7 +1,7 @@
 # How to solve EDAC DIMM CE Error
 
 ```bash 
-$ More / var / log / message
+$ More /var/log/message
 Jul 21 08:54:32 customerkernel: EDAC MC1: 5486 CE error on CPU # 1Channel # 2_DIMM # ​​1 (channel: 2 slot: 1page: 0x0 offset: 0x0 grain: 8 syndrome: 0x0)
 Jul 21 08:54:33 customerkernel: EDAC MC1: 11480 CE error on CPU # 1Channel # 2_DIMM # ​​1 (channel: 2 slot: 1page: 0x0 offset: 0x0 grain: 8 syndrome: 0x0)
 Jul 21 08:54:34 customerkernel: EDAC MC1: 11330 CE error on CPU # 1Channel # 2_DIMM # ​​1 (channel: 2 slot: 1page: 0x0 offset: 0x0 grain: 8 syndrome: 0x0)
