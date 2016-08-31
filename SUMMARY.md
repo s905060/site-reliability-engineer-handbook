@@ -338,6 +338,7 @@
    * [How to Write Linux Init Scripts Based on LSB Init Standard](how_to_write_linux_init_scripts_based_on_lsb_init_.md)
    * [How to create a Debian package](how_to_create_a_debian_package.md)
    * [How to create a RPM Package](how_to_create_a_rpm_package.md)
+   * How to solve EDAC DIMM CE Error
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
