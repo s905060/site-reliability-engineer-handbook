@@ -73,7 +73,6 @@ From server console to find the memory info:
 Memory slot on the motherboard of distribution:
 ![](20150721173603239.jpg)
 
-
 Combined error log: kernel: EDAC MC1: 16107 CE error on CPU # 1Channel #2_DIMM # ​​1 (channel: 2slot: 1 DIMM_F1 memory slots should be a problem.
  
 **Solution:**
