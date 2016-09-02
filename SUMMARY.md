@@ -340,7 +340,7 @@
    * [How to create a RPM Package](how_to_create_a_rpm_package.md)
    * [How to solve EDAC DIMM CE Error](how_to_solve_edac_dimm_ce_error.md)
    * [How to solve fsck.ext4: Unable to resolve UUID/LABEL](how_to_solve_fsckext4_unable_to_resolve_uuidlabel.md)
-   * How to expand an existing LSI raid array using MegaCli
+   * [How to expand an existing LSI raid array using MegaCli](how_to_expand_an_existing_lsi_raid_array_using_meg.md)
 * [Storage](storage.md)
    * [Object Storage](object_storage.md)
    * [How an object store differs from file and block storage](how_an_object_store_differs_from_file_and_block_storage.md)
