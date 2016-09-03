@@ -39,7 +39,7 @@
    * [Error Detection & Correction](error_detection_&_correction.md)
    * [limits.conf](limitsconf.md)
    * [PXE Boot](pxe_boot.md)
-   * Anatomy of the initrd and vmlinuz
+   * [Anatomy of the initrd and vmlinuz](anatomy_of_the_initrd_and_vmlinuz.md)
    * [Unix time](unix_time.md)
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
