@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Operating System](operating_system.md)
-   * Anatomy of the initrd and vmlinuz
    * [Linux Boot Process](linux_boot_process.md)
    * [Filesystems](filesystems.md)
    * [RAID](raid.md)
@@ -41,6 +40,7 @@
    * [limits.conf](limitsconf.md)
    * [PXE Boot](pxe_boot.md)
    * [Unix time](unix_time.md)
+* Anatomy of the initrd and vmlinuz
 * [Networking](networking.md)
    * [TCP connection](tcp_connection.md)
    * [What is SYN Flood, ICMP Flood](what_is_syn_flood,_icmp_flood.md)
