@@ -1,2 +1,0 @@
-# Address Resolution Protocol
-
