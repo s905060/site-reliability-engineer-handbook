@@ -430,7 +430,7 @@
    * [Elasticsearch](elasticsearch.md)
    * [Kafka](kafka.md)
        * [Kafka Cheat Sheet](kafka_cheat_sheet.md)
-       * Kafka useful administration tool
+       * [Kafka useful administration tool](kafka_useful_administration_tool.md)
    * [Scylla](scylla.md)
    * [Zookeeper](zookeeper.md)
 * [Automation Tool](automation_tool.md)
