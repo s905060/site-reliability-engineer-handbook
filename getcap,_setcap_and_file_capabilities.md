@@ -36,10 +36,6 @@ The “+ep” means you’re adding the capability (“-” would remove it) as 
 
 There are 3 modes:
 
-The “+ep” means you’re adding the capability (“-” would remove it) as Effective and Permitted.
-
-There are 3 modes:
-
 * e: Effective
 This means the capability is “activated”.
 
