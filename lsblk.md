@@ -1,13 +1,12 @@
 ## **lsblk**
 
-lsblk lists information about all or the specified block devices.  The lsblk command reads the sysfs filesystem to gather information.  
-  
-The command prints all block devices \(except RAM disks\) in a tree-like format by default.  Use lsblk --help  to  get  a  list  of  all available columns.
+lsblk lists information about all or the specified block devices.  The lsblk command reads the sysfs filesystem to gather information.
 
-If you want to check block device attributes, use[blkid command.](http://fibrevillage.com/storage/4-blkid-useful-examples)
+The command prints all block devices \(except RAM disks\) in a tree-like format by default.  Use lsblk --help  to  get  a  list  of  all available columns.
 
-  
-The  default  output  as  well  as default output from options like --topology and --fs is subject to change, so whenever possible you should avoid using default outputs in your scripts. Always explicitly define expected columns by --output columns in environment where a stable output is required.
+If you want to check block device attributes, use [blkid command.](http://fibrevillage.com/storage/4-blkid-useful-examples)
+
+The  default  output  as  well  as default output from options like --topology and --fs is subject to change, so whenever possible you should avoid using default outputs in your scripts. Always explicitly define expected columns by --output columns in environment where a stable output is required.
 
 ### Default output, list all block devices
 
@@ -36,10 +35,12 @@ sr0                           11:0    1  1024M  0 rom
 
 ### lsblk with option '-a' and '-b', print size in bytes
 
-       -a, --all  
-              lsblk does not list empty devices by default. This option disables this restriction.  
-       -b, --bytes  
-              Print the SIZE column in bytes rather than in human-readable format.
+```
+   -a, --all  
+          lsblk does not list empty devices by default. This option disables this restriction.  
+   -b, --bytes  
+          Print the SIZE column in bytes rather than in human-readable format.
+```
 
 #### Example:
 
@@ -66,12 +67,14 @@ sr0                           11:0    1  1024M  0 rom
 
 ### Lsblk with option '-e', '-I', '-d'
 
-       -d, --nodeps  
-              Don’t print device holders or slaves.  For example "lsblk --nodeps /dev/sda" prints information about the sda device only.  
-       -e, --exclude list  
-              Exclude the devices specified by a comma-separated list of major device numbers.  Note that RAM disks \(major=1\) are excluded by default. The filter is applied to the top-level devices only.  
-       -I, --include list  
-              Include devices specified by a comma-separated list of major device numbers only.  The  filter  is  applied  to  the  top-level  devices.
+```
+   -d, --nodeps  
+          Don’t print device holders or slaves.  For example "lsblk --nodeps /dev/sda" prints information about the sda device only.  
+   -e, --exclude list  
+          Exclude the devices specified by a comma-separated list of major device numbers.  Note that RAM disks \(major=1\) are excluded by default. The filter is applied to the top-level devices only.  
+   -I, --include list  
+          Include devices specified by a comma-separated list of major device numbers only.  The  filter  is  applied  to  the  top-level  devices.
+```
 
 #### Example
 
@@ -87,10 +90,12 @@ sda    8:0    0   4.4T  0 disk
 
 ### Lsblk with option '-f', '-i', output info about filesystem
 
-       -f, --fs  
-              Output  info about filesystems.  This option is equivalent to "-o NAME,FSTYPE,LABEL,MOUNTPOINT".  The authoritative information about filesystems and raids is provided by the blkid\(8\) command.  
-       -i, --ascii  
-              Use ASCII characters for tree formatting.
+```
+   -f, --fs  
+          Output  info about filesystems.  This option is equivalent to "-o NAME,FSTYPE,LABEL,MOUNTPOINT".  The authoritative information about filesystems and raids is provided by the blkid\(8\) command.  
+   -i, --ascii  
+          Use ASCII characters for tree formatting.
+```
 
 #### Example:
 
@@ -114,10 +119,12 @@ sda    8:0    0   4.4T  0 disk
 
 ### lsblk with option -l, -t
 
-       -l, --list  
-              Use the list output format.  
-       -t, --topology  
-              Output  info  about  block  device  topology.   This  option  is  equivalent  to  "-o NAME,ALIGNMENT,MIN-IO,OPT-IO,PHY-SEC,LOGSEC,ROTA,SCHED,RQ-SIZE".
+```
+   -l, --list  
+          Use the list output format.  
+   -t, --topology  
+          Output  info  about  block  device  topology.   This  option  is  equivalent  to  "-o NAME,ALIGNMENT,MIN-IO,OPT-IO,PHY-SEC,LOGSEC,ROTA,SCHED,RQ-SIZE".
+```
 
 #### Example:
 
@@ -165,9 +172,9 @@ md1                        9:1    0 232.9G  0 raid10 /data
 ### lsblk with option '-o'
 
 custom your own output format if you want.  
-       -o, --output list  
-              Specify which output columns to print.  Use --help to get a list of all supported columns.  
-  
+       -o, --output list  
+              Specify which output columns to print.  Use --help to get a list of all supported columns.
+
 Available columns \(for --output\):
 
 ```
