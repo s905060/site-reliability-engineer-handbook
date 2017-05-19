@@ -1,6 +1,5 @@
 # OPEN KNOWLEDGE - My SRE Handbook
 
-
 ###### Rule of Optimization: Prototype before polishing. Get it working before you optimize it.
 
 ###### Keeping It Clean, Keeping It Simple
@@ -13,15 +12,16 @@
 
 ---
 
-**(i)** Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
+**\(i\)** Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
 
-**(ii)** Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
+**\(ii\)** Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
 
-**(iii)** Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
+**\(iii\)** Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
 
-**(iv)** Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
+**\(iv\)** Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
 
-This is the Unix philosophy: 
+This is the Unix philosophy:
+
 * Write programs that do one thing and do it well. 
 * Write programs to work together. 
 * Write programs to handle text streams, because that is a universal interface.
@@ -34,7 +34,7 @@ This is the Unix philosophy:
 
 **Rule 2.** Measure. Don't tune for speed until you've measured, and even then don't unless one part of the code overwhelms the rest.
 
-**Rule 3.** Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have big constants. Until you know that n is frequently going to be big, don't get fancy. (Even if n does get big, use Rule 2 first.)
+**Rule 3.** Fancy algorithms are slow when n is small, and n is usually small. Fancy algorithms have big constants. Until you know that n is frequently going to be big, don't get fancy. \(Even if n does get big, use Rule 2 first.\)
 
 **Rule 4.** Fancy algorithms are buggier than simple ones, and they're much harder to implement. Use simple algorithms as well as simple data structures.
 
@@ -55,4 +55,13 @@ This is the Unix philosophy:
 August, 2015
 
 ---
-## ** All contents/examples are copied from internet. **
+
+## **All contents/examples are copied from internet. ** 
+
+**Contributor:  
+**[s905060](https://github.com/s905060)**  
+**[Neki](https://github.com/at15)  
+[at15](https://github.com/at15)
+
+
+
