@@ -56,12 +56,8 @@ August, 2015
 
 ---
 
-## **All contents/examples are copied from internet. ** 
+## **All contents/examples are copied from internet. **
 
-**Contributor:  
-**[s905060](https://github.com/s905060)**  
-**[Neki](https://github.com/at15)  
-[at15](https://github.com/at15)
-
-
+**Contributor:    
+**[s905060](https://github.com/s905060)[, Neki](https://github.com/at15)[, at15](https://github.com/at15)
 
