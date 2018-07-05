@@ -40,6 +40,7 @@
   * [limits.conf](limitsconf.md)
   * [PXE Boot](pxe_boot.md)
   * [Anatomy of the initrd and vmlinuz](anatomy_of_the_initrd_and_vmlinuz.md)
+  * [Buffer and Cache](buffer-and-cache.md)
   * [Unix time](unix_time.md)
 * [Networking](networking.md)
   * [TCP connection](tcp_connection.md)
