@@ -465,4 +465,6 @@
   * [SVN](svn.md)
 * [Editor](editor.md)
   * [VIM](vim.md)
+* [Systems Performance](systems-performance.md)
+  * [Common Performance Troubleshooting Tool](systems-performance/common-performance-troubleshooting-tool.md)
 
