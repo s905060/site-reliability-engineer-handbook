@@ -29,7 +29,7 @@ sudo lsof -iTCP -sTCP:ESTABLISHED
 
 sudo ss -mop
 
-sudo ss –i
+sudo ss -i
 
 sudo ps -ef f
 
