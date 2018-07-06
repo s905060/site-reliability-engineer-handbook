@@ -15,8 +15,6 @@ sudo pidstat -t 1 5
 
 sudo iostat -xmdz 1 5
 
-sudo mpstat –P ALL 1
-
 sudo sar -n TCP,ETCP,DEV 1 5
 
 sudo free -m
@@ -40,7 +38,7 @@ sudo ps -ef f
 # iotop
 # slabtop
 # sudo iotop --only -n 5
-# sudo iftop -i bond0 
+# sudo iftop -i bond0 5
 ```
 
 
