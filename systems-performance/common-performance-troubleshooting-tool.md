@@ -21,7 +21,7 @@ sudo free -m
 
 sudo ss -s
 
-sudo swapon
+sudo swapon -s
 
 sudo netstat -s
 
