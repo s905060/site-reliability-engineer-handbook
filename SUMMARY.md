@@ -13,6 +13,7 @@
   * [Threads](threads.md)
   * [Streams](streams.md)
   * [Caching](caching.md)
+  * [Scheduler](scheduling.md)
   * [Write-through, write-around, write-back: Cache explained](write-through,_write-around,_write-back_cache_expl.md)
   * [Tempfiles](tempfiles.md)
   * [System Calls](system_calls.md)
