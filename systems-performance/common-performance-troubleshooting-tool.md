@@ -33,7 +33,7 @@ sudo ss -i
 
 sudo ps -ef f
 
-# strace –tttT –p 313
+# strace -tttT -p 313
 # tcpdump -i eth0 -w /tmp/out.tcpdump
 # iotop
 # slabtop
